@@ -8,6 +8,10 @@ angular.module('starter.controllers', [])
 
   })
 
+  .controller('DayCtrl1', function ($scope) {
+
+  })
+
   .controller('SearchCtrl', function ($scope) {
 
   });

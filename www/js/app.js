@@ -51,6 +51,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             controller: 'BlogCtrl'
           }
         }
+      })
+
+      .state('app.day', {
+        url: '/day/1',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/day1.html',
+            controller: 'DayCtrl1'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/app/blog');
