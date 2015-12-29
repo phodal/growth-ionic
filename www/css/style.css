@@ -3,8 +3,7 @@
   margin: 2em 2em;
 }
 
-h1.title {
-  background: url('../img/screenshot.jpg');
+div.title {
   width: 100%;
   height: auto;
 }
