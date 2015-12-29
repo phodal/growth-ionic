@@ -11,3 +11,9 @@ div.title {
 .tabs.tabs-secondary.modals a.tab-item {
   font-size: 1em;
 }
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+}
