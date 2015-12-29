@@ -32,6 +32,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           }
         }
       })
+      .state('app.seven', {
+        url: '/seven',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/seven.html',
+          }
+        }
+      })
 
       .state('app.day1', {
         url: '/day/1',

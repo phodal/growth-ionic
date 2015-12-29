@@ -75,8 +75,4 @@ angular.module('starter.controllers', [])
       $scope.oModal2.remove();
       $scope.oModal3.remove();
     });
-  })
-
-  .controller('SearchCtrl', function ($scope) {
-
   });

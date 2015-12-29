@@ -5,7 +5,7 @@
 
 ##七日谈
 
-![Web开发的七天里](seven.png)
+![Web开发的七天里](www/img/seven.png)
 
 ###第一天：新的开始
 
