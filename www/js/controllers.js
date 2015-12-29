@@ -7,6 +7,9 @@ angular.module('starter.controllers', [])
   .controller('BlogCtrl', function ($scope) {
 
   })
+  .controller('DayCtrl2', function ($scope) {
+
+  })
 
   .controller('DayCtrl1', function ($scope, $ionicModal) {
     $ionicModal.fromTemplateUrl('templates/modal/tree.html', {

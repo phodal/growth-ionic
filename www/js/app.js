@@ -33,12 +33,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       })
 
-      .state('app.day', {
+      .state('app.day1', {
         url: '/day/1',
         views: {
           'menuContent': {
             templateUrl: 'templates/day1.html',
             controller: 'DayCtrl1'
+          }
+        }
+      })
+      .state('app.day2', {
+        url: '/day/2',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/day2.html',
+            controller: 'DayCtrl2'
           }
         }
       });
