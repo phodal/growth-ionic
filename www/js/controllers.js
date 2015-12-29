@@ -7,10 +7,6 @@ angular.module('starter.controllers', [])
   .controller('BlogCtrl', function ($scope) {
 
   })
-  .controller('DayCtrl2', function ($scope) {
-
-  })
-
   .controller('DayCtrl1', function ($scope, $ionicModal) {
     $ionicModal.fromTemplateUrl('templates/modal/tree.html', {
       id: '1',
@@ -75,4 +71,13 @@ angular.module('starter.controllers', [])
       $scope.oModal2.remove();
       $scope.oModal3.remove();
     });
+  })
+
+
+  .controller('DayCtrl2', function ($scope) {
+
+  })
+
+  .controller('DayCtrl3', function ($scope) {
+
   });

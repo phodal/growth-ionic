@@ -1,0 +1,50 @@
+<ion-view view-title="上线准备">
+  <ion-content>
+    <!--<div class="title"><img class="title-image full-image" src="img/day1/hello-world.png"/></div>-->
+    <div class="list card">
+      <div class="item item-body">
+        <blockquote>在我们不断地重复第二个步骤的时候，我们也要开始去考虑如何上线了。</blockquote>
+      </div>
+
+      <div class="item item-body">
+        <p>我们是直接部署在Docker容器里呢？还是直接部署在服务器上呢？接着，我们还为其配置了缓存服务和均衡负载等等。</p>
+        <p>咦！这个配置是写死的！这里需要一个Toggle来控制功能是否上线！</p>
+
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="sectionTitle">Docker</div>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/day/1/blog/2">
+        <h2>容器</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(3)"><i class="icon ion-ios-folder"></i>简介</a>
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(2)"><i class="icon ion-ios-book"></i>读书</a>
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(1)"><i class="icon ion-ios-paper"></i>成长树</a>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="sectionTitle">Server</div>
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/day/1/blog/1">
+        <h2>Varnish</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/day/1/blog/2">
+        <h2>Nginx</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(3)"><i class="icon ion-ios-folder"></i>简介</a>
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(2)"><i class="icon ion-ios-book"></i>读书</a>
+        <a class="tab-item" href="#/app/day/1" ng-click="openModal(1)"><i class="icon ion-ios-paper"></i>成长树</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
