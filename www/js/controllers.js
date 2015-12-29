@@ -80,4 +80,8 @@ angular.module('starter.controllers', [])
 
   .controller('DayCtrl3', function ($scope) {
 
+  })
+
+  .controller('DayCtrl4', function ($scope) {
+
   });

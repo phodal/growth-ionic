@@ -36,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         url: '/seven',
         views: {
           'menuContent': {
-            templateUrl: 'templates/seven.html',
+            templateUrl: 'templates/seven.html'
           }
         }
       })
@@ -65,6 +65,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           'menuContent': {
             templateUrl: 'templates/day3.html',
             controller: 'DayCtrl3'
+          }
+        }
+      })
+      .state('app.day4', {
+        url: '/day/4',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/day4.html',
+            controller: 'DayCtrl4'
           }
         }
       });
