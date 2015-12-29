@@ -7,3 +7,7 @@ div.title {
   width: 100%;
   height: auto;
 }
+
+.tabs.tabs-secondary.modals a.tab-item {
+  font-size: 1em;
+}
