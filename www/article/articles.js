@@ -18,5 +18,13 @@ var AllArticle = [
   {
     "slug" : "tdd",
     "title": "测试驱动开发"
+  },
+  {
+    "slug" : "kickoff",
+    "title": "Kick Off"
+  },
+  {
+    "slug" : "tasking",
+    "title": "Tasking"
   }
 ];
