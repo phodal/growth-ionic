@@ -57,9 +57,8 @@ angular.module('starter.controllers', [])
     // Angular will broadcast a $destroy event just before tearing down a scope
     // and removing the scope from its parent.
     $scope.$on('$destroy', function () {
-      console.log('Destroying modals...');
-      console.log($scope.currentModals);
       for (var modal in $scope.currentModals) {
+        console.log(modal);
         modal.remove();
       }
     });
