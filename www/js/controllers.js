@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     console.log($stateParams);
     $http({
       method: 'GET',
-      url: 'templates/blog/' + $stateParams.slug + '.md'
+      url: 'article/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $scope.htmlContent = $sce.trustAsHtml(marked(response))
     }).error(function (data, status) {

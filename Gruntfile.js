@@ -26,6 +26,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'www/js/', src: ['**'], dest: 'js/', action: 'upload'},
           {expand: true, cwd: 'www/lib/', src: ['**'], dest: 'lib/', action: 'upload'},
           {expand: true, cwd: 'www/templates/', src: ['**'], dest: 'templates/', action: 'upload'},
+          {expand: true, cwd: 'www/article/', src: ['**'], dest: 'article/', action: 'upload', params: {ContentType: 'text/plain'}},
           {
             expand: true,
             cwd: './www/',
@@ -49,6 +50,7 @@ module.exports = function (grunt) {
           {dest: 'js/', src: ['**'],  action: 'delete'},
           {dest: 'lib/', src: ['**'],  action: 'delete'},
           {dest: 'templates/', src: ['**'],  action: 'delete'},
+          {dest: 'article/', src: ['**'],  action: 'delete'},
           {dest: './', src: ['index.html'], action: 'delete'}
           //{dest: 'assets/', exclude: "**/*.tgz", action: 'delete'}, // will not delete the tgz
           //{dest: 'assets/large/', exclude: "**/*copy*", flipExclude: true, action: 'delete'}, // will delete everything that has copy in the name
