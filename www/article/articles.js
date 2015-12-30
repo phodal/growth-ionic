@@ -26,5 +26,13 @@ var AllArticle = [
   {
     "slug" : "tasking",
     "title": "Tasking"
+  },
+  {
+    "slug" : "readable",
+    "title": "可读的代码"
+  },
+  {
+    "slug" : "refactor",
+    "title": "重构"
   }
 ];
