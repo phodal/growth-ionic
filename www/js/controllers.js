@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
   })
 
   .controller('ArticleListCtrl', function ($scope) {
-
+    $scope.articles = AllArticle;
   })
 
   .controller('DayCtrl1', function ($scope, $ionicModal) {
