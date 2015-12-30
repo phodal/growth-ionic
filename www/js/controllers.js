@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
       id: '1',
       scope: $scope,
       animation: 'slide-in-up'
-    }).then(function(modal) {
+    }).then(function (modal) {
       $scope.oModal1 = modal;
     });
 
@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
       id: '2',
       scope: $scope,
       animation: 'slide-in-up'
-    }).then(function(modal) {
+    }).then(function (modal) {
       $scope.oModal2 = modal;
     });
 
@@ -30,11 +30,11 @@ angular.module('starter.controllers', [])
       id: '3',
       scope: $scope,
       animation: 'slide-in-up'
-    }).then(function(modal) {
+    }).then(function (modal) {
       $scope.oModal3 = modal;
     });
 
-    $scope.openModal = function(index) {
+    $scope.openModal = function (index) {
       if (index === 1) {
         $scope.oModal1.show();
       } else if (index === 2) {
@@ -44,28 +44,38 @@ angular.module('starter.controllers', [])
       }
     };
 
-    $scope.closeModal = function(index) {
+    $scope.openSpecialModal = function (subtopic, branch) {
+      $ionicModal.fromTemplateUrl('templates/modal/day1/' + subtopic + '/' + branch + '.html', {
+        id: subtopic  + '-' + branch,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+      });
+    };
+
+    $scope.closeModal = function (index) {
       if (index === 1) {
         $scope.oModal1.hide();
-      } else if(index === 2) {
+      } else if (index === 2) {
         $scope.oModal2.hide();
       } else {
         $scope.oModal3.hide();
       }
     };
 
-    $scope.$on('modal.shown', function(event, modal) {
+    $scope.$on('modal.shown', function (event, modal) {
       console.log('Modal ' + modal.id + ' is shown!');
     });
 
-    $scope.$on('modal.hidden', function(event, modal) {
+    $scope.$on('modal.hidden', function (event, modal) {
       console.log('Modal ' + modal.id + ' is hidden!');
     });
 
     // Cleanup the modals when we're done with them (i.e: state change)
     // Angular will broadcast a $destroy event just before tearing down a scope
     // and removing the scope from its parent.
-    $scope.$on('$destroy', function() {
+    $scope.$on('$destroy', function () {
       console.log('Destroying modals...');
       $scope.oModal1.remove();
       $scope.oModal2.remove();
