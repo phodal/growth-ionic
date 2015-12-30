@@ -90,4 +90,7 @@ angular.module('starter.controllers', [])
   })
   .controller('DayCtrl6', function ($scope) {
 
+  })
+  .controller('DayCtrl7', function ($scope) {
+
   });
