@@ -109,7 +109,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day1.html',
-            controller: 'DayCtrl1'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -118,7 +118,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day2.html',
-            controller: 'DayCtrl2'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -127,7 +127,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day3.html',
-            controller: 'DayCtrl3'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -136,7 +136,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day4.html',
-            controller: 'DayCtrl4'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -145,7 +145,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day5.html',
-            controller: 'DayCtrl5'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -154,7 +154,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day6.html',
-            controller: 'DayCtrl6'
+            controller: 'DayCtrl'
           }
         }
       })
@@ -163,7 +163,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         views: {
           'menuContent': {
             templateUrl: 'templates/day7.html',
-            controller: 'DayCtrl7'
+            controller: 'DayCtrl'
           }
         }
       });

@@ -25,12 +25,12 @@ angular.module('starter.controllers', [])
     $scope.articles = AllArticle;
   })
 
-  .controller('DayCtrl1', function ($scope, $ionicModal) {
+  .controller('DayCtrl', function ($scope, $ionicModal) {
     $scope.currentModal = null;
     $scope.currentModals = [];
 
     $scope.openSpecialModal = function (subtopic, branch) {
-      $ionicModal.fromTemplateUrl('templates/modal/day1/' + subtopic + '/' + branch + '.html', {
+      $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/' + branch + '.html', {
         id: subtopic + '-' + branch,
         scope: $scope,
         animation: 'slide-in-up'
@@ -58,30 +58,7 @@ angular.module('starter.controllers', [])
     // and removing the scope from its parent.
     $scope.$on('$destroy', function () {
       for (var modal in $scope.currentModals) {
-        console.log(modal);
         modal.remove();
       }
     });
-  })
-
-
-  .controller('DayCtrl2', function ($scope) {
-
-  })
-
-  .controller('DayCtrl3', function ($scope) {
-
-  })
-
-  .controller('DayCtrl4', function ($scope) {
-
-  })
-  .controller('DayCtrl5', function ($scope) {
-
-  })
-  .controller('DayCtrl6', function ($scope) {
-
-  })
-  .controller('DayCtrl7', function ($scope) {
-
   });
