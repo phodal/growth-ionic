@@ -4,8 +4,16 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('ArticleCtrl', function ($scope) {
-
+  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, marked) {
+    console.log($stateParams);
+    $http({
+      method: 'GET',
+      url: 'templates/blog/' + $stateParams.slug + '.md'
+    }).success(function (response) {
+      $scope.htmlContent = $sce.trustAsHtml(marked(response))
+    }).error(function (data, status) {
+      alert(data + status);
+    });
   })
 
   .controller('ArticleListCtrl', function ($scope) {
@@ -18,7 +26,7 @@ angular.module('starter.controllers', [])
 
     $scope.openSpecialModal = function (subtopic, branch) {
       $ionicModal.fromTemplateUrl('templates/modal/day1/' + subtopic + '/' + branch + '.html', {
-        id: subtopic  + '-' + branch,
+        id: subtopic + '-' + branch,
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
@@ -46,7 +54,7 @@ angular.module('starter.controllers', [])
     $scope.$on('$destroy', function () {
       console.log('Destroying modals...');
       console.log($scope.currentModals);
-      for(var modal in $scope.currentModals) {
+      for (var modal in $scope.currentModals) {
         modal.remove();
       }
     });

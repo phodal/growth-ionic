@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'hc.marked'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -12,7 +12,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     });
   })
+  .config(['markedProvider', function (markedProvider) {
+    marked.Lexer.rules.gfm.heading = marked.Lexer.rules.normal.heading;
+    marked.Lexer.rules.tables.heading = marked.Lexer.rules.normal.heading;
 
+    markedProvider.setOptions({
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: true,
+      smartLists: true,
+      smartypants: false,
+      highlight: function (code, lang) {
+        if (lang) {
+          return hljs.highlight(lang, code, true).value;
+        } else {
+          return hljs.highlightAuto(code).value;
+        }
+      }
+    });
+    markedProvider.setRenderer({
+      heading: function (text, level) {
+        var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+        return '<h' + level + '><a name="' +
+          escapedText +
+          '" class="anchor" href="#' +
+          escapedText +
+          '"><span class="header-link"></span></a>' +
+          text + '</h' + level + '>';
+      }
+    });
+  }])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 

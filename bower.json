@@ -3,5 +3,11 @@
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.2.1"
+  },
+  "dependencies": {
+    "ngCordova": "~0.1.23-alpha",
+    "angular-marked": "~1.0.1",
+    "highlightjs": "~9.0.0",
+    "github-markdown-css": "~2.1.1"
   }
 }

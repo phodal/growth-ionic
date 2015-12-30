@@ -1,0 +1,56 @@
+{
+  "name": "ngCordova",
+  "version": "0.1.23-alpha",
+  "homepage": "http://ngCordova.com/",
+  "authors": [
+    "Max Lynch <max@drifty.com>",
+    "Paolo Bernasconi <paolo.enrico.bernasconi@gmail.com>",
+    "Chad Campbell <chad.campbell@ecofic.com>"
+  ],
+  "description": "AngularJS Cordova wrappers for common Cordova plugins.",
+  "main": [
+    "./dist/ng-cordova.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "test",
+    "src",
+    "config",
+    "demo",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "dependencies": {
+    "angular": ">= 1.2.23"
+  },
+  "keywords": [
+    "ngCordova",
+    "ng-cordova",
+    "ngcordova",
+    "ng cordova",
+    "cordova",
+    "phonegap",
+    "angular",
+    "angularjs",
+    "ionic",
+    "cordova plugin"
+  ],
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "angular": ">= 1.2.23",
+    "angular-mocks": ">= 1.2.23",
+    "jquery": "~2.1.1"
+  },
+  "_release": "0.1.23-alpha",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.23-alpha",
+    "commit": "c4afa3dbbb80b15eded760e039cd2d69da891502"
+  },
+  "_source": "git://github.com/driftyco/ng-cordova.git",
+  "_target": "~0.1.23-alpha",
+  "_originalSource": "ngCordova",
+  "_direct": true
+}
