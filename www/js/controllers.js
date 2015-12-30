@@ -4,12 +4,16 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, marked) {
-    console.log($stateParams);
+  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked) {
+    $ionicLoading.show({
+      animation: 'fade-in',
+      template: 'Loading...'
+    });
     $http({
       method: 'GET',
       url: 'article/' + $stateParams.slug + '.md'
     }).success(function (response) {
+      $ionicLoading.hide();
       $scope.htmlContent = $sce.trustAsHtml(marked(response))
     }).error(function (data, status) {
       alert(data + status);
