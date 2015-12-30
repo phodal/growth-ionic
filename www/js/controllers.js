@@ -4,9 +4,14 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('BlogCtrl', function ($scope) {
+  .controller('ArticleCtrl', function ($scope) {
 
   })
+
+  .controller('ArticleListCtrl', function ($scope) {
+
+  })
+
   .controller('DayCtrl1', function ($scope, $ionicModal) {
     $scope.currentModal = null;
     $scope.currentModals = [];

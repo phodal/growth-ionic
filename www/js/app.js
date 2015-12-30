@@ -23,15 +23,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AppCtrl'
       })
 
-      .state('app.blog', {
-        url: '/blog',
+      .state('app.main', {
+        url: '/main',
         views: {
           'menuContent': {
-            templateUrl: 'templates/detail.html',
-            controller: 'BlogCtrl'
+            templateUrl: 'templates/main.html'
           }
         }
       })
+
+      .state('app.article', {
+        url: '/article/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/article-detail.html',
+            controller: 'ArticleCtrl'
+          }
+        }
+      })
+
+      .state('app.articles', {
+        url: '/articles',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/article-list.html',
+            controller: 'ArticleListCtrl'
+          }
+        }
+      })
+
       .state('app.seven', {
         url: '/seven',
         views: {
@@ -105,5 +125,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       });
 
-    $urlRouterProvider.otherwise('/app/blog');
+    $urlRouterProvider.otherwise('/app/main');
   });
