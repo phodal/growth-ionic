@@ -41,7 +41,10 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
           escapedText +
           '"><span class="header-link"></span></a>' +
           text + '</h' + level + '>';
-      }
+      },
+      image: function (href) {
+      return "<img class='full-image' src=" + href + ">";
+    }
     });
   }])
   .config(function ($stateProvider, $urlRouterProvider) {
