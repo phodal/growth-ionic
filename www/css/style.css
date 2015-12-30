@@ -88,7 +88,6 @@ div.title {
   margin: 0;
   overflow: initial;
   line-height: inherit;
-  word-wrap: normal;
   background-color: transparent;
   border: 0;
 }
@@ -423,7 +422,6 @@ body {
 .markdown-body code,
 .markdown-body tt {
   color: #808080;
-  font-size: 0.96em;
   background-color: #f9f9f7;
   padding: 1px 2px;
   border: 1px solid #dadada;
@@ -440,7 +438,6 @@ body {
   padding-left: 10px;
   overflow: auto;
   line-height: 1.5;
-  font-size: 0.96em;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   color: #4c4c4c;
   background-color: #f9f9f7;

@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked) {
+  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
     $ionicLoading.show({
       animation: 'fade-in',
       template: 'Loading...'
@@ -14,6 +14,7 @@ angular.module('starter.controllers', [])
       url: 'article/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $ionicLoading.hide();
+      $scope.title = $filter('filter')(AllArticle, {"slug": $stateParams.slug})[0].title;
       $scope.htmlContent = $sce.trustAsHtml(marked(response))
     }).error(function (data, status) {
       alert(data + status);

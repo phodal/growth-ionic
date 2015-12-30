@@ -4,7 +4,7 @@ var AllArticle = [
     "title": "无处不在的CSS"
   },
   {
-    "slug" : "css",
+    "slug" : "html",
     "title": "无处不在的HTML"
   },
   {
