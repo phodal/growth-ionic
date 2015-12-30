@@ -87,4 +87,7 @@ angular.module('starter.controllers', [])
   })
   .controller('DayCtrl5', function ($scope) {
 
+  })
+  .controller('DayCtrl6', function ($scope) {
+
   });
