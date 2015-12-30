@@ -63,6 +63,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.about', {
+        url: '/about',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/about.html'
+          }
+        }
+      })
+
       .state('app.article', {
         url: '/article/:slug',
         views: {
