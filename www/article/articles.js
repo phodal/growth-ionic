@@ -38,5 +38,9 @@ var AllArticle = [
   {
     "slug" : "ux",
     "title": "用户体验设计"
+  },
+  {
+    "slug" : "seo",
+    "title": "搜索引擎优化"
   }
 ];
