@@ -2,6 +2,10 @@
 
 > A App Basis on Seven days.
 
+欢迎关注我的微信公众号: phodal
+
+![QRCode](www/img/wechat.jpg)
+
 ## License
 
 © 2015 [Phodal Huang](http://www.phodal.com). This code is distributed under the CC0 1.0 Universal license. See `LICENSE` in this directory.
