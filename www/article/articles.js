@@ -34,5 +34,9 @@ var AllArticle = [
   {
     "slug" : "refactor",
     "title": "重构"
+  },
+  {
+    "slug" : "ux",
+    "title": "用户体验设计"
   }
 ];
