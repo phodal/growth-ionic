@@ -42,5 +42,45 @@ var AllArticle = [
   {
     "slug" : "seo",
     "title": "搜索引擎优化"
+  },
+  {
+    "slug" : "arch-pattern",
+    "title": "架构模式"
+  },
+  {
+    "slug" : "architecture",
+    "title": "每个人都是架构师"
+  },
+  {
+    "slug" : "readable",
+    "title": "可读的代码"
+  },
+  {
+    "slug" : "change-code",
+    "title": "如何修改代码"
+  },
+  {
+    "slug" : "refactor2",
+    "title": "重构进阶"
+  },
+  {
+    "slug" : "cd",
+    "title": "持续交付"
+  },
+  {
+    "slug" : "ga",
+    "title": "Google Analytics"
+  },
+  {
+    "slug" : "container",
+    "title": "容器"
+  },
+  {
+    "slug" : "cache",
+    "title": "缓存"
+  },
+  {
+    "slug" : "http-server",
+    "title": "HTTP服务器"
   }
 ];
