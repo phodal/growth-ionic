@@ -82,5 +82,25 @@ var AllArticle = [
   {
     "slug" : "http-server",
     "title": "HTTP服务器"
+  },
+  {
+    "slug" : "env",
+    "title": "搭建开发环境"
+  },
+  {
+    "slug" : "windows-unix",
+    "title": "Windows或者类Unix"
+  },
+  {
+    "slug" : "builder",
+    "title": "构建系统"
+  },
+  {
+    "slug" : "builder",
+    "title": "构建系统"
+  },
+  {
+    "slug" : "ci",
+    "title": "持续集成"
   }
 ];
