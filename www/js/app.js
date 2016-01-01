@@ -113,6 +113,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.faq', {
+        url: '/faq',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/faq.html'
+          }
+        }
+      })
+
       .state('app.day1', {
         url: '/day/1',
         views: {
