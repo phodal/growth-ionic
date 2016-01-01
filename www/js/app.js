@@ -95,6 +95,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.book', {
+        url: '/book',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/book.html'
+          }
+        }
+      })
+
       .state('app.seven', {
         url: '/seven',
         views: {
