@@ -245,6 +245,7 @@ body {
 .markdown-body h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
+  -webkit-user-select: auto;
 }
 
 .markdown-body h1 {
@@ -281,6 +282,7 @@ body {
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 1.46em;
+  -webkit-user-select: auto;
 }
 
 .markdown-body a {

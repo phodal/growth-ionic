@@ -202,6 +202,39 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
             controller: 'DayCtrl'
           }
         }
+      })
+
+      .state('app.prog', {
+        url: '/books/prog',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/prog.html'
+          }
+        }
+      })
+      .state('app.arch', {
+        url: '/books/arch',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/arch.html'
+          }
+        }
+      })
+      .state('app.method', {
+        url: '/books/method',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/method.html'
+          }
+        }
+      })
+      .state('app.think', {
+        url: '/books/think',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/think.html'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/app/main');
