@@ -102,5 +102,9 @@ var AllArticle = [
   {
     "slug" : "retro",
     "title": "Retro"
+  },
+  {
+    "slug" : "intellij-refactor",
+    "title": "Intellij Idea重构"
   }
 ];
