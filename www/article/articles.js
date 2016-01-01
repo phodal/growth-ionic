@@ -106,5 +106,9 @@ var AllArticle = [
   {
     "slug" : "intellij-refactor",
     "title": "Intellij Idea重构"
+  },
+  {
+    "slug" : "typing",
+    "title": "写代码只是在码字"
   }
 ];

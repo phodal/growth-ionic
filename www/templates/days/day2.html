@@ -15,15 +15,29 @@
       </div>
     </div>
 
-    <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/kickoff">
-      <h2>Kickoff</h2>
-      <i class="icon ion-ios-arrow-right"></i>
-    </ion-item>
+    <div class="list card">
+      <div class="sectionTitle">编码之前</div>
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/typing">
+        <h2>写代码只是在码字</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
 
-    <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/tasking">
-      <h2>Tasking</h2>
-      <i class="icon ion-ios-arrow-right"></i>
-    </ion-item>
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/kickoff">
+        <h2>Kickoff</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/tasking">
+        <h2>Tasking</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" ng-click="openSpecialModal('test', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
+        <a class="tab-item" ng-click="openSpecialModal('test', 'book')"><i class="icon ion-ios-book"></i>书单</a>
+        <a class="tab-item" ng-click="openSpecialModal('test', 'tree')"><i class="icon ion-ios-paper"></i>成长树</a>
+      </div>
+    </div>
 
     <div class="list card">
       <div class="sectionTitle">测试</div>
