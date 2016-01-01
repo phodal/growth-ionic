@@ -79,7 +79,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/article/:slug',
         views: {
           'menuContent': {
-            templateUrl: 'templates/article-detail.html',
+            templateUrl: 'templates/read/article-detail.html',
             controller: 'ArticleCtrl'
           }
         }
@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/articles',
         views: {
           'menuContent': {
-            templateUrl: 'templates/article-list.html',
+            templateUrl: 'templates/read/article-list.html',
             controller: 'ArticleListCtrl'
           }
         }
@@ -99,7 +99,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/book',
         views: {
           'menuContent': {
-            templateUrl: 'templates/book.html'
+            templateUrl: 'templates/read/book.html'
           }
         }
       })
@@ -108,7 +108,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/review',
         views: {
           'menuContent': {
-            templateUrl: 'templates/review.html'
+            templateUrl: 'templates/read/review.html'
           }
         }
       })
