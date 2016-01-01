@@ -131,11 +131,11 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
-      .state('app.test', {
-        url: '/test',
+      .state('app.exam', {
+        url: '/exam',
         views: {
           'menuContent': {
-            templateUrl: 'templates/test.html'
+            templateUrl: 'templates/exam.html'
           }
         }
       })
