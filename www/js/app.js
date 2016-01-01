@@ -144,7 +144,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/1',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day1.html',
+            templateUrl: 'templates/days/day1.html',
             controller: 'DayCtrl'
           }
         }
@@ -153,7 +153,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/2',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day2.html',
+            templateUrl: 'templates/days/day2.html',
             controller: 'DayCtrl'
           }
         }
@@ -162,7 +162,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/3',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day3.html',
+            templateUrl: 'templates/days/day3.html',
             controller: 'DayCtrl'
           }
         }
@@ -171,7 +171,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/4',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day4.html',
+            templateUrl: 'templates/days/day4.html',
             controller: 'DayCtrl'
           }
         }
@@ -180,7 +180,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/5',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day5.html',
+            templateUrl: 'templates/days/day5.html',
             controller: 'DayCtrl'
           }
         }
@@ -189,7 +189,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/6',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day6.html',
+            templateUrl: 'templates/days/day6.html',
             controller: 'DayCtrl'
           }
         }
@@ -198,7 +198,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/day/7',
         views: {
           'menuContent': {
-            templateUrl: 'templates/day7.html',
+            templateUrl: 'templates/days/day7.html',
             controller: 'DayCtrl'
           }
         }
