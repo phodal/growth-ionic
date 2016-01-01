@@ -10,7 +10,7 @@
  - 让代码保持弹性
  - 严格按规范编写代码
  - 设计可扩展的API
- - 代替旧有的框架、语言(如VB)
+ - 代替旧有的框架、语言
  - 增强用户体验
 
 通常来说对于速度的优化也包含在重构中
@@ -23,9 +23,8 @@
 
 可以应用的的方面
  
- - [使用Ngx_pagespeed优化前端](http://www.phodal.com/blog/nginx-with-ngx-pagespeed-module-improve-website-cache/)
- - 解耦复杂的模块
+ - 解耦复杂的模块 -> 微服务
  - 对缓存进行优化
  - 针对于内容创建或预留API
- - 需要添加新API，如(weChat等的支持)
- - 用新的语言、框架代码旧的框架(如VB.NET，C#.NET)
+ - 需要添加新的API
+ - 用新的语言、框架代替旧的框架(如Scala,Node.js,React)
