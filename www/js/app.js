@@ -104,6 +104,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.review', {
+        url: '/review',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/review.html'
+          }
+        }
+      })
+
       .state('app.seven', {
         url: '/seven',
         views: {
