@@ -96,11 +96,11 @@ var AllArticle = [
     "title": "构建系统"
   },
   {
-    "slug" : "builder",
-    "title": "构建系统"
-  },
-  {
     "slug" : "ci",
     "title": "持续集成"
+  },
+  {
+    "slug" : "retro",
+    "title": "Retro"
   }
 ];
