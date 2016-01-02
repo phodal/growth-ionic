@@ -237,6 +237,13 @@ body {
   color: #444443;
 }
 
+
+marked h1,
+marked h2,
+marked h3,
+marked h4,
+marked h5,
+marked h6,
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
@@ -253,21 +260,27 @@ body {
   margin: 0.67em 0;
 }
 
+marked h1,
 .markdown-body > h1 {
   margin-top: 0;
   font-size: 2em;
 }
 
+marked h2,
 .markdown-body h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
+marked h3,
 .markdown-body h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
+marked h4,
+marked h5,
+marked h6,
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
@@ -279,7 +292,9 @@ body {
   font-weight: 500;
 }
 
+marked p,
 .markdown-body p {
+  font-size: 1em;
   margin-top: 0;
   margin-bottom: 1.46em;
   -webkit-user-select: auto;
