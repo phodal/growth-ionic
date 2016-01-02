@@ -110,5 +110,9 @@ var AllArticle = [
   {
     "slug" : "typing",
     "title": "写代码只是在码字"
+  },
+  {
+    "slug" : "pm",
+    "title": "包管理 "
   }
 ];
