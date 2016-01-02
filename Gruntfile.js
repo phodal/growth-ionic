@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         options: {
           bucket: 'www.growth.ren',
           params: {
-            CacheControl: 'max-age=31536000'
+            CacheControl: 'max-age=604800'
           }
         },
         files: [
