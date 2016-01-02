@@ -1,0 +1,1 @@
+VHDL全名Very-High-Speed Integrated Circuit Hardware Description Language,诞生于1982年。1987年底，VHDL被IEEE和美国国防部确认为标准硬件描述语言 。自IEEE-1076（简称87版)之后，各EDA公司相继推出自己的VHDL设计环境，或宣布自己的设计工具可以和VHDL接口。1993年，IEEE对VHDL进行了修订，从更高的抽象层次和系统描述能力上扩展VHDL的内容，公布了新版本的VHDL，即IEEE标准的1076-1993版本，简称93版。VHDL和Verilog作为IEEE的工业标准硬件描述语言，得到众多EDA公司支持，在电子工程领域，已成为事实上的通用硬件描述语言。

@@ -1,0 +1,1 @@
+CoffeeScript是一套JavaScript的转译语言。受到Ruby、Python与Haskell等语言的启发，CoffeeScript增强了JavaScript的简洁性与可读性。此外，CoffeeScript也新增了更复杂的功能，例如列表内涵（List comprehension）、模式匹配（Pattern matching）等。一般来说，CoffeeScript可以在不影响执行效能的情况下，缩短约三分之一的程式码长度。自从2011年6月以来，CoffeeScript已经是GitHub上最受瞩目的专案之一。

@@ -1,0 +1,39 @@
+<ion-view view-title="{{language}}">
+    <ion-content
+            [delegate-handle=""]
+            [direction=""]
+            [locking=""]
+            [padding=""]
+            [scroll=""]
+            [overflow-scroll=""]
+            [scrollbar-x=""]
+            [scrollbar-y=""]
+            [start-x=""]
+            [start-y=""]
+            [on-scroll=""]
+            [on-scroll-complete=""]
+            [has-bouncing=""]
+            [scroll-event-interval=""]>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="item item-divider">
+                        简介
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div marked ng-include="md"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="item item-divider">
+                        Hello World代码
+                    </div>
+                    <div ng-show="hello_world">
+                        <div hljs source="hello_world"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

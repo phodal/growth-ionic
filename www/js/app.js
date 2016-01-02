@@ -66,6 +66,44 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.wiki', {
+        url: "/wiki",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/game/wiki.html",
+            controller: 'WikiCtrl'
+          }
+        }
+      })
+      .state('app.language', {
+        url: "/language/:language_info",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/game/wiki_detail.html",
+            controller: 'WikiDetailCtrl'
+          }
+        }
+      })
+      .state('app.levelSelect', {
+        url: "/level",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/game/level.html",
+            controller: 'LevelSelectCtrl'
+          }
+        }
+      })
+
+      .state('app.single', {
+        url: "/level/:level",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/game/level_quiz.html",
+            controller: 'QuizCtrl'
+          }
+        }
+      })
+
       .state('app.about', {
         url: '/about',
         views: {

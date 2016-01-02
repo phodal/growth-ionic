@@ -1,0 +1,5 @@
+.idea
+platforms
+hooks/
+plugins/org.apache.cordova.device.tests
+plugins/org.apache.cordova.test-framework
