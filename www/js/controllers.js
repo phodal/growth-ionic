@@ -53,12 +53,10 @@ angular.module('starter.controllers', [])
       console.log('Modal ' + modal.id + ' is hidden!');
     });
 
-    // Cleanup the modals when we're done with them (i.e: state change)
-    // Angular will broadcast a $destroy event just before tearing down a scope
-    // and removing the scope from its parent.
+    // Cleanup the modals
     $scope.$on('$destroy', function () {
-      for (var modal in $scope.currentModals) {
+      angular.forEach($scope.currentModals, function(modal){
         modal.remove();
-      }
+      });
     });
   });
