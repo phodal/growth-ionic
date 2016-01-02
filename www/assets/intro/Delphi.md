@@ -1,0 +1,8 @@
+Delphi，是Windows平台下著名的快速应用程序开发（Rapid Application Development，简称RAD）。它的前身，即是DOS时代盛行一时的“Borland Turbo Pascal”，最早的版本由美国Borland（宝兰）公司于1995年开发。主创者为安德斯·海尔斯伯格。经过数年的发展，此产品也转移至Embarcadero公司旗下。
+
+从产品名称上就可以知道，Turbo Pascal使用的是Pascal语言。从Turbo Pascal 5.5版开始，Borland公司在传统Pascal的基础上加入了面向对象的功能。
+
+Delphi是一个集成开发环境（IDE），使用的核心是由传统Pascal语言发展而来的Object Pascal，以图形用户界面（Graphical User Interface，简称GUI）为开发环境，通过IDE、VCL工具与编译器，配合链接数据库的功能，构成一个以面向对象程序设计为中心的应用程序开发工具。Delphi所编译的可执行文件，虽然容量较大，但因为产生的是真正的原生机器码，性能上比较快速。除了使用数据库的程序之外，不需安装即可运行，在使用上相当方便。
+
+Delphi在本质上应该归类为软件开发工具，而并非是程序语言，但由于Delphi几乎是目前市场上唯一使用Pascal，并持续推出新版本的商业产品。因此，有时人们会把Delphi视为Object Pascal的代名词。Borland公司因而把Object Pascal改称为Delphi。2006年，Borland把开发工具产品线独立出来，成立了一家新的公司CodeGear，并把产品线交由此公司负责。原本的Delphi，亦曾一度因此被命名为Turbo Delphi。但是在新的版本中，除了Delphi for Win32（原有的Delphi版本）之外，还有一个新产品“Delphi for PHP”。在CodeGear的发展规划中，或许“Delphi”不再是Object Pascal的专属IDE名称，而是将之提升到通用IDE品牌的层次。2008年5月7日，Embarcadero Technologies（易博龙）公司宣布以2300万美元的价格收购CodeGear公司，从而把Delphi收入囊中。2009年5月6日，Micro Focus宣布以7500万美元收购Borland。
+

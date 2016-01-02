@@ -1,0 +1,12 @@
+<ion-view view-title="Wiki">
+    <ion-content>
+        <div class="list">
+        <div ng-repeat="language in languages">
+            <a class="item item-icon-right" href="#/app/language/{{language.level}}+{{language.language}}">
+                {{language.language_name}}
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

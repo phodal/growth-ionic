@@ -1,0 +1,1 @@
+Tcl (最早称为“工具命令语言”"Tool Command Language", 但是目前已经不是这个含义，不过我们仍然称呼它为TCL)是一种 脚本语言。 由John Ousterhout创建。 TCL很好学，功能很强大。TCL经常被用于 快速原型开发，脚本编程， GUI和测试等方面。

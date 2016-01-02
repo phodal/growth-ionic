@@ -1,0 +1,3 @@
+ActionScript是Adobe为其Flash产品开发的 ，最初是一种简单的脚本语言，现在最新版本3.0，是一种完全的面向对象的编程语言，功能强大，类库丰富，语法类似JavaScript，多用于Flash互动性、娱乐性、实用性开发，网页制作和RIA应用程序开发。
+
+ActionScript是一种基于ECMAScript的脚本语言，可用于编写Adobe Flash动画和应用程序。由于ActionScript和JavaScript都是基于ECMAScript语法的，理论上它们互相可以很流畅地从一种语言翻译到另一种。不过JavaScript的文档对象模型是以浏览器窗口，文档和表单为主的，ActionScript的文档对象模型则以SWF格式动画为主，可包括动画，音频，文字和事件处理。
