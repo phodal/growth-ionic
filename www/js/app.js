@@ -8,7 +8,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
       }
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
-        StatusBar.styleDefault();
+        //StatusBar.styleDefault();
+        StatusBar.backgroundColorByHexString("#387ef5");
       }
     });
   })
