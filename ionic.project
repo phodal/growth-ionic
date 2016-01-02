@@ -12,7 +12,7 @@
   "browsers": [
     {
       "platform": "android",
-      "browser": "crosswalk-lite",
+      "browser": "crosswalk",
       "version": "12.41.296.5"
     }
   ]
