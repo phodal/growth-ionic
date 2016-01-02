@@ -113,6 +113,10 @@ var AllArticle = [
   },
   {
     "slug" : "pm",
-    "title": "包管理 "
+    "title": "包管理"
+  },
+  {
+    "slug" : "learn-design",
+    "title": "认识设计"
   }
 ];
