@@ -18,28 +18,28 @@
         </button>
 
         <div ng-show="!answerMode">
-                  <span ng-show="correctAns">
-                      <button ng-click="nextQuestion()" class="next-question button button-full button-balanced">下一题
-                      </button>
-                      <div class="card">
-                        <div class="item item-text-wrap">
-                          <i class="ion-checkmark"></i> 回答正确!
-                        </div>
-                      </div>
-                      <a class="item item-icon-left button button-full ion-chevron-right icon-right"
-                         href="#/app/language/{{wiki_url}}">了解一下{{correct_language}}</a>
-                  </span>
-                  <span ng-show="!correctAns">
-                      <button ng-click="nextQuestion()" class="next-question button button-full button-assertive">下一题
-                      </button>
-                      <div class="card">
-                        <div class="item item-text-wrap">
-                          <i class="ion-sad"></i> 答错了~~ 正确答案是: {{correct_language}}。
-                        </div>
-                      </div>
-                      <a class="item item-icon-left button button-full ion-chevron-right icon-right"
-                         href="#/app/language/{{wiki_url}}">了解一下{{correct_language}}</a>
-                  </span>
+          <span ng-show="correctAns">
+              <button ng-click="nextQuestion()" class="next-question button button-full button-balanced">下一题
+              </button>
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <i class="ion-checkmark"></i> 回答正确!
+                </div>
+              </div>
+              <a class="item item-icon-left button button-full ion-chevron-right icon-right"
+                 href="#/app/language/{{wiki_url}}">了解一下{{correct_language}}</a>
+          </span>
+          <span ng-show="!correctAns">
+              <button ng-click="nextQuestion()" class="next-question button button-full button-assertive">下一题
+              </button>
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <i class="ion-sad"></i> 答错了~~ 正确答案是: {{correct_language}}。
+                </div>
+              </div>
+              <a class="item item-icon-left button button-full ion-chevron-right icon-right"
+                 href="#/app/language/{{wiki_url}}">了解一下{{correct_language}}</a>
+          </span>
         </div>
       </div>
     </div>
