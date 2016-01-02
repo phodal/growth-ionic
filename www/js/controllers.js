@@ -4,6 +4,27 @@ angular.module('starter.controllers', [])
 
   })
 
+  .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
+    $ionicLoading.show({
+      animation: 'fade-in',
+      template: 'Loading...'
+    });
+    $http({
+      method: 'GET',
+      url: 'review/' + $stateParams.slug + '.md'
+    }).success(function (response) {
+      $ionicLoading.hide();
+      $scope.title = $filter('filter')(AllReview, {"slug": $stateParams.slug})[0].title;
+      $scope.htmlContent = $sce.trustAsHtml(marked(response))
+    }).error(function (data, status) {
+      alert(data + status);
+    });
+  })
+
+  .controller('ReviewListCtrl', function ($scope) {
+    $scope.reviews = AllReview;
+  })
+
   .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
     $ionicLoading.show({
       animation: 'fade-in',

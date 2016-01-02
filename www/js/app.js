@@ -43,8 +43,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
           text + '</h' + level + '>';
       },
       image: function (href) {
-      return "<img class='full-image' src=" + href + ">";
-    }
+        return "<img class='full-image' src=" + href + ">";
+      }
     });
   }])
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -95,20 +95,31 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.review', {
+        url: '/review/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/review-detail.html',
+            controller: 'ReviewCtrl'
+          }
+        }
+      })
+
+      .state('app.reviews', {
+        url: '/reviews',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/review-list.html',
+            controller: 'ReviewListCtrl'
+          }
+        }
+      })
+
       .state('app.book', {
         url: '/book',
         views: {
           'menuContent': {
             templateUrl: 'templates/read/book.html'
-          }
-        }
-      })
-
-      .state('app.review', {
-        url: '/review',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/read/review.html'
           }
         }
       })
