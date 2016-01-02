@@ -5,9 +5,6 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('LevelSelectCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined') {
-      analytics.trackView("LevelSelectCtrl");
-    }
     $scope.levels = [
       {title: 'Level 1', id: 1},
       {title: 'Level 2', id: 2},
@@ -17,9 +14,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
-    if (typeof analytics !== 'undefined') {
-      analytics.trackView("QuizCtrl");
-    }
+    $scope.userAnswer = {};
     $scope.level = $stateParams.level;
     $http.get('assets/data/lv' + $stateParams.level + '.json').then(function (data) {
       $scope.level_langeuages = data.data;
@@ -51,14 +46,21 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
         var options_language = utilsFactory.shuffle([firstLanguage.split('.')[0], correct_language.split('.')[0], secondLanguage.split('.')[0]]);
         $scope.answer = -1;
+        var answerWithIndex = [];
         angular.forEach(options_language, function (language, index) {
+          answerWithIndex.push({
+            language: language,
+            value: index
+          });
+
           if (language === correct_language.split('.')[0]) {
             $scope.answer = index;
           }
         });
+
         var q = {
           question: $scope.data,
-          options: options_language,
+          options: answerWithIndex,
           answer: $scope.answer
         };
         if (q) {
@@ -75,9 +77,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.checkAnswer = function () {
-      if (!$('input[name=answer]:checked').length) return;
-      var ans = $('input[name=answer]:checked').val();
-      if (ans == $scope.options[$scope.answer]) {
+      if ($scope.userAnswer === -1) return;
+      var ans = $scope.userAnswer.value;
+      if (ans === $scope.answer) {
         $scope.score++;
         $scope.correctAns = true;
       } else {

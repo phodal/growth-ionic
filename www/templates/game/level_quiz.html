@@ -10,18 +10,20 @@
                     </div>
                 </div>
                 <ul id="options">
-                    <li ng-repeat="option in options" class="item item-radio">
-                        <label>
-                            <label>
-                                <input type="radio" name="answer" value="{{option}}">
+                    <!--<li ng-repeat="option in options" class="item item-radio">-->
+                        <!--<ion-radio ng-model="userAnswer" ng-value="{{option}}">{{option}}</ion-radio>-->
 
-                                <div class="item-content">
-                                    {{option}}
-                                </div>
-                                <i class="radio-icon ion-checkmark"></i>
-                            </label>
-                        </label>
-                    </li>
+                              <!--<input type="radio" name="answer" value="{{option}}">-->
+
+                                <!--<div class="item-content">-->
+                                    <!--{{option}}-->
+                                <!--</div>-->
+                                <!--<i class="radio-icon ion-checkmark"></i>-->
+                    <!--</li>-->
+
+                  <ion-radio ng-repeat="option in options" ng-value="{{option.value}}" ng-model="userAnswer.value">
+                    {{option.language}}
+                  </ion-radio>
                 </ul>
                 <button ng-click="checkAnswer()" ng-show="answerMode" class="button button-full button-positive">确认
                 </button>
