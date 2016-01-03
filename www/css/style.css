@@ -525,3 +525,8 @@ marked table pre {
 marked h2 {
   text-align: center;
 }
+
+.selfIntro p {
+  margin: 1em;
+  font-size: 1.2em;
+}
