@@ -1,7 +1,6 @@
 angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils'])
 
   .controller('AppCtrl', function ($scope) {
-
   })
 
   .controller('FeedbackCtrl', function ($scope, $cordovaEmailComposer) {
@@ -38,6 +37,11 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Quiz Game')
+    }
+
     $scope.userAnswer = {};
     $scope.level = $stateParams.level;
     $http.get('assets/data/lv' + $stateParams.level + '.json').then(function (data) {
@@ -122,8 +126,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('WikiCtrl', function ($scope, $stateParams, $http) {
-    if (typeof analytics !== 'undefined') {
-      analytics.trackView("WikiCtrl");
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('WiKi List')
     }
     $scope.level = $stateParams.level;
     $http.get('assets/data/results.json').then(function (data) {
@@ -140,6 +145,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('WikiDetailCtrl', function ($scope, $stateParams, quizFactory, $http) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('WiKi Detail')
+    }
     if (typeof analytics !== 'undefined') {
       analytics.trackView("WikiDetailCtrl");
     }
@@ -157,6 +166,11 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Review')
+    }
+
     $ionicLoading.show({
       animation: 'fade-in',
       template: 'Loading...'
@@ -174,10 +188,18 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ReviewListCtrl', function ($scope) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Review List')
+    }
     $scope.reviews = AllReview;
   })
 
   .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Article Detail')
+    }
     $ionicLoading.show({
       animation: 'fade-in',
       template: 'Loading...'
@@ -195,14 +217,26 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ArticleListCtrl', function ($scope) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Article List')
+    }
     $scope.articles = AllArticle;
   })
 
   .controller('DayCtrl', function ($scope, $ionicModal) {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Day Ctrl List')
+    }
     $scope.currentModal = null;
     $scope.currentModals = [];
 
     $scope.openSpecialModal = function (subtopic, branch) {
+      if (typeof analytics !== 'undefined'){
+        analytics.startTrackerWithId('UA-71907748-1');
+        analytics.trackView('modal ' + subtopic + ' ' + branch)
+      }
       $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/' + branch + '.html', {
         id: subtopic + '-' + branch,
         scope: $scope,

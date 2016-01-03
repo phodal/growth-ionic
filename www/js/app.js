@@ -3,7 +3,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined'){
         analytics.startTrackerWithId('UA-71907748-1');
-        analytics.trackView('Screen Title')
+        analytics.trackView('Android App')
       } else {
         console.log("Google Analytics plugin could not be loaded.")
       }
