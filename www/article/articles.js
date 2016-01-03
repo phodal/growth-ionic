@@ -122,5 +122,9 @@ var AllArticle = [
   {
     "slug" : "docker",
     "title": "Docker"
+  },
+  {
+    "slug" : "hadoop",
+    "title": "Hadoop"
   }
 ];
