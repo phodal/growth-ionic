@@ -126,5 +126,9 @@ var AllArticle = [
   {
     "slug" : "hadoop",
     "title": "Hadoop"
+  },
+  {
+    "slug" : "auto",
+    "title": "自动化构建"
   }
 ];
