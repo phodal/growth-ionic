@@ -176,7 +176,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/seven',
         views: {
           'menuContent': {
-            templateUrl: 'templates/seven.html'
+            templateUrl: 'templates/more/seven.html'
           }
         }
       })
@@ -185,7 +185,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/faq',
         views: {
           'menuContent': {
-            templateUrl: 'templates/faq.html'
+            templateUrl: 'templates/more/faq.html'
           }
         }
       })
