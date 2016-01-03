@@ -27,6 +27,10 @@ Growth没有啥：
  - 某某语言入门到精通
  - 银弹
 
+欢迎关注我的微信公众号: phodal
+
+![QRCode](www/img/wechat.jpg)
+
 ##来源
 
 APP来源于: 对Web应用开发的一个流程认识。
@@ -39,9 +43,6 @@ APP来源于: 对Web应用开发的一个流程认识。
 
 ##其他
 
-欢迎关注我的微信公众号: phodal
-
-![QRCode](www/img/wechat.jpg)
 
 Plugins:
 
