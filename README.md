@@ -2,6 +2,11 @@
 
 > 一个关于如何成长的App。
 
+<a href="https://play.google.com/store/apps/details?id=ren.growth">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
+</a>
+
 ![Growth Logo](resources/android/icon/drawable-xxxhdpi-icon.png)
 
 成长是一个非常有意思的话题。
