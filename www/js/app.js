@@ -194,7 +194,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/feedback',
         views: {
           'menuContent': {
-            templateUrl: 'templates/more/feedback.html'
+            templateUrl: 'templates/more/feedback.html',
+            controller: 'FeedbackCtrl'
           }
         }
       })

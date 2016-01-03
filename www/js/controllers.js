@@ -4,6 +4,30 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
   })
 
+  .controller('FeedbackCtrl', function ($scope, $cordovaEmailComposer) {
+    if (window.cordova) {
+      $scope.sendMail = function () {
+        $cordovaEmailComposer.isAvailable().then(function () {
+          // is available
+        }, function () {
+          // not available
+        });
+
+
+        var email = {
+          to: 'h@phodal.com',
+          subject: '关于《Growth Ren》',
+          body: '',
+          isHtml: true
+        };
+
+        $cordovaEmailComposer.open(email).then(null, function () {
+          // user cancelled email
+        });
+      }
+    }
+  })
+
   .controller('LevelSelectCtrl', function ($scope) {
     $scope.levels = [
       {title: 'Level 1', id: 1},

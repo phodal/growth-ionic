@@ -1,15 +1,11 @@
 <ion-view view-title="意见反馈">
   <ion-content>
-    <div class="card">
-      <div class="item item-divider">
-        Github Issues
-      </div>
-      <div class="item item-text-wrap">
-        <a class="item" href="#" onclick="window.open('https://github.com/phodal/growth/issues', '_system', 'location=yes'); return false;">
-          https://github.com/phodal/growth/issues
-        </a>
-      </div>
-    </div>
-
+    <a class="button button-full" href="#" onclick="window.open('https://github.com/phodal/growth/issues', '_system', 'location=yes'); return false;">
+      Github Issues
+    </a>
+    <a class="button button-full" href="#" ng-click="sendMail()">
+      <i class="ion-ios-email-outline"></i>
+      联系我:h@phodal.com
+    </a>
   </ion-content>
 </ion-view>
