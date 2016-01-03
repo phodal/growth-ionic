@@ -46,6 +46,7 @@ APP来源于: 对Web应用开发的一个流程认识。
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+    cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
 
 ## License
 
