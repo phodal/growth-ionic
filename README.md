@@ -1,6 +1,6 @@
 # Growth
 
-> 一个关于如何成长的App。
+> 一个关于如何成为优秀Web Developer的App。
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
