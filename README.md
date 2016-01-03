@@ -38,6 +38,10 @@ APP来源于: 对Web应用开发的一个流程认识。
 
 ![QRCode](www/img/wechat.jpg)
 
+Plugins:
+
+    cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+
 ## License
 
 © 2015~2016 [Phodal Huang](https://www.phodal.com). This code is distributed under the CC0 1.0 Universal license. See `LICENSE` in this directory.
