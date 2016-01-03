@@ -1,21 +1,26 @@
 # Growth
 
-![Growth Logo](resources/android/icon/drawable-xxxhdpi-icon.png) <a href="https://play.google.com/store/apps/details?id=ren.growth">
+> 一个关于如何成为优秀Web Developer的App。
+
+在线版: [http://www.growth.ren/](http://www.growth.ren/)
+
+App版:
+
+<a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
-> 一个关于如何成为优秀Web Developer的App。
-
-成长是一个非常有意思的话题。
-
-过去技术是阻碍业务的主因，今天技术不再是阻碍业务的主因。今天阻碍的主要因素是人员的成长速度。而另外一个忧伤的话题是：加班影响了他们的成长。而加班对于多数公司来说是必须的，因为他们不知道不加班可以让他们**不再加班**。
 
 欢迎关注我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
 
 ##简介
+
+成长是一个非常有意思的话题。
+
+过去技术是阻碍业务的主因，今天技术不再是阻碍业务的主因。今天阻碍的主要因素是人员的成长速度。而另外一个忧伤的话题是：加班影响了他们的成长。而加班对于多数公司来说是必须的，因为他们不知道不加班可以让他们**不再加班**。
 
 Growth主要关注的点是**Web开发的流程以及其技术栈、学习路线**，里有啥：
 
