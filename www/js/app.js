@@ -190,6 +190,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.feedback', {
+        url: '/feedback',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more/feedback.html'
+          }
+        }
+      })
+
       .state('app.exam', {
         url: '/exam',
         views: {
