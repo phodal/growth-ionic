@@ -24,9 +24,6 @@
   ],
   "cordovaPlatforms": [
     "ios",
-    {
-      "platform": "android",
-      "locator": "amazon-fireos"
-    }
+    "android"
   ]
 }
