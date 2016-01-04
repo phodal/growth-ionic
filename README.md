@@ -4,21 +4,20 @@
 
 在线版: [http://www.growth.ren/](http://www.growth.ren/)
 
-App版:
+App版已在**360手机助手**、**豌豆荚**、**Google Play**等应用商店上线
 
-下载： [http://fir.im/phodal](http://fir.im/phodal)
-
-已在**360手机助手**、**豌豆荚**、**Google Play**等应用商店上线
-
-<a href="https://play.google.com/store/apps/details?id=ren.growth">
-  <img alt="Get it on Google Play"
-       src="screenshot/zh-cn_generic_rgb_wo_60.png" />
-</a>
-
+最新版本下载：[http://fir.im/phodal](http://fir.im/phodal)
 
 截图:
 
 ![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg)
+
+QQ交流群: 529600394
+
+欢迎关注我的微信公众号: phodal，以获取及时更新信息。
+
+![QRCode](www/img/wechat.jpg)
+
 
 ##简介
 
@@ -49,11 +48,6 @@ APP来源于: 对Web应用开发的一个流程认识。
 因而, 我们应该想方法去更好地去构建我们的代码。
 
 ##其他
-
-欢迎关注我的微信公众号: phodal
-
-![QRCode](www/img/wechat.jpg)
-
 
 Plugins:
 
