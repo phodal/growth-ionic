@@ -49,6 +49,8 @@ APP来源于: 对Web应用开发的一个流程认识。
 
 ##其他
 
+前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
+
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
