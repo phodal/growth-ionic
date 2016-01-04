@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'www/assets/', src: ['**'], dest: 'assets/', action: 'upload'},
           {expand: true, cwd: 'www/review/', src: ['**'], dest: 'review/', action: 'upload'},
           {expand: true, cwd: 'www/templates/', src: ['**'], dest: 'templates/', action: 'upload'},
-          {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['android-armv7-debug.apk'], dest: './', action: 'upload'},
+          {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'},
           {expand: true, cwd: 'www/article/', src: ['**'], dest: 'article/', action: 'upload', params: {ContentType: 'text/plain'}},
           {
             expand: true,
