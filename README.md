@@ -13,6 +13,10 @@ App版:
 
 下载： [http://fir.im/phodal](http://fir.im/phodal)
 
+<a href="http://www.wandoujia.com/apps/ren.growth">
+  <img alt="Get it on Wandoujia"
+       src="http://static.wdjimg.com/apps/images/logo_full@2x.png" />
+</a>
 <a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
