@@ -88,6 +88,10 @@ var AllArticle = [
     "title": "搭建开发环境"
   },
   {
+    "slug" : "env-osx",
+    "title": "搭建开发环境(OSX)"
+  },
+  {
     "slug" : "windows-unix",
     "title": "Windows或者类Unix"
   },
