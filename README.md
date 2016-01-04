@@ -11,10 +11,7 @@
 
 App版:
 
-1. [http://fir.im/phodal](http://fir.im/phodal)
-2. [http://www.growth.ren/growth.apk](https://s3-ap-southeast-2.amazonaws.com/www.growth.ren/growth.apk
-) (AWS S3上可能会比较慢)
-
+下载： [http://fir.im/phodal](http://fir.im/phodal)
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
