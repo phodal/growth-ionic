@@ -138,5 +138,9 @@ var AllArticle = [
   {
     "slug" : "lnmp",
     "title": "LNMP"
+  },
+  {
+    "slug" : "legacy-code",
+    "title": "遗留代码"
   }
 ];
