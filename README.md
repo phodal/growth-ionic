@@ -2,11 +2,6 @@
 
 > 一个关于如何成为优秀Web Developer的App。
 
-
-截图:
-
-![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg) ![5.pic](screenshot/5.pic.jpg)
-
 在线版: [http://www.growth.ren/](http://www.growth.ren/)
 
 App版:
@@ -15,16 +10,17 @@ App版:
 
 <a href="http://www.wandoujia.com/apps/ren.growth">
   <img alt="Get it on Wandoujia"
-       src="http://static.wdjimg.com/apps/images/logo_full@2x.png" />
+       src="screenshot/logo_full@2x.png" />
 </a>
 <a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
+       src="screenshot/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
-欢迎关注我的微信公众号: phodal
 
-![QRCode](www/img/wechat.jpg)
+截图:
+
+![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg)
 
 ##简介
 
@@ -55,6 +51,10 @@ APP来源于: 对Web应用开发的一个流程认识。
 因而, 我们应该想方法去更好地去构建我们的代码。
 
 ##其他
+
+欢迎关注我的微信公众号: phodal
+
+![QRCode](www/img/wechat.jpg)
 
 
 Plugins:
