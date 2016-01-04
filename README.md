@@ -2,29 +2,28 @@
 
 > 一个关于如何成为优秀Web Developer的App。
 
+
+截图:
+
+![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg) ![5.pic](screenshot/5.pic.jpg)
+
 在线版: [http://www.growth.ren/](http://www.growth.ren/)
 
 App版:
+
+1. [http://fir.im/phodal](http://fir.im/phodal)
+2. [http://www.growth.ren/growth.apk](https://s3-ap-southeast-2.amazonaws.com/www.growth.ren/growth.apk
+) (AWS S3上可能会比较慢)
+
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
-最新下载: 
-
-
-1. [http://fir.im/phodal](http://fir.im/phodal)
-2. [http://www.growth.ren/growth.apk](https://s3-ap-southeast-2.amazonaws.com/www.growth.ren/growth.apk
-) (AWS S3上可能会比较慢)
-
 欢迎关注我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
-
-截图:
-
-![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg) ![5.pic](screenshot/5.pic.jpg)
 
 ##简介
 
