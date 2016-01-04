@@ -35,16 +35,39 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       {title: 'Level 4', id: 4}
     ];
   })
-  .controller('AllQuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
-    $http.get('quiz/' + $stateParams.slug +  '.json').then(function (response) {
-      var quiz_id = utilsFactory.getRandomInt(response.data.length);
-      console.log(quiz_id);
-      $scope.question = response.data[quiz_id];
+  .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory) {
+    if (typeof analytics !== 'undefined') {
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Quiz Game' + $stateParams.slug);
+    }
+
+    $scope.questions = [];
+    $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
+      $scope.questions = response.data;
     });
+
+    $scope.getQuestion = function () {
+      var quiz_id = utilsFactory.getRandomInt($scope.questions.length);
+      $scope.question = $scope.questions[quiz_id];
+      $scope.counter = 30;
+      $scope.onTimeout = function () {
+        $scope.counter--;
+        mytimeout = $timeout($scope.onTimeout, 1000);
+        if ($scope.counter <= 0) {
+          $scope.stop();
+        }
+      };
+      
+      var mytimeout = $timeout($scope.onTimeout, 1000);
+
+      $scope.stop = function () {
+        $timeout.cancel(mytimeout);
+      }
+    };
   })
 
   .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Quiz Game')
     }
@@ -133,7 +156,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('WikiCtrl', function ($scope, $stateParams, $http) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('WiKi List')
     }
@@ -152,7 +175,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('WikiDetailCtrl', function ($scope, $stateParams, quizFactory, $http) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('WiKi Detail')
     }
@@ -173,7 +196,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Review')
     }
@@ -195,7 +218,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ReviewListCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Review List')
     }
@@ -203,7 +226,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Article Detail')
     }
@@ -224,7 +247,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('ArticleListCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Article List')
     }
@@ -232,7 +255,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('DayCtrl', function ($scope, $ionicModal) {
-    if (typeof analytics !== 'undefined'){
+    if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Day Ctrl List')
     }
@@ -240,7 +263,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.currentModals = [];
 
     $scope.openSpecialModal = function (subtopic, branch) {
-      if (typeof analytics !== 'undefined'){
+      if (typeof analytics !== 'undefined') {
         analytics.startTrackerWithId('UA-71907748-1');
         analytics.trackView('modal ' + subtopic + ' ' + branch)
       }
