@@ -1,1 +1,102 @@
-[{"id": 0, "language": "Arduino.ino", "level": "lv2"}, {"id": 1, "language": "ASP.asp", "level": "lv2"}, {"id": 2, "language": "BASH.bash", "level": "lv2"}, {"id": 3, "language": "BATCH.bat", "level": "lv2"}, {"id": 4, "language": "CoffeeScript.coffee", "level": "lv2"}, {"id": 5, "language": "CSharp.cs", "level": "lv2"}, {"id": 6, "language": "DOS.bat", "level": "lv2"}, {"id": 7, "language": "Fortran.f90", "level": "lv2"}, {"id": 8, "language": "Lua.lua", "level": "lv2"}, {"id": 9, "language": "Markdown.md", "level": "lv2"}, {"id": 10, "language": "MATLAB.m", "level": "lv2"}, {"id": 11, "language": "MySQL.sql", "level": "lv2"}, {"id": 12, "language": "Node.js", "level": "lv2"}, {"id": 13, "language": "Octave.octave", "level": "lv2"}, {"id": 14, "language": "Python.py", "level": "lv2"}, {"id": 15, "language": "Python3.py", "level": "lv2"}, {"id": 16, "language": "Ruby.py", "level": "lv2"}, {"id": 17, "language": "Shell.sh", "level": "lv2"}, {"id": 18, "language": "VisualBasic.vb", "level": "lv2"}, {"id": 19, "language": "XML.xml", "level": "lv2"}]
+[
+  {
+    "id": 0,
+    "language": "Arduino.ino",
+    "level": "lv2"
+  },
+  {
+    "id": 1,
+    "language": "ASP.asp",
+    "level": "lv2"
+  },
+  {
+    "id": 2,
+    "language": "BASH.bash",
+    "level": "lv2"
+  },
+  {
+    "id": 3,
+    "language": "BATCH.bat",
+    "level": "lv2"
+  },
+  {
+    "id": 4,
+    "language": "CoffeeScript.coffee",
+    "level": "lv2"
+  },
+  {
+    "id": 5,
+    "language": "CSharp.cs",
+    "level": "lv2"
+  },
+  {
+    "id": 6,
+    "language": "DOS.bat",
+    "level": "lv2"
+  },
+  {
+    "id": 7,
+    "language": "Fortran.f90",
+    "level": "lv2"
+  },
+  {
+    "id": 8,
+    "language": "Lua.lua",
+    "level": "lv2"
+  },
+  {
+    "id": 9,
+    "language": "Markdown.md",
+    "level": "lv2"
+  },
+  {
+    "id": 10,
+    "language": "MATLAB.m",
+    "level": "lv2"
+  },
+  {
+    "id": 11,
+    "language": "MySQL.sql",
+    "level": "lv2"
+  },
+  {
+    "id": 12,
+    "language": "Node.js",
+    "level": "lv2"
+  },
+  {
+    "id": 13,
+    "language": "Octave.octave",
+    "level": "lv2"
+  },
+  {
+    "id": 14,
+    "language": "Python.py",
+    "level": "lv2"
+  },
+  {
+    "id": 15,
+    "language": "Python3.py",
+    "level": "lv2"
+  },
+  {
+    "id": 16,
+    "language": "Ruby.py",
+    "level": "lv2"
+  },
+  {
+    "id": 17,
+    "language": "Shell.sh",
+    "level": "lv2"
+  },
+  {
+    "id": 18,
+    "language": "VisualBasic.vb",
+    "level": "lv2"
+  },
+  {
+    "id": 19,
+    "language": "XML.xml",
+    "level": "lv2"
+  }
+]
