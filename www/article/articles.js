@@ -130,5 +130,9 @@ var AllArticle = [
   {
     "slug" : "auto",
     "title": "自动化构建"
+  },
+  {
+    "slug" : "lnmp",
+    "title": "LNMP"
   }
 ];
