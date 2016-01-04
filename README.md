@@ -22,6 +22,10 @@ App版:
 
 ![QRCode](www/img/wechat.jpg)
 
+截图:
+
+![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg) ![5.pic](screenshot/5.pic.jpg)
+
 ##简介
 
 成长是一个非常有意思的话题。
