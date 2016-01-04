@@ -11,6 +11,12 @@ App版:
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
+最新下载: 
+
+
+1. [http://fir.im/phodal](http://fir.im/phodal)
+2. [http://www.growth.ren/growth.apk](https://s3-ap-southeast-2.amazonaws.com/www.growth.ren/growth.apk
+) (AWS S3上可能会比较慢)
 
 欢迎关注我的微信公众号: phodal
 
