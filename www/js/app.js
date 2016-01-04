@@ -310,7 +310,18 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
             templateUrl: 'templates/books/think.html'
           }
         }
-      });
+      })
+
+      .state('app.quiz', {
+        url: '/quiz/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/game/quiz.html',
+            controller: 'AllQuizCtrl'
+          }
+        }
+      })
+    ;
 
     $urlRouterProvider.otherwise('/app/main');
   });

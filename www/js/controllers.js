@@ -35,6 +35,13 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       {title: 'Level 4', id: 4}
     ];
   })
+  .controller('AllQuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
+    $http.get('quiz/' + $stateParams.slug +  '.json').then(function (response) {
+      var quiz_id = utilsFactory.getRandomInt(response.data.length);
+      console.log(quiz_id);
+      $scope.question = response.data[quiz_id];
+    });
+  })
 
   .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
     if (typeof analytics !== 'undefined'){
