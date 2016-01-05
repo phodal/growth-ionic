@@ -1,8 +1,9 @@
 <ion-view view-title="Quiz">
   <ion-content>
     <div class="list card">
-      <button class="button button-full button-calm" ng-click="stop();getQuestion();">下一个</button>
-      <div class="item item-body">
+      <button class="button button-full button-calm" ng-show="isFirst" ng-click="stop();getQuestion();">开始</button>
+      <button class="button button-full button-calm" ng-show="!isFirst" ng-click="stop();getQuestion();">下一个</button>
+      <div class="item item-body" ng-show="isQuestioning">
         <h2>{{question}}</h2>
         <h1>{{counter}}</h1>
       </div>

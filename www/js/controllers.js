@@ -41,12 +41,16 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       analytics.trackView('Quiz Game' + $stateParams.slug);
     }
 
+    $scope.isQuestioning = false;
+    $scope.isFirst = true;
     $scope.questions = [];
     $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.questions = response.data;
     });
 
     $scope.getQuestion = function () {
+      $scope.isQuestioning = true;
+      $scope.isFirst = false;
       var quiz_id = utilsFactory.getRandomInt($scope.questions.length);
       $scope.question = $scope.questions[quiz_id];
       $scope.counter = 30;
@@ -57,7 +61,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
           $scope.stop();
         }
       };
-      
+
       var mytimeout = $timeout($scope.onTimeout, 1000);
 
       $scope.stop = function () {
