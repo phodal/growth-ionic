@@ -303,7 +303,21 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.getSkill = function (subtopic) {
-      $scope.devList = AllSkills[subtopic];
+      $scope.devList = [];
+      var devLists = AllSkills[subtopic];
+
+      angular.forEach(devLists, function (skill) {
+        $storageServices.get(skill.text, function(value) {
+          var checkedValue = false;
+          if(value === 'true' || value === true){
+            checkedValue = true;
+          }
+          $scope.devList.push({
+            text: skill.text,
+            checked: checkedValue
+          });
+        });
+      });
 
       $ionicModal.fromTemplateUrl('templates/skills/skill.html', {
         id: subtopic,
