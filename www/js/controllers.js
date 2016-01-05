@@ -259,7 +259,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.articles = AllArticle;
   })
 
-  .controller('DayCtrl', function ($scope, $ionicModal) {
+  .controller('DayCtrl', function ($scope, $ionicModal, $cordovaPreferences) {
     if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Day Ctrl List')
@@ -288,6 +288,15 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.getSkill = function (subtopic) {
+      if (window.cordova) {
+        $cordovaPreferences.store('key', 'myMagicValue')
+          .success(function (value) {
+            alert("Success: " + value);
+          })
+          .error(function (error) {
+            alert("Error: " + error);
+          });
+      }
       $ionicModal.fromTemplateUrl('templates/skills/' + subtopic + '.html', {
         id: subtopic,
         scope: $scope,
