@@ -1,6 +1,11 @@
 /* Empty. Add your own CSS if you like */
 .days {
-  margin: 2em 2em;
+  margin: 1em 3em;
+}
+
+.days .item-complex .item-content,
+.days .item-radio .item-content {
+  color: #5F6369;
 }
 
 div.title {
