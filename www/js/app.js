@@ -124,7 +124,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         url: '/skilltree',
         views: {
           'menuContent': {
-            templateUrl: 'templates/skilltree.html'
+            templateUrl: 'templates/skilltree.html',
+            controller: 'skillTreeControl'
           }
         }
       })

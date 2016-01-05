@@ -3,6 +3,18 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('AppCtrl', function ($scope) {
   })
 
+  .controller('skillTreeControl', function ($scope, $storageServices) {
+    angular.forEach(AllSkills, function (skills) {
+      angular.forEach(skills, function (skill) {
+        $storageServices.get(skill.text, function (result) {
+          if (result === 'true') {
+            console.log(skill.text);
+          }
+        })
+      })
+    });
+  })
+
   .controller('FeedbackCtrl', function ($scope, $cordovaEmailComposer) {
     if (window.cordova) {
       $scope.sendMail = function () {
@@ -300,11 +312,11 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         $scope.currentModals.push(modal);
       });
 
-      $scope.submitSkill = function(){
+      $scope.submitSkill = function () {
         angular.forEach($scope.devList, function (skill) {
           $storageServices.set(skill.text, skill.checked);
           var checked = false;
-          if(skill.checked === true) {
+          if (skill.checked === true) {
             checked = true;
           }
           $storageServices.set(skill.text, checked);
