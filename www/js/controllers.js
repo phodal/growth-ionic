@@ -259,7 +259,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.articles = AllArticle;
   })
 
-  .controller('DayCtrl', function ($scope, $ionicModal, $cordovaPreferences, $localstorage) {
+  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices) {
     if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Day Ctrl List')
@@ -288,22 +288,15 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.getSkill = function (subtopic) {
-      if (window.cordova) {
-        $cordovaPreferences.store('someKey', 'myMagicValue')
-          .success(function (value) {
-            console.log("Success: " + value);
-          })
-          .error(function (error) {
-            console.log("Error: " + error);
-          });
-      } else {
-        $localstorage.set('someKey', 'myMagicValue');
-      }
+      $storageServices.set('someKey', 'myMagicValue');
       $ionicModal.fromTemplateUrl('templates/skills/' + subtopic + '.html', {
         id: subtopic,
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
+        $storageServices.get('someKey', function(value){
+          alert(value);
+        });
         modal.show();
         $scope.currentModal = modal;
         $scope.currentModals.push(modal);
