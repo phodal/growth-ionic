@@ -4,16 +4,17 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('skillTreeControl', function ($scope, $storageServices) {
-    $scope.learnedSkills = [];
-    angular.forEach(AllSkills, function (skills) {
-      angular.forEach(skills, function (skill) {
-        $storageServices.get(skill.text, function (result) {
-          if (result === 'true') {
-            $scope.learnedSkills.push(skill.text);
-            //console.log(skill.text);
-          }
-        })
-      })
+    $scope.$on('$ionicView.enter', function() {
+      $scope.learnedSkills = [];
+      angular.forEach(AllSkills, function (skills) {
+        angular.forEach(skills, function (skill) {
+          $storageServices.get(skill.text, function (result) {
+            if (result === 'true' || result === true) {
+              $scope.learnedSkills.push(skill.text);
+            }
+          })
+        });
+      });
     });
   })
 

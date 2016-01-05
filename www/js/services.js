@@ -41,7 +41,7 @@ angular.module('starter.services', [])
         });
     },
     get: function (key, cb) {
-      $cordovaPreferences.fetch('key')
+      $cordovaPreferences.fetch(key)
         .success(function(value) {
           cb(value);
         })
