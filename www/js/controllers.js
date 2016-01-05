@@ -288,21 +288,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.getSkill = function (subtopic) {
-      $scope.devLists = {
-        "hello": [
-          {text: "HTML5", checked: false},
-          {text: "CSS3", checked: false},
-          {text: "JavaScript", checked: false}
-        ],
-        "env": [
-          {text: "OS X", checked: false}
-        ],
-        "build": [
-          {text: "Code", checked: false}
-        ]
-      };
-
-      $scope.devList = $scope.devLists[subtopic];
+      $scope.devList = AllSkills[subtopic];
 
       $ionicModal.fromTemplateUrl('templates/skills/skill.html', {
         id: subtopic,
@@ -315,10 +301,13 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       });
 
       $scope.submitSkill = function(){
-        angular.forEach($scope.devList, function (skill, key) {
+        angular.forEach($scope.devList, function (skill) {
+          $storageServices.set(skill.text, skill.checked);
+          var checked = false;
           if(skill.checked === true) {
-            $storageServices.set(skill.text, true);
+            checked = true;
           }
+          $storageServices.set(skill.text, checked);
         });
       }
     };
