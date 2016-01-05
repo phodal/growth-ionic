@@ -4,8 +4,9 @@
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
   <ion-content>
-    <ion-checkbox ng-model="isChecked">OS X</ion-checkbox>
-    <ion-checkbox ng-model="isChecked">GNU/Linux</ion-checkbox>
-    <ion-checkbox ng-model="isChecked">Shell</ion-checkbox>
+    <ion-checkbox ng-repeat="item in devList" ng-model="item.checked" ng-checked="item.checked">
+      {{ item.text }}
+    </ion-checkbox>
+    <button class="button button-full button-positive" ng-click="submitSkill()">Done</button>
   </ion-content>
 </ion-modal-view>

@@ -288,19 +288,39 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.getSkill = function (subtopic) {
-      $storageServices.set('someKey', 'myMagicValue');
-      $ionicModal.fromTemplateUrl('templates/skills/' + subtopic + '.html', {
+      $scope.devLists = {
+        "hello": [
+          {text: "HTML5", checked: false},
+          {text: "CSS3", checked: false},
+          {text: "JavaScript", checked: false}
+        ],
+        "env": [
+          {text: "OS X", checked: false}
+        ],
+        "build": [
+          {text: "Code", checked: false}
+        ]
+      };
+
+      $scope.devList = $scope.devLists[subtopic];
+
+      $ionicModal.fromTemplateUrl('templates/skills/skill.html', {
         id: subtopic,
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
-        $storageServices.get('someKey', function(value){
-          alert(value);
-        });
         modal.show();
         $scope.currentModal = modal;
         $scope.currentModals.push(modal);
       });
+
+      $scope.submitSkill = function(){
+        angular.forEach($scope.devList, function (skill, key) {
+          if(skill.checked === true) {
+            $storageServices.set(skill.text, true);
+          }
+        });
+      }
     };
 
     $scope.$on('modal.shown', function (event, modal) {
