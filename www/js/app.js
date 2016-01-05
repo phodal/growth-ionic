@@ -311,6 +311,14 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
           }
         }
       })
+      .state('app.bookfe', {
+        url: '/books/fe',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/fe.html'
+          }
+        }
+      })
 
       .state('app.quiz', {
         url: '/quiz/:slug',
