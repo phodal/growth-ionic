@@ -1,10 +1,10 @@
-<ion-view view-title="技能树">
+<ion-view view-title="我的技能树">
   <ion-content>
     <div class="card">
-      <div class="item item-text-wrap">
-        TBD
+      <div class="item item-divider">
+        已GET的技能
       </div>
+      <ion-item ng-repeat="skill in learnedSkills"> {{skill}} </ion-item>
     </div>
-
   </ion-content>
 </ion-view>
