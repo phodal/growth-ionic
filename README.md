@@ -8,16 +8,13 @@ App版已在**360手机助手**、**豌豆荚**、**Google Play**等应用商店
 
 最新版本下载：[http://fir.im/phodal](http://fir.im/phodal)
 
-截图:
+应用截图:
 
 ![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg)
 
-QQ交流群: 529600394
-
-欢迎关注我的微信公众号: phodal，以获取及时更新信息。
+QQ交流群: 529600394, 关注我的微信公众号: phodal。
 
 ![QRCode](www/img/wechat.jpg)
-
 
 ##简介
 
@@ -34,7 +31,6 @@ Growth主要关注的点是**Web开发的流程以及其技术栈、学习路线
 
 Growth没有啥： 
 
- - 某某语言入门到精通
  - 银弹
 
 ##来源
