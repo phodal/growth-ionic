@@ -51,6 +51,12 @@ Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
     cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
+    cordova plugin add cordova-plugin-app-preferences
+
+##Todo
+
+1. Check List to SKill tree
+2. Tips 
 
 ## License
 
