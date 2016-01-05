@@ -44,6 +44,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isQuestioning = false;
     $scope.isFirst = true;
     $scope.questions = [];
+    $scope.title = $stateParams.slug;
     $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.questions = response.data;
     });

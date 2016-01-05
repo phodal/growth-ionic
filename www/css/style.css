@@ -530,3 +530,12 @@ marked h2 {
   margin: 1em;
   font-size: 1.2em;
 }
+
+h2.quizQuestion {
+  font-size: 1.2em;
+}
+
+.countdown {
+  font-size: 2em;
+  color: red;
+}
