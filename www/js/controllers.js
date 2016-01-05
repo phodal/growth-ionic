@@ -287,6 +287,18 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       $scope.currentModal.hide();
     };
 
+    $scope.getSkill = function (subtopic) {
+      $ionicModal.fromTemplateUrl('templates/skills/' + subtopic + '.html', {
+        id: subtopic,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
     $scope.$on('modal.shown', function (event, modal) {
       console.log('Modal ' + modal.id + ' is shown!');
     });
