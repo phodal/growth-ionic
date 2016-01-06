@@ -57,5 +57,12 @@ var AllSkills = {
     {text: "Learning Design"},
     {text: "Human Factors"},
     {text: "Photoshop"}
+  ],
+  "ci": [
+    {text: "Auto Test"},
+    {text: "Auto Package"}
+  ],
+  "cd": [
+    {text: "Auto Deploy"}
   ]
 };
