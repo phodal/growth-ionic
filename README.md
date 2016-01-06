@@ -1,8 +1,6 @@
-# Growth
+# Growth: 成为优秀的Web Developer。
 
-> 一个关于如何成为优秀Web Developer的App。
-
-在线版: [http://www.growth.ren/](http://www.growth.ren/)
+在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
 
 App版已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
 
