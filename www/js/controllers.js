@@ -264,6 +264,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       url: 'article/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $ionicLoading.hide();
+      $scope.EditArticle = function (){
+        window.open('https://github.com/phodal/growth/edit/master/www/article/' + $stateParams.slug + '.md', '_system', 'location=yes');
+      };
       $scope.title = $filter('filter')(AllArticle, {"slug": $stateParams.slug})[0].title;
       $scope.htmlContent = $sce.trustAsHtml(marked(response))
     }).error(function (data, status) {
