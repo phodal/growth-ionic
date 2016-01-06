@@ -158,5 +158,13 @@ var AllArticle = [
   {
     "slug" : "proxy",
     "title": "代理"
+  },
+  {
+    "slug" : "mvc",
+    "title": "MVC"
+  },
+  {
+    "slug" : "mvvm",
+    "title": "MVVM"
   }
 ];

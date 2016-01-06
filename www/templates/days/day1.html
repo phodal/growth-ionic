@@ -44,5 +44,30 @@
         <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
+    <div class="list card">
+      <div class="sectionTitle">MVC</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'desc')"><i
+          class="icon ion-ios-folder"></i>简介</a> |
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'tool')"><i
+          class="icon ion-ios-briefcase"></i>工具</a> |
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'book')"><i
+          class="icon ion-ios-book"></i>书单</a>
+      </div>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvc">
+        <h2>MVC</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvvm">
+        <h2>MVVM</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('mvc')">
+        <h2>GET 新技能</h2>
+        <i class="icon ion-ios-checkmark-outline"></i>
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>

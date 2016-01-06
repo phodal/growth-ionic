@@ -64,5 +64,11 @@ var AllSkills = {
   ],
   "cd": [
     {text: "Auto Deploy"}
+  ],
+  "mvc": [
+    {text: "MVC"},
+    {text: "Model"},
+    {text: "Domain"},
+    {text: "MVVM"}
   ]
 };

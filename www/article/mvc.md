@@ -1,16 +1,70 @@
-无论是MVC、MVP或者MVVP，都离不开这些基本的要素：数据、表现、领域。
+人们在不断地反思这其中复杂的过程，整理了一些好的架构模式，其中不得不提到的是我司Martin Folwer的《企业应用架构模式》。该书中文译版出版的时候是2004年，那时对于系统的分层是
 
-##数据
+层次	   | 职责
+-------| -----
+表现层  | 	提供服务、显示信息、用户请求、HTTP请求和命令行调用。
+领域层  | 	逻辑处理，系统中真正的核心。
+数据层  | 	与数据库、消息系统、事物管理器和其他软件包通讯。
 
-信息源于数据，我们在网站上看到的内容都应该是属于信息的范畴。这些信息是应用从数据库中根据业务需求查找、过滤出来的数据。
+化身于当时最流行的Spring，就是MVC。人们有了iBatis这样的数据持久层框架，即ORM，对象关系映射。于是，你的package就会有这样的几个文件夹：
 
-数据通常以文件的形式存储，毕竟文件是存储信息的基本单位。只是由于业务本身对于Create、Update、Query、Index等有不同的组合需求就引发了不同的数据存储软件。
+```
+|____mappers
+|____model
+|____service
+|____utils
+|____controller
+```
 
-如上章所说，View层直接从Model层取数据，无遗也会暴露数据的模型。作为一个前端开发人员，我们对数据的操作有三种类型：
+在mappers这一层，我们所做的莫过于如下所示的数据库相关查询：
 
-1. 数据库。由于Node.js在最近几年里发展迅猛，越来越多的开发者选择使用Node.js作为后台语言。这与传统的Model层并无多大不同，要么直接操作数据库，要么间接操作数据库。即使在NoSQL数据库中也是如此。
-2. 搜索引擎。对于以查询为主的领域来说，搜索引擎是一个更好的选择，而搜索引擎又不好直接向View层暴露接口。这和招聘信息一样，都在暴露公司的技术栈。
-3. RESTful。RESTful相当于是CRUD的衍生，只是传输介质变了。
-4. LocalStorage。LocalStorage算是另外一种方式的CRUD。
+```java
+@Insert(
+        "INSERT INTO users(username, password, enabled) " +
+                "VALUES (#{userName}, #{passwordHash}, #{enabled})"
+)
+@Options(keyProperty = "id", keyColumn = "id", useGeneratedKeys = true)
+void insert(User user);
+```    
 
-说了这么多都是废话，他们都是可以用类CRUD的方式操作。
+model文件夹和mappers文件夹都是数据层的一部分，只是两者间的职责不同，如：
+
+```java
+public String getUserName() {
+    return userName;
+}
+
+public void setUserName(String userName) {
+    this.userName = userName;
+}
+```
+
+而他们最后都需要在Controller，又或者称为ModelAndView中处理：
+
+```java
+@RequestMapping(value = {"/disableUser"}, method = RequestMethod.POST)
+public ModelAndView processUserDisable(HttpServletRequest request, ModelMap model) {
+    String userName = request.getParameter("userName");
+    User user = userService.getByUsername(userName);
+    userService.disable(user);
+    Map<String,User> map = new HashMap<String,User>();
+    Map <User,String> usersWithRoles= userService.getAllUsersWithRole();
+    model.put("usersWithRoles",usersWithRoles);
+    return new ModelAndView("redirect:users",map);
+}
+```
+
+在多数时候，Controller不应该直接与数据层的一部分，而将业务逻辑放在Controller层又是一种错误，这时就有了Service层，如下图：
+
+![Service MVC](./article/images/service-mvc.png)
+
+Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的Controller只应该做自己应该做的事，它不应该处理业务相关的代码：
+
+我们在Controller层应该做的事是：
+
+1. 处理请求的参数
+2. 渲染和重定向
+3. 选择Model和Service
+4. 处理Session和Cookies
+
+业务是善变的，昨天我们可能还在和对手竞争谁先推出新功能，但是今天可能已经合并了。我们很难预见业务变化，但是我们应该能预见Controller是不容易变化的。在一些设计里面，这种模式就是Command模式。
