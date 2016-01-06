@@ -146,5 +146,9 @@ var AllArticle = [
   {
     "slug" : "backend-language",
     "title": "如何选择后台语言?"
+  },
+  {
+    "slug" : "selenium",
+    "title": "Selenium与自动化测试?"
   }
 ];
