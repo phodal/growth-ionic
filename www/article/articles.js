@@ -154,5 +154,9 @@ var AllArticle = [
   {
     "slug" : "git",
     "title": "Git与版本管理?"
+  },
+  {
+    "slug" : "proxy",
+    "title": "代理"
   }
 ];
