@@ -18,7 +18,12 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     });
   })
 
-  .controller('FeedbackCtrl', function ($scope, $cordovaEmailComposer) {
+  .controller('FeedbackCtrl', function ($scope, $http, $cordovaEmailComposer) {
+    $scope.issues = [];
+    $http.get('https://api.github.com/repos/phodal/growth/issues').then(function (response) {
+      $scope.issues = response.data;
+    });
+
     if (window.cordova) {
       $scope.sendMail = function () {
         $cordovaEmailComposer.isAvailable().then(function () {
