@@ -45,5 +45,17 @@ var AllSkills = {
     {text: "Apache"},
     {text: "Varnish"},
     {text: "Squid"}
+  ],
+  "analytics": [
+    {text: "Google Analytics"},
+    {text: "Webmaster"},
+    {text: "Omniture"},
+    {text: "Spark"},
+    {text: "Hadoop"}
+  ],
+  "ux": [
+    {text: "Learning Design"},
+    {text: "Human Factors"},
+    {text: "Photoshop"}
   ]
 };
