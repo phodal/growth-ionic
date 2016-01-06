@@ -216,6 +216,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         }
       })
 
+      .state('app.day0', {
+        url: '/day/0',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day0.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
       .state('app.day1', {
         url: '/day/1',
         views: {
