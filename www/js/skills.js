@@ -34,5 +34,16 @@ var AllSkills = {
     {text: "Rename"},
     {text: "Extract Variable"},
     {text: "Inline"}
+  ],
+  "container": [
+    {text: "Docker"},
+    {text: "Tomcat"},
+    {text: "CoreOS"}
+  ],
+  "server": [
+    {text: "Nginx"},
+    {text: "Apache"},
+    {text: "Varnish"},
+    {text: "Squid"}
   ]
 };
