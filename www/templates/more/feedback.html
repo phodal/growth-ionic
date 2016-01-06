@@ -1,7 +1,7 @@
 <ion-view view-title="意见和反馈">
   <ion-content>
     <div class="list card">
-      <div class="sectionTitle">Issues <a class="button button-balanced" href="#" onclick="window.open('https://github.com/phodal/growth/issues', '_system', 'location=yes'); return false;">打开Github Issues</a></div>
+      <div class="sectionTitle"><a class="button" href="#" onclick="window.open('https://github.com/phodal/growth/issues', '_system', 'location=yes'); return false;">Github Issues</a></div>
 
       <ion-item class="item item-icon-right" ng-repeat="issue in issues" type="item-text-wrap" href="{{issue.url}}">
         <h2>{{issue.title}}</h2>
