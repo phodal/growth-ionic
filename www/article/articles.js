@@ -170,5 +170,9 @@ var AllArticle = [
   {
     "slug" : "persistence",
     "title": "数据持久化"
+  },
+  {
+    "slug" : "choice-front",
+    "title": "如何选择前端框架"
   }
 ];

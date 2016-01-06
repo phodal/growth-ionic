@@ -46,7 +46,34 @@
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">语言与框架</div>
+      <div class="sectionTitle">前端</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('front', 'desc')"><i
+          class="icon ion-ios-folder"></i>简介</a> |
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('front', 'tool')"><i
+          class="icon ion-ios-briefcase"></i>工具</a> |
+        <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'book')"><i
+          class="icon ion-ios-book"></i>书单</a>
+      </div>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/choice-front">
+        <h2>如何选择前端框架</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvvm">
+        <h2>MVVM</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('front')">
+        <h2>GET 新技能</h2>
+        <i class="icon ion-ios-checkmark-outline"></i>
+      </ion-item>
+    </div>
+
+    <div class="list card">
+      <div class="sectionTitle">后台</div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -62,28 +89,26 @@
           class="icon ion-ios-briefcase"></i>Web框架</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvc">
-        <h2>MVC</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/backend-language">
         <h2>如何选择后台语言?</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvvm">
-        <h2>MVVM</h2>
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvc">
+        <h2>MVC</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
+
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/persistence">
         <h2>数据持久化</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
+
       <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('mvc')">
         <h2>GET 新技能</h2>
         <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
+
   </ion-content>
 </ion-view>
