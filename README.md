@@ -4,7 +4,7 @@
 
 在线版: [http://www.growth.ren/](http://www.growth.ren/)
 
-App版已在**360手机助手**、**豌豆荚**、**Google Play**等应用商店上线
+App版已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
 
 最新版本下载：[http://fir.im/phodal](http://fir.im/phodal)
 
