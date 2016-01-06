@@ -15,6 +15,11 @@
 
     <div class="list card">
       <div class="sectionTitle">容器</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'tool')"><i class="icon ion-ios-book"></i>工具</a> |
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'todo')"><i class="icon ion-ios-paper"></i>TODO</a>
+      </div>
 
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/container">
         <h2>Web容器</h2>
@@ -26,11 +31,6 @@
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
 
-      <div class="item tabs tabs-secondary tabs-icon-left modals">
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'tool')"><i class="icon ion-ios-book"></i>工具</a> |
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'todo')"><i class="icon ion-ios-paper"></i>TODO</a>
-      </div>
       <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('container')">
         <h2>GET 新技能</h2>
         <i class="icon ion-ios-checkmark-outline"></i>
@@ -39,6 +39,12 @@
 
     <div class="list card">
       <div class="sectionTitle">Server</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'book')"><i class="icon ion-ios-book"></i>书单</a>
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'tree')"><i class="icon ion-ios-paper"></i>成长树</a>
+      </div>
+
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/lnmp">
         <h2>LNMP</h2>
         <i class="icon ion-ios-arrow-right"></i>
@@ -54,11 +60,6 @@
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
 
-      <div class="item tabs tabs-secondary tabs-icon-left modals">
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'book')"><i class="icon ion-ios-book"></i>书单</a>
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'tree')"><i class="icon ion-ios-paper"></i>成长树</a>
-      </div>
       <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('server')">
         <h2>GET 新技能</h2>
         <i class="icon ion-ios-checkmark-outline"></i>

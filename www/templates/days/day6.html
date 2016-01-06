@@ -16,22 +16,29 @@
 
     <div class="list card">
       <div class="sectionTitle">遗留系统</div>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/legacy-code">
-        <h2>遗留代码</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('legacy', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
         <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('legacy', 'book')"><i
           class="icon ion-ios-book"></i>书单</a>
       </div>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/legacy-code">
+        <h2>遗留代码</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
     </div>
 
     <div class="list card">
       <div class="sectionTitle">重构</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'desc')"><i
+          class="icon ion-ios-folder"></i>简介</a> |
+        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'book')"><i
+          class="icon ion-ios-book"></i>书单</a> |
+        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'tree')"><i
+          class="icon ion-ios-paper"></i>成长树</a>
+      </div>
 
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/refactor2">
         <h2>重构进阶</h2>
@@ -47,15 +54,6 @@
         <h2>如何修改代码</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <div class="item tabs tabs-secondary tabs-icon-left modals">
-        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'desc')"><i
-          class="icon ion-ios-folder"></i>简介</a> |
-        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'book')"><i
-          class="icon ion-ios-book"></i>书单</a> |
-        <a class="tab-item" href="#/app/day/6" ng-click="openSpecialModal('refactor', 'tree')"><i
-          class="icon ion-ios-paper"></i>成长树</a>
-      </div>
     </div>
   </ion-content>
 </ion-view>
