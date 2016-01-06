@@ -10,7 +10,7 @@ App版已在**360手机助手**、**豌豆荚**、**Google Play**等应用商店
 
 应用截图:
 
-![1.pic](screenshot/1.pic.jpg) ![2.pic](screenshot/2.pic.jpg)
+![1.pic](screenshot/1.png) ![2.pic](screenshot/2.png)
 
 QQ交流群: 529600394, 关注我的微信公众号: phodal。
 
