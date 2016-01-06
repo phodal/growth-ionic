@@ -150,5 +150,9 @@ var AllArticle = [
   {
     "slug" : "selenium",
     "title": "Selenium与自动化测试?"
+  },
+  {
+    "slug" : "git",
+    "title": "Git与版本管理?"
   }
 ];
