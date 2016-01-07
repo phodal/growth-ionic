@@ -3,6 +3,13 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('AppCtrl', function ($scope) {
   })
 
+  .controller('AboutCtrl', function ($scope) {
+    $scope.isApp = false;
+    if(window.cordova !== undefined){
+      $scope.isApp = true;
+    }
+  })
+
   .controller('skillTreeControl', function ($scope, $storageServices) {
     $scope.ratings = 0;
     $scope.isInfinite = false;

@@ -115,7 +115,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.reviewController', 'app.da
         url: '/about',
         views: {
           'menuContent': {
-            templateUrl: 'templates/about.html'
+            templateUrl: 'templates/about.html',
+            controller: 'AboutCtrl'
           }
         }
       })
