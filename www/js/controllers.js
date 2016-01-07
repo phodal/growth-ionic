@@ -9,8 +9,13 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       angular.forEach(AllSkills, function (skills) {
         angular.forEach(skills, function (skill) {
           $storageServices.get(skill.text, function (result) {
-            if (result === 'true' || result === true) {
-              $scope.learnedSkills.push(skill.text);
+            console.log(result);
+            var rating = parseInt(result);
+            if (rating) {
+              $scope.learnedSkills.push({
+                skill: skill.text,
+                rating: rating
+              });
             }
           })
         });

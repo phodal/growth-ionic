@@ -554,3 +554,7 @@ ul.rating li {
 ul.rating li i {
   font-size: 30px;
 }
+
+.skillRating ul {
+  display: inline-block;
+}

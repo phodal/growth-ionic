@@ -4,7 +4,7 @@
       <div class="item item-divider">
         已GET的技能
       </div>
-      <ion-item ng-repeat="skill in learnedSkills"> {{skill}} </ion-item>
+      <ion-item ng-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}} <rating ng-model="skill.rating" max="5" ></rating></ion-item>
     </div>
   </ion-content>
 </ion-view>
