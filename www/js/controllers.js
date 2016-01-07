@@ -4,17 +4,21 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('skillTreeControl', function ($scope, $storageServices) {
+    $scope.ratings = 0;
     $scope.$on('$ionicView.enter', function () {
       $scope.learnedSkills = [];
       angular.forEach(AllSkills, function (skills) {
         angular.forEach(skills, function (skill) {
           $storageServices.get(skill.text, function (result) {
             var rating = parseInt(result);
-            if (rating && rating >= 3) {
-              $scope.learnedSkills.push({
-                skill: skill.text,
-                rating: rating
-              });
+            if (rating){
+              $scope.ratings = $scope.ratings + rating;
+              if(rating >= 3) {
+                $scope.learnedSkills.push({
+                  skill: skill.text,
+                  rating: rating
+                });
+              }
             }
           })
         });

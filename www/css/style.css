@@ -563,3 +563,8 @@ ul.rating {
 ul.rating li {
   padding: 2px 2px;
 }
+
+.ratingsCount {
+  color: #fff;
+  font-size: 2em;
+}
