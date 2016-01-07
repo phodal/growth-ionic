@@ -4,17 +4,25 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('AboutCtrl', function ($scope) {
-    $scope.isApp = false;
-    if(window.cordova !== undefined){
-      $scope.isApp = true;
+    if (typeof analytics !== 'undefined') {
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('About Ctrl')
     }
+
+    $scope.isApp = window.cordova !== undefined;
   })
 
   .controller('skillTreeControl', function ($scope, $storageServices) {
+    if (typeof analytics !== 'undefined') {
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Skill Tree List')
+    }
+
     $scope.ratings = 0;
     $scope.isInfinite = false;
+    $scope.learnedSkills = [];
+
     $scope.$on('$ionicView.enter', function () {
-      $scope.learnedSkills = [];
       angular.forEach(AllSkills, function (skills) {
         angular.forEach(skills, function (skill) {
           $storageServices.get(skill.text, function (result) {
@@ -50,23 +58,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
     if (window.cordova) {
       $scope.sendMail = function () {
-        $cordovaEmailComposer.isAvailable().then(function () {
-          // is available
-        }, function () {
-          // not available
-        });
-
-
-        var email = {
-          to: 'h@phodal.com',
-          subject: '关于《Growth Ren》',
-          body: '',
-          isHtml: true
-        };
-
-        $cordovaEmailComposer.open(email).then(null, function () {
-          // user cancelled email
-        });
+        $cordovaEmailComposer.isAvailable().then(function () {}, function () {});
+        var email = {to: 'h@phodal.com', subject: '关于《Growth Ren》', body: '', isHtml: true};
+        $cordovaEmailComposer.open(email).then(null, function () {});
       }
     }
   })
