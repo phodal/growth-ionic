@@ -555,6 +555,11 @@ ul.rating li i {
   font-size: 30px;
 }
 
-.skillRating ul {
+ul.rating {
+  float: right;
   display: inline-block;
+}
+
+ul.rating li {
+  padding: 2px 2px;
 }
