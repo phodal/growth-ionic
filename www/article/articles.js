@@ -174,5 +174,13 @@ var AllArticle = [
   {
     "slug" : "choice-front",
     "title": "如何选择前端框架"
+  },
+  {
+    "slug" : "serviceful",
+    "title": "服务化趋势"
+  },
+  {
+    "slug" : "micro-services",
+    "title": "微服务"
   }
 ];
