@@ -1,16 +1,18 @@
 # Growth: 成为优秀的Web Developer。
 
-在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
-
 App版已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
 
-最新版本下载：[http://fir.im/phodal](http://fir.im/phodal)
+在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
+
+直接下载：[http://fir.im/phodal](http://fir.im/phodal)
 
 应用截图:
 
 ![1.pic](screenshot/1.png) ![2.pic](screenshot/2.png)
 
-QQ交流群: 529600394, 关注我的微信公众号: phodal。
+Growth交流群(QQ): 529600394 
+
+关注我的微信公众号: phodal。
 
 ![QRCode](www/img/wechat.jpg)
 
