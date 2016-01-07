@@ -4,11 +4,8 @@
     <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite"></button>
   </ion-nav-buttons>
   <ion-content>
-    <div class="card">
-      <div class="item item-divider">
-        已GET的技能
-      </div>
-      <ion-item ng-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}} <rating ng-model="skill.rating" max="5" ></rating></ion-item>
-    </div>
+    <ion-item ng-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}}
+      <rating ng-model="skill.rating" max="5"></rating>
+    </ion-item>
   </ion-content>
 </ion-view>
