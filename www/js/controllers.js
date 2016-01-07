@@ -344,13 +344,11 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
       angular.forEach(devLists, function (skill) {
         $storageServices.get(skill.text, function (value) {
-          var checkedValue = false;
-          if (value === 'true' || value === true) {
-            checkedValue = true;
-          }
+          var rating = parseInt(value);
           $scope.devList.push({
-            text: skill.text,
-            checked: checkedValue
+            rating: rating,
+            max: 5,
+            text: skill.text
           });
         });
       });
@@ -367,12 +365,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
       $scope.submitSkill = function () {
         angular.forEach($scope.devList, function (skill) {
-          $storageServices.set(skill.text, skill.checked);
-          var checked = false;
-          if (skill.checked === true) {
-            checked = true;
-          }
-          $storageServices.set(skill.text, checked);
+          $storageServices.set(skill.text, skill.rating);
         });
       }
     };

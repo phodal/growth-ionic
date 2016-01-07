@@ -9,6 +9,7 @@
     "angular-marked": "~1.0.1",
     "highlightjs": "~9.0.0",
     "angular-highlightjs": "~0.5.1",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "ionic-rating": "~0.2.0"
   }
 }

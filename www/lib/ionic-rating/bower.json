@@ -1,0 +1,24 @@
+{
+  "name": "ionic-rating",
+  "main": "ionic-rating.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/fraserxu/ionic-rating",
+  "authors": [
+    "fraserxu <xvfeng123@gmail.com>"
+  ],
+  "description": "Star rating bar for ionic",
+  "keywords": [
+    "ionic",
+    "angularjs",
+    "rating",
+    "web"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

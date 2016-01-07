@@ -1,0 +1,22 @@
+{
+  "name": "ionic-rating",
+  "version": "0.1.0",
+  "devDependencies": {
+    "uglify-js": "^2.4.14",
+    "coffee-script": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fraserxu/ionic-rating.git"
+  },
+  "keywords": [
+    "ionic",
+    "angularjs"
+  ],
+  "author": "fraserxu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fraserxu/ionic-rating/issues"
+  },
+  "homepage": "https://github.com/fraserxu/ionic-rating"
+}

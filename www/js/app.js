@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'hc.marked'])
+angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
