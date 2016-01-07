@@ -172,7 +172,7 @@ var AllArticle = [
     "title": "数据持久化"
   },
   {
-    "slug" : "choice-front",
+    "slug" : "choice-frontend",
     "title": "如何选择前端框架"
   },
   {
