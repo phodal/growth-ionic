@@ -10,7 +10,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         angular.forEach(skills, function (skill) {
           $storageServices.get(skill.text, function (result) {
             var rating = parseInt(result);
-            if (rating) {
+            if (rating && rating >= 3) {
               $scope.learnedSkills.push({
                 skill: skill.text,
                 rating: rating
