@@ -7,6 +7,6 @@
     <ion-checkbox ng-repeat="item in devList" ng-model="item.checked" ng-checked="item.checked">
       {{ item.text }}
     </ion-checkbox>
-    <button class="button button-full button-positive" ng-click="submitSkill()">Done</button>
+    <button class="button button-full button-positive" ng-click="submitSkill();closeSpecialModal()">Done</button>
   </ion-content>
 </ion-modal-view>
