@@ -100,11 +100,8 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;
-    $scope.questions = [];
     $scope.title = $stateParams.slug;
     $http.get('advancedQuiz/' + $stateParams.slug + '.json').then(function (response) {
-      console.log(response.data, response.data[$stateParams.slug].size);
-      $scope.questions = response.data[$stateParams.slug];
       $scope.questionSize = response.data[$stateParams.slug].size
     });
 
