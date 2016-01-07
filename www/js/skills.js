@@ -65,10 +65,25 @@ var AllSkills = {
   "cd": [
     {text: "Auto Deploy"}
   ],
-  "mvc": [
-    {text: "MVC"},
-    {text: "Model"},
+  "front": [
+    {text: "Angular.js"},
+    {text: "BootStrap"},
+    {text: "React.js"},
+    {text: "Backbone"},
+    {text: "jQuery"},
+    {text: "Ember.js"},
+    {text: "Knockout.js"},
+    {text: "Ractive"},
+    {text: "Vue.js"}
+  ],
+  "framework": [
+    {text: "Express.js"},
+    {text: "Spring MVC"},
+    {text: "Play(Scala)"},
+    {text: "Koa"},
     {text: "Domain"},
+    {text: "Django"},
+    {text: "Flask"},
     {text: "MVVM"}
   ]
 };
