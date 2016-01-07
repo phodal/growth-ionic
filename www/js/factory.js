@@ -1,6 +1,6 @@
 var app = angular.module('starter.factory', [])
-  .factory('quizFactory', function($http, $q) {
-    function generateQuestion(data){
+  .factory('quizFactory', function ($http, $q) {
+    function generateQuestion(data) {
       function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
@@ -17,7 +17,7 @@ var app = angular.module('starter.factory', [])
     }
 
     var myService = {
-      async: function(level, file_name) {
+      async: function (level, file_name) {
         var def = $q.defer();
         $http.get('assets/' + level + '/' + file_name)
           .success(function (response) {

@@ -4,7 +4,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('skillTreeControl', function ($scope, $storageServices) {
-    $scope.$on('$ionicView.enter', function() {
+    $scope.$on('$ionicView.enter', function () {
       $scope.learnedSkills = [];
       angular.forEach(AllSkills, function (skills) {
         angular.forEach(skills, function (skill) {
@@ -288,7 +288,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       url: 'article/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $ionicLoading.hide();
-      $scope.EditArticle = function (){
+      $scope.EditArticle = function () {
         window.open('https://github.com/phodal/growth/edit/master/www/article/' + $stateParams.slug + '.md', '_system', 'location=yes');
       };
       $scope.title = $filter('filter')(AllArticle, {"slug": $stateParams.slug})[0].title;
@@ -339,9 +339,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       var devLists = AllSkills[subtopic];
 
       angular.forEach(devLists, function (skill) {
-        $storageServices.get(skill.text, function(value) {
+        $storageServices.get(skill.text, function (value) {
           var checkedValue = false;
-          if(value === 'true' || value === true){
+          if (value === 'true' || value === true) {
             checkedValue = true;
           }
           $scope.devList.push({

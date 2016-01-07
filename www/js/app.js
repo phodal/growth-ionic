@@ -1,7 +1,7 @@
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'hc.marked'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
-      if (typeof analytics !== 'undefined'){
+      if (typeof analytics !== 'undefined') {
         analytics.startTrackerWithId('UA-71907748-1');
         analytics.trackView('Growth')
       } else {
