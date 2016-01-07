@@ -70,5 +70,30 @@
         <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
+
+
+    <div class="list card">
+      <div class="sectionTitle">可配置</div>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'tool')"><i class="icon ion-ios-book"></i>工具</a> |
+        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'todo')"><i class="icon ion-ios-paper"></i>TODO</a>
+      </div>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/configurable">
+        <h2>可配置管理</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/toggle">
+        <h2>Toggle</h2>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('container')">
+        <h2>GET 新技能</h2>
+        <i class="icon ion-ios-checkmark-outline"></i>
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>

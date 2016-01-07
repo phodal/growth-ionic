@@ -182,5 +182,13 @@ var AllArticle = [
   {
     "slug" : "micro-services",
     "title": "微服务"
+  },
+  {
+    "slug" : "configurable",
+    "title": "可配置管理"
+  },
+  {
+    "slug" : "toggle",
+    "title": "Toggle"
   }
 ];
