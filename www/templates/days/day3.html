@@ -14,7 +14,9 @@
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">容器</div>
+      <div class="sectionTitle">容器
+        <a ng-click="getSkill('container')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('container', 'tool')"><i class="icon ion-ios-book"></i>工具</a> |
@@ -30,15 +32,12 @@
         <h2>Docker</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('container')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">Server</div>
+      <div class="sectionTitle">Server
+        <a ng-click="getSkill('server')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'book')"><i class="icon ion-ios-book"></i>书单</a>
@@ -64,16 +63,13 @@
         <h2>代理服务器</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('server')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
 
     <div class="list card">
-      <div class="sectionTitle">可配置</div>
+      <div class="sectionTitle">可配置
+        <a ng-click="getSkill('configurable')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'tool')"><i class="icon ion-ios-book"></i>工具</a> |
@@ -88,11 +84,6 @@
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/toggle">
         <h2>Toggle</h2>
         <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/3" ng-click="getSkill('container')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
   </ion-content>

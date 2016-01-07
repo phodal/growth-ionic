@@ -14,7 +14,9 @@
 
 
     <div class="list card">
-      <div class="sectionTitle">持续集成</div>
+      <div class="sectionTitle">持续集成
+        <a ng-click="getSkill('ci')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('ci', 'desc')"><i class="icon ion-ios-folder"></i>简介</a> |
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('ci', 'tool')"><i class="icon ion-ios-briefcase"></i>工具</a>
@@ -27,14 +29,12 @@
         <h2>自动化构建</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-      <ion-item class="item item-icon-right" href="#/app/day/5" ng-click="getSkill('ci')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">持续交付</div>
+      <div class="sectionTitle">持续交付
+        <a ng-click="getSkill('cd')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/5" ng-click="openSpecialModal('cd', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
         <a class="tab-item" href="#/app/day/5" ng-click="openSpecialModal('cd', 'book')"><i class="icon ion-ios-book"></i>书单</a>
@@ -44,10 +44,6 @@
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/cd">
         <h2>持续交付</h2>
         <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" href="#/app/day/5" ng-click="getSkill('cd')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
   </ion-content>

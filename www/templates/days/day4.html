@@ -16,7 +16,9 @@
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">数据分析</div>
+      <div class="sectionTitle">数据分析
+        <a ng-click="getSkill('analytics')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('analytics', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('analytics', 'book')"><i class="icon ion-ios-book"></i>书单</a>
@@ -37,14 +39,12 @@
         <h2>Hadoop</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-      <ion-item class="item item-icon-right" href="#/app/day/4" ng-click="getSkill('analytics')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">用户体验</div>
+      <div class="sectionTitle">用户体验
+        <a ng-click="getSkill('ux')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('ux', 'desc')"><i class="icon ion-ios-folder"></i>简介</a>
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('ux', 'book')"><i class="icon ion-ios-book"></i>书单</a>
@@ -58,11 +58,6 @@
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/learn-design">
         <h2>认识设计</h2>
         <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/4" ng-click="getSkill('ux')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
   </ion-content>

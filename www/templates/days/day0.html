@@ -6,7 +6,9 @@
       </div>
     </div>
     <div class="list card">
-      <div class="sectionTitle">hello, world</div>
+      <div class="sectionTitle">hello, world
+        <a ng-click="getSkill('hello')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/0" ng-click="openSpecialModal('hello', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -30,15 +32,12 @@
         <h2>无处不在的JavaScript</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/0" ng-click="getSkill('hello')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">开发环境</div>
+      <div class="sectionTitle">开发环境
+        <a ng-click="getSkill('env')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/0" ng-click="openSpecialModal('env', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -62,10 +61,6 @@
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/env-osx">
         <h2>搭建开发环境(OSX)</h2>
         <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" href="#/app/day/0" ng-click="getSkill('env')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
   </ion-content>

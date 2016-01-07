@@ -85,5 +85,8 @@ var AllSkills = {
     {text: "Django"},
     {text: "Flask"},
     {text: "MVVM"}
+  ],
+  "configurable": [
+    {text: "Feature Toggle"}
   ]
 };
