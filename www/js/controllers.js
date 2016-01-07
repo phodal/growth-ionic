@@ -55,6 +55,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       {title: 'Level 4', id: 4}
     ];
   })
+
   .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory) {
     if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
@@ -88,6 +89,32 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       $scope.stop = function () {
         $timeout.cancel(mytimeout);
       }
+    };
+  })
+
+  .controller('AdvancedQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $sce, marked) {
+    if (typeof analytics !== 'undefined') {
+      analytics.startTrackerWithId('UA-71907748-1');
+      analytics.trackView('Advanced Quiz Game' + $stateParams.slug);
+    }
+
+    $scope.isQuestioning = false;
+    $scope.isFirst = true;
+    $scope.questions = [];
+    $scope.title = $stateParams.slug;
+    $http.get('advancedQuiz/' + $stateParams.slug + '.json').then(function (response) {
+      console.log(response.data, response.data[$stateParams.slug].size);
+      $scope.questions = response.data[$stateParams.slug];
+      $scope.questionSize = response.data[$stateParams.slug].size
+    });
+
+    $scope.getQuestion = function () {
+      $scope.isQuestioning = true;
+      $scope.isFirst = false;
+      var quiz_id = utilsFactory.getRandomInt($scope.questionSize);
+      $http.get('advancedQuiz/' + $stateParams.slug + '/' + quiz_id + '.md').then(function (response) {
+        $scope.question = $sce.trustAsHtml(marked(response.data));
+      });
     };
   })
 

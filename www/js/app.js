@@ -339,6 +339,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
           }
         }
       })
+      .state('app.advancedQuiz', {
+        url: '/advance-quiz/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/game/advance-quiz.html',
+            controller: 'AdvancedQuizCtrl'
+          }
+        }
+      })
     ;
 
     $urlRouterProvider.otherwise('/app/main');
