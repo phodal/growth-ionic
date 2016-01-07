@@ -568,3 +568,19 @@ ul.rating li {
   color: #fff;
   font-size: 2em;
 }
+
+.get {
+  display: inline-block;
+  float: right;
+  color: #387ef5;
+}
+
+.get span {
+  font-family: serif;
+  font-size: 0.6em;
+  vertical-align: text-top;
+}
+
+.get i.icon {
+  font-size: 1.3em;
+}

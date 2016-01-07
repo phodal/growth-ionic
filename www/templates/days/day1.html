@@ -34,7 +34,9 @@
     </ion-item>
 
     <div class="list card">
-      <div class="sectionTitle">构建系统</div>
+      <div class="sectionTitle item">构建系统
+        <a ng-click="getSkill('build')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('build', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -53,14 +55,12 @@
         <h2>一个构建系统的构建过程</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-      <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('build')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">前端</div>
+      <div class="sectionTitle">前端
+        <a ng-click="getSkill('front')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('front', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -79,15 +79,12 @@
         <h2>MVVM</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('front')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
-      </ion-item>
     </div>
 
     <div class="list card">
-      <div class="sectionTitle">后台</div>
+      <div class="sectionTitle">后台
+        <a ng-click="getSkill('framework')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
+      </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('mvc', 'desc')"><i
           class="icon ion-ios-folder"></i>简介</a> |
@@ -126,11 +123,6 @@
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/micro-services">
         <h2>微服务</h2>
         <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" href="#/app/day/1" ng-click="getSkill('framework')">
-        <h2>GET 新技能</h2>
-        <i class="icon ion-ios-checkmark-outline"></i>
       </ion-item>
     </div>
 
