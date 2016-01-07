@@ -24,6 +24,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       $scope.issues = response.data;
     });
 
+    $scope.OpenIssue = function (url) {
+      window.open(url, '_system', 'location=yes');
+    };
+
     if (window.cordova) {
       $scope.sendMail = function () {
         $cordovaEmailComposer.isAvailable().then(function () {
