@@ -573,6 +573,7 @@ ul.rating li {
   display: inline-block;
   float: right;
   color: #387ef5;
+  margin-top: -0.2em;
 }
 
 .get span {
@@ -582,5 +583,5 @@ ul.rating li {
 }
 
 .get i.icon {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
