@@ -34,40 +34,49 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.$on('$ionicView.enter', function () {
-      $scope.flare = {
-        "name": "skill tree",
-        "children": []
-      };
-      angular.forEach(AllSkills, function (skills, index) {
-        var skillFlare = {
-          "name": index,
-          "children": []
-        };
-        angular.forEach(skills, function (skill) {
-          $storageServices.get(skill.text, function (result) {
-            var rating = parseInt(result);
+      var flareChild = [];
 
-            if (rating) {
-              skillFlare.children.push({
-                "name": skill.text,
-                "size": rating
+      function getSkillPoint(skill, cb) {
+        $storageServices.get(skill.text, function (result) {
+          var rating = parseInt(result);
+          if (rating) {
+            var skillRating = {
+              "name": skill.text,
+              "size": rating
+            };
+
+            $scope.ratings = $scope.ratings + rating;
+            if (rating >= 3) {
+              $scope.learnedSkills.push({
+                skill: skill.text,
+                rating: rating
               });
-              $scope.ratings = $scope.ratings + rating;
-              if (rating >= 3) {
-                $scope.learnedSkills.push({
-                  skill: skill.text,
-                  rating: rating
-                });
-              }
-              if ($scope.ratings > 100) {
-                $scope.isInfinite = true;
-              }
             }
-          })
+            if ($scope.ratings > 100) {
+              $scope.isInfinite = true;
+            }
+            cb(skillRating);
+          }
         });
-        $scope.flare.children.push(skillFlare);
+      }
+
+      angular.forEach(AllSkills, function (skills, index) {
+        angular.forEach(skills, function (skill) {
+          $scope.skillFlareChild = [];
+          getSkillPoint(skill, function(rating){
+            $scope.skillFlareChild.push(rating);
+          });
+        });
+        flareChild.push({
+          "name": index,
+          "children": $scope.skillFlareChild
+        });
       });
-      console.log($scope.flare);
+
+      var flare = {
+        name: "Skill",
+        "children": flareChild
+      };
 
       var format = d3.format(",d"),
         color = d3.scale.category20c();
@@ -82,30 +91,45 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         .attr("height", $window.innerHeight)
         .attr("class", "bubble");
 
+      console.log(JSON.stringify(flare));
       var node = svg.selectAll(".node")
-        .data(bubble.nodes(classes($scope.flare))
-          .filter(function(d) { return !d.children; }))
+        .data(bubble.nodes(classes(flare))
+          .filter(function (d) {
+            return !d.children;
+          }))
         .enter().append("g")
         .attr("class", "node")
-        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+        .attr("transform", function (d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        });
 
       node.append("title")
-        .text(function(d) { return d.className + ": " + format(d.value); });
+        .text(function (d) {
+          return d.className + ": " + format(d.value);
+        });
 
       node.append("circle")
-        .attr("r", function(d) { return d.r; })
-        .style("fill", function(d) { return color(d.packageName); });
+        .attr("r", function (d) {
+          return d.r;
+        })
+        .style("fill", function (d) {
+          return color(d.packageName);
+        });
 
       node.append("text")
         .attr("dy", ".3em")
         .style("text-anchor", "middle")
-        .text(function(d) { return d.className.substring(0, d.r / 3); });
+        .text(function (d) {
+          return d.className.substring(0, d.r / 3);
+        });
 
       function classes(root) {
         var classes = [];
 
         function recurse(name, node) {
-          if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+          if (node.children) node.children.forEach(function (child) {
+            recurse(node.name, child);
+          });
           else classes.push({packageName: name, className: node.name, value: node.size});
         }
 
