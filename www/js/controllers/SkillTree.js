@@ -28,40 +28,33 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     $scope.$on('$ionicView.enter', function () {
       var flareChild = [];
 
-      function getSkillPoint(skill, cb) {
-        $storageServices.get(skill.text, function (result) {
-          var rating = parseInt(result);
-          if (rating) {
-            var skillRating = {
-              "name": skill.text,
-              "size": rating
-            };
-
-            $scope.ratings = $scope.ratings + rating;
-            if (rating >= 3) {
-              $scope.learnedSkills.push({
-                skill: skill.text,
-                rating: rating
-              });
-            }
-            if ($scope.ratings > 100) {
-              $scope.isInfinite = true;
-            }
-            cb(skillRating);
-          }
-        });
-      }
-
       angular.forEach(AllSkills, function (skills, index) {
         angular.forEach(skills, function (skill) {
-          $scope.skillFlareChild = [];
-          getSkillPoint(skill, function (rating) {
-            $scope.skillFlareChild.push(rating);
+          var skillFlareChild = [];
+          $storageServices.get(skill.text, function (result) {
+            var rating = parseInt(result);
+            if (rating) {
+              skillFlareChild.push({
+                "name": skill.text,
+                "size": rating
+              });
+
+              $scope.ratings = $scope.ratings + rating;
+              if (rating >= 3) {
+                $scope.learnedSkills.push({
+                  skill: skill.text,
+                  rating: rating
+                });
+              }
+              if ($scope.ratings > 100) {
+                $scope.isInfinite = true;
+              }
+            }
           });
-        });
-        flareChild.push({
-          "name": index,
-          "children": $scope.skillFlareChild
+          flareChild.push({
+            "name": index,
+            "children": skillFlareChild
+          });
         });
       });
 
@@ -79,6 +72,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           .size([$window.innerWidth, $window.innerHeight])
           .padding(1);
 
+        d3.select("svg").remove();
         var svg = d3.select("#skill").append("svg")
           .attr("width", $window.innerWidth)
           .attr("height", $window.innerHeight)

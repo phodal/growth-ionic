@@ -30,11 +30,11 @@ angular.module('starter.services', [])
       }
     };
 
-    if ($window.cordova) {
-      return preferences;
-    } else {
+    //if ($window.cordova) {
+    //  return preferences;
+    //} else {
       return localStorage;
-    }
+    //}
   }])
 
   .factory('$analytics', ['$window', function ($window) {
