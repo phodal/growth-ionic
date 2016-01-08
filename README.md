@@ -20,7 +20,7 @@ Growth交流群(QQ): 529600394
 
 Growth主要关注的点是**Web开发的流程及其技术栈、学习路线**，里有啥：
 
- - 近乎完整的Web开发流程介绍 
+ - 近乎完整的Web开发流程介绍   
  - 如何写好代码——重构、测试、模式
  - Web应用的分析和部署
  - 如何不再写遗留代码
@@ -48,6 +48,7 @@ APP来源于: 对Web应用开发的一个流程认识。
 ##其他
 
 前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
+Skill Map来源于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
 
 Plugins:
 
