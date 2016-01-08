@@ -585,3 +585,43 @@ ul.rating li {
 .get i.icon {
   font-size: 1.5em;
 }
+
+#skillmap .skills-wrapper {
+  margin-top: 10px;
+  overflow: auto;
+}
+
+#skillmap .skills-sunburst {
+  float: left;
+  width: 500px;
+  margin-left: -80px;
+}
+#skillmap .skills-sunburst svg {
+  font: 11px 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+#skillmap .skills-chart {
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  margin: 80px 20px 0 0;
+}
+#skillmap .skills-chart .breadcumb-text {
+  font-size: 13px;
+  font-weight: 700;
+}
+#skillmap .skills-chart #skills-chart-line {
+  fill: none;
+  stroke-width: 3.5px;
+}
+#skillmap .skills-chart .axis path,
+#skillmap .skills-chart .axis line {
+  fill: none;
+}
+#skillmap .skills-chart .x-axis path,
+#skillmap .skills-chart .y-axis path {
+  stroke: #444;
+  stroke-width: 1px;
+  shape-rendering: geometricPrecision;
+}
