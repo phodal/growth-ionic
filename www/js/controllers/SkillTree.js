@@ -58,5 +58,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       RenderSkillTree($window, {
         "Skill" : flareChild
       });
+
+      RenderBubble($storageServices, $window);
     });
   });
