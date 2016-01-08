@@ -1,17 +1,13 @@
 angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Day Ctrl List')
-    }
+  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
+    $analytics.trackView('Day Ctrl List');
+
     $scope.currentModal = null;
     $scope.currentModals = [];
 
     $scope.openSpecialModal = function (subtopic, branch) {
-      if (typeof analytics !== 'undefined') {
-        analytics.startTrackerWithId('UA-71907748-1');
-        analytics.trackView('modal ' + subtopic + ' ' + branch)
-      }
+      $analytics.trackView('modal ' + subtopic + ' ' + branch);
+
       $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/' + branch + '.html', {
         id: subtopic + '-' + branch,
         scope: $scope,

@@ -8,11 +8,8 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
     ];
   })
 
-  .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Quiz Game')
-    }
+  .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory, $analytics) {
+    $analytics.trackView('Quiz Game')
 
     $scope.userAnswer = {};
     $scope.level = $stateParams.level;
@@ -97,11 +94,9 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
     $scope.reset();
   })
 
-  .controller('WikiCtrl', function ($scope, $stateParams, $http) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('WiKi List')
-    }
+  .controller('WikiCtrl', function ($scope, $stateParams, $http, $analytics) {
+    $analytics.trackView('WiKi List');
+
     $scope.level = $stateParams.level;
     $http.get('assets/data/results.json').then(function (data) {
       var results = [];
@@ -116,14 +111,9 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
     });
   })
 
-  .controller('WikiDetailCtrl', function ($scope, $stateParams, quizFactory, $http) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('WiKi Detail')
-    }
-    if (typeof analytics !== 'undefined') {
-      analytics.trackView("WikiDetailCtrl");
-    }
+  .controller('WikiDetailCtrl', function ($scope, $stateParams, quizFactory, $http, $analytics) {
+    $analytics.trackView('WiKi Detail');
+
     var language_info = $stateParams.language_info.split("+"),
       level = language_info[0],
       file_name = language_info[1],

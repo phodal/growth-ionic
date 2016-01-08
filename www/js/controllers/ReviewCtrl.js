@@ -1,9 +1,6 @@
 angular.module('app.reviewController', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Review')
-    }
+  .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter, $analytics) {
+    $analytics.trackView('Review')
 
     $ionicLoading.show({
       animation: 'fade-in',
@@ -21,10 +18,8 @@ angular.module('app.reviewController', ['starter.factory', 'hljs', 'starter.util
     });
   })
 
-  .controller('ReviewListCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Review List')
-    }
+  .controller('ReviewListCtrl', function ($scope, $analytics) {
+    $analytics.trackView('Review List');
+
     $scope.reviews = AllReview;
   });

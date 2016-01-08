@@ -35,4 +35,26 @@ angular.module('starter.services', [])
     } else {
       return localStorage;
     }
+  }])
+
+  .factory('$analytics', ['$window', function ($window) {
+    if (typeof $window.analytics === 'undefined') {
+      return {
+        trackView: function (view) {
+          console.log(view);
+        }
+      }
+    }
+
+    var Analytics = {
+      init: function () {
+        $window.analytics.startTrackerWithId('UA-71907748-1');
+      },
+      trackView: function (view) {
+        this.init();
+        $window.analytics.trackView(view)
+      }
+    };
+
+    return Analytics;
   }]);

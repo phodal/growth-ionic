@@ -1,10 +1,7 @@
 angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'])
 
-  .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Quiz Game' + $stateParams.slug);
-    }
+  .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $analytics) {
+    $analytics.trackView('Quiz Game' + $stateParams.slug);
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;
@@ -36,11 +33,8 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
     };
   })
 
-  .controller('AdvancedQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $sce, marked) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Advanced Quiz Game' + $stateParams.slug);
-    }
+  .controller('AdvancedQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $sce, marked, $analytics) {
+    $analytics.trackView('Advanced Quiz Game' + $stateParams.slug);
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;

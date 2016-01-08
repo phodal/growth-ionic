@@ -3,20 +3,13 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('AppCtrl', function ($scope) {
   })
 
-  .controller('AboutCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('About Ctrl')
-    }
-
+  .controller('AboutCtrl', function ($scope, $analytics) {
+    $analytics.trackView('About Ctrl');
     $scope.isApp = window.cordova !== undefined;
   })
 
-  .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Skill Tree List')
-    }
+  .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics) {
+    $analytics.trackView('Skill Tree List');
 
     $scope.ratings = 0;
     $scope.isInfinite = false;
@@ -24,10 +17,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.modal = null;
 
     $scope.openSkillsModal = function () {
-      if (typeof analytics !== 'undefined') {
-        analytics.startTrackerWithId('UA-71907748-1');
-        analytics.trackView('All Skills')
-      }
+      $analytics.trackView('All Skills');
 
       $ionicModal.fromTemplateUrl('templates/skills/skills.html', {
         id: 'skills',
@@ -49,15 +39,15 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
           $storageServices.get(skill.text, function (result) {
             var rating = parseInt(result);
 
-            if (rating){
+            if (rating) {
               $scope.ratings = $scope.ratings + rating;
-              if(rating >= 3) {
+              if (rating >= 3) {
                 $scope.learnedSkills.push({
                   skill: skill.text,
                   rating: rating
                 });
               }
-              if($scope.ratings > 100){
+              if ($scope.ratings > 100) {
                 $scope.isInfinite = true;
               }
             }
@@ -79,18 +69,19 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
     if (window.cordova) {
       $scope.sendMail = function () {
-        $cordovaEmailComposer.isAvailable().then(function () {}, function () {});
+        $cordovaEmailComposer.isAvailable().then(function () {
+        }, function () {
+        });
         var email = {to: 'h@phodal.com', subject: '关于《Growth Ren》', body: '', isHtml: true};
-        $cordovaEmailComposer.open(email).then(null, function () {});
+        $cordovaEmailComposer.open(email).then(null, function () {
+        });
       }
     }
   })
 
-  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Article Detail')
-    }
+  .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter, $analytics) {
+    $analytics.trackView('Article Detail');
+
     $ionicLoading.show({
       animation: 'fade-in',
       template: 'Loading...'
@@ -110,10 +101,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     });
   })
 
-  .controller('ArticleListCtrl', function ($scope) {
-    if (typeof analytics !== 'undefined') {
-      analytics.startTrackerWithId('UA-71907748-1');
-      analytics.trackView('Article List')
-    }
+  .controller('ArticleListCtrl', function ($scope, $analytics) {
+    $analytics.trackView('Article List');
     $scope.articles = AllArticle;
   });
