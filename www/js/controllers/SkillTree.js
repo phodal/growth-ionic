@@ -55,12 +55,29 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       });
 
       RenderSkillTree({
-        "Skill": {
-          "Skill" : flareChild
-        }
+        "Skill" : flareChild
       });
 
-      function RenderSkillTree(skillsdata) {
+      function RenderSkillTree(data) {
+        function filterData(data) {
+          var results = {};
+
+          angular.forEach(SkillMap, function(maps, key){
+            results[key] = {};
+            angular.forEach(maps, function(map){
+              results[key][map] = {};
+              angular.forEach(data.Skill[map], function(skill, value){
+                results[key][map][value] = skill;
+              })
+            });
+          });
+
+          return {
+            Skills: results
+          };
+        }
+
+        var skillsdata = filterData(data);
         function mouseover(data) {
           var c = getcrumbpath(data);
           i(c);

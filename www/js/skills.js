@@ -90,3 +90,10 @@ var AllSkills = {
     {text: "Feature Toggle"}
   ]
 };
+
+var SkillMap = {
+  "basic": ["hello", "front"],
+  "middle": ["framework", "test", "build"],
+  "high": ["configurable", "coding"],
+  "devops": ["ci", "server", "container", "cd"]
+};
