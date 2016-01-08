@@ -41,6 +41,7 @@ function RenderBubble ($storageServices, $window) {
     .size([$window.innerWidth, $window.innerWidth])
     .padding(1);
 
+  d3.select('#skillBubble svg').remove();
   var svg = d3.select("#skillBubble").append("svg")
     .attr("width", $window.innerWidth)
     .attr("height", $window.innerWidth)
