@@ -66,34 +66,34 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           "Skills": {
             "Server": {
               "Node.js": {
-                "Express": 4,
-                "Npm": 4
+                "Express": [4],
+                "Npm": [4]
               },
               "DB": {
-                "SqlServer": 3,
-                "Sqlite": 3,
-                "Mongo": 2
+                "SqlServer": [4],
+                "Sqlite": [4],
+                "Mongo": [4]
               },
               "Server": {
-                "Nginx": 1,
-                "Apache": 3
+                "Nginx": [3],
+                "Apache": [3]
               }
             },
             "Front": {
-              "HTML": 2,
+              "HTML": [3],
               "CSS": {
-                "CSS": 1,
-                "LESS": 3,
-                "Responsive": 3
+                "CSS": [3],
+                "LESS": [3],
+                "Responsive": [4]
               },
               "JSFramework": {
-                "jQuery": 3,
-                "ExtJs": 4,
-                "BackboneJs": 5,
-                "D3.js": 2
+                "jQuery": [4],
+                "ExtJs": [3],
+                "BackboneJs": [3],
+                "D3.js": [3]
               },
               "Template": {
-                "Jade": 3
+                "Jade": [3]
               }
             }
           }
