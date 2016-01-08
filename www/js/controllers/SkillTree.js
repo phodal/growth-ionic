@@ -62,13 +62,15 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         function filterData(data) {
           var results = {};
 
-          angular.forEach(SkillMap, function(maps, key){
-            results[key] = {};
-            angular.forEach(maps, function(map){
-              results[key][map] = {};
-              angular.forEach(data.Skill[map], function(skill, value){
-                results[key][map][value] = skill;
+          angular.forEach(SkillMap, function(FourZones, zoneName){
+            results[zoneName] = {};
+            angular.forEach(FourZones, function(zone){
+              results[zoneName][zone] = {};
+
+              angular.forEach(data.Skill[zone], function(value, skillName){
+                results[zoneName][zone][skillName] = value;
               })
+
             });
           });
 
