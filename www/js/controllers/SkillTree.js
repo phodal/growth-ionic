@@ -99,18 +99,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           }
         };
 
-        function initchart() {
-          var data = {
-            _proficiency: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            children: null,
-            value: 0,
-            key: "",
-            depth: 1
-          };
-          chart.refreshChart(data)
-        }
         function mouseover(data) {
-          chart.refreshChart(data);
           var c = getcrumbpath(data);
           i(c);
           d3
@@ -147,10 +136,12 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         }
         function i(a) {
           a[a.length - 1]._color, a.length;
-          c = d3
+          var c = d3
             .select("#skills-chart-breadcrumb .trail")
             .selectAll("g")
-            .data(a, function (a) { return a.key + a.depth });
+            .data(a, function (a) {
+              return a.key + a.depth
+            });
           var d = c.enter().append("svg:g");
           d
             .append("svg:polygon")
@@ -185,102 +176,8 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             return d3.rgb(a.parent._color).brighter(.2 * a.depth + f * a.depth)
           }
         }
-        var chart = function (d3) {
-            function processdata(data) {
-              var b = [],
-                c = 0;
-              return data._proficiency.forEach(function (a) {
-                c <= i.length && (b.push({
-                  p: a,
-                  date: i[c]
-                }), c++)
-              }), b
-            }
-            function c(b, c) {
-              j.domain(d3.extent(b, function (a) { return a.date }));
-              k
-                .domain([0, 100]), cpath
-                .append("g")
-                .attr("class", "x-axis axis")
-                .attr("transform", "translate(0," + h + ")")
-                .call(bottomtick)
-                .append("text")
-                .attr("x", 450)
-                .attr("y", -8)
-                .style("text-anchor", "end")
-                .text("Time"), cpath
-                .append("g")
-                .attr("class", "y-axis axis")
-                .call(lefttick)
-                .append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", ".91em")
-                .style("text-anchor", "end")
-                .text("Proficiency"), cpath
-                .append("path")
-                .datum(b)
-                .attr("class", "line")
-                .attr("id", "skills-chart-line")
-                .attr("d", n)
-                .attr("stroke", function () { return c._color })
-            }
-            function refreshChart(data) {
-              var e = processdata(data),
-                f = d3.select("#skills-chart-line");
-              null === f[0][0]
-                ? c(e, data)
-                : f
-                .datum(e)
-                .attr("d", n)
-                .attr("stroke", function () { return data._color })
-            }
-            var chart = {},
-              rect = {
-                top: 20,
-                right: 20,
-                bottom: 30,
-                left: 50
-              },
-              g = 500 - rect.left - rect.right,
-              h = 400 - rect.top - rect.bottom,
-              i = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
-              j = d3.scale.linear().range([0, g]),
-              k = d3.scale.linear().range([h, 0]),
-              bottomtick = d3
-                .svg
-                .axis()
-                .scale(j)
-                .tickValues([1999, 2004, 2009, 2013])
-                .tickFormat(d3.format(".0f"))
-                .tickPadding(10)
-                .tickSize(0)
-                .orient("bottom"),
-              lefttick = d3
-                .svg
-                .axis()
-                .scale(k)
-                .tickSize(0)
-                .tickPadding(10)
-                .tickValues([20, 40, 60, 80, 100])
-                .orient("left"),
-              n = d3.svg.line().interpolate("basis").x(function (a) {
-                return j(a.date)
-              }).y(function (a) {
-                return k(a.p)
-              }),
-              cpath = d3
-                .select(".skills-chart")
-                .append("svg")
-                .attr("width", g + rect.left + rect.right)
-                .attr("height", h + rect.top + rect.bottom)
-                .append("g")
-                .attr("transform", "translate(" + rect.left + "," + rect.top + ")");
-            chart.refreshChart = refreshChart;
-            return chart;
-          }(d3),
-          width = 580,
-          height = 580,
+        var width = $window.innerWidth,
+          height = $window.innerWidth,
           rad = Math.min(width, height) / Math.PI - 25,
           q = k,
           r = {
@@ -332,7 +229,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             .innerRadius(function (a) { return rad / Math.PI * a.depth })
             .outerRadius(function (a) { return rad / Math.PI * (a.depth + 1) - 1 });
 
-        var coloralternative = 0
+        var coloralternative = 0;
         var path = sunburst
           .data(d3.entries(skillsdata))
           .selectAll("g")
@@ -364,7 +261,6 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           .append("circle")
           .attr("r", rad / Math.PI)
           .attr("opacity", 0);
-        initchart();
       }
 
     });
