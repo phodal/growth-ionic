@@ -9,6 +9,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   })
 
   .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics) {
+    var circle = d3.selectAll("circle");
+    circle.style("fill", "steelblue");
+    circle.attr("r", 30);
+
     $analytics.trackView('Skill Tree List');
 
     $scope.ratings = 0;
