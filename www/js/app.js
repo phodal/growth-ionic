@@ -68,7 +68,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.skillTreeController', 'app
         url: '/main',
         views: {
           'menuContent': {
-            templateUrl: 'templates/main.html'
+            templateUrl: 'templates/main.html',
+            controller: 'MainCtrl'
           }
         }
       })

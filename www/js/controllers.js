@@ -13,6 +13,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isApp = window.cordova !== undefined;
   })
 
+  .controller('MainCtrl', function ($scope, $analytics) {
+
+  })
+
   .controller('FeedbackCtrl', function ($scope, $http, $cordovaEmailComposer) {
     $scope.issues = [];
     $http.get('https://api.github.com/repos/phodal/growth/issues').then(function (response) {

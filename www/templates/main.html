@@ -5,6 +5,11 @@
   <ion-content>
     <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
     <div class="list card days">
+      <swipe-cards>
+        <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+          Card content here
+        </swipe-card>
+      </swipe-cards>
       <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
       <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>第二日: 编码</ion-item>
       <ion-item href="#/app/day/3" class="item item-icon-left"><i class="icon ion-ios-star"></i>第三日: 上线</ion-item>
