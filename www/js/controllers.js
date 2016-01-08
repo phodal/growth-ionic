@@ -1,6 +1,11 @@
 angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils'])
 
-  .controller('AppCtrl', function ($scope) {
+  .controller('AppCtrl', function ($scope, $storageServices) {
+    $scope.points = 0;
+    $storageServices.get('points', function(points){
+      console.log(points);
+      $scope.points  = points;
+    });
   })
 
   .controller('AboutCtrl', function ($scope, $analytics) {

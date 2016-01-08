@@ -52,6 +52,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             flareChild[index] = skillFlareChild
           }
         });
+        $storageServices.set('points', $scope.ratings);
       });
 
       RenderSkillTree($window, {
