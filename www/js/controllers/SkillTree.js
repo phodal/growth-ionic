@@ -35,10 +35,11 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             var rating = parseInt(result);
             if (rating) {
               skillFlareChild[skill.text] = [rating];
-              
+
               $scope.ratings = $scope.ratings + rating;
               if (rating >= 3) {
                 $scope.learnedSkills.push({
+                  skill: skill.text,
                   rating: rating
                 });
               }
@@ -54,7 +55,9 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       });
 
       RenderSkillTree({
-        "Skill": flareChild
+        "Skill": {
+          "Skill" : flareChild
+        }
       });
 
       function RenderSkillTree(skillsdata) {
@@ -154,6 +157,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           }
         }
 
+        d3.select('.skills-sunburst svg').remove();
         var width = $window.innerWidth,
           height = $window.innerWidth,
           rad = Math.min(width, height) / Math.PI - 25,
