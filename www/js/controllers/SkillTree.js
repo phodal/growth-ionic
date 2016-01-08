@@ -26,23 +26,19 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     };
 
     $scope.$on('$ionicView.enter', function () {
-      var flareChild = [];
+      var flareChild = {};
 
       angular.forEach(AllSkills, function (skills, index) {
+        var skillFlareChild = {};
         angular.forEach(skills, function (skill) {
-          var skillFlareChild = [];
           $storageServices.get(skill.text, function (result) {
             var rating = parseInt(result);
             if (rating) {
-              skillFlareChild.push({
-                "name": skill.text,
-                "size": rating
-              });
-
+              skillFlareChild[skill.text] = [rating];
+              
               $scope.ratings = $scope.ratings + rating;
               if (rating >= 3) {
                 $scope.learnedSkills.push({
-                  skill: skill.text,
                   rating: rating
                 });
               }
@@ -51,54 +47,17 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
               }
             }
           });
-          flareChild.push({
-            "name": index,
-            "children": skillFlareChild
-          });
+          if (skillFlareChild) {
+            flareChild[index] = skillFlareChild
+          }
         });
       });
 
-      RenderSkillTree();
+      RenderSkillTree({
+        "Skill": flareChild
+      });
 
-      function RenderSkillTree() {
-        var skillsdata;
-        skillsdata = {
-          "Skills": {
-            "Server": {
-              "Node.js": {
-                "Express": [4],
-                "Npm": [4]
-              },
-              "DB": {
-                "SqlServer": [4],
-                "Sqlite": [4],
-                "Mongo": [4]
-              },
-              "Server": {
-                "Nginx": [3],
-                "Apache": [3]
-              }
-            },
-            "Front": {
-              "HTML": [3],
-              "CSS": {
-                "CSS": [3],
-                "LESS": [3],
-                "Responsive": [4]
-              },
-              "JSFramework": {
-                "jQuery": [4],
-                "ExtJs": [3],
-                "BackboneJs": [3],
-                "D3.js": [3]
-              },
-              "Template": {
-                "Jade": [3]
-              }
-            }
-          }
-        };
-
+      function RenderSkillTree(skillsdata) {
         function mouseover(data) {
           var c = getcrumbpath(data);
           i(c);
@@ -106,9 +65,12 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             .selectAll(".skills-sunburst path")
             .style("opacity", .3), sunburst
             .selectAll("path")
-            .filter(function (a) { return c.indexOf(a) >= 0 })
+            .filter(function (a) {
+              return c.indexOf(a) >= 0
+            })
             .style("opacity", 1)
         }
+
         function mouseleave() {
           d3
             .selectAll("path")
@@ -118,12 +80,16 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             .transition()
             .duration(1e3)
             .style("opacity", 1)
-            .each("end", function () { d3.select(this).on("mouseover", mouseover) })
+            .each("end", function () {
+              d3.select(this).on("mouseover", mouseover)
+            })
         }
+
         function getcrumbpath(a) {
           for (var temp = [], c = a; c.parent;) temp.unshift(c), c = c.parent;
           return temp
         }
+
         function h(a, d3) {
           var c = [];
           c.push("0,0");
@@ -134,6 +100,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           d3 > 0 && c.push(r.t + "," + r.h / 2);
           return c.join(" ");
         }
+
         function i(a) {
           a[a.length - 1]._color, a.length;
           var c = d3
@@ -146,7 +113,9 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           d
             .append("svg:polygon")
             .attr("points", h)
-            .style("fill", function (a) { return a._color }),
+            .style("fill", function (a) {
+              return a._color
+            }),
             d
               .append("svg:text")
               .attr("x", r.w / 2 + 2)
@@ -154,16 +123,24 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
               .attr("dy", "0.35em")
               .attr("text-anchor", "middle")
               .attr("class", "breadcumb-text")
-              .style("fill", function (a) { return getcolor(d3.rgb(a._color)) < 150 ? "#fff" : "#000" })
-              .text(function (a) { return a.key }),
+              .style("fill", function (a) {
+                return getcolor(d3.rgb(a._color)) < 150 ? "#fff" : "#000"
+              })
+              .text(function (a) {
+                return a.key
+              }),
             c
-              .attr("transform", function (a, b) { return "translate(" + b * (r.w + r.s) + ", 0)" }),
+              .attr("transform", function (a, b) {
+                return "translate(" + b * (r.w + r.s) + ", 0)"
+              }),
             c.exit().remove(),
             d3.select(".trail").style("visibility", "")
         }
+
         function getcolor(color) {
           return .299 * color.r + .587 * color.g + .114 * color.b
         }
+
         function k(a) {
           var c = ["#4CC3D9", "#FFC65D", "#7BC8A4", "#93648D", "#404040"],
             d = [-.1, -.05, 0];
@@ -176,6 +153,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             return d3.rgb(a.parent._color).brighter(.2 * a.depth + f * a.depth)
           }
         }
+
         var width = $window.innerWidth,
           height = $window.innerWidth,
           rad = Math.min(width, height) / Math.PI - 25,
@@ -221,13 +199,23 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
                 ? (a._proficiency = a.value, d3.entries([a.value[a.value.length - 1]]))
                 : (a._proficiency = u(a.value), isNaN(a.value) ? d3.entries(a.value) : null)
             })
-            .value(function (a) { return a.value }),
+            .value(function (a) {
+              return a.value
+            }),
           arc = d3.svg
             .arc()
-            .startAngle(function (a) { return a.x })
-            .endAngle(function (a) { return a.x + a.dx - .01 / (a.depth + .5) })
-            .innerRadius(function (a) { return rad / Math.PI * a.depth })
-            .outerRadius(function (a) { return rad / Math.PI * (a.depth + 1) - 1 });
+            .startAngle(function (a) {
+              return a.x
+            })
+            .endAngle(function (a) {
+              return a.x + a.dx - .01 / (a.depth + .5)
+            })
+            .innerRadius(function (a) {
+              return rad / Math.PI * a.depth
+            })
+            .outerRadius(function (a) {
+              return rad / Math.PI * (a.depth + 1) - 1
+            });
 
         var coloralternative = 0;
         var path = sunburst
@@ -236,13 +224,19 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           .data(proficiencydata)
           .enter()
           .append("svg:g")
-          .attr("display", function (a) { return a.depth ? null : "none" });
+          .attr("display", function (a) {
+            return a.depth ? null : "none"
+          });
         path
           .append("svg:path")
           .attr("d", arc)
           .attr("stroke", "#fff")
-          .attr("fill", function (a) { return a._color = q(a), a._color })
-          .attr("fill-rule", "evenodd").attr("display", function (a) { return a.children ? null : "none" })
+          .attr("fill", function (a) {
+            return a._color = q(a), a._color
+          })
+          .attr("fill-rule", "evenodd").attr("display", function (a) {
+            return a.children ? null : "none"
+          })
           .on("mouseover", mouseover);
         path.
           append("svg:text")
@@ -250,9 +244,15 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             var r = 180 * ((a.x + a.dx / 2 - Math.PI / 2) / Math.PI);
             return "rotate(" + r + ")"
           })
-          .attr("x", function (a) { return rad / Math.PI * a.depth})
-          .attr("dx", "6").attr("dy", ".1em").text(function (a) { return a.key })
-          .attr("display", function (a) { return a.children ? null : "none" })
+          .attr("x", function (a) {
+            return rad / Math.PI * a.depth
+          })
+          .attr("dx", "6").attr("dy", ".1em").text(function (a) {
+            return a.key
+          })
+          .attr("display", function (a) {
+            return a.children ? null : "none"
+          })
           .on("mouseover", mouseover);
         d3
           .select(".skills-sunburst")
