@@ -1,11 +1,8 @@
 <ion-view view-title="我的技能树">
   <ion-nav-buttons side="right">
-    <h1 class="text-center ratingsCount" ng-show="!isInfinite">{{ratings}}</h1>
-    <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite"></button>
+    <button class="button button-icon ion-ios-infinite-outline" ng-click='openSkillsModal()'></button>
   </ion-nav-buttons>
   <ion-content>
-    <ion-item ng-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}}
-      <rating ng-model="skill.rating" max="5"></rating>
-    </ion-item>
+    TBD
   </ion-content>
 </ion-view>

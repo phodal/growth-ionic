@@ -12,7 +12,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isApp = window.cordova !== undefined;
   })
 
-  .controller('skillTreeControl', function ($scope, $storageServices) {
+  .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal) {
     if (typeof analytics !== 'undefined') {
       analytics.startTrackerWithId('UA-71907748-1');
       analytics.trackView('Skill Tree List')
@@ -21,6 +21,27 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.ratings = 0;
     $scope.isInfinite = false;
     $scope.learnedSkills = [];
+    $scope.modal = null;
+
+    $scope.openSkillsModal = function () {
+      if (typeof analytics !== 'undefined') {
+        analytics.startTrackerWithId('UA-71907748-1');
+        analytics.trackView('All Skills')
+      }
+
+      $ionicModal.fromTemplateUrl('templates/skills/skills.html', {
+        id: 'skills',
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.modal = modal;
+      });
+    };
+
+    $scope.closeSkillsModal = function () {
+      $scope.modal.hide();
+    };
 
     $scope.$on('$ionicView.enter', function () {
       angular.forEach(AllSkills, function (skills) {
