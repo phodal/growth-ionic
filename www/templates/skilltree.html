@@ -1,6 +1,7 @@
 <ion-view view-title="我的技能图谱">
   <ion-nav-buttons side="right">
-    <button class="button button-icon ion-ios-infinite-outline" ng-click='openSkillsModal()'></button>
+    <button class="button text-center ratingsCount" ng-show="!isInfinite" ng-click='openSkillsModal()'>{{ratings}}</button>
+    <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite" ng-click='openSkillsModal()'></button>
   </ion-nav-buttons>
   <ion-content>
     <!-- 3d tags for circles -->
@@ -21,6 +22,14 @@
         TBD
       </ion-slide>
     </ion-slide-box>
-
   </ion-content>
+  <ion-footer-bar align-title="left" class="bar-positive">
+    <div class="buttons">
+      <button class="button">Left Button</button>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons" ng-click="doSomething()">
+      <button class="button">Right Button</button>
+    </div>
+  </ion-footer-bar>
 </ion-view>
