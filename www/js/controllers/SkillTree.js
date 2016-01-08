@@ -65,42 +65,35 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         skillsdata = {
           "Skills": {
             "Server": {
-              "Active Page": {
-                "ASP": [0, 0, 10, 30, 60, 60, 40, 20, 20, 20, 20, 20, 20, 20, 20],
-                "ASP.Net": [0, 0, 0, 0, 0, 0, 10, 30, 70, 80, 90, 90, 90, 90, 90]
-              },
               "Node.js": {
-                "Express": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 30],
-                "npm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 40]
+                "Express": 4,
+                "Npm": 4
               },
               "DB": {
-                "SqlServer": [0, 0, 0, 0, 0, 10, 20, 40, 40, 40, 60, 90, 90, 90, 80],
-                "Sqlite": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 30, 20],
-                "Mongo": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 30]
+                "SqlServer": 3,
+                "Sqlite": 3,
+                "Mongo": 2
               },
               "Server": {
-                "Nginx": [0, 10, 10, 30, 40, 40, 40, 60, 70, 70, 80, 80, 80, 80, 80],
-                "Apache": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 20, 40]
-              },
-              "API": {
-                "OAuth2.0": [0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 40, 40, 40, 30, 30]
+                "Nginx": 1,
+                "Apache": 3
               }
             },
             "Front": {
-              "HTML": [0, 0, 10, 30, 50, 50, 60, 80, 90, 60, 50, 30, 30, 30, 40],
+              "HTML": 2,
               "CSS": {
-                "CSS": [0, 0, 10, 30, 50, 50, 60, 80, 85, 60, 50, 30, 20, 20, 30],
-                "LESS": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30],
-                "Responsive": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20]
+                "CSS": 1,
+                "LESS": 3,
+                "Responsive": 3
               },
               "JSFramework": {
-                "jQuery": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 30, 30, 25, 30],
-                "ExtJs": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30],
-                "BackboneJs": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10],
-                "D3.js": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20]
+                "jQuery": 3,
+                "ExtJs": 4,
+                "BackboneJs": 5,
+                "D3.js": 2
               },
               "Template": {
-                "Jade": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20]
+                "Jade": 3
               }
             }
           }
@@ -192,7 +185,6 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
             return d3.rgb(a.parent._color).brighter(.2 * a.depth + f * a.depth)
           }
         }
-        var l;
         var chart = function (d3) {
             function processdata(data) {
               var b = [],
