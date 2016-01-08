@@ -624,3 +624,8 @@ ul.rating li {
   stroke-width: 1px;
   shape-rendering: geometricPrecision;
 }
+
+.button .badge.header-badge {
+  margin-top: -36px;
+  left: 6px;
+}
