@@ -646,6 +646,26 @@ ul.rating li {
   color: #fff;
 }
 
+.intro .card {
+  box-shadow: none;
+}
+
+.intro .hide-item {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  margin: 0;
+}
+
+.analytics {
+  float: right;
+  margin-right: 8px;
+  font-size: 2em;
+}
+
+.analytics a.button {
+  font-size: 1.2em;
+}
+
 content {
   color: #fff;
 }
