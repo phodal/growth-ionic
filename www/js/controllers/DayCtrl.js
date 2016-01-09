@@ -5,6 +5,23 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
     $scope.currentModal = null;
     $scope.currentModals = [];
 
+    $storageServices.get('isFirstTimeDay', function (value) {
+      if (value !== 'false') {
+        $ionicModal.fromTemplateUrl('templates/intro/day1.html', {
+          id: 'intro1',
+          scope: $scope,
+          animation: 'slide-in-up'
+        }).then(function (modal) {
+          modal.show();
+          $scope.modal = modal;
+        });
+
+        $scope.$on('modal.hidden', function () {
+          $storageServices.set('isFirstTimeDay', 'false');
+        });
+      }
+    });
+
     $scope.openSpecialModal = function (subtopic, branch) {
       $analytics.trackView('modal ' + subtopic + ' ' + branch);
 
