@@ -16,7 +16,6 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices) {
     $storageServices.get('isFirstTime', function(value){
-      console.log(value);
       if(value !== 'false'){
         $ionicModal.fromTemplateUrl('templates/intro/intro.html', {
           id: 'intro1',
