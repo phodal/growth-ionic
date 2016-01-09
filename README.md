@@ -6,7 +6,7 @@
 
 应用截图:
 
-![1.pic](screenshot/1.png) ![2.pic](screenshot/2.png)
+![ScreenShot ](screenshot/3.jpg) ![ScreenShot](screenshot/2.jpg) ![ScreenShot](screenshot/1.jpg)
 
 在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
 
