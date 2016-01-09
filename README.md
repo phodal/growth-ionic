@@ -1,8 +1,6 @@
-# Growth: 成为优秀的Web Developer。
+# Growth —— 成为优秀的Web Developer。
 
 App版已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
-
-在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
 
 直接下载：[http://fir.im/phodal](http://fir.im/phodal)
 
@@ -10,22 +8,27 @@ App版已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Goo
 
 ![1.pic](screenshot/1.png) ![2.pic](screenshot/2.png)
 
+在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
+
 Growth交流群(QQ): 529600394 
 
-关注我的微信公众号: phodal。
+欢迎关注我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
 
 ##简介
 
-Growth主要关注的点是**Web开发的流程及其技术栈、学习路线**，里有啥：
+Growth来源于: 对Web应用开发的一个流程认识。
 
- - 近乎完整的Web开发流程介绍   
+主要关注点是**Web开发的流程及其技术栈、学习路线、成长衡量**，含：
+
+ - 完整的Web开发流程介绍   
  - 如何写好代码——重构、测试、模式
  - Web应用的分析和部署
- - 如何不再写遗留代码
+ - 遗留代码、遗留系统的形成
+ - 每一阶段所需的技能
 
-APP来源于: 对Web应用开发的一个流程认识。
+主要围绕下图构建
 
 ![Web](www/img/seven.png)
 
@@ -48,7 +51,8 @@ APP来源于: 对Web应用开发的一个流程认识。
 ##其他
 
 前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
-Skill Map来源于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
+
+Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
 
 Plugins:
 
@@ -56,12 +60,14 @@ Plugins:
     cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
     cordova plugin add cordova-plugin-app-preferences
 
+``用户隐私``: 在这里会用Google Analytics来收集用户访问的页面来分析用户喜欢的功能。
+
 ##Todo
 
 1. Tips
-2. SkillTree Render
+2. Auto Update
 
-## License
+##License
 
 © 2015~2016 [Phodal Huang](https://www.phodal.com). This code is distributed under the CC0 1.0 Universal license. See `LICENSE` in this directory.
 
