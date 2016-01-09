@@ -14,8 +14,24 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isApp = window.cordova !== undefined;
   })
 
-  .controller('MainCtrl', function ($scope, $analytics) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices) {
+    $storageServices.get('isFirstTime', function(value){
+      console.log(value);
+      if(value !== 'false'){
+        $ionicModal.fromTemplateUrl('templates/intro/intro.html', {
+          id: 'intro1',
+          scope: $scope,
+          animation: 'slide-in-up'
+        }).then(function (modal) {
+          modal.show();
+          $scope.modal = modal;
+        });
 
+        $scope.$on('modal.hidden', function () {
+          $storageServices.set('isFirstTime', 'false');
+        });
+      }
+    });
   })
 
   .controller('FeedbackCtrl', function ($scope, $http, $cordovaEmailComposer) {

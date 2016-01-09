@@ -629,3 +629,23 @@ ul.rating li {
   margin-top: -36px;
   left: 6px;
 }
+
+.intro {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.1s opacity linear;
+}
+
+.intro .button {
+  color: #fff;
+}
+
+content {
+  color: #fff;
+}
