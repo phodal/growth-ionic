@@ -2,10 +2,10 @@
 <widget id="ren.growth" version="0.5.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Growth</name>
   <description>
-      A app for learn web development
+    成为顶尖的Web开发者
     </description>
   <author email="h@phodal.com" href="http://www.growth.ren/">
-      Phodal Huang
+      Fengda Huang
     </author>
   <content src="index.html"/>
   <access origin="*"/>
