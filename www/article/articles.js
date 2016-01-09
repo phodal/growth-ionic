@@ -190,5 +190,9 @@ var AllArticle = [
   {
     "slug" : "toggle",
     "title": "Toggle"
+  },
+  {
+    "slug" : "frontend-history",
+    "title": "前端演进史"
   }
 ];
