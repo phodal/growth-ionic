@@ -47,7 +47,6 @@ function RenderBubble ($storageServices, $window) {
     .attr("height", $window.innerWidth)
     .attr("class", "bubble");
 
-  console.log(JSON.stringify(flare));
   var node = svg.selectAll(".node")
     .data(bubble.nodes(classes(flare))
       .filter(function (d) {
