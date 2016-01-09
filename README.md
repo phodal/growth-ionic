@@ -54,6 +54,8 @@ Growth来源于: 对Web应用开发的一个流程认识。
 
 Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
 
+前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
+
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
