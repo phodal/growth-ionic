@@ -26,6 +26,9 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     };
 
     $scope.$on('$ionicView.enter', function () {
+      // clear badge
+      $storageServices.set('badgePoints', 0);
+
       var flareChild = {};
 
       angular.forEach(AllSkills, function (skills, index) {

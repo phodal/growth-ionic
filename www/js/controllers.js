@@ -2,8 +2,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
   .controller('AppCtrl', function ($scope, $storageServices) {
     $scope.badgePoints = 0;
-    $storageServices.get('badgePoints', function(points){
-      $scope.badgePoints  = points;
+    $scope.$on('$ionicView.enter', function () {
+      $storageServices.get('badgePoints', function (points) {
+        $scope.badgePoints = points;
+      });
     });
   })
 
