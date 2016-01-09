@@ -1,9 +1,9 @@
 angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.utils'])
 
   .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics, $window) {
-    $analytics.trackView('Skill Tree List');
-    $storageServices.get('isFirstTimeSkill', function(value){
-      if(value !== 'false'){
+    $analytics.trackView('Skill Tree');
+    $storageServices.get('isFirstTimeSkill', function (value) {
+      if (value !== 'false') {
         $ionicModal.fromTemplateUrl('templates/intro/skilltree.html', {
           id: 'intro1',
           scope: $scope,
@@ -75,7 +75,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       });
 
       RenderSkillTree($window, {
-        "Skill" : flareChild
+        "Skill": flareChild
       });
 
       RenderBubble($storageServices, $window);

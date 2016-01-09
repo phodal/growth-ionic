@@ -2,12 +2,12 @@ function RenderSkillTree($window, data) {
   function filterData(data) {
     var results = {};
 
-    angular.forEach(SkillMap, function(FourZones, zoneName){
+    angular.forEach(SkillMap, function (FourZones, zoneName) {
       results[zoneName] = {};
-      angular.forEach(FourZones, function(zone){
+      angular.forEach(FourZones, function (zone) {
         results[zoneName][zone] = {};
 
-        angular.forEach(data.Skill[zone], function(value, skillName){
+        angular.forEach(data.Skill[zone], function (value, skillName) {
           results[zoneName][zone][skillName] = value;
         })
 
@@ -20,6 +20,7 @@ function RenderSkillTree($window, data) {
   }
 
   var skillsdata = filterData(data);
+
   function mouseover(data) {
     var c = getcrumbpath(data);
     i(c);

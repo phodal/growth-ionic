@@ -33,7 +33,7 @@ angular.module('starter.services', [])
     //if ($window.cordova) {
     //  return preferences;
     //} else {
-      return localStorage;
+    return localStorage;
     //}
   }])
 

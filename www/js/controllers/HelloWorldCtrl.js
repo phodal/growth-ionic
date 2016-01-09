@@ -9,7 +9,7 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
   })
 
   .controller('QuizCtrl', function ($scope, $stateParams, $http, quizFactory, utilsFactory, $analytics) {
-    $analytics.trackView('Quiz Game')
+    $analytics.trackView('Quiz Game');
 
     $scope.userAnswer = {};
     $scope.level = $stateParams.level;

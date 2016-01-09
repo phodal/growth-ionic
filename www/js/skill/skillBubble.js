@@ -1,4 +1,4 @@
-function RenderBubble ($storageServices, $window) {
+function RenderBubble($storageServices, $window) {
   var flareChild = [];
 
   function getSkillPoint(skill, cb) {
@@ -18,7 +18,7 @@ function RenderBubble ($storageServices, $window) {
   angular.forEach(AllSkills, function (skills, index) {
     var skillFlareChild = [];
     angular.forEach(skills, function (skill) {
-      getSkillPoint(skill, function(rating){
+      getSkillPoint(skill, function (rating) {
         skillFlareChild.push(rating);
       });
     });
