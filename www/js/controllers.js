@@ -1,10 +1,9 @@
 angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils'])
 
   .controller('AppCtrl', function ($scope, $storageServices) {
-    $scope.points = 0;
-    $storageServices.get('points', function(points){
-      console.log(points);
-      $scope.points  = points;
+    $scope.badgePoints = 0;
+    $storageServices.get('badgePoints', function(points){
+      $scope.badgePoints  = points;
     });
   })
 

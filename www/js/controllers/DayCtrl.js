@@ -49,9 +49,22 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       });
 
       $scope.submitSkill = function () {
+        var originPoints = 0;
+        $storageServices.get('badgePoints', function(data){
+          if(parseInt(data) > 0){
+            originPoints = parseInt(data);
+          }
+        });
+
         angular.forEach($scope.devList, function (skill) {
           $storageServices.set(skill.text, skill.rating);
+          var skillPoint = parseInt(skill.rating);
+          if(skillPoint > 0){
+            originPoints = originPoints + skillPoint;
+          }
         });
+
+        $storageServices.set('badgePoints', originPoints);
       }
     };
 
