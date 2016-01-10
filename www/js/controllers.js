@@ -16,7 +16,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
     $scope.currentModal = null;
+    $scope.subtopic = '';
     $scope.openTodoModal = function (subtopic) {
+      $scope.subtopic = subtopic;
       $analytics.trackView('todo ' + subtopic);
 
       $scope.todoLists = todoLists[subtopic]['basic'];
@@ -31,8 +33,22 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.addTodo = function(item){
+      var items = {
+        items: []
+      };
+      $storageServices.get($scope.subtopic, function(result){
+        if(result !== undefined){
+          try {
+            items = JSON.parse(result);
+          } catch (err) {
+            console.log(err)
+          }
+        }
+      });
+      items.items.push(item.id);
+
+      $storageServices.set($scope.subtopic, JSON.stringify(items));
       $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);
-      $storageServices.set(item.id, 'true');
     };
 
     $scope.closeSpecialModal = function () {
