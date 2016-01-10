@@ -17,7 +17,12 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
     $scope.currentModal = null;
     $scope.subtopic = '';
-    $scope.doneItems = [];
+    $scope.allDoneItems = {
+      "hello": [],
+      "env": [],
+      "front": [],
+      "mvc": []
+    };
 
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
@@ -38,7 +43,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         angular.forEach(items.items, function (item, itemKey) {
           angular.forEach(todoLists, function (todoList, index) {
             if(todoList.id === itemKey) {
-              $scope.doneItems.push({
+              $scope.allDoneItems[subtopic].push({
                 id: todoList.id,
                 title: todoList.title
               });
@@ -46,8 +51,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
             }
           });
         });
-        $scope.todoLists = todoLists;
       });
+      console.log($scope.allDoneItems[subtopic]);
+      $scope.doneItems = $scope.allDoneItems[subtopic];
+      $scope.todoLists = todoLists;
 
       $ionicModal.fromTemplateUrl('templates/modal/todo.html', {
         id: subtopic,
