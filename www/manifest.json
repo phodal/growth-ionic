@@ -1,0 +1,12 @@
+{
+  "files": {
+    "test": {
+      "filename": "js/test.js"
+    }
+  },
+  "load": [
+    "js/update/cordova-app-loader-complete.js",
+    "js/update/autoupdate.js",
+    "js/test.js"
+  ]
+}

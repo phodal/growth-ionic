@@ -31,6 +31,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'www/quiz/', src: ['**'], dest: 'quiz/', action: 'upload'},
           {expand: true, cwd: 'www/review/', src: ['**'], dest: 'review/', action: 'upload'},
           {expand: true, cwd: 'www/templates/', src: ['**'], dest: 'templates/', action: 'upload'},
+          {expand: true, cwd: 'www/', src: ['manifest.json'], dest: './', action: 'upload'},
           {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'},
           {
             expand: true,
