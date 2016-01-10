@@ -20,6 +20,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.doneItems = [];
 
     $scope.openTodoModal = function (subtopic) {
+      $scope.doneItems = [];
       $scope.subtopic = subtopic;
       $analytics.trackView('todo ' + subtopic);
 
@@ -33,16 +34,16 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
             console.log(err)
           }
         }
-      });
-      angular.forEach(items.items, function (item, itemKey) {
-        angular.forEach($scope.todoLists, function (todoList) {
-          if(todoList.id === itemKey) {
-            $scope.todoLists.splice($scope.todoLists.indexOf(itemKey), 1);
-            $scope.doneItems.push({
-              id: todoList.id,
-              title: todoList.title
-            });
-          }
+        angular.forEach(items.items, function (item, itemKey) {
+          angular.forEach($scope.todoLists, function (todoList) {
+            if(todoList.id === itemKey) {
+              $scope.todoLists.splice($scope.todoLists.indexOf(itemKey), 1);
+              $scope.doneItems.push({
+                id: todoList.id,
+                title: todoList.title
+              });
+            }
+          });
         });
       });
 
