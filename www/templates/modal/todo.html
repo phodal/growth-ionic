@@ -11,9 +11,13 @@
       </ion-item>
     </ion-list>
 
-    <div class="card item" ng-show="doneItems.length > 0">
-      <ion-item ng-repeat="doneItem in doneItems">
-        {{doneItem.title}}
+    <div class="card list" ng-show="doneItems.length > 0">
+      <div class="item item-divider item-positive">
+        已完成
+      </div>
+      <ion-item class="item item-icon-right" ng-repeat="doneItem in doneItems">
+        <h2>{{doneItem.title}}</h2>
+        <i class="icon ion-ios-checkmark-outline" style="color: green"></i>
       </ion-item>
     </div>
   </ion-content>
