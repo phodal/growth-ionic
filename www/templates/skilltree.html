@@ -4,10 +4,10 @@
     <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite" ng-click='openSkillsModal()'></button>
   </ion-nav-buttons>
   <ion-content>
-    <h1 class="sectionTitle" ng-hide="showSkillMap">快去GET你的技能吧!</h1>
-    <ion-slide-box ng-show="showSkillMap = true">
+    <h1 class="sectionTitle" ng-show="!showSkillMap">快去GET你的技能吧!</h1>
+    <ion-slide-box>
       <ion-slide>
-        <div id="skills">
+        <div id="skills" ng-show="showSkillMap">
           <div id="skillmap">
             <div class="skills-wrapper">
               <div class="skills-sunburst"></div>
@@ -19,7 +19,7 @@
         </div>
       </ion-slide>
       <ion-slide>
-        <div id="skillBubble"></div>
+        <div id="skillBubble" ng-show="showSkillMap"></div>
       </ion-slide>
     </ion-slide-box>
   </ion-content>

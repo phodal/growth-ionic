@@ -41,8 +41,8 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       $scope.modal.hide();
     };
 
-    $scope.showSkillMap = false;
     $scope.$on('$ionicView.enter', function () {
+      $scope.showSkillMap = false;
       // clear badge
       $storageServices.set('badgePoints', 0);
 
