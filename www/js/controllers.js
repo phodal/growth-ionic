@@ -14,7 +14,25 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isApp = window.cordova !== undefined;
   })
 
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
+    $scope.currentModal = null;
+    $scope.openTodoModal = function (subtopic) {
+      $analytics.trackView('todo ' + subtopic);
+
+      $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/todo.html', {
+        id: subtopic,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.currentModal = modal;
+      });
+    };
+
+    $scope.closeSpecialModal = function () {
+      $scope.currentModal.hide();
+    };
+
     $storageServices.get('isFirstTime', function (value) {
       if (value !== 'false') {
         $ionicModal.fromTemplateUrl('templates/intro/intro.html', {

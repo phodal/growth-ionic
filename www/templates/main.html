@@ -13,9 +13,20 @@
       </div>
       <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
         <ion-slide>
-          <div class="list card">
-            <h3 class="sectionTitle">Coming...</h3>
-          </div>
+          <ul class="roadmap-cards">
+            <li class="roadmap-card" ng-click="openTodoModal('hello')">
+              <span>hello,world</span>
+            </li>
+            <li class="roadmap-card" ng-click="openTodoModal('env')">
+              <span>环境</span>
+            </li>
+            <li class="roadmap-card" ng-click="openTodoModal('front')">
+              <span>前端</span>
+            </li>
+            <li class="roadmap-card" ng-click="openTodoModal('mvc')">
+              <span>后台</span>
+            </li>
+          </ul>
         </ion-slide>
         <ion-slide>
           <div class="list card days">
