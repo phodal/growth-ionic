@@ -7,11 +7,16 @@
     <tab-slide-box>
       <div class="tsb-icons">
         <div class="tsb-ic-wrp">
-          <a href="javascript:;">七日谈</a>
           <a href="javascript:;">路线图</a>
+          <a href="javascript:;">七日谈</a>
         </div>
       </div>
       <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <div class="list card">
+            <h3 class="sectionTitle">Coming...</h3>
+          </div>
+        </ion-slide>
         <ion-slide>
           <div class="list card days">
             <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
@@ -21,11 +26,6 @@
             <ion-item href="#/app/day/5" class="item item-icon-left"><i class="icon ion-ios-star-half"></i>第五日: 持续交付</ion-item>
             <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>第六日: 遗留系统</ion-item>
             <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>第七日: 回顾与新架构</ion-item>
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div class="list card">
-            <h3 class="sectionTitle">Coming...</h3>
           </div>
         </ion-slide>
       </ion-slide-box>
