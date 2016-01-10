@@ -42,7 +42,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     };
 
     $scope.$on('$ionicView.enter', function () {
-      $scope.showSkillMap = false;
+      $scope.showSkillMap = true;
       // clear badge
       $storageServices.set('badgePoints', 0);
 
@@ -74,7 +74,6 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         });
         $storageServices.set('points', $scope.ratings);
       });
-
       if ($scope.ratings > 0) {
         $scope.showSkillMap = true;
         RenderSkillTree($window, {
@@ -82,6 +81,8 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         });
 
         RenderBubble($storageServices, $window);
+      } else {
+        $scope.showSkillMap = false;
       }
     });
   });
