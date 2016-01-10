@@ -3,14 +3,26 @@
     <h1 class="title">TODO</h1>
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
-  <ion-content class="padding">
-    <div class="list">
-      <marked>
-         - 尝试使用不同类型的操作系统，即Windows和类Unix，如（GNU/Linux的Ubuntu、OpenSUSE，或者Mac OS）
-         - 尝试使用IDE和编辑器
-         - 尝试使用命令行工具
-         - 尝试使用快捷键代替鼠标操作
-      </marked>
-    </div>
+  <ion-content>
+    <ion-list show-delete="false" can-swipe="true">
+      <ion-item>
+        尝试使用GNU/Linux
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="add('try-linux')"></ion-option-button>
+      </ion-item>
+      <ion-item>
+        尝试使用不同的IDE和编辑器
+        <ion-option-button class="button-assertive icon ion-trash-a"
+                           ng-click="add('try-editor-ide')"></ion-option-button>
+      </ion-item>
+      <ion-item>
+        尝试使用命令行工具
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="add('try-cli')"></ion-option-button>
+      </ion-item>
+      <ion-item>
+        尝试使用快捷键代替鼠标操作
+        <ion-option-button class="button-assertive icon ion-trash-a"
+                           ng-click="add('try-keyshorts')"></ion-option-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-modal-view>
