@@ -4,42 +4,29 @@
   </ion-nav-buttons>
   <ion-content>
     <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
-    <!--<tab-slide-box>-->
-      <!--<div class="tsb-icons">-->
-        <!--<div class="tsb-ic-wrp">-->
-          <!--<a href="javascript:;" class="ion-home"></a>-->
-          <!--<a href="javascript:;" class="ion-email"></a>-->
-          <!--<a href="javascript:;" class="ion-model-s"></a>-->
-          <!--<a href="javascript:;" class="ion-person"></a>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">-->
-        <!--<ion-slide>-->
-          <!--<h1>Home content</h1>-->
-        <!--</ion-slide>-->
-        <!--<ion-slide>-->
-          <!--<h1>Games content</h1>-->
-        <!--</ion-slide>-->
-        <!--<ion-slide>-->
-          <!--<h1>Mail content</h1>-->
-        <!--</ion-slide>-->
-        <!--<ion-slide>-->
-          <!--<h1>Car content</h1>-->
-        <!--</ion-slide>-->
-        <!--<ion-slide>-->
-          <!--<h1>Profile content</h1>-->
-        <!--</ion-slide>-->
-
-      <!--</ion-slide-box>-->
-    <!--</tab-slide-box>-->
-    <div class="list card days">
-      <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
-      <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>第二日: 编码</ion-item>
-      <ion-item href="#/app/day/3" class="item item-icon-left"><i class="icon ion-ios-star"></i>第三日: 上线</ion-item>
-      <ion-item href="#/app/day/4" class="item item-icon-left"><i class="icon ion-ios-star"></i>第四日: 数据分析</ion-item>
-      <ion-item href="#/app/day/5" class="item item-icon-left"><i class="icon ion-ios-star-half"></i>第五日: 持续交付</ion-item>
-      <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>第六日: 遗留系统</ion-item>
-      <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>第七日: 回顾与新架构</ion-item>
-    </div>
+    <tab-slide-box>
+      <div class="tsb-icons">
+        <div class="tsb-ic-wrp">
+          <a href="javascript:;">七日</a>
+          <a href="javascript:;">路线</a>
+        </div>
+      </div>
+      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <div class="list card days">
+            <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
+            <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>第二日: 编码</ion-item>
+            <ion-item href="#/app/day/3" class="item item-icon-left"><i class="icon ion-ios-star"></i>第三日: 上线</ion-item>
+            <ion-item href="#/app/day/4" class="item item-icon-left"><i class="icon ion-ios-star"></i>第四日: 数据分析</ion-item>
+            <ion-item href="#/app/day/5" class="item item-icon-left"><i class="icon ion-ios-star-half"></i>第五日: 持续交付</ion-item>
+            <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>第六日: 遗留系统</ion-item>
+            <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>第七日: 回顾与新架构</ion-item>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <h1>TBD</h1>
+        </ion-slide>
+      </ion-slide-box>
+    </tab-slide-box>
   </ion-content>
 </ion-view>
