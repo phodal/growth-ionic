@@ -40,6 +40,25 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.currentModal.hide();
     };
 
+
+    $scope.introModal = null;
+    $scope.openIntroModal = function (day) {
+      $analytics.trackView('modal day' + day);
+
+      $ionicModal.fromTemplateUrl('templates/days/modals/day' + day + '.html', {
+        id: 'introModal',
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.introModal = modal;
+      });
+    };
+
+    $scope.closeIntroModal = function () {
+      $scope.introModal.hide();
+    };
+
     $scope.getSkill = function (subtopic) {
       $scope.devList = [];
       var devLists = AllSkills[subtopic];
