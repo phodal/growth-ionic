@@ -1,18 +1,8 @@
 <ion-view view-title="上线">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-ios-information-outline" ng-click='openIntroModal(3)'></button>
+  </ion-nav-buttons>
   <ion-content>
-    <!--<div class="title"><img class="title-image full-image" src="img/day1/hello-world.png"/></div>-->
-    <div class="list card">
-      <div class="item item-body">
-        <blockquote>在我们不断地重复第二个步骤的时候，我们也要开始去考虑如何上线了。</blockquote>
-      </div>
-
-      <div class="item item-body">
-        <p>我们是直接部署在Docker容器里呢？还是直接部署在服务器上呢？接着，我们还为其配置了缓存服务和均衡负载等等。</p>
-        <p>咦！这个配置是写死的！这里需要一个Toggle来控制功能是否上线！</p>
-
-      </div>
-    </div>
-
     <div class="list card">
       <div class="sectionTitle item">容器
         <a ng-click="getSkill('container')" class="get"><span>Get</span> &nbsp;<i class="icon ion-ios-checkmark-outline"></i></a>
