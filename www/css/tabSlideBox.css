@@ -1,5 +1,5 @@
 .tabbed-slidebox .slider {
-  height: auto;
+  height: 100%;
 }
 
 .tabbed-slidebox.btm .slider {
@@ -14,7 +14,6 @@
   margin-top: 10px;
   padding-top: 0px;
   color: #000;
-  text-align: center;
   font-weight: 300;
   background-color: #eee;
 }
@@ -36,7 +35,7 @@
 .tabbed-slidebox .tsb-icons a {
   text-decoration: none;
   display: inline-block;
-  width: 2em;
+  width: 3.1em;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.3);
   -webkit-transform: translate3d(0, 8px, 0);
@@ -65,7 +64,7 @@
   display: block;
   bottom: -20px;
   left: 50%;
-  margin-left: -14px;
+  margin-left: -0.2em;
 }
 
 .tsb-hscroll.scroll-view {
