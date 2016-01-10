@@ -41,6 +41,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       $scope.modal.hide();
     };
 
+    $scope.showSkillMap = false;
     $scope.$on('$ionicView.enter', function () {
       // clear badge
       $storageServices.set('badgePoints', 0);
@@ -75,6 +76,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
       });
 
       if ($scope.ratings > 0) {
+        $scope.showSkillMap = true;
         RenderSkillTree($window, {
           "Skill": flareChild
         });

@@ -1,7 +1,7 @@
 angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'])
 
   .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $analytics) {
-    $analytics.trackView('Quiz Game' + $stateParams.slug);
+    $analytics.trackView('Quiz Game ' + $stateParams.slug);
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;
@@ -34,7 +34,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
   })
 
   .controller('AdvancedQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $sce, marked, $analytics) {
-    $analytics.trackView('Advanced Quiz Game' + $stateParams.slug);
+    $analytics.trackView('Advanced Quiz Game ' + $stateParams.slug);
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;

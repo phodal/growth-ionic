@@ -4,8 +4,8 @@
     <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite" ng-click='openSkillsModal()'></button>
   </ion-nav-buttons>
   <ion-content>
-    <h1 class="sectionTitle" ng-show="$scope.ratings = '0'">快去GET你的技能吧!</h1>
-    <ion-slide-box ng-show="$scope.ratings > 0">
+    <h1 class="sectionTitle" ng-hide="showSkillMap">快去GET你的技能吧!</h1>
+    <ion-slide-box ng-show="showSkillMap = true">
       <ion-slide>
         <div id="skills">
           <div id="skillmap">
