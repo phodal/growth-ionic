@@ -74,10 +74,12 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         $storageServices.set('points', $scope.ratings);
       });
 
-      RenderSkillTree($window, {
-        "Skill": flareChild
-      });
+      if ($scope.ratings > 0) {
+        RenderSkillTree($window, {
+          "Skill": flareChild
+        });
 
-      RenderBubble($storageServices, $window);
+        RenderBubble($storageServices, $window);
+      }
     });
   });
