@@ -2,8 +2,16 @@ var todoLists = {
   "hello": {
     "basic": [
       {
-        "id": "try-javascript",
-        "title": "尝试使用JavaScript"
+        "id": "try-helloworld",
+        "title": "用这个语言写hello,world"
+      },
+      {
+        "id": "learn-grammar",
+        "title": "学习一门语言的语法"
+      },
+      {
+        "id": "do-todo-list",
+        "title": "实现一个TODO List"
       }
     ],
     "middle": []
