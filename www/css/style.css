@@ -43,7 +43,7 @@ marked code {
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
 }
 
@@ -53,7 +53,7 @@ marked code:after {
   content: "\00a0";
 }
 
-marked pre>code {
+marked pre > code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -241,7 +241,6 @@ body {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
   color: #444443;
 }
-
 
 marked h1,
 marked h2,
@@ -551,6 +550,7 @@ ul.rating li {
   background: none;
   padding: 5px 10px;
 }
+
 ul.rating li i {
   font-size: 30px;
 }
@@ -595,29 +595,35 @@ ul.rating li {
   float: left;
   width: 100%;
 }
+
 #skillmap .skills-sunburst svg {
   font: 11px 'Source Sans Pro', sans-serif;
   font-weight: 900;
   cursor: pointer;
 }
+
 #skillmap .skills-chart {
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
   margin: 80px 20px 0 0;
 }
+
 #skillmap .skills-chart .breadcumb-text {
   font-size: 13px;
   font-weight: 700;
 }
+
 #skillmap .skills-chart #skills-chart-line {
   fill: none;
   stroke-width: 3.5px;
 }
+
 #skillmap .skills-chart .axis path,
 #skillmap .skills-chart .axis line {
   fill: none;
 }
+
 #skillmap .skills-chart .x-axis path,
 #skillmap .skills-chart .y-axis path {
   stroke: #444;
@@ -693,7 +699,7 @@ a.get {
   float: left;
   width: 8em;
   border: 1px solid #999;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background-color: #30BD8A;
 }
@@ -711,6 +717,7 @@ td-cards {
   display: block;
 }
 
+.start-card,
 td-card {
   position: absolute;
   left: 50%;
@@ -720,7 +727,7 @@ td-card {
   width: 300px;
   height: 300px;
   border: 1px solid #999;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background: #30BD8A;
 }

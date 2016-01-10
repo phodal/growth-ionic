@@ -14,32 +14,44 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;
-    $scope.questions = [];
+    $scope.questionsNum = 10;
+
     $scope.title = $stateParams.slug;
     $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.originQuestions = utilsFactory.shuffle(response.data);
-      $scope.questions = [];
-      angular.forEach($scope.originQuestions, function(question, index){
-        $scope.questions.push({
-          id: index,
-          question: question
-        })
-      });
 
-      $scope.cardDestroyed = function (index) {
-        $scope.cards.splice(index, 1);
+      $scope.start = function () {
+        $scope.finish = false;
+        $scope.questions = [];
+        $scope.AlreadyAnwser = 0;
+        angular.forEach($scope.originQuestions, function (question, index) {
+          $scope.questions.push({
+            id: index,
+            question: question
+          })
+        });
+
+        $scope.cardDestroyed = function (index) {
+          $scope.cards.splice(index, 1);
+          $scope.AlreadyAnwser = $scope.AlreadyAnwser + 1;
+          if ($scope.AlreadyAnwser === $scope.questionsNum) {
+            $scope.finish = true;
+          }
+        };
+
+        $scope.addCard = function () {
+          var newCard = $scope.questions[Math.floor(Math.random() * $scope.questions.length)];
+          newCard.id = Math.random();
+          $scope.cards.unshift(angular.extend({}, newCard));
+        };
+
+        $scope.cards = [];
+        for (var i = 0; i < $scope.questionsNum; i++) {
+          $scope.addCard();
+        }
       };
 
-      $scope.addCard = function () {
-        var newCard = $scope.questions[Math.floor(Math.random() * $scope.questions.length)];
-        newCard.id = Math.random();
-        $scope.cards.unshift(angular.extend({}, newCard));
-      };
-
-      $scope.cards = [];
-      for (var i = 0; i < 10; i++) {
-        $scope.addCard();
-      }
+      $scope.start();
     });
   })
 

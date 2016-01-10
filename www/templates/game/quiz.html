@@ -6,6 +6,11 @@
           {{card.question}}
         </div>
       </td-card>
+      <div class="restart" ng-show="finish">
+        <div class="start-card" style="background: #fff">
+          <button class="button button-balanced" style="margin: 120px 100px;" ng-click="start()">重新开始</button>
+        </div>
+      </div>
     </td-cards>
   </ion-content>
 </ion-view>
