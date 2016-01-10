@@ -6,7 +6,7 @@
 
 应用截图:
 
-![ScreenShot ](screenshot/3.jpg) ![ScreenShot](screenshot/2.jpg) ![ScreenShot](screenshot/1.jpg)
+![ScreenShot](screenshot/3.jpg) ![ScreenShot](screenshot/2.jpg) ![ScreenShot](screenshot/1.jpg)
 
 在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
 
@@ -68,6 +68,8 @@ Plugins:
 
 1. Tips
 2. Auto Update
+3. Learn Suggestion
+4. Social Communication
 
 ##License
 
