@@ -31,7 +31,8 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     };
 
     $scope.addTodo = function(item){
-      $storageServices.set(item, 'true');
+      $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);
+      $storageServices.set(item.id, 'true');
     };
 
     $scope.closeSpecialModal = function () {
