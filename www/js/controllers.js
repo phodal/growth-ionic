@@ -17,11 +17,35 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
     $scope.currentModal = null;
     $scope.subtopic = '';
+    $scope.doneItems = [];
+
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
       $analytics.trackView('todo ' + subtopic);
 
       $scope.todoLists = todoLists[subtopic]['basic'];
+      var items = {};
+      $storageServices.get($scope.subtopic, function (result) {
+        if (result !== undefined) {
+          try {
+            items = JSON.parse(result);
+          } catch (err) {
+            console.log(err)
+          }
+        }
+      });
+      angular.forEach(items.items, function (item, itemKey) {
+        angular.forEach($scope.todoLists, function (todoList) {
+          if(todoList.id === itemKey) {
+            $scope.todoLists.splice($scope.todoLists.indexOf(itemKey), 1);
+            $scope.doneItems.push({
+              id: todoList.id,
+              title: todoList.title
+            });
+          }
+        });
+      });
+
       $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/todo.html', {
         id: subtopic,
         scope: $scope,
@@ -32,12 +56,12 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       });
     };
 
-    $scope.addTodo = function(item){
+    $scope.addTodo = function (item) {
       var items = {
-        items: []
+        items: {}
       };
-      $storageServices.get($scope.subtopic, function(result){
-        if(result !== undefined){
+      $storageServices.get($scope.subtopic, function (result) {
+        if (result !== undefined) {
           try {
             items = JSON.parse(result);
           } catch (err) {
@@ -45,7 +69,12 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
           }
         }
       });
-      items.items.push(item.id);
+
+      items.items[item.id] = item.title;
+      $scope.doneItems.push({
+        id: item.id,
+        title: item.title
+      });
 
       $storageServices.set($scope.subtopic, JSON.stringify(items));
       $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);

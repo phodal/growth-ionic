@@ -10,5 +10,11 @@
         <ion-option-button class="button-assertive icon ion-trash-a" ng-click="addTodo(todoItem)"></ion-option-button>
       </ion-item>
     </ion-list>
+
+    <div class="card item" ng-show="doneItems.length > 0">
+      <ion-item ng-repeat="doneItem in doneItems">
+        {{doneItem.title}}
+      </ion-item>
+    </div>
   </ion-content>
 </ion-modal-view>
