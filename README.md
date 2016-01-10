@@ -4,11 +4,11 @@
 
 直接下载：[http://fir.im/phodal](http://fir.im/phodal)
 
+在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+
 应用截图:
 
 ![ScreenShot](screenshot/3.jpg) ![ScreenShot](screenshot/2.jpg) ![ScreenShot](screenshot/1.jpg)
-
-在线预览版: [http://www.growth.ren/](http://www.growth.ren/)
 
 Growth交流群(QQ): 529600394 
 
@@ -36,17 +36,12 @@ Growth来源于: 对Web应用开发的一个流程认识。
 
 **为什么没有WP和iOS版?**
 
-- 用不起iPhone和iOS开发者帐号
+- 没有iPhone和iOS开发者帐号
 - 没有Windows机器的电脑(平时用的是公司的电脑)
-- 以前我是用Windows Phone的
 
 **我可以复制吗?**
 
 > 想法和代码是可以复制的，但是内容是不行的。
-
-**为什么APP这么卡？**
-
-因为，它是基于Web的混合应用，为了更快的开发速度.
 
 ##其他
 
