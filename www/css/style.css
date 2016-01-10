@@ -669,3 +669,7 @@ ul.rating li {
 content {
   color: #fff;
 }
+
+a.get {
+  cursor: pointer;
+}
