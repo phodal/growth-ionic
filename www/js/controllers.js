@@ -19,6 +19,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.openTodoModal = function (subtopic) {
       $analytics.trackView('todo ' + subtopic);
 
+      $scope.todoLists = todoLists[subtopic]['basic'];
       $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/todo.html', {
         id: subtopic,
         scope: $scope,
@@ -27,6 +28,10 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         modal.show();
         $scope.currentModal = modal;
       });
+    };
+
+    $scope.addTodo = function(item){
+      $storageServices.set(item, 'true');
     };
 
     $scope.closeSpecialModal = function () {

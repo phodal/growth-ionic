@@ -25,6 +25,10 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
     $scope.openSpecialModal = function (subtopic, branch) {
       $analytics.trackView('modal ' + subtopic + ' ' + branch);
 
+      if(subtopic === 'todo'){
+        $scope.todoLists = todoLists[subtopic]['basic'];
+      }
+
       $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/' + branch + '.html', {
         id: subtopic + '-' + branch,
         scope: $scope,

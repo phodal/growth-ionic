@@ -5,23 +5,9 @@
   </ion-header-bar>
   <ion-content>
     <ion-list show-delete="false" can-swipe="true">
-      <ion-item>
-        尝试使用GNU/Linux
-        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="add('try-linux')"></ion-option-button>
-      </ion-item>
-      <ion-item>
-        尝试使用不同的IDE和编辑器
-        <ion-option-button class="button-assertive icon ion-trash-a"
-                           ng-click="add('try-editor-ide')"></ion-option-button>
-      </ion-item>
-      <ion-item>
-        尝试使用命令行工具
-        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="add('try-cli')"></ion-option-button>
-      </ion-item>
-      <ion-item>
-        尝试使用快捷键代替鼠标操作
-        <ion-option-button class="button-assertive icon ion-trash-a"
-                           ng-click="add('try-keyshorts')"></ion-option-button>
+      <ion-item ng-repeat="todoItem in todoLists">
+        {{todoItem.title}}
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="addTodo(todoItem.id)"></ion-option-button>
       </ion-item>
     </ion-list>
   </ion-content>
