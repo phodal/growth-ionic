@@ -1,4 +1,13 @@
-angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'])
+angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils', 'ionic.contrib.ui.tinderCards'])
+
+  .controller('CardCtrl', function ($scope, TDCardDelegate) {
+    $scope.cardSwipedLeft = function (index) {
+      $scope.addCard();
+    };
+    $scope.cardSwipedRight = function (index) {
+      $scope.addCard();
+    };
+  })
 
   .controller('AllQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $analytics) {
     $analytics.trackView('Quiz Game ' + $stateParams.slug);
@@ -8,29 +17,30 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
     $scope.questions = [];
     $scope.title = $stateParams.slug;
     $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
-      $scope.questions = response.data;
-    });
+      $scope.originQuestions = utilsFactory.shuffle(response.data);
+      $scope.questions = [];
+      angular.forEach($scope.originQuestions, function(question, index){
+        $scope.questions.push({
+          id: index,
+          question: question
+        })
+      });
 
-    $scope.getQuestion = function () {
-      $scope.isQuestioning = true;
-      $scope.isFirst = false;
-      var quiz_id = utilsFactory.getRandomInt($scope.questions.length);
-      $scope.question = $scope.questions[quiz_id];
-      $scope.counter = 30;
-      $scope.onTimeout = function () {
-        $scope.counter--;
-        mytimeout = $timeout($scope.onTimeout, 1000);
-        if ($scope.counter <= 0) {
-          $scope.stop();
-        }
+      $scope.cardDestroyed = function (index) {
+        $scope.cards.splice(index, 1);
       };
 
-      var mytimeout = $timeout($scope.onTimeout, 1000);
+      $scope.addCard = function () {
+        var newCard = $scope.questions[Math.floor(Math.random() * $scope.questions.length)];
+        newCard.id = Math.random();
+        $scope.cards.unshift(angular.extend({}, newCard));
+      };
 
-      $scope.stop = function () {
-        $timeout.cancel(mytimeout);
+      $scope.cards = [];
+      for (var i = 0; i < 10; i++) {
+        $scope.addCard();
       }
-    };
+    });
   })
 
   .controller('AdvancedQuizCtrl', function ($scope, $stateParams, $timeout, $http, quizFactory, utilsFactory, $sce, marked, $analytics) {

@@ -1,0 +1,38 @@
+{
+  "name": "ionic-ion-tinder-cards",
+  "codename": "lanthanum-leopard",
+  "homepage": "https://github.com/driftyco/ionic-contrib-tinder-cards",
+  "authors": [
+    "Max Lynch <max@drifty.com>"
+  ],
+  "description": "A tinder-style card UI for Ionic apps",
+  "main": [
+    "ionic.tdcards.css",
+    "ionic.tdcards.js"
+  ],
+  "keywords": [
+    "mobile",
+    "html5",
+    "ionic",
+    "cordova",
+    "phonegap",
+    "tinder",
+    "angularjs",
+    "angular"
+  ],
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "collide": "1.0.0-beta.3"
+  },
+  "_release": "723de6a935",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "723de6a935242a39f082eafac05c11de50412ee4"
+  },
+  "_source": "git://github.com/driftyco/ionic-contrib-tinder-cards.git",
+  "_target": "*",
+  "_originalSource": "ionic-contrib-tinder-cards",
+  "_direct": true
+}

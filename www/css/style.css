@@ -706,3 +706,28 @@ a.get {
   max-width: 100%;
   border-radius: 6px;
 }
+
+td-cards {
+  display: block;
+}
+
+td-card {
+  position: absolute;
+  left: 50%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #999;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  background: #30BD8A;
+}
+
+td-card .question {
+  color: #fff;
+  font-weight: bold;
+  padding: 1.2em;
+  font-size: 1em;
+}
