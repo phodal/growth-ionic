@@ -695,7 +695,7 @@ a.get {
   cursor: pointer;
   text-align: center;
   margin-top: 1em;
-  margin-left: 1.5em;
+  margin-left: 1.2em;
   float: left;
   width: 8em;
   border: 1px solid #999;
@@ -736,5 +736,5 @@ td-card .question {
   color: #fff;
   font-weight: bold;
   padding: 1.2em;
-  font-size: 1em;
+  font-size: 1.2em;
 }

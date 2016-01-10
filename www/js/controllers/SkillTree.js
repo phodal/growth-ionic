@@ -1,6 +1,7 @@
 angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.utils'])
 
   .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics, $window) {
+    $scope.showSkillMap = true;
     $analytics.trackView('Skill Tree');
     $storageServices.get('isFirstTimeSkill', function (value) {
       if (value !== 'false') {
@@ -42,7 +43,6 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     };
 
     $scope.$on('$ionicView.enter', function () {
-      $scope.showSkillMap = true;
       // clear badge
       $storageServices.set('badgePoints', 0);
 
@@ -54,6 +54,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
           $storageServices.get(skill.text, function (result) {
             var rating = parseInt(result);
             if (rating) {
+              $scope.showSkillMap = true;
               skillFlareChild[skill.text] = [rating];
 
               $scope.ratings = $scope.ratings + rating;
@@ -75,7 +76,6 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
         $storageServices.set('points', $scope.ratings);
       });
       if ($scope.ratings > 0) {
-        $scope.showSkillMap = true;
         RenderSkillTree($window, {
           "Skill": flareChild
         });
