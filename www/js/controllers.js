@@ -46,7 +46,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         });
       });
 
-      $ionicModal.fromTemplateUrl('templates/modal/' + subtopic + '/todo.html', {
+      $ionicModal.fromTemplateUrl('templates/modal/todo.html', {
         id: subtopic,
         scope: $scope,
         animation: 'slide-in-up'
