@@ -5,7 +5,7 @@
   </ion-header-bar>
   <ion-content>
     <ion-list show-delete="false" can-swipe="true">
-      <ion-item ng-repeat="todoItem in todoLists">
+      <ion-item ng-repeat="todoItem in todoLists" ng-show="todoItem.title">
         {{todoItem.title}}
         <ion-option-button class="button-assertive icon ion-trash-a" ng-click="addTodo(todoItem)"></ion-option-button>
       </ion-item>

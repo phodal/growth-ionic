@@ -1,4 +1,4 @@
-var todoLists = {
+var TODO_LISTS = {
   "hello": {
     "basic": [
       {

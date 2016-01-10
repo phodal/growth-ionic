@@ -20,11 +20,12 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.doneItems = [];
 
     $scope.openTodoModal = function (subtopic) {
-      $scope.doneItems = [];
       $scope.subtopic = subtopic;
+      $scope.todoLists = [];
+
       $analytics.trackView('todo ' + subtopic);
 
-      $scope.todoLists = todoLists[subtopic]['basic'];
+      var todoLists = TODO_LISTS[subtopic]['basic'];
       var items = {};
       $storageServices.get($scope.subtopic, function (result) {
         if (result !== undefined) {
@@ -35,16 +36,17 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
           }
         }
         angular.forEach(items.items, function (item, itemKey) {
-          angular.forEach($scope.todoLists, function (todoList) {
+          angular.forEach(todoLists, function (todoList, index) {
             if(todoList.id === itemKey) {
-              $scope.todoLists.splice($scope.todoLists.indexOf(itemKey), 1);
               $scope.doneItems.push({
                 id: todoList.id,
                 title: todoList.title
               });
+              todoLists[index] = {};
             }
           });
         });
+        $scope.todoLists = todoLists;
       });
 
       $ionicModal.fromTemplateUrl('templates/modal/todo.html', {
