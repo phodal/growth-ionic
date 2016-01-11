@@ -18,24 +18,31 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.currentModal = null;
     $scope.subtopic = '';
 
-    $scope.allDoneItems = {}
-    angular.forEach(Object.keys(TODO_LISTS), function(key){
+    $scope.allDoneItems = {};
+    angular.forEach(Object.keys(TODO_LISTS), function (key) {
       $scope.allDoneItems[key] = [];
     });
 
-    $scope.dayView = true;
-    $scope.todoView = false;
-    $storageServices.get('lastHomeView', function(view){
-      if(view !== undefined){
+    setDayView();
+    $storageServices.get('lastHomeView', function (view) {
+      if (view !== undefined) {
         if (view === 'dayView') {
-          $scope.dayView = true;
-          $scope.todoView = false;
+          setDayView();
         } else {
-          $scope.dayView = false;
-          $scope.todoView = true;
+          setTodoView();
         }
       }
     });
+
+    function setDayView() {
+      $scope.dayView = true;
+      $scope.todoView = false;
+    }
+
+    function setTodoView() {
+      $scope.dayView = false;
+      $scope.todoView = true;
+    }
 
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
       scope: $scope
@@ -46,11 +53,9 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.setView = function (view) {
       $storageServices.set('lastHomeView', view);
       if (view === 'dayView') {
-        $scope.dayView = true;
-        $scope.todoView = false;
+        setDayView();
       } else {
-        $scope.dayView = false;
-        $scope.todoView = true;
+        setTodoView();
       }
       $scope.popover.hide();
     };
