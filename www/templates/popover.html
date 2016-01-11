@@ -1,12 +1,12 @@
-<ion-popover-view>
+<ion-popover-view style="height: 8em; width: 8em;">
   <ion-content>
     <div class="list">
-      <a class="item"  ng-click="setView('todoView')">
+      <ion-item class="item" ng-class="{'active': todoView}" ng-click="setView('todoView')">
         路线图
-      </a>
-      <a class="item" ng-click="setView('dayView')">
+      </ion-item>
+      <ion-item class="item" ng-class="{'active': dayView}" ng-click="setView('dayView')">
         七日谈
-      </a>
+      </ion-item>
     </div>
   </ion-content>
 </ion-popover-view>
