@@ -25,9 +25,9 @@ var ALL_SKILLS = {
     {text: "KickOff"}
   ],
   "test": [
-    {text: "Unit Test"},
-    {text: "Functional Test"},
-    {text: "Integration Test"},
+    {text: "Unit Test", display: "单元测试"},
+    {text: "Functional Test", display: "功能测试"},
+    {text: "Integration Test", display: "集成测试"},
     {text: "TDD"}
   ],
   "coding": [
@@ -54,8 +54,8 @@ var ALL_SKILLS = {
     {text: "Hadoop"}
   ],
   "ux": [
-    {text: "Learning Design"},
-    {text: "Human Factors"},
+    {text: "Learning Design", display: "认识设计"},
+    {text: "Human Factors", display: "人因工程学"},
     {text: "Photoshop"}
   ],
   "ci": [
