@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
@@ -137,6 +137,25 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.skillTreeController', 'app
           'menuContent': {
             templateUrl: 'templates/skilltree.html',
             controller: 'skillTreeControl'
+          }
+        }
+      })
+
+      .state('app.ai', {
+        url: '/ai',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/skills/ai.html',
+            controller: 'AIControl'
+          }
+        }
+      })
+
+      .state('app.how', {
+        url: '/how',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/skills/how.html'
           }
         }
       })
