@@ -194,5 +194,9 @@ var AllArticle = [
   {
     "slug" : "frontend-history",
     "title": "前端演进史"
+  },
+  {
+    "slug" : "emergent-design",
+    "title": "浮现式设计"
   }
 ];
