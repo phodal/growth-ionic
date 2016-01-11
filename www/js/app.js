@@ -112,6 +112,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.skillTreeController', 'app
         }
       })
 
+      .state('app.solution', {
+        url: "/solution",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/solution.html"
+          }
+        }
+      })
+
       .state('app.about', {
         url: '/about',
         views: {

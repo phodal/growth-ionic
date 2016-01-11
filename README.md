@@ -51,8 +51,6 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
 
 前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
 
-Thinking: [https://github.com/braydie/HowToBeAProgrammer](https://github.com/braydie/HowToBeAProgrammer)
-
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
@@ -67,6 +65,14 @@ Plugins:
 2. Auto Update
 3. Learn Suggestion
 4. Social Communication
+
+###Thinking
+
+1. [https://github.com/braydie/HowToBeAProgrammer](https://github.com/braydie/HowToBeAProgrammer)
+
+2. [http://stackshare.io/](http://stackshare.io/)
+
+3. [http://stackshare.io/featured-posts](http://stackshare.io/featured-posts)
 
 ##License
 
