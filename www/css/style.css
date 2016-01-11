@@ -413,6 +413,7 @@ marked ol {
 
 marked li {
   margin-bottom: 0.2em;
+  font-size: 1.1em;
 }
 
 marked li ul,
@@ -480,6 +481,11 @@ marked table {
   margin-bottom: 1.5em;
   font-size: 0.96em;
   box-sizing: border-box;
+}
+
+marked table th {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 marked th,
