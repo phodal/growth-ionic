@@ -848,4 +848,11 @@ td-card img {
   max-height: 100%;
 }
 
+.more-view {
+  height: 2em;
+}
 
+.more-view .ion-ios-more-outline {
+  float: right;
+  font-size: 2em;
+}
