@@ -97,7 +97,7 @@ var AllArticle = [
   },
   {
     "slug" : "builder",
-    "title": "构建系统"
+    "title": "一个构建系统的构建过程"
   },
   {
     "slug" : "ci",
