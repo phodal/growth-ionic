@@ -26,6 +26,17 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
 
     $scope.dayView = true;
     $scope.todoView = false;
+    $storageServices.get('lastHomeView', function(view){
+      if(view !== undefined){
+        if (view === 'dayView') {
+          $scope.dayView = true;
+          $scope.todoView = false;
+        } else {
+          $scope.dayView = false;
+          $scope.todoView = true;
+        }
+      }
+    });
 
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
       scope: $scope
@@ -34,6 +45,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     });
 
     $scope.setView = function (view) {
+      $storageServices.set('lastHomeView', view);
       if (view === 'dayView') {
         $scope.dayView = true;
         $scope.todoView = false;
@@ -48,7 +60,6 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
       $scope.todoLists = [];
-
       $analytics.trackView('todo ' + subtopic);
 
       var todoLists = TODO_LISTS[subtopic]['basic'];
@@ -73,7 +84,6 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
           });
         });
       });
-      console.log($scope.allDoneItems[subtopic]);
       $scope.doneItems = $scope.allDoneItems[subtopic];
       $scope.todoLists = todoLists;
 
