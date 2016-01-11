@@ -21,7 +21,8 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       "hello": [],
       "env": [],
       "front": [],
-      "mvc": []
+      "mvc": [],
+      "test": []
     };
 
     $scope.dayView = true;
