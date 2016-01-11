@@ -48,7 +48,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
 
       var flareChild = {};
 
-      angular.forEach(AllSkills, function (skills, index) {
+      angular.forEach(ALL_SKILLS, function (skills, index) {
         var skillFlareChild = {};
         angular.forEach(skills, function (skill) {
           $storageServices.get(skill.text, function (result) {

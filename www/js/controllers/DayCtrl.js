@@ -65,7 +65,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
 
     $scope.getSkill = function (subtopic) {
       $scope.devList = [];
-      var devLists = AllSkills[subtopic];
+      var devLists = ALL_SKILLS[subtopic];
 
       angular.forEach(devLists, function (skill) {
         $storageServices.get(skill.text, function (value) {

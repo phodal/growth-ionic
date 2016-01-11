@@ -15,7 +15,7 @@ function RenderBubble($storageServices, $window) {
     });
   }
 
-  angular.forEach(AllSkills, function (skills, index) {
+  angular.forEach(ALL_SKILLS, function (skills, index) {
     var skillFlareChild = [];
     angular.forEach(skills, function (skill) {
       getSkillPoint(skill, function (rating) {

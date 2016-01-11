@@ -1,4 +1,4 @@
-var AllSkills = {
+var ALL_SKILLS = {
   "hello": [
     {text: "HTML5"},
     {text: "CSS3"},
