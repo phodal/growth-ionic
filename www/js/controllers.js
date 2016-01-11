@@ -14,7 +14,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
     $scope.isApp = window.cordova !== undefined;
   })
 
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover) {
     $scope.currentModal = null;
     $scope.subtopic = '';
     $scope.allDoneItems = {
@@ -23,6 +23,27 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
       "front": [],
       "mvc": []
     };
+
+    $scope.dayView = true;
+    $scope.todoView = false;
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+      scope: $scope
+    }).then(function (popover) {
+      $scope.popover = popover;
+    });
+
+    $scope.setView = function (view) {
+      if (view === 'dayView') {
+        $scope.dayView = true;
+        $scope.todoView = false;
+      } else {
+        $scope.dayView = false;
+        $scope.todoView = true;
+      }
+      $scope.popover.hide();
+    };
+
 
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
@@ -42,7 +63,7 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
         }
         angular.forEach(items.items, function (item, itemKey) {
           angular.forEach(todoLists, function (todoList, index) {
-            if(todoList.id === itemKey) {
+            if (todoList.id === itemKey) {
               $scope.allDoneItems[subtopic].push({
                 id: todoList.id,
                 title: todoList.title

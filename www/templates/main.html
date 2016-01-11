@@ -1,48 +1,43 @@
 <ion-view view-title="Growth">
   <ion-nav-buttons side="right">
-    <a class="button button-icon ion-ios-analytics-outline" href="#/app/skilltree"><span class="badge badge-assertive header-badge icon-badge" ng-show="badgePoints > 0">{{badgePoints}}</span></a>
+    <a class="button button-icon ion-ios-analytics-outline" href="#/app/skilltree"><span
+      class="badge badge-assertive header-badge icon-badge" ng-show="badgePoints > 0">{{badgePoints}}</span></a>
   </ion-nav-buttons>
   <ion-content>
     <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
-    <tab-slide-box>
-      <div class="tsb-icons">
-        <div class="tsb-ic-wrp">
-          <a href="javascript:;">路线图</a>
-          <a href="javascript:;">七日谈</a>
-        </div>
-      </div>
-      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
-        <ion-slide>
-          <ul class="roadmap-cards">
-            <li class="roadmap-card" ng-click="openTodoModal('hello')">
-              <span>hello,world</span>
-            </li>
-            <li class="roadmap-card" ng-click="openTodoModal('env')">
-              <span>环境</span>
-            </li>
-            <li class="roadmap-card" ng-click="openTodoModal('front')">
-              <span>前端</span>
-            </li>
-            <li class="roadmap-card" ng-click="openTodoModal('mvc')">
-              <span>后台</span>
-            </li>
-            <li class="roadmap-card" ng-click="openTodoModal('test')">
-              <span>测试</span>
-            </li>
-          </ul>
-        </ion-slide>
-        <ion-slide>
-          <div class="list card days">
-            <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
-            <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>第二日: 编码</ion-item>
-            <ion-item href="#/app/day/3" class="item item-icon-left"><i class="icon ion-ios-star"></i>第三日: 上线</ion-item>
-            <ion-item href="#/app/day/4" class="item item-icon-left"><i class="icon ion-ios-star"></i>第四日: 数据分析</ion-item>
-            <ion-item href="#/app/day/5" class="item item-icon-left"><i class="icon ion-ios-star-half"></i>第五日: 持续交付</ion-item>
-            <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>第六日: 遗留系统</ion-item>
-            <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>第七日: 回顾与新架构</ion-item>
-          </div>
-        </ion-slide>
-      </ion-slide-box>
-    </tab-slide-box>
+    <div class="buttons">
+      <button class="button button-icon" ng-click="popover.show($event)">切换
+      </button>
+    </div>
+    <div class="list card days" ng-show="!todoView">
+      <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>第一日: 从零开始</ion-item>
+      <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>第二日: 编码</ion-item>
+      <ion-item href="#/app/day/3" class="item item-icon-left"><i class="icon ion-ios-star"></i>第三日: 上线</ion-item>
+      <ion-item href="#/app/day/4" class="item item-icon-left"><i class="icon ion-ios-star"></i>第四日: 数据分析</ion-item>
+      <ion-item href="#/app/day/5" class="item item-icon-left"><i class="icon ion-ios-star-half"></i>第五日: 持续交付
+      </ion-item>
+      <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>第六日: 遗留系统
+      </ion-item>
+      <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>第七日: 回顾与新架构</ion-item>
+    </div>
+    <div ng-show="!dayView">
+      <ul class="roadmap-cards">
+        <li class="roadmap-card" ng-click="openTodoModal('hello')">
+          <span>hello,world</span>
+        </li>
+        <li class="roadmap-card" ng-click="openTodoModal('env')">
+          <span>环境</span>
+        </li>
+        <li class="roadmap-card" ng-click="openTodoModal('front')">
+          <span>前端</span>
+        </li>
+        <li class="roadmap-card" ng-click="openTodoModal('mvc')">
+          <span>后台</span>
+        </li>
+        <li class="roadmap-card" ng-click="openTodoModal('test')">
+          <span>测试</span>
+        </li>
+      </ul>
+    </div>
   </ion-content>
 </ion-view>
