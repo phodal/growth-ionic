@@ -49,7 +49,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
     $scope.openIntroModal = function (day) {
       $analytics.trackView('modal day' + day);
 
-      $ionicModal.fromTemplateUrl('templates/days/modals/day' + day + '.html', {
+      $ionicModal.fromTemplateUrl('templates/days/modals/intro-day' + day + '.html', {
         id: 'introModal',
         scope: $scope,
         animation: 'slide-in-up'
