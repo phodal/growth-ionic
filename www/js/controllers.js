@@ -17,13 +17,11 @@ angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover) {
     $scope.currentModal = null;
     $scope.subtopic = '';
-    $scope.allDoneItems = {
-      "hello": [],
-      "env": [],
-      "front": [],
-      "mvc": [],
-      "test": []
-    };
+
+    $scope.allDoneItems = {}
+    angular.forEach(Object.keys(TODO_LISTS), function(key){
+      $scope.allDoneItems[key] = [];
+    });
 
     $scope.dayView = true;
     $scope.todoView = false;
