@@ -29,10 +29,13 @@ angular.module('starter.services', ['ngCordova'])
       }
     };
   }])
-  .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast) {
+  .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', '$window', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast, $window) {
 
     var Update = {
       check: function (view) {
+        if (!$window.cordova) {
+          return;
+        }
         var url = 'http://www.growth.ren/version.json';
         $http.get(url).success(function (res) {
           var serveAppVersion = res.version;
