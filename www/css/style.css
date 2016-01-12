@@ -849,10 +849,10 @@ td-card img {
 }
 
 .more-view {
-  height: 2.5em;
+  height: 3.2em;
 }
 
-.more-view .ion-ios-more-outline {
+.more-view .ion-ios-glasses-outline {
   float: right;
-  font-size: 3em;
+  font-size: 3.2em;
 }
