@@ -61,7 +61,7 @@ angular.module('starter.services', ['ngCordova'])
   .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast) {
 
     var Update = {
-      check: function () {
+      check: function (view) {
         var url = 'http://www.growth.ren/version.json';
         $http.get(url).success(function (res) {
           var serveAppVersion = res.version;
@@ -72,7 +72,9 @@ angular.module('starter.services', ['ngCordova'])
             if (version != serveAppVersion) {
               showUpdateConfirm(res);
             } else {
-              $cordovaToast.showLongCenter('当前版本是最新的！=^_^=');
+              if (view !== 'main') {
+                $cordovaToast.showLongCenter('当前版本是最新的！=^_^=');
+              }
             }
           });
         }).error(function (response) {
