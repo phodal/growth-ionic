@@ -1,7 +1,14 @@
 angular.module('starter.controllers', ['starter.factory', 'starter.services', 'hljs', 'starter.utils'])
-  .controller('AboutCtrl', function ($scope, $analytics) {
+  .controller('AboutCtrl', function ($scope, $analytics, $updateServices, $cordovaAppVersion) {
     $analytics.trackView('About Ctrl');
     $scope.isApp = window.cordova !== undefined;
+    $scope.version = '0.0.0';
+    $cordovaAppVersion.getVersionNumber().then(function (version) {
+      $scope.version = version;
+    });
+    $scope.update = function () {
+      $updateServices.check();
+    }
   })
 
   .controller('SolutionCtrl', function ($scope, $analytics) {
