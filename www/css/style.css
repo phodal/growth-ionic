@@ -293,11 +293,10 @@ marked h6 {
   font-weight: 500;
 }
 
-marked p,
 marked p {
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: 1.46em;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0 0.2em 1.46em;
   -webkit-user-select: auto;
 }
 
