@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
@@ -116,7 +116,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AIControl', 'app.skillTree
         url: "/solution",
         views: {
           'menuContent': {
-            templateUrl: "templates/solution.html"
+            templateUrl: "templates/solution.html",
+            controller: 'SolutionCtrl'
           }
         }
       })
