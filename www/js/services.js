@@ -1,6 +1,6 @@
 angular.module('starter.services', ['ngCordova'])
   .factory('$storageServices', ['$cordovaPreferences', '$window', function ($cordovaPreferences, $window) {
-    var localStorage = {
+    return {
       set: function (key, value) {
         $window.localStorage[key] = value;
       },
@@ -8,33 +8,6 @@ angular.module('starter.services', ['ngCordova'])
         cb($window.localStorage[key]);
       }
     };
-
-    var preferences = {
-      set: function (key, value) {
-        $cordovaPreferences.store(key, value)
-          .success(function (value) {
-            console.log("Success: " + value);
-          })
-          .error(function (error) {
-            console.log("Error: " + error);
-          });
-      },
-      get: function (key, cb) {
-        $cordovaPreferences.fetch(key)
-          .success(function (value) {
-            cb(value);
-          })
-          .error(function (error) {
-            alert("Error: " + error);
-          })
-      }
-    };
-
-    //if ($window.cordova) {
-    //  return preferences;
-    //} else {
-    return localStorage;
-    //}
   }])
 
   .factory('$analytics', ['$window', function ($window) {
@@ -46,7 +19,7 @@ angular.module('starter.services', ['ngCordova'])
       }
     }
 
-    var Analytics = {
+    return {
       init: function () {
         $window.analytics.startTrackerWithId('UA-71907748-1');
       },
@@ -55,8 +28,6 @@ angular.module('starter.services', ['ngCordova'])
         $window.analytics.trackView(view)
       }
     };
-
-    return Analytics;
   }])
   .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast) {
 
