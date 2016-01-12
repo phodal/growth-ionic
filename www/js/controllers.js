@@ -3,9 +3,11 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     $analytics.trackView('About Ctrl');
     $scope.isApp = window.cordova !== undefined;
     $scope.version = '0.0.0';
-    $cordovaAppVersion.getVersionNumber().then(function (version) {
-      $scope.version = version;
-    });
+    if (window.cordova) {
+      $cordovaAppVersion.getVersionNumber().then(function (version) {
+        $scope.version = version;
+      });
+    }
     $scope.update = function () {
       $updateServices.check();
     }
