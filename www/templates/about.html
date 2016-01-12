@@ -8,40 +8,13 @@
       <h2>检测更新</h2>
       <div style="font-size: 10px;">当前版本: {{version}}</div>
     </ion-item>
-
-    <div class="card">
-      <div class="item item-divider">
-        Growth
-      </div>
-      <div class="item item-text-wrap item-body">
-        <p>这里的七日并不是真正意义上的七日，而是代表一个循环。</p>
-        <ul>
-          <li><strong>前端面试题</strong>出自: <a href="http://markyun.github.io/2015/Front-end-Developer-Questions/">http://markyun.github.io/2015/Front-end-Developer-Questions/</a>
-          <li><strong>Skill Map</strong>出自: <a href="http://bl.ocks.org/wizicer/f662a0b04425fc0f7489">http://bl.ocks.org/wizicer/f662a0b04425fc0f7489</a>
-          </li>
-          <li>部分资料来于维基百科</li>
-          <li>少部分资料、图片来自网上</li>
-        </ul>
-        <p>如有侵权请与我联系</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="item item-divider">
-        About『Phodal』
-      </div>
-
-      <img ng-hide="isApp" src="img/wechat.jpg" alt="Wechat">
-
-      <div class="selfIntro">
-        <p>微信公众号: Phodal</p>
-        <p>擅长硬件、SEO、前端，也熟悉后台、架构设计。</p>
-      </div>
-      <a href="https://github.com/phodal" target="_blank" class="item">GitHub: @Phodal</a>
-      <a href="http://weibo.com/phodal" target="_blank" class="item">Weibo: @Phodal</a>
-      <a href="http://v2ex.com/member/phodal" target="_blank" class="item">v2ex: @Phodal</a>
-      <a href="http://segmentfault.com/u/phodal" target="_blank" class="item">SF: @Phodal</a>
-    </div>
-
+    <ion-item class="item item-icon-right" type="item-text-wrap" onClick="window.open('https://github.com/phodal', '_system', 'location=yes')">
+      作者: @Phodal
+      <i class="icon ion-social-github"></i>
+    </ion-item>
+    <ion-item class="item item-icon-right" type="item-text-wrap" onClick="window.open('https://github.com/phodal/growth', '_system', 'location=yes')">
+      Growth
+      <i class="icon ion-social-github"></i>
+    </ion-item>
   </ion-content>
 </ion-view>
