@@ -26,10 +26,12 @@ marked h1 {
   font-size: 1.6em;
 }
 
+.item marked h1,
 marked h1 {
   font-size: 1.4em;
 }
 
+.item marked h3,
 marked h3 {
   font-size: 1.2em;
 }
@@ -267,6 +269,7 @@ marked > h1 {
   font-size: 2em;
 }
 
+.item marked h2,
 marked h2,
 marked h2 {
   font-size: 1.5em;
@@ -293,9 +296,13 @@ marked h6 {
   font-weight: 500;
 }
 
+.item marked p,
+marked.item  p {
+  font-size: 1em;
+}
+
 marked p {
-  font-size: 1.2em;
-  line-height: 1.2em;
+  font-size: 1em;
   margin: 0 0.2em 1.46em;
   -webkit-user-select: auto;
 }
@@ -408,8 +415,8 @@ marked ol {
 }
 
 marked li {
+  line-height: 1.6em;
   margin-bottom: 0.2em;
-  font-size: 1.1em;
 }
 
 marked li ul,
