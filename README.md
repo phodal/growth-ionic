@@ -61,6 +61,8 @@ Plugins:
     cordova plugin add cordova-plugin-file-transfer //下载
     cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
     cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
+    cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+
 
 ``用户隐私``: 在这里会用Google Analytics来收集用户访问的页面来分析用户喜欢的功能。
 

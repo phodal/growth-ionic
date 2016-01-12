@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['starter.factory', 'starter.services', 'hljs', 'starter.utils'])
 
-  .controller('AppCtrl', function ($scope, $storageServices, $http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer) {
+  .controller('AppCtrl', function ($scope, $storageServices, $http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast) {
     var Update = {
       check: function () {
         var url = 'http://www.growth.ren/version.json';
@@ -40,15 +40,16 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
           var options = {};
 
           $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(function (result) {
+            console.log(result);
             $cordovaFileOpener2.open(targetPath, 'application/vnd.android.package-archive').then(function () {
-              // 成功
 
             }, function (err) {
-              // 错误
+              alert(err);
             });
 
             $ionicLoading.hide();
           }, function (err) {
+            alert(err);
             $ionicLoading.hide();
           }, function (progress) {
             var downloadProgress;
