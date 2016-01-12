@@ -1,12 +1,11 @@
 <ion-view view-title="关于">
+  <ion-nav-buttons side="right">
+    <a class="button button-icon ion-ios-help-outline" href="#/app/faq"></a>
+    <a class="button button-icon ion-ios-browsers-outline" href="#/app/seven"></a>
+  </ion-nav-buttons>
   <ion-content>
-    <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/seven">
-      <h2>总览</h2>
-      <i class="icon ion-ios-arrow-right"></i>
-    </ion-item>
-    <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/faq">
-      <h2>FAQ</h2>
-      <i class="icon ion-ios-arrow-right"></i>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="update()">
+      <h2>检测更新</h2>
     </ion-item>
 
     <div class="card">
@@ -24,23 +23,24 @@
         </ul>
         <p>如有侵权请与我联系</p>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="item item-divider">
-          About『Phodal』
-        </div>
-
-        <img ng-hide="isApp" src="img/wechat.jpg" alt="Wechat">
-
-        <div class="selfIntro">
-          <p>微信公众号: Phodal</p>
-          <p>擅长硬件、SEO、前端，也熟悉后台、架构设计。</p>
-        </div>
-        <a href="https://github.com/phodal" target="_blank" class="item">GitHub: @Phodal</a>
-        <a href="http://weibo.com/phodal" target="_blank" class="item">Weibo: @Phodal</a>
-        <a href="http://v2ex.com/member/phodal" target="_blank" class="item">v2ex: @Phodal</a>
-        <a href="http://segmentfault.com/u/phodal" target="_blank" class="item">SF: @Phodal</a>
+    <div class="card">
+      <div class="item item-divider">
+        About『Phodal』
       </div>
+
+      <img ng-hide="isApp" src="img/wechat.jpg" alt="Wechat">
+
+      <div class="selfIntro">
+        <p>微信公众号: Phodal</p>
+        <p>擅长硬件、SEO、前端，也熟悉后台、架构设计。</p>
+      </div>
+      <a href="https://github.com/phodal" target="_blank" class="item">GitHub: @Phodal</a>
+      <a href="http://weibo.com/phodal" target="_blank" class="item">Weibo: @Phodal</a>
+      <a href="http://v2ex.com/member/phodal" target="_blank" class="item">v2ex: @Phodal</a>
+      <a href="http://segmentfault.com/u/phodal" target="_blank" class="item">SF: @Phodal</a>
+    </div>
 
   </ion-content>
 </ion-view>
