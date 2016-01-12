@@ -132,6 +132,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.MainCtrl
         }
       })
 
+      .state('app.help', {
+        url: '/help',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/help.html'
+          }
+        }
+      })
+
       .state('app.skilltree', {
         url: '/skilltree',
         views: {
