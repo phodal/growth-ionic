@@ -2,9 +2,7 @@
 
 已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
 
-直接下载：[http://fir.im/phodal](http://fir.im/phodal)
-
-在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
 应用截图:
 
@@ -18,9 +16,7 @@ Growth交流群(QQ): 529600394
 
 ##简介
 
-Growth来源于: 对Web应用开发的一个流程认识。
-
-主要关注点是**Web开发的流程及其技术栈、学习路线、成长衡量**，包含：
+Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
 
  - 完整的Web开发流程介绍   
  - 如何写好代码——重构、测试、模式
@@ -69,9 +65,8 @@ Plugins:
 ##Todo
 
 1. Tips
-2. Auto Update
-3. Learn Suggestion
-4. Social Communication
+2. Learn Suggestion
+3. Social Communication
 
 ###Thinking
 
