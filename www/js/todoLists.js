@@ -103,5 +103,18 @@ var TODO_LISTS = {
       }
     ],
     "middle": []
+  },
+  "refactor": {
+    "basic": [
+      {
+        "id": "try-refactor-var",
+        "title": "尝试做一些简单的重命名变量"
+      },
+      {
+        "id": "try-refactor-func",
+        "title": "尝试做一些重命名现有的函数"
+      }
+    ],
+    "middle": []
   }
 };
