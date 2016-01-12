@@ -57,6 +57,11 @@ Plugins:
     cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
     cordova plugin add cordova-plugin-app-preferences
 
+    cordova plugin add cordova-plugin-file  //文件
+    cordova plugin add cordova-plugin-file-transfer //下载
+    cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
+    cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
+
 ``用户隐私``: 在这里会用Google Analytics来收集用户访问的页面来分析用户喜欢的功能。
 
 ##Todo
