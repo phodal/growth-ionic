@@ -144,6 +144,10 @@ var AllArticle = [
     "title": "LNMP"
   },
   {
+    "slug" : "summary",
+    "title": "总结"
+  },
+  {
     "slug" : "legacy-code",
     "title": "遗留代码"
   },
