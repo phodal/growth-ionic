@@ -868,4 +868,9 @@ td-card img {
 .intro .button.icon-left:before,
 .button.icon-right:before {
   font-size: 2.5em;
+  color: #ff0a34;
+}
+
+.intro .button span {
+  color: #ff0a34;
 }
