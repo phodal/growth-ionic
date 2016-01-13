@@ -7,5 +7,10 @@ var BOOK_REVIEWS = [
   {
     "slug" : "sicp",
     "title": "《计算机程序的构造和解释》"
+  },
+  {
+    "slug" : "tdd",
+    "title": "《测试驱动开发》",
+    "store": "http://book.douban.com/subject/1230036/"
   }
 ];
