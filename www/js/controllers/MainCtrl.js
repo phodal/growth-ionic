@@ -1,5 +1,6 @@
 angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices) {
+    $updateServices.check('main');
     $scope.$on('$ionicView.beforeEnter', function () {
       $storageServices.get('isFirstTime', function (value) {
         if (value !== 'false') {
