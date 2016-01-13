@@ -28,4 +28,9 @@ var SOLUTIONS = [{
   "type": "server",
   "stacks": ["Django", "Django JWT", "Django DRF"],
   "description": "单页面应用后台。"
+}, {
+  "name": "全文搜索",
+  "type": "server",
+  "stacks": ["Lucene", "Java"],
+  "description": "全文搜索解决方案。"
 }];
