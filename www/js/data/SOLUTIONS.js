@@ -23,4 +23,9 @@ var SOLUTIONS = [{
   "type": "server",
   "stacks": ["Spring MVC", "iBATIS", "Gradle"],
   "description": "Java Web的经典。"
+}, {
+  "name": "Web应用",
+  "type": "server",
+  "stacks": ["Django", "Django JWT", "Django DRF"],
+  "description": "单页面应用后台。"
 }];

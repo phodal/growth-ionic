@@ -148,6 +148,10 @@ var AllArticle = [
     "title": "总结"
   },
   {
+    "slug" : "ajax",
+    "title": "Ajax与JSON"
+  },
+  {
     "slug" : "legacy-code",
     "title": "遗留代码"
   },
