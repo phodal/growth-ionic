@@ -127,6 +127,10 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
 
         $storageServices.set($scope.subtopic, JSON.stringify(items));
         $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);
+
+        if($scope.todoLists.length === 0){
+          $storageServices.set($scope.subtopic + 'Finish', true);
+        }
       };
 
       $scope.closeSpecialModal = function () {
