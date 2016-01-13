@@ -1,5 +1,5 @@
 angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce) {
+  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce, $window) {
     $analytics.trackView('Day Ctrl List');
 
     $scope.currentModal = null;
@@ -204,13 +204,15 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       }
     };
 
-    $scope.$on('modal.shown', function (event, modal) {
-      console.log('Modal ' + modal.id + ' is shown!');
-    });
+    if (!$window.cordova) {
+      $scope.$on('modal.shown', function (event, modal) {
+        console.log('Modal ' + modal.id + ' is shown!');
+      });
 
-    $scope.$on('modal.hidden', function (event, modal) {
-      console.log('Modal ' + modal.id + ' is hidden!');
-    });
+      $scope.$on('modal.hidden', function (event, modal) {
+        console.log('Modal ' + modal.id + ' is hidden!');
+      });
+    }
 
     // Cleanup the modals
     $scope.$on('$destroy', function () {
