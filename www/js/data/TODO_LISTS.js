@@ -133,5 +133,18 @@ var TODO_LISTS = {
       }
     ],
     "middle": []
+  },
+  "configurable": {
+    "basic": [
+      {
+        "id": "try-configurable",
+        "title": "使用一些针对不同开发环境的插件"
+      },
+      {
+        "id": "try-toggle",
+        "title": "用Toggle来管理应用的一些新特性"
+      }
+    ],
+    "middle": []
   }
 };
