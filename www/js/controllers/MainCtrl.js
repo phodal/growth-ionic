@@ -39,11 +39,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         }
       });
 
-      function setDayView() {
-        $scope.dayView = true;
-        $scope.todoView = false;
-
-
+      function checkTodoItemIsFinish () {
         $scope.todoMenus = {
           'hello': {
             'zh': '入门'
@@ -69,9 +65,15 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
             }
           })
         });
-        $scope.isFinish = function(todoMenu) {
+        $scope.isFinish = function (todoMenu) {
           return todoMenu.isFinish ? 'isFinish' : 'noFinish';
         };
+      }
+
+      function setDayView() {
+        $scope.dayView = true;
+        $scope.todoView = false;
+        checkTodoItemIsFinish();
       }
 
       function setTodoView() {
@@ -164,8 +166,9 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         }
       };
 
-      $scope.closeSpecialModal = function () {
+      $scope.closeTodoModal = function () {
         $scope.currentModal.hide();
+        checkTodoItemIsFinish();
       };
     })
   });
