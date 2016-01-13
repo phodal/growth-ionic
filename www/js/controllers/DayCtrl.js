@@ -130,6 +130,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
         $http({method: 'GET', url: 'review/' + bookName + '.md'}).success(function (response) {
           var bookInfo = $filter('filter')(BOOK_REVIEWS, {"slug": bookName})[0];
           $scope.title = bookInfo.title;
+          $scope.store = bookInfo.store;
           $scope.OpenInStore = function () {
             window.open(bookInfo.store, '_system', 'location=yes')
           };
