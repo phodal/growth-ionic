@@ -161,11 +161,11 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.MainCtrl
         }
       })
 
-      .state('app.how', {
-        url: '/how',
+      .state('app.achievement', {
+        url: '/achievement',
         views: {
           'menuContent': {
-            templateUrl: 'templates/skills/how.html'
+            templateUrl: 'templates/skills/achievement.html'
           }
         }
       })
