@@ -59,7 +59,6 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
 
         angular.forEach(todoMenuKeys, function (listsKey) {
           $storageServices.get(listsKey + 'Finish', function (result) {
-            console.log(result);
             if (result === 'true') {
               $scope.todoMenus[listsKey]['isFinish'] = true;
             }

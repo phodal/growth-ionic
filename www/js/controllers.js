@@ -65,4 +65,9 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
   .controller('ArticleListCtrl', function ($scope, $analytics) {
     $analytics.trackView('Article List');
     $scope.articles = AllArticle;
+  })
+
+  .controller('StackCtrl', function ($scope, $analytics, $stateParams) {
+    $analytics.trackView('Stack ' + $stateParams.stack + ' List');
+    $scope.title = $stateParams.stack;
   });

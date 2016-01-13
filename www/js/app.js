@@ -122,6 +122,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.MainCtrl
         }
       })
 
+      .state('app.stack', {
+        url: "/stack/:stack",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/skills/stack.html",
+            controller: 'StackCtrl'
+          }
+        }
+      })
+
       .state('app.about', {
         url: '/about',
         views: {
