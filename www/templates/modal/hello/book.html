@@ -4,8 +4,9 @@
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
   <ion-content>
-    <ion-item class="item" type="item-text-wrap">
-      <h2>《Head First xxx 》</h2>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('head-first')">
+      <h2>《Head First xxx》</h2>
+      <i class="icon ion-ios-book-outline"></i>
     </ion-item>
     <ion-item class="item" type="item-text-wrap">
       <h2>《Java编程思想》</h2>
@@ -14,7 +15,7 @@
       <h2>《Learn Python the Hard Way》</h2>
     </ion-item>
     <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('sicp')">
-      <h2>计算机程序的构造和解释</h2>
+      <h2>《计算机程序的构造和解释》</h2>
       <i class="icon ion-ios-book-outline"></i>
     </ion-item>
   </ion-content>

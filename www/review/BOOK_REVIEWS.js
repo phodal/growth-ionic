@@ -9,6 +9,10 @@ var BOOK_REVIEWS = [
     "title": "《计算机程序的构造和解释》"
   },
   {
+    "slug" : "head-first",
+    "title": "《Head First》"
+  },
+  {
     "slug" : "tdd",
     "title": "《测试驱动开发》",
     "store": "http://book.douban.com/subject/1230036/"
