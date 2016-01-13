@@ -43,7 +43,7 @@ angular.module('starter.services', ['ngCordova'])
             return;
           }
           $cordovaAppVersion.getVersionNumber().then(function (version) {
-            if (version != serveAppVersion) {
+            if (parseFloat(version) < parseFloat(serveAppVersion)) {
               showUpdateConfirm(res);
             } else {
               if (view !== 'main') {
