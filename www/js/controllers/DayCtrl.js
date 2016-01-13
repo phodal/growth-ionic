@@ -128,7 +128,11 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       }).then(function (modal) {
 
         $http({method: 'GET', url: 'review/' + bookName + '.md'}).success(function (response) {
-          $scope.title = $filter('filter')(BOOK_REVIEWS, {"slug": bookName})[0].title;
+          var bookInfo = $filter('filter')(BOOK_REVIEWS, {"slug": bookName})[0];
+          $scope.title = bookInfo.title;
+          $scope.OpenInStore = function () {
+            window.open(bookInfo.store, '_system', 'location=yes')
+          };
           $scope.htmlContent = $sce.trustAsHtml(marked(response))
         }).error(function (data, status) {
           alert(data + status);
