@@ -16,7 +16,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
             $storageServices.set('isFirstTime', 'false');
           });
         }
-      }); 
+      });
     });
     $scope.$on('$ionicView.afterEnter', function () {
       $scope.currentModal = null;

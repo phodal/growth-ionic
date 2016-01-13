@@ -1,4 +1,8 @@
-<ion-view view-title="书评">
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">书评</h1>
+    <button class="button button-clear button-primary" ng-click="closeBookModal()">关闭</button>
+  </ion-header-bar>
   <ion-content>
     <h1 class="sectionTitle">{{title}}</h1>
     <div class="card-wrap">
@@ -9,4 +13,4 @@
       </div>
     </div>
   </ion-content>
-</ion-view>
+</ion-modal-view>

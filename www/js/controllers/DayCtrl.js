@@ -1,5 +1,5 @@
 angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics) {
+  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce) {
     $analytics.trackView('Day Ctrl List');
 
     $scope.currentModal = null;
@@ -95,7 +95,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
     $scope.openSpecialModal = function (subtopic, branch) {
       $analytics.trackView('modal ' + subtopic + ' ' + branch);
 
-      if(subtopic === 'todo'){
+      if (subtopic === 'todo') {
         $scope.todoLists = todoLists[subtopic]['basic'];
       }
 
@@ -112,6 +112,32 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
 
     $scope.closeSpecialModal = function () {
       $scope.currentModal.hide();
+    };
+
+    $scope.openBookModal = function (bookName) {
+      $analytics.trackView('book ' + bookName);
+
+      $ionicModal.fromTemplateUrl('templates/read/review-detail.html', {
+        id: bookName,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+
+        $http({method: 'GET', url: 'review/' + bookName + '.md'}).success(function (response) {
+          $scope.title = $filter('filter')(AllReview, {"slug": bookName})[0].title;
+          $scope.htmlContent = $sce.trustAsHtml(marked(response))
+        }).error(function (data, status) {
+          alert(data + status);
+        });
+
+        modal.show();
+        $scope.currentBookModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
+    $scope.closeBookModal = function () {
+      $scope.currentBookModal.hide();
     };
 
 
