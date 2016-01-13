@@ -709,6 +709,10 @@ a.get {
   border: 1px solid #999;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  background-color: #777;
+}
+
+.roadmap-card.isFinish {
   background-color: #30BD8A;
 }
 
@@ -737,7 +741,6 @@ td-card {
   border: 1px solid #999;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  background: #30BD8A;
 }
 
 td-card .question {

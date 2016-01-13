@@ -41,6 +41,36 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
       function setDayView() {
         $scope.dayView = true;
         $scope.todoView = false;
+
+
+        $scope.todoMenus = {
+          'hello': {
+            'zh': '入门'
+          }, 'env': {
+            'zh': '环境'
+          }, 'front': {
+            'zh': '前端'
+          }, 'mvc': {
+            'zh': '后台'
+          }, 'test': {
+            'zh': '测试'
+          }, 'refactor': {
+            'zh': '重构'
+          }
+        };
+        var todoMenuKeys = Object.keys(TODO_LISTS);
+
+        angular.forEach(todoMenuKeys, function (listsKey) {
+          $storageServices.get(listsKey + 'Finish', function (result) {
+            console.log(result);
+            if (result === 'true') {
+              $scope.todoMenus[listsKey]['isFinish'] = true;
+            }
+          })
+        });
+        $scope.isFinish = function(todoMenu) {
+          return todoMenu.isFinish ? 'isFinish' : 'noFinish';
+        };
       }
 
       function setTodoView() {
@@ -128,7 +158,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         $storageServices.set($scope.subtopic, JSON.stringify(items));
         $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);
 
-        if($scope.todoLists.length === 0){
+        if ($scope.todoLists.length === 0) {
           $storageServices.set($scope.subtopic + 'Finish', true);
         }
       };
