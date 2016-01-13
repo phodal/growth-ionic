@@ -75,6 +75,10 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.todoLists.splice($scope.todoLists.indexOf(item), 1);
     };
 
+    $scope.closeTodoModal = function () {
+      $scope.currentModal.hide();
+    };
+
     $storageServices.get('isFirstTimeDay', function (value) {
       if (value !== 'false') {
         $ionicModal.fromTemplateUrl('templates/intro/day1.html', {
