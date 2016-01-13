@@ -69,7 +69,7 @@ angular.module('starter.services', ['ngCordova'])
             template: "已经下载：0%"
           });
 
-          var url = 'http://www.growth.ren/growth.apk'; //可以从服务端获取更新APP的路径
+          var url = 'https://s3-ap-southeast-2.amazonaws.com/www.growth.ren/growth.apk'; //可以从服务端获取更新APP的路径
           var targetPath = '/sdcard/Download/Growth.apk'; //APP下载存放的路径，可以使用cordova file插件进行相关配置
           var trustHosts = true;
           var options = {};
