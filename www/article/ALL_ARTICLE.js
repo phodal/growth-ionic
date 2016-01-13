@@ -132,6 +132,10 @@ var AllArticle = [
     "title": "Hadoop"
   },
   {
+    "slug" : "spark",
+    "title": "Spark"
+  },
+  {
     "slug" : "auto",
     "title": "自动化构建"
   },
