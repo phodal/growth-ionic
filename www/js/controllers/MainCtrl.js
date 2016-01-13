@@ -55,6 +55,8 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
             'zh': '重构'
           }, 'before': {
             'zh': '编码前'
+          }, 'configruable': {
+            'zh': '可配置'
           }
         };
         var todoMenuKeys = Object.keys(TODO_LISTS);
