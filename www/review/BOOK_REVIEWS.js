@@ -13,6 +13,11 @@ var BOOK_REVIEWS = [
     "title": "《Head First》"
   },
   {
+    "slug" : "thinking-in-java",
+    "title": "《Java编程思想》",
+    "store": "http://www.amazon.cn/Java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3-%E5%9F%83%E5%8F%B2%E5%B0%94/dp/B0011F7WU4"
+  },
+  {
     "slug" : "tdd",
     "title": "《测试驱动开发》",
     "store": "http://book.douban.com/subject/1230036/"
