@@ -40,25 +40,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
       });
 
       function checkTodoItemIsFinish () {
-        $scope.todoMenus = {
-          'hello': {
-            'zh': '入门'
-          }, 'env': {
-            'zh': '环境'
-          }, 'front': {
-            'zh': '前端'
-          }, 'mvc': {
-            'zh': '后台'
-          }, 'test': {
-            'zh': '测试'
-          }, 'refactor': {
-            'zh': '重构'
-          }, 'before': {
-            'zh': '编码前'
-          }, 'configruable': {
-            'zh': '可配置'
-          }
-        };
+        $scope.todoMenus = TODO_LISTS;
         var todoMenuKeys = Object.keys(TODO_LISTS);
 
         angular.forEach(todoMenuKeys, function (listsKey) {

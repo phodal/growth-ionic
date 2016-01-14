@@ -1,5 +1,6 @@
 var TODO_LISTS = {
   "hello": {
+    "zh": "入门",
     "basic": [
       {
         "id": "try-helloworld",
@@ -17,6 +18,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "before": {
+    'zh': '编码前',
     "basic": [
       {
         "id": "try-launch",
@@ -34,6 +36,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "front": {
+    'zh': '前端',
     "basic": [
       {
         "id": "try-angular",
@@ -59,6 +62,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "mvc": {
+    'zh': '后台',
     "basic": [
       {
         "id": "try-express",
@@ -80,6 +84,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "env": {
+    'zh': '环境',
     "basic": [
       {
         "id": "try-linux",
@@ -101,6 +106,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "test": {
+    'zh': '测试',
     "basic": [
       {
         "id": "try-test",
@@ -122,6 +128,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "refactor": {
+    'zh': '重构',
     "basic": [
       {
         "id": "try-refactor-var",
@@ -135,6 +142,7 @@ var TODO_LISTS = {
     "middle": []
   },
   "configurable": {
+    'zh': '可配置',
     "basic": [
       {
         "id": "try-configurable",
