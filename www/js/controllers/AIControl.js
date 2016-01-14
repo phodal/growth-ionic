@@ -2,7 +2,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
   .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http) {
     $analytics.trackView('AI Controller');
 
-    $http.get('/rules/test.nools').then(function (response) {
+    $http.get('/rules/rules.nools').then(function (response) {
       var flow = nools.compile(response.data, {
         name: 'AI Flow'
       });
