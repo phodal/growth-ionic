@@ -15,25 +15,27 @@ rule FrontServer5 {
     }
     then {
         modify(skill, function(){
-          //this.text += "后台与前端都经验丰富的开发者";
+          this.text += "后台与前端都经验丰富的开发者";
         });
+        retract(skill);
     }
 }
 
 rule Front5Server4 {
     when {
-        f : SkillCal f.frontSkill == 5 && f.serverSkill == 4;
+        skill : SkillCal skill.frontSkill == 5 && skill.serverSkill == 4;
     }
     then {
         modify(f, function(){this.text += "前端都经验丰富,后台经典不错的开发者";});
+        retract(skill);
     }
 }
 
 rule Goodbye {
     when {
-        good : SkillCal good.text =~ /.*$/;
+        m : SkillCal m.text =~ /.*$/;
     }
     then {
-        //console.log(good.text);
+        console.log(m);
     }
 }
