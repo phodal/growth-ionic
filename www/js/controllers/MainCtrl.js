@@ -6,7 +6,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
       $storageServices.get('badgePoints', function (points) {
         $scope.badgePoints = points;
       });
-      
+
       $storageServices.get('isFirstTime', function (value) {
         if (value !== 'false') {
           $ionicModal.fromTemplateUrl('templates/intro/intro.html', {
@@ -33,7 +33,6 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         $scope.allDoneItems[key] = [];
       });
 
-      setDayView();
       $storageServices.get('lastHomeView', function (view) {
         if (view !== undefined) {
           if (view === 'dayView') {
@@ -63,12 +62,12 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
       function setDayView() {
         $scope.dayView = true;
         $scope.todoView = false;
-        checkTodoItemIsFinish();
       }
 
       function setTodoView() {
         $scope.dayView = false;
         $scope.todoView = true;
+        checkTodoItemIsFinish();
       }
 
       $ionicPopover.fromTemplateUrl('templates/popover.html', {
