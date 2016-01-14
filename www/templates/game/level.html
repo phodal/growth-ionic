@@ -1,12 +1,12 @@
 <ion-view view-title="选择级别">
   <ion-content>
-    <ion-list>
+    <ion-list class="quizLevel">
       <ion-item ng-repeat="level in levels" href="#/app/level/{{level.id}}">
           <div ng-if="level.id == 1 ">
-              <i class="icon ion-ios-unlocked"></i> &nbsp;{{level.title}}
+              <i class="icon ion-ios-unlocked-outline"></i> &nbsp;{{level.title}}
           </div>
           <div ng-if="level.id != 1 ">
-              <i class="icon ion-ios-locked"></i> &nbsp;{{level.title}}
+              <i class="icon ion-ios-locked-outline"></i> &nbsp;{{level.title}}
           </div>
       </ion-item>
     </ion-list>

@@ -878,3 +878,11 @@ td-card img {
 .intro .button span {
   color: #ff0a34;
 }
+
+.quizLevel {
+  font-size: 1em;
+}
+
+.quizLevel .icon {
+  font-size: 2em;
+}
