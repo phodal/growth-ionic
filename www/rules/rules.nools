@@ -1,13 +1,11 @@
 define SkillCal {
   text: '',
-  serverSkill: 0,
-  frontSkill: 0,
-  devOpsSkill: 0,
-  constructor : function(text, serverSkill, frontSkill, devOpsSkill){
+  constructor : function(text, serverSkill, frontSkill, devOpsSkill, codingSkill){
     this.text = text;
     this.serverSkill = serverSkill;
     this.frontSkill = frontSkill;
     this.devOpsSkill = devOpsSkill;
+    this.codingSkill = codingSkill;
   }
 }
 
@@ -29,9 +27,24 @@ rule FrontServerDevOps {
         skill : SkillCal skill.frontSkill  >= 4;
         skill : SkillCal skill.serverSkill >= 4;
         skill : SkillCal skill.devOpsSkill >= 3;
+        skill : SkillCal skill.codingSkill >= 4;
     }
     then {
-        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。";
+        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。呼呼，你的代码写得也很好嘛。";
+        modify(skill);
+        retract(skill);
+    }
+}
+
+rule FrontServerDevOpsCoding {
+    when {
+        skill : SkillCal skill.frontSkill  >= 4;
+        skill : SkillCal skill.serverSkill >= 4;
+        skill : SkillCal skill.devOpsSkill >= 4;
+        skill : SkillCal skill.codingSkill <= 3;
+    }
+    then {
+        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。不过，你写代码的质量有待商榷。";
         modify(skill);
         retract(skill);
     }
