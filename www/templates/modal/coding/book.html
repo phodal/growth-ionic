@@ -3,12 +3,22 @@
     <h1 class="title">书单</h1>
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
-  <ion-content class="padding">
-    <marked>
-       - 《Head First 设计模式》
-       - 《设计模式》
-       - 《重构与模式》
-       - 《元素模式》
-    </marked>
+  <ion-content>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('head-first-dp')">
+      <h2>《Head First 设计模式》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('dp')">
+      <h2>《设计模式》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('refactor-to-pattern')">
+      <h2>《重构与模式》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('elemental-dp')">
+      <h2>《元素模式》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
   </ion-content>
 </ion-modal-view>
