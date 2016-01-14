@@ -3,13 +3,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     $analytics.trackView('AI Controller');
 
     $http.get('/rules/test.nools').then(function (response) {
-      var logger = function (res) {
-        console.log(res);
-      };
       var flow = nools.compile(response.data, {
-        scope: {
-          logger: logger
-        },
         name: 'AI Flow'
       });
       var session = flow.getSession().on("fire", function (ruleName) {
@@ -17,7 +11,9 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       });
       var SkillCal = flow.getDefined("skillcal");
 
-      session.assert(new SkillCal("server", 5));
+      var serverSkill = 5;
+      var frontSkill = 5;
+      session.assert(new SkillCal('', serverSkill, frontSkill));
       session.match(function (err) {
         if (err) {
           console.error(err.stack);
@@ -29,7 +25,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       var firstWord = "你是一个";
 
       finallyWords = finallyWords + firstWord;
-      angular.forEach(session.getFacts(), function(fact){
+      angular.forEach(session.getFacts(), function (fact) {
         finallyWords = finallyWords + fact.text;
       });
 

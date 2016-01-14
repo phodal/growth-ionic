@@ -1,35 +1,39 @@
 define SkillCal {
-    text : '',
-    point : 0,
-    constructor : function(message, point){
-        this.text = message;
-        this.point = point;
-    }
+  serverSkill: 0,
+  frontSkill: 0,
+  text: '',
+  constructor : function(message, serverSkill, frontSkill){
+    this.text = message;
+    this.serverSkill = serverSkill;
+    this.frontSkill = frontSkill;
+  }
 }
 
-//find any message that starts with hello
-rule Server {
+rule FrontServer5 {
     when {
-        f1 : SkillCal f1.point == 5 {text: 'dasaf'};
-        m  : SkillCal m.text =~ /^server$/;
+        skill : SkillCal skill.frontSkill == 5 && skill.serverSkill == 5;
     }
     then {
-        console.log(f1.text);
-        modify(m, function(){
-          this.text = "后台经验丰富";
+        modify(skill, function(){
+          //this.text += "后台与前端都经验丰富的开发者";
         });
     }
 }
 
-rule Server {
+rule Front5Server4 {
     when {
-        f1 : SkillCal f1.point == 4;
-        m  : SkillCal m.text =~ /^server$/;
+        f : SkillCal f.frontSkill == 5 && f.serverSkill == 4;
     }
     then {
-        console.log(f1.text);
-        modify(m, function(){
-          this.text = "后台经验不错";
-        });
+        modify(f, function(){this.text += "前端都经验丰富,后台经典不错的开发者";});
+    }
+}
+
+rule Goodbye {
+    when {
+        good : SkillCal good.text =~ /.*$/;
+    }
+    then {
+        //console.log(good.text);
     }
 }
