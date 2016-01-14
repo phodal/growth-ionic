@@ -1,0 +1,26 @@
+define Message {
+    text : '',
+    constructor : function(message){
+        this.text = message;
+    }
+}
+
+//find any message that starts with hello
+rule Hello {
+    when {
+        m : Message m.text =~ /^hello(\s*world)?$/;
+    }
+    then {
+        modify(m, function(){this.text += " goodbye";});
+    }
+}
+
+//find all messages then end in goodbye
+rule Goodbye {
+    when {
+        m : Message m.text =~ /.*goodbye$/;
+    }
+    then {
+        console.log(m.text);
+    }
+}
