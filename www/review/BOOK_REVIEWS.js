@@ -51,5 +51,15 @@ var BOOK_REVIEWS = [
     "slug": "elemental-dp",
     "title": "《元素模式》",
     "store": "http://book.douban.com/subject/25908396/"
+  },
+  {
+    "slug": "pro-js",
+    "title": "《JavaScript高级程序设计》",
+    "store": "http://www.amazon.cn/gp/product/B00CBBJS5Y/ref=dp-kindle-redirect?ie=UTF8&btkr=1"
+  },
+  {
+    "slug": "js-dp",
+    "title": "《JavaScript设计模式》",
+    "store": "http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%93%88%E6%A2%85%E6%96%AF/dp/B001NMTX4I"
   }
 ];

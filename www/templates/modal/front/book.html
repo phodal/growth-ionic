@@ -3,12 +3,18 @@
     <h1 class="title">书单</h1>
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
-  <ion-content class="padding">
+  <ion-content>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('pro-js')">
+      <h2>《JavaScript高级程序设计》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
+    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('js-dp')">
+      <h2>《JavaScript设计模式》</h2>
+      <i class="icon ion-ios-book-outline"></i>
+    </ion-item>
     <marked>
       JavaScript
       ---
-      - 《JavaScript高级程序设计》
-      - 《JavaScript设计模式》
       - 《编写可维护的JavaScript》
       - 《Effective JavaScript》
       - 《JavaScript语言精粹》
