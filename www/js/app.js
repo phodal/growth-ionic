@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
