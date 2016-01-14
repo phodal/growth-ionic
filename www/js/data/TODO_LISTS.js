@@ -112,7 +112,7 @@ var TODO_LISTS = {
   },
   'test': {
     'zh': '测试',
-    'achievement': '测试',
+    'achievement': '专业防水',
     'basic': [
       {
         'id': 'try-test',
