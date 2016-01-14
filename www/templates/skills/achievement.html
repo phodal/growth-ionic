@@ -1,5 +1,8 @@
 <ion-view view-title="成就">
   <ion-content>
-    <ion-item ng-repeat="achievement in achievements">{{achievement}}</ion-item>
+    <ion-item ng-show="achievements" ng-repeat="achievement in achievements">{{achievement}}</ion-item>
+    <div ng-show="achievements.length === 0">
+      <div class="sectionTitle">快去完成一些TODO事项</div>
+    </div>
   </ion-content>
 </ion-view>
