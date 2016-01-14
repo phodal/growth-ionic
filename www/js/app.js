@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.MainCtrl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
@@ -175,7 +175,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.MainCtrl
         url: '/achievement',
         views: {
           'menuContent': {
-            templateUrl: 'templates/skills/achievement.html'
+            templateUrl: 'templates/skills/achievement.html',
+            controller: 'AchievementCtrl'
           }
         }
       })
