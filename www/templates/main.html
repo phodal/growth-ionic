@@ -21,8 +21,8 @@
       <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>回顾与新架构</ion-item>
     </div>
     <div ng-show="!dayView">
-      <ul class="roadmap-cards" ng-repeat="(todoKey, todoMenu) in todoMenus">
-        <li class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-class="isFinish(todoMenu)">
+      <ul class="road-map">
+        <li class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-repeat="(todoKey, todoMenu) in todoMenus" ng-class="isFinish(todoMenu)">
           <span>{{todoMenu.zh}}</span>
         </li>
       </ul>

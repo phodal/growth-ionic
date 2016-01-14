@@ -688,7 +688,10 @@ a.get {
   cursor: pointer;
 }
 
-.roadmap-cards {
+ul.road-map {
+  padding-bottom: 1em;
+}
+.roadmap-card {
   display: block;
 }
 
