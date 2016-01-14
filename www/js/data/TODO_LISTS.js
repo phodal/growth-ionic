@@ -168,5 +168,27 @@ var TODO_LISTS = {
       }
     ],
     "middle": []
+  },
+  "container": {
+    'zh': '应用容器',
+    "basic": [
+      {
+        "id": "install-linux-in-vm",
+        "title": "使用虚拟机安装GNU/Linux操作系统"
+      },
+      {
+        "id": "understand-jetty-tomcat",
+        "title": "理解Tomcat和Jetty的关系"
+      },
+      {
+        "id": "use-docker-install-app",
+        "title": "使用Docker安装应用程序"
+      },
+      {
+        "id": "use-docker-as-container",
+        "title": "使用Docker作应用容器"
+      }
+    ],
+    "middle": []
   }
 };
