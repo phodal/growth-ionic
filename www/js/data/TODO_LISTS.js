@@ -200,5 +200,16 @@ var TODO_LISTS = {
       }
     ],
     'middle': []
+  },
+  'retro': {
+    'zh': '回顾',
+    'achievement': '未来幻想',
+    'basic': [
+      {
+        'id': 'try-retro',
+        'title': '尝试回顾自己做的一个项目的Well, Less Well'
+      }
+    ],
+    'middle': []
   }
 };
