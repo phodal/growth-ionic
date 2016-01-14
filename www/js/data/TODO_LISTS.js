@@ -154,5 +154,19 @@ var TODO_LISTS = {
       }
     ],
     "middle": []
+  },
+  "ci": {
+    'zh': '持续集成',
+    "basic": [
+      {
+        "id": "try-ci",
+        "title": "尝试搭建CI环境"
+      },
+      {
+        "id": "try-build",
+        "title": "尝试使用CI创建Build"
+      }
+    ],
+    "middle": []
   }
 };
