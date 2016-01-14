@@ -13,29 +13,37 @@ define SkillCal {
 
 rule FrontServer5 {
     when {
-        skill : SkillCal skill.frontSkill === 5;
-        skill : SkillCal skill.serverSkill === 5;
-        skill : SkillCal skill.devOpsSkill === 3;
+        skill : SkillCal skill.frontSkill  >= 4;
+        skill : SkillCal skill.serverSkill >= 4;
+        skill : SkillCal skill.devOpsSkill <= 3;
     }
     then {
-        if(skill.devOpsSkill >= 3){
-          skill.text = "后台与前端都经验丰富的开发者，然而看起来，还需要一点DevOps方面的经验。";
-        } else {
-          skill.text = "后台与前端都经验丰富的开发者，DevOps也不错。";
-        }
-
+        skill.text = "后台与前端都经验丰富的开发者，然而看起来，还需要一点DevOps方面的经验。";
         modify(skill);
         retract(skill);
     }
 }
 
-rule Front5Server4 {
+rule FrontServerDevOps {
     when {
-        skill : SkillCal skill.frontSkill === 5;
-        skill : SkillCal skill.serverSkill === 4;
+        skill : SkillCal skill.frontSkill  >= 4;
+        skill : SkillCal skill.serverSkill >= 4;
+        skill : SkillCal skill.devOpsSkill >= 3;
     }
     then {
-        skill.text = "前端都经验丰富,后台经典不错的开发者";
+        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。";
+        modify(skill);
+        retract(skill);
+    }
+}
+
+rule FrontServer4 {
+    when {
+        skill : SkillCal skill.frontSkill  < 4;
+        skill : SkillCal skill.serverSkill < 4;
+    }
+    then {
+        skill.text = "后台与前端都有些经验，不过还是需要一些提高。";
         modify(skill);
         retract(skill);
     }
