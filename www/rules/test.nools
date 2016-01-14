@@ -1,11 +1,13 @@
 define SkillCal {
   serverSkill: 0,
   frontSkill: 0,
+  devOpsSkill: 0,
   text: '',
-  constructor : function(message, serverSkill, frontSkill){
+  constructor : function(message, serverSkill, frontSkill, devOpsSkill){
     this.text = message;
     this.serverSkill = serverSkill;
     this.frontSkill = frontSkill;
+    this.devOpsSkill = devOpsSkill;
   }
 }
 
@@ -21,6 +23,18 @@ rule FrontServer5 {
     }
 }
 
+rule DevOpsSkill {
+    when {
+        skill : SkillCal skill.devOpsSkill == 3;
+    }
+    then {
+        modify(skill, function(){
+          this.text += "看起来，还需要一点DevOps方面的经验.";
+        });
+        retract(skill);
+    }
+}
+
 rule Front5Server4 {
     when {
         skill : SkillCal skill.frontSkill == 5 && skill.serverSkill == 4;
@@ -28,14 +42,5 @@ rule Front5Server4 {
     then {
         modify(f, function(){this.text += "前端都经验丰富,后台经典不错的开发者";});
         retract(skill);
-    }
-}
-
-rule Goodbye {
-    when {
-        m : SkillCal m.text =~ /.*$/;
-    }
-    then {
-        console.log(m);
     }
 }

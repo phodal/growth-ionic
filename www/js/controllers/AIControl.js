@@ -10,15 +10,17 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
 
       var serverSkill = 5;
       var frontSkill = 5;
+      var devOpsSkill = 3;
 
       $scope.finallyWords = "你是一个";
-      var session = flow.getSession(new SkillCal('', serverSkill, frontSkill))
-        .on("retract", function (fact) {
+      var session = flow.getSession(new SkillCal('', serverSkill, frontSkill, devOpsSkill))
+        .on("modify", function (fact) {
           $scope.finallyWords += fact.text;
         })
         .on("fire", function (ruleName) {
-          //console.log(ruleName);
+          console.log(ruleName);
         });
+
       session.match(function (err) {
         if (err) {
           console.error(err.stack);
