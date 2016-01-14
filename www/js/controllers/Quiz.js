@@ -16,7 +16,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
     $scope.isFirst = true;
     $scope.questionsNum = 10;
 
-    $scope.title = $stateParams.slug;
+    $scope.title = QUIZ_TITLE[$stateParams.slug].name;
     $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.originQuestions = utilsFactory.shuffle(response.data);
 
@@ -60,7 +60,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
 
     $scope.isQuestioning = false;
     $scope.isFirst = true;
-    $scope.title = $stateParams.slug;
+    $scope.title = QUIZ_TITLE[$stateParams.slug].name;
     $http.get('advancedQuiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.questionSize = response.data[$stateParams.slug].size
     });
