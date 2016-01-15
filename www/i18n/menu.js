@@ -1,7 +1,7 @@
 var MENU = {
   "en": {
     exam: "Exam",
-    book: "Book",
+    bookroadmap: "Book RoadMap",
     solution: "Solution",
     feedback: "Feedback",
     help: "Help",
@@ -9,7 +9,7 @@ var MENU = {
   },
   "zh-cn": {
     exam: "技能测验",
-    book: "读书路线",
+    bookroadmap: "读书路线",
     solution: "解决方案(Beta)",
     feedback: "意见和反馈",
     help: "使用指南",
@@ -35,5 +35,18 @@ var MAIN_MENU = {
     "day5": "持续交付",
     "day6": "遗留系统",
     "day7": "回顾与新架构"
+  }
+};
+
+var PAGE_MENU = {
+  "en": {
+    "about": "About",
+    "setting": "Setting",
+    "skillmap": "Skill Map"
+  },
+  "zh-cn": {
+    "about": "About",
+    "setting": "Setting",
+    "skillmap": "我的技能图谱"
   }
 };
