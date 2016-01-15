@@ -11,7 +11,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       $storageServices.get(listsKey + 'Finish', function (result) {
         if (result !== 'true') {
           $scope.improves.push($scope.aiTodoLists[listsKey]);
-        } else {
+        } else if(result === 'true') {
           $scope.goodSkills.push(listsKey);
         }
       })
@@ -22,40 +22,42 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     var devOpsSkill = 0;
     var codingSkill = 0;
 
-    if($scope.goodSkills.indexOf('front') >= -1) {
+    console.log($scope.goodSkills);
+    if($scope.goodSkills.indexOf('front') !== -1) {
        frontSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('mvc') >= -1) {
+    if($scope.goodSkills.indexOf('mvc') !== -1) {
        serverSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('refactor') >= -1) {
+    if($scope.goodSkills.indexOf('refactor') !== -1) {
        codingSkill = 5;
     }
-    if($scope.goodSkills.indexOf('container') >= -1 && $scope.goodSkills.indexOf('server') >= -1) {
+    if($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('server') !== -1) {
       devOpsSkill = 5;
     }
+    var skills = {
+      server: serverSkill,
+      front: frontSkill,
+      devops: devOpsSkill,
+      coding: codingSkill
+    };
 
-    $http.get('/rules/rules.nools').then(function (response) {
+    $http.get('rules/rules.nools').then(function (response) {
       var flow = nools.compile(response.data, {
         name: 'AI Flow'
       });
       var SkillCal = flow.getDefined("skillcal");
 
       $scope.finallyWords = "你是一个";
-      var skills = {
-        server: serverSkill,
-        front: frontSkill,
-        devops: devOpsSkill,
-        coding: codingSkill
-      };
 
       var session = flow.getSession(new SkillCal(skills))
         .on("modify", function (fact) {
           $scope.finallyWords += fact.text;
         })
         .on("fire", function (ruleName) {
+          //alert(ruleName);
           console.log(ruleName);
         });
 
