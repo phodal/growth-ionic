@@ -22,7 +22,6 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     var devOpsSkill = 0;
     var codingSkill = 0;
 
-    console.log($scope.goodSkills);
     if($scope.goodSkills.indexOf('front') !== -1) {
        frontSkill = 5;
     }
@@ -34,7 +33,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     if($scope.goodSkills.indexOf('refactor') !== -1) {
        codingSkill = 5;
     }
-    if($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('server') !== -1) {
+    if($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('ci') !== -1) {
       devOpsSkill = 5;
     }
     var skills = {
@@ -45,9 +44,15 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     };
 
     $http.get('rules/rules.nools').then(function (response) {
-      var flow = nools.compile(response.data, {
-        name: 'AI Flow'
-      });
+      var flow;
+      if(nools.getFlow("AI Flow") === undefined){
+        flow = nools.compile(response.data, {
+          name: 'AI Flow'
+        });
+      } else {
+        flow = nools.getFlow("AI Flow");
+      }
+
       var SkillCal = flow.getDefined("skillcal");
 
       $scope.finallyWords = "你是一个";
