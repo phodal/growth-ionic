@@ -82,4 +82,21 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
   .controller('StackCtrl', function ($scope, $analytics, $stateParams) {
     $analytics.trackView('Stack ' + $stateParams.stack + ' List');
     $scope.title = $stateParams.stack;
+  })
+
+  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $translateProvider) {
+    $analytics.trackView('Setting Ctrl');
+    $scope.language = {checked: false};
+    $storageServices.get('language', function (result) {
+      if (result === 'en') {
+        $scope.language = {checked: true};
+      }
+    });
+    $scope.changeLanguage = function () {
+      if ($scope.language.checked) {
+        $storageServices.set('language', 'en');
+      } else {
+        $storageServices.set('language', 'zh-cn');
+      }
+    }
   });

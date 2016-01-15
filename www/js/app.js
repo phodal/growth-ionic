@@ -157,6 +157,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
+      .state('app.setting', {
+        url: '/setting',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/setting.html',
+            controller: 'SettingCtrl'
+          }
+        }
+      })
+
       .state('app.skilltree', {
         url: '/skilltree',
         views: {
