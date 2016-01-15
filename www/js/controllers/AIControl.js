@@ -2,16 +2,46 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
   .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http) {
     $analytics.trackView('AI Controller');
 
+    $scope.improves = [];
+    $scope.goodSkills = [];
+    $scope.aiTodoLists = TODO_LISTS;
+    var todoMenuKeys = Object.keys(TODO_LISTS);
+
+    angular.forEach(todoMenuKeys, function (listsKey) {
+      $storageServices.get(listsKey + 'Finish', function (result) {
+        if (result !== 'true') {
+          $scope.improves.push($scope.aiTodoLists[listsKey]);
+        } else {
+          $scope.goodSkills.push(listsKey);
+        }
+      })
+    });
+
+    var serverSkill = 0;
+    var frontSkill = 0;
+    var devOpsSkill = 0;
+    var codingSkill = 0;
+
+    if($scope.goodSkills.indexOf('front') >= -1) {
+       frontSkill = 5;
+    }
+
+    if($scope.goodSkills.indexOf('mvc') >= -1) {
+       serverSkill = 5;
+    }
+
+    if($scope.goodSkills.indexOf('refactor') >= -1) {
+       codingSkill = 5;
+    }
+    if($scope.goodSkills.indexOf('container') >= -1 && $scope.goodSkills.indexOf('server') >= -1) {
+      devOpsSkill = 5;
+    }
+
     $http.get('/rules/rules.nools').then(function (response) {
       var flow = nools.compile(response.data, {
         name: 'AI Flow'
       });
       var SkillCal = flow.getDefined("skillcal");
-
-      var serverSkill = 5;
-      var frontSkill = 5;
-      var devOpsSkill = 4;
-      var codingSkill = 4;
 
       $scope.finallyWords = "你是一个";
       var skills = {
@@ -36,16 +66,5 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
           console.log("done");
         }
       });
-    });
-    $scope.improves = [];
-    $scope.aiTodoLists = TODO_LISTS;
-    var todoMenuKeys = Object.keys(TODO_LISTS);
-
-    angular.forEach(todoMenuKeys, function (listsKey) {
-      $storageServices.get(listsKey + 'Finish', function (result) {
-        if (result !== 'true') {
-          $scope.improves.push($scope.aiTodoLists[listsKey]);
-        }
-      })
     });
   });
