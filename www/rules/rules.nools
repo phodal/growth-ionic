@@ -1,10 +1,10 @@
 define SkillCal {
-  constructor : function(serverSkill, frontSkill, devOpsSkill, codingSkill){
+  constructor : function(skills){
     this.text = '';
-    this.serverSkill = serverSkill;
-    this.frontSkill = frontSkill;
-    this.devOpsSkill = devOpsSkill;
-    this.codingSkill = codingSkill;
+    this.serverSkill = skills.server;
+    this.frontSkill = skills.front;
+    this.devOpsSkill = skills.devops;
+    this.codingSkill = skills.coding;
   }
 }
 

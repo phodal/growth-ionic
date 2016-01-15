@@ -14,7 +14,14 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       var codingSkill = 4;
 
       $scope.finallyWords = "你是一个";
-      var session = flow.getSession(new SkillCal(serverSkill, frontSkill, devOpsSkill, codingSkill))
+      var skills = {
+        server: serverSkill,
+        front: frontSkill,
+        devops: devOpsSkill,
+        coding: codingSkill
+      };
+
+      var session = flow.getSession(new SkillCal(skills))
         .on("modify", function (fact) {
           $scope.finallyWords += fact.text;
         })
