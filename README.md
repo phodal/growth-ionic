@@ -4,10 +4,6 @@
 
 直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
-应用截图:
-
-![ScreenShot](screenshot/3.jpg) ![ScreenShot](screenshot/2.jpg) ![ScreenShot](screenshot/1.jpg)
-
 Growth交流群(QQ): 529600394 
 
 欢迎关注我的微信公众号: phodal
@@ -26,11 +22,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
  - 技术栈推荐
  - Web应用解决方案
  
-##说明
- 
- 
-主视图说明
----
+###主视图
  
 主页视图如下所示:
 
@@ -40,8 +32,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
 2. 学习路线。学习路线是依据七日来规划的，每一日关注的点不同，如在第一天关注于如何从零开始去搭建项目。
 3. 切换视图。当前有两种视图，即路线图和七日谈。
  
-七日谈模式——侧重于理论
----
+###七日谈模式——侧重于理论
  
 七日谈模式关注于一些理论。如下图所示：
 
@@ -51,8 +42,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
 2. GET技能。用于构建技能图谱、提供成长指南。
 3. 工具和书单。提供一些实用的工具，以及阅读书单等等。 
  
-路线图模式——侧重于实战
----
+###路线图模式——侧重于实战
  
 路线图关注于一些可以尝试开始的事项。如下图所示：
 
@@ -62,8 +52,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
 
 ![todo](www/img/help/todo.jpg)
 
-菜单
----
+###菜单
 
 向左滑动即可以完成这个事项。
  
@@ -104,7 +93,6 @@ Plugins:
     cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
     cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
-
 
 ``用户隐私``: 在这里会用Google Analytics来收集用户访问的页面来分析用户喜欢的功能。
 
