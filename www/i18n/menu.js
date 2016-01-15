@@ -51,9 +51,11 @@ var PAGE_MENU = {
 
 var DAY_TITLE = {
   "en": {
-    "info": "Info"
+    "info": "Info",
+    "tool": "Tool"
   },
   "zh-cn": {
-    "info": "简介"
+    "info": "简介",
+    "tool": "工具"
   }
 };
