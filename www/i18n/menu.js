@@ -40,12 +40,10 @@ var MAIN_MENU = {
 
 var PAGE_MENU = {
   "en": {
-    "about": "About",
     "setting": "Setting",
     "skillmap": "Skill Map"
   },
   "zh-cn": {
-    "about": "About",
     "setting": "Setting",
     "skillmap": "我的技能图谱"
   }
