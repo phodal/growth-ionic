@@ -214,5 +214,9 @@ var AllArticle = [
   {
     "slug" : "how-to-learn",
     "title": "如何学好一门技术、语言"
+  },
+  {
+    "slug" : "how-to-test",
+    "title": "如何学测试"
   }
 ];
