@@ -2,13 +2,10 @@
 
 已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
-Growth交流群(QQ): 529600394 
-
-欢迎关注我的微信公众号: phodal
+Growth交流群(QQ): 529600394 ，欢迎关注我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
 
-<img src="www/img/wechat.jpg" width="300"
 ##简介
 
 Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
@@ -25,7 +22,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
  
 主页视图如下所示:
 
-![screen](www/img/help/start.jpg)
+<img src="www/img/help/start.jpg" width="300">
 
 1. 技能图谱。点击右上角的图标可以进入技能图谱，技能图谱将展示现在你学到的技术栈，并且可以向你推荐未来应该学习的技术栈。图标上的10则表示你新GET到的功能点数。
 2. 学习路线。学习路线是依据七日来规划的，每一日关注的点不同，如在第一天关注于如何从零开始去搭建项目。
@@ -35,7 +32,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
  
 七日谈模式关注于一些理论。如下图所示：
 
-![day](www/img/help/day.jpg)
+<img src="www/img/help/day.jpg" width="300">
 
 1. 右上角的简介。会介绍一些每一个事项相关的信息。
 2. GET技能。用于构建技能图谱、提供成长指南。
@@ -45,17 +42,17 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
  
 路线图关注于一些可以尝试开始的事项。如下图所示：
 
-![roadmap](www/img/help/roadmap.jpg)
+<img src="www/img/help/roadmap.jpg" width="300">
 
 在每个Card中会包含如下的Todo List:
 
-![todo](www/img/help/todo.jpg)
+<img src="www/img/help/todo.jpg" width="300">
 
 ###菜单
 
 向左滑动即可以完成这个事项。
  
-![Menu](www/img/help/menu.jpg)
+<img src="www/img/help/menu.jpg" width="300"> 
 
 1. 技能测验。用于验证我们学习的内容，以及查找补漏。
 2. 读书路线。提供不同方向的书单，如前端。
