@@ -84,7 +84,7 @@ var AllArticle = [
     "title": "HTTP服务器"
   },
   {
-    "slug" : "env",
+    "slug" : "env-windows",
     "title": "搭建开发环境"
   },
   {
