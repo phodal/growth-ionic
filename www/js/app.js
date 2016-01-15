@@ -21,7 +21,9 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
   })
   .config(function($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.translations('en', MENU.en);
+    $translateProvider.translations('en', MAIN_MENU.en);
     $translateProvider.translations('zh-cn', MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', MAIN_MENU['zh-cn']);
     $translateProvider.preferredLanguage('zh-cn');
     if(window.localStorage.getItem('language') === 'en'){
       $translateProvider.preferredLanguage('en');
