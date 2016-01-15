@@ -20,22 +20,10 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     });
   })
   .config(function($stateProvider, $urlRouterProvider, $translateProvider) {
-    $translateProvider.translations('en', {
-      exam: "Exam",
-      book: "Book",
-      solution: "Solution",
-      feedback: "Feedback",
-      about: "About"
-    });
-    $translateProvider.translations('zh-cn', {
-      exam: "技能测验",
-      book: "读书路线",
-      solution: "解决方案(Beta)",
-      feedback: "意见和反馈",
-      about: "关于"
-    });
-    $translateProvider.preferredLanguage("zh-cn");
-    $translateProvider.fallbackLanguage("en");
+    $translateProvider.translations('en', MENU.en);
+    $translateProvider.translations('zh-cn', MENU['zh-cn']);
+    $translateProvider.preferredLanguage('zh-cn');
+    $translateProvider.fallbackLanguage('en');
   })
   .config(['markedProvider', function (markedProvider) {
     marked.Lexer.rules.gfm.heading = marked.Lexer.rules.normal.heading;
