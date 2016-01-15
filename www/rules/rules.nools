@@ -9,7 +9,19 @@ define SkillCal {
   }
 }
 
-rule FrontServer5 {
+rule BasicProgrammer {
+    when {
+        skill : SkillCal skill.frontSkill  < 4;
+        skill : SkillCal skill.serverSkill < 4;
+    }
+    then {
+        skill.text = "后台与前端都有些经验，不过还是需要一些提高。";
+        modify(skill);
+        retract(skill);
+    }
+}
+
+rule GoodButNeedDevOps {
     when {
         skill : SkillCal skill.frontSkill  >= 4;
         skill : SkillCal skill.serverSkill >= 4;
@@ -22,21 +34,7 @@ rule FrontServer5 {
     }
 }
 
-rule FrontServerDevOps {
-    when {
-        skill : SkillCal skill.frontSkill  >= 4;
-        skill : SkillCal skill.serverSkill >= 4;
-        skill : SkillCal skill.devOpsSkill >= 3;
-        skill : SkillCal skill.codingSkill >= 4;
-    }
-    then {
-        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。呼呼，你的代码写得也很好嘛。";
-        modify(skill);
-        retract(skill);
-    }
-}
-
-rule FrontServerDevOpsCoding {
+rule CodingNeedImprove {
     when {
         skill : SkillCal skill.frontSkill  >= 4;
         skill : SkillCal skill.serverSkill >= 4;
@@ -50,13 +48,15 @@ rule FrontServerDevOpsCoding {
     }
 }
 
-rule FrontServer4 {
+rule VeryGood {
     when {
-        skill : SkillCal skill.frontSkill  < 4;
-        skill : SkillCal skill.serverSkill < 4;
+        skill : SkillCal skill.frontSkill  >= 4;
+        skill : SkillCal skill.serverSkill >= 4;
+        skill : SkillCal skill.devOpsSkill >= 3;
+        skill : SkillCal skill.codingSkill >= 4;
     }
     then {
-        skill.text = "后台与前端都有些经验，不过还是需要一些提高。";
+        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。呼呼，你的代码写得也很好嘛。";
         modify(skill);
         retract(skill);
     }
