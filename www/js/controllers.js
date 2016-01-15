@@ -84,7 +84,7 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     $scope.title = $stateParams.stack;
   })
 
-  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $translateProvider) {
+  .controller('SettingCtrl', function ($scope, $analytics, $storageServices) {
     $analytics.trackView('Setting Ctrl');
     $scope.language = {checked: false};
     $storageServices.get('language', function (result) {
