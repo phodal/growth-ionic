@@ -210,5 +210,9 @@ var AllArticle = [
   {
     "slug" : "emergent-design",
     "title": "浮现式设计"
+  },
+  {
+    "slug" : "how-to-learn",
+    "title": "如何学好一门技术、语言"
   }
 ];
