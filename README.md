@@ -1,8 +1,6 @@
 # Growth —— 成为顶尖开发者
 
-已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线
-
-直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
 Growth交流群(QQ): 529600394 
 
@@ -10,6 +8,7 @@ Growth交流群(QQ): 529600394
 
 ![QRCode](www/img/wechat.jpg)
 
+<img src="www/img/wechat.jpg" width="300"
 ##简介
 
 Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
