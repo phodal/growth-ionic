@@ -52,10 +52,12 @@ var PAGE_MENU = {
 var DAY_TITLE = {
   "en": {
     "info": "Info",
-    "tool": "Tool"
+    "tool": "Tool",
+    "books": "Books"
   },
   "zh-cn": {
     "info": "简介",
-    "tool": "工具"
+    "tool": "工具",
+    "books": "书单"
   }
 };
