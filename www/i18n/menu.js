@@ -19,6 +19,7 @@ var MENU = {
 
 var MAIN_MENU = {
   "en": {
+    "day0": "Prepare",
     "day1": "Start",
     "day2": "Coding",
     "day3": "Go Live",
@@ -28,6 +29,7 @@ var MAIN_MENU = {
     "day7": "Retro & Restart"
   },
   "zh-cn": {
+    "day0": "前期准备",
     "day1": "从零开始",
     "day2": "编码",
     "day3": "上线",
