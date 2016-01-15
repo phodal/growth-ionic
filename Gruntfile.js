@@ -33,7 +33,14 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'www/templates/', src: ['**'], dest: 'templates/', action: 'upload'},
           {expand: true, cwd: 'www/rules/', src: ['**'], dest: 'rules/', action: 'upload'},
           {expand: true, cwd: 'www/', src: ['manifest.json'], dest: './', action: 'upload'},
-          {expand: true, cwd: 'www/', src: ['version.json'], dest: './', action: 'upload'},
+          {
+            expand: true,
+            cwd: 'www/',
+            src: ['version.json'],
+            dest: './',
+            action: 'upload',
+            params: {CacheControl: 'max-age=30'}
+          },
           {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'},
           {
             expand: true,
