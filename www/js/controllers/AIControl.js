@@ -1,6 +1,9 @@
 angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http) {
+  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading) {
     $analytics.trackView('AI Controller');
+    $ionicLoading.show({
+      template: 'Computing...'
+    });
 
     $scope.improves = [];
     $scope.goodSkills = [];
@@ -67,6 +70,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
         });
 
       session.match(function (err) {
+        $ionicLoading.hide();
         if (err) {
           console.error(err.stack);
         } else {
