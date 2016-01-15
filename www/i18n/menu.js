@@ -48,3 +48,12 @@ var PAGE_MENU = {
     "skillmap": "我的技能图谱"
   }
 };
+
+var DAY_TITLE = {
+  "en": {
+    "info": "Info"
+  },
+  "zh-cn": {
+    "info": "简介"
+  }
+};

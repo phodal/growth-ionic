@@ -24,6 +24,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $translateProvider.translations('en', MENU.en);
     $translateProvider.translations('en', MAIN_MENU.en);
     $translateProvider.translations('en', PAGE_MENU.en);
+    $translateProvider.translations('en', DAY_TITLE.en);
+    $translateProvider.translations('zh-cn', DAY_TITLE['zh-cn']);
     $translateProvider.translations('zh-cn', MENU['zh-cn']);
     $translateProvider.translations('zh-cn', MAIN_MENU['zh-cn']);
     $translateProvider.translations('zh-cn', PAGE_MENU['zh-cn']);
