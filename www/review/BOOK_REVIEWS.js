@@ -61,5 +61,15 @@ var BOOK_REVIEWS = [
     "slug": "js-dp",
     "title": "《JavaScript设计模式》",
     "store": "http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%93%88%E6%A2%85%E6%96%AF/dp/B001NMTX4I"
+  },
+  {
+    "slug": "http",
+    "title": "《HTTP权威指南》",
+    "store": "https://book.douban.com/subject/10746113/"
+  },
+  {
+    "slug": "nginx",
+    "title": "《精通Nginx》",
+    "store": "https://book.douban.com/subject/26341690/"
   }
 ];
