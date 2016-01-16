@@ -6,15 +6,18 @@ var BOOK_REVIEWS = [
   },
   {
     "slug": "sicp",
-    "title": "《计算机程序的构造和解释》"
+    "title": "《计算机程序的构造和解释》",
+    "category": "hello"
   },
   {
     "slug": "head-first",
-    "title": "《Head First xx》"
+    "title": "《Head First xx》",
+    "category": "hello"
   },
   {
     "slug": "thinking-in-java",
     "title": "《Java编程思想》",
+    "category": "hello",
     "store": "http://www.amazon.cn/Java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3-%E5%9F%83%E5%8F%B2%E5%B0%94/dp/B0011F7WU4"
   },
   {
