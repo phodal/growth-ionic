@@ -31,8 +31,9 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $translateProvider.translations('zh-cn', PAGE_TITLE['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
-    if (window.localStorage.getItem('language') === 'en') {
-      $translateProvider.preferredLanguage('en');
+    var language = window.localStorage.getItem('language');
+      if (language !== undefined) {
+      $translateProvider.preferredLanguage(language);
     }
     $translateProvider.fallbackLanguage('en');
   })
