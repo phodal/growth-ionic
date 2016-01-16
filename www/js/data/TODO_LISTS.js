@@ -13,7 +13,7 @@ var TODO_LISTS = {
       },
       {
         'id': 'do-todo-list',
-        'title': '实现一个TODO List'
+        'title': '使用这门语言实现一个TODO List'
       }
     ],
     'middle': []
@@ -70,11 +70,7 @@ var TODO_LISTS = {
     'basic': [
       {
         'id': 'try-express',
-        'title': '尝试使用express'
-      },
-      {
-        'id': 'try-spring',
-        'title': '尝试使用Spring MVC'
+        'title': '尝试使用不同的MVC,如Express,Spring MVC'
       },
       {
         'id': 'try-mysql-sqlite',
@@ -116,19 +112,19 @@ var TODO_LISTS = {
     'basic': [
       {
         'id': 'try-test',
-        'title': '尝试写一个简单的测试'
+        'title': '写一个简单的测试'
       },
       {
         'id': 'try-mock',
-        'title': '尝试写一个Mock测试'
+        'title': '写一个Mock测试'
       },
       {
         'id': 'try-stub',
-        'title': '尝试写一个Stub测试'
+        'title': '写一个Stub测试'
       },
       {
         'id': 'try-tdd',
-        'title': '尝试TDD'
+        'title': '尝试使用TDD开发一个简单的功能'
       }
     ],
     'middle': []
@@ -144,6 +140,10 @@ var TODO_LISTS = {
       {
         'id': 'try-refactor-func',
         'title': '尝试做一些重命名现有的函数'
+      },
+      {
+        'id': 'try-extract-var',
+        'title': '尝试一些提取变量的操作'
       }
     ],
     'middle': []
