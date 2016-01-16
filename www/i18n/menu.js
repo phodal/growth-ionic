@@ -62,6 +62,8 @@ var DAY_TITLE = {
     "before": "Before Coding",
     "test": "Test",
     "coding": "Coding",
+    "container": "Container",
+    "configurable": "Configurable",
     "books": "Books"
   },
   "zh-cn": {
@@ -73,6 +75,8 @@ var DAY_TITLE = {
     "before": "编码之前",
     "test": "测试",
     "coding": "编码",
+    "container": "容器",
+    "configurable": "可配置",
     "books": "书单"
   }
 };
