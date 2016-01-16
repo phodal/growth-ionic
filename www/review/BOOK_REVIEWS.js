@@ -10,7 +10,7 @@ var BOOK_REVIEWS = [
   },
   {
     "slug": "head-first",
-    "title": "《Head First》"
+    "title": "《Head First xx》"
   },
   {
     "slug": "thinking-in-java",

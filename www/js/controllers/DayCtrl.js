@@ -127,7 +127,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
         },
         {
           "slug": "head-first",
-          "title": "《Head First》"
+          "title": "《Head First xx》"
         },
         {
           "slug": "thinking-in-java",
