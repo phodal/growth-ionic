@@ -55,11 +55,24 @@ var DAY_TITLE = {
   "en": {
     "info": "Info",
     "tool": "Tool",
+    "development-env": "Development Env",
+    "build-system": "Build System",
+    "front": "Frontend",
+    "server": "Server Side",
+    "before": "Before Coding",
+    "test": "Test",
+    "coding": "Coding",
     "books": "Books"
   },
   "zh-cn": {
     "info": "简介",
     "tool": "工具",
+    "development-env": "开发环境",
+    "build-system": "构建系统",
+    "server": "服务端",
+    "before": "编码之前",
+    "test": "测试",
+    "coding": "编码",
     "books": "书单"
   }
 };
