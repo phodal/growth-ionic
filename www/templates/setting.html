@@ -1,7 +1,15 @@
 <ion-view view-title="{{'setting' | translate}}">
   <ion-content>
     <div class="list">
-      <ion-toggle ng-model="language.checked" ng-change="changeLanguage()" toggle-class="toggle-calm">English</ion-toggle>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Language
+        </div>
+        <select ng-model="optionSelected" ng-change="selectUpdated(optionSelected)">
+          <option value="en">English</option>
+          <option value="zh-cn">简体中文</option>
+        </select>
+      </label>
     </div>
   </ion-content>
 </ion-view>

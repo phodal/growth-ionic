@@ -84,19 +84,17 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     $scope.title = $stateParams.stack;
   })
 
-  .controller('SettingCtrl', function ($scope, $analytics, $storageServices) {
+  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $window) {
     $analytics.trackView('Setting Ctrl');
     $scope.language = {checked: false};
+    $scope.optionSelected = 'zh-cn';
     $storageServices.get('language', function (result) {
-      if (result === 'en') {
-        $scope.language = {checked: true};
+      if (result !== undefined) {
+        $scope.optionSelected = result;
       }
     });
-    $scope.changeLanguage = function () {
-      if ($scope.language.checked) {
-        $storageServices.set('language', 'en');
-      } else {
-        $storageServices.set('language', 'zh-cn');
-      }
-    }
+    $scope.selectUpdated = function(optionSelected) {
+      $storageServices.set('language', optionSelected);
+      $window.location.reload(true);
+    };
   });
