@@ -211,5 +211,20 @@ var TODO_LISTS = {
       }
     ],
     'middle': []
+  },
+  'server': {
+    'zh': '服务端',
+    'achievement': '服务',
+    'basic': [
+      {
+        'id': 'try-static-server',
+        'title': '搭建一个静态服务器'
+      },
+      {
+        'id': 'try-proxy',
+        'title': '使用反向代理'
+      }
+    ],
+    'middle': []
   }
 };
