@@ -3,11 +3,13 @@
     <h1 class="title">{{"tool" | translate}}&{{"books" | translate}}</h1>
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
-  <ion-content class="padding">
+  <ion-content>
     <div class="list">
+      <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('configuration-management')">
+        <h2>《配置管理最佳实践》</h2>
+        <i class="icon ion-ios-book-outline"></i>
+      </ion-item>
       <marked>
-        - 《配置管理最佳实践》
-
         Node.js
         ---
         - config. Configuration control for production node deployments
