@@ -118,6 +118,44 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.currentModal.hide();
     };
 
+    $scope.openBookListModal = function (subtopic, branch) {
+      $analytics.trackView('modal book lists');
+      $scope.books = [
+        {
+          "slug": "sicp",
+          "title": "《计算机程序的构造和解释》"
+        },
+        {
+          "slug": "head-first",
+          "title": "《Head First》"
+        },
+        {
+          "slug": "thinking-in-java",
+          "title": "《Java编程思想》",
+          "store": "http://www.amazon.cn/Java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3-%E5%9F%83%E5%8F%B2%E5%B0%94/dp/B0011F7WU4"
+        },
+        {
+          "slug": "tdd",
+          "title": "《测试驱动开发》",
+          "store": "http://book.douban.com/subject/1230036/"
+        }
+      ];
+
+      $ionicModal.fromTemplateUrl('templates/modal/book.html', {
+        id: subtopic + '-' + branch,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
+    $scope.closeBookModal = function () {
+      $scope.currentBookModal.hide();
+    };
+
     $scope.openBookModal = function (bookName) {
       $analytics.trackView('book ' + bookName);
 
