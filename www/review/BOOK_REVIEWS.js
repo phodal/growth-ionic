@@ -81,5 +81,10 @@ var BOOK_REVIEWS = [
     "slug": "configuration-management",
     "title": "《配置管理最佳实践》",
     "store": "https://book.douban.com/subject/25717078/"
+  },
+  {
+    "slug": "web-monitoring",
+    "title": "《网站性能监测与优化》",
+    "store": "http://www.amazon.cn/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E7%9B%91%E6%B5%8B%E4%B8%8E%E4%BC%98%E5%8C%96-%E5%85%8B%E9%B2%81%E5%B0%94/dp/B004BNA3HC"
   }
 ];
