@@ -1,8 +1,8 @@
 # Growth —— 成为顶尖开发者
 
-已在**360手机助手**、**小米应用商店**、**豌豆荚**、**Google Play**等应用商店上线，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+已在各大应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
-Growth交流群(QQ): 529600394 ，欢迎关注我的微信公众号: phodal
+Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
 
@@ -95,8 +95,7 @@ Plugins:
 ##Todo
 
 1. Tips
-2. Learn Suggestion
-3. Social Communication
+2. Social Communication
 
 ###Thinking
 
