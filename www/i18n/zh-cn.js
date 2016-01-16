@@ -1,4 +1,4 @@
-MENU["zh-cn"] = {
+SIDE_MENU["zh-cn"] = {
   exam: "技能测验",
   bookroadmap: "读书路线",
   solution: "解决方案(Beta)",
@@ -7,7 +7,7 @@ MENU["zh-cn"] = {
   about: "关于"
 };
 
-MAIN_MENU["zh-cn"] = {
+MAIN_VIEW_MENU["zh-cn"] = {
   "day0": "前期准备",
   "day1": "从零开始",
   "day2": "编码",
@@ -18,7 +18,7 @@ MAIN_MENU["zh-cn"] = {
   "day7": "回顾与新架构"
 };
 
-PAGE_MENU["zh-cn"] = {
+PAGE_TITLE["zh-cn"] = {
   "setting": "Setting",
   "skillmap": "我的技能图谱"
 };
@@ -28,6 +28,7 @@ DAY_TITLE["zh-cn"] = {
   "tool": "工具",
   "development-env": "开发环境",
   "build-system": "构建系统",
+  "front": "前端",
   "server": "服务端",
   "before": "编码之前",
   "test": "测试",

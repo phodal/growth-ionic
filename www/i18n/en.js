@@ -1,4 +1,4 @@
-MAIN_MENU["en"] = {
+SIDE_MENU["en"] = {
   exam: "Exam",
   bookroadmap: "Book RoadMap",
   solution: "Solution",
@@ -7,7 +7,7 @@ MAIN_MENU["en"] = {
   about: "About"
 };
 
-MAIN_MENU["en"] = {
+MAIN_VIEW_MENU["en"] = {
   "day0": "Prepare",
   "day1": "Start",
   "day2": "Coding",
@@ -18,7 +18,7 @@ MAIN_MENU["en"] = {
   "day7": "Retro & Restart"
 };
 
-PAGE_MENU["en"] = {
+PAGE_TITLE["en"] = {
   "setting": "Setting",
   "skillmap": "Skill Map"
 };

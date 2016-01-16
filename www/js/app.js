@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl','app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
@@ -19,19 +19,19 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
       }
     });
   })
-  .config(function($stateProvider, $urlRouterProvider, $translateProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
 
-    $translateProvider.translations('en', MENU.en);
-    $translateProvider.translations('en', MAIN_MENU.en);
-    $translateProvider.translations('en', PAGE_MENU.en);
-    $translateProvider.translations('en', DAY_TITLE.en);
+    $translateProvider.translations('en', SIDE_MENU['en']);
+    $translateProvider.translations('en', MAIN_VIEW_MENU['en']);
+    $translateProvider.translations('en', PAGE_TITLE['en']);
+    $translateProvider.translations('en', DAY_TITLE['en']);
     $translateProvider.translations('zh-cn', DAY_TITLE['zh-cn']);
-    $translateProvider.translations('zh-cn', MENU['zh-cn']);
-    $translateProvider.translations('zh-cn', MAIN_MENU['zh-cn']);
-    $translateProvider.translations('zh-cn', PAGE_MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', SIDE_MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', MAIN_VIEW_MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', PAGE_TITLE['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
-    if(window.localStorage.getItem('language') === 'en'){
+    if (window.localStorage.getItem('language') === 'en') {
       $translateProvider.preferredLanguage('en');
     }
     $translateProvider.fallbackLanguage('en');
