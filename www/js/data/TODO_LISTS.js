@@ -226,5 +226,24 @@ var TODO_LISTS = {
       }
     ],
     'middle': []
+  },
+  'analytics': {
+    'zh': '分析',
+    'achievement': '分析师',
+    'basic': [
+      {
+        'id': 'try-google-analytics',
+        'title': '试着添加Google Analytics服务'
+      },
+      {
+        'id': 'try-analytics-data',
+        'title': '尝试用分析工具分析数据'
+      },
+      {
+        'id': 'try-hadoop-data',
+        'title': '试着用编程来分析数据'
+      }
+    ],
+    'middle': []
   }
 };
