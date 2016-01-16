@@ -84,7 +84,7 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     $scope.title = $stateParams.stack;
   })
 
-  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $window) {
+  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $translate) {
     $analytics.trackView('Setting Ctrl');
     $scope.language = {checked: false};
     $scope.optionSelected = 'zh-cn';
@@ -95,6 +95,6 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     });
     $scope.selectUpdated = function(optionSelected) {
       $storageServices.set('language', optionSelected);
-      $window.location.reload(true);
+      $translate.use(optionSelected);
     };
   });
