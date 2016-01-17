@@ -297,5 +297,29 @@ var BOOK_REVIEWS = [
     "title": "《认知设计》",
     "store": "https://book.douban.com/subject/23058339/",
     "category": "ux"
+  },
+  {
+    "slug": "spring-action",
+    "title": "《Spring实战》",
+    "store": "http://www.amazon.cn/Spring%E5%AE%9E%E6%88%98-%E6%B2%83%E5%B0%94%E6%96%AF/dp/B00CY6UD2I/ref=sr_1_1?s=books&ie=UTF8&qid=1453001646&sr=1-1&keywords=Spring%E5%AE%9E%E6%88%98",
+    "category": "mvc"
+  },
+  {
+    "slug": "php",
+    "title": "《PHP和MySQL Web开发》",
+    "store": "http://www.amazon.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%9B%E4%B9%A6-Php%E5%92%8CMysql-Web%E5%BC%80%E5%8F%91-Luke-Welling/dp/B001TDLD80/ref=sr_1_1?s=books&ie=UTF8&qid=1453001715&sr=1-1&keywords=%E3%80%8APHP%E5%92%8CMySQL+Web%E5%BC%80%E5%8F%91%E3%80%8B",
+    "category": "mvc"
+  },
+  {
+    "slug": "rest-action",
+    "title": "《REST 实战》",
+    "store": "http://www.amazon.cn/REST%E5%AE%9E%E6%88%98-%E4%B8%AD%E6%96%87%E7%89%88%E8%B6%85%E5%AA%92%E4%BD%93%E5%92%8C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E9%9F%A6%E4%BC%AF/dp/B005XGSFE4/ref=sr_1_1?s=books&ie=UTF8&qid=1453001757&sr=1-1&keywords=REST+%E5%AE%9E%E6%88%98",
+    "category": "mvc"
+  },
+  {
+    "slug": "java-soa",
+    "title": "《Java应用架构设计:模块化模式与OSGi》",
+    "store": "http://www.amazon.cn/Java%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%A8%A1%E5%BC%8F%E4%B8%8EOSGi-%E5%85%8B%E5%86%85%E6%81%A9%E5%B8%AD%E5%B0%94%E5%BE%B7/dp/B00F9O79X8/ref=sr_1_1?s=books&ie=UTF8&qid=1453001952&sr=1-1&keywords=java%E6%9E%B6%E6%9E%84",
+    "category": "mvc"
   }
 ];
