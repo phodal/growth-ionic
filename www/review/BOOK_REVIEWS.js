@@ -138,5 +138,17 @@ var BOOK_REVIEWS = [
     "title": "《修改代码的艺术》",
     "store": "http://www.amazon.cn/%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF-%E8%B4%B9%E7%91%9F/dp/B00KMJ2Q1U/ref=sr_1_2?s=books&ie=UTF8&qid=1452995576&sr=1-2&keywords=%E3%80%8A%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B",
     "category": "legacy"
+  },
+  {
+    "slug": "refactor-to-pattern",
+    "title": "《重构与模式》",
+    "store": "http://www.amazon.cn/%E9%87%8D%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F-Joshua-Kerievsky/dp/B00A9YD7A2/ref=sr_1_3?s=books&ie=UTF8&qid=1452996045&sr=1-3&keywords=%E3%80%8A%E9%87%8D%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F%E3%80%8B",
+    "category": "refactory"
+  },
+  {
+    "slug": "refactory",
+    "title": "《重构:改善既有代码的设计》",
+    "store": "http://www.amazon.cn/%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1-%E9%A9%AC%E4%B8%81%C2%B7%E7%A6%8F%E5%8B%92/dp/B011LPUB42/ref=sr_1_1?s=books&ie=UTF8&qid=1452996062&sr=1-1&keywords=%E9%87%8D%E6%9E%84",
+    "category": "refactory"
   }
 ];
