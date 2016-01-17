@@ -22,39 +22,33 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       });
     });
 
-    var serverSkill = 0;
-    var frontSkill = 0;
-    var devOpsSkill = 0;
-    var codingSkill = 0;
-    var analyticsSkill = 0;
+    var skills = {
+      server: 0,
+      front: 0,
+      devops: 0,
+      coding: 0,
+      analytics: 0
+    };
 
     if ($scope.goodSkills.indexOf('front') !== -1) {
-      frontSkill = 5;
+      skills.front = 5;
     }
 
     if ($scope.goodSkills.indexOf('mvc') !== -1) {
-      serverSkill = 5;
+      skills.server = 5;
     }
 
     if ($scope.goodSkills.indexOf('refactor') !== -1) {
-      codingSkill = 5;
+      skills.coding = 5;
     }
 
     if ($scope.goodSkills.indexOf('analytics') !== -1) {
-      analyticsSkill = 5;
+      skills.analytics = 5;
     }
 
     if ($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('ci') !== -1) {
-      devOpsSkill = 5;
+      skills.devops = 5;
     }
-
-    var skills = {
-      server: serverSkill,
-      front: frontSkill,
-      devops: devOpsSkill,
-      coding: codingSkill,
-      analytics: analyticsSkill
-    };
 
     $http.get('rules/rules.nools').then(function (response) {
       var flow;
@@ -75,8 +69,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
           $scope.finallyWords += fact.text;
         })
         .on("fire", function (ruleName) {
-          //alert(ruleName);
-          console.log(ruleName);
+          console.log('AI Analytics: ' + ruleName);
         });
 
       session.match(function (err) {
@@ -84,7 +77,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
         if (err) {
           console.error(err.stack);
         } else {
-          console.log("done");
+          console.log("AI Analytics: done");
         }
       });
     });
