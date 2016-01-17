@@ -5,15 +5,10 @@
       <div class="item item-body">
         {{finallyWords}}
       </div>
-    </div>
-
-    <h1 class="sectionTitle">建议</h1>
-    <div class="list card" ng-repeat="improve in improves">
-      <div class="sectionTitle item">{{improve.zh}}</div>
-      <ion-item class="item item-icon-left" type="item-text-wrap" ng-repeat="todo in improve.basic">
-        <h2>{{todo.title}}</h2>
-        <i class="icon ion-ios-paper-outline"></i>
-      </ion-item>
+      <div class="sectionTitle item">建议</div>
+      <div class="item item-body">
+        <span ng-repeat="improve in improves">{{improve.title}}。</span>
+      </div>
     </div>
   </ion-content>
 </ion-view>

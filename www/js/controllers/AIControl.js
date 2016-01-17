@@ -1,5 +1,5 @@
 angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading) {
+  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading, utilsFactory) {
     $analytics.trackView('AI Controller');
     $ionicLoading.show({
       template: 'Computing...'
@@ -13,11 +13,13 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     angular.forEach(todoMenuKeys, function (listsKey) {
       $storageServices.get(listsKey + 'Finish', function (result) {
         if (result !== 'true') {
-          $scope.improves.push($scope.aiTodoLists[listsKey]);
-        } else if(result === 'true') {
+          var todoItems = $scope.aiTodoLists[listsKey].basic;
+          var suggest = todoItems[utilsFactory.getRandomInt(todoItems.length)];
+          $scope.improves.push(suggest);
+        } else if (result === 'true') {
           $scope.goodSkills.push(listsKey);
         }
-      })
+      });
     });
 
     var serverSkill = 0;
@@ -26,23 +28,23 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     var codingSkill = 0;
     var analyticsSkill = 0;
 
-    if($scope.goodSkills.indexOf('front') !== -1) {
-       frontSkill = 5;
+    if ($scope.goodSkills.indexOf('front') !== -1) {
+      frontSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('mvc') !== -1) {
-       serverSkill = 5;
+    if ($scope.goodSkills.indexOf('mvc') !== -1) {
+      serverSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('refactor') !== -1) {
-       codingSkill = 5;
+    if ($scope.goodSkills.indexOf('refactor') !== -1) {
+      codingSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('analytics') !== -1) {
+    if ($scope.goodSkills.indexOf('analytics') !== -1) {
       analyticsSkill = 5;
     }
 
-    if($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('ci') !== -1) {
+    if ($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('ci') !== -1) {
       devOpsSkill = 5;
     }
 
@@ -56,7 +58,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
 
     $http.get('rules/rules.nools').then(function (response) {
       var flow;
-      if(nools.getFlow("AI Flow") === undefined){
+      if (nools.getFlow("AI Flow") === undefined) {
         flow = nools.compile(response.data, {
           name: 'AI Flow'
         });
