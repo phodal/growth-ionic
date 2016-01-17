@@ -28,7 +28,8 @@ var BOOK_REVIEWS = [
   {
     "slug": "productive-programmer",
     "title": "《卓有成效的程序员》",
-    "store": "http://www.amazon.cn/%E5%8D%93%E6%9C%89%E6%88%90%E6%95%88%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98-%E5%BC%97%E5%BE%B7/dp/B001XCWFOI/ref=sr_1_1?s=books&ie=UTF8&qid=1452699898&sr=1-1&keywords=%E5%8D%93%E6%9C%89%E6%88%90%E6%95%88%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98"
+    "store": "http://www.amazon.cn/%E5%8D%93%E6%9C%89%E6%88%90%E6%95%88%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98-%E5%BC%97%E5%BE%B7/dp/B001XCWFOI/ref=sr_1_1?s=books&ie=UTF8&qid=1452699898&sr=1-1&keywords=%E5%8D%93%E6%9C%89%E6%88%90%E6%95%88%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98",
+    "category": "before"
   },
   {
     "slug": "tdd-art",
