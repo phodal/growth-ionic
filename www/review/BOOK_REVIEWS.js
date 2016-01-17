@@ -151,5 +151,47 @@ var BOOK_REVIEWS = [
     "title": "《重构:改善既有代码的设计》",
     "store": "http://www.amazon.cn/%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1-%E9%A9%AC%E4%B8%81%C2%B7%E7%A6%8F%E5%8B%92/dp/B011LPUB42/ref=sr_1_1?s=books&ie=UTF8&qid=1452996062&sr=1-1&keywords=%E9%87%8D%E6%9E%84",
     "category": "refactory"
+  },
+  {
+    "slug": "emergent-design",
+    "title": "《浮现式设计》",
+    "store": "http://www.amazon.cn/%E6%B5%AE%E7%8E%B0%E5%BC%8F%E8%AE%BE%E8%AE%A1-%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E6%BC%94%E8%BF%9B%E6%9C%AC%E8%B4%A8-Scott-L-Bain/dp/B005IEIXUW",
+    "category": "arch"
+  },
+  {
+    "slug": "beautiful-arch",
+    "title": "《架构之美》",
+    "store": "http://www.amazon.cn/%E6%9E%B6%E6%9E%84%E4%B9%8B%E7%BE%8E-%E6%96%AF%E5%AE%BE%E8%80%90%E7%AB%8B%E6%80%9D-%E9%83%AD%E8%A5%BF%E5%A5%A5%E6%96%AF-%E7%BC%96/dp/B00E87TV3S/ref=sr_1_1?s=books&ie=UTF8&qid=1452996550&sr=1-1&keywords=%E6%9E%B6%E6%9E%84%E4%B9%8B%E7%BE%8E",
+    "category": "arch"
+  },
+  {
+    "slug": "posa",
+    "title": "《面向模式的软件架构》系列卷1, 卷4",
+    "store": "http://www.amazon.cn/%E9%9D%A2%E5%90%91%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84-%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F-%E5%B8%83%E6%96%BD%E6%9B%BC/dp/B00FUH7HBS/ref=sr_1_1?s=books&ie=UTF8&qid=1452996682&sr=1-1&keywords=%E9%9D%A2%E5%90%91%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84",
+    "category": "arch"
+  },
+  {
+    "slug": "ddd",
+    "title": "《领域驱动设计》",
+    "store": "https://book.douban.com/subject/5344973/",
+    "category": "arch"
+  },
+  {
+    "slug": "implementing-ddd",
+    "title": "《实现领域驱动设计》",
+    "store": "http://www.amazon.cn/%E5%AE%9E%E7%8E%B0%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1-%E5%BC%97%E5%86%9C/dp/B00IYTVWA6/ref=sr_1_1?ie=UTF8&qid=1452996963&sr=8-1&keywords=%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1",
+    "category": "arch"
+  },
+  {
+    "slug": "practical-api-design",
+    "title": "《软件框架设计的艺术》",
+    "store": "http://www.amazon.cn/%E8%BD%AF%E4%BB%B6%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF-Jaroslav-Tulach/dp/B004TGPJAM/ref=sr_1_1?ie=UTF8&qid=1452997048&sr=8-1&keywords=%E8%BD%AF%E4%BB%B6%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF",
+    "category": "arch"
+  },
+  {
+    "slug": "sa-for-developer",
+    "title": "《程序员必读之软件架构》",
+    "store": "http://www.amazon.cn/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E8%AF%BB%E4%B9%8B%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84-%E5%B8%83%E9%83%8E/dp/B00Q722580/ref=pd_sim_14_4?ie=UTF8&dpID=61lScnDbuPL&dpSrc=sims&preST=_AC_UL160_SR128%2C160_&refRID=1BX04FWPQ873DTPXF91X",
+    "category": "arch"
   }
 ];
