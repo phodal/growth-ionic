@@ -13,5 +13,8 @@ var QUIZ_TITLE = {
   },
   "refactor": {
     "name": "重构"
+  },
+  "node": {
+    "name": "Node.js"
   }
 };

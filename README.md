@@ -1,6 +1,6 @@
 # Growth —— 成为顶尖开发者
 
-已在各大应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
 Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
@@ -8,7 +8,7 @@ Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
 ##简介
 
-Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
+Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
 
  - 完整的Web开发,运维,部署,维护介绍   
  - 如何写好代码——重构、测试、模式
@@ -64,11 +64,7 @@ Growth来源于: 对Web应用开发的基本流程认识。关注于**Web开发�
 **为什么没有WP和iOS版?**
 
 - 没有iPhone和iOS开发者帐号
-- 没有Windows机器的电脑(平时用的是公司的电脑)
-
-**我可以复制吗?**
-
-> 想法和代码是可以复制的，但是内容是不行的。
+- 没有Windows机器的电脑
 
 ##其他
 
@@ -80,22 +76,17 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
 
 Plugins:
 
-    cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-    cordova plugin add https://github.com/danwilson/google-analytics-plugin.git
-    cordova plugin add cordova-plugin-app-preferences
-
+    cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git 
+    cordova plugin add https://github.com/danwilson/google-analytics-plugin.git // GA
     cordova plugin add cordova-plugin-file  //文件
     cordova plugin add cordova-plugin-file-transfer //下载
     cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
-    cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
+    cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git //For Update
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
-
-``用户隐私``: 在这里会用Google Analytics来收集用户访问的页面来分析用户喜欢的功能。
 
 ##Todo
 
-1. Tips
-2. Social Communication
+1. Social Communications
 
 ###Thinking
 

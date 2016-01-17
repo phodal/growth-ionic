@@ -5,6 +5,7 @@ define SkillCal {
     this.frontSkill = skills.front;
     this.devOpsSkill = skills.devops;
     this.codingSkill = skills.coding;
+    this.analyticsSkill = skills.analytics;
   }
 }
 
@@ -53,9 +54,25 @@ rule VeryGood {
         skill : SkillCal skill.serverSkill >= 4;
         skill : SkillCal skill.devOpsSkill >= 3;
         skill : SkillCal skill.codingSkill >= 4;
+        skill : SkillCal skill.analyticsSkill < 4;
     }
     then {
         skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也挺丰富的。呼呼，你的代码写得也很好嘛。";
+        modify(skill);
+        retract(skill);
+    }
+}
+
+rule Better {
+    when {
+        skill : SkillCal skill.frontSkill  >= 4;
+        skill : SkillCal skill.serverSkill >= 4;
+        skill : SkillCal skill.devOpsSkill >= 3;
+        skill : SkillCal skill.codingSkill >= 4;
+        skill : SkillCal skill.analyticsSkill >= 4;
+    }
+    then {
+        skill.text = "后台与前端都经验丰富的开发者，DevOps方面的经验也蛮丰富的。你的代码还写得那么好，也会分析技能，是想给Growth提供建议吗？";
         modify(skill);
         retract(skill);
     }

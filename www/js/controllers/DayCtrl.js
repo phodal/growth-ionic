@@ -118,6 +118,25 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.currentModal.hide();
     };
 
+    $scope.openBookListModal = function (topic) {
+      $analytics.trackView('modal book lists');
+      $scope.books = $filter('filter')(BOOK_REVIEWS, {"category": topic});
+
+      $ionicModal.fromTemplateUrl('templates/modal/book.html', {
+        id: topic,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
+    $scope.closeBookModal = function () {
+      $scope.currentBookModal.hide();
+    };
+
     $scope.openBookModal = function (bookName) {
       $analytics.trackView('book ' + bookName);
 

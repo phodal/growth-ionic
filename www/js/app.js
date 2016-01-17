@@ -19,8 +19,10 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
       }
     });
   })
+  .config(function($ionicConfigProvider) {
+    $ionicConfigProvider.navBar.alignTitle('center');
+  })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
-
     $translateProvider.translations('en', SIDE_MENU['en']);
     $translateProvider.translations('en', MAIN_VIEW_MENU['en']);
     $translateProvider.translations('en', PAGE_TITLE['en']);
@@ -60,12 +62,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     markedProvider.setRenderer({
       heading: function (text, level) {
         var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-        return '<h' + level + '><a name="' +
-          escapedText +
-          '" class="anchor" href="#' +
-          escapedText +
-          '"><span class="header-link"></span></a>' +
-          text + '</h' + level + '>';
+        return '<h' + level + '><a name="' + escapedText + '" class="anchor" href="#' + escapedText + '"><span class="header-link"></span></a>' + text + '</h' + level + '>';
       },
       image: function (href) {
         return "<img class='full-image' src=" + href + ">";

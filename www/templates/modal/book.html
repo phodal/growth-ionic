@@ -4,8 +4,8 @@
     <button class="button button-clear button-primary" ng-click="closeSpecialModal()">关闭</button>
   </ion-header-bar>
   <ion-content>
-    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('productive-programmer')">
-      <h2>《卓有成效的程序员》</h2>
+    <ion-item ng-repeat="book in books" class="item item-icon-right" type="item-text-wrap" ng-click="openBookModal('{{book.slug}}')">
+      <h2>{{book.title}}</h2>
       <i class="icon ion-ios-book-outline"></i>
     </ion-item>
   </ion-content>
