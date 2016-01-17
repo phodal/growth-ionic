@@ -67,11 +67,29 @@ var BOOK_REVIEWS = [
     "slug": "pro-js",
     "title": "《JavaScript高级程序设计》",
     "store": "http://www.amazon.cn/gp/product/B00CBBJS5Y/ref=dp-kindle-redirect?ie=UTF8&btkr=1"
+    ,
+    "category": "front"
   },
   {
     "slug": "js-dp",
     "title": "《JavaScript设计模式》",
     "store": "http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%93%88%E6%A2%85%E6%96%AF/dp/B001NMTX4I"
+    ,
+    "category": "front"
+  },
+  {
+    "slug": "maintainable-javaScript",
+    "title": "《编写可维护的JavaScript》",
+    "store": "http://www.amazon.cn/%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84JavaScript-%E6%89%8E%E5%8D%A1%E6%96%AF/dp/B00BQ7RMW0/ref=sr_1_1?s=books&ie=UTF8&qid=1453000855&sr=1-1&keywords=%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84JavaScript"
+    ,
+    "category": "front"
+  },
+  {
+    "slug": "effective-javaScript",
+    "title": "《Effective JavaScript》",
+    "store": "http://www.amazon.cn/Effective-JavaScript-%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8FJavaScript%E4%BB%A3%E7%A0%81%E7%9A%8468%E4%B8%AA%E6%9C%89%E6%95%88%E6%96%B9%E6%B3%95-%E8%B5%AB%E5%B0%94%E6%9B%BC/dp/B00GMXI1QY/ref=sr_1_1?s=books&ie=UTF8&qid=1453001051&sr=1-1&keywords=Effective+JavaScript"
+    ,
+    "category": "front"
   },
   {
     "slug": "http",
