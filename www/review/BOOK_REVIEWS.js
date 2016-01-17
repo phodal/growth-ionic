@@ -227,5 +227,29 @@ var BOOK_REVIEWS = [
     "title": "《精益数据分析》",
     "store": "http://www.amazon.cn/%E7%B2%BE%E7%9B%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E9%98%BF%E5%88%A9%E6%96%AF%E6%B3%B0%E5%B0%94%C2%B7%E5%85%8B%E7%BD%97%E5%B0%94/dp/B00RBEIHL2/ref=sr_1_1?ie=UTF8&qid=1453000156&sr=8-1&keywords=%E7%B2%BE%E7%9B%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90",
     "category": "analytics"
+  },
+  {
+    "slug": "design-book",
+    "title": "《写给大家看的设计书》",
+    "store": "http://www.amazon.cn/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6-%E5%A8%81%E5%BB%89%E5%A7%86%E6%96%AF/dp/B018495NK0/ref=sr_1_1?ie=UTF8&qid=1453000140&sr=8-1&keywords=%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6",
+    "category": "ux"
+  },
+  {
+    "slug": "designing-design",
+    "title": "《设计中的设计》",
+    "store": "http://www.amazon.cn/%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1-%E5%8E%9F%E7%A0%94%E5%93%89/dp/B0046ZS8XG/ref=sr_1_1?ie=UTF8&qid=1453000248&sr=8-1&keywords=%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1",
+    "category": "ux"
+  },
+  {
+    "slug": "element-ux",
+    "title": "《用户体验要素》",
+    "store": "http://www.amazon.cn/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%A6%81%E7%B4%A0-%E4%BB%A5%E7%94%A8%E6%88%B7%E4%B8%BA%E4%B8%AD%E5%BF%83%E7%9A%84%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E5%8A%A0%E7%91%9E%E7%89%B9/dp/B0056E8VDS/ref=sr_1_1?ie=UTF8&qid=1453000319&sr=8-1&keywords=%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%A6%81%E7%B4%A0",
+    "category": "ux"
+  },
+  {
+    "slug": "learn-design",
+    "title": "《认知设计》",
+    "store": "https://book.douban.com/subject/23058339/",
+    "category": "ux"
   }
 ];
