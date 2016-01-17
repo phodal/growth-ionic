@@ -92,6 +92,34 @@ var BOOK_REVIEWS = [
     "category": "front"
   },
   {
+    "slug": "spa",
+    "title": "《单页Web应用:JavaScript从前端到后端》",
+    "store": "http://www.amazon.cn/%E5%8D%95%E9%A1%B5Web%E5%BA%94%E7%94%A8-JavaScript%E4%BB%8E%E5%89%8D%E7%AB%AF%E5%88%B0%E5%90%8E%E7%AB%AF-%E7%BE%8E-Michael-S-Mikowski/dp/B015QSNI18/ref=sr_1_1?s=books&ie=UTF8&qid=1453001373&sr=1-1&keywords=%E3%80%8A%E5%8D%95%E9%A1%B5Web%E5%BA%94%E7%94%A8%3AJavaScript%E4%BB%8E%E5%89%8D%E7%AB%AF%E5%88%B0%E5%90%8E%E7%AB%AF%E3%80%8B"
+    ,
+    "category": "front"
+  },
+  {
+    "slug": "js-dom",
+    "title": "《JavaScript DOM编程艺术》",
+    "store": "http://www.amazon.cn/JavaScript-DOM%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF-%E5%9F%BA%E6%80%9D/dp/B004VJM5KE/ref=sr_1_1?s=books&ie=UTF8&qid=1453001311&sr=1-1&keywords=%E3%80%8AJavaScript+DOM%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E3%80%8B"
+    ,
+    "category": "front"
+  },
+  {
+    "slug": "js-framework",
+    "title": "《JavaScript框架设计》",
+    "store": "http://www.amazon.cn/JavaScript%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1-%E5%8F%B8%E5%BE%92%E6%AD%A3%E7%BE%8E/dp/B00NY4Y25I/ref=sr_1_1?s=books&ie=UTF8&qid=1453001368&sr=1-1&keywords=%E3%80%8AJavaScript%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E3%80%8B"
+    ,
+    "category": "front"
+  },
+  {
+    "slug": "hf-nodejs",
+    "title": "《深入浅出Node.js》",
+    "store": "http://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00GOM5IL4/ref=tmm_pap_title_0?ie=UTF8&qid=1453001573&sr=1-1"
+    ,
+    "category": "front"
+  },
+  {
     "slug": "http",
     "title": "《HTTP权威指南》",
     "store": "https://book.douban.com/subject/10746113/",
