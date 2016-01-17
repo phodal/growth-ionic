@@ -4,7 +4,14 @@
     <button class="button button-icon ion-ios-infinite-outline" ng-show="isInfinite" ng-click='openSkillsModal()'></button>
   </ion-nav-buttons>
   <ion-content>
-    <h1 class="sectionTitle" ng-show="!showSkillMap">快去GET你的技能吧!</h1>
+    <div ng-show="!showSkillMap">
+      <h1 class="sectionTitle">快去GET你的技能吧!</h1>
+      <marked>
+        ![day](./img/help/day.jpg)
+
+        2.GET技能。用于构建技能图谱、提供成长指南。
+      </marked>
+    </div>
     <ion-slide-box>
       <ion-slide>
         <div id="skills" ng-show="showSkillMap">
