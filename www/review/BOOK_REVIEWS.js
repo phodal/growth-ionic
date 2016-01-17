@@ -197,5 +197,35 @@ var BOOK_REVIEWS = [
     "title": "《程序员必读之软件架构》",
     "store": "http://www.amazon.cn/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E8%AF%BB%E4%B9%8B%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84-%E5%B8%83%E9%83%8E/dp/B00Q722580/ref=pd_sim_14_4?ie=UTF8&dpID=61lScnDbuPL&dpSrc=sims&preST=_AC_UL160_SR128%2C160_&refRID=1BX04FWPQ873DTPXF91X",
     "category": "arch"
+  },
+  {
+    "slug": "head-first-analytics",
+    "title": "《深入浅出数据分析》",
+    "store": "http://www.amazon.cn/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E8%BF%88%E5%85%8B%E5%B0%94%E2%80%A2%E7%B1%B3%E5%B0%94%E9%A1%BF/dp/B00A3XYY2E/ref=sr_1_1?ie=UTF8&qid=1452999675&sr=8-1&keywords=%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B",
+    "category": "analytics"
+  },
+  {
+    "slug": "python-analytics",
+    "title": "《利用Python进行数据分析》",
+    "store": "http://www.amazon.cn/%E5%88%A9%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E9%BA%A6%E9%87%91%E5%B0%BC/dp/B00GHGZLWS/ref=sr_1_1?ie=UTF8&qid=1452999801&sr=8-1&keywords=%E5%88%A9%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90",
+    "category": "analytics"
+  },
+  {
+    "slug": "think-bayes",
+    "title": "《贝叶斯思维:统计建模的Python学习法》",
+    "store": "http://www.amazon.cn/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E7%BB%B4-%E7%BB%9F%E8%AE%A1%E5%BB%BA%E6%A8%A1%E7%9A%84Python%E5%AD%A6%E4%B9%A0%E6%B3%95-%E5%94%90%E5%B0%BC/dp/B00UTJD41E/ref=sr_1_1?ie=UTF8&qid=1452999871&sr=8-1&keywords=%E3%80%8A%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E7%BB%B4%3A%E7%BB%9F%E8%AE%A1%E5%BB%BA%E6%A8%A1%E7%9A%84Python%E5%AD%A6%E4%B9%A0%E6%B3%95%E3%80%8B",
+    "category": "analytics"
+  },
+  {
+    "slug": "collective-intelligence",
+    "title": "《集体智慧编程》",
+    "store": "http://www.amazon.cn/%E9%9B%86%E4%BD%93%E6%99%BA%E6%85%A7%E7%BC%96%E7%A8%8B-%E6%89%98%E6%AF%94%C2%B7%E8%A5%BF%E6%A0%BC%E5%85%B0/dp/B00UI93JD8/ref=sr_1_1?ie=UTF8&qid=1453000086&sr=8-1&keywords=%E9%9B%86%E4%BD%93%E6%99%BA%E6%85%A7%E7%BC%96%E7%A8%8B",
+    "category": "analytics"
+  },
+  {
+    "slug": "lean-analytics",
+    "title": "《精益数据分析》",
+    "store": "http://www.amazon.cn/%E7%B2%BE%E7%9B%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E9%98%BF%E5%88%A9%E6%96%AF%E6%B3%B0%E5%B0%94%C2%B7%E5%85%8B%E7%BD%97%E5%B0%94/dp/B00RBEIHL2/ref=sr_1_1?ie=UTF8&qid=1453000156&sr=8-1&keywords=%E7%B2%BE%E7%9B%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90",
+    "category": "analytics"
   }
 ];
