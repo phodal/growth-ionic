@@ -24,6 +24,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     var frontSkill = 0;
     var devOpsSkill = 0;
     var codingSkill = 0;
+    var analyticsSkill = 0;
 
     if($scope.goodSkills.indexOf('front') !== -1) {
        frontSkill = 5;
@@ -36,14 +37,21 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
     if($scope.goodSkills.indexOf('refactor') !== -1) {
        codingSkill = 5;
     }
+
+    if($scope.goodSkills.indexOf('analytics') !== -1) {
+      analyticsSkill = 5;
+    }
+
     if($scope.goodSkills.indexOf('container') !== -1 && $scope.goodSkills.indexOf('ci') !== -1) {
       devOpsSkill = 5;
     }
+
     var skills = {
       server: serverSkill,
       front: frontSkill,
       devops: devOpsSkill,
-      coding: codingSkill
+      coding: codingSkill,
+      analytics: analyticsSkill
     };
 
     $http.get('rules/rules.nools').then(function (response) {
