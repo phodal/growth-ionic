@@ -84,7 +84,8 @@ var BOOK_REVIEWS = [
   {
     "slug": "cd",
     "title": "《持续交付：发布可靠软件的系统方法》",
-    "store": "http://www.amazon.cn/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98-%E5%8F%91%E5%B8%83%E5%8F%AF%E9%9D%A0%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%B3%95-Jez-Humble-David-Farley/dp/B005V9BB1M"
+    "store": "http://www.amazon.cn/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98-%E5%8F%91%E5%B8%83%E5%8F%AF%E9%9D%A0%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%B3%95-Jez-Humble-David-Farley/dp/B005V9BB1M",
+    "category": "cd"
   },
   {
     "slug": "configuration-management",
