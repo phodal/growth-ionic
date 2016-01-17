@@ -38,22 +38,26 @@ var BOOK_REVIEWS = [
   {
     "slug": "head-first-dp",
     "title": "《Head First 设计模式》",
-    "store": "http://www.amazon.cn/Head-First%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BC%97%E9%87%8C%E6%9B%BC/dp/B0011FBU34"
+    "store": "http://www.amazon.cn/Head-First%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BC%97%E9%87%8C%E6%9B%BC/dp/B0011FBU34",
+    "category": "coding"
   },
   {
     "slug": "dp",
     "title": "《设计模式》",
-    "store": "http://www.amazon.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%9B%E4%B9%A6-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8F%AF%E5%A4%8D%E7%94%A8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%9F%BA%E7%A1%80-Erich-Gamma/dp/B001130JN8/ref=pd_sim_14_4?ie=UTF8&dpID=51EMEzFDfXL&dpSrc=sims&preST=_AC_UL160_SR101%2C160_&refRID=02X18TFPV1GP0NZYD670"
+    "store": "http://www.amazon.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%9B%E4%B9%A6-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8F%AF%E5%A4%8D%E7%94%A8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%9F%BA%E7%A1%80-Erich-Gamma/dp/B001130JN8/ref=pd_sim_14_4?ie=UTF8&dpID=51EMEzFDfXL&dpSrc=sims&preST=_AC_UL160_SR101%2C160_&refRID=02X18TFPV1GP0NZYD670",
+    "category": "coding"
   },
   {
     "slug": "refactor-to-pattern",
     "title": "《重构与模式》",
-    "store": "http://book.douban.com/subject/1052241/"
+    "store": "http://book.douban.com/subject/1052241/",
+    "category": "coding"
   },
   {
     "slug": "elemental-dp",
     "title": "《元素模式》",
-    "store": "http://book.douban.com/subject/25908396/"
+    "store": "http://book.douban.com/subject/25908396/",
+    "category": "coding"
   },
   {
     "slug": "pro-js",
