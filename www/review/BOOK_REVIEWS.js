@@ -110,5 +110,17 @@ var BOOK_REVIEWS = [
     "title": "《大型分布式网站架构设计与实践》",
     "store": "http://www.amazon.cn/3/dp/B00N12P05E/ref=sr_1_1?ie=UTF8&qid=1452994348&sr=8-1&keywords=%E3%80%8A%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5%E3%80%8B",
     "category": "server"
+  },
+  {
+    "slug": "build-system",
+    "title": "《深入理解软件构造系统》",
+    "store": "http://www.amazon.cn/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0%E7%B3%BB%E7%BB%9F-%E5%8F%B2%E5%AF%86%E6%96%AF/dp/B0088VOKX6",
+    "category": "build"
+  },
+  {
+    "slug": "gradle",
+    "title": "《实战Gradle》",
+    "store": "http://www.amazon.cn/%E5%AE%9E%E6%88%98Gradle-%E6%9C%AC%E6%9D%B0%E6%98%8E%C2%B7%E9%A9%AC%E6%96%AF%E5%8F%AF/dp/B014PX21SG/ref=sr_1_1?s=books&ie=UTF8&qid=1452995077&sr=1-1&keywords=%E3%80%8A%E5%AE%9E%E6%88%98Gradle%E3%80%8B",
+    "category": "build"
   }
 ];
