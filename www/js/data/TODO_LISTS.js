@@ -24,15 +24,15 @@ var TODO_LISTS = {
     'basic': [
       {
         'id': 'try-launch',
-        'title': '在你所使用的操作系统上使用启动器来运行软件。'
+        'title': '在你所使用的操作系统上使用启动器来运行软件'
       },
       {
         'id': 'remember-keyshort',
-        'title': '熟记你所使用的IDE、编辑器的各种快捷键。'
+        'title': '熟记你所使用的IDE、编辑器的各种快捷键'
       },
       {
         'id': 'use-a-auto-script',
-        'title': '使用自动化脚本来完成一些简单的工作，如打开邮件。'
+        'title': '使用自动化脚本来完成一些简单的工作，如打开邮件'
       }
     ],
     'middle': []
