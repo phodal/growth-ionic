@@ -89,5 +89,20 @@ var BOOK_REVIEWS = [
     "slug": "web-monitoring",
     "title": "《网站性能监测与优化》",
     "store": "http://www.amazon.cn/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E7%9B%91%E6%B5%8B%E4%B8%8E%E4%BC%98%E5%8C%96-%E5%85%8B%E9%B2%81%E5%B0%94/dp/B004BNA3HC"
+  },
+  {
+    "slug": "high-performance",
+    "title": "《Web性能权威指南》",
+    "store": "http://www.amazon.cn/gp/product/B015316ZLI/ref=dp-kindle-redirect?ie=UTF8&btkr=1"
+  },
+  {
+    "slug": "build-high-performance",
+    "title": "《构建高性能Web站点》",
+    "store": "http://www.amazon.cn/%E6%9E%84%E5%BB%BA%E9%AB%98%E6%80%A7%E8%83%BDWeb%E7%AB%99%E7%82%B9-%E9%83%AD%E6%AC%A3/dp/B008D4S4TO/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1452994156&sr=1-1-catcorr&keywords=%E6%9E%84%E5%BB%BA%E9%AB%98%E6%80%A7%E8%83%BDWeb%E7%AB%99%E7%82%B9"
+  },
+  {
+    "slug": "large-website",
+    "title": "《大型分布式网站架构设计与实践》",
+    "store": "http://www.amazon.cn/3/dp/B00N12P05E/ref=sr_1_1?ie=UTF8&qid=1452994348&sr=8-1&keywords=%E3%80%8A%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5%E3%80%8B"
   }
 ];
