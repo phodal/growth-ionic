@@ -126,5 +126,17 @@ var BOOK_REVIEWS = [
     "title": "《实战Gradle》",
     "store": "http://www.amazon.cn/%E5%AE%9E%E6%88%98Gradle-%E6%9C%AC%E6%9D%B0%E6%98%8E%C2%B7%E9%A9%AC%E6%96%AF%E5%8F%AF/dp/B014PX21SG/ref=sr_1_1?s=books&ie=UTF8&qid=1452995077&sr=1-1&keywords=%E3%80%8A%E5%AE%9E%E6%88%98Gradle%E3%80%8B",
     "category": "build"
+  },
+  {
+    "slug": "optimizing-legacy-code",
+    "title": "《软件驱魔:调试和优化遗留代码的艺术》",
+    "store": "http://www.amazon.cn/%E8%BD%AF%E4%BB%B6%E9%A9%B1%E9%AD%94-%E8%B0%83%E8%AF%95%E5%92%8C%E4%BC%98%E5%8C%96%E9%81%97%E7%95%99%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF-%E5%B8%83%E4%BC%A6%E7%99%BB/dp/B00K7PHAHY/ref=sr_1_1?s=books&ie=UTF8&qid=1452995616&sr=1-1&keywords=%E3%80%8A%E8%BD%AF%E4%BB%B6%E9%A9%B1%E9%AD%94%3A%E8%B0%83%E8%AF%95%E5%92%8C%E4%BC%98%E5%8C%96%E9%81%97%E7%95%99%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B",
+    "category": "legacy"
+  },
+  {
+    "slug": "with-legacy-code",
+    "title": "《修改代码的艺术》",
+    "store": "http://www.amazon.cn/%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF-%E8%B4%B9%E7%91%9F/dp/B00KMJ2Q1U/ref=sr_1_2?s=books&ie=UTF8&qid=1452995576&sr=1-2&keywords=%E3%80%8A%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B",
+    "category": "legacy"
   }
 ];
