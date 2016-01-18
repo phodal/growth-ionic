@@ -20,7 +20,7 @@ var TODO_LISTS = {
   },
   'before': {
     'zh': '编码前',
-    'achievement': '一点就通',
+    'achievement': '一点通',
     'basic': [
       {
         'id': 'try-launch',
@@ -39,7 +39,7 @@ var TODO_LISTS = {
   },
   'front': {
     'zh': '前端',
-    'achievement': '前端',
+    'achievement': '魔术手',
     'basic': [
       {
         'id': 'try-angular',
@@ -66,7 +66,7 @@ var TODO_LISTS = {
   },
   'mvc': {
     'zh': '后台',
-    'achievement': '后台',
+    'achievement': '坚实后盾',
     'basic': [
       {
         'id': 'try-express',
@@ -85,7 +85,7 @@ var TODO_LISTS = {
   },
   'env': {
     'zh': '环境',
-    'achievement': '环境',
+    'achievement': '心旷神怡',
     'basic': [
       {
         'id': 'try-linux',
@@ -165,7 +165,7 @@ var TODO_LISTS = {
   },
   'ci': {
     'zh': '持续集成',
-    'achievement': '构建师',
+    'achievement': '构建小试',
     'basic': [
       {
         'id': 'try-ci',
@@ -180,7 +180,7 @@ var TODO_LISTS = {
   },
   'container': {
     'zh': '应用容器',
-    'achievement': '建筑师',
+    'achievement': '建筑学徒',
     'basic': [
       {
         'id': 'install-linux-in-vm',
