@@ -17,6 +17,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         //StatusBar.styleDefault();
         StatusBar.backgroundColorByHexString("#387ef5");
       }
+      if(typeof navigator.globalization !== "undefined") {
+        navigator.globalization.getPreferredLanguage(function(language) {
+          var lang = angular.lowercase(language.value);
+          //$translate.use(lang).then(function(data) {
+          //  alert("SUCCESS -> " + data);
+          //}, function(error) {
+          //  alert("ERROR -> " + error);
+          //});
+        }, null);
+      }
     });
   })
   .config(function ($ionicConfigProvider) {
