@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
       }
     });
   })
-  .config(function($ionicConfigProvider) {
+  .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle('center');
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
@@ -41,7 +41,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
 
     $translateProvider.preferredLanguage('zh-cn');
     var language = window.localStorage.getItem('language');
-      if (language !== undefined) {
+    if (language !== undefined) {
       $translateProvider.preferredLanguage(language);
     }
     $translateProvider.fallbackLanguage('en');
