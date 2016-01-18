@@ -74,6 +74,22 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
 
 前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
 
+
+部分书评来自于亚马逊、豆瓣。
+
+
+##Setup 
+
+1.Clone
+
+    git clone git@github.com:phodal/growth.git
+
+2.Install Deps
+
+    npm install -g cordova
+    npm install -g ionic
+    ionic serve
+
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git 
