@@ -15,8 +15,7 @@ var TODO_LISTS = {
         'id': 'do-todo-list',
         'title': '使用这门语言实现一个TODO List'
       }
-    ],
-    'middle': []
+    ]
   },
   'before': {
     'zh': '编码前',
@@ -34,8 +33,7 @@ var TODO_LISTS = {
         'id': 'use-a-auto-script',
         'title': '使用自动化脚本来完成一些简单的工作，如打开邮件'
       }
-    ],
-    'middle': []
+    ]
   },
   'front': {
     'zh': '前端',
@@ -61,8 +59,7 @@ var TODO_LISTS = {
         'id': 'try-browserify',
         'title': '使用browserify和npm'
       }
-    ],
-    'middle': []
+    ]
   },
   'mvc': {
     'zh': '后台',
@@ -80,11 +77,10 @@ var TODO_LISTS = {
         'id': 'try-mongodb',
         'title': '试用不同的NoSQL数据库——MongoDB'
       }
-    ],
-    'middle': []
+    ]
   },
   'env': {
-    'zh': '环境',
+    'zh': '环境搭建',
     'achievement': '心旷神怡',
     'basic': [
       {
@@ -103,8 +99,7 @@ var TODO_LISTS = {
         'id': 'try-keyshorts',
         'title': '尝试使用快捷键代替鼠标操作'
       }
-    ],
-    'middle': []
+    ]
   },
   'test': {
     'zh': '测试',
@@ -126,8 +121,7 @@ var TODO_LISTS = {
         'id': 'try-tdd',
         'title': '尝试使用TDD开发一个简单的功能'
       }
-    ],
-    'middle': []
+    ]
   },
   'refactor': {
     'zh': '重构',
@@ -145,8 +139,7 @@ var TODO_LISTS = {
         'id': 'try-extract-var',
         'title': '尝试一些提取变量的操作'
       }
-    ],
-    'middle': []
+    ]
   },
   'configurable': {
     'zh': '可配置',
@@ -160,8 +153,7 @@ var TODO_LISTS = {
         'id': 'try-toggle',
         'title': '用Toggle来管理应用的一些新特性'
       }
-    ],
-    'middle': []
+    ]
   },
   'ci': {
     'zh': '持续集成',
@@ -175,8 +167,7 @@ var TODO_LISTS = {
         'id': 'try-build',
         'title': '尝试使用CI创建Build'
       }
-    ],
-    'middle': []
+    ]
   },
   'container': {
     'zh': '应用容器',
@@ -198,8 +189,7 @@ var TODO_LISTS = {
         'id': 'use-docker-as-container',
         'title': '使用Docker作应用容器'
       }
-    ],
-    'middle': []
+    ]
   },
   'retro': {
     'zh': '回顾',
@@ -209,11 +199,10 @@ var TODO_LISTS = {
         'id': 'try-retro',
         'title': '尝试回顾自己做的一个项目的Well, Less Well'
       }
-    ],
-    'middle': []
+    ]
   },
   'server': {
-    'zh': '服务端',
+    'zh': 'DevOps',
     'achievement': '服务万千',
     'basic': [
       {
@@ -224,8 +213,7 @@ var TODO_LISTS = {
         'id': 'try-proxy',
         'title': '使用反向代理'
       }
-    ],
-    'middle': []
+    ]
   },
   'analytics': {
     'zh': '分析',
@@ -243,7 +231,6 @@ var TODO_LISTS = {
         'id': 'try-hadoop-data',
         'title': '试着用编程来分析数据'
       }
-    ],
-    'middle': []
+    ]
   }
 };
