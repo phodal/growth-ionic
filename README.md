@@ -99,6 +99,7 @@ Plugins:
     cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
     cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git //For Update
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+    cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
 ##Todo
 
