@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
       }
       if(typeof navigator.globalization !== "undefined") {
         navigator.globalization.getPreferredLanguage(function(language) {
-          var lang = angular.lowercase(language.value);
+          //var lang = angular.lowercase(language.value);
           //$translate.use(lang).then(function(data) {
           //  alert("SUCCESS -> " + data);
           //}, function(error) {
@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     });
   })
   .config(function ($ionicConfigProvider) {
-    $ionicConfigProvider.navBar.alignTitle('center');
+    //$ionicConfigProvider.navBar.alignTitle('center');
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.translations('en', SIDE_MENU['en']);
