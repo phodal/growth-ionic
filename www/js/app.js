@@ -27,10 +27,17 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $translateProvider.translations('en', MAIN_VIEW_MENU['en']);
     $translateProvider.translations('en', PAGE_TITLE['en']);
     $translateProvider.translations('en', DAY_TITLE['en']);
+    $translateProvider.translations('en', ABOUT_MENU['en']);
+    $translateProvider.translations('en', EXAM_MENU['en']);
+    $translateProvider.translations('en', BOOK_ROADMAP_MENU['en']);
+
     $translateProvider.translations('zh-cn', DAY_TITLE['zh-cn']);
     $translateProvider.translations('zh-cn', SIDE_MENU['zh-cn']);
     $translateProvider.translations('zh-cn', MAIN_VIEW_MENU['zh-cn']);
     $translateProvider.translations('zh-cn', PAGE_TITLE['zh-cn']);
+    $translateProvider.translations('zh-cn', ABOUT_MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', EXAM_MENU['zh-cn']);
+    $translateProvider.translations('zh-cn', BOOK_ROADMAP_MENU['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
     var language = window.localStorage.getItem('language');
