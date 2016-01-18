@@ -906,5 +906,11 @@ td-card img {
 
 .roadmap .roadmap-card h1 {
   color: #fff;
+  font-size: 18px;
   line-height: 160px;
+}
+
+.roadmap .slider-pager .slider-pager-page {
+  color: #fff;
+  font-size: 8px;
 }
