@@ -4,7 +4,16 @@
       class="badge badge-assertive header-badge icon-badge" ng-show="badgePoints > 0">{{badgePoints}}</span></a>
   </ion-nav-buttons>
   <ion-content>
-    <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
+    <div class="road-map roadmap">
+      <ion-slide-box>
+        <ion-slide>
+          <div class="roadmap-card"><h1>前端学习路线</h1></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="roadmap-card"><h1>后台学习路线</h1></div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
     <div class="buttons more-view">
       <button class="button button-icon ion-ios-toggle-outline" ng-click="popover.show($event)">
       </button>
