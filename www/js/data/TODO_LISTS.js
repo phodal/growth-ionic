@@ -1,7 +1,7 @@
 var TODO_LISTS = {
   'hello': {
     'zh': '入门',
-    'achievement': 'Hello, World',
+    'achievement': '前途光明',
     'basic': [
       {
         'id': 'try-helloworld',
@@ -214,7 +214,7 @@ var TODO_LISTS = {
   },
   'server': {
     'zh': '服务端',
-    'achievement': '服务',
+    'achievement': '服务万千',
     'basic': [
       {
         'id': 'try-static-server',
