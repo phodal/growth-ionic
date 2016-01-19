@@ -61,7 +61,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
     $scope.isQuestioning = false;
     $scope.isFirst = true;
     $scope.title = QUIZ_TITLE[$stateParams.slug].name;
-    $http.get('advancedQuiz/' + $stateParams.slug + '.json').then(function (response) {
+    $http.get('assets/advancedQuiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.questionSize = response.data[$stateParams.slug].size
     });
 
@@ -69,7 +69,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
       $scope.isQuestioning = true;
       $scope.isFirst = false;
       var quiz_id = utilsFactory.getRandomInt($scope.questionSize);
-      $http.get('advancedQuiz/' + $stateParams.slug + '/' + quiz_id + '.md').then(function (response) {
+      $http.get('assets/advancedQuiz/' + $stateParams.slug + '/' + quiz_id + '.md').then(function (response) {
         $scope.question = $sce.trustAsHtml(marked(response.data));
       });
     };
