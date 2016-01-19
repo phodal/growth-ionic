@@ -1,6 +1,9 @@
 angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices) {
-    $updateServices.check('main');
+    if(isAndroid) {
+      $updateServices.check('main');
+    }
+
     $scope.$on('$ionicView.beforeEnter', function () {
       $scope.badgePoints = 0;
       $storageServices.get('badgePoints', function (points) {

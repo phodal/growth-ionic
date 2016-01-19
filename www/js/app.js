@@ -1,3 +1,9 @@
+var isWebView = ionic.Platform.isWebView();
+var isIPad = ionic.Platform.isIPad();
+var isIOS = ionic.Platform.isIOS();
+var isAndroid = ionic.Platform.isAndroid();
+var isWindowsPhone = ionic.Platform.isWindowsPhone();
+
 angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
