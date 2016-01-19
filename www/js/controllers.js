@@ -62,7 +62,7 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     });
     $http({
       method: 'GET',
-      url: 'article/' + $stateParams.slug + '.md'
+      url: 'assets/article/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $ionicLoading.hide();
       $scope.EditArticle = function () {
