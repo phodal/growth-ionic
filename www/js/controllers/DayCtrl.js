@@ -146,7 +146,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
         animation: 'slide-in-up'
       }).then(function (modal) {
 
-        $http({method: 'GET', url: 'review/' + bookName + '.md'}).success(function (response) {
+        $http({method: 'GET', url: 'assets/review/' + bookName + '.md'}).success(function (response) {
           var bookInfo = $filter('filter')(BOOK_REVIEWS, {"slug": bookName})[0];
           $scope.title = bookInfo.title;
           $scope.store = bookInfo.store;
