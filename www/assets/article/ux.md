@@ -41,5 +41,5 @@ UX需要什么
 
 ![Fields Of User Experience Design][2]
 
-  [1]: article/images/ux-design.jpg
-  [2]: article/images/ux-field.jpg
+  [1]: assets/article/images/ux-design.jpg
+  [2]: assets/article/images/ux-field.jpg

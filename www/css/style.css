@@ -867,7 +867,7 @@ td-card img {
 
 .more-view .ion-ios-toggle-outline {
   float: right;
-  font-size: 3.2em;
+  font-size: 2.5em;
 }
 
 .intro .button .icon:before,
@@ -888,4 +888,29 @@ td-card img {
 
 .quizLevel .icon {
   font-size: 2em;
+}
+
+.roadmap {
+  background: url("../img/screenshot.jpg") no-repeat;
+  background-size: cover;
+  height: 180px;
+  width: auto;
+}
+
+.roadmap .roadmap-card {
+  margin: 10px 0;
+  width: 100%;
+  height: 160px;
+  background: rgba(22, 22, 22, 0.6) none;
+}
+
+.roadmap .roadmap-card h1 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 160px;
+}
+
+.roadmap .slider-pager .slider-pager-page {
+  color: #fff;
+  font-size: 8px;
 }

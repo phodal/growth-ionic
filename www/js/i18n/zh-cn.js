@@ -5,6 +5,7 @@ SIDE_MENU["zh-cn"] = {
   "feedback": "意见和反馈",
   "help": "使用指南",
   "about": "关于",
+  "more": "更多",
   "title" : "成为顶尖开发者"
 };
 

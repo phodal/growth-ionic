@@ -13,7 +13,7 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
 
     $scope.userAnswer = {};
     $scope.level = $stateParams.level;
-    $http.get('assets/data/lv' + $stateParams.level + '.json').then(function (data) {
+    $http.get('assets/hello/data/lv' + $stateParams.level + '.json').then(function (data) {
       $scope.level_langeuages = data.data;
     });
 
@@ -98,7 +98,7 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
     $analytics.trackView('WiKi List');
 
     $scope.level = $stateParams.level;
-    $http.get('assets/data/results.json').then(function (data) {
+    $http.get('assets/hello/data/results.json').then(function (data) {
       var results = [];
       angular.forEach(data.data, function (each_level) {
         angular.forEach(each_level, function (each_language) {
@@ -120,9 +120,9 @@ angular.module('app.helloWorldController', ['starter.factory', 'hljs', 'starter.
       language = file_name.split('.')[0];
 
     $scope.language = language;
-    $scope.md = 'assets/intro/' + language + '.md';
+    $scope.md = 'assets/hello/intro/' + language + '.md';
 
-    $http.get('assets/' + level + '/' + file_name).then(function (data) {
+    $http.get('assets/hello/' + level + '/' + file_name).then(function (data) {
       $scope.hello_world = data.data;
     });
   });

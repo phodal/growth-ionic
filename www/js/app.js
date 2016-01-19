@@ -1,3 +1,9 @@
+var isWebView = ionic.Platform.isWebView();
+var isIPad = ionic.Platform.isIPad();
+var isIOS = ionic.Platform.isIOS();
+var isAndroid = ionic.Platform.isAndroid();
+var isWindowsPhone = ionic.Platform.isWindowsPhone();
+
 angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.helloWorldController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -17,10 +23,20 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         //StatusBar.styleDefault();
         StatusBar.backgroundColorByHexString("#387ef5");
       }
+      if(typeof navigator.globalization !== "undefined") {
+        navigator.globalization.getPreferredLanguage(function(language) {
+          //var lang = angular.lowercase(language.value);
+          //$translate.use(lang).then(function(data) {
+          //  alert("SUCCESS -> " + data);
+          //}, function(error) {
+          //  alert("ERROR -> " + error);
+          //});
+        }, null);
+      }
     });
   })
-  .config(function($ionicConfigProvider) {
-    $ionicConfigProvider.navBar.alignTitle('center');
+  .config(function ($ionicConfigProvider) {
+    $ionicConfigProvider.navBar.alignTitle('left');
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.translations('en', SIDE_MENU['en']);
@@ -41,7 +57,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
 
     $translateProvider.preferredLanguage('zh-cn');
     var language = window.localStorage.getItem('language');
-      if (language !== undefined) {
+    if (language !== undefined) {
       $translateProvider.preferredLanguage(language);
     }
     $translateProvider.fallbackLanguage('en');
@@ -96,6 +112,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
+      .state('app.more', {
+        url: '/more',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more.html'
+          }
+        }
+      })
+
       .state('app.wiki', {
         url: "/wiki",
         views: {
@@ -138,7 +163,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: "/solution",
         views: {
           'menuContent': {
-            templateUrl: "templates/solution.html",
+            templateUrl: "templates/more/solution.html",
             controller: 'SolutionCtrl'
           }
         }
@@ -158,7 +183,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/about',
         views: {
           'menuContent': {
-            templateUrl: 'templates/about.html',
+            templateUrl: 'templates/more/about.html',
             controller: 'AboutCtrl'
           }
         }
@@ -168,7 +193,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/help',
         views: {
           'menuContent': {
-            templateUrl: 'templates/help.html'
+            templateUrl: 'templates/more/help.html'
           }
         }
       })
@@ -187,7 +212,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/skilltree',
         views: {
           'menuContent': {
-            templateUrl: 'templates/skilltree.html',
+            templateUrl: 'templates/skills/skilltree.html',
             controller: 'skillTreeControl'
           }
         }
@@ -290,7 +315,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
-      .state('app.exam', {
+      .state('app.2', {
         url: '/exam',
         views: {
           'menuContent': {

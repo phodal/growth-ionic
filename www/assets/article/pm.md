@@ -1,6 +1,6 @@
 GNU/Linux最方便的东西莫过于包管理了。引自OpenSUSE官网的说明及图片:
 
-![包管理](./article/images/pm.png)
+![包管理](./assets/article/images/pm.png)
 
 Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上整体地管理这些应用程序的工具。通常这些 Linux 发行版，包括 openSUSE，都是由成千上万不同的软件包构成的。
 

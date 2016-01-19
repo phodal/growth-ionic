@@ -8,7 +8,7 @@ angular.module('app.reviewController', ['starter.factory', 'hljs', 'starter.util
     });
     $http({
       method: 'GET',
-      url: 'review/' + $stateParams.slug + '.md'
+      url: 'assets/review/' + $stateParams.slug + '.md'
     }).success(function (response) {
       $ionicLoading.hide();
       $scope.title = $filter('filter')(BOOK_REVIEWS, {"slug": $stateParams.slug})[0].title;

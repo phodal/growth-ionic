@@ -50,7 +50,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       skills.devops = 5;
     }
 
-    $http.get('rules/rules.nools').then(function (response) {
+    $http.get('assets/rules/rules.nools').then(function (response) {
       var flow;
       if (nools.getFlow("AI Flow") === undefined) {
         flow = nools.compile(response.data, {
@@ -62,7 +62,8 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
 
       var SkillCal = flow.getDefined("skillcal");
 
-      $scope.finallyWords = "你是一个";
+      var originSuggestions = "你是一个";
+        $scope.finallyWords = originSuggestions;
 
       var session = flow.getSession(new SkillCal(skills))
         .on("modify", function (fact) {
@@ -73,6 +74,10 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
         });
 
       session.match(function (err) {
+        if($scope.finallyWords === originSuggestions) {
+          $scope.finallyWords = "你是一个有潜力的新星!";
+        }
+
         $ionicLoading.hide();
         if (err) {
           console.error(err.stack);

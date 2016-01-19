@@ -1,7 +1,7 @@
 var TODO_LISTS = {
   'hello': {
     'zh': '入门',
-    'achievement': 'Hello, World',
+    'achievement': '前途光明',
     'basic': [
       {
         'id': 'try-helloworld',
@@ -15,31 +15,29 @@ var TODO_LISTS = {
         'id': 'do-todo-list',
         'title': '使用这门语言实现一个TODO List'
       }
-    ],
-    'middle': []
+    ]
   },
   'before': {
     'zh': '编码前',
-    'achievement': '一点就通',
+    'achievement': '一点通',
     'basic': [
       {
         'id': 'try-launch',
-        'title': '在你所使用的操作系统上使用启动器来运行软件。'
+        'title': '在你所使用的操作系统上使用启动器来运行软件'
       },
       {
         'id': 'remember-keyshort',
-        'title': '熟记你所使用的IDE、编辑器的各种快捷键。'
+        'title': '熟记你所使用的IDE、编辑器的各种快捷键'
       },
       {
         'id': 'use-a-auto-script',
-        'title': '使用自动化脚本来完成一些简单的工作，如打开邮件。'
+        'title': '使用自动化脚本来完成一些简单的工作，如打开邮件'
       }
-    ],
-    'middle': []
+    ]
   },
   'front': {
     'zh': '前端',
-    'achievement': '前端',
+    'achievement': '魔术手',
     'basic': [
       {
         'id': 'try-angular',
@@ -61,12 +59,11 @@ var TODO_LISTS = {
         'id': 'try-browserify',
         'title': '使用browserify和npm'
       }
-    ],
-    'middle': []
+    ]
   },
   'mvc': {
     'zh': '后台',
-    'achievement': '后台',
+    'achievement': '坚实后盾',
     'basic': [
       {
         'id': 'try-express',
@@ -80,12 +77,11 @@ var TODO_LISTS = {
         'id': 'try-mongodb',
         'title': '试用不同的NoSQL数据库——MongoDB'
       }
-    ],
-    'middle': []
+    ]
   },
   'env': {
-    'zh': '环境',
-    'achievement': '环境',
+    'zh': '环境搭建',
+    'achievement': '心旷神怡',
     'basic': [
       {
         'id': 'try-linux',
@@ -103,8 +99,7 @@ var TODO_LISTS = {
         'id': 'try-keyshorts',
         'title': '尝试使用快捷键代替鼠标操作'
       }
-    ],
-    'middle': []
+    ]
   },
   'test': {
     'zh': '测试',
@@ -126,8 +121,7 @@ var TODO_LISTS = {
         'id': 'try-tdd',
         'title': '尝试使用TDD开发一个简单的功能'
       }
-    ],
-    'middle': []
+    ]
   },
   'refactor': {
     'zh': '重构',
@@ -145,8 +139,7 @@ var TODO_LISTS = {
         'id': 'try-extract-var',
         'title': '尝试一些提取变量的操作'
       }
-    ],
-    'middle': []
+    ]
   },
   'configurable': {
     'zh': '可配置',
@@ -160,12 +153,11 @@ var TODO_LISTS = {
         'id': 'try-toggle',
         'title': '用Toggle来管理应用的一些新特性'
       }
-    ],
-    'middle': []
+    ]
   },
   'ci': {
     'zh': '持续集成',
-    'achievement': '构建师',
+    'achievement': '构建小试',
     'basic': [
       {
         'id': 'try-ci',
@@ -175,12 +167,11 @@ var TODO_LISTS = {
         'id': 'try-build',
         'title': '尝试使用CI创建Build'
       }
-    ],
-    'middle': []
+    ]
   },
   'container': {
     'zh': '应用容器',
-    'achievement': '建筑师',
+    'achievement': '建筑学徒',
     'basic': [
       {
         'id': 'install-linux-in-vm',
@@ -198,8 +189,7 @@ var TODO_LISTS = {
         'id': 'use-docker-as-container',
         'title': '使用Docker作应用容器'
       }
-    ],
-    'middle': []
+    ]
   },
   'retro': {
     'zh': '回顾',
@@ -209,12 +199,11 @@ var TODO_LISTS = {
         'id': 'try-retro',
         'title': '尝试回顾自己做的一个项目的Well, Less Well'
       }
-    ],
-    'middle': []
+    ]
   },
   'server': {
-    'zh': '服务端',
-    'achievement': '服务',
+    'zh': 'DevOps',
+    'achievement': '服务万千',
     'basic': [
       {
         'id': 'try-static-server',
@@ -223,9 +212,12 @@ var TODO_LISTS = {
       {
         'id': 'try-proxy',
         'title': '使用反向代理'
+      },
+      {
+        'id': 'try-auto-deploy',
+        'title': '尝试使用自动部署工具'
       }
-    ],
-    'middle': []
+    ]
   },
   'analytics': {
     'zh': '分析',
@@ -243,7 +235,6 @@ var TODO_LISTS = {
         'id': 'try-hadoop-data',
         'title': '试着用编程来分析数据'
       }
-    ],
-    'middle': []
+    ]
   }
 };

@@ -20,7 +20,7 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 ###主视图
  
-主页视图如下所示:
+如下图所示：
 
 <img src="www/img/help/start.jpg" width="300">
 
@@ -30,7 +30,7 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 ###七日谈模式——侧重于理论
  
-七日谈模式关注于一些理论。如下图所示：
+如下图所示：
 
 <img src="www/img/help/day.jpg" width="300">
 
@@ -40,7 +40,7 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 ###路线图模式——侧重于实战
  
-路线图关注于一些可以尝试开始的事项。如下图所示：
+如下图所示：
 
 <img src="www/img/help/roadmap.jpg" width="300">
 
@@ -74,6 +74,55 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
 
 前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
 
+
+部分书评来自于亚马逊、豆瓣。
+
+##内容贡献者
+
+感谢以下的内容贡献者们，结果由git-summary生成
+
+     project  : growth
+     repo age : 3 weeks
+     active   : 25 days
+     commits  : 628
+     files    : 723
+     authors  :
+       625	Fengda HUANG  99.5%
+         3	Le Deng       0.5%
+
+英语版:
+ 
+1. [Le Deng](https://github.com/raydeng83)
+
+##Setup && Develop 
+
+###Tech Stack
+
+1. Angular.js
+2. Cordova
+3. Ionic
+4. ngCordova
+5. jQuery
+6. Nools
+7. D3.js
+8. collide
+
+Angular Plugins: angular-highlightjs, angular-marked, angular-translate
+
+Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-filter-bar 
+
+###Setup
+
+1.Clone
+
+    git clone git@github.com:phodal/growth.git
+
+2.Install Deps
+
+    npm install -g cordova
+    npm install -g ionic
+    ionic serve
+
 Plugins:
 
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git 
@@ -83,6 +132,7 @@ Plugins:
     cordova plugin add https://github.com/pwlin/cordova-plugin-file-opener2.git //安装
     cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git //For Update
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+    cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
 ##Todo
 

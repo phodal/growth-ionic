@@ -161,13 +161,13 @@ public ModelAndView processUserDisable(HttpServletRequest request, ModelMap mode
 
 在多数时候，Controller不应该直接与数据层的一部分，而将业务逻辑放在Controller层又是一种错误，这时就有了Service层，如下图：
 
-![Service MVC](./article/images/frontend/service-mvc.png)
+![Service MVC](./assets/article/images/frontend/service-mvc.png)
 
 然而对于Domain相关的Service应该放在哪一层，总会有不同的意见：
 
-![MVC Player](./article/images/frontend/mvcplayer.gif)
+![MVC Player](./assets/article/images/frontend/mvcplayer.gif)
 
-![MS MVC](./article/images/frontend/ms-mvc.png)
+![MS MVC](./assets/article/images/frontend/ms-mvc.png)
 
 Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的Controller只应该做自己应该做的事，它不应该处理业务相关的代码：
 
@@ -256,7 +256,7 @@ View层是一直在变化的层级，人们的品味一直在更新，有时甚�
 
 Wap出现了，并带来了更多的挑战。随后，分辨率从1024x768变成了176×208，开发人员不得不面临这些挑战。当时所需要做的仅仅是修改View层，而View层随着iPhone的出现又发生了变化。
 
-![WAP 网站](./article/images/frontend/wap.gif)
+![WAP 网站](./assets/article/images/frontend/wap.gif)
 
 这是一个短暂的历史，PO还需要为手机用户制作一个怎样的网站？于是他们把桌面版的网站搬了过去变成了移动版。由于网络的原因，每次都需要重新加载页面，这带来了不佳的用户体验。
 
@@ -311,7 +311,7 @@ Wap出现了，并带来了更多的挑战。随后，分辨率从1024x768变成
 
 人们所做的只是**重载View层**。这也是一个有效的SEO策略，上面这些代码是我博客过去的代码。对于桌面版和移动版都是不同的模板和不同的JS、CSS。
 
-![移动版网页](./article/images/frontend/mobile-web.png)
+![移动版网页](./assets/article/images/frontend/mobile-web.png)
 
 在这一时期，桌面版和移动版的代码可能在同一个代码库中。他们使用相同的代码，调用相同的逻辑，只是View层不同了。但是，每次改动我们都要维护两份代码。
 
@@ -323,7 +323,7 @@ Wap出现了，并带来了更多的挑战。随后，分辨率从1024x768变成
 
 我们是选择重新开发一个结合第一和第二系统的最佳特性的第三个系统，还是继续臃肿下去。我想你已经有答案了。随后我们就有了APP API，构建出了博客的APP。
 
-![应用](./article/images/frontend/mobile-app.jpg)
+![应用](./assets/article/images/frontend/mobile-app.jpg)
 
 最开始，人们越来越喜欢用APP，因为与移动版网页相比，其响应速度更快，而且更流畅。对于服务器来说，也是一件好事，因为请求变少了。
 
@@ -379,11 +379,11 @@ define([
 
 一些团队便将Services抽成多个Services，美其名为微服务。传统架构下的API从下图
 
-![API Gateway](./article/images/frontend/api-gateway.png)
+![API Gateway](./assets/article/images/frontend/api-gateway.png)
 
 变成了直接调用的微服务：
 
-![Micro Services](./article/images/frontend/microservices.png)
+![Micro Services](./assets/article/images/frontend/microservices.png)
 
 对于后台开发者来说，这是一件大快人心的大好事，但是对于应用端/前端来说并非如此。调用的服务变多了，在应用程序端进行功能测试变得更复杂，需要Mock的API变多了。
 
