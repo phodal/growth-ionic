@@ -94,7 +94,24 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
  
 1. [Le Deng](https://github.com/raydeng83)
 
-##Setup 
+##Setup && Develop 
+
+###Tech Stack
+
+1. Angular.js
+2. Cordova
+3. Ionic
+4. ngCordova
+5. jQuery
+6. Nools
+7. D3.js
+8. collide
+
+Angular Plugins: angular-highlightjs, angular-marked, angular-translate
+
+Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-filter-bar 
+
+###Setup
 
 1.Clone
 
