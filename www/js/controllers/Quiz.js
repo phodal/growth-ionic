@@ -17,7 +17,7 @@ angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils'
     $scope.questionsNum = 10;
 
     $scope.title = QUIZ_TITLE[$stateParams.slug].name;
-    $http.get('quiz/' + $stateParams.slug + '.json').then(function (response) {
+    $http.get('assets/quiz/' + $stateParams.slug + '.json').then(function (response) {
       $scope.originQuestions = utilsFactory.shuffle(response.data);
 
       $scope.start = function () {
