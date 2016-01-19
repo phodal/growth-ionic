@@ -66,3 +66,24 @@ BOOK_ROADMAP_MENU["zh-cn"] = {
   "specific-domain" : "特定领域读书路线",
   "front-end" : "前端"
 };
+
+PRACTICAL_PROGRAMMING["zh-cn"] = {
+  "practical-programming" : "编程实践",
+  "basic" : "基础篇",
+  "clean-code" : "《代码整洁之道》",
+  "unit-test" : "《单元测试之道》",
+  "productive-programmer" : "《卓有成效的程序员》",
+  "test-driven" : "《测试驱动开发》",
+  "clean-coder" : "《程序员的职业修养》",
+  "readable-code" : "《编写可读代码的艺术》",
+
+  "intermediate" : "进阶篇",
+  "refactoring-patterns" : "《重构与模式》",
+  "implementation-patterns" : "《实现模式》",
+  "code-complete" : "《代码大全》",
+  "pragmatic-programmer" : "《程序员修炼之道》",
+
+  "advanced" : "高级篇",
+  "sicp" : "《计算机程序的构造和解释》",
+  "legacy-code" : "《修改代码的艺术》"
+};

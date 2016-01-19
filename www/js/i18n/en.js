@@ -66,3 +66,24 @@ BOOK_ROADMAP_MENU["en"] = {
   "specific-domain" : "Specific-Focus-Area Reading-RoadMap",
   "front-end" : "Front-End"
 };
+
+PRACTICAL_PROGRAMMING["en"] = {
+  "practical-programming" : "Practical Programming",
+  "basic" : "Basic",
+  "clean-code" : '"Clean Code: A Handbook of Agile Software Craftsmanship"',
+  "unit-test" : '"Pragmatic Unit Testing"',
+  "productive-programmer" : '"The Productive Programmer"',
+  "test-driven" : '"Test-Driven Development by Example"',
+  "clean-coder" : '"The Clean Coder: A Code of Conduct for Professional Programmers"',
+  "readable-code" : '"The Art of Readable Code"',
+
+  "intermediate" : "Intermediate",
+  "refactoring-patterns" : '"Refactoring to Patterns"',
+  "implementation-patterns" : '"Implementation Patterns"',
+  "code-complete" : '"Code Complete: A Practical Handbook of Software Construction"',
+  "pragmatic-programmer" : '"The Pragmatic Programmer: From Journeyman to Master"',
+
+  "advanced" : "Advanced",
+  "sicp" : '"Structure and Interpretation of Computer Programs"',
+  "legacy-code" : '"Working Effectively with Legacy Code"'
+};

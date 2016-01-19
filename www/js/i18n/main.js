@@ -11,3 +11,5 @@ var ABOUT_MENU={};
 var EXAM_MENU={};
 
 var BOOK_ROADMAP_MENU={};
+
+var PRACTICAL_PROGRAMMING={};
