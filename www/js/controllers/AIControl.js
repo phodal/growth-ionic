@@ -50,7 +50,7 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       skills.devops = 5;
     }
 
-    $http.get('rules/rules.nools').then(function (response) {
+    $http.get('assets/rules/rules.nools').then(function (response) {
       var flow;
       if (nools.getFlow("AI Flow") === undefined) {
         flow = nools.compile(response.data, {
