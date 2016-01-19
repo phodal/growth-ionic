@@ -212,6 +212,10 @@ var TODO_LISTS = {
       {
         'id': 'try-proxy',
         'title': '使用反向代理'
+      },
+      {
+        'id': 'try-auto-deploy',
+        'title': '尝试使用自动部署工具'
       }
     ]
   },
