@@ -19,7 +19,7 @@ var app = angular.module('starter.factory', [])
     var myService = {
       async: function (level, file_name) {
         var def = $q.defer();
-        $http.get('assets/' + level + '/' + file_name)
+        $http.get('assets/hello/' + level + '/' + file_name)
           .success(function (response) {
             def.resolve(response);
           }).error(function () {
