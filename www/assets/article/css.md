@@ -25,7 +25,7 @@ para.style.color="blue";
 
 将字体变成了蓝色，CSS+HTML让页面有序的工作着，但是Javascript却打乱了这些秩序，有着唯恐世界不乱的精彩，也难怪被冠以小三之名了——或许终于可以理解，为什么以前人们对于Javascript没有好感了——不过这里要讲的是正室，也就是CSS，这时还没有Javascript。
 	
-![Red Fonts](./article/images/redfonts.png)
+![Red Fonts](./assets/article/images/redfonts.png)
 
 ##关于CSS##
 
@@ -55,7 +55,7 @@ CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS还�
 
 虽然我们看到的还是一样的:
 	
-![No Style](./article/images/nostyle.png)
+![No Style](./assets/article/images/nostyle.png)
 
 于是我们就按各种书上的建议重新写了上面的代码
 

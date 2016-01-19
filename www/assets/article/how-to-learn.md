@@ -47,7 +47,7 @@ choco install scala
 
 到了第二天忘了！
 
-![Bro Wrong](./article/images/wrong.jpg)
+![Bro Wrong](./assets/article/images/wrong.jpg)
 
 接着，你又重新把昨天的知识过了一遍，还是没有多大的作用。突然间，你听到别人在讨论什么是**这个世界上最好的语言**——你开始加入讨论了。
 
@@ -60,7 +60,7 @@ choco install scala
 
 虽然隔壁的Python小哥赢得了这次辩论，然而你发现你又回想起了Scala的很多特性。
 
-![最流行的语言](./article/images/popular.jpg)
+![最流行的语言](./assets/article/images/popular.jpg)
 
 你发现隔壁的Python小哥之所以赢得了这场辩论是因为他把Python语言用到了各个地方——机器学习、人工智能、硬件、Web开发、移动应用等。而，你还没有用Scala写过一个真正的应用。
 
@@ -79,7 +79,7 @@ choco install scala
 
 好了，你已经GET到了90%了。如下图所示：
 
-![Learn](./article/images/learn.jpg)
+![Learn](./assets/article/images/learn.jpg)
 
 希望你能从这张图上GET到很多点。
 
@@ -91,7 +91,7 @@ choco install scala
 
 因为你一直在完成功能、完成工作，你总会有意、无意地漏掉一些知识，而你也没有意识到这些知识的重要性。
 
-![Output is Input](./article/images/output-input.png)
+![Output is Input](./assets/article/images/output-input.png)
 
 从我有限的（500+）博客写作经验里，我发现多数时候我需要更多地的参考资料才能更好也向人们展示这个过程。为了输出我们需要更多的输入，进而加速这个过程。
 
