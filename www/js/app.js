@@ -212,7 +212,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/skilltree',
         views: {
           'menuContent': {
-            templateUrl: 'templates/skilltree.html',
+            templateUrl: 'templates/skills/skilltree.html',
             controller: 'skillTreeControl'
           }
         }
@@ -315,7 +315,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
-      .state('app.exam', {
+      .state('app.2', {
         url: '/exam',
         views: {
           'menuContent': {
