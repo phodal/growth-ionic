@@ -163,7 +163,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: "/solution",
         views: {
           'menuContent': {
-            templateUrl: "templates/solution.html",
+            templateUrl: "templates/more/solution.html",
             controller: 'SolutionCtrl'
           }
         }
@@ -183,7 +183,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/about',
         views: {
           'menuContent': {
-            templateUrl: 'templates/about.html',
+            templateUrl: 'templates/more/about.html',
             controller: 'AboutCtrl'
           }
         }
@@ -193,7 +193,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         url: '/help',
         views: {
           'menuContent': {
-            templateUrl: 'templates/help.html'
+            templateUrl: 'templates/more/help.html'
           }
         }
       })
