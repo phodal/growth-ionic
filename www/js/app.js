@@ -112,6 +112,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
+      .state('app.more', {
+        url: '/more',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more.html'
+          }
+        }
+      })
+
       .state('app.wiki', {
         url: "/wiki",
         views: {

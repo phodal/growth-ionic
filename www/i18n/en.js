@@ -5,6 +5,7 @@ SIDE_MENU["en"] = {
   "feedback": "Feedback",
   "help": "Help",
   "about": "About",
+  "more": "More",
   "title" : "Become Awesome Developer"
 };
 
