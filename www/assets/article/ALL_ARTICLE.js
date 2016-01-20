@@ -69,7 +69,7 @@ var AllArticle = [
   },
   {
     "slug" : "ga",
-    "title": "Google Analytics"
+    "title": "Google Analytics初入"
   },
   {
     "slug" : "container",
