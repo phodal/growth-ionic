@@ -87,3 +87,25 @@ PRACTICAL_PROGRAMMING["zh-cn"] = {
   "sicp" : "《计算机程序的构造和解释》",
   "legacy-code" : "《修改代码的艺术》"
 };
+
+ARCHITECTURE_DESIGN["zh-cn"]={
+  "architecture-design" : "架构与设计",
+  "basic" : "基础篇",
+  "agile-development" : "《敏捷软件开发：原则、实践与模式》",
+  "heads-first-pattern" : "《深入浅出设计模式》",
+  "design-patterns" : "《设计模式》",
+
+  "intermediate" : "进阶篇",
+  "unix-programming" : "《Unix编程艺术》",
+  "api-design" : "《框架设计的艺术》",
+  "domain-language" : "《领域特定语言》",
+  "enterprise-pattern" : "《企业应用架构模式》",
+
+  "advanced" : "高级篇",
+  "design-deploy" : "《发布!软件的设计与部署》",
+  "domain-driven" : "《领域驱动设计》",
+  "enterprise-integration" : "《企业集成模式》",
+  "beautiful-architecture" : "《架构之美》",
+  "patterns-oriented" : "《面向模式的软件架构》"
+
+};

@@ -87,3 +87,25 @@ PRACTICAL_PROGRAMMING["en"] = {
   "sicp" : '"Structure and Interpretation of Computer Programs"',
   "legacy-code" : '"Working Effectively with Legacy Code"'
 };
+
+ARCHITECTURE_DESIGN["en"]={
+  "architecture-design" : 'Architecture and Design',
+  "basic" : 'Basic',
+  "agile-development" : '"Agile Software Development"',
+  "heads-first-pattern" : '"Head First Design Patterns"',
+  "design-patterns" : '"Design Patterns - Element of Reusable OO Software"',
+
+  "intermediate" : "Intermediate",
+  "unix-programming" : '"The Art of UNIX Programming"',
+  "api-design" : '"Practical API Design"',
+  "domain-language" : '"Domain Specific Language"',
+  "enterprise-pattern" : '"Patterns of Enterprise Application Architecture"',
+
+  "advanced" : "Advanced",
+  "design-deploy" : '"Release it! Design and Deploy Production-Ready Software"',
+  "domain-driven" : '"Domain-Driven Design"',
+  "enterprise-integration" : '"Enterpirse Integration Patterns"',
+  "beautiful-architecture" : '"Beautiful Architecture"',
+  "patterns-oriented" : '"Patterns-Oriented Software Architecture"'
+
+};
