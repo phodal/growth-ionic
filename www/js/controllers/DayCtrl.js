@@ -9,6 +9,28 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
     angular.forEach(Object.keys(TODO_LISTS), function (key) {
       $scope.allDoneItems[key] = [];
     });
+    var HELPER_ARTICLES = {
+      hello: [
+        {
+          slug: 'how-to-learn',
+          title: '如何学好一门技术、语言'
+        },
+        {
+          slug: 'html',
+          title: '无处不在的HTML'
+        },
+        {
+          slug: 'css',
+          title: '无处不在的CSS'
+        },
+        {
+          slug: 'javascript',
+          title: '无处不在的JavaScript'
+        }
+      ]
+    };
+
+    $scope.HELPER = HELPER_ARTICLES;
 
 
     $scope.openTodoModal = function (subtopic) {
