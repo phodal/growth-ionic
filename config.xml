@@ -7,7 +7,7 @@
   <author email="h@phodal.com" href="http://www.growth.ren/">&#xD;
       Fengda Huang&#xD;
     </author>
-  <content src="http://10.29.3.228:8100" original-src="index.html"/>
+  <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
