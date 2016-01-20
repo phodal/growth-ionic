@@ -114,6 +114,28 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       });
     };
 
+    $scope.openDescModal = function (subtopic) {
+      $analytics.trackView('modal ' + subtopic + ' desc');
+
+      $ionicModal.fromTemplateUrl('templates/modal/desc.html', {
+        id: subtopic + '-desc',
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        $http({
+          method: 'GET',
+          url: 'assets/desc/' + subtopic + '.md'
+        }).success(function (response) {
+          $scope.htmlContent = $sce.trustAsHtml(marked(response))
+        }).error(function (data, status) {
+          alert(data + status);
+        });
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
     $scope.closeSpecialModal = function () {
       $scope.currentModal.hide();
     };
