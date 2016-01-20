@@ -12,18 +12,8 @@
         <a class="tab-item" ng-click="openBookListModal('before')"><i class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a> |
         <a class="tab-item" ng-click="openTodoModal('before')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/kickoff">
-        <h2>Kickoff</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/tasking">
-        <h2>Tasking</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/typing">
-        <h2>写代码只是在码字</h2>
+      <ion-item ng-repeat="helper in HELPER.before" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
@@ -37,23 +27,8 @@
         <a class="tab-item" ng-click="openBookListModal('test')"><i class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a> |
         <a class="tab-item" ng-click="openTodoModal('test')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/how-to-test">
-        <h2>如何写测试——测试金字塔</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mock">
-        <h2>MOCK和STUB</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/tdd">
-        <h2>测试如何驱动开发(TDD)</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/selenium">
-        <h2>自动化测试——Selenium</h2>
+      <ion-item ng-repeat="helper in HELPER.test" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
@@ -71,18 +46,8 @@
         <a class="tab-item" ng-click="openSpecialModal('coding', 'tree')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/readable">
-        <h2>可读的代码</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/refactor">
-        <h2>重构</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/intellij-refactor">
-        <h2>Intellij Idea重构</h2>
+      <ion-item ng-repeat="helper in HELPER.coding" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>

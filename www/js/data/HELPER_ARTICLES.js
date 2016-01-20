@@ -88,5 +88,51 @@ var HELPER_ARTICLES = {
       slug: 'micro-services',
       title: '微服务'
     }
+  ],
+  before: [
+    {
+      slug: 'kickoff',
+      title: 'Kickoff?'
+    },
+    {
+      slug: 'tasking',
+      title: 'Tasking'
+    },
+    {
+      slug: 'typing',
+      title: '写代码只是在码字'
+    }
+  ],
+  test: [
+    {
+      slug: 'how-to-test',
+      title: '如何写测试——测试金字塔'
+    },
+    {
+      slug: 'mock',
+      title: 'MOCK和STUB'
+    },
+    {
+      slug: 'tdd',
+      title: '测试如何驱动开发(TDD)'
+    },
+    {
+      slug: 'selenium',
+      title: '自动化测试——Selenium'
+    }
+  ],
+  coding: [
+    {
+      slug: 'readable',
+      title: '可读的代码'
+    },
+    {
+      slug: 'refactor',
+      title: '重构'
+    },
+    {
+      slug: 'intellij-refactor',
+      title: 'Intellij Idea重构'
+    }
   ]
 };
