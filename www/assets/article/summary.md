@@ -1,11 +1,3 @@
-论语有云：
-
-> 吾日三省吾身。
-
-一日三省还是有点过，不过一星期一省也是不错的选择。
-
-##总结和反馈
-
 总结在某种意义上相当于自己对自己的反馈：
 
 ![Output is Input](./assets/article/images/output-input.png)

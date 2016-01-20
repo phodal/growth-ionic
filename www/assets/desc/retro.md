@@ -1,10 +1,5 @@
-Retro四个维度:
+论语有云：
 
-1. Well.
-2. Less Well.
-3. Suggestion
-4. Action
+> 吾日三省吾身。
 
-该模式的特点是会让我们更多的关注less well，关注我们做的不好的那些。
-
-![Retro](img/day7/happy-retro.jpg)
+一日三省还是有点过，不过一星期一省也是不错的选择。
