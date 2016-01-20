@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="ren.growth" version="0.8.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Growth</name>
-  <description>
-    成为顶尖开发者
+  <description>&#xD;
+    成为顶尖开发者&#xD;
     </description>
-  <author email="h@phodal.com" href="http://www.growth.ren/">
-      Fengda Huang
+  <author email="h@phodal.com" href="http://www.growth.ren/">&#xD;
+      Fengda Huang&#xD;
     </author>
-  <content src="index.html"/>
+  <content src="http://10.29.3.228:8100" original-src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
@@ -66,6 +66,11 @@
     <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768"/>
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640"/>
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320"/>
+  </platform>
+  <platform name="wp8">
+    <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
+    <icon src="resources\wp8\icon\Background.png" width="159" height="159"/>
+    <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
   </platform>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
