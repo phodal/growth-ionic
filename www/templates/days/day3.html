@@ -13,13 +13,8 @@
         <a class="tab-item" href="#/app/day/3" ng-click="openTodoModal('container')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/container">
-        <h2>Web容器</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/docker">
-        <h2>Docker</h2>
+      <ion-item ng-repeat="helper in HELPER.container" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
@@ -34,25 +29,11 @@
         <a class="tab-item" href="#/app/day/3" ng-click="openTodoModal('server')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/lnmp">
-        <h2>LNMP</h2>
+      <ion-item ng-repeat="helper in HELPER.server" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/cache">
-        <h2>Web缓存</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/http-server">
-        <h2>HTTP服务器</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/proxy">
-        <h2>代理服务器</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('server', 'tool')"><i class="icon ion-ios-briefcase-outline"></i>{{"tool" | translate}}</a>
     </div>
@@ -68,15 +49,11 @@
         <a class="tab-item" href="#/app/day/3" ng-click="openTodoModal('configurable')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/configurable">
-        <h2>可配置管理</h2>
+      <ion-item ng-repeat="helper in HELPER.configurable" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/toggle">
-        <h2>Toggle</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
+      </div>
     </div>
   </ion-content>
 </ion-view>

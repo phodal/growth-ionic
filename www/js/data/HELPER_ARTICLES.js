@@ -134,5 +134,43 @@ var HELPER_ARTICLES = {
       slug: 'intellij-refactor',
       title: 'Intellij Idea重构'
     }
+  ],
+  container: [
+    {
+      slug: 'container',
+      title: 'Web容器'
+    },
+    {
+      slug: 'docker',
+      title: 'Docker'
+    }
+  ],
+  server: [
+    {
+      slug: 'lnmp',
+      title: 'LNMP'
+    },
+    {
+      slug: 'cache',
+      title: 'Web缓存'
+    },
+    {
+      slug: 'http-server',
+      title: 'HTTP服务器'
+    },
+    {
+      slug: 'proxy',
+      title: '代理服务器'
+    }
+  ],
+  configurable: [
+    {
+      slug: 'configurable',
+      title: '可配置管理'
+    },
+    {
+      slug: 'toggle',
+      title: 'Toggle'
+    }
   ]
 };
