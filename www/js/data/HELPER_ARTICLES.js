@@ -236,5 +236,29 @@ var HELPER_ARTICLES = {
       slug: 'change-code',
       title: '如何修改代码'
     }
+  ],
+  retro: [
+    {
+      slug: 'summary',
+      title: '总结——为了更快的成长'
+    },
+    {
+      slug: 'retro',
+      title: '回顾与改进'
+    }
+  ],
+  arch: [
+    {
+      slug: 'emergent-design',
+      title: '浮现式设计'
+    },
+    {
+      slug: 'arch-pattern',
+      title: '架构模式'
+    },
+    {
+      slug: 'architecture',
+      title: '每个人都是架构师'
+    }
   ]
 };

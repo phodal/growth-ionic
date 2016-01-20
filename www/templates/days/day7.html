@@ -11,12 +11,8 @@
         <a class="tab-item" href="#/app/day/7" ng-click="openTodoModal('retro')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/summary">
-        <h2>总结——为了更快的成长</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/retro">
-        <h2>回顾与改进</h2>
+      <ion-item ng-repeat="helper in HELPER.retro" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
@@ -29,16 +25,8 @@
         <a class="tab-item" href="#/app/day/7" ng-click="openSpecialModal('arch', 'tree')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/emergent-design">
-        <h2>浮现式设计</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/arch-pattern">
-        <h2>架构模式</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/architecture">
-        <h2>每个人都是架构师</h2>
+      <ion-item ng-repeat="helper in HELPER.arch" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
