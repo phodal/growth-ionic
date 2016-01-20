@@ -134,6 +134,8 @@ Plugins:
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
+Windows Phone: [https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md](https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md)
+
 ##Todo
 
 1. Social Communications
