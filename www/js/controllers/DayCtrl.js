@@ -1,5 +1,5 @@
 angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce, $window) {
+  .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce, $window, $translate) {
     $analytics.trackView('Day Ctrl List');
 
     $scope.currentModal = null;
@@ -10,8 +10,7 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.allDoneItems[key] = [];
     });
 
-    $scope.HELPER = HELPER_ARTICLES;
-
+    $scope.HELPER = HELPER_ARTICLES[$translate.use()];
 
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;

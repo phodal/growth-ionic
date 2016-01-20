@@ -48,6 +48,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $translateProvider.translations('en', BOOK_ROADMAP_MENU['en']);
     $translateProvider.translations('en', PRACTICAL_PROGRAMMING['en']);
     $translateProvider.translations('en', ARCHITECTURE_DESIGN['en']);
+    $translateProvider.translations('en', HELPER_ARTICLES['en']);
 
 
     $translateProvider.translations('zh-cn', DAY_TITLE['zh-cn']);
@@ -59,7 +60,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $translateProvider.translations('zh-cn', BOOK_ROADMAP_MENU['zh-cn']);
     $translateProvider.translations('zh-cn', PRACTICAL_PROGRAMMING['zh-cn']);
     $translateProvider.translations('zh-cn', ARCHITECTURE_DESIGN['zh-cn']);
-
+    $translateProvider.translations('zh-cn', HELPER_ARTICLES['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
     var language = window.localStorage.getItem('language');
