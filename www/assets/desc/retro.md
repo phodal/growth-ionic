@@ -1,0 +1,10 @@
+Retro四个维度:
+
+1. Well.
+2. Less Well.
+3. Suggestion
+4. Action
+
+该模式的特点是会让我们更多的关注less well，关注我们做的不好的那些。
+
+![Retro](img/day7/happy-retro.jpg)
