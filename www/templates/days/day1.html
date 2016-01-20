@@ -20,19 +20,8 @@
         <a class="tab-item" href="#/app/day/1" ng-click="openBookListModal('build')"><i
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/git">
-        <h2>Git与版本管理</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/builder">
-        <h2>一个构建系统的构建过程</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/browser-to-server">
-        <h2>从浏览器到服务器发生了什么</h2>
+      <ion-item ng-repeat="helper in HELPER.build" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
@@ -49,24 +38,8 @@
         <a class="tab-item" href="#/app/day/1" ng-click="openBookListModal('front')"><i
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/choice-frontend">
-        <h2>如何选择前端框架</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/ajax">
-        <h2>Ajax与JSON</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/frontend-history">
-        <h2>前端演进史</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvvm">
-        <h2>MVVM</h2>
+      <ion-item ng-repeat="helper in HELPER.front" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
@@ -92,28 +65,8 @@
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/backend-language">
-        <h2>如何选择后台语言?</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/mvc">
-        <h2>MVC</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/persistence">
-        <h2>数据持久化</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/serviceful">
-        <h2>RESTful与服务化趋势</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/micro-services">
-        <h2>微服务</h2>
+      <ion-item ng-repeat="helper in HELPER.mvc" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
 
