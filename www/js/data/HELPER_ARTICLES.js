@@ -172,5 +172,33 @@ var HELPER_ARTICLES = {
       slug: 'toggle',
       title: 'Toggle'
     }
+  ],
+  analytics: [
+    {
+      slug: 'ga',
+      title: 'Google Analytics'
+    },
+    {
+      slug: 'seo',
+      title: 'SEO(搜索引擎优化)'
+    },
+    {
+      slug: 'hadoop',
+      title: 'Hadoop'
+    },
+    {
+      slug: 'spark',
+      title: 'Spark'
+    }
+  ],
+  ux: [
+    {
+      slug: 'ux',
+      title: 'UI与UX'
+    },
+    {
+      slug: 'learn-design',
+      title: '认识设计'
+    }
   ]
 };

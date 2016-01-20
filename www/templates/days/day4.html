@@ -13,23 +13,8 @@
         <a class="tab-item" href="#/app/day/4" ng-click="openTodoModal('analytics')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/ga">
-        <h2>Google Analytics</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/seo">
-        <h2>SEO(搜索引擎优化)</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/hadoop">
-        <h2>Hadoop</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/spark">
-        <h2>Spark</h2>
+      <ion-item ng-repeat="helper in HELPER.analytics" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
@@ -47,12 +32,8 @@
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('ux', 'tree')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/ux">
-        <h2>UI与UX</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/learn-design">
-        <h2>认识设计</h2>
+      <ion-item ng-repeat="helper in HELPER.ux" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
