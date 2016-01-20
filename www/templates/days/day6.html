@@ -11,9 +11,8 @@
         <a class="tab-item" href="#/app/day/6" ng-click="openBookListModal('legacy')"><i
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/legacy-code">
-        <h2>遗留代码</h2>
+      <ion-item ng-repeat="helper in HELPER.legacy" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
@@ -29,18 +28,8 @@
           class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/refactor2">
-        <h2>重构进阶</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/readable">
-        <h2>可读的代码</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/change-code">
-        <h2>如何修改代码</h2>
+      <ion-item ng-repeat="helper in HELPER.refactor" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>

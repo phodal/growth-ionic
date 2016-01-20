@@ -216,5 +216,25 @@ var HELPER_ARTICLES = {
       slug: 'cd',
       title: '持续交付'
     }
+  ],
+  legacy: [
+    {
+      slug: 'legacy-code',
+      title: '遗留代码'
+    }
+  ],
+  refactor: [
+    {
+      slug: 'refactor2',
+      title: '重构进阶'
+    },
+    {
+      slug: 'readable',
+      title: '可读的代码'
+    },
+    {
+      slug: 'change-code',
+      title: '如何修改代码'
+    }
   ]
 };
