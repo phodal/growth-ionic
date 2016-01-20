@@ -200,5 +200,21 @@ var HELPER_ARTICLES = {
       slug: 'learn-design',
       title: '认识设计'
     }
+  ],
+  ci: [
+    {
+      slug: 'ci',
+      title: '搭建持续集成'
+    },
+    {
+      slug: 'auto',
+      title: '自动化构建'
+    }
+  ],
+  cd: [
+    {
+      slug: 'cd',
+      title: '持续交付'
+    }
   ]
 };
