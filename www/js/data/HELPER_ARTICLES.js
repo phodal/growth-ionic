@@ -221,6 +221,10 @@ var HELPER_ARTICLES = {
     {
       slug: 'legacy-code',
       title: '遗留代码'
+    },
+    {
+      slug: 'change-code',
+      title: '如何修改代码'
     }
   ],
   refactor: [
@@ -231,10 +235,6 @@ var HELPER_ARTICLES = {
     {
       slug: 'readable',
       title: '可读的代码'
-    },
-    {
-      slug: 'change-code',
-      title: '如何修改代码'
     }
   ],
   retro: [
