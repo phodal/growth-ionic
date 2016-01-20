@@ -27,6 +27,24 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
           slug: 'javascript',
           title: '无处不在的JavaScript'
         }
+      ],
+      env: [
+        {
+          slug: 'windows-unix',
+          title: 'Windows或者类Unix'
+        },
+        {
+          slug: 'pm',
+          title: '包管理'
+        },
+        {
+          slug: 'env-windows',
+          title: '搭建开发环境(Windows)'
+        },
+        {
+          slug: 'env-osx',
+          title: '搭建开发环境(OSX)'
+        }
       ]
     };
 

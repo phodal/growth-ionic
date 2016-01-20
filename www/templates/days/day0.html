@@ -34,20 +34,8 @@
         <a class="tab-item" href="#/app/day/0" ng-click="openTodoModal('env')"><i
           class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/windows-unix">
-        <h2>Windows或者类Unix</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/pm">
-        <h2>包管理</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/env-windows">
-        <h2>搭建开发环境(Windows)</h2>
-        <i class="icon ion-ios-arrow-right"></i>
-      </ion-item>
-      <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/article/env-osx">
-        <h2>搭建开发环境(OSX)</h2>
+      <ion-item ng-repeat="helper in HELPER.env" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+        <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </div>
