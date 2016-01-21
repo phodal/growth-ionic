@@ -44,7 +44,7 @@ DAY_TITLE["en"] = {
 ABOUT_MENU["en"] = {
   "update" : "Check for update",
   "current-version" : "Current version",
-  "git-hub" : "Git-Hub",
+  "git-hub" : "GitHub",
   "qq-group" : "QQ Group"
 };
 
