@@ -6,7 +6,9 @@ SIDE_MENU["zh-cn"] = {
   "help": "使用指南",
   "about": "关于",
   "more": "更多",
-  "title" : "成为顶尖开发者"
+  "title" : "成为顶尖开发者",
+  "roadmap": "路线图",
+  "talk": "七日谈"
 };
 
 MAIN_VIEW_MENU["zh-cn"] = {

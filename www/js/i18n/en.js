@@ -6,7 +6,9 @@ SIDE_MENU["en"] = {
   "help": "Help",
   "about": "About",
   "more": "More",
-  "title" : "Be Awesome Developer"
+  "title" : "Be Awesome Developer",
+  "roadmap": "Road Map",
+  "talk": "Talk"
 };
 
 MAIN_VIEW_MENU["en"] = {
