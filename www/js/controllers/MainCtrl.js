@@ -1,5 +1,5 @@
 angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices, $translate) {
     if(isAndroid) {
       $updateServices.check('main');
     }
@@ -27,12 +27,15 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         }
       });
     });
+
+    $scope.currentLanguage = $translate.use()
+
     $scope.$on('$ionicView.afterEnter', function () {
       $scope.currentModal = null;
       $scope.subtopic = '';
 
       $scope.allDoneItems = {};
-      angular.forEach(Object.keys(TODO_LISTS), function (key) {
+      angular.forEach(Object.keys(TODO_LISTS[$scope.currentLanguage]), function (key) {
         $scope.allDoneItems[key] = [];
       });
 
@@ -47,8 +50,8 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
       });
 
       function checkTodoItemIsFinish () {
-        $scope.todoMenus = TODO_LISTS;
-        var todoMenuKeys = Object.keys(TODO_LISTS);
+        $scope.todoMenus = TODO_LISTS[$scope.currentLanguage];
+        var todoMenuKeys = Object.keys(TODO_LISTS[$scope.currentLanguage]);
 
         angular.forEach(todoMenuKeys, function (listsKey) {
           $storageServices.get(listsKey + 'Finish', function (result) {
@@ -95,7 +98,7 @@ angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
         $scope.todoLists = [];
         $analytics.trackView('todo ' + subtopic);
 
-        var todoLists = TODO_LISTS[subtopic]['basic'];
+        var todoLists = TODO_LISTS[$scope.currentLanguage][subtopic]['basic'];
         var items = {};
         $storageServices.get($scope.subtopic, function (result) {
           if (result !== undefined) {

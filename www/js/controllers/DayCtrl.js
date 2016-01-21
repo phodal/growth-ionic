@@ -4,20 +4,21 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
 
     $scope.currentModal = null;
     $scope.currentModals = [];
+    $scope.currentLanguage = $translate.use();
 
     $scope.allDoneItems = {};
-    angular.forEach(Object.keys(TODO_LISTS), function (key) {
+    angular.forEach(Object.keys(TODO_LISTS[$scope.currentLanguage]), function (key) {
       $scope.allDoneItems[key] = [];
     });
 
-    $scope.HELPER = HELPER_ARTICLES[$translate.use()];
+    $scope.HELPER = HELPER_ARTICLES[$scope.currentLanguage];
 
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
       $scope.todoLists = [];
       $analytics.trackView('todo ' + subtopic);
 
-      var todoLists = TODO_LISTS[subtopic]['basic'];
+      var todoLists = TODO_LISTS[$scope.currentLanguage][subtopic]['basic'];
       var items = {};
       $storageServices.get($scope.subtopic, function (result) {
         if (result !== undefined) {

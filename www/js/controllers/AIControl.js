@@ -1,14 +1,16 @@
 angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
-  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading, utilsFactory) {
+  .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading, utilsFactory, $translate) {
     $analytics.trackView('AI Controller');
     $ionicLoading.show({
       template: 'Computing...'
     });
 
+    $scope.currentLanguage = $translate.use();
+
     $scope.improves = [];
     $scope.goodSkills = [];
-    $scope.aiTodoLists = TODO_LISTS;
-    var todoMenuKeys = Object.keys(TODO_LISTS);
+    $scope.aiTodoLists = TODO_LISTS[$scope.currentLanguage];
+    var todoMenuKeys = Object.keys(TODO_LISTS[$scope.currentLanguage]);
 
     angular.forEach(todoMenuKeys, function (listsKey) {
       $storageServices.get(listsKey + 'Finish', function (result) {
