@@ -1,3 +1,7 @@
+body {
+  -ms-content-zooming: none;
+}
+
 .days {
   margin: 1em 3em;
 }
