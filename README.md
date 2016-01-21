@@ -1,6 +1,16 @@
 ﻿# Growth —— 成为顶尖开发者
 
+Android版:
+
 已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+
+Windows Phone版:
+
+审核提交中...
+
+iOS版:
+
+开发板认证中...
 
 Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
@@ -160,6 +170,10 @@ Google Analytics:
 
 1. [https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md](https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md)
 2. [http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/](http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/) 
+
+####iOS
+
+Coming soon...
 
 ##Todo
 
