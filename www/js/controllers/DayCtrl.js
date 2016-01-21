@@ -153,10 +153,10 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
 
         $http({method: 'GET', url: 'assets/article/' + article + '.md'}).success(function (response) {
           var articleInfo = $filter('filter')(AllArticle, {"slug": article})[0];
-          console.log(articleInfo);
+
           $scope.title = articleInfo.title;
-            $scope.OpenInStore = function () {
-            window.open(articleInfo.store, '_system', 'location=yes')
+          $scope.EditArticle = function () {
+            window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.md', '_system', 'location=yes');
           };
           $scope.htmlContent = $sce.trustAsHtml(marked(response))
         }).error(function (data, status) {
