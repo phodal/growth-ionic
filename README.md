@@ -161,6 +161,8 @@ Coming soon...
 
 3. [http://stackshare.io/featured-posts](http://stackshare.io/featured-posts)
 
+4. [https://www.awesomes.cn/](https://www.awesomes.cn/)
+
 前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
 
 Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
