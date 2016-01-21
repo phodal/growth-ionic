@@ -39,7 +39,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
     $ionicConfigProvider.navBar.alignTitle('left');
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    $translateProvider.useSanitizeValueStrategy('');
 
     $translateProvider.translations('en', SIDE_MENU['en']);
     $translateProvider.translations('en', MAIN_VIEW_MENU['en']);
