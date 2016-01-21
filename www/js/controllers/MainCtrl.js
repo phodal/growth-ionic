@@ -1,4 +1,4 @@
-angular.module('app.MainCtrl', ['starter.factory', 'hljs', 'starter.utils'])
+angular.module('app.MainCtrl', ['hljs', 'starter.utils'])
   .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices, $translate) {
     if(isAndroid) {
       $updateServices.check('main');

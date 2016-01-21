@@ -1,4 +1,4 @@
-angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
+angular.module('app.AIControl', ['hljs', 'starter.utils'])
   .controller('AIControl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $ionicLoading, utilsFactory, $translate) {
     $analytics.trackView('AI Controller');
     $ionicLoading.show({

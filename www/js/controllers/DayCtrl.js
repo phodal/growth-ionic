@@ -1,4 +1,4 @@
-angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils'])
+angular.module('app.dayController', ['hljs', 'starter.utils'])
   .controller('DayCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $http, $filter, $sce, $window, $translate) {
     $analytics.trackView('Day Ctrl List');
 
