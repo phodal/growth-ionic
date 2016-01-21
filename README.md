@@ -1,22 +1,22 @@
-﻿# Growth —— 成为顶尖开发者
+﻿# Growth —— Be Awesome Developer
 
-**Android版**:
+**Android**:
 
 已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="250"/></a>
 
-**Windows Phone版**:
+**Windows Phone**:
 
 审核提交中...
 
-**iOS版**:
+**iOS**:
 
 开发者认证中...
 
-**Web版**:
+**Web**:
 
-在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+Online: [http://www.growth.ren/](http://www.growth.ren/)
 
 Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
@@ -38,7 +38,7 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 如下图所示：
 
-<img src="www/img/help/start.jpg" width="300">
+<img src="www/img/help/start.jpg" width="400">
 
 1. 技能图谱。点击右上角的图标可以进入技能图谱，技能图谱将展示现在你学到的技术栈，并且可以向你推荐未来应该学习的技术栈。图标上的10则表示你新GET到的功能点数。
 2. 学习路线。学习路线是依据七日来规划的，每一日关注的点不同，如在第一天关注于如何从零开始去搭建项目。
@@ -58,17 +58,17 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 如下图所示：
 
-<img src="www/img/help/roadmap.jpg" width="300">
+<img src="www/img/help/roadmap.jpg" width="400">
 
 在每个Card中会包含如下的Todo List:
 
-<img src="www/img/help/todo.jpg" width="300">
+<img src="www/img/help/todo.jpg" width="400">
 
 ###菜单
 
 向左滑动即可以完成这个事项。
  
-<img src="www/img/help/menu.jpg" width="300"> 
+<img src="www/img/help/menu.jpg" width="400"> 
 
 1. 技能测验。用于验证我们学习的内容，以及查找补漏。
 2. 读书路线。提供不同方向的书单，如前端。
