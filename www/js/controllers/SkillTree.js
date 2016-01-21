@@ -28,7 +28,7 @@ angular.module('app.skillTreeController', ['starter.factory', 'hljs', 'starter.u
     $scope.openSkillsModal = function () {
       $analytics.trackView('All Skills');
 
-      $ionicModal.fromTemplateUrl('templates/skills/skills.html', {
+      $ionicModal.fromTemplateUrl('templates/skills/my_skills.html', {
         id: 'skills',
         scope: $scope,
         animation: 'slide-in-up'
