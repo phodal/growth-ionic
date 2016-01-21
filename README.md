@@ -1,16 +1,22 @@
 ﻿# Growth —— 成为顶尖开发者
 
-Android版:
+**Android版**:
 
-已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
+已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 
 
-Windows Phone版:
+<a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="250"/></a>
+
+**Windows Phone版**:
 
 审核提交中...
 
-iOS版:
+**iOS版**:
 
-开发板认证中...
+开发者认证中...
+
+**Web版**:
+
+在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
 Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
 
@@ -68,13 +74,6 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
 2. 读书路线。提供不同方向的书单，如前端。
 3. 解决方案。提供一些现有框架的框架示例。
 4. 意见和反馈。使用Github Issues来收集用户意见。 
-
-##FAQ
-
-**为什么没有WP和iOS版?**
-
-- 没有iPhone和iOS开发者帐号
-- 没有Windows机器的电脑
 
 ##其他
 
