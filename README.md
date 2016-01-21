@@ -134,10 +134,16 @@ Plugins:
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-Windows Phone: 
+####Windows Phone: 
 
 1. [https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md](https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md)
 2. [http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/](http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/)
+
+Google Analytics:  cordova plugin add https://github.com/dpolivy/google-analytics-plugin#f516ba05835e6c5ce35c572a912b966949b488eb 
+
+Install SDK With NuGet
+
+    PM>  Install-Package GoogleAnalyticsSDK 
 
 ##Todo
 
