@@ -141,6 +141,35 @@ angular.module('app.dayController', ['starter.factory', 'hljs', 'starter.utils']
       $scope.currentModal.hide();
     };
 
+    $scope.openArticleModal = function (article) {
+      console.log('assets/article/' + article + '.md');
+      $analytics.trackView('article ' + article);
+
+      $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
+        id: article,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+
+        $http({method: 'GET', url: 'assets/article/' + article + '.md'}).success(function (response) {
+          var articleInfo = $filter('filter')(AllArticle, {"slug": article})[0];
+          console.log(articleInfo);
+          $scope.title = articleInfo.title;
+            $scope.OpenInStore = function () {
+            window.open(articleInfo.store, '_system', 'location=yes')
+          };
+          $scope.htmlContent = $sce.trustAsHtml(marked(response))
+        }).error(function (data, status) {
+          alert(data + status);
+        });
+
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
+
     $scope.openBookListModal = function (topic) {
       $analytics.trackView('modal book lists');
       $scope.books = $filter('filter')(BOOK_REVIEWS, {"category": topic});

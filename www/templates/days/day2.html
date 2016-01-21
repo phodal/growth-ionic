@@ -12,7 +12,7 @@
         <a class="tab-item" ng-click="openBookListModal('before')"><i class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a> |
         <a class="tab-item" ng-click="openTodoModal('before')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
-      <ion-item ng-repeat="helper in HELPER.before" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+      <ion-item ng-repeat="helper in HELPER.before" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
@@ -27,7 +27,7 @@
         <a class="tab-item" ng-click="openBookListModal('test')"><i class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a> |
         <a class="tab-item" ng-click="openTodoModal('test')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
-      <ion-item ng-repeat="helper in HELPER.test" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+      <ion-item ng-repeat="helper in HELPER.test" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
@@ -46,7 +46,7 @@
         <a class="tab-item" ng-click="openSpecialModal('coding', 'tree')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.coding" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+      <ion-item ng-repeat="helper in HELPER.coding" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>

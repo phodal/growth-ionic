@@ -11,7 +11,7 @@
         <a class="tab-item" href="#/app/day/7" ng-click="openTodoModal('retro')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.retro" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+      <ion-item ng-repeat="helper in HELPER.retro" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
@@ -25,7 +25,7 @@
         <a class="tab-item" href="#/app/day/7" ng-click="openSpecialModal('arch', 'tree')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.arch" class="item item-icon-right" type="item-text-wrap" href="#/app/article/{{helper.slug}}">
+      <ion-item ng-repeat="helper in HELPER.arch" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
