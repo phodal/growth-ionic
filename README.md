@@ -48,7 +48,7 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
  
 如下图所示：
 
-<img src="www/img/help/day.jpg" width="300">
+<img src="www/img/help/day.jpg" width="400">
 
 1. 右上角的简介。会介绍一些每一个事项相关的信息。
 2. GET技能。用于构建技能图谱、提供成长指南。
@@ -74,34 +74,6 @@ Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量
 2. 读书路线。提供不同方向的书单，如前端。
 3. 解决方案。提供一些现有框架的框架示例。
 4. 意见和反馈。使用Github Issues来收集用户意见。 
-
-##其他
-
-前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
-
-Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
-
-前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
-
-
-部分书评来自于亚马逊、豆瓣。
-
-##内容贡献者
-
-感谢以下的内容贡献者们，结果由git-summary生成
-
-     project  : growth
-     repo age : 3 weeks
-     active   : 25 days
-     commits  : 628
-     files    : 723
-     authors  :
-       625	Fengda HUANG  99.5%
-         3	Le Deng       0.5%
-
-英语版:
- 
-1. [Le Deng](https://github.com/raydeng83)
 
 ##Setup && Develop 
 
@@ -179,6 +151,8 @@ Coming soon...
 
 1. Social Communications
 
+##其他
+
 ###Thinking
 
 1. [https://github.com/braydie/HowToBeAProgrammer](https://github.com/braydie/HowToBeAProgrammer)
@@ -186,6 +160,30 @@ Coming soon...
 2. [http://stackshare.io/](http://stackshare.io/)
 
 3. [http://stackshare.io/featured-posts](http://stackshare.io/featured-posts)
+
+前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
+
+Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
+
+前端资料基于: [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
+
+
+部分书评来自于亚马逊、豆瓣。
+
+###内容贡献者
+
+感谢以下的内容贡献者们，结果由git-summary生成
+
+     project  : growth
+     repo age : 4 weeks
+     active   : 28 days
+     commits  : 731
+     files    : 778
+     authors  :
+       724	Fengda HUANG  99.0%
+         7	Le Deng       1%
+
+英语版:  [Le Deng](https://github.com/raydeng83)
 
 ##License
 
