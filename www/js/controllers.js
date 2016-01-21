@@ -5,7 +5,7 @@ angular.module('starter.controllers', ['starter.factory', 'starter.services', 'h
     $scope.isAndroid = isAndroid;
     $scope.isApp = window.cordova !== undefined;
     $scope.version = '0.0.0';
-    if (window.cordova) {
+    if (window.cordova && !isWindowsPhone) {
       $cordovaAppVersion.getVersionNumber().then(function (version) {
         $scope.version = version;
       });
