@@ -5,12 +5,10 @@ angular.module('app.AIControl', ['starter.factory', 'hljs', 'starter.utils'])
       template: 'Computing...'
     });
 
-    $scope.currentLanguage = $translate.use();
-
     $scope.improves = [];
     $scope.goodSkills = [];
-    $scope.aiTodoLists = TODO_LISTS[$scope.currentLanguage];
-    var todoMenuKeys = Object.keys(TODO_LISTS[$scope.currentLanguage]);
+    $scope.aiTodoLists = TODO_LISTS[$translate.use()];
+    var todoMenuKeys = Object.keys(TODO_LISTS[$translate.use()]);
 
     angular.forEach(todoMenuKeys, function (listsKey) {
       $storageServices.get(listsKey + 'Finish', function (result) {
