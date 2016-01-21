@@ -142,7 +142,6 @@ angular.module('app.dayController', ['hljs', 'starter.utils'])
     };
 
     $scope.openArticleModal = function (article) {
-      console.log('assets/article/' + article + '.md');
       $analytics.trackView('article ' + article);
 
       $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
