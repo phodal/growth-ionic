@@ -1,8 +1,8 @@
 {
-  "name": "HelloIonic",
+  "name": "Growth",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.2.1"
+    "ionic": "1.2.4"
   },
   "dependencies": {
     "ngCordova": "~0.1.23-alpha",
