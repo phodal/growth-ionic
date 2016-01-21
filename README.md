@@ -1,4 +1,4 @@
-# Growth —— 成为顶尖开发者
+﻿# Growth —— 成为顶尖开发者
 
 已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 在线预览: [http://www.growth.ren/](http://www.growth.ren/)
 
@@ -134,7 +134,10 @@ Plugins:
     cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
     cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-Windows Phone: [https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md](https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md)
+Windows Phone: 
+
+1. [https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md](https://github.com/Microsoft/cordova-docs/blob/master/articles/getting-started/tutorial-ionic.md)
+2. [http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/](http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/)
 
 ##Todo
 
