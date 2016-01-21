@@ -22,7 +22,8 @@ MAIN_VIEW_MENU["en"] = {
 
 PAGE_TITLE["en"] = {
   "setting": "Setting",
-  "skillmap": "Skill Map"
+  "skillmap": "Skill Map",
+  "intro": "Intro"
 };
 
 DAY_TITLE["en"] = {

@@ -22,7 +22,8 @@ MAIN_VIEW_MENU["zh-cn"] = {
 
 PAGE_TITLE["zh-cn"] = {
   "setting": "Setting",
-  "skillmap": "我的技能图谱"
+  "skillmap": "我的技能图谱",
+  "intro": "简介"
 };
 
 DAY_TITLE["zh-cn"] = {
