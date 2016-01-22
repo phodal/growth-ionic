@@ -110,5 +110,23 @@ ARCHITECTURE_DESIGN["zh-cn"]={
   "enterprise-integration" : "《企业集成模式》",
   "beautiful-architecture" : "《架构之美》",
   "patterns-oriented" : "《面向模式的软件架构》"
-
 };
+
+METHODOLOGY["zh-cn"]={
+  "methodology" : "方法学",
+  "basic" : "基础篇",
+  "story-agile" : "《用户故事与敏捷方法》",
+  "gold-mine" : "《金矿》",
+  "scrum-xp" : "《硝烟中的Scrum和XP》",
+  "continuous-integration" : "《持续集成》",
+
+  "intermediate" : "进阶篇",
+  "lean-thinking" : "《精益思想》",
+  "continuous-delivery" : "《持续交付》",
+  "google-test" : "《Google软件测试之道》",
+  "agile-test" : "《敏捷软件测试》",
+  "extreme-refactor" : "《重构极限编程》",
+
+  "advanced" : "高级篇",
+  "spec-example" : "《实例化需求》"
+}
