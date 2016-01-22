@@ -63,7 +63,7 @@ TODO_LISTS['zh-cn'] = {
       }
     ]
   },
-  'mvc': {
+  backend: {
     'zh': '后台',
     'achievement': '坚实后盾',
     'basic': [
@@ -312,7 +312,7 @@ TODO_LISTS['en'] = {
       }
     ]
   },
-  'mvc': {
+  backend: {
     'zh': 'Backend',
     'achievement': '坚实后盾',
     'basic': [

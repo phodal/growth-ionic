@@ -34,7 +34,7 @@ DAY_TITLE["zh-cn"] = {
   "development-env": "开发环境",
   "build-system": "构建系统",
   "front": "前端",
-  "server": "服务端",
+  "backend": "后台",
   "before": "编码之前",
   "test": "测试",
   "coding": "编码",

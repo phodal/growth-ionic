@@ -34,7 +34,7 @@ angular.module('app.AIControl', ['hljs', 'starter.utils'])
       skills.front = 5;
     }
 
-    if ($scope.goodSkills.indexOf('mvc') !== -1) {
+    if ($scope.goodSkills.indexOf('backend') !== -1) {
       skills.server = 5;
     }
 

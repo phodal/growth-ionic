@@ -34,7 +34,7 @@ DAY_TITLE["en"] = {
   "development-env": "Development Env",
   "build-system": "Build System",
   "front": "Frontend",
-  "server": "Server Side",
+  "backend": "Backend",
   "before": "Before Coding",
   "test": "Test",
   "coding": "Coding",

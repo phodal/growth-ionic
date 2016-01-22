@@ -69,7 +69,7 @@ HELPER_ARTICLES['zh-cn'] = {
       title: 'MVVM'
     }
   ],
-  mvc: [
+  backend: [
     {
       slug: 'backend-language',
       title: '如何选择后台语言?'
@@ -334,7 +334,7 @@ HELPER_ARTICLES['en'] = {
       title: 'MVVM'
     }
   ],
-  mvc: [
+  backend: [
     {
       slug: 'backend-language',
       title: '如何选择后台语言?'
