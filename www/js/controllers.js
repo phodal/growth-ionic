@@ -94,7 +94,8 @@ angular.module('starter.controllers', ['starter.services', 'hljs'])
         $scope.optionSelected = result;
       }
     });
-    $scope.selectUpdated = function(optionSelected) {
+
+    $scope.updateLanguages = function (optionSelected) {
       $storageServices.set('language', optionSelected);
       $translate.use(optionSelected);
     };
