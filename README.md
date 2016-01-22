@@ -27,6 +27,16 @@ QQ群: 529600394，我的微信公众号: phodal
 
 ##简介
 
+Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
+
+ - 完整的Web开发,运维,部署,维护介绍   
+ - 如何写好代码——重构、测试、模式
+ - 遗留代码、遗留系统的形成
+ - 不同阶段所需的技能
+ - 书籍推荐
+ - 技术栈推荐
+ - Web应用解决方案
+ 
 **en**
 
 Growth is a app to help you become awesome developer:
@@ -38,16 +48,6 @@ We design those for you:
  - book roadmap
  - web solution
  - how to test and refactor
- 
-Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
-
- - 完整的Web开发,运维,部署,维护介绍   
- - 如何写好代码——重构、测试、模式
- - 遗留代码、遗留系统的形成
- - 不同阶段所需的技能
- - 书籍推荐
- - 技术栈推荐
- - Web应用解决方案
  
 ###主视图
  
