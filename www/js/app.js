@@ -258,15 +258,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
-      .state('app.seven', {
-        url: '/seven',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/more/seven.html'
-          }
-        }
-      })
-
       .state('app.faq', {
         url: '/faq',
         views: {
