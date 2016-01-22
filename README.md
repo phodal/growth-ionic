@@ -2,29 +2,43 @@
 
 **Android**:
 
-已在各大Android应用商店发布，直接下载：[http://fir.im/phodal](http://fir.im/phodal) 
+Download：[http://fir.im/phodal](http://fir.im/phodal) 
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="250"/></a>
+
+(ps: 已在其他各大Android应用商店发布)
 
 **Windows Phone & Windows 10**:
 
 <a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
-<a href="https://www.microsoft.com/store/apps/9nblggh5g8kx"><img src="https://assets.windowsphone.com/d86ab9b4-2f3d-4a94-92f8-1598073e7343/English_Get_it_Win_10_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/5d2bd562-d242-4538-85f4-857d6457404b/English_Get_it_Win_10_InvariantCulture_Default.png 2x"  alt="Get it on Windows 10" /></a>
+<a href="https://www.microsoft.com/store/apps/9nblggh5g8kx"><img src="https://assets.windowsphone.com/d86ab9b4-2f3d-4a94-92f8-1598073e7343/English_Get_it_Win_10_InvariantCulture_Default@2x.png" srcset="https://assets.windowsphone.com/5d2bd562-d242-4538-85f4-857d6457404b/English_Get_it_Win_10_InvariantCulture_Default.png 2x"  alt="Get it on Windows 10" /></a>
 
 **iOS**:
 
-开发者认证中...
+In development...
 
 **Web**:
 
 Online: [http://www.growth.ren/](http://www.growth.ren/)
 
-Growth交流群(QQ): 529600394，欢迎关注我的微信公众号: phodal
+QQ群: 529600394，我的微信公众号: phodal
 
 ![QRCode](www/img/wechat.jpg)
 
 ##简介
 
+**en**
+
+Growth is a app to help you become awesome developer:
+
+We design those for you:
+ 
+ - full web developer learn, development, deploy, manitance introduction
+ - skill roadmap 
+ - book roadmap
+ - web solution
+ - how to test and refactor
+ 
 Growth关注于**Web开发的流程及其技术栈、学习路线、成长衡量**，如：
 
  - 完整的Web开发,运维,部署,维护介绍   
