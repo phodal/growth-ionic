@@ -7,15 +7,15 @@ TODO_LISTS['zh-cn'] = {
     'basic': [
       {
         'id': 'try-helloworld',
-        'title': '用这个语言写hello,world'
+        'title': '用该语言写hello,world'
       },
       {
         'id': 'learn-grammar',
-        'title': '学习一门语言的语法'
+        'title': '学习该语言的语法'
       },
       {
         'id': 'do-todo-list',
-        'title': '使用这门语言实现一个TODO List'
+        'title': '使用该语言实现一个TODO List'
       }
     ]
   },
@@ -25,7 +25,7 @@ TODO_LISTS['zh-cn'] = {
     'basic': [
       {
         'id': 'try-launch',
-        'title': '在你所使用的操作系统上使用启动器来运行软件'
+        'title': '使用启动器(Launch)来运行软件'
       },
       {
         'id': 'remember-keyshort',
@@ -43,7 +43,7 @@ TODO_LISTS['zh-cn'] = {
     'basic': [
       {
         'id': 'try-angular',
-        'title': '尝试使用angular'
+        'title': '尝试使用Angular'
       },
       {
         'id': 'try-backbone',
@@ -59,7 +59,7 @@ TODO_LISTS['zh-cn'] = {
       },
       {
         'id': 'try-browserify',
-        'title': '使用browserify和npm'
+        'title': '使用Browserify和npm'
       }
     ]
   },
@@ -68,15 +68,23 @@ TODO_LISTS['zh-cn'] = {
     'achievement': '坚实后盾',
     'basic': [
       {
-        'id': 'try-express',
+        'id': 'try-mvc',
         'title': '尝试使用不同的MVC,如Express,Spring MVC'
+      },
+      {
+        'id': 'build-restful',
+        'title': '构建一个RESTful服务'
       },
       {
         'id': 'try-mysql-sqlite',
         'title': '试用不同的数据库MySQL和SQLite'
       },
       {
-        'id': 'try-mongodb',
+        'id': 'try-design-api',
+        'title': '尝试设计一个API'
+      },
+      {
+        'id': 'try-nosql',
         'title': '试用不同的NoSQL数据库——MongoDB'
       }
     ]
