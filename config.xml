@@ -71,7 +71,6 @@
     <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
     <icon src="resources\wp8\icon\Background.png" width="159" height="159"/>
     <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
-    <preference name="fullscreen" value="true" />
   </platform>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
