@@ -31,7 +31,7 @@ angular.module('starter.controllers', ['starter.services', 'hljs'])
     };
   })
 
-  .controller('FeedbackCtrl', function ($scope, $http, $cordovaEmailComposer) {
+  .controller('FeedbackCtrl', function ($scope, $http) {
     $scope.issues = [];
     $http.get('https://api.github.com/repos/phodal/growth/issues').then(function (response) {
       $scope.issues = response.data;
@@ -40,17 +40,6 @@ angular.module('starter.controllers', ['starter.services', 'hljs'])
     $scope.OpenIssue = function (url) {
       window.open(url, '_system', 'location=yes');
     };
-
-    if (window.cordova) {
-      $scope.sendMail = function () {
-        $cordovaEmailComposer.isAvailable().then(function () {
-        }, function () {
-        });
-        var email = {to: 'h@phodal.com', subject: '关于《Growth Ren》', body: '', isHtml: true};
-        $cordovaEmailComposer.open(email).then(null, function () {
-        });
-      }
-    }
   })
 
   .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter, $analytics) {
