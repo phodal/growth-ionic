@@ -168,6 +168,27 @@ angular.module('app.dayController', ['hljs', 'starter.utils'])
       });
     };
 
+    $scope.openToolModal = function (tool) {
+      $analytics.trackView('tool ' + tool);
+
+      $ionicModal.fromTemplateUrl('templates/modal/tool.html', {
+        id: tool,
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+
+        $http({method: 'GET', url: 'assets/tools/' + tool + '.md'}).success(function (response) {
+          $scope.htmlContent = $sce.trustAsHtml(marked(response))
+        }).error(function (data, status) {
+          alert(data + status);
+        });
+
+        modal.show();
+        $scope.currentModal = modal;
+        $scope.currentModals.push(modal);
+      });
+    };
+
 
     $scope.openBookListModal = function (topic) {
       $analytics.trackView('modal book lists');
