@@ -1,4 +1,4 @@
-var TODO_LISTS = {}
+var TODO_LISTS = {};
 
 TODO_LISTS['zh-cn'] = {
   'hello': {
