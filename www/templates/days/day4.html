@@ -13,9 +13,9 @@
         <a class="tab-item" href="#/app/day/4" ng-click="openTodoModal('analytics')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.analytics" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.analytics" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-arrow-right"></i>
+        <i class="icon ion-ios-paper-outline"></i>
       </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/4" ng-click="openToolModal('analytics')"><i class="icon ion-ios-bookmarks-outline"></i>{{"tool" | translate}}</a>
@@ -32,9 +32,9 @@
         <a class="tab-item" href="#/app/day/4" ng-click="openSpecialModal('ux', 'growth')"><i class="icon ion-ios-paper-outline"></i>Growth</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.ux" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.ux" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-arrow-right"></i>
+        <i class="icon ion-ios-paper-outline"></i>
       </ion-item>
     </div>
   </ion-content>

@@ -20,9 +20,9 @@
         <a class="tab-item" href="#/app/day/1" ng-click="openBookListModal('build')"><i
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
-      <ion-item ng-repeat="helper in HELPER.build" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.build" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-arrow-right"></i>
+        <i class="icon ion-ios-paper-outline"></i>
       </ion-item>
     </div>
 
@@ -38,9 +38,9 @@
         <a class="tab-item" href="#/app/day/1" ng-click="openBookListModal('front')"><i
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
-      <ion-item ng-repeat="helper in HELPER.front" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.front" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-arrow-right"></i>
+        <i class="icon ion-ios-paper-outline"></i>
       </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/1" ng-click="openSpecialModal('front', 'tree')"><i
@@ -65,9 +65,9 @@
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.backend" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.backend" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-arrow-right"></i>
+        <i class="icon ion-ios-paper-outline"></i>
       </ion-item>
 
       <div class="item tabs tabs-secondary tabs-icon-left modals">
