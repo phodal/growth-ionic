@@ -65,7 +65,7 @@
           class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a>
       </div>
 
-      <ion-item ng-repeat="helper in HELPER.mvc" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
+      <ion-item ng-repeat="helper in HELPER.backend" class="item item-icon-right" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
