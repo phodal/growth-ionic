@@ -1,10 +1,10 @@
 <ion-popover-view style="height: 8em; width: 8em;">
   <ion-content>
     <div class="list">
-      <ion-item class="item" ng-class="{'active': todoView}" ng-click="setView('todoView')">
+      <ion-item menu-close class="item" href="#/app/main">
         {{ "roadmap" | translate}}
       </ion-item>
-      <ion-item class="item" ng-class="{'active': dayView}" ng-click="setView('dayView')">
+      <ion-item menu-close class="item" href="#/app/todoView">
         {{ "talk" | translate}}
       </ion-item>
     </div>

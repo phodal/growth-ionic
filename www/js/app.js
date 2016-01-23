@@ -4,7 +4,7 @@ var isIOS = ionic.Platform.isIOS();
 var isAndroid = ionic.Platform.isAndroid();
 var isWindowsPhone = ionic.Platform.isWindowsPhone();
 
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoViewCtrl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
@@ -119,6 +119,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
           'menuContent': {
             templateUrl: 'templates/main.html',
             controller: 'MainCtrl'
+          }
+        }
+      })
+
+      .state('app.todoView', {
+        url: '/todoView',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/todoView.html',
+            controller: 'TodoViewCtrl'
           }
         }
       })

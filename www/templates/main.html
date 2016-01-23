@@ -1,14 +1,12 @@
 <ion-view view-title="Growth">
   <ion-nav-buttons side="right">
+    <button class="button button-icon ion-ios-toggle-outline" ng-click="popover.show($event)">
+    </button>
     <a class="button button-icon ion-ios-analytics-outline" href="#/app/skilltree"><span
       class="badge badge-assertive header-badge icon-badge" ng-show="badgePoints > 0">{{badgePoints}}</span></a>
   </ion-nav-buttons>
   <ion-content>
     <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
-    <div class="buttons more-view">
-      <button class="button button-icon ion-ios-toggle-outline" ng-click="popover.show($event)">
-      </button>
-    </div>
     <div class="list card days" ng-show="!todoView">
       <ion-item href="#/app/day/1" class="item item-icon-left"><i class="icon ion-ios-heart"></i>{{"day1" | translate}}</ion-item>
       <ion-item href="#/app/day/2" class="item item-icon-left"><i class="icon ion-ios-star"></i>{{"day2" | translate}}</ion-item>
@@ -19,13 +17,6 @@
       <ion-item href="#/app/day/6" class="item item-icon-left"><i class="icon ion-ios-star-outline"></i>{{"day6" | translate}}
       </ion-item>
       <ion-item href="#/app/day/7" class="item item-icon-left"><i class="icon ion-ios-star"></i>{{"day7" | translate}}</ion-item>
-    </div>
-    <div ng-show="!dayView">
-      <ul class="road-map">
-        <li class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-repeat="(todoKey, todoMenu) in todoMenus" ng-class="isFinish(todoMenu)">
-          <span>{{todoMenu.zh}}</span>
-        </li>
-      </ul>
     </div>
   </ion-content>
 </ion-view>
