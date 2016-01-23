@@ -15,21 +15,28 @@
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/detail">
+          <i class="side-menu-icon icon ion-ios-home-outline"></i>
           Growth
         </ion-item>
         <ion-item menu-close href="#/app/exam">
+          <i class="side-menu-icon icon ion-ios-flask-outline"></i>
           {{"exam" | translate}}
         </ion-item>
         <ion-item menu-close href="#/app/more">
+          <i class="side-menu-icon icon ion-ios-more-outline"></i>
           {{"more" | translate}}
         </ion-item>
         <ion-item menu-close href="#/app/about">
+          <i class="side-menu-icon icon ion-ios-information-outline"></i>
           {{"about" | translate}}
         </ion-item>
       </ion-list>
     </ion-content>
     <ion-footer-bar align-title="left" class="bar-footer">
-      <h1 class="title"><a style="text-decoration: none;" menu-close href="#/app/setting">Setting</a></h1>
+      <h1 class="title side-menu">
+        <i class="side-menu-icon icon ion-ios-cog-outline"></i>
+        <a style="text-decoration: none;" menu-close href="#/app/setting">Setting</a>
+      </h1>
     </ion-footer-bar>
   </ion-side-menu>
 </ion-side-menus>

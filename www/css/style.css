@@ -918,3 +918,11 @@ td-card img {
   color: #fff;
   font-size: 8px;
 }
+
+.bar .title.side-menu a {
+  font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-weight: normal;
+}
+.side-menu-icon {
+  font-size: 1.25em;
+}
