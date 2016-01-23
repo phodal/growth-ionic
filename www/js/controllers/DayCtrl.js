@@ -143,28 +143,25 @@ angular.module('app.dayController', ['hljs', 'starter.utils'])
 
     $scope.openArticleModal = function (article) {
       $analytics.trackView('article ' + article);
+      $http({method: 'GET', url: 'assets/article/' + article + '.md'}).success(function (response) {
+        var articleInfo = $filter('filter')(AllArticle, {"slug": article})[0];
 
-      $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
-        id: article,
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function (modal) {
-
-        $http({method: 'GET', url: 'assets/article/' + article + '.md'}).success(function (response) {
-          var articleInfo = $filter('filter')(AllArticle, {"slug": article})[0];
-
-          $scope.title = articleInfo.title;
-          $scope.EditArticle = function () {
-            window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.md', '_system', 'location=yes');
-          };
-          $scope.htmlContent = $sce.trustAsHtml(marked(response))
-        }).error(function (data, status) {
-          alert(data + status);
+        $scope.title = articleInfo.title;
+        $scope.EditArticle = function () {
+          window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.md', '_system', 'location=yes');
+        };
+        $scope.htmlContent = $sce.trustAsHtml(marked(response));
+        $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
+          id: article,
+          scope: $scope,
+          animation: 'slide-in-up'
+        }).then(function (modal) {
+          modal.show();
+          $scope.currentModal = modal;
+          $scope.currentModals.push(modal);
         });
-
-        modal.show();
-        $scope.currentModal = modal;
-        $scope.currentModals.push(modal);
+      }).error(function (data, status) {
+        alert(data + status);
       });
     };
 
