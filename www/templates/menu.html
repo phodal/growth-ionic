@@ -23,16 +23,13 @@
         <ion-item menu-close href="#/app/more">
           {{"more" | translate}}
         </ion-item>
-        <ion-item menu-close href="#/app/setting">
-          Setting
-        </ion-item>
         <ion-item menu-close href="#/app/about">
           {{"about" | translate}}
         </ion-item>
       </ion-list>
     </ion-content>
-    <ion-footer-bar class="bar-assertive">
-      <h1 class="title">{{"title" | translate}}</h1>
+    <ion-footer-bar align-title="left" class="bar-footer">
+      <h1 class="title"><a style="text-decoration: none;" menu-close href="#/app/setting">Setting</a></h1>
     </ion-footer-bar>
   </ion-side-menu>
 </ion-side-menus>
