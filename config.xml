@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ren.growth" version="0.8.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ren.growth" version="0.8.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Growth</name>
-  <description>&#xD;
-    成为顶尖开发者&#xD;
+  <description>
+    成为顶尖开发者
     </description>
-  <author email="h@phodal.com" href="http://www.growth.ren/">&#xD;
-      Fengda Huang&#xD;
+  <author email="h@phodal.com" href="http://www.growth.ren/">
+      Fengda Huang
     </author>
   <content src="index.html"/>
   <access origin="*"/>
