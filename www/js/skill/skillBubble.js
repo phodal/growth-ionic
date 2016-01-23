@@ -36,15 +36,18 @@ function RenderBubble($storageServices, $window) {
   var format = d3.format(",d"),
     color = d3.scale.category20c();
 
-  var bubble = d3.layout.pack()
+  var width = $("#skills").width();
+  var height = $window.innerWidth;
+
+    var bubble = d3.layout.pack()
     .sort(null)
-    .size([$window.innerWidth, $window.innerWidth])
+    .size([width, height])
     .padding(1);
 
   d3.select('#skillBubble svg').remove();
   var svg = d3.select("#skillBubble").append("svg")
-    .attr("width", $window.innerWidth)
-    .attr("height", $window.innerWidth)
+    .attr("width", width)
+    .attr("height", height)
     .attr("class", "bubble");
 
   var node = svg.selectAll(".node")
