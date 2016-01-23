@@ -246,6 +246,20 @@ TODO_LISTS['zh-cn'] = {
         'title': '试着用编程来分析数据'
       }
     ]
+  },
+  'arch': {
+    'zh': '架构',
+    'achievement': '设计天才',
+    'basic': [
+      {
+        'id': 'design-layer-pattern',
+        'title': '使用分层架构设计应用'
+      },
+      {
+        'id': 'understand-pipe-filter',
+        'title': '了解Pipe and Filters模式'
+      }
+    ]
   }
 };
 
@@ -487,5 +501,19 @@ TODO_LISTS['en'] = {
         'title': '试着用编程来分析数据'
       }
     ]
-  }
+  },
+  'arch': {
+  'zh': '架构',
+  'achievement': '设计天才',
+  'basic': [
+    {
+      'id': 'design-layer-pattern',
+      'title': '使用分层架构设计应用'
+    },
+    {
+      'id': 'understand-pipe-filter',
+      'title': '了解Pipe and Filters模式'
+    }
+  ]
+}
 };
