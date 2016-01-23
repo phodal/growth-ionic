@@ -112,3 +112,22 @@ ARCHITECTURE_DESIGN["en"]={
   "patterns-oriented" : '"Patterns-Oriented Software Architecture"'
 
 };
+
+METHODOLOGY["en"]={
+  "methodology" : "methodology",
+  "basic" : "Basic",
+  "story-agile" : '"User Stories Applied：For Agile Software Development"',
+  "gold-mine" : "The Gold Mine: A Novel of Lean Turnaround",
+  "scrum-xp" : '"Scrum and XP from the Trenches"',
+  "continuous-integration" : '"Continuous Integration: Improving Software Quality and Reducing Risk"',
+
+  "intermediate" : "Intermediate",
+  "lean-thinking" : '"Lean Thinking"',
+  "continuous-delivery" : '"Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation"',
+  "google-test" : '"How Google Tests Software"',
+  "agile-test" : '"Agile Testing: A Practical Guide for Testers and Agile Teams"',
+  "extreme-refactor" : '"Extreme Programming Refactored"',
+
+  "advanced" : "Advanced",
+  "spec-example" : '"Specification by Example"'
+}
