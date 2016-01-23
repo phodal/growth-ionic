@@ -14,28 +14,30 @@
   <ion-side-menu side="left"  expose-aside-when="large">
     <ion-content>
       <ion-list>
-        <ion-item menu-close href="#/app/detail">
+        <ion-item menu-close href="#/app/main" ui-sref=".main" ui-sref-active="active">
           <i class="side-menu-icon icon ion-ios-home-outline"></i>
           Growth
         </ion-item>
-        <ion-item menu-close href="#/app/exam">
+        <ion-item menu-close href="#/app/exam" ui-sref=".exam" ui-sref-active="active">
           <i class="side-menu-icon icon ion-ios-flask-outline"></i>
           {{"exam" | translate}}
         </ion-item>
-        <ion-item menu-close href="#/app/more">
+        <ion-item menu-close href="#/app/more" ui-sref=".more" ui-sref-active="active">
           <i class="side-menu-icon icon ion-ios-more-outline"></i>
           {{"more" | translate}}
         </ion-item>
-        <ion-item menu-close href="#/app/about">
+        <ion-item menu-close href="#/app/about" ui-sref=".about" ui-sref-active="active">
           <i class="side-menu-icon icon ion-ios-information-outline"></i>
           {{"about" | translate}}
         </ion-item>
       </ion-list>
     </ion-content>
     <ion-footer-bar align-title="left" class="bar-footer">
-      <h1 class="title side-menu">
-        <i class="side-menu-icon icon ion-ios-cog-outline"></i>
-        <a style="text-decoration: none;" menu-close href="#/app/setting">Setting</a>
+      <h1 class="title side-menu" >
+        <ion-item class="bottom-menu" menu-close ui-sref=".setting" ui-sref-active="active" href="#/app/setting">
+          <i class="side-menu-icon icon ion-ios-cog-outline"></i>
+          Setting
+        </ion-item>
       </h1>
     </ion-footer-bar>
   </ion-side-menu>

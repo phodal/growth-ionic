@@ -279,7 +279,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.Achievem
         }
       })
 
-      .state('app.2', {
+      .state('app.exam', {
         url: '/exam',
         views: {
           'menuContent': {

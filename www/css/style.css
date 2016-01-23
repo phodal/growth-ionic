@@ -922,6 +922,11 @@ td-card img {
 .bar .title.side-menu a {
   font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   font-weight: normal;
+  padding: 0 49px 0 16px;
+}
+
+h1.title.side-menu {
+  margin: 0;
 }
 .side-menu-icon {
   font-size: 1.25em;
