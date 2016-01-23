@@ -64,9 +64,9 @@ BOOK_ROADMAP_MENU["en"] = {
   "thoughtworks-reading-roadmap" : "Reading-RoadMap",
   "programming-practice" : "Practical Programming",
   "architecture" : "Architecture and Frame",
-  "methodology" : "methodology",
+  "methodology" : "Methodology",
   "leadership" : "Thinking and Leading",
-  "specific-domain" : "Specific-Focus-Area Reading-RoadMap",
+  "specific-domain" : "Domain Reading-RoadMap",
   "front-end" : "Front-End"
 };
 
@@ -114,7 +114,7 @@ ARCHITECTURE_DESIGN["en"]={
 };
 
 METHODOLOGY["en"]={
-  "methodology" : "methodology",
+  "methodology" : "Methodology",
   "basic" : "Basic",
   "story-agile" : '"User Stories Applied：For Agile Software Development"',
   "gold-mine" : "The Gold Mine: A Novel of Lean Turnaround",
