@@ -24,9 +24,11 @@ function RenderSkillTree($window, data) {
   function mouseover(data) {
     var c = getcrumbpath(data);
     i(c);
-    d3
-      .selectAll(".skills-sunburst path")
-      .style("opacity", .3), sunburst
+    //d3
+    //  .selectAll(".skills-sunburst path")
+    //  .style("opacity", .3),
+    //
+    sunburst
       .selectAll("path")
       .filter(function (a) {
         return c.indexOf(a) >= 0
