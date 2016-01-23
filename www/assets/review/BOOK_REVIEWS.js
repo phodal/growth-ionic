@@ -140,7 +140,8 @@ var BOOK_REVIEWS = [
   {
     "slug": "configuration-management",
     "title": "《配置管理最佳实践》",
-    "store": "https://book.douban.com/subject/25717078/"
+    "store": "https://book.douban.com/subject/25717078/",
+    "category": "configurable"
   },
   {
     "slug": "web-monitoring",

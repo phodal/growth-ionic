@@ -46,7 +46,7 @@
       </div>
       <div class="item tabs tabs-secondary tabs-icon-left modals">
         <a class="tab-item" href="#/app/day/3" ng-click="openDescModal('configurable')"><i class="icon ion-ios-information-outline"></i>{{"info" | translate}}</a> |
-        <a class="tab-item" href="#/app/day/3" ng-click="openSpecialModal('configurable', 'tool')"><i class="icon ion-ios-bookmarks-outline"></i>{{"tool" | translate}}&{{"books" | translate}}</a> |
+        <a class="tab-item" href="#/app/day/3" ng-click="openBookListModal('configurable')"><i class="icon ion-ios-bookmarks-outline"></i>{{"books" | translate}}</a> |
         <a class="tab-item" href="#/app/day/3" ng-click="openTodoModal('configurable')"><i class="icon ion-ios-paper-outline"></i>TODO</a>
       </div>
 
@@ -54,6 +54,8 @@
         <h2>{{helper.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
+      <div class="item tabs tabs-secondary tabs-icon-left modals">
+        <a class="tab-item" href="#/app/day/3" ng-click="openToolModal('configurable')"><i class="icon ion-ios-briefcase-outline"></i>{{"tool" | translate}}</a>
       </div>
     </div>
   </ion-content>
