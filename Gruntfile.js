@@ -55,12 +55,13 @@ module.exports = function (grunt) {
           debug: true // Doesn't actually delete but shows log
         },
         files: [
+          {dest: 'assets/', src: ['**'],  action: 'delete'},
           {dest: 'css/', src: ['**'],  action: 'delete'},
           {dest: 'img/', src: ['**'],  action: 'delete'},
           {dest: 'js/', src: ['**'],  action: 'delete'},
           {dest: 'lib/', src: ['**'],  action: 'delete'},
           {dest: 'templates/', src: ['**'],  action: 'delete'},
-          {dest: './', src: ['index.html'], action: 'delete'}
+          {dest: './', src: ['index.html', 'growth.apk', 'version.json'], action: 'delete'}
           //{dest: 'assets/', exclude: "**/*.tgz", action: 'delete'}, // will not delete the tgz
           //{dest: 'assets/large/', exclude: "**/*copy*", flipExclude: true, action: 'delete'}, // will delete everything that has copy in the name
         ]
