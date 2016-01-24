@@ -3,6 +3,10 @@
     <ion-refresher ng-if="topics.length > 0" pulling-text="下拉刷新..." on-refresh="doRefresh()">
     </ion-refresher>
     <ion-list class="topics">
+      <ion-item class="item item-icon-right" ng-show="!topics.length">
+        <div class="sectionTitle"><ion-spinner></ion-spinner></div>
+      </ion-item>
+
       <ion-item class="item-avatar" collection-repeat="topic in topics" collection-item-width="'100%'"collection-item-height="73"
                 href="#/app/topic/{{topic.id}}">
         <img ng-src="{{ (included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl }}">
