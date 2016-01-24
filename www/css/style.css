@@ -1059,7 +1059,7 @@ a {
 }
 
 .topics .item-content {
-  padding: 14px 16px 18px 12px
+  padding: 14px 16px 18px 72px
 }
 
 .topics .item-content>img:not(:first-child) {
