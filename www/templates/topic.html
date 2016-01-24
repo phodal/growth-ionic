@@ -1,0 +1,26 @@
+<ion-view view-title="详情">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-share" ng-click="shareTopic()"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()" >
+    </ion-refresher>
+    <div class="row topic">
+      <div class="col col90">
+        <h4 class="title">{{topic.title}}</h4>
+        <div class="summary">
+          <span class="item-note" am-time-ago="topic.last_reply_at"></span>
+        </div>
+        <div class="topic-content" ng-bind-html="topic.attributes.contentHtml"></div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-light reply-new" keyboard-attach>
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="回复" ng-model="replyData.content" ng-disabled="loginName == null">
+    </label>
+    <button class="button button-small button-clear button-positive">
+      提交
+    </button>
+  </ion-footer-bar>
+</ion-view>

@@ -4,7 +4,7 @@
     </ion-refresher>
     <ion-list class="topics">
       <ion-item class="item-avatar" collection-repeat="topic in topics" collection-item-width="'100%'"collection-item-height="73"
-                href="#/topic/{{topic.id}}">
+                href="#/app/topic/{{topic.id}}">
         <img ng-src="{{ (included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl }}">
         <h2>{{topic.attributes.title}}</h2>
         <p class="summary">

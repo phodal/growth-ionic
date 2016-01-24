@@ -10,4 +10,10 @@ angular.module('starter.controllers')
         $scope.included = response.included;
       });
     };
+  })
+
+  .controller('TopicCtrl', function ($scope, Topics, $stateParams) {
+    var id = parseInt($stateParams.id);
+    $scope.topic = Topics.getTopicById(id);
+    console.log($scope.topic);
   });

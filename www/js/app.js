@@ -161,6 +161,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
         }
       })
 
+      .state('app.topic', {
+        url: '/topic/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/topic.html',
+            controller: 'TopicCtrl'
+          }
+        }
+      })
+
       .state('app.solution', {
         url: "/solution",
         views: {
