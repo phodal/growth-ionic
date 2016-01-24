@@ -120,8 +120,11 @@ function RenderSkillTree($window, data) {
   }
 
   d3.select('.skills-sunburst svg').remove();
-  var width = $("#skills").width(),
-    height = $window.innerWidth,
+  var width = $window.innerWidth;
+  if(width > 768) {
+    width = $("#skills").width()
+  }
+  var height = width,
     rad = Math.min(width, height) / Math.PI,
     q = k,
     r = {

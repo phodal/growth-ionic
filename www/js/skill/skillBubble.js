@@ -36,8 +36,11 @@ function RenderBubble($storageServices, $window) {
   var format = d3.format(",d"),
     color = d3.scale.category20c();
 
-  var width = $("#skills").width();
-  var height = $window.innerWidth;
+  var width = $window.innerWidth;
+  if($window.width > 768) {
+    width = $("#skills").width();
+  }
+  var height = width;
 
     var bubble = d3.layout.pack()
     .sort(null)
