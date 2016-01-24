@@ -1,5 +1,5 @@
 angular.module('app.MainCtrl', ['hljs', 'starter.utils'])
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices) {
     if(isAndroid) {
       $updateServices.check('main');
     }
@@ -27,12 +27,4 @@ angular.module('app.MainCtrl', ['hljs', 'starter.utils'])
         }
       });
     });
-
-    $scope.$on('$ionicView.afterEnter', function () {
-      $ionicPopover.fromTemplateUrl('templates/popover.html', {
-        scope: $scope
-      }).then(function (popover) {
-        $scope.popover = popover;
-      });
-    })
   });

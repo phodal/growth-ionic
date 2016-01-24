@@ -1,5 +1,5 @@
 angular.module('app.TodoViewCtrl', ['hljs', 'starter.utils'])
-  .controller('TodoViewCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $ionicPopover, $updateServices, $translate) {
+  .controller('TodoViewCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $translate) {
     $scope.$on('$ionicView.beforeEnter', function () {
       $scope.badgePoints = 0;
       $storageServices.get('badgePoints', function (points) {
@@ -31,12 +31,6 @@ angular.module('app.TodoViewCtrl', ['hljs', 'starter.utils'])
       };
     }
     checkTodoItemIsFinish();
-
-    $ionicPopover.fromTemplateUrl('templates/popover.html', {
-      scope: $scope
-    }).then(function (popover) {
-      $scope.popover = popover;
-    });
 
     $scope.openTodoModal = function (subtopic) {
       $scope.subtopic = subtopic;
