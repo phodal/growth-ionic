@@ -2,7 +2,8 @@
   "name": "Growth",
   "private": "true",
   "devDependencies": {
-    "ionic": "1.2.4"
+    "ionic": "1.2.4",
+    "angular-resource": "~1.4.9"
   },
   "dependencies": {
     "ngCordova": "~0.1.23-alpha",

@@ -4,7 +4,13 @@ var isIOS = ionic.Platform.isIOS();
 var isAndroid = ionic.Platform.isAndroid();
 var isWindowsPhone = ionic.Platform.isWindowsPhone();
 
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.CommunityCtrl', 'app.TodoViewCtrl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services', 'hc.marked', 'ionic.rating', 'tabSlideBox', 'jett.ionic.filter.bar', 'pascalprecht.translate'])
+angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoViewCtrl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services',
+  'hc.marked',
+  'ionic.rating',
+  'tabSlideBox',
+  'jett.ionic.filter.bar',
+  'pascalprecht.translate',
+  'ngResource'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
