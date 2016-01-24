@@ -7,9 +7,8 @@
     </ion-refresher>
     <div class="row topic">
       <div class="col col90">
-        <h4 class="title">{{topic.title}}</h4>
         <div class="summary">
-          <span class="item-note" am-time-ago="topic.last_reply_at"></span>
+          <span class="item-note" am-time-ago="topic.attributes.time"></span>
         </div>
         <div class="topic-content" ng-bind-html="topic.attributes.contentHtml"></div>
       </div>
