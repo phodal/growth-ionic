@@ -8,8 +8,10 @@ angular.module('starter.controllers')
       Topics.refresh().$promise.then(function (response) {
         $scope.topics = response.data;
         $scope.included = response.included;
-      });
-    };
+      }).finally(function() {
+        $scope.$broadcast('scroll.refreshComplete');
+      })
+    }
   })
 
   .controller('TopicCtrl', function ($scope, Topics, $stateParams) {
