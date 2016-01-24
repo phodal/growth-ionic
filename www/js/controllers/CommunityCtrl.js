@@ -16,6 +16,8 @@ angular.module('starter.controllers')
 
   .controller('TopicCtrl', function ($scope, Topics, $stateParams) {
     var id = parseInt($stateParams.id);
+    $scope.post = Topics.getPostById(id);
+    $scope.topic = Topics.getTopicById(id);
     $scope.topic = Topics.getTopicById(id);
     console.log($scope.topic);
   });

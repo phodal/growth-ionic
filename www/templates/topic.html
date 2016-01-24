@@ -2,16 +2,18 @@
   <ion-content class="has-header">
     <div class="row topic">
       <div class="col col90">
+        <h4 class="title">{{topic.attributes.title}}</h4>
+        <hr />
         <div class="summary">
-          <span class="item-note" am-time-ago="topic.attributes.time"></span>
+          <span class="item-note" am-time-ago="post.attributes.time"></span>
         </div>
-        <div class="topic-content" ng-bind-html="topic.attributes.contentHtml"></div>
+        <div class="topic-content" ng-bind-html="post.attributes.contentHtml"></div>
       </div>
     </div>
   </ion-content>
   <ion-footer-bar align-title="left" class="bar-light reply-new" keyboard-attach>
     <label class="item-input-wrapper">
-      <input type="text" placeholder="回复" ng-model="replyData.content" ng-disabled="loginName == null">
+      <input type="text" placeholder="TBD">
     </label>
     <button class="button button-small button-clear button-positive">
       提交
