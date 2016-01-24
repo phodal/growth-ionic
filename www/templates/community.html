@@ -8,6 +8,7 @@
         <h2>{{topic.attributes.title}}</h2>
         <p class="summary">
           <span ng-if="topic.attributes.isSticky" class="tab hl">置顶</span>
+          <span class="item-note ago" am-time-ago="topic.attributes.lastTime"></span>
         </p>
       </ion-item>
     </ion-list>

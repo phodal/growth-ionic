@@ -3,7 +3,9 @@
   "private": "true",
   "devDependencies": {
     "ionic": "1.2.4",
-    "angular-resource": "~1.4.9"
+    "angular-resource": "~1.4.9",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.11.1"
   },
   "dependencies": {
     "ngCordova": "~0.1.23-alpha",

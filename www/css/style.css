@@ -933,6 +933,131 @@ h1.title.side-menu {
   font-size: 1.25em;
 }
 
+/*
+The MIT License (MIT)
+
+Copyright (c) 2014 Lance Li
+
+Github: https://github.com/lanceli/cnodejs-ionic
+
+*/
+
+#copyright {
+  margin: 20px 0 10px;
+  text-align: center;
+  color: #aaa;
+  text-shadow: 0 1px 0 #fff
+}
+
+.notifyBadge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #EF4E3A;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px
+}
+
+.badge.messagesCount {
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px
+}
+
+.bold {
+  font-weight: 700
+}
+
+.pane {
+  background-color: #f5f5f5
+}
+
+.cnode {
+  color: #80bd01
+}
+
+.cnode-bg {
+  background-color: #80bd01
+}
+
+.item {
+  left: 0;
+  right: 0
+}
+
+.item-divider {
+  color: #555;
+  font-weight: 400;
+  font-size: 14px
+}
+
+.item-gap {
+  border: 0 none;
+  min-height: 0
+}
+
+.item-loading {
+  text-align: center;
+  color: #aaa
+}
+
+.saverMode .item-avatar {
+  padding-left: 14px
+}
+
+.saverMode .item-avatar.item-complex {
+  padding-left: 0
+}
+
+.saverMode .item-avatar>img:first-child {
+  -webkit-transform: translate3d(-2000px,-2000px,0)
+}
+
+.saverMode .item-avatar .item-content {
+  padding-left: 14px;
+  padding-right: 16px
+}
+
+.saverMode .item-avatar .item-content>img:first-child {
+  -webkit-transform: translate3d(-2000px,-2000px,0)
+}
+
+.markdown-text a {
+  color: #778087
+}
+
+.markdown-text ul {
+  list-style-type: disc;
+  margin-bottom: 5px;
+  margin-left: 15px
+}
+
+.markdown-text ul ul {
+  list-style-type: circle
+}
+
+a {
+  color: #08c;
+  text-decoration: none
+}
+
+#logo {
+  width: 128px;
+  height: 30px;
+  margin-left: 10px
+}
+
+#devTag {
+  position: relative;
+  font-size: 14px
+}
+
 .topics .item-content {
   padding: 14px 16px 18px 12px
 }
@@ -979,4 +1104,34 @@ h1.title.side-menu {
   width: 16px;
   border-radius: 8px;
   vertical-align: middle
+}
+
+.replies .item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: normal
+}
+
+.replies .reply-content img {
+  max-width: 100%
+}
+
+.replies .reply-content p {
+  overflow: visible!important;
+  white-space: normal!important
+}
+
+.topic-create .topic-tabs {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0
+}
+
+.reply-new input {
+  background: 0 0
+}
+
+.user .item-content {
+  padding-right: 16px
 }

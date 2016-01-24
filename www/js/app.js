@@ -10,8 +10,11 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
   'tabSlideBox',
   'jett.ionic.filter.bar',
   'pascalprecht.translate',
+  'angularMoment',
   'ngResource'])
-  .run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform, amMoment) {
+    amMoment.changeLocale('zh-cn');
+
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
         analytics.startTrackerWithId('UA-71907748-1');
