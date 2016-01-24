@@ -932,3 +932,51 @@ h1.title.side-menu {
   padding: 0 0.5em;
   font-size: 1.25em;
 }
+
+.topics .item-content {
+  padding: 14px 16px 18px 12px
+}
+
+.topics .item-content>img:not(:first-child) {
+  -webkit-transform: translate3d(-2000px,-2000px,0);
+  position: absolute
+}
+
+.topics .activated .tab:not(.hl) {
+  background-color: #aeaeae;
+  color: #fff
+}
+
+.topics .ago,.topics .summary {
+  font-size: 12px
+}
+
+.topics .tab {
+  background-color: #E5E5E5;
+  color: #999;
+  border-radius: 2px;
+  padding: 2px 4px
+}
+
+.topics .hl {
+  background-color: #80bd01;
+  color: #fff
+}
+
+.topic-content img {
+  max-width: 100%
+}
+
+.topic .title {
+  margin: 0
+}
+
+.topic .summary {
+  margin: 8px 0
+}
+
+.topic .avatar {
+  width: 16px;
+  border-radius: 8px;
+  vertical-align: middle
+}

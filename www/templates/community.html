@@ -1,11 +1,14 @@
 <ion-view view-title="{{'community' | translate}}">
-  <ion-content>
+  <ion-content class="has-header">
     <ion-refresher ng-if="topics.length > 0" pulling-text="下拉刷新..." on-refresh="doRefresh()">
     </ion-refresher>
     <ion-list class="topics">
       <ion-item class="item-avatar" collection-repeat="topic in topics"collection-item-width="'100%'"collection-item-height="73"
                 href="#/topic/{{topic.id}}">
         <h2>{{topic.attributes.title}}</h2>
+        <p class="summary">
+          <span ng-if="topic.attributes.isSticky" class="tab hl">置顶</span>
+        </p>
       </ion-item>
     </ion-list>
   </ion-content>
