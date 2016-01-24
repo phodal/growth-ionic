@@ -10,8 +10,4 @@ angular.module('starter.controllers')
         $scope.included = response.included;
       });
     };
-    $scope.getUserInfo = function (a) {
-      console.log(a);
-      return 'http://forum.growth.ren/assets/avatars/cnhnl3phpl8otwkh.jpg';
-    }
   });
