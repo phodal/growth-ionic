@@ -929,5 +929,6 @@ h1.title.side-menu {
   margin: 0;
 }
 .side-menu-icon {
+  padding: 0 0.5em;
   font-size: 1.25em;
 }
