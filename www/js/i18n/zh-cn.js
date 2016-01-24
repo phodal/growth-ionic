@@ -8,7 +8,8 @@ SIDE_MENU["zh-cn"] = {
   "more": "更多",
   "title" : "成为顶尖开发者",
   "roadmap": "路线图",
-  "talk": "七日谈"
+  "talk": "七日谈",
+  "community": "社区"
 };
 
 MAIN_VIEW_MENU["zh-cn"] = {

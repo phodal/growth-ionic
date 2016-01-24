@@ -8,7 +8,8 @@ SIDE_MENU["en"] = {
   "more": "More",
   "title" : "Be Awesome Developer",
   "roadmap": "Road Map",
-  "talk": "Talk"
+  "talk": "Talk",
+  "community": "Community"
 };
 
 MAIN_VIEW_MENU["en"] = {

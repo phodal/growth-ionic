@@ -142,6 +142,15 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
         }
       })
 
+      .state('app.community', {
+        url: '/community',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community.html'
+          }
+        }
+      })
+
       .state('app.solution', {
         url: "/solution",
         views: {
