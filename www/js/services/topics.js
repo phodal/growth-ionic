@@ -13,7 +13,6 @@ angular.module('starter.services')
       getPostById: function (id) {
         return $filter('filter')(res.included, {type: "posts", id: id})[0];
       },
-
       getTopicById: function (id) {
         return $filter('filter')(res.data, {type: "discussions", id: id})[0];
       },
