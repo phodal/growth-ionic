@@ -4,14 +4,19 @@ var isIOS = ionic.Platform.isIOS();
 var isAndroid = ionic.Platform.isAndroid();
 var isWindowsPhone = ionic.Platform.isWindowsPhone();
 
-angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoViewCtrl', 'app.AchievementCtrl', 'app.MainCtrl', 'app.AIControl', 'app.skillTreeController', 'app.quizController', 'app.reviewController', 'app.dayController', 'starter.controllers', 'starter.services',
-  'hc.marked',
-  'ionic.rating',
-  'tabSlideBox',
-  'jett.ionic.filter.bar',
-  'pascalprecht.translate',
-  'angularMoment',
-  'ngResource'])
+angular.module('starter', [
+    'ionic',
+    'ngCordova',
+    'hc.marked',
+    'ionic.rating',
+    'tabSlideBox',
+    'jett.ionic.filter.bar',
+    'pascalprecht.translate',
+    'angularMoment',
+    'ngResource',
+    'starter.controllers',
+    'starter.services'
+  ])
   .run(function ($ionicPlatform, amMoment) {
     amMoment.changeLocale('zh-cn');
 
@@ -32,8 +37,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
         //StatusBar.styleDefault();
         StatusBar.backgroundColorByHexString("#387ef5");
       }
-      if(typeof navigator.globalization !== "undefined") {
-        navigator.globalization.getPreferredLanguage(function(language) {
+      if (typeof navigator.globalization !== "undefined") {
+        navigator.globalization.getPreferredLanguage(function (language) {
           //var lang = angular.lowercase(language.value);
           //$translate.use(lang).then(function(data) {
           //  alert("SUCCESS -> " + data);
@@ -168,7 +173,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
             templateUrl: 'templates/topic.html',
             controller: 'TopicCtrl',
             resolve: {
-              discussion: function(Discussions, $stateParams) {
+              discussion: function (Discussions, $stateParams) {
                 return Discussions.get({id: $stateParams.id});
               }
             }
@@ -312,7 +317,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
           }
         }
       })
-      
+
       .state('app.exam', {
         url: '/exam',
         views: {
@@ -458,3 +463,5 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
 
     $urlRouterProvider.otherwise('/app/main');
   });
+
+angular.module('starter.controllers', ['starter.factory', 'hljs', 'starter.utils', 'ionic.contrib.ui.tinderCards']);

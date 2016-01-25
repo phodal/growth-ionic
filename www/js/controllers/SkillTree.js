@@ -1,4 +1,4 @@
-angular.module('app.skillTreeController', ['hljs', 'starter.utils'])
+angular.module('starter.controllers')
 
   .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics, $window) {
     $scope.showSkillMap = true;

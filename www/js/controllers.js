@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services', 'hljs'])
+angular.module('starter.controllers')
   .controller('AboutCtrl', function ($scope, $analytics, $updateServices, $cordovaAppVersion) {
     $analytics.trackView('About Ctrl');
     $scope.isAndroid = isAndroid;

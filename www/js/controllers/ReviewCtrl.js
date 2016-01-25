@@ -1,4 +1,4 @@
-angular.module('app.reviewController', ['hljs', 'starter.utils'])
+angular.module('starter.controllers')
   .controller('ReviewCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter, $analytics) {
     $analytics.trackView('Review');
 

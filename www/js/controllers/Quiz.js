@@ -1,5 +1,4 @@
-angular.module('app.quizController', ['starter.factory', 'hljs', 'starter.utils', 'ionic.contrib.ui.tinderCards'])
-
+angular.module('starter.controllers')
   .controller('CardCtrl', function ($scope, TDCardDelegate) {
     $scope.cardSwipedLeft = function (index) {
       $scope.addCard();

@@ -1,4 +1,4 @@
-angular.module('app.TodoViewCtrl', ['hljs', 'starter.utils'])
+angular.module('starter.controllers')
   .controller('TodoViewCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $translate) {
     $scope.$on('$ionicView.beforeEnter', function () {
       $scope.badgePoints = 0;

@@ -1,4 +1,4 @@
-angular.module('app.AchievementCtrl', ['hljs', 'starter.utils'])
+angular.module('starter.controllers')
   .controller('AchievementCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $translate) {
     $analytics.trackView('Achievement Controller');
     $scope.achievements = [];

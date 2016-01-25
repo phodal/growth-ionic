@@ -1,3 +1,3 @@
-angular.module('app.AppControl', ['hljs', 'starter.utils'])
+angular.module('starter.controllers')
   .controller('AppCtrl', function ($scope) {
   });
