@@ -12,7 +12,7 @@ angular.module('starter.services')
     };
     return {
       getTopicById: function (id) {
-        return topicResource.get({id: id}, function(response) {
+        return topicResource.get({id: id}, function (response) {
           return response;
         });
       },
@@ -23,4 +23,13 @@ angular.module('starter.services')
         });
       }
     };
+  })
+  .factory('Discussions', function ($resource, CONFIG, TokenHandler) {
+    var resource = $resource('http://forum.growth.ren/' + 'api/discussions/:id', {id: '@id'}, {
+      update: {method: 'PUT'},
+      all: {method: 'GET'}
+    });
+
+    resource = TokenHandler.wrapActions(resource, ['query', 'update', 'save', 'get', 'remove', 'delete', 'all']);
+    return resource;
   });
