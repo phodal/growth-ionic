@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope) {
+  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope, $ionicModal) {
     Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;
@@ -13,7 +13,27 @@ angular.module('starter.controllers')
       })
     };
 
-    $scope.login = function(user) {
+    // Form data for the login modal
+    $scope.user = {};
+
+    // Create the login modal that we will use later
+    $ionicModal.fromTemplateUrl('templates/login.html', {
+      scope: $scope
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+    // Triggered in the login modal to close it
+    $scope.closeLogin = function() {
+      $scope.modal.hide();
+    };
+
+    // Open the login modal
+    $scope.login = function() {
+      $scope.modal.show();
+    };
+
+    $scope.doLogin = function(user) {
       var payload = {
         identification: user.username,
         password: user.password
