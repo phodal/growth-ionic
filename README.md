@@ -17,6 +17,10 @@ Download：[http://fir.im/phodal](http://fir.im/phodal)
 
 In development...
 
+**Desktop**
+
+In Build...
+
 **Web**:
 
 Online: [http://www.growth.ren/](http://www.growth.ren/)
