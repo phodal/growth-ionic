@@ -1,7 +1,12 @@
 <ion-view view-title="{{'community' | translate}}(ALPHA)">
   <ion-content class="has-header">
-    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+    <ion-refresher ng-if="topics.length > 0" pulling-text="下拉刷新..." on-refresh="doRefresh()">
     </ion-refresher>
+
+    <ion-item class="item item-icon-right" ng-show="!topics">
+      <div class="sectionTitle"><ion-spinner></ion-spinner></div>
+    </ion-item>
+
     <ion-list class="topics">
       <ion-item class="item-avatar" collection-repeat="topic in topics" collection-item-width="'100%'"collection-item-height="73"
                 href="#/app/topic/{{topic.relationships.startPost.data.id}}">
