@@ -14,10 +14,18 @@ angular.module('starter.services')
         return $filter('filter')(res.included, {type: "posts", id: id})[0];
       },
       getTopicById: function (id) {
-        return $filter('filter')(res.data, {type: "discussions", id: id})[0];
+        //if (JSON.stringify(res) === '{}') {
+        //  this.refresh().$promise.then(function (response) {
+        //    res = response;
+        //    topics = response.data;
+        //    return $filter('filter')(res.data, {type: "discussions", id: id})[0];
+        //  })
+        //} else {
+          return $filter('filter')(res.data, {type: "discussions", id: id})[0];
+        //}
       },
       refresh: function () {
-        return getTopics({}, 1, function (response) {
+        return getTopics({}, function (response) {
           res = response;
           topics = response.data;
         });
