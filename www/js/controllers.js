@@ -31,17 +31,6 @@ angular.module('starter.controllers', ['starter.services', 'hljs'])
     };
   })
 
-  .controller('FeedbackCtrl', function ($scope, $http) {
-    $scope.issues = [];
-    $http.get('https://api.github.com/repos/phodal/growth/issues').then(function (response) {
-      $scope.issues = response.data;
-    });
-
-    $scope.OpenIssue = function (url) {
-      window.open(url, '_system', 'location=yes');
-    };
-  })
-
   .controller('ArticleCtrl', function ($scope, $sce, $stateParams, $http, $ionicLoading, marked, $filter, $analytics) {
     $analytics.trackView('Article Detail');
 

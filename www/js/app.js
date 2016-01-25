@@ -312,17 +312,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
           }
         }
       })
-
-      .state('app.feedback', {
-        url: '/feedback',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/more/feedback.html',
-            controller: 'FeedbackCtrl'
-          }
-        }
-      })
-
+      
       .state('app.exam', {
         url: '/exam',
         views: {
