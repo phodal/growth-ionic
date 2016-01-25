@@ -24,6 +24,12 @@
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
 
+  <script>
+    //remove module for electron
+    if(typeof module !== 'undefined' && module && module.exports){
+      delete module;
+    }
+  </script>
   <script src="lib/highlightjs/highlight.pack.min.js"></script>
   <script src="lib/angular-highlightjs/angular-highlightjs.min.js"></script>
   <script src="lib/marked/marked.min.js"></script>
