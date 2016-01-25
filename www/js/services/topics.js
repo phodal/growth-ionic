@@ -4,25 +4,17 @@ angular.module('starter.services')
     var topics = [];
     var res = {};
     var resource = $resource(api + '/discussions');
+    var topicResource = $resource(api + '/discussions/:id');
     var getTopics = function (tab, page, callback) {
       return resource.get({}, function (r) {
         return callback && callback(r);
       });
     };
     return {
-      getPostById: function (id) {
-        return $filter('filter')(res.included, {type: "posts", id: id})[0];
-      },
       getTopicById: function (id) {
-        //if (JSON.stringify(res) === '{}') {
-        //  this.refresh().$promise.then(function (response) {
-        //    res = response;
-        //    topics = response.data;
-        //    return $filter('filter')(res.data, {type: "discussions", id: id})[0];
-        //  })
-        //} else {
-          return $filter('filter')(res.data, {type: "discussions", id: id})[0];
-        //}
+        return topicResource.get({id: id}, function(response) {
+          return response.data;
+        });
       },
       refresh: function () {
         return getTopics({}, 1, function (response) {
