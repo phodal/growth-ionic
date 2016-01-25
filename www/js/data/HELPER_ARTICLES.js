@@ -204,7 +204,7 @@ HELPER_ARTICLES['zh-cn'] = {
     },
     {
       slug: 'learn-design',
-      title: '认识设计'
+      title: '认知设计'
     }
   ],
   ci: [
@@ -473,7 +473,7 @@ HELPER_ARTICLES['en'] = {
     },
     {
       slug: 'learn-design',
-      title: '认识设计'
+      title: '认知设计'
     }
   ],
   ci: [

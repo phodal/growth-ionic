@@ -54,7 +54,7 @@ var ALL_SKILLS = {
     {text: "Hadoop"}
   ],
   "ux": [
-    {text: "Learning Design", display: "认识设计"},
+    {text: "Learning Design", display: "认知设计"},
     {text: "Human Factors", display: "人因工程学"},
     {text: "Photoshop"}
   ],

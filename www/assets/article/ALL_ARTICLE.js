@@ -121,7 +121,7 @@ var AllArticle = [
   },
   {
     "slug" : "learn-design",
-    "title": "认识设计"
+    "title": "认知设计"
   },
   {
     "slug" : "docker",
