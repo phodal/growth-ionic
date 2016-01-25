@@ -4,7 +4,7 @@ angular.module('starter.services')
     var topics = [];
     var res = {};
     var resource = $resource(api + '/discussions');
-    var topicResource = $resource(api + '/discussions/:id');
+    var topicResource = $resource(api + '/posts/:id');
     var getTopics = function (tab, page, callback) {
       return resource.get({}, function (r) {
         return callback && callback(r);
@@ -13,7 +13,7 @@ angular.module('starter.services')
     return {
       getTopicById: function (id) {
         return topicResource.get({id: id}, function(response) {
-          return response.data;
+          return response;
         });
       },
       refresh: function () {

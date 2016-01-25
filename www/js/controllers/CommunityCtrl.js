@@ -14,9 +14,10 @@ angular.module('starter.controllers')
     }
   })
 
-  .controller('TopicCtrl', function ($scope, Topics, $stateParams) {
+  .controller('TopicCtrl', function ($scope, Topics, $stateParams, $filter) {
     var id = parseInt($stateParams.id);
     Topics.getTopicById(id).$promise.then(function (response) {
       $scope.topic = response.data;
+      $scope.user = $filter('filter')(response.included, {type: "users"})[0];
     });
   });
