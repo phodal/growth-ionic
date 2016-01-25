@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Discussions) {
+  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope) {
     Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;
@@ -11,7 +11,23 @@ angular.module('starter.controllers')
       }).finally(function () {
         $scope.$broadcast('scroll.refreshComplete');
       })
-    }
+    };
+
+    $scope.login = function(user) {
+      var payload = {
+        identification: user.username,
+        password: user.password
+      };
+
+      $http.post('http://forum.growth.ren/' + 'api/token', payload)
+        .success(function(data, status) {
+          $rootScope.userId = data.userId;
+          TokenHandler.set(data.token);
+        })
+        .error(function(data, status) {
+          console.log(data);
+        });
+    };
   })
 
   .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion) {
