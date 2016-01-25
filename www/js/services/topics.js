@@ -25,7 +25,7 @@ angular.module('starter.services')
         //}
       },
       refresh: function () {
-        return getTopics({}, function (response) {
+        return getTopics({}, 1, function (response) {
           res = response;
           topics = response.data;
         });
