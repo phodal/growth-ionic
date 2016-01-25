@@ -15,6 +15,7 @@ angular.module('starter.controllers')
 
     // Form data for the login modal
     $scope.user = {};
+    $scope.isLogin = false;
 
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -40,9 +41,12 @@ angular.module('starter.controllers')
       };
 
       $http.post('http://forum.growth.ren/' + 'api/token', payload)
-        .success(function(data, status) {
+        .success(function(data) {
+          $scope.isLogin = true;
           $rootScope.userId = data.userId;
           TokenHandler.set(data.token);
+
+          $scope.closeLogin();
         })
         .error(function(data, status) {
           console.log(data);
