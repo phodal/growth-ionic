@@ -4,6 +4,7 @@
       <div class="col col90">
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
+          <img class="avatar" ng-src="{{ user.attributes.avatarUrl }}" />
           <span class="item-note" am-time-ago="topic.attributes.startTime"></span>
         </div>
         <div class="topic-content" ng-bind-html="post.attributes.contentHtml"></div>

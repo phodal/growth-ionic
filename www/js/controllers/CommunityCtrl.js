@@ -16,9 +16,9 @@ angular.module('starter.controllers')
 
   .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion) {
     discussion.$promise.then(function (response) {
-      console.log(response);
       $scope.topic = response.data;
       var postId = response.data.relationships.posts.data[0].id;
       $scope.post = $filter('filter')(response.included, {type: "posts", id: postId})[0];
+      $scope.user = $filter('filter')(response.included, {type: "users"})[0];
     });
   });

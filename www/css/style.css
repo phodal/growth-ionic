@@ -1093,17 +1093,42 @@ a {
 }
 
 .topic .title {
-  margin: 0
+  margin: 0;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 .topic .summary {
-  margin: 8px 0
+  margin: 16px 0
 }
 
 .topic .avatar {
-  width: 16px;
-  border-radius: 8px;
+  width: 32px;
+  border-radius: 32px;
   vertical-align: middle
+}
+
+.topic h1 {
+  font-size: 1.4em;
+}
+
+.topic h2 {
+  font-size: 1.3em;
+}
+
+.topic h3 {
+  font-size: 1.2em;
+}
+
+.topic h4 {
+  font-size: 1.1em;
+}
+
+.topic h1,
+.topic h2,
+.topic h3,
+.topic h4 {
+  text-align: center;
 }
 
 .replies .item {
