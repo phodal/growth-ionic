@@ -166,7 +166,12 @@ angular.module('starter', ['ionic', 'ngCordova', 'app.AppControl', 'app.TodoView
         views: {
           'menuContent': {
             templateUrl: 'templates/topic.html',
-            controller: 'TopicCtrl'
+            controller: 'TopicCtrl',
+            resolve: {
+              discussion: function(Discussions, $stateParams) {
+                return Discussions.get({id: $stateParams.id});
+              }
+            }
           }
         }
       })

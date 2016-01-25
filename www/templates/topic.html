@@ -4,9 +4,9 @@
       <div class="col col90">
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
-          <span class="item-note" am-time-ago="topic.attributes.time"></span>
+          <span class="item-note" am-time-ago="topic.attributes.startTime"></span>
         </div>
-        <div class="topic-content" ng-bind-html="topic.attributes.contentHtml"></div>
+        <div class="topic-content" ng-bind-html="post.attributes.contentHtml"></div>
       </div>
     </div>
   </ion-content>

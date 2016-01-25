@@ -1,23 +1,24 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Topics) {
-    Topics.refresh().$promise.then(function (response) {
+  .controller('CommunityCtrl', function ($scope, Discussions) {
+    Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;
     });
     $scope.doRefresh = function () {
-      Topics.refresh().$promise.then(function (response) {
+      Discussions.all().$promise.then(function (response) {
         $scope.topics = response.data;
         $scope.included = response.included;
-      }).finally(function() {
+      }).finally(function () {
         $scope.$broadcast('scroll.refreshComplete');
       })
     }
   })
 
-  .controller('TopicCtrl', function ($scope, Topics, $stateParams, $filter) {
-    var id = parseInt($stateParams.id);
-    Topics.getTopicById(id).$promise.then(function (response) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion) {
+    discussion.$promise.then(function (response) {
+      console.log(response);
       $scope.topic = response.data;
-      $scope.user = $filter('filter')(response.included, {type: "users"})[0];
+      var postId = response.data.relationships.posts.data[0].id;
+      $scope.post = $filter('filter')(response.included, {type: "posts", id: postId})[0];
     });
   });
