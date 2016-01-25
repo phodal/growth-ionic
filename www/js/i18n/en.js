@@ -9,6 +9,8 @@ SIDE_MENU["en"] = {
   "title" : "Be Awesome Developer",
   "roadmap": "Road Map",
   "talk": "Talk",
+  "articles": "Articles",
+  "reviews": "Reviews",
   "community": "Community"
 };
 
