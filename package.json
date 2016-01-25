@@ -1,9 +1,11 @@
 {
   "name": "growth",
-  "version": "1.1.1",
+  "productName": "Growth",
+  "version": "0.8.11",
   "main": "desktop.js",
   "scripts": {
-    "start": "electron desktop.js"
+    "start": "electron desktop.js",
+    "build": "electron-packager . $npm_package_productName --out=dist --platform=darwin --arch=x64 --ignore='(node_modules|platforms|plugins|resources|scss|wp8|hooks|aws-credentials.json|.io-config.json)' --prune --asar --version=0.36.5 --app-version=$npm_package_version"
   },
   "description": "growth: An Ionic project",
   "dependencies": {

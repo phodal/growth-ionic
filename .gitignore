@@ -83,3 +83,4 @@ crashlytics-build.properties
 
 aws-credentials.json
 .io-config.json
+dist/
