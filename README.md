@@ -19,6 +19,8 @@ In development...
 
 **Desktop**
 
+Powered by Electron
+
 In Build...
 
 **Web**:
