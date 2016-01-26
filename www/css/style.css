@@ -1160,3 +1160,22 @@ a {
 .user .item-content {
   padding-right: 16px
 }
+
+.PostMention {
+  margin: 0 3px
+}
+
+.PostMention:first-child {
+  margin-left: 0
+}
+
+.PostMention:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f4c7";
+  margin-right: 5px
+}
