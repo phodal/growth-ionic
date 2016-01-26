@@ -1194,8 +1194,20 @@ a {
     width: 80%;
   }
 
+  marked {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  marked img.full-image,
   marked img {
     width: auto;
+    max-width: 400px;
     margin: 0 auto;
+  }
+
+  .intro .full-image {
+    width: auto;
+    right: 0;
   }
 }
