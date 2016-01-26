@@ -12,8 +12,8 @@
     </div>
     <div class="list card">
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions" ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
-        <!--<img src="{{getAvatar(comment.relationships.user)}}">-->
-        <!--<h2>{{getUsername(comment.relationships.user)}}</h2>-->
+        <img src="{{getAvatar(comment.relationships.user)}}">
+        <h2>{{getUsername(comment.relationships.user)}}</h2>
         <div ng-bind-html="comment.attributes.contentHtml"></div>
       </div>
     </div>
