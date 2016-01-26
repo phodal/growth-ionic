@@ -54,7 +54,12 @@ angular.module('starter.controllers')
     };
   })
 
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope) {
+    $scope.isLogin = false;
+    if($rootScope.userId){
+      $scope.isLogin = true;
+    }
+
     discussion.$promise.then(function (response) {
       var postId = response.data.relationships.posts.data[0].id;
       $scope.topic = response.data;
