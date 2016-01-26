@@ -3,17 +3,20 @@
     <a class="button button-icon ion-ios-person-outline" ng-click="login()" ng-show="!isLogin"></a>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <div class="row topic">
-      <div class="col col90">
+    <div class="topic row topicCard">
+      <div class="col col80">
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
           <img class="avatar" ng-src="{{ user.attributes.avatarUrl }}"/>
+          <span>{{ user.attributes.username }}</span>
           <span class="item-note" am-time-ago="topic.attributes.startTime"></span>
         </div>
+        <hr class="topic">
         <div class="topic-content" ng-bind-html="post.attributes.contentHtml"></div>
       </div>
     </div>
-    <div class="list card">
+
+    <div class="topicItem">
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions"
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}">

@@ -1092,10 +1092,20 @@ a {
   max-width: 100%
 }
 
+.topicCard {
+  background: #fff;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.topicItem {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 .topic .title {
   margin: 0;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 .topic .summary {
@@ -1178,6 +1188,15 @@ a {
   -moz-osx-font-smoothing: grayscale;
   content: "\f4c7";
   margin-right: 5px
+}
+
+hr.topic {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 @media (min-width: 768px) {
