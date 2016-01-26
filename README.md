@@ -19,9 +19,13 @@ In development...
 
 **Desktop**
 
-Powered by Electron
+Powered by Electron，Support:
 
-In Build...
+1. Mac OS X
+2. GNU/Linux
+3. Windows
+
+[Download Page](https://github.com/phodal/growth/releases)
 
 **Web**:
 
