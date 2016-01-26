@@ -17,7 +17,7 @@ angular.module('starter', [
     'starter.controllers',
     'starter.services'
   ])
-  .run(function ($ionicPlatform, amMoment) {
+  .run(function ($ionicPlatform, amMoment, $state, $ionicSideMenuDelegate) {
     amMoment.changeLocale('zh-cn');
 
     $ionicPlatform.ready(function () {
@@ -48,6 +48,23 @@ angular.module('starter', [
         }, null);
       }
     });
+
+    $ionicPlatform.registerBackButtonAction(function (event) {
+      if ($state.$current.name === 'app.exam'
+        || $state.$current.name === 'app.community'
+        || $state.$current.name === 'app.solution'
+        || $state.$current.name === 'app.more'
+        || $state.$current.name === 'app.about'
+        || $state.$current.name === 'app.setting'
+      ) {
+        $ionicSideMenuDelegate.toggleLeft();
+        $state.go('app.main', {location: 'replace'});
+      } else if ($state.$current.name === 'app.main') {
+        navigator.app.exitApp(); // exit the app
+      } else {
+        navigator.app.backHistory(); // exit the app
+      }
+    }, 100);
   })
   .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
