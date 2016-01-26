@@ -8,10 +8,9 @@ Download：[http://fir.im/phodal](http://fir.im/phodal)
 
 (ps: 已在其他各大Android应用商店发布)
 
-**Windows Phone & Windows 10**:
+**Windows Phone**:
 
 <a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
-<a href="https://www.microsoft.com/store/apps/9nblggh5g8kx"><img src="https://assets.windowsphone.com/d86ab9b4-2f3d-4a94-92f8-1598073e7343/English_Get_it_Win_10_InvariantCulture_Default@2x.png" srcset="https://assets.windowsphone.com/5d2bd562-d242-4538-85f4-857d6457404b/English_Get_it_Win_10_InvariantCulture_Default.png 2x"  alt="Get it on Windows 10" /></a>
 
 **iOS**:
 
