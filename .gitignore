@@ -85,3 +85,7 @@ aws-credentials.json
 .io-config.json
 dist/
 desktop-dist
+index.html
+growth.epub
+growth.md
+growth.rtf
