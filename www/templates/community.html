@@ -19,7 +19,7 @@
           <span ng-if="topic.attributes.isSticky" class="tab hl">置顶</span>
           {{ (included | filter: topic.relationships.startUser.data)[0].attributes.username }}
           <span class="item-note ago" am-time-ago="topic.attributes.lastTime"></span>
-          <span><i class="ion-ios-chatboxes-outline"></i>{{topic.attributes.commentsCount}}</span>
+          <span><i class="ion-ios-chatboxes-outline"></i>{{topic.attributes.commentsCount - 1}}</span>
         </p>
       </ion-item>
     </ion-list>

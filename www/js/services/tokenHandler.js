@@ -21,8 +21,7 @@ angular.module('starter.services')
       for (var i = 0; i < actions.length; i++) {
         tokenWrapper(wrappedResource, actions[i]);
 
-      }
-      ;
+      };
       // return modified copy of resource
       return wrappedResource;
     };
