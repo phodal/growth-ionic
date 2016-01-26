@@ -123,5 +123,9 @@ angular.module('starter.controllers')
           }
         }
       };
+
+      $scope.encodeHTML = function (html) {
+        return html.replace('href=', 'src=');
+      }
     });
   });
