@@ -54,11 +54,47 @@ angular.module('starter.controllers')
     };
   })
 
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler) {
     $scope.isLogin = false;
     if($rootScope.userId){
       $scope.isLogin = true;
     }
+
+    // Create the login modal that we will use later
+    $ionicModal.fromTemplateUrl('templates/login.html', {
+      scope: $scope
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
+
+    // Triggered in the login modal to close it
+    $scope.closeLogin = function () {
+      $scope.modal.hide();
+    };
+
+    // Open the login modal
+    $scope.login = function () {
+      $scope.modal.show();
+    };
+
+    $scope.doLogin = function (user) {
+      var payload = {
+        identification: user.username,
+        password: user.password
+      };
+
+      $http.post('http://forum.growth.ren/' + 'api/token', payload)
+        .success(function (data) {
+          $scope.isLogin = true;
+          $rootScope.userId = data.userId;
+          TokenHandler.set(data.token);
+
+          $scope.closeLogin();
+        })
+        .error(function (data, status) {
+          console.log(data);
+        });
+    };
 
     discussion.$promise.then(function (response) {
       var postId = response.data.relationships.posts.data[0].id;
