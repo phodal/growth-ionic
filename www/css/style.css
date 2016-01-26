@@ -1179,3 +1179,11 @@ a {
   content: "\f4c7";
   margin-right: 5px
 }
+
+@media (min-width: 768px) {
+  .intro {
+    width: 79%;
+    right: 0;
+  }
+  
+}
