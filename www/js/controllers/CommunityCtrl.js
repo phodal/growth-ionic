@@ -16,6 +16,9 @@ angular.module('starter.controllers')
     // Form data for the login modal
     $scope.user = {};
     $scope.isLogin = false;
+    if($rootScope.userId){
+      $scope.isLogin = true;
+    }
 
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('templates/login.html', {
