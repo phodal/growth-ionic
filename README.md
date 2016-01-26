@@ -174,6 +174,14 @@ Google Analytics:
 2. [http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/](http://blog.vjrantal.net/2015/01/08/experiences-with-ionic-on-windows-phone-8-1/) 
 3. [http://www.badpenguin.org/how-to-make-your-ionic-cordova-app-to-run-under-windows-phone-8-1-and-desktop](http://www.badpenguin.org/how-to-make-your-ionic-cordova-app-to-run-under-windows-phone-8-1-and-desktop)
 
+####Desktop
+
+Install Electron and Run
+
+     electron .
+     
+file ``desktop.js``
+
 ##其他
 
 ###Thinking
