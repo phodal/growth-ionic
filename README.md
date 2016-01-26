@@ -98,6 +98,10 @@ We design those for you:
 
 ##Setup && Develop 
 
+###Architecture
+
+![Architecture](growth-arch.png)
+
 ###Tech Stack
 
 1. Angular.js
