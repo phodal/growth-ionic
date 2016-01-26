@@ -1193,4 +1193,9 @@ a {
     min-height: 240px;
     width: 80%;
   }
+
+  marked img {
+    width: auto;
+    margin: 0 auto;
+  }
 }
