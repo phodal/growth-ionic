@@ -7,7 +7,7 @@
  - 查询处理以及分词技术
  - 确定搜索意图及返回相关、新鲜的内容
 
-![search-engine-arch][1]
+![search-engine-arch](./img/day4/search-engine-arch.jpg)
 
 **为什么需要SEO?**
 
@@ -35,7 +35,7 @@ PageRank对于一个网站来说是相当重要的，只是这个相比也比较
 
 下图是我的博客的流量来源
 
-![What Site Need SEO][2]
+![What Site Need SEO](./img/day4/my-website-seo.jpg)
 
 正常情况下除了像``腾讯``这类的``QQ空间``自我封闭的网站外都需要SEO，或者不希望泄露一些用户隐私如``Facebook``、``人人``等等
 
@@ -179,6 +179,3 @@ Total links
 **参考来源**:
 
 《SEO艺术》(The Art of SEO)
-
-  [1]: /img/day4/search-engine-arch.jpg
-  [1]: /img/day4/my-website-seo.jpg

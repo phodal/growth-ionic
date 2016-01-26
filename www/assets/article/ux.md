@@ -15,7 +15,7 @@ UX需要什么
 
 上传一张来自知乎上回答的答案，所需要的东西也差不多是这样子的。
 
-![UX][1]
+![UX](assets/article/images/ux-design.jpg)
 
  - Information Architecture
  - Architecture
@@ -39,7 +39,4 @@ UX需要什么
 
 交互设计便是``用户体验设计的重点``。我们再来看看另外的这张图片
 
-![Fields Of User Experience Design][2]
-
-  [1]: assets/article/images/ux-design.jpg
-  [2]: assets/article/images/ux-field.jpg
+![Fields Of User Experience Design](assets/article/images/ux-field.jpg)
