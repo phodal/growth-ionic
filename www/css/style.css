@@ -1185,5 +1185,12 @@ a {
     width: 79%;
     right: 0;
   }
-  
+  .modal {
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    left: 10%;
+    min-height: 240px;
+    width: 80%;
+  }
 }
