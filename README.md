@@ -1,4 +1,5 @@
-﻿# Growth —— Be Awesome Developer
+﻿Growth —— Be Awesome Developer
+---
 
 **Android**:
 
@@ -18,17 +19,19 @@ In development...
 
 **Desktop**
 
-Powered by Electron，Support:
+[Download Page](https://github.com/phodal/growth/releases)
+
+Powered by Electron，Support OS:
 
 1. Mac OS X
 2. GNU/Linux
 3. Windows
 
-[Download Page](https://github.com/phodal/growth/releases)
-
 **Web**:
 
 Online: [http://www.growth.ren/](http://www.growth.ren/)
+
+###Others
 
 QQ群: 529600394，我的微信公众号: phodal
 
