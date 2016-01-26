@@ -5,7 +5,7 @@
   "main": "desktop.js",
   "scripts": {
     "start": "electron desktop.js",
-    "build": "electron-packager . $npm_package_productName --out=dist --platform=all --arch=x64 --ignore='(node_modules|platforms|plugins|resources|scss|wp8|hooks|aws-credentials.json|.io-config.json)' --prune --asar --version=0.36.5 --app-version=$npm_package_version"
+    "build": "electron-packager . $npm_package_productName --out=dist --platform=all --arch=x64 --ignore='(dist|node_modules|platforms|plugins|resources|scss|wp8|hooks|aws-credentials.json|.io-config.json)' --prune --asar --version=0.36.5 --app-version=$npm_package_version --icon='resources/osx/growth.icns'"
   },
   "description": "growth: An Ionic project",
   "dependencies": {
