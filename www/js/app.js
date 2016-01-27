@@ -154,12 +154,92 @@ angular.module('starter', [
         }
       })
 
-/*
+      /*
 
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-====================================================================================================
+       DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
- */
+       */
+
+      .state('app.day0', {
+        url: '/day/0',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day0.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day1', {
+        url: '/day/1',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day1.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day2', {
+        url: '/day/2',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day2.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day3', {
+        url: '/day/3',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day3.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day4', {
+        url: '/day/4',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day4.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day5', {
+        url: '/day/5',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day5.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day6', {
+        url: '/day/6',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day6.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+      .state('app.day7', {
+        url: '/day/7',
+        views: {
+          'app-main': {
+            templateUrl: 'templates/days/day7.html',
+            controller: 'DayCtrl'
+          }
+        }
+      })
+
+
+      /*
+
+       MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+       ====================================================================================================
+
+       */
       .state('app.main', {
         url: '/main',
         parent: "app",
@@ -211,11 +291,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
         }
       })
 
-/*
+      /*
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+       CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
- */
+       */
 
       .state('app.community', {
         url: '/community',
@@ -252,11 +332,11 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         }
       })
 
-/*
+      /*
 
-.............................................................
+       .............................................................
 
-*/
+       */
 
       .state('app.more', {
         url: '/more',
@@ -386,84 +466,11 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         }
       })
 
-      .state('app.day0', {
-        url: '/day/0',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day0.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day1', {
-        url: '/day/1',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day1.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day2', {
-        url: '/day/2',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day2.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day3', {
-        url: '/day/3',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day3.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day4', {
-        url: '/day/4',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day4.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day5', {
-        url: '/day/5',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day5.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day6', {
-        url: '/day/6',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day6.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
-      .state('app.day7', {
-        url: '/day/7',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/days/day7.html',
-            controller: 'DayCtrl'
-          }
-        }
-      })
+      /*
 
-/*
+       EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
-*/
+       */
       .state('app.exam', {
         url: '/exam',
         views: {
