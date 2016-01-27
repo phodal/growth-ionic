@@ -17,7 +17,7 @@ angular.module('starter', [
     'starter.controllers',
     'starter.services'
   ])
-  .run(function ($ionicPlatform, amMoment, $state, $ionicSideMenuDelegate) {
+  .run(function ($ionicPlatform, amMoment, $state, $ionicSideMenuDelegate, $storageServices) {
     amMoment.changeLocale('zh-cn');
 
     $ionicPlatform.ready(function () {
@@ -34,8 +34,8 @@ angular.module('starter', [
       }
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
-        //StatusBar.styleDefault();
-        StatusBar.backgroundColorByHexString("#387ef5");
+        StatusBar.styleDefault();
+        //StatusBar.backgroundColorByHexString("#387ef5");
       }
       if (typeof navigator.globalization !== "undefined") {
         navigator.globalization.getPreferredLanguage(function (language) {
