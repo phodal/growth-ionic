@@ -16,11 +16,11 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="app-solution"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="{{'community' | translate}}" icon-off="ion-ios-people" icon-on="ion-ios-people-outline" href="#/app/community">
+  <ion-tab title="{{'community' | translate}}" icon-off="ion-ios-people" icon-on="ion-ios-people-outline" href="#/app/community" ng-show="!isIOS">
     <ion-nav-view name="app-community"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="{{'more' | translate}}" icon-off="ion-ios-people" icon-on="ion-ios-people-outline" href="#/app/more">
+  <ion-tab title="{{'more' | translate}}" icon-off="ion-ios-more" icon-on="ion-ios-more-outline" href="#/app/more">
     <ion-nav-view name="app-more"></ion-nav-view>
   </ion-tab>
 </ion-tabs>
