@@ -68,6 +68,7 @@ angular.module('starter', [
   })
   .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
+    $ionicConfigProvider.tabs.position('bottom');
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.useSanitizeValueStrategy('');
@@ -147,7 +148,7 @@ angular.module('starter', [
       .state('app.main', {
         url: '/main',
         views: {
-          'tab-main': {
+          'app-main': {
             templateUrl: 'templates/main.html',
             controller: 'MainCtrl'
           }
@@ -157,7 +158,7 @@ angular.module('starter', [
       .state('app.exam', {
         url: '/exam',
         views: {
-          'tab-exam': {
+          'app-exam': {
             templateUrl: 'templates/exam.html'
           }
         }
@@ -166,7 +167,7 @@ angular.module('starter', [
       .state('app.solution', {
         url: "/solution",
         views: {
-          'tab-solution': {
+          'app-solution': {
             templateUrl: "templates/more/solution.html",
             controller: 'SolutionCtrl'
           }
@@ -176,7 +177,7 @@ angular.module('starter', [
       .state('app.community', {
         url: '/community',
         views: {
-          'tab-community': {
+          'app-community': {
             templateUrl: 'templates/community.html',
             controller: 'CommunityCtrl'
           }
@@ -186,7 +187,7 @@ angular.module('starter', [
       .state('app.more', {
         url: '/more',
         views: {
-          'tab-more': {
+          'app-more': {
             templateUrl: 'templates/more.html'
           }
         }
