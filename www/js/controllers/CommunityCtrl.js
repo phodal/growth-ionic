@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope, $ionicModal) {
+  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope, $ionicModal, $storageServices) {
     Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;
@@ -48,7 +48,7 @@ angular.module('starter.controllers')
           $scope.isLogin = true;
           $rootScope.userId = data.userId;
           TokenHandler.set(data.token);
-
+          $storageServices.set('token', data.token);
           $scope.closeLogin();
         })
         .error(function (data, status) {
@@ -57,7 +57,7 @@ angular.module('starter.controllers')
     };
   })
 
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler, $storageServices, $window) {
     $scope.isLogin = false;
     if($rootScope.userId){
       $scope.isLogin = true;
@@ -91,7 +91,7 @@ angular.module('starter.controllers')
           $scope.isLogin = true;
           $rootScope.userId = data.userId;
           TokenHandler.set(data.token);
-
+          $storageServices.set('token', data.token);
           $scope.closeLogin();
         })
         .error(function (data, status) {
@@ -109,48 +109,53 @@ angular.module('starter.controllers')
       $scope.user = $filter('filter')(response.included, {type: "users"})[0];
 
       $scope.discussion = response;
-      $scope.getUsername = function (user) {
-        var included = $scope.discussion.included;
-        for (var i = 0; i < included.length; ++i) {
-          if (included[i].type === 'users' && included[i].id === user.data.id) {
-            return included[i].attributes.username;
-          }
-        }
-        return 'A user';
-      };
-
-      $scope.getAvatar = function (user) {
-        var included = $scope.discussion.included;
-        for (var i = 0; i < included.length; ++i) {
-          if (included[i].type === 'users' && included[i].id === user.data.id && included[i].attributes.avatarUrl) {
-            return included[i].attributes.avatarUrl;
-          }
-        }
-      };
-
-      $scope.encodeHTML = function (html) {
-        return html.replace('href=', 'src=');
-      };
-
-      $scope.saveReply = function() {
-        var reply = {
-          "data": {
-            "type": "posts",
-            "attributes": {"content": $scope.replyContent},
-            "relationships": {"discussion": {"data": {"type": "discussions", "id": $stateParams.id}}}
-          }
-        };
-
-        $http({
-          method: 'POST',
-          url: 'http://forum.growth.ren/api/posts',
-          data: reply,
-          headers: {
-            'Authorization': 'Token ' + TokenHandler.get()
-          }
-        }).success(function (response) {
-          console.log(response);
-        })
-      };
     });
+
+    $scope.getUsername = function (user) {
+      var included = $scope.discussion.included;
+      for (var i = 0; i < included.length; ++i) {
+        if (included[i].type === 'users' && included[i].id === user.data.id) {
+          return included[i].attributes.username;
+        }
+      }
+      return 'A user';
+    };
+
+    $scope.getAvatar = function (user) {
+      var included = $scope.discussion.included;
+      for (var i = 0; i < included.length; ++i) {
+        if (included[i].type === 'users' && included[i].id === user.data.id && included[i].attributes.avatarUrl) {
+          return included[i].attributes.avatarUrl;
+        }
+      }
+    };
+
+    $scope.encodeHTML = function (html) {
+      return html.replace('href=', 'src=');
+    };
+
+    $scope.saveReply = function() {
+      var reply = {
+        "data": {
+          "type": "posts",
+          "attributes": {"content": $scope.replyContent},
+          "relationships": {"discussion": {"data": {"type": "discussions", "id": $stateParams.id}}}
+        }
+      };
+
+      $http({
+        method: 'POST',
+        url: 'http://forum.growth.ren/api/posts',
+        data: reply,
+        headers: {
+          'Authorization': 'Token ' + $window.localStorage.getItem('token')
+        }
+      }).success(function (response) {
+
+      }).error(function(data, status){
+        if(status === 401){
+          $scope.modal.show();
+        }
+      })
+    };
   });
