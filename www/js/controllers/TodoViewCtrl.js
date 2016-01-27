@@ -104,4 +104,20 @@ angular.module('starter.controllers')
       $scope.currentModal.hide();
       checkTodoItemIsFinish();
     };
+
+    $scope.helpModal = null;
+
+    $scope.showHelp = function() {
+      $ionicModal.fromTemplateUrl('templates/help/todo.html', {
+        id: 'help',
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.helpModal = modal;
+      });
+    };
+    $scope.closeHelpModal = function () {
+      $scope.helpModal.hide();
+    };
   });
