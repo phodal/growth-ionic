@@ -144,26 +144,6 @@ angular.module('starter', [
         templateUrl: 'templates/tabs.html'
       })
 
-      .state('app.main', {
-        url: '/main',
-        parent: "app",
-        views: {
-          'app-main': {
-            templateUrl: 'templates/main.html',
-            controller: 'MainCtrl'
-          }
-        }
-      })
-
-      .state('app.exam', {
-        url: '/exam',
-        views: {
-          'app-exam': {
-            templateUrl: 'templates/exam.html'
-          }
-        }
-      })
-
       .state('app.solution', {
         url: "/solution",
         views: {
@@ -174,21 +154,19 @@ angular.module('starter', [
         }
       })
 
-      .state('app.community', {
-        url: '/community',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community.html',
-            controller: 'CommunityCtrl'
-          }
-        }
-      })
+/*
 
-      .state('app.more', {
-        url: '/more',
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+====================================================================================================
+
+ */
+      .state('app.main', {
+        url: '/main',
+        parent: "app",
         views: {
-          'app-more': {
-            templateUrl: 'templates/more.html'
+          'app-main': {
+            templateUrl: 'templates/main.html',
+            controller: 'MainCtrl'
           }
         }
       })
@@ -233,10 +211,26 @@ angular.module('starter', [
         }
       })
 
+/*
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+ */
+
+      .state('app.community', {
+        url: '/community',
+        views: {
+          'app-community': {
+            templateUrl: 'templates/community.html',
+            controller: 'CommunityCtrl'
+          }
+        }
+      })
+
       .state('app.topic', {
         url: '/topic/:id',
         views: {
-          'menuContent': {
+          'app-community': {
             templateUrl: 'templates/topic.html',
             controller: 'TopicCtrl',
             resolve: {
@@ -251,9 +245,24 @@ angular.module('starter', [
       .state('app.stack', {
         url: "/stack/:stack",
         views: {
-          'menuContent': {
+          'app-community': {
             templateUrl: "templates/skills/stack.html",
             controller: 'StackCtrl'
+          }
+        }
+      })
+
+/*
+
+.............................................................
+
+*/
+
+      .state('app.more', {
+        url: '/more',
+        views: {
+          'app-more': {
+            templateUrl: 'templates/more.html'
           }
         }
       })
@@ -261,7 +270,7 @@ angular.module('starter', [
       .state('app.about', {
         url: '/about',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/more/about.html',
             controller: 'AboutCtrl'
           }
@@ -271,7 +280,7 @@ angular.module('starter', [
       .state('app.help', {
         url: '/help',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/more/help.html'
           }
         }
@@ -280,7 +289,7 @@ angular.module('starter', [
       .state('app.setting', {
         url: '/setting',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/setting.html',
             controller: 'SettingCtrl'
           }
@@ -290,7 +299,7 @@ angular.module('starter', [
       .state('app.article', {
         url: '/article/:slug',
         views: {
-          'menuContent': {
+          'app-more@app': {
             templateUrl: 'templates/read/article-detail.html',
             controller: 'ArticleCtrl'
           }
@@ -300,7 +309,7 @@ angular.module('starter', [
       .state('app.articles', {
         url: '/articles',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/read/article-list.html',
             controller: 'ArticleListCtrl'
           }
@@ -310,7 +319,7 @@ angular.module('starter', [
       .state('app.review', {
         url: '/review/:slug',
         views: {
-          'menuContent': {
+          'app-more@app': {
             templateUrl: 'templates/read/review-detail.html',
             controller: 'ReviewCtrl'
           }
@@ -320,7 +329,7 @@ angular.module('starter', [
       .state('app.reviews', {
         url: '/reviews',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/read/review-list.html',
             controller: 'ReviewListCtrl'
           }
@@ -330,8 +339,49 @@ angular.module('starter', [
       .state('app.book', {
         url: '/book',
         views: {
-          'menuContent': {
+          'app-more': {
             templateUrl: 'templates/read/book.html'
+          }
+        }
+      })
+
+      .state('app.prog', {
+        url: '/books/prog',
+        views: {
+          'app-more@app': {
+            templateUrl: 'templates/books/prog.html'
+          }
+        }
+      })
+      .state('app.arch', {
+        url: '/books/arch',
+        views: {
+          'app-more@app': {
+            templateUrl: 'templates/books/arch.html'
+          }
+        }
+      })
+      .state('app.method', {
+        url: '/books/method',
+        views: {
+          'app-more@app': {
+            templateUrl: 'templates/books/method.html'
+          }
+        }
+      })
+      .state('app.think', {
+        url: '/books/think',
+        views: {
+          'app-more@app': {
+            templateUrl: 'templates/books/think.html'
+          }
+        }
+      })
+      .state('app.bookfe', {
+        url: '/books/fe',
+        views: {
+          'app-more@app': {
+            templateUrl: 'templates/books/fe.html'
           }
         }
       })
@@ -409,43 +459,16 @@ angular.module('starter', [
         }
       })
 
-      .state('app.prog', {
-        url: '/books/prog',
+/*
+
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+*/
+      .state('app.exam', {
+        url: '/exam',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/books/prog.html'
-          }
-        }
-      })
-      .state('app.arch', {
-        url: '/books/arch',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/books/arch.html'
-          }
-        }
-      })
-      .state('app.method', {
-        url: '/books/method',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/books/method.html'
-          }
-        }
-      })
-      .state('app.think', {
-        url: '/books/think',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/books/think.html'
-          }
-        }
-      })
-      .state('app.bookfe', {
-        url: '/books/fe',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/books/fe.html'
+          'app-exam': {
+            templateUrl: 'templates/exam.html'
           }
         }
       })
@@ -453,7 +476,7 @@ angular.module('starter', [
       .state('app.quiz', {
         url: '/quiz/:slug',
         views: {
-          'menuContent': {
+          'app-exam@app': {
             templateUrl: 'templates/game/quiz.html',
             controller: 'AllQuizCtrl'
           }
@@ -462,7 +485,7 @@ angular.module('starter', [
       .state('app.advancedQuiz', {
         url: '/advance-quiz/:slug',
         views: {
-          'menuContent': {
+          'app-exam@app': {
             templateUrl: 'templates/game/advance-quiz.html',
             controller: 'AdvancedQuizCtrl'
           }
