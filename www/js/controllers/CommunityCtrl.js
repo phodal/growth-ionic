@@ -1,7 +1,5 @@
 angular.module('starter.controllers')
   .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope, $ionicModal) {
-    $scope.isIOS = isIOS;
-
     Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;
