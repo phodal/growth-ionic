@@ -32,9 +32,9 @@
   </ion-content>
   <ion-footer-bar align-title="left" class="bar-light reply-new" keyboard-attach ng-show="isLogin">
     <label class="item-input-wrapper">
-      <input type="text" placeholder="TBD">
+      <input type="text" placeholder="回复" ng-model="replyContent">
     </label>
-    <button class="button button-small button-clear button-positive">
+    <button class="button button-small button-clear button-positive" ng-click="saveReply()">
       提交
     </button>
   </ion-footer-bar>

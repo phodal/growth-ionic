@@ -100,6 +100,7 @@ angular.module('starter.controllers')
     };
 
     discussion.$promise.then(function (response) {
+      $scope.replyContent = '';
       var postId = response.data.relationships.posts.data[0].id;
       $scope.topic = response.data;
       $scope.discussions = response.included;
@@ -129,6 +130,27 @@ angular.module('starter.controllers')
 
       $scope.encodeHTML = function (html) {
         return html.replace('href=', 'src=');
-      }
+      };
+
+      $scope.saveReply = function() {
+        var reply = {
+          "data": {
+            "type": "posts",
+            "attributes": {"content": $scope.replyContent},
+            "relationships": {"discussion": {"data": {"type": "discussions", "id": $stateParams.id}}}
+          }
+        };
+
+        $http({
+          method: 'POST',
+          url: 'http://forum.growth.ren/api/posts',
+          data: reply,
+          headers: {
+            'Authorization': 'Token ' + TokenHandler.get()
+          }
+        }).success(function (response) {
+          console.log(response);
+        })
+      };
     });
   });
