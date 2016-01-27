@@ -3,22 +3,6 @@ angular.module('starter.controllers')
   .controller('skillTreeControl', function ($scope, $storageServices, $ionicModal, $analytics, $window) {
     $scope.showSkillMap = true;
     $analytics.trackView('Skill Tree');
-    $storageServices.get('isFirstTimeSkill', function (value) {
-      if (value !== 'false') {
-        $ionicModal.fromTemplateUrl('templates/intro/skilltree.html', {
-          id: 'intro1',
-          scope: $scope,
-          animation: 'slide-in-up'
-        }).then(function (modal) {
-          modal.show();
-          $scope.modal = modal;
-        });
-
-        $scope.$on('modal.hidden', function () {
-          $storageServices.set('isFirstTimeSkill', 'false');
-        });
-      }
-    });
 
     $scope.ratings = 0;
     $scope.isInfinite = false;
