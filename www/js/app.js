@@ -140,16 +140,54 @@ angular.module('starter', [
       .state('app', {
         url: '/app',
         abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
+        templateUrl: 'templates/tabs.html'
       })
+
 
       .state('app.main', {
         url: '/main',
         views: {
-          'menuContent': {
+          'tab-main': {
             templateUrl: 'templates/main.html',
             controller: 'MainCtrl'
+          }
+        }
+      })
+
+      .state('app.exam', {
+        url: '/exam',
+        views: {
+          'tab-exam': {
+            templateUrl: 'templates/exam.html'
+          }
+        }
+      })
+
+      .state('app.solution', {
+        url: "/solution",
+        views: {
+          'tab-solution': {
+            templateUrl: "templates/more/solution.html",
+            controller: 'SolutionCtrl'
+          }
+        }
+      })
+
+      .state('app.community', {
+        url: '/community',
+        views: {
+          'tab-community': {
+            templateUrl: 'templates/community.html',
+            controller: 'CommunityCtrl'
+          }
+        }
+      })
+
+      .state('app.more', {
+        url: '/more',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/more.html'
           }
         }
       })
@@ -160,25 +198,6 @@ angular.module('starter', [
           'menuContent': {
             templateUrl: 'templates/todoView.html',
             controller: 'TodoViewCtrl'
-          }
-        }
-      })
-
-      .state('app.more', {
-        url: '/more',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/more.html'
-          }
-        }
-      })
-
-      .state('app.community', {
-        url: '/community',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/community.html',
-            controller: 'CommunityCtrl'
           }
         }
       })
@@ -194,16 +213,6 @@ angular.module('starter', [
                 return Discussions.get({id: $stateParams.id});
               }
             }
-          }
-        }
-      })
-
-      .state('app.solution', {
-        url: "/solution",
-        views: {
-          'menuContent': {
-            templateUrl: "templates/more/solution.html",
-            controller: 'SolutionCtrl'
           }
         }
       })
@@ -322,15 +331,6 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/read/book.html'
-          }
-        }
-      })
-
-      .state('app.exam', {
-        url: '/exam',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/exam.html'
           }
         }
       })
