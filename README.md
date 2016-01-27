@@ -165,13 +165,13 @@ Skill Map基于: [http://bl.ocks.org/wizicer/f662a0b04425fc0f7489](http://bl.ock
 感谢以下的内容贡献者们，结果由git-summary生成
 
      project  : growth
-     repo age : 4 weeks
-     active   : 28 days
-     commits  : 731
-     files    : 778
+     repo age : 5 weeks
+     active   : 35 days
+     commits  : 901
+     files    : 755
      authors  :
-       724	Fengda HUANG  99.0%
-         7	Le Deng       1%
+       893	Fengda HUANG  99.1%
+         8	Le Deng       0.9
 
 英语版:  [Le Deng](https://github.com/raydeng83)
 
