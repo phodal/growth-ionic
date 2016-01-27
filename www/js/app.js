@@ -144,9 +144,9 @@ angular.module('starter', [
         templateUrl: 'templates/tabs.html'
       })
 
-
       .state('app.main', {
         url: '/main',
+        parent: "app",
         views: {
           'app-main': {
             templateUrl: 'templates/main.html',
@@ -196,9 +196,39 @@ angular.module('starter', [
       .state('app.todoView', {
         url: '/todoView',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/todoView.html',
-            controller: 'TodoViewCtrl'
+          'app-main': {
+            controller: 'TodoViewCtrl',
+            templateUrl: 'templates/todoView.html'
+          }
+        }
+      })
+
+      .state('app.skilltree', {
+        url: '/skilltree',
+        views: {
+          'app-main@app': {
+            templateUrl: 'templates/skills/skilltree.html',
+            controller: 'skillTreeControl'
+          }
+        }
+      })
+
+      .state('app.ai', {
+        url: '/ai',
+        views: {
+          'app-main@app': {
+            templateUrl: 'templates/skills/ai.html',
+            controller: 'AIControl'
+          }
+        }
+      })
+
+      .state('app.achievement', {
+        url: '/achievement',
+        views: {
+          'app-main@app': {
+            templateUrl: 'templates/skills/achievement.html',
+            controller: 'AchievementCtrl'
           }
         }
       })
@@ -253,36 +283,6 @@ angular.module('starter', [
           'menuContent': {
             templateUrl: 'templates/setting.html',
             controller: 'SettingCtrl'
-          }
-        }
-      })
-
-      .state('app.skilltree', {
-        url: '/skilltree',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/skills/skilltree.html',
-            controller: 'skillTreeControl'
-          }
-        }
-      })
-
-      .state('app.ai', {
-        url: '/ai',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/skills/ai.html',
-            controller: 'AIControl'
-          }
-        }
-      })
-
-      .state('app.achievement', {
-        url: '/achievement',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/skills/achievement.html',
-            controller: 'AchievementCtrl'
           }
         }
       })
