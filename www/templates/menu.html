@@ -32,10 +32,10 @@
           <i class="side-menu-icon ion-ios-world-outline"></i>
           {{"solution" | translate}}
         </ion-item>
-        <!--<ion-item menu-close href="#/app/community" ui-sref=".community" ui-sref-active="active">-->
-          <!--<i class="side-menu-icon icon ion-ios-people-outline"></i>-->
-          <!--{{"community" | translate}}-->
-        <!--</ion-item>-->
+        <ion-item menu-close href="#/app/community" ui-sref=".community" ui-sref-active="active" ng-show="!isIOS">
+          <i class="side-menu-icon icon ion-ios-people-outline"></i>
+          {{"community" | translate}}
+        </ion-item>
         <ion-item menu-close href="#/app/more" ui-sref=".more" ui-sref-active="active">
           <i class="side-menu-icon icon ion-ios-more-outline"></i>
           {{"more" | translate}}
