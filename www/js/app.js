@@ -69,6 +69,9 @@ angular.module('starter', [
   .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
     $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.backButton.text('');
+    $ionicConfigProvider.backButton.previousTitleText(false);
+
   })
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.useSanitizeValueStrategy('');
