@@ -1,5 +1,6 @@
 SIDE_MENU["zh-cn"] = {
   "exam": "技能测验",
+  "menu": "菜单",
   "bookroadmap": "读书路线",
   "solution": "解决方案",
   "feedback": "意见和反馈",

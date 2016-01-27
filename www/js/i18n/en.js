@@ -1,5 +1,6 @@
 SIDE_MENU["en"] = {
   "exam": "Exam",
+  "menu": "Menu",
   "bookroadmap": "Book RoadMap",
   "solution": "Solution",
   "feedback": "Feedback",
