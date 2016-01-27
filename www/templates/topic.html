@@ -3,7 +3,12 @@
     <a class="button button-icon ion-ios-person-outline" ng-click="login()" ng-show="!isLogin"></a>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <div class="topic row topicCard">
+
+    <ion-item class="item item-icon-right" ng-show="!topic">
+      <div class="sectionTitle"><ion-spinner></ion-spinner></div>
+    </ion-item>
+
+    <div class="topic row topicCard" ng-show="topic">
       <div class="col col80">
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
