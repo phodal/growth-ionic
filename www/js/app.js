@@ -326,15 +326,6 @@ angular.module('starter', [
         }
       })
 
-      .state('app.faq', {
-        url: '/faq',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/more/faq.html'
-          }
-        }
-      })
-
       .state('app.exam', {
         url: '/exam',
         views: {
