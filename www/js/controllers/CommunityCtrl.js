@@ -103,6 +103,7 @@ angular.module('starter.controllers')
       $scope.replyContent = '';
       var postId = response.data.relationships.posts.data[0].id;
       $scope.topic = response.data;
+      $scope.discussionID = response.data.id;
       $scope.discussions = response.included;
 
       $scope.post = $filter('filter')(response.included, {type: "posts", id: postId})[0];
@@ -134,6 +135,7 @@ angular.module('starter.controllers')
       return html.replace('href=', 'src=');
     };
 
+
     $scope.saveReply = function() {
       var reply = {
         "data": {
@@ -147,6 +149,35 @@ angular.module('starter.controllers')
         method: 'POST',
         url: 'http://forum.growth.ren/api/posts',
         data: reply,
+        headers: {
+          'Authorization': 'Token ' + $window.localStorage.getItem('token')
+        }
+      }).success(function (response) {
+
+      }).error(function(data, status){
+        if(status === 401){
+          $scope.modal.show();
+        }
+      })
+    };
+
+    $scope.LikeIt = function(ID) {
+      var like = {
+        "data":
+        {
+          "type": "posts",
+          "id": ID.toString(),
+          "attributes":
+          {
+            "isLiked": true
+          }
+        }
+      };
+
+      $http({
+        method: 'POST',
+        url: 'http://forum.growth.ren/api/posts/' + ID,
+        data: like,
         headers: {
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
