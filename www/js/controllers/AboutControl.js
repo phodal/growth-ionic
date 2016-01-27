@@ -11,5 +11,7 @@ angular.module('starter.controllers')
     }
     $scope.update = function () {
       $updateServices.check();
-    }
+    };
+
+    $scope.isIOS = isIOS;
   });
