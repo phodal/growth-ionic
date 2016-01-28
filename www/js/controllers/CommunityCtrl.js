@@ -72,7 +72,7 @@ angular.module('starter.controllers')
     };
   })
 
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler, $storageServices, $window) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler, $storageServices, $window, $cordovaToast) {
     $scope.isLogin = false;
     if($rootScope.userId){
       $scope.isLogin = true;
@@ -168,7 +168,12 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
-
+        $scope.replyContent = {};
+        $cordovaToast.showLongBottom('Success').then(function(success) {
+          // success
+        }, function (error) {
+          // error
+        });
       }).error(function(data, status){
         if(status === 401){
           $scope.modal.show();
