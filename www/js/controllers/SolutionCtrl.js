@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('SolutionCtrl', function ($scope, $analytics, $ionicFilterBar) {
+  .controller('SolutionCtrl', function ($scope, $analytics, $ionicFilterBar, $ionicTabsDelegate) {
     $analytics.trackView('Solution Ctrl');
     var filterBarInstance;
     $scope.solutions = SOLUTIONS;
@@ -14,4 +14,18 @@ angular.module('starter.controllers')
         }
       });
     };
+
+    $scope.goForward = function () {
+      var selected = $ionicTabsDelegate.selectedIndex();
+      if (selected != -1) {
+        $ionicTabsDelegate.select(selected + 1);
+      }
+    };
+
+    $scope.goBack = function () {
+      var selected = $ionicTabsDelegate.selectedIndex();
+      if (selected != -1 && selected != 0) {
+        $ionicTabsDelegate.select(selected - 1);
+      }
+    }
   });

@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('ExamCtrl', function ($scope, $ionicModal) {
+  .controller('ExamCtrl', function ($scope, $ionicModal, $ionicTabsDelegate) {
     $scope.showHelp = function() {
       $ionicModal.fromTemplateUrl('templates/help/exam.html', {
         id: 'help',
@@ -13,4 +13,18 @@ angular.module('starter.controllers')
     $scope.closeHelpModal = function () {
       $scope.helpModal.hide();
     };
+
+    $scope.goForward = function () {
+      var selected = $ionicTabsDelegate.selectedIndex();
+      if (selected != -1) {
+        $ionicTabsDelegate.select(selected + 1);
+      }
+    };
+
+    $scope.goBack = function () {
+      var selected = $ionicTabsDelegate.selectedIndex();
+      if (selected != -1 && selected != 0) {
+        $ionicTabsDelegate.select(selected - 1);
+      }
+    }
   });

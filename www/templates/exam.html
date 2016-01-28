@@ -2,7 +2,7 @@
   <ion-nav-buttons side="right">
     <a class="button button-icon ion-ios-help-outline" ng-click="showHelp()"></a>
   </ion-nav-buttons>
-  <ion-content class="has-header">
+  <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
     <ion-list>
       <ion-item class="item item-icon-right" type="item-text-wrap" href="#/app/quiz/html">
         <h2>{{"html" | translate}}</h2>

@@ -3,7 +3,7 @@
     <a class="button button-icon ion-ios-analytics-outline" href="#/app/skilltree"><span
       class="badge badge-assertive header-badge icon-badge" ng-show="badgePoints > 0">{{badgePoints}}</span></a>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content on-swipe-right="goBack()" on-swipe-left="goForward()">
     <div class="title"><img class="title-image full-image" src="img/screenshot.jpg"/></div>
     <div class="list card days" ng-show="!todoView">
       <ion-item href="#/app/day/1" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>{{"day1" | translate}}</ion-item>

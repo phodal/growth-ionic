@@ -35,7 +35,7 @@ angular.module('starter', [
       if (window.StatusBar) {
         StatusBar.styleDefault();
         if(isAndroid) {
-          StatusBar.backgroundColorByHexString("#387ef5");  
+          StatusBar.backgroundColorByHexString("#387ef5");
         }
       }
     });
@@ -309,7 +309,8 @@ angular.module('starter', [
         url: '/more',
         views: {
           'app-more': {
-            templateUrl: 'templates/more.html'
+            templateUrl: 'templates/more.html',
+            controller: 'MoreCtrl'
           }
         }
       })

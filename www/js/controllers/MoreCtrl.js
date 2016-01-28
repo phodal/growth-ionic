@@ -1,16 +1,5 @@
 angular.module('starter.controllers')
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $ionicTabsDelegate) {
-    if(isAndroid) {
-      $updateServices.check('main');
-    }
-
-    $scope.$on('$ionicView.beforeEnter', function () {
-      $scope.badgePoints = 0;
-      $storageServices.get('badgePoints', function (points) {
-        $scope.badgePoints = points;
-      });
-    });
-
+  .controller('MoreCtrl', function ($scope, $ionicTabsDelegate) {
     $scope.goForward = function () {
       var selected = $ionicTabsDelegate.selectedIndex();
       if (selected != -1) {
