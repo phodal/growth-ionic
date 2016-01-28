@@ -15,7 +15,7 @@ Download：[http://fir.im/phodal](http://fir.im/phodal)
 
 **iOS**:
 
-In development...
+**Waiting For Review**...
 
 **Desktop**
 
