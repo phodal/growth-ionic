@@ -257,9 +257,9 @@ angular.module('starter', [
       .state('app.todoView', {
         url: '/todoView',
         views: {
-          'app-main': {
-            controller: 'TodoViewCtrl',
-            templateUrl: 'templates/todoView.html'
+          'app-main@app': {
+            templateUrl: 'templates/todoView.html',
+            controller: 'TodoViewCtrl'
           }
         }
       })
