@@ -584,7 +584,7 @@ ul.rating li {
 .get {
   display: inline-block;
   float: right;
-  color: #387ef5;
+  color: #5e6772;
   margin-top: -0.2em;
 }
 
@@ -720,7 +720,7 @@ ul.road-map {
 }
 
 .roadmap-card.isFinish {
-  background-color: #30BD8A;
+  background-color: #5e6772;
 }
 
 .roadmap-card .image {
@@ -748,7 +748,7 @@ td-card {
   border: 1px solid #999;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  background: #30BD8A;
+  background: #5e6772;
 }
 
 td-card .question {
@@ -1229,4 +1229,33 @@ hr.topic {
     width: auto;
     right: 0;
   }
+}
+
+.tabs-growth > .tabs,
+.tabs.tabs-growth {
+  border-color: #5e6772;
+  background-color: #5e6772;
+  background-image: linear-gradient(0deg, #5e6772, #5e6772 50%, transparent 50%);
+  color: #fff;
+}
+
+.tabs-growth > .tabs .tab-item .badge,
+.tabs.tabs-growth .tab-item .badge {
+  background-color: #000;
+  color: #5e6772;
+}
+
+.bar.bar-positive {
+  border-color: #5e6772;
+  background-color: #5e6772;
+  background-image: linear-gradient(0deg, #5e6772, #5e6772 50%, transparent 50%);
+  color: #fff;
+}
+
+.bar.bar-positive .title {
+  color: #fff;
+}
+
+.bar.bar-positive.bar-footer {
+  background-image: linear-gradient(180deg, #5e6772, #5e6772 50%, transparent 50%);
 }
