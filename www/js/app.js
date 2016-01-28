@@ -478,7 +478,8 @@ angular.module('starter', [
         url: '/exam',
         views: {
           'app-exam': {
-            templateUrl: 'templates/exam.html'
+            templateUrl: 'templates/exam.html',
+            'controller': 'ExamCtrl'
           }
         }
       })
