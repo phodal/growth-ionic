@@ -133,4 +133,11 @@ METHODOLOGY["zh-cn"]={
 
   "advanced" : "高级篇",
   "spec-example" : "《实例化需求》"
-}
+};
+
+COMMUNITY["zh-cn"] = {
+  "login": "登录",
+  "close": "关闭",
+  "username": "用户名",
+  "password": "密码"
+};

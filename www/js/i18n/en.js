@@ -134,4 +134,11 @@ METHODOLOGY["en"]={
 
   "advanced" : "Advanced",
   "spec-example" : '"Specification by Example"'
-}
+};
+
+COMMUNITY["en"] = {
+  "login": "Login",
+  "close": "Close",
+  "username": "Username",
+  "password": "Password"
+};

@@ -61,6 +61,7 @@ angular.module('starter', [
     $translateProvider.translations('en', ARCHITECTURE_DESIGN['en']);
     $translateProvider.translations('en', METHODOLOGY['en']);
     $translateProvider.translations('en', HELPER_ARTICLES['en']);
+    $translateProvider.translations('en', COMMUNITY['en']);
 
 
     $translateProvider.translations('zh-cn', DAY_TITLE['zh-cn']);
@@ -74,6 +75,7 @@ angular.module('starter', [
     $translateProvider.translations('zh-cn', ARCHITECTURE_DESIGN['zh-cn']);
     $translateProvider.translations('zh-cn', METHODOLOGY['zh-cn']);
     $translateProvider.translations('zh-cn', HELPER_ARTICLES['zh-cn']);
+    $translateProvider.translations('zh-cn', COMMUNITY['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
     var language = window.localStorage.getItem('language');

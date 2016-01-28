@@ -6,16 +6,18 @@ var PAGE_TITLE = {};
 
 var DAY_TITLE = {};
 
-var ABOUT_MENU={};
+var ABOUT_MENU = {};
 
-var EXAM_MENU={};
+var EXAM_MENU = {};
 
-var BOOK_ROADMAP_MENU={};
+var BOOK_ROADMAP_MENU = {};
 
-var PRACTICAL_PROGRAMMING={};
+var PRACTICAL_PROGRAMMING = {};
 
-var ARCHITECTURE_DESIGN={};
+var ARCHITECTURE_DESIGN = {};
 
 var HELPER_ARTICLES = {};
 
-var METHODOLOGY={};
+var METHODOLOGY = {};
+
+var COMMUNITY = {};
