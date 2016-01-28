@@ -3,8 +3,8 @@
     <button class="button button-icon icon ion-ios-search" ng-click="showFilterBar()">
     </button>
   </ion-nav-buttons>
-  <ion-content>
-    <div class="list card" ng-repeat="solution in solutions">
+  <ion-content class="has-header">
+    <ion-list ng-repeat="solution in solutions">
       <div class="item">
         <h2>{{solution.name}}</h2>
       </div>
@@ -18,6 +18,6 @@
         <!--<a class="tab-item" ng-repeat="stack in solution.stacks" href="#/app/stack/{{stack | lowercase}}">{{stack}}</a>-->
         <a class="tab-item" ng-repeat="stack in solution.stacks">{{stack}}</a>
       </div>
-    </div>
+    </ion-list>
   </ion-content>
 </ion-view>
