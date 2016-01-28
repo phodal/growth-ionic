@@ -1,8 +1,17 @@
 angular.module('starter.controllers')
-  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $ionicTabsDelegate) {
+  .controller('MainCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $ionicTabsDelegate, $translate) {
     if(isAndroid) {
       $updateServices.check('main');
     }
+
+    $translate('day1').then(function (translation) {
+      console.log(translation)
+    });
+
+    $scope.days = [1 ,2, 3, 4, 5, 6, 7];
+    $scope.getDay = function (index) {
+      return "day" + index
+    };
 
     $scope.$on('$ionicView.beforeEnter', function () {
       $scope.badgePoints = 0;
