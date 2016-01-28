@@ -315,11 +315,11 @@ angular.module('starter', [
         }
       })
 
-      .state('app.todoView', {
-        url: '/todoView',
+      .state('app.todo', {
+        url: '/todo',
         views: {
           'app-more': {
-            templateUrl: 'templates/todoView.html',
+            templateUrl: 'templates/todo.html',
             controller: 'TodoViewCtrl'
           }
         }
