@@ -1,11 +1,9 @@
 var ALL_SKILLS = {
   "hello": [
     {text: "HTML5"},
-    {text: "CSS3"},
-    {text: "Node.js"},
+    {text: "JavaScript"},
     {text: "Java"},
-    {text: "Python"},
-    {text: "JavaScript"}
+    {text: "Python"}
   ],
   "env": [
     {text: "Windows"},
@@ -32,7 +30,7 @@ var ALL_SKILLS = {
   ],
   "coding": [
     {text: "Rename"},
-    {text: "Extract Variable"},
+    {text: "Extract"},
     {text: "Inline"}
   ],
   "container": [
@@ -47,7 +45,7 @@ var ALL_SKILLS = {
     {text: "Squid"}
   ],
   "analytics": [
-    {text: "Google Analytics"},
+    {text: "GA"},
     {text: "Webmaster"},
     {text: "Omniture"},
     {text: "Spark"},
@@ -73,21 +71,18 @@ var ALL_SKILLS = {
     {text: "jQuery"},
     {text: "Ember.js"},
     {text: "Knockout.js"},
-    {text: "Ractive"},
     {text: "Vue.js"}
   ],
   "framework": [
-    {text: "Express.js"},
+    {text: "Express.js/Koa"},
     {text: "Spring MVC"},
-    {text: "Play(Scala)"},
-    {text: "Koa"},
     {text: "Domain"},
     {text: "Django"},
-    {text: "Flask"},
-    {text: "MVVM"}
+    {text: "Flask"}
   ],
   "configurable": [
-    {text: "Feature Toggle"}
+    {text: "Toggle"},
+    {text: "Manager"}
   ]
 };
 
