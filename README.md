@@ -77,9 +77,9 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 7. D3.js
 8. collide
 
-Angular Plugins: angular-highlightjs, angular-marked, angular-translate
+Angular Plugins: angular-highlightjs, angular-marked, angular-translate, angular-moment, angular-resource
 
-Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-filter-bar 
+Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-filter-bar, ion-affix 
 
 ###Setup
 
