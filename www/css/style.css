@@ -1260,6 +1260,9 @@ hr.topic {
   background-image: linear-gradient(180deg, #5e6772, #5e6772 50%, transparent 50%);
 }
 
+.spinner-android {
+  stroke: #5e6772;
+}
 .bar-positive .button {
   background-color: #5e6772;
 }
