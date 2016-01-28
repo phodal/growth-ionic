@@ -17,9 +17,7 @@ angular.module('starter', [
     'starter.controllers',
     'starter.services'
   ])
-  .run(function ($ionicPlatform, amMoment) {
-    amMoment.changeLocale('zh-cn');
-
+  .run(function ($ionicPlatform, amMoment, $window, $translate) {
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
         analytics.startTrackerWithId('UA-71907748-1');
@@ -37,6 +35,14 @@ angular.module('starter', [
         if(isAndroid) {
           StatusBar.backgroundColorByHexString("#5e6772");
         }
+      }
+
+      var language = $window.localStorage.getItem('language');
+      if (language !== undefined) {
+        $translate.use(language);
+        amMoment.changeLocale(language);
+      } else {
+        amMoment.changeLocale('zh-cn');
       }
     });
   })
@@ -78,10 +84,6 @@ angular.module('starter', [
     $translateProvider.translations('zh-cn', COMMUNITY['zh-cn']);
 
     $translateProvider.preferredLanguage('zh-cn');
-    var language = window.localStorage.getItem('language');
-    if (language !== undefined) {
-      $translateProvider.preferredLanguage(language);
-    }
     $translateProvider.fallbackLanguage('en');
   })
   .config(['markedProvider', function (markedProvider) {

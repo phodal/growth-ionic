@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $translate) {
+  .controller('SettingCtrl', function ($scope, $analytics, $storageServices, $translate, amMoment) {
     $analytics.trackView('Setting Ctrl');
     $scope.language = {checked: false};
     $scope.optionSelected = 'zh-cn';
@@ -11,6 +11,7 @@ angular.module('starter.controllers')
 
     $scope.updateLanguages = function (optionSelected) {
       $storageServices.set('language', optionSelected);
+      amMoment.changeLocale(optionSelected);
       $translate.use(optionSelected);
     };
   });
