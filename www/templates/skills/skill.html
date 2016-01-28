@@ -4,7 +4,7 @@
     <button class="button button-clear button-primary" ng-click="submitSkill();closeSpecialModal()">OK</button>
   </ion-header-bar>
   <ion-content>
-    <ion-item ng-repeat="item in devList">
+    <ion-item  collection-repeat="item in devList">
       {{ item.text }} <rating ng-model="item.rating" max="item.max" ></rating>
     </ion-item>
   </ion-content>
