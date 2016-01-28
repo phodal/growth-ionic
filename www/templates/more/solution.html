@@ -5,7 +5,7 @@
   </ion-nav-buttons>
   <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
     <ion-list class="topics">
-      <ion-item class="item card" collection-repeat="solution in solutions" collection-item-width="'96%'">
+      <ion-item collection-repeat="solution in solutions" collection-item-width="'100%'">
         <div class="item">
           <h2>{{solution.name}}</h2>
         </div>
@@ -17,7 +17,6 @@
           </p>
         </div>
       </ion-item>
-      <br/>
-    </ion-list>
+      </ion-list>
   </ion-content>
 </ion-view>
