@@ -4,20 +4,17 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
-    <ion-list ng-repeat="solution in solutions">
+    <div class="item card" ng-repeat="solution in solutions">
       <div class="item">
         <h2>{{solution.name}}</h2>
       </div>
 
       <div class="item item-body">
+        <span ng-repeat="stack in solution.stacks">{{stack}} </span>
         <p>
           {{solution.description}}
         </p>
       </div>
-      <div class="item tabs tabs-secondary tabs-icon-left modals">
-        <!--<a class="tab-item" ng-repeat="stack in solution.stacks" href="#/app/stack/{{stack | lowercase}}">{{stack}}</a>-->
-        <a class="tab-item" ng-repeat="stack in solution.stacks">{{stack}}</a>
-      </div>
-    </ion-list>
+    </div>
   </ion-content>
 </ion-view>
