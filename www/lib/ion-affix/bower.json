@@ -1,0 +1,28 @@
+{
+  "name": "ion-affix",
+  "version": "1.0.1",
+  "homepage": "https://github.com/aliok/ion-affix",
+  "authors": [
+    "Ali Ok <aliok@apache.org>"
+  ],
+  "description": "Sticky affix elements for Ionic framework",
+  "main": "ion-affix.js",
+  "keywords": [
+    "ionic",
+    "affix",
+    "ion-affix",
+    "ionic-affix",
+    "sticky"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.14"
+  }
+}

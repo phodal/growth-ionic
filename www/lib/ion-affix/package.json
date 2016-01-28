@@ -1,0 +1,31 @@
+{
+  "name": "ion-affix",
+  "version": "1.0.1",
+  "description": "Sticky affix elements for Ionic framework",
+  "main": "ion-affix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliok/ion-affix.git"
+  },
+  "keywords": [
+    "ionic",
+    "affix",
+    "ion-affix",
+    "ionic-affix",
+    "sticky"
+  ],
+  "author": "Ali Ok (aliok@apache.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliok/ion-affix/issues"
+  },
+  "homepage": "https://github.com/aliok/ion-affix",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browser-sync": "^2.6.4",
+    "gulp": "^3.8.11"
+  }
+}

@@ -14,6 +14,7 @@ angular.module('starter', [
     'pascalprecht.translate',
     'angularMoment',
     'ngResource',
+    'ion-affix',
     'starter.controllers',
     'starter.services'
   ])
