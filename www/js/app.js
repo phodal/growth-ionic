@@ -254,16 +254,6 @@ angular.module('starter', [
         }
       })
 
-      .state('app.todoView', {
-        url: '/todoView',
-        views: {
-          'app-main@app': {
-            templateUrl: 'templates/todoView.html',
-            controller: 'TodoViewCtrl'
-          }
-        }
-      })
-
       .state('app.skilltree', {
         url: '/skilltree',
         views: {
@@ -346,6 +336,16 @@ angular.module('starter', [
         views: {
           'app-more': {
             templateUrl: 'templates/more.html'
+          }
+        }
+      })
+
+      .state('app.todoView', {
+        url: '/todoView',
+        views: {
+          'app-more': {
+            templateUrl: 'templates/todoView.html',
+            controller: 'TodoViewCtrl'
           }
         }
       })
