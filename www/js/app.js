@@ -17,7 +17,7 @@ angular.module('starter', [
     'starter.controllers',
     'starter.services'
   ])
-  .run(function ($ionicPlatform, amMoment, $state, $ionicSideMenuDelegate, $storageServices) {
+  .run(function ($ionicPlatform, amMoment) {
     amMoment.changeLocale('zh-cn');
 
     $ionicPlatform.ready(function () {
@@ -33,38 +33,9 @@ angular.module('starter', [
 
       }
       if (window.StatusBar) {
-        // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
-        //StatusBar.backgroundColorByHexString("#387ef5");
-      }
-      if (typeof navigator.globalization !== "undefined") {
-        navigator.globalization.getPreferredLanguage(function (language) {
-          //var lang = angular.lowercase(language.value);
-          //$translate.use(lang).then(function(data) {
-          //  alert("SUCCESS -> " + data);
-          //}, function(error) {
-          //  alert("ERROR -> " + error);
-          //});
-        }, null);
       }
     });
-
-    $ionicPlatform.registerBackButtonAction(function (event) {
-      if ($state.$current.name === 'app.exam'
-        || $state.$current.name === 'app.community'
-        || $state.$current.name === 'app.solution'
-        || $state.$current.name === 'app.more'
-        || $state.$current.name === 'app.about'
-        || $state.$current.name === 'app.setting'
-      ) {
-        $ionicSideMenuDelegate.toggleLeft();
-        $state.go('app.main', {location: 'replace'});
-      } else if ($state.$current.name === 'app.main') {
-        navigator.app.exitApp(); // exit the app
-      } else {
-        navigator.app.backHistory(); // exit the app
-      }
-    }, 100);
   })
   .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
