@@ -15,6 +15,7 @@ angular.module('starter', [
     'angularMoment',
     'ngResource',
     'ion-affix',
+    'satellizer',
     'starter.controllers',
     'starter.services'
   ])
@@ -49,13 +50,21 @@ angular.module('starter', [
       }
     });
   })
-  .config(function ($ionicConfigProvider) {
+  .config(function ($ionicConfigProvider, $authProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
     $ionicConfigProvider.tabs.position('bottom');
     $ionicConfigProvider.backButton.text('');
     $ionicConfigProvider.backButton.previousTitleText(false);
+    $authProvider.cordova = true;
 
+    $authProvider.github({
+      clientId: '263f260896d71b9a3582',
+      redirectUri: 'http://localhost/',
+      //authorizationEndpoint: 'https://github.com/login/oauth/authorize',
+      url: 'http://forum.growth.ren/auth/github'
+    });
   })
+
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $translateProvider.useSanitizeValueStrategy('');
 
