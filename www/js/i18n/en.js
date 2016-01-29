@@ -140,5 +140,8 @@ COMMUNITY["en"] = {
   "login": "Login",
   "close": "Close",
   "username": "Username",
-  "password": "Password"
+  "password": "Password",
+  "register": "Register",
+  "signin": "Sign In",
+  "email": "Email"
 };

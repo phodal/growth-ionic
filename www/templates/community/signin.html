@@ -1,0 +1,28 @@
+<ion-view view-title='{{ "register" | translate}}'>
+  <ion-content class="padding">
+    <form name="signinForm" ng-submit="signIn(signinForm)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">{{ "username" | translate}}</span>
+          <input type="text" name="username" ng-model="user.username">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">{{ "password" | translate}}</span>
+          <input type="password" name="password" ng-model="user.password" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">{{ "email" | translate}}</span>
+          <input type="text" name="mail" ng-model="user.email" required>
+        </label>
+      </div>
+      <div class="padding">
+        <button class="button button-block button-positive">
+          {{ "signin" | translate}}
+        </button>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-view>

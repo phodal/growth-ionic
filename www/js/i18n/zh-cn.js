@@ -139,5 +139,8 @@ COMMUNITY["zh-cn"] = {
   "login": "登录",
   "close": "关闭",
   "username": "用户名",
-  "password": "密码"
+  "password": "密码",
+  "register": "注册账号",
+  "signin": "注册",
+  "email": "邮箱"
 };

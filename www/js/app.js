@@ -16,7 +16,6 @@ angular.module('starter', [
     'ngResource',
     'ion-affix',
     'satellizer',
-    'ngMessages',
     'starter.controllers',
     'starter.services'
   ])
@@ -297,6 +296,16 @@ angular.module('starter', [
           'app-community': {
             templateUrl: 'templates/community/login.html',
             controller: 'LoginCtrl'
+          }
+        }
+      })
+
+      .state('app.register', {
+        url: '/register',
+        views: {
+          'app-community': {
+            templateUrl: 'templates/community/signin.html',
+            controller: 'SigninCtrl'
           }
         }
       })
