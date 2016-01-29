@@ -285,7 +285,8 @@ angular.module('starter', [
         url: '/topic/create',
         views: {
           'app-community': {
-            templateUrl: 'templates/community/create.html'
+            templateUrl: 'templates/community/create.html',
+            controller: 'CreateCtrl'
           }
         }
       })

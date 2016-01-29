@@ -7,7 +7,7 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Title</span>
-          <input id="slug" type="text" name="title" placeholder="Write here" ng-model="posts.title" required
+          <input id="slug" type="text" name="title" placeholder="Write here" ng-model="post.title" required
                  ng-minlength="2" ng-maxlength="70">
         </label>
 
@@ -16,12 +16,11 @@
         </label>
         <label class="item item-input">
           <textarea id="content" name="content" msd-elastic="\n" rows="10" placeholder="Write here"
-                    ng-model="posts.content" required ng-minlength="2" ng-maxlength="2000"></textarea>
+                    ng-model="post.content" required ng-minlength="2" ng-maxlength="2000"></textarea>
         </label>
       </div>
 
-      <button class="button button-block button-positive" ng-click="create(postsForm)" ng-disabled="postsForm.$invalid"
-              type="submit">发送
+      <button class="button button-block button-positive" ng-click="create()" type="submit">创建
       </button>
     </form>
   </ion-content>
