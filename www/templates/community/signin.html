@@ -1,31 +1,41 @@
 <ion-view view-title='{{ "register" | translate}}'>
   <ion-content class="padding">
-    <form name="signinForm" ng-submit="signIn(signinForm)">
+    <form name="signinForm" novalidate="" ng-submit="signIn(signinForm)">
+
       <div class="list">
-        <label class="item item-input">
+        <label class="item item-input" ng-class="{ 'has-error' : signinForm.username.$invalid}">
           <span class="input-label">{{ "username" | translate}}</span>
-          <input type="text" name="username" ng-model="user.username">
+          <input type="text" name="username" ng-model="user.username" ng-minlength="5" ng-maxlength="10" required>
         </label>
 
-        <label class="item item-input">
+        <div class="form-errors" ng-messages="signinForm.username.$error">
+          <div ng-messages-include="templates/community/form-messages.html"></div>
+        </div>
+
+        <label class="item item-input" ng-class="{ 'has-error-lr' : signinForm.password.$invalid  && signinForm.$submitted, 'valid-lr' : signinForm.password.$valid  && signinForm.$submitted}">
           <span class="input-label">{{ "password" | translate}}</span>
-          <input type="password" name="password" ng-model="user.password" required>
+          <input type="password" name="password" ng-model="user.password" ng-minlength="8" ng-maxlength="25" required>
         </label>
 
-        <label class="item item-input">
+        <div class="form-errors" ng-show="signinForm.password.$error && signinForm.$submitted" ng-messages="signinForm.password.$error">
+          <div ng-messages-include="templates/community/form-messages.html"></div>
+        </div>
+
+        <label class="item item-input" ng-class="{ 'has-error-lr' : signinForm.email.$invalid  && signinForm.$submitted, 'valid-lr' : signinForm.email.$valid  && signinForm.$submitted}">
           <span class="input-label">{{ "email" | translate}}</span>
-          <input type="text" name="mail" ng-model="user.email" required>
+          <input type="email" name="email" ng-model="user.email" ng-minlength="5" ng-maxlength="50" required>
         </label>
+
+        <div class="form-errors" ng-show="signinForm.email.$error && signinForm.$submitted" ng-messages="signinForm.email.$error">
+          <div ng-messages-include="templates/community/form-messages.html"></div>
+        </div>
+
       </div>
-      <label class="item item-input" ng-show="errors">
-        <div class="form-error error" ng-repeat="error in errors">{{error.detail}}</div>
-      </label>
       <div class="padding">
         <button class="button button-block button-positive">
           {{ "signin" | translate}}
         </button>
       </div>
-
     </form>
   </ion-content>
 </ion-view>

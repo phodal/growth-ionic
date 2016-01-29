@@ -3,7 +3,7 @@
   "private": "true",
   "devDependencies": {
     "ionic": "1.2.4",
-    "angular-resource": "~1.4.9",
+    "angular-resource": "~1.4.3",
     "angular-moment": "~0.10.3",
     "moment": "~2.11.1"
   },
@@ -17,6 +17,6 @@
     "d3": "~3.5.12",
     "ion-affix": "~1.0.1",
     "satellizer": "~0.13.4",
-    "angular-messages": "~1.4.9"
+    "angular-messages": "~1.4.3"
   }
 }
