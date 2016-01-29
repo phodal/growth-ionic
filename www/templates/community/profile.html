@@ -1,5 +1,22 @@
 <ion-view view-title='{{ "profile" | translate}}'>
   <ion-content>
+    <ion-item class="item item-icon-right" ng-show="!userId">
+      <div class="sectionTitle"><ion-spinner></ion-spinner></div>
+    </ion-item>
 
+    <div id="profile-content" ng-show="userId">
+      <div id="profile-info">
+        <img id="profile-image" ng-src="{{userInfo.avatarUrl}}">
+        <h3 id="profile-name">{{userInfo.username}}</h3>
+        <span id="profile-description">{{userInfo.bio}}</span>
+      </div>
+      <ion-item>
+        入住时间: <span am-time-ago="userInfo.joinTime"></span>
+      </ion-item>
+      <ion-item>
+        最后登录时间: <span am-time-ago="userInfo.lastSeenTime"></span>
+      </ion-item>
+    </div>
+    </div>
   </ion-content>
 </ion-view>
