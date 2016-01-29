@@ -3,6 +3,9 @@ angular.module('starter.controllers')
     // Form data for the login modal
     $scope.user = {};
     $scope.isLogin = $rootScope.userId;
+    $storageServices.get('username', function(name){
+      $scope.user.username = name;
+    });
 
     $scope.authenticate = function(provider) {
       $auth.authenticate(provider)
@@ -31,6 +34,7 @@ angular.module('starter.controllers')
           $scope.isLogin = true;
           $rootScope.userId = data.userId;
           $storageServices.set('token', data.token);
+          $storageServices.set('username', user.username);
           $ionicHistory.goBack(-1);
         })
         .error(function (data, status) {
