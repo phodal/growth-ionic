@@ -18,7 +18,9 @@ angular.module('starter.controllers')
           $ionicHistory.goBack(-1);
         })
         .error(function (data, status) {
-          alert(data);
+          if(status === 401){
+            $scope.error = '用户名或密码错误'
+          }
         });
     };
   });

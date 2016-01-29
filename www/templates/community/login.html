@@ -10,6 +10,9 @@
           <span class="input-label">{{ "password" | translate}}</span>
           <input type="password" ng-model="user.password">
         </label>
+        <label class="item item-input" ng-show="error">
+          <div class="form-error error">{{error}}</div>
+        </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">{{ "login" | translate}}</button>
         </label>
