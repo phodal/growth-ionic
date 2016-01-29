@@ -1,6 +1,7 @@
 <ion-view view-title="{{'community' | translate}}">
   <ion-nav-buttons side="right">
     <a class="button button-icon ion-ios-person-outline" ng-click="login()" ng-show="!isLogin"></a>
+    <a class="button button-icon ion-ios-chatbubble-outline" href="#/app/topic/create" ng-show="isLogin"></a>
   </ion-nav-buttons>
   <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
     <ion-refresher ng-if="topics.length > 0" pulling-text="下拉刷新..." on-refresh="doRefresh()">
