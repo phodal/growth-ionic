@@ -11,18 +11,16 @@
                  ng-minlength="2" ng-maxlength="70">
         </label>
 
-        <div class="form-errors" ng-messages="postsForm.title.$error">
+        <div class="form-errors" ng-show="postsForm.title.$error && postsForm.$submitted" ng-messages="postsForm.title.$error">
           <div ng-messages-include="templates/community/form-messages.html"></div>
         </div>
 
-        <label class="item item-input">
-          <span class="input-label">内容</span>
-        </label>
+        <label class="item item-divider">内容</label>
         <label class="item item-input">
           <textarea name="content" msd-elastic="\n" rows="10" placeholder="Write here" ng-model="post.content" required ng-minlength="20" ng-maxlength="2000"></textarea>
         </label>
 
-        <div class="form-errors" ng-messages="postsForm.content.$error">
+        <div class="form-errors" ng-show="postsForm.content.$error && postsForm.$submitted" ng-messages="postsForm.content.$error">
           <div ng-messages-include="templates/community/form-messages.html"></div>
         </div>
 
