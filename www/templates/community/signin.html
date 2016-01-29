@@ -17,6 +17,9 @@
           <input type="text" name="mail" ng-model="user.email" required>
         </label>
       </div>
+      <label class="item item-input" ng-show="errors">
+        <div class="form-error error" ng-repeat="error in errors">{{error.detail}}</div>
+      </label>
       <div class="padding">
         <button class="button button-block button-positive">
           {{ "signin" | translate}}
