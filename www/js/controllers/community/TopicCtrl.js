@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $ionicModal, $http, TokenHandler, $storageServices, $window, $cordovaToast) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $http, $storageServices, $window, $cordovaToast) {
     if($rootScope.userId){
       $scope.isLogin = true;
     }

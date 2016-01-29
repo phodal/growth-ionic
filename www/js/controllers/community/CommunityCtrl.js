@@ -1,5 +1,8 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Discussions, TokenHandler, $http, $state, $ionicPopup, $rootScope, $ionicModal, $storageServices, $ionicTabsDelegate) {
+  .controller('CommunityCtrl', function ($scope, Discussions, $http, $state, $rootScope, $ionicTabsDelegate) {
+    if($rootScope.userId) {
+      $scope.isLogin = true;
+    }
 
     $scope.goForward = function () {
       var selected = $ionicTabsDelegate.selectedIndex();
@@ -27,8 +30,4 @@ angular.module('starter.controllers')
         $scope.$broadcast('scroll.refreshComplete');
       })
     };
-
-    if($rootScope.userId) {
-      $scope.isLogin = true;
-    }
   });
