@@ -7,6 +7,11 @@ angular.module('starter.controllers')
       }
     });
 
+    $scope.isShowCommentBox = false;
+    $scope.showCommentBox = function () {
+      $scope.isShowCommentBox = true;
+    };
+
     discussion.$promise.then(function (response) {
       $scope.replyContent = '';
       var postId = response.data.relationships.posts.data[0].id;
@@ -61,12 +66,16 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
+        $scope.isShowCommentBox = false;
         $scope.replyContent = '';
-        $cordovaToast.showLongBottom('Success').then(function(success) {
-          // success
-        }, function (error) {
-          // error
-        });
+        $scope.discussions.push(response.data);
+        if(window.cordova){
+          $cordovaToast.showLongBottom('Success').then(function(success) {
+            // success
+          }, function (error) {
+            // error
+          });
+        }
       }).error(function(data, status){
         if(status === 401){
           $scope.modal.show();
