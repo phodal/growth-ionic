@@ -29,6 +29,7 @@
         <!--<button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>-->
         <h2>{{getUsername(comment.relationships.user)}}</h2>
         <div ng-bind-html="encodeHTML(comment.attributes.contentHtml)"></div>
+        <a class="icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;"></a>
       </div>
     </div>
   </ion-content>
