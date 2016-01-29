@@ -25,7 +25,7 @@
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions"
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}">
-        <button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>
+        <!--<button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>-->
         <h2>{{getUsername(comment.relationships.user)}}</h2>
         <div ng-bind-html="encodeHTML(comment.attributes.contentHtml)"></div>
       </div>
