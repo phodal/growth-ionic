@@ -19,6 +19,8 @@ angular.module('starter', [
     'starter.services'
   ])
   .run(function ($ionicPlatform, amMoment, $window, $translate) {
+    amMoment.changeLocale('zh-cn');
+
     $ionicPlatform.ready(function () {
       if (typeof analytics !== 'undefined') {
         analytics.startTrackerWithId('UA-71907748-1');
