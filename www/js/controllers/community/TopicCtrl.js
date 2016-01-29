@@ -1,8 +1,11 @@
 angular.module('starter.controllers')
   .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $http, $storageServices, $window, $cordovaToast) {
-    if($rootScope.userId){
-      $scope.isLogin = true;
-    }
+
+    $scope.$on('$ionicView.beforeEnter', function () {
+      if ($rootScope.userId) {
+        $scope.isLogin = true;
+      }
+    });
 
     discussion.$promise.then(function (response) {
       $scope.replyContent = '';
@@ -58,7 +61,7 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
-        $scope.replyContent = {};
+        $scope.replyContent = '';
         $cordovaToast.showLongBottom('Success').then(function(success) {
           // success
         }, function (error) {

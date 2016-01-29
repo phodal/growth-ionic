@@ -1,8 +1,11 @@
 angular.module('starter.controllers')
   .controller('CommunityCtrl', function ($scope, Discussions, $http, $state, $rootScope, $ionicTabsDelegate) {
-    if($rootScope.userId) {
-      $scope.isLogin = true;
-    }
+
+    $scope.$on('$ionicView.beforeEnter', function () {
+      if ($rootScope.userId) {
+        $scope.isLogin = true;
+      }
+    });
 
     $scope.goForward = function () {
       var selected = $ionicTabsDelegate.selectedIndex();
