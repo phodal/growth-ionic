@@ -37,7 +37,7 @@ angular.module('starter', [
       }
       if (window.StatusBar) {
         StatusBar.styleDefault();
-        if(isAndroid) {
+        if (isAndroid) {
           StatusBar.backgroundColorByHexString("#5e6772");
         }
       }
@@ -332,6 +332,16 @@ angular.module('starter', [
                 return Discussions.get({id: $stateParams.id});
               }
             }
+          }
+        }
+      })
+
+      .state('app.user', {
+        url: '/user/:id',
+        views: {
+          'app-community': {
+            templateUrl: 'templates/community/profile.html',
+            controller: 'ProfileCtrl'
           }
         }
       })

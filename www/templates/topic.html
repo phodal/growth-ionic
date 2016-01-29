@@ -14,7 +14,7 @@
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
           <img class="avatar" ng-src="{{ user.attributes.avatarUrl }}"/>
-          <span>{{ user.attributes.username }}</span>
+          <a href="#/app/user/{{ user.id }}">{{ user.attributes.username }}</a>
           <span class="item-note" am-time-ago="topic.attributes.startTime"></span>
         </div>
         <hr class="topic">
@@ -27,7 +27,7 @@
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}">
         <!--<button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>-->
-        <h2>{{getUsername(comment.relationships.user)}}</h2>
+        <h2><a href="#/app/user/{{comment.relationships.user.data.id}}">{{getUsername(comment.relationships.user)}}</a></h2>
         <div ng-bind-html="encodeHTML(comment.attributes.contentHtml)"></div>
         <a class="icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;"></a>
       </div>

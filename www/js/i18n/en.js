@@ -143,5 +143,6 @@ COMMUNITY["en"] = {
   "password": "Password",
   "register": "Register",
   "signin": "Sign In",
-  "email": "Email"
+  "email": "Email",
+  "profile": "Profile"
 };
