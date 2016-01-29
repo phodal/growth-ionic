@@ -15,13 +15,14 @@
           <span class="input-label">内容</span>
         </label>
         <label class="item item-input">
-          <textarea id="content" name="content" msd-elastic="\n" rows="10" placeholder="Write here"
-                    ng-model="post.content" required ng-minlength="2" ng-maxlength="2000"></textarea>
+          <textarea id="content" name="content" msd-elastic="\n" rows="10" placeholder="Write here" ng-model="post.content" required ng-minlength="2" ng-maxlength="2000"></textarea>
         </label>
       </div>
-
-      <button class="button button-block button-positive" ng-click="create()" type="submit">创建
-      </button>
     </form>
   </ion-content>
+  <ion-footer-bar align-title="left">
+    <button class="button button-full button-clear button-positive" ng-click="create()" type="submit" style="margin-top: 0px;">
+      创建
+    </button>
+  </ion-footer-bar>
 </ion-view>
