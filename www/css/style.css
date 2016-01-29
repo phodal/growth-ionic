@@ -1266,3 +1266,7 @@ hr.topic {
 .bar-positive .button {
   background-color: #5e6772;
 }
+
+.item.solutionItem {
+  margin: 0;
+}
