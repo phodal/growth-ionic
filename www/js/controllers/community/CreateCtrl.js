@@ -1,6 +1,9 @@
 angular.module('starter.controllers')
   .controller('CreateCtrl', function ($scope, $http, $state, $window) {
-    $scope.post = {};
+    $scope.post = {
+      title: '',
+      content: ''
+    };
 
     $scope.create = function (){
       var data = {

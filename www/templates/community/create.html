@@ -3,20 +3,29 @@
     <a class="button button-icon ion-ios-eye-outline">预览</a>
   </ion-nav-buttons>
   <ion-content>
-    <form name="postsForm" novalidate>
+    <form name="postsForm" novalidate ng-submit="create(postsForm)">
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Title</span>
-          <input id="slug" type="text" name="title" placeholder="Write here" ng-model="post.title" required
+          <input type="text" name="title" placeholder="Write here" ng-model="post.title" required
                  ng-minlength="2" ng-maxlength="70">
         </label>
+
+        <div class="form-errors" ng-messages="postsForm.title.$error">
+          <div ng-messages-include="templates/community/form-messages.html"></div>
+        </div>
 
         <label class="item item-input">
           <span class="input-label">内容</span>
         </label>
         <label class="item item-input">
-          <textarea id="content" name="content" msd-elastic="\n" rows="10" placeholder="Write here" ng-model="post.content" required ng-minlength="2" ng-maxlength="2000"></textarea>
+          <textarea name="content" msd-elastic="\n" rows="10" placeholder="Write here" ng-model="post.content" required ng-minlength="20" ng-maxlength="2000"></textarea>
         </label>
+
+        <div class="form-errors" ng-messages="postsForm.content.$error">
+          <div ng-messages-include="templates/community/form-messages.html"></div>
+        </div>
+
       </div>
     </form>
   </ion-content>
