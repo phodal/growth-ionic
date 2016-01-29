@@ -279,6 +279,15 @@ angular.module('starter', [
         }
       })
 
+      .state('app.topic-create', {
+        url: '/topic/create',
+        views: {
+          'app-community': {
+            templateUrl: 'templates/community/create.html'
+          }
+        }
+      })
+
       .state('app.topic', {
         url: '/topic/:id',
         views: {
