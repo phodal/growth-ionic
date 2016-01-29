@@ -16,6 +16,7 @@ angular.module('starter', [
     'ngResource',
     'ion-affix',
     'satellizer',
+    'ngMessages',
     'starter.controllers',
     'starter.services'
   ])
