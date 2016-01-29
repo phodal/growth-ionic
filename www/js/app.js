@@ -281,6 +281,16 @@ angular.module('starter', [
         }
       })
 
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'app-community': {
+            templateUrl: 'templates/community/login.html',
+            controller: 'LoginCtrl'
+          }
+        }
+      })
+
       .state('app.topic-create', {
         url: '/topic/create',
         views: {

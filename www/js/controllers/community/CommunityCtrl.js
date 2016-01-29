@@ -28,46 +28,7 @@ angular.module('starter.controllers')
       })
     };
 
-    // Form data for the login modal
-    $scope.user = {};
-    $scope.isLogin = false;
-    if($rootScope.userId){
+    if($rootScope.userId) {
       $scope.isLogin = true;
     }
-
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
-      scope: $scope
-    }).then(function (modal) {
-      $scope.modal = modal;
-    });
-
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function () {
-      $scope.modal.hide();
-    };
-
-    // Open the login modal
-    $scope.login = function () {
-      $scope.modal.show();
-    };
-
-    $scope.doLogin = function (user) {
-      var payload = {
-        identification: user.username,
-        password: user.password
-      };
-
-      $http.post('http://forum.growth.ren/' + 'api/token', payload)
-        .success(function (data) {
-          $scope.isLogin = true;
-          $rootScope.userId = data.userId;
-          TokenHandler.set(data.token);
-          $storageServices.set('token', data.token);
-          $scope.closeLogin();
-        })
-        .error(function (data, status) {
-          console.log(data);
-        });
-    };
   });

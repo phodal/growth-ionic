@@ -1,10 +1,4 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">{{ "login" | translate}}</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">{{ "close" | translate}}</button>
-    </div>
-  </ion-header-bar>
+<ion-view view-title='{{ "login" | translate}}'>
   <ion-content>
     <form ng-submit="doLogin(user)">
       <div class="list">
@@ -22,4 +16,4 @@
       </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
