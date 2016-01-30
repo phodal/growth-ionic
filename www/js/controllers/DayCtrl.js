@@ -169,7 +169,6 @@ angular.module('starter.controllers')
       });
     };
 
-
     $scope.openBookListModal = function (topic) {
       $analytics.trackView('modal book lists');
       $scope.books = $filter('filter')(BOOK_REVIEWS, {"category": topic});
@@ -215,11 +214,6 @@ angular.module('starter.controllers')
         $scope.currentModals.push(modal);
       });
     };
-
-    $scope.closeBookModal = function () {
-      $scope.currentBookModal.hide();
-    };
-
 
     $scope.introModal = null;
     $scope.openIntroModal = function (day) {
