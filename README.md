@@ -31,7 +31,7 @@ Powered by Electron，Support OS:
 
 Online: [http://www.growth.ren/](http://www.growth.ren/)
 
-###Others
+**Other**
 
 QQ群: 529600394，我的微信公众号: phodal
 
@@ -137,8 +137,6 @@ Google Analytics:
 Install Electron and Run
 
      electron .
-     
-file ``desktop.js``
 
 ##其他
 
