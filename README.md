@@ -60,6 +60,14 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
  - 一键解锁新技能，形成技能图谱 
  - 一步步成为Web顶尖开发者 
  
+![1](screenshot/1.pic.jpg)
+![2](screenshot/2.pic.jpg)
+![3](screenshot/3.pic.jpg)
+
+![4](screenshot/4.pic.jpg)
+![5](screenshot/5.pic.jpg)
+![6](screenshot/6.pic.jpg)
+
 ##Setup && Development 
 
 ![Architecture](growth-arch.png)
