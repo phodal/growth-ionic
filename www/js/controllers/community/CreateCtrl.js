@@ -5,7 +5,9 @@ angular.module('starter.controllers')
       content: ''
     };
 
+    $scope.isInCreating = false;
     $scope.create = function (){
+      $scope.isInCreating = true;
       var data = {
         "data": {
           "attributes": {
@@ -24,9 +26,10 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
-        //var id = response.data.id;
-        //$state.go('#/app/topic/:' + id)
+        $scope.isInCreating = false;
+        $state.go('app.topic', {id: response.data.id});
       }).error(function(data, status){
+        $scope.isInCreating = false;
         if(status === 401){
           $scope.modal.show();
         }

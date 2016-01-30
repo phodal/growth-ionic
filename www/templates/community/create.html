@@ -27,9 +27,10 @@
       </div>
   </ion-content>
   <ion-footer-bar align-title="left">
-    <button class="button button-full button-clear button-positive" type="submit" style="margin-top: 0px;">
+    <button class="button button-full button-clear button-positive" type="submit" style="margin-top: 0px;" ng-show="!isInCreating">
       创建
     </button>
+    <div class="sectionTitle" ng-show="isInCreating"><ion-spinner style="margin: 0 50%;"></ion-spinner></div>
   </ion-footer-bar>
   </form>
 </ion-view>
