@@ -26,11 +26,14 @@
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions"
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}">
-        <!--<button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>-->
         <h2><a href="#/app/user/{{comment.relationships.user.data.id}}">{{getUsername(comment.relationships.user)}}</a></h2>
         <div ng-bind-html="encodeHTML(comment.attributes.contentHtml)"></div>
-        <button class="button button-clear" ng-click="replyTo(getUsername(comment.relationships.user), comment.id)">回复</button>
-        <!--<a class="icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;"></a>-->
+
+        <div ng-show="isLogin">
+          <button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>
+          <button class="button button-clear" ng-click="replyTo(getUsername(comment.relationships.user), comment.id)">回复</button>
+          <button class="button button-clear icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;"></button>
+        </div>
       </div>
     </div>
   </ion-content>
