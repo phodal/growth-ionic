@@ -143,5 +143,6 @@ COMMUNITY["zh-cn"] = {
   "register": "注册账号",
   "signin": "注册",
   "email": "邮箱",
-  "profile": "用户个人资料"
+  "profile": "用户个人资料",
+  "top": "置顶"
 };
