@@ -584,7 +584,8 @@ ul.rating li {
 .get {
   display: inline-block;
   float: right;
-  color: #5e6772;
+  /*color: #5e6772;*/
+  color: #3982DA;
   margin-top: -0.2em;
 }
 
@@ -689,6 +690,7 @@ content {
 }
 
 a.get {
+  font-weight: bold;
   cursor: pointer;
 }
 
