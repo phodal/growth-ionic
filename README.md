@@ -56,13 +56,11 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 在这里你还可以：
 
-- 玩玩小游戏了解技能掌握状况
-- 一键解锁新技能，形成技能图谱 
-- 一步步成为Web顶尖开发者 
+ - 玩玩小游戏了解技能掌握状况
+ - 一键解锁新技能，形成技能图谱 
+ - 一步步成为Web顶尖开发者 
  
-##Setup && Develop 
-
-###Architecture
+##Setup && Development 
 
 ![Architecture](growth-arch.png)
 
@@ -77,7 +75,14 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 7. D3.js
 8. collide
 
-Angular Plugins: angular-highlightjs, angular-marked, angular-translate, angular-moment, angular-resource
+Angular Plugins: 
+
+1. angular-highlightjs: HighLight Code
+2. angular-marked: Markdown Support 
+3. angular-translate: i18n
+4. angular-moment: Time i18n
+5. angular-resource: HTTP Resource
+6. angular-messages: Form Validate
 
 Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-filter-bar, ion-affix 
 
