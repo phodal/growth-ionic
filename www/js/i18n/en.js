@@ -17,14 +17,14 @@ SIDE_MENU["en"] = {
 };
 
 MAIN_VIEW_MENU["en"] = {
-  "day0": "Day 0 : Prepare",
-  "day1": "Day 1 : Start",
-  "day2": "Day 2 : Coding",
-  "day3": "Day 3 : Go Live",
-  "day4": "Day 4 : Analytics",
-  "day5": "Day 5 : Continuous Integration ",
-  "day6": "Day 6 : Legacy System",
-  "day7": "Day 7 : Review & Restart"
+  "day0": "Prepare",
+  "day1": "Start",
+  "day2": "Coding",
+  "day3": "Go Live",
+  "day4": "Analytics",
+  "day5": "Continuous Integration ",
+  "day6": "Legacy System",
+  "day7": "Review & Restart"
 };
 
 PAGE_TITLE["en"] = {
