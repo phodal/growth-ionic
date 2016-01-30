@@ -84,7 +84,7 @@ angular.module('starter.controllers')
         $scope.replyContent = '';
         $scope.discussions.push(response.data);
         if (window.cordova) {
-          $cordovaToast.showLongBottom('Success').then(function (success) {
+          $cordovaToast.showLongCenter('回复成功').then(function (success) {
             // success
           }, function (error) {
             // error
