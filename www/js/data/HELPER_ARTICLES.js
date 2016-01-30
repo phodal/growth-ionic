@@ -108,7 +108,7 @@ HELPER_ARTICLES['zh-cn'] = {
   test: [
     {
       slug: 'how-to-test',
-      title: '如何写测试——测试金字塔'
+      title: '测试的艺术:测试金字塔'
     },
     {
       slug: 'mock',
@@ -230,7 +230,7 @@ HELPER_ARTICLES['zh-cn'] = {
     },
     {
       slug: 'change-code',
-      title: '如何修改代码'
+      title: '修改代码的诀窍'
     }
   ],
   refactor: [
