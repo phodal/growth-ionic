@@ -1,7 +1,7 @@
 {
   "name": "growth",
   "productName": "Growth",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "main": "desktop.js",
   "scripts": {
     "start": "electron desktop.js",
