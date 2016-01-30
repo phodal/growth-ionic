@@ -52,15 +52,15 @@ angular.module('starter.controllers')
     $scope.replyToUser = '';
     $scope.replyToId = '';
 
-    $scope.replyTo = function (user ,id) {
+    $scope.replyTo = function (user, id) {
       $scope.isShowCommentBox = true;
       $scope.replyToUser = user;
       $scope.replyToId = id;
     };
 
-    $scope.saveReply = function() {
+    $scope.saveReply = function () {
       var content = $scope.replyContent;
-      if($scope.replyToUser !== '' && $scope.replyToUser  !== '') {
+      if ($scope.replyToUser !== '' && $scope.replyToUser !== '') {
         content = '@' + $scope.replyToUser + '#' + $scope.replyToId + $scope.replyContent;
       }
 
@@ -83,28 +83,26 @@ angular.module('starter.controllers')
         $scope.isShowCommentBox = false;
         $scope.replyContent = '';
         $scope.discussions.push(response.data);
-        if(window.cordova){
-          $cordovaToast.showLongBottom('Success').then(function(success) {
+        if (window.cordova) {
+          $cordovaToast.showLongBottom('Success').then(function (success) {
             // success
           }, function (error) {
             // error
           });
         }
-      }).error(function(data, status){
-        if(status === 401){
+      }).error(function (data, status) {
+        if (status === 401) {
           $scope.modal.show();
         }
       })
     };
 
-    $scope.LikeIt = function(ID) {
+    $scope.LikeIt = function (ID) {
       var like = {
-        "data":
-        {
+        "data": {
           "type": "posts",
           "id": ID.toString(),
-          "attributes":
-          {
+          "attributes": {
             "isLiked": true
           }
         }
@@ -119,8 +117,8 @@ angular.module('starter.controllers')
         }
       }).success(function (response) {
 
-      }).error(function(data, status){
-        if(status === 401){
+      }).error(function (data, status) {
+        if (status === 401) {
           $scope.modal.show();
         }
       })
