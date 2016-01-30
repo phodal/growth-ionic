@@ -2,8 +2,8 @@
   <ion-nav-buttons side="right">
     <a class="button button-icon ion-ios-eye-outline">预览</a>
   </ion-nav-buttons>
+  <form name="postsForm" novalidate ng-submit="create(postsForm)">
   <ion-content>
-    <form name="postsForm" novalidate ng-submit="create(postsForm)">
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Title</span>
@@ -25,11 +25,11 @@
         </div>
 
       </div>
-    </form>
   </ion-content>
   <ion-footer-bar align-title="left">
-    <button class="button button-full button-clear button-positive" ng-click="create()" type="submit" style="margin-top: 0px;">
+    <button class="button button-full button-clear button-positive" type="submit" style="margin-top: 0px;">
       创建
     </button>
   </ion-footer-bar>
+  </form>
 </ion-view>
