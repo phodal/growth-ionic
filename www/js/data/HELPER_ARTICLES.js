@@ -94,7 +94,7 @@ HELPER_ARTICLES['zh-cn'] = {
   before: [
     {
       slug: 'kickoff',
-      title: 'Kickoff?'
+      title: 'Kickoff'
     },
     {
       slug: 'tasking',
