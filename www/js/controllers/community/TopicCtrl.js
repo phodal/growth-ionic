@@ -49,12 +49,25 @@ angular.module('starter.controllers')
       return html.replace('href=', 'src=');
     };
 
+    $scope.replyToUser = '';
+    $scope.replyToId = '';
+
+    $scope.replyTo = function (user ,id) {
+      $scope.isShowCommentBox = true;
+      $scope.replyToUser = user;
+      $scope.replyToId = id;
+    };
 
     $scope.saveReply = function() {
+      var content = $scope.replyContent;
+      if($scope.replyToUser !== '' && $scope.replyToUser  !== '') {
+        content = '@' + $scope.replyToUser + '#' + $scope.replyToId + $scope.replyContent;
+      }
+
       var reply = {
         "data": {
           "type": "posts",
-          "attributes": {"content": $scope.replyContent},
+          "attributes": {"content": content},
           "relationships": {"discussion": {"data": {"type": "discussions", "id": $stateParams.id}}}
         }
       };
