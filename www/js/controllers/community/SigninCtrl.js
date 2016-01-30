@@ -1,5 +1,7 @@
 angular.module('starter.controllers')
-  .controller('SigninCtrl', function ($scope, $http, $state, $ionicPopup, $translate) {
+  .controller('SigninCtrl', function ($scope, $http, $state, $ionicPopup, $translate, $analytics) {
+    $analytics.trackView('Community Signin Ctrl');
+
     $scope.user = {
       username: '',
       password : '',

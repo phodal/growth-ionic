@@ -1,5 +1,6 @@
 angular.module('starter.controllers')
-  .controller('CommunityCtrl', function ($scope, Discussions, $http, $state, $rootScope, $ionicTabsDelegate) {
+  .controller('CommunityCtrl', function ($scope, Discussions, $http, $state, $rootScope, $ionicTabsDelegate, $analytics) {
+    $analytics.trackView('Community Ctrl');
 
     $scope.$on('$ionicView.beforeEnter', function () {
       if ($rootScope.userId) {

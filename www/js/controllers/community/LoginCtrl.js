@@ -1,5 +1,6 @@
 angular.module('starter.controllers')
-  .controller('LoginCtrl', function ($scope, $http, $rootScope, $storageServices, $ionicHistory, $ionicPopup, $auth) {
+  .controller('LoginCtrl', function ($scope, $http, $rootScope, $storageServices, $ionicHistory, $ionicPopup, $auth, $analytics) {
+    $analytics.trackView('Community Login Ctrl');
     // Form data for the login modal
     $scope.user = {};
     $scope.isLogin = $rootScope.userId;

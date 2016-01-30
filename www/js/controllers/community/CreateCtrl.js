@@ -1,5 +1,6 @@
 angular.module('starter.controllers')
-  .controller('CreateCtrl', function ($scope, $http, $state, $window) {
+  .controller('CreateCtrl', function ($scope, $http, $state, $window, $analytics) {
+    $analytics.trackView('Community Create Ctrl');
     $scope.post = {
       title: '',
       content: ''
