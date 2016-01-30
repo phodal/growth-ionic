@@ -63,7 +63,6 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 ![1](screenshot/1.pic.jpg)
 ![2](screenshot/2.pic.jpg)
 ![3](screenshot/3.pic.jpg)
-
 ![4](screenshot/4.pic.jpg)
 ![5](screenshot/5.pic.jpg)
 ![6](screenshot/6.pic.jpg)
