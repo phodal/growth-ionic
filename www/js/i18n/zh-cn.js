@@ -10,8 +10,9 @@ SIDE_MENU["zh-cn"] = {
   "title" : "成为顶尖开发者",
   "roadmap": "路线图",
   "talk": "七日谈",
-  "articles": "全部文章",
-  "reviews": "全部书评",
+  "articles": "所有文章",
+  "reviews": "所有书评",
+  "todos": "所有TODO",
   "community": "社区"
 };
 

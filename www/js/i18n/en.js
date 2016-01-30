@@ -12,6 +12,7 @@ SIDE_MENU["en"] = {
   "talk": "Talk",
   "articles": "Articles",
   "reviews": "Reviews",
+  "todos": "TODOs",
   "community": "Community"
 };
 
