@@ -22,9 +22,9 @@ MAIN_VIEW_MENU["en"] = {
   "day2": "Day 2 : Coding",
   "day3": "Day 3 : Go Live",
   "day4": "Day 4 : Analytics",
-  "day5": "Day 5 : CI",
+  "day5": "Day 5 : Continuous Integration ",
   "day6": "Day 6 : Legacy System",
-  "day7": "Day 7 : Retro & Restart"
+  "day7": "Day 7 : Review & Restart"
 };
 
 PAGE_TITLE["en"] = {
