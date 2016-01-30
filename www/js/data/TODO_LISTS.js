@@ -407,7 +407,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'configurable': {
-    'zh': 'Confige',
+    'zh': 'Config',
     'achievement': '会点魔术',
     'basic': [
       {
@@ -503,7 +503,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'arch': {
-  'zh': '架构',
+  'zh': 'Arch',
   'achievement': '设计天才',
   'basic': [
     {
