@@ -133,7 +133,6 @@ angular.module('starter.controllers')
 
     $scope.openPopover = function ($event, id) {
       $scope.idInPopover = id;
-      console.log($scope.idInPopover);
       $scope.popover.show($event);
     };
     $scope.closePopover = function () {
