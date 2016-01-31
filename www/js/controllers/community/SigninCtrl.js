@@ -24,11 +24,9 @@ angular.module('starter.controllers')
 
           alertPopup.then(function(res) {
             $state.go('app.community');
-            console.log('Thank you for not eating my delicious ice cream cone');
           });
         })
         .error(function (data, status) {
-          console.log(data.errors);
           $scope.errors = data.errors
         });
 

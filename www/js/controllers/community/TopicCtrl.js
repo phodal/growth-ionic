@@ -46,11 +46,9 @@ angular.module('starter.controllers')
     };
 
     $scope.isLiked = function (relationships) {
-      console.log(relationships);
       var isLike = false;
       var userId = relationships.user.data.id;
       angular.forEach(relationships.likes.data, function(like){
-        console.log(like);
         if( userId === like.id) {
           isLike = true;
         }
@@ -169,7 +167,6 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
-        console.log(response);
         $scope.popover.hide();
       }).error(function (data, status) {
         if (status === 401) {
