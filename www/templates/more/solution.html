@@ -14,9 +14,8 @@
           {{solution.description}}
         </p>
       </div>
-      <div class="item tabs tabs-secondary tabs-icon-left modals solutionItem">
-        <!--<a class="tab-item" ng-repeat="stack in solution.stacks" href="#/app/stack/{{stack | lowercase}}">{{stack}}</a>-->
-        <a class="tab-item" ng-repeat="stack in solution.stacks">{{stack}}</a>
+      <div class="item item-divider">
+        <a class="subdued" ng-repeat="stack in solution.stacks">{{stack}}</a>
       </div>
     </ion-item>
   </ion-content>
