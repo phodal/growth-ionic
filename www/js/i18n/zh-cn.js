@@ -145,5 +145,7 @@ COMMUNITY["zh-cn"] = {
   "signin": "注册",
   "email": "邮箱",
   "profile": "用户个人资料",
-  "top": "置顶"
+  "top": "置顶",
+  "edit": "编辑",
+  "delete": "删除"
 };

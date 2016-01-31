@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $http, $storageServices, $window, $cordovaToast, $analytics) {
+  .controller('TopicCtrl', function ($scope, $stateParams, $filter, discussion, $rootScope, $http, $storageServices, $window, $cordovaToast, $analytics, $ionicPopover) {
     $analytics.trackView('Community Topic Ctrl');
 
     $scope.$on('$ionicView.beforeEnter', function () {
@@ -113,10 +113,51 @@ angular.module('starter.controllers')
         url: 'http://forum.growth.ren/api/posts/' + ID,
         data: like,
         headers: {
+          'X-Fake-Http-Method': 'PATCH',
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
 
+      }).error(function (data, status) {
+        if (status === 401) {
+          $scope.modal.show();
+        }
+      })
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/community/more-popover.html', {
+      scope: $scope
+    }).then(function (popover) {
+      $scope.popover = popover;
+    });
+
+    $scope.openPopover = function ($event, id) {
+      $scope.idInPopover = id;
+      console.log($scope.idInPopover);
+      $scope.popover.show($event);
+    };
+    $scope.closePopover = function () {
+      $scope.popover.hide();
+    };
+    $scope.$on('$destroy', function () {
+      $scope.popover.remove();
+    });
+
+    $scope.deleteDiscuss = function () {
+      var id = $scope.idInPopover;
+      var deleteOpt = {"data": {"type": "posts", "id": id.toString(), "attributes": {"isHidden": true}}};
+
+      $http({
+        method: 'POST',
+        url: 'http://forum.growth.ren/api/posts/' + id,
+        data: deleteOpt,
+        headers: {
+          'X-Fake-Http-Method': 'PATCH',
+          'Authorization': 'Token ' + $window.localStorage.getItem('token')
+        }
+      }).success(function (response) {
+        console.log(response);
+        $scope.popover.hide();
       }).error(function (data, status) {
         if (status === 401) {
           $scope.modal.show();

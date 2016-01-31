@@ -146,5 +146,7 @@ COMMUNITY["en"] = {
   "signin": "Sign In",
   "email": "Email",
   "profile": "Profile",
-  "top": "Top"
+  "top": "Top",
+  "edit": "Edit",
+  "delete": "Delete"
 };

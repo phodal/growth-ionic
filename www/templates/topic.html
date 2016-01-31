@@ -32,7 +32,7 @@
         <div ng-show="isLogin">
           <button class="button button-clear icon ion-thumbsup" ng-click="LikeIt(comment.attributes.id)"></button>
           <button class="button button-clear" ng-click="replyTo(getUsername(comment.relationships.user), comment.id)">回复</button>
-          <button class="button button-clear icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;"></button>
+          <button class="button button-clear icon ion-ios-more" style="float:right; font-size: 1.5em;padding-bottom: 10px;" ng-click="openPopover($event, comment.attributes.id)"></button>
         </div>
       </div>
     </div>
