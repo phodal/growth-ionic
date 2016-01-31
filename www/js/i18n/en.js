@@ -148,5 +148,6 @@ COMMUNITY["en"] = {
   "profile": "Profile",
   "top": "Top",
   "edit": "Edit",
+  "detailPage": "Detail",
   "delete": "Delete"
 };

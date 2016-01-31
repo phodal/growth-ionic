@@ -147,5 +147,6 @@ COMMUNITY["zh-cn"] = {
   "profile": "用户个人资料",
   "top": "置顶",
   "edit": "编辑",
+  "detailPage": "详情",
   "delete": "删除"
 };
