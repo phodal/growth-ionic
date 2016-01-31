@@ -1333,3 +1333,6 @@ label.item.valid-lr {
   box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
 }
 
+.button-clear.button-clear.isLike {
+  color: #3982DA;
+}
