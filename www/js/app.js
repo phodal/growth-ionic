@@ -392,15 +392,6 @@ angular.module('starter', [
         }
       })
 
-      .state('app.help', {
-        url: '/help',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/more/help.html'
-          }
-        }
-      })
-
       .state('app.setting', {
         url: '/setting',
         views: {
