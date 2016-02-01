@@ -209,12 +209,12 @@ HELPER_ARTICLES['zh-cn'] = {
   ],
   ci: [
     {
-      slug: 'ci',
-      title: '搭建持续集成'
-    },
-    {
       slug: 'auto',
       title: '自动化构建'
+    },
+    {
+      slug: 'ci',
+      title: '搭建持续集成'
     }
   ],
   cd: [
@@ -478,12 +478,12 @@ HELPER_ARTICLES['en'] = {
   ],
   ci: [
     {
-      slug: 'ci',
-      title: '搭建持续集成'
-    },
-    {
       slug: 'auto',
       title: '自动化构建'
+    },
+    {
+      slug: 'ci',
+      title: '搭建持续集成'
     }
   ],
   cd: [
