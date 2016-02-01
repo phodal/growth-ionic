@@ -1,7 +1,7 @@
 <ion-view view-title="书评">
   <ion-content>
     <div class="card-wrap">
-      <ion-item class="item item-icon-right"  collection-repeat="review in reviews" type="item-text-wrap" href="#/app/review/{{review.slug}}">
+      <ion-item class="item item-icon-right"  ng-repeat="review in reviews" type="item-text-wrap" href="#/app/review/{{review.slug}}">
         <h2>{{review.title}}</h2>
         <i class="icon ion-ios-arrow-right"></i>
       </ion-item>

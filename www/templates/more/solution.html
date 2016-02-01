@@ -4,7 +4,7 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
-    <ion-item collection-repeat="solution in solutions" >
+    <ion-item ng-repeat="solution in solutions" >
       <div class="item">
         <h2>{{solution.name}}</h2>
       </div>
