@@ -376,7 +376,7 @@ angular.module('starter', [
         url: '/todo',
         views: {
           'app-more': {
-            templateUrl: 'templates/todo.html',
+            templateUrl: 'templates/more/todo.html',
             controller: 'TodoViewCtrl'
           }
         }
@@ -405,7 +405,7 @@ angular.module('starter', [
         url: '/setting',
         views: {
           'app-more': {
-            templateUrl: 'templates/setting.html',
+            templateUrl: 'templates/more/setting.html',
             controller: 'SettingCtrl'
           }
         }
