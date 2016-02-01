@@ -285,7 +285,7 @@ angular.module('starter', [
         url: '/community',
         views: {
           'app-community': {
-            templateUrl: 'templates/community.html',
+            templateUrl: 'templates/community/community.html',
             controller: 'CommunityCtrl'
           }
         }
@@ -325,7 +325,7 @@ angular.module('starter', [
         url: '/topic/:id',
         views: {
           'app-community': {
-            templateUrl: 'templates/topic.html',
+            templateUrl: 'templates/community/topic.html',
             controller: 'TopicCtrl',
             resolve: {
               discussion: function (Discussions, $stateParams) {
@@ -366,7 +366,7 @@ angular.module('starter', [
         url: '/more',
         views: {
           'app-more': {
-            templateUrl: 'templates/more.html',
+            templateUrl: 'templates/more/more.html',
             controller: 'MoreCtrl'
           }
         }
