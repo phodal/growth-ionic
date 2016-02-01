@@ -1254,6 +1254,10 @@ hr.topic {
   color: #fff;
 }
 
+.bar-positive .button.active, .bar-positive .button.activated {
+  background-color: #5e6772;
+}
+
 .bar.bar-positive .title {
   color: #fff;
 }
