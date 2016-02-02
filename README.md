@@ -1,16 +1,11 @@
 ﻿Growth —— Be Awesome Developer
 ---
 
-**Android**:
+**下载**:
 
-Download：[http://fir.im/phodal](http://fir.im/phodal) 
+Android: 已在其他各大应用商店发布，最新下载：[http://fir.im/phodal](http://fir.im/phodal) 
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
-
-(ps: 已在其他各大Android应用商店发布)
-
-**Windows Phone**:
-
 <a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
 
 **iOS**:
@@ -69,7 +64,7 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 ##开发文档
 
-![Docs](./docs)
+[Docs](./docs)
 
 ###内容贡献者
 
