@@ -68,6 +68,8 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 ###内容贡献者
 
+前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
+
 感谢以下的内容贡献者们，结果由git-summary生成
 
      project  : growth
