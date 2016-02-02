@@ -78,7 +78,7 @@ var BOOK_REVIEWS = [
     "category": "front"
   },
   {
-    "slug": "maintainable-javaScript",
+    "slug": "maintainable-javascript",
     "title": "《编写可维护的JavaScript》",
     "store": "http://www.amazon.cn/%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84JavaScript-%E6%89%8E%E5%8D%A1%E6%96%AF/dp/B00BQ7RMW0/ref=sr_1_1?s=books&ie=UTF8&qid=1453000855&sr=1-1&keywords=%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84JavaScript"
     ,
