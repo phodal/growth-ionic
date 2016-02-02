@@ -217,7 +217,7 @@ var AllArticle = [
   },
   {
     "slug" : "how-to-test",
-    "title": "如何写测试"
+    "title": "测试的艺术: 测试金字塔"
   },
   {
     "slug" : "browser-to-server",
