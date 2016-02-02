@@ -2,7 +2,7 @@ var TODO_LISTS = {};
 
 TODO_LISTS['zh-cn'] = {
   'hello': {
-    'zh': '入门',
+    'name': '入门',
     'achievement': '前途光明',
     'basic': [
       {
@@ -20,7 +20,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'before': {
-    'zh': '编码前',
+    'name': '编码前',
     'achievement': '一点通',
     'basic': [
       {
@@ -38,7 +38,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'front': {
-    'zh': '前端',
+    'name': '前端',
     'achievement': '魔术手',
     'basic': [
       {
@@ -64,7 +64,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   backend: {
-    'zh': '后台',
+    'name': '后台',
     'achievement': '坚实后盾',
     'basic': [
       {
@@ -90,7 +90,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'env': {
-    'zh': '环境搭建',
+    'name': '环境搭建',
     'achievement': '心旷神怡',
     'basic': [
       {
@@ -112,7 +112,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'test': {
-    'zh': '测试',
+    'name': '测试',
     'achievement': '专业防水',
     'basic': [
       {
@@ -134,7 +134,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'refactor': {
-    'zh': '重构',
+    'name': '重构',
     'achievement': '魔法师',
     'basic': [
       {
@@ -152,7 +152,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'configurable': {
-    'zh': '可配置',
+    'name': '可配置',
     'achievement': '会点魔术',
     'basic': [
       {
@@ -166,7 +166,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'ci': {
-    'zh': '持续集成',
+    'name': '持续集成',
     'achievement': '构建小试',
     'basic': [
       {
@@ -180,7 +180,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'container': {
-    'zh': '应用容器',
+    'name': '应用容器',
     'achievement': '建筑学徒',
     'basic': [
       {
@@ -202,7 +202,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'retro': {
-    'zh': '回顾',
+    'name': '回顾',
     'achievement': '未来幻想',
     'basic': [
       {
@@ -212,7 +212,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'server': {
-    'zh': 'DevOps',
+    'name': 'DevOps',
     'achievement': '服务万千',
     'basic': [
       {
@@ -230,7 +230,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'analytics': {
-    'zh': '分析',
+    'name': '分析',
     'achievement': '分析师',
     'basic': [
       {
@@ -248,7 +248,7 @@ TODO_LISTS['zh-cn'] = {
     ]
   },
   'arch': {
-    'zh': '架构',
+    'name': '架构',
     'achievement': '设计天才',
     'basic': [
       {
@@ -265,7 +265,7 @@ TODO_LISTS['zh-cn'] = {
 
 TODO_LISTS['en'] = {
   'hello': {
-    'zh': 'Basic',
+    'name': 'Basic',
     'achievement': '前途光明',
     'basic': [
       {
@@ -283,7 +283,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'before': {
-    'zh': 'Coding',
+    'name': 'Coding',
     'achievement': '一点通',
     'basic': [
       {
@@ -301,7 +301,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'front': {
-    'zh': 'Front',
+    'name': 'Front',
     'achievement': '魔术手',
     'basic': [
       {
@@ -327,7 +327,7 @@ TODO_LISTS['en'] = {
     ]
   },
   backend: {
-    'zh': 'Backend',
+    'name': 'Backend',
     'achievement': '坚实后盾',
     'basic': [
       {
@@ -345,7 +345,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'env': {
-    'zh': 'Env',
+    'name': 'Env',
     'achievement': '心旷神怡',
     'basic': [
       {
@@ -367,7 +367,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'test': {
-    'zh': 'Test',
+    'name': 'Test',
     'achievement': '专业防水',
     'basic': [
       {
@@ -389,7 +389,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'refactor': {
-    'zh': 'Refactor',
+    'name': 'Refactor',
     'achievement': '魔法师',
     'basic': [
       {
@@ -407,7 +407,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'configurable': {
-    'zh': 'Config',
+    'name': 'Config',
     'achievement': '会点魔术',
     'basic': [
       {
@@ -421,7 +421,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'ci': {
-    'zh': 'CI',
+    'name': 'CI',
     'achievement': '构建小试',
     'basic': [
       {
@@ -435,7 +435,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'container': {
-    'zh': 'Container',
+    'name': 'Container',
     'achievement': '建筑学徒',
     'basic': [
       {
@@ -457,7 +457,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'retro': {
-    'zh': 'Retro',
+    'name': 'Retro',
     'achievement': '未来幻想',
     'basic': [
       {
@@ -467,7 +467,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'server': {
-    'zh': 'DevOps',
+    'name': 'DevOps',
     'achievement': '服务万千',
     'basic': [
       {
@@ -485,7 +485,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'analytics': {
-    'zh': 'Analytics',
+    'name': 'Analytics',
     'achievement': '分析师',
     'basic': [
       {
@@ -503,7 +503,7 @@ TODO_LISTS['en'] = {
     ]
   },
   'arch': {
-  'zh': 'Arch',
+  'name': 'Arch',
   'achievement': '设计天才',
   'basic': [
     {

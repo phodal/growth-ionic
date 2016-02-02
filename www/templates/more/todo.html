@@ -5,7 +5,7 @@
   <ion-content>
     <ul class="road-map">
       <li class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-repeat="(todoKey, todoMenu) in todoMenus" ng-class="isFinish(todoMenu)">
-        <span>{{todoMenu.zh}}</span>
+        <span>{{todoMenu.name}}</span>
       </li>
     </ul>
   </ion-content>
