@@ -217,7 +217,7 @@ var AllArticle = [
   },
   {
     "slug" : "how-to-test",
-    "title": "如何学测试"
+    "title": "如何写测试"
   },
   {
     "slug" : "browser-to-server",
