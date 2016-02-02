@@ -7,7 +7,6 @@ angular.module('starter.controllers')
 
     angular.forEach(todoMenuKeys, function (listsKey) {
       var lsKey = listsKey + 'Finish';
-      console.log(lsKey);
       $storageServices.get(lsKey, function (result) {
         if (result === 'true') {
           if ($scope.todoMenus[listsKey].achievement !== undefined) {
