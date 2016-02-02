@@ -30,6 +30,7 @@ angular.module('starter.controllers')
         return todoMenu.isFinish ? 'isFinish' : 'noFinish';
       };
     }
+
     checkTodoItemIsFinish();
 
     $scope.openTodoModal = function (subtopic) {
@@ -107,7 +108,7 @@ angular.module('starter.controllers')
 
     $scope.helpModal = null;
 
-    $scope.showHelp = function() {
+    $scope.showHelp = function () {
       $ionicModal.fromTemplateUrl('templates/help/todo.html', {
         id: 'help',
         scope: $scope,
