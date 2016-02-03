@@ -14,10 +14,16 @@
         <span id="profile-description">{{userInfo.bio}}</span>
       </div>
       <ion-item>
-        入住时间: <span am-time-ago="userInfo.joinTime"></span>
+        注册时间: <span>{{userInfo.joinTime | amDateFormat:'YYYY年MM月DD日'}}</span>
       </ion-item>
       <ion-item>
-        最后登录时间: <span am-time-ago="userInfo.lastSeenTime"></span>
+        <i class="icon ion-ios-clock-outline"></i>&nbsp; 最后登录: <span am-time-ago="userInfo.lastSeenTime"></span>
+      </ion-item>
+      <ion-item>
+        <i class="icon ion-ios-chatbubble-outline"></i> &nbsp;回复: <span>{{userInfo.discussionsCount}}</span>
+      </ion-item>
+      <ion-item>
+        <i class="icon ion-navicon"></i> &nbsp;话题: <span>{{userInfo.commentsCount}}</span>
       </ion-item>
     </div>
     </div>
