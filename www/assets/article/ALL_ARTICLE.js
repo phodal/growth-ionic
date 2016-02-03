@@ -33,7 +33,7 @@ var AllArticle = [
   },
   {
     "slug" : "refactor",
-    "title": "重构"
+    "title": "代码重构"
   },
   {
     "slug" : "ux",

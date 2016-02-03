@@ -130,7 +130,7 @@ HELPER_ARTICLES['zh-cn'] = {
     },
     {
       slug: 'refactor',
-      title: '重构'
+      title: '代码重构'
     },
     {
       slug: 'intellij-refactor',
