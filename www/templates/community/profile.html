@@ -6,7 +6,10 @@
 
     <div id="profile-content" ng-show="userId">
       <div id="profile-info">
-        <img id="profile-image" ng-src="{{userInfo.avatarUrl}}">
+        <img id="profile-image" ng-if="userInfo.avatarUrl" ng-src="{{userInfo.avatarUrl}}">
+        <div id="profile-avatar" ng-if="!userInfo.avatarUrl">
+          <span>{{getFirstChar(userInfo.username)}}</span>
+        </div>
         <h3 id="profile-name">{{userInfo.username}}</h3>
         <span id="profile-description">{{userInfo.bio}}</span>
       </div>

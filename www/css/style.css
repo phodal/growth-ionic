@@ -1337,6 +1337,20 @@ label.item.valid-lr {
   box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
 }
 
+#profile-avatar {
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  width: 128px;
+  height: 128px;
+  font-size: 128px;
+  line-height: 128px;
+  margin: 30px auto 0;
+  background: #7088a9;
+  color: #fff;
+  box-shadow: 0px 0 4px rgba(0,0,0,0.7);
+}
+
 .button-clear.button-clear.isLike {
   color: #3982DA;
 }

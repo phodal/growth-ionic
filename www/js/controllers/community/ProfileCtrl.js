@@ -7,4 +7,12 @@ angular.module('starter.controllers')
       $scope.userInfo = response.data.attributes;
       $scope.addInfo = response.included;
     });
+
+    $scope.getFirstChar = function (str) {
+      var result = "?";
+      if (str) {
+        result = str.charAt(0).toUpperCase();
+      }
+      return result;
+    }
   });
