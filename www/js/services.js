@@ -14,7 +14,7 @@ angular.module('starter.services', ['ngCordova'])
     if (typeof $window.analytics === 'undefined') {
       return {
         trackView: function (view) {
-          console.log(view);
+          console.log('Analytics Track: ' + view);
         }
       }
     }
