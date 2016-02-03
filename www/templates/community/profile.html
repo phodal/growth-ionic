@@ -11,7 +11,8 @@
           <span>{{getFirstChar(userInfo.username)}}</span>
         </div>
         <h3 id="profile-name">{{userInfo.username}}</h3>
-        <span id="profile-description">{{userInfo.bio}}</span>
+        <span id="profile-description" ng-if="userInfo.bio">{{userInfo.bio}}</span>
+        <span ng-if="!userInfo.bio">这家伙很懒,什么都没有留下。</span>
       </div>
       <ion-item>
         加入于<span>{{userInfo.joinTime | amDateFormat:'YYYY年MM月DD日'}}</span>
