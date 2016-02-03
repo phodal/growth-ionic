@@ -136,6 +136,25 @@ METHODOLOGY["zh-cn"]={
   "spec-example" : "《实例化需求》"
 };
 
+LEADERSHIP["zh-cn"]={
+  "leadership" : "思想与领导力",
+  "basic" : "基础篇",
+
+  "effective-executive" : "《卓有成效的管理者》",
+  "light-on" : "《你的灯亮着吗》",
+  "technical-leader" : "《成为技术领导者》",
+
+  "intermediate" : "进阶篇",
+  "fifth-discipline" : "《第五项修炼》",
+  "design-business" : "《商业设计:通过设计思维构建公司持续竞争优势》",
+  "management-3-0" : "《管理3.0：培养和提升敏捷领导力》",
+  "presentation" : "《Presentation To Win》",
+  "mckinsey-way" : "《麦肯锡方法》",
+
+  "advanced" : "高级篇",
+  "thinking-fast-slow" : "《思考，快与慢》"
+};
+
 COMMUNITY["zh-cn"] = {
   "login": "登录",
   "close": "关闭",

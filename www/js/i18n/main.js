@@ -18,6 +18,8 @@ var ARCHITECTURE_DESIGN = {};
 
 var HELPER_ARTICLES = {};
 
+var LEADERSHIP = {};
+
 var METHODOLOGY = {};
 
 var COMMUNITY = {};
