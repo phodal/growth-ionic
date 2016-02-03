@@ -14,7 +14,7 @@
         <span id="profile-description">{{userInfo.bio}}</span>
       </div>
       <ion-item>
-        注册时间: <span>{{userInfo.joinTime | amDateFormat:'YYYY年MM月DD日'}}</span>
+        加入于<span>{{userInfo.joinTime | amDateFormat:'YYYY年MM月DD日'}}</span>
       </ion-item>
       <ion-item>
         <i class="icon ion-ios-clock-outline"></i>&nbsp; 最后登录: <span am-time-ago="userInfo.lastSeenTime"></span>

@@ -1322,6 +1322,7 @@ label.item.valid-lr {
 #profile-description {
   font-size: 15px;
   color: #888;
+  font-weight: bold;
 }
 #profile-description a {
   color: #888;
