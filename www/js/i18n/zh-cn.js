@@ -11,7 +11,7 @@ SIDE_MENU["zh-cn"] = {
   "roadmap": "路线图",
   "talk": "七日谈",
   "articles": "所有文章",
-  "reviews": "所有书评",
+  "reviews": "所有推荐书籍",
   "todos": "所有TODO",
   "community": "社区"
 };
