@@ -1,35 +1,8 @@
 ﻿Growth —— Be Awesome Developer ![Growth | Awesome Developer](https://img.shields.io/badge/Growth-Awesome%20Developer-%235e6772.svg)
+===
+
+简介
 ---
-
-**Mobile**:
-
-<a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
-<a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
-<a href="https://itunes.apple.com/cn/app/growth/id1078807522?l=zh&ls=1&mt=8" width="180"><img src="./docs/apple.png" alt="Get it from Apple Store" /></a>
-
-(PS: Android: 在其他各大应用商店（小米、360、豌豆荚）发布，最新版本下载：[http://fir.im/phodal](http://fir.im/phodal) )
-
-**Desktop**
-
-Powered by Electron，Support OS:
-
-1. Mac OS X
-2. GNU/Linux
-3. Windows
-
-[Download](https://github.com/phodal/growth/releases)
-
-**Web**:
-
-在线Demo: [http://www.growth.ren/](http://www.growth.ren/)
-
-**Other**
-
-QQ群: 529600394，我的微信公众号: phodal
-
-![QRCode](www/img/wechat.jpg)
-
-##简介
 
 Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。在这里，你将通过不断检验自己的学习成效，形成属于你自己的独一无二的个性技能图谱。
 
@@ -51,6 +24,38 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
  - 玩玩小游戏了解技能掌握状况
  - 一键解锁新技能，形成技能图谱 
  - 一步步成为Web顶尖开发者 
+
+
+QQ交流群: 529600394，我的微信公众号: phodal
+
+![QRCode](www/img/wechat.jpg)
+
+下载
+---
+
+**Mobile**:
+
+<a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
+<a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
+<a href="https://itunes.apple.com/cn/app/growth/id1078807522?l=zh&ls=1&mt=8" width="180"><img src="./docs/apple.png" alt="Get it from Apple Store" /></a>
+
+(PS: Android: 在其他各大应用商店（小米、360、豌豆荚）发布，最新版本下载：[http://fir.im/phodal](http://fir.im/phodal) )
+
+**Desktop**
+
+Powered by Electron，Support OS:
+
+1. Mac OS X
+2. GNU/Linux
+3. Windows
+
+[下载页面](https://github.com/phodal/growth/releases)
+
+**Web**:
+
+在线Demo: [http://www.growth.ren/](http://www.growth.ren/)
+
+**ScreenShot**:
  
 ![1](screenshot/1.pic.jpg)
 ![2](screenshot/2.pic.jpg)
@@ -59,11 +64,12 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 ![5](screenshot/5.pic.jpg)
 ![6](screenshot/6.pic.jpg)
 
-##开发文档
+开发
+---
 
-[Docs](./docs)
+[文档](./docs)
 
-###内容贡献者
+**内容贡献者**
 
 前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
 
@@ -80,7 +86,8 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 英语版:  [Le Deng](https://github.com/raydeng83)
 
-##License
+License
+---
 
 © 2015~2016 [Phodal Huang](https://www.phodal.com). This code is distributed under the CC0 1.0 Universal license. See `LICENSE` in this directory.
 
