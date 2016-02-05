@@ -27,6 +27,7 @@
   <script>
     //remove module for electron
     if(typeof module !== 'undefined' && module && module.exports){
+      var isElectron = true;
       delete module;
     }
   </script>

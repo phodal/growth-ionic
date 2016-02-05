@@ -54,6 +54,11 @@ angular.module('starter', [
   .config(function ($ionicConfigProvider, $authProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
     $ionicConfigProvider.tabs.position('bottom');
+
+    if(isElectron) {
+      $ionicConfigProvider.tabs.position('top');
+    }
+
     $ionicConfigProvider.backButton.text('');
     $ionicConfigProvider.backButton.previousTitleText(false);
     $authProvider.cordova = true;
