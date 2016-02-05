@@ -59,10 +59,8 @@ Powered by Electron，Support OS:
  
 ![1](screenshot/1.pic.jpg)
 ![2](screenshot/2.pic.jpg)
-![3](screenshot/3.pic.jpg)
 ![4](screenshot/4.pic.jpg)
 ![5](screenshot/5.pic.jpg)
-![6](screenshot/6.pic.jpg)
 
 开发
 ---
