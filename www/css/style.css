@@ -1355,3 +1355,7 @@ label.item.valid-lr {
 .button-clear.button-clear.isLike {
   color: #3982DA;
 }
+
+.roadmap-card.item {
+  padding: 0;
+}

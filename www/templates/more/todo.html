@@ -3,10 +3,8 @@
     <a class="button button-icon ion-ios-help-outline" ng-click="showHelp()"></a>
   </ion-nav-buttons>
   <ion-content class="padding">
-    <ul class="road-map">
-      <li class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-repeat="(todoKey, todoMenu) in todoMenus" ng-class="isFinish(todoMenu)">
+      <ion-item class="roadmap-card" ng-click="openTodoModal('{{todoKey}}')" ng-repeat="(todoKey, todoMenu) in todoMenus" ng-class="isFinish(todoMenu)">
         <span>{{todoMenu.name}}</span>
-      </li>
-    </ul>
+      </ion-item>
   </ion-content>
 </ion-view>
