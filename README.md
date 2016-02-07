@@ -68,10 +68,8 @@ Powered by Electron，Support OS:
 ![4](screenshot/4.pic.jpg)
 ![5](screenshot/5.pic.jpg)
 
-开发
+[开发文档](./docs)
 ---
-
-[文档](./docs)
 
 **内容贡献者**
 
@@ -88,7 +86,7 @@ Powered by Electron，Support OS:
       1047	Fengda HUANG  99.2%
          8	Le Deng       0.8
 
-英语版:  [Le Deng](https://github.com/raydeng83)
+英语版贡献者:  [Le Deng](https://github.com/raydeng83)
 
 License
 ---
