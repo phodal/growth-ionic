@@ -29,7 +29,7 @@ angular.module('starter.services', ['ngCordova'])
       }
     };
   }])
-  .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', '$window', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast, $window) {
+  .factory('$updateServices', ['$http', '$cordovaAppVersion', '$ionicPopup', '$timeout', '$ionicLoading', '$cordovaFileTransfer', '$cordovaFileOpener2', '$cordovaToast', '$window', '$analytics', function ($http, $cordovaAppVersion, $ionicPopup, $timeout, $ionicLoading, $cordovaFileTransfer, $cordovaFileOpener2, $cordovaToast, $window, $analytics) {
 
     var Update = {
       check: function (view) {
@@ -75,7 +75,7 @@ angular.module('starter.services', ['ngCordova'])
           var options = {};
 
           $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(function (result) {
-            console.log(result);
+            $analytics.trackView('App Upgrade');
             $cordovaFileOpener2.open(targetPath, 'application/vnd.android.package-archive').then(function () {
 
             }, function (err) {
