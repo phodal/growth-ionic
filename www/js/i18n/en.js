@@ -14,7 +14,8 @@ SIDE_MENU["en"] = {
   "reviews": "Reviews",
   "todos": "TODOs",
   "community": "Community",
-  "rating": "Rating"
+  "rating": "Rating",
+  "share": "Share"
 };
 
 MAIN_VIEW_MENU["en"] = {

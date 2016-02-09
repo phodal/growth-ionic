@@ -42,6 +42,11 @@ Plugins:
 App Rate:
 
     cordova plugin add https://github.com/pushandplay/cordova-plugin-apprate.git
+    
+Share:
+     
+    cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
+
 
 App in Browser:
 
