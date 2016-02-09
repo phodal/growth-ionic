@@ -87,9 +87,16 @@ Powered by Electron，Support OS:
 Donate
 ---
 
-For a better Server & Tech Support
+(ps: For Better Server & Tech Support)
+
+有钱捧个钱场:
 
 ![Alipay](./docs/alipay.png)![Wechat](./docs/wechat.png)
+
+
+没钱捧个人场:
+
+![QRCode](www/img/wechat.jpg)
 
 License
 ---
