@@ -26,7 +26,7 @@
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions"
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}" ng-if="getAvatar(comment.relationships.user)">
-        <h2><a href="#/app/user/{{comment.relationships.user.data.id}}">{{getUsername(comment.relationships.user)}}</a></h2>
+        <h2><a href="#/app/user/{{comment.relationships.user.data.id}}">{{getUsername(comment.relationships.user)}}</a></h2> <span class="item-note ago" am-time-ago="comment.attributes.time"></span>
         <div ng-bind-html="encodeHTML(comment.attributes.contentHtml)"></div>
 
         <div ng-if="isLogin" ng-show="isLogin">
