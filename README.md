@@ -84,6 +84,13 @@ Powered by Electron，Support OS:
 
 英语版贡献者:  [Le Deng](https://github.com/raydeng83)
 
+Donate
+---
+
+For a better Server & Tech Support
+
+![Alipay](./docs/alipay.png)![Wechat](./docs/wechat.png)
+
 License
 ---
 
