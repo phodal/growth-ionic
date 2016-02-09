@@ -39,6 +39,9 @@ Angular Plugins: ionic-rating, ionic-ion-tinder-cards, ionic.swipecards, ionic-f
 
 Plugins:
 
+App Rate:
+
+    cordova plugin add https://github.com/pushandplay/cordova-plugin-apprate.git
 
 App in Browser:
 

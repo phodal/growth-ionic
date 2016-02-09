@@ -51,6 +51,28 @@ angular.module('starter', [
       }
     });
   })
+
+  .config(function ($cordovaAppRateProvider) {
+    document.addEventListener("deviceready", function () {
+      var prefs = {
+        language: 'zh-Hans',
+        appName: 'Growth',
+        iosURL: '1078807522',
+        androidURL: 'market://details?id=ren.growth',
+        windowsURL: 'ms-windows-store:Review?name=51077Phodal.GrowthRen_d4jwzt1r37cxj'
+      };
+      var strings = {
+        title: '动动手指，为我们打分',
+        message: '无论是来自亲的赞美诗，还是让亲唾沫横飞的槽点，我们只愿——让评价来得更猛烈些吧！',
+        cancelButtonLabel: '残忍地拒绝',
+        laterButtonLabel: '容我考虑考虑',
+        rateButtonLabel: '马上就去'
+      };
+      $cordovaAppRateProvider.setCustomLocale(strings);
+      $cordovaAppRateProvider.setPreferences(prefs);
+    }, false);
+  })
+
   .config(function ($ionicConfigProvider, $authProvider) {
     $ionicConfigProvider.navBar.alignTitle('left');
     $ionicConfigProvider.tabs.position('bottom');

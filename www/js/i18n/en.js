@@ -13,7 +13,8 @@ SIDE_MENU["en"] = {
   "articles": "Articles",
   "reviews": "Reviews",
   "todos": "TODOs",
-  "community": "Community"
+  "community": "Community",
+  "rating": "Rating"
 };
 
 MAIN_VIEW_MENU["en"] = {

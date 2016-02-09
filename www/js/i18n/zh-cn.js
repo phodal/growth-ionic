@@ -13,7 +13,8 @@ SIDE_MENU["zh-cn"] = {
   "articles": "所有文章",
   "reviews": "所有推荐书籍",
   "todos": "所有TODO",
-  "community": "社区"
+  "community": "社区",
+  "rating": "觉得有帮助,给个好评吧!"
 };
 
 MAIN_VIEW_MENU["zh-cn"] = {
