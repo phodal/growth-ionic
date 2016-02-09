@@ -5,8 +5,6 @@
 <a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
 <a href="https://itunes.apple.com/cn/app/growth/id1078807522?l=zh&ls=1&mt=8"><img src="./docs/apple.png" width="180" alt="Get it from Apple Store" /></a>
 
-(PS：您的好评是我们的动力~~)
-
 简介
 ---
 
@@ -65,8 +63,6 @@ Powered by Electron，Support OS:
  
 ![1](screenshot/1.pic.jpg)
 ![2](screenshot/2.pic.jpg)
-![4](screenshot/4.pic.jpg)
-![5](screenshot/5.pic.jpg)
 
 [开发文档](./docs)
 ---
