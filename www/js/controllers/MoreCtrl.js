@@ -15,8 +15,11 @@ angular.module('starter.controllers')
     };
 
     $scope.rating = function () {
-      $cordovaAppRate.promptForRating(true).then(function (result) {
+      $cordovaAppRate.navigateToAppStore().then(function (result) {
         // success
       });
+      //$cordovaAppRate.promptForRating(true).then(function (result) {
+      //  // success
+      //});
     }
   });
