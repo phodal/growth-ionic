@@ -15,6 +15,9 @@ angular.module('starter.services', ['ngCordova'])
       return {
         trackView: function (view) {
           console.log('Analytics Track: ' + view);
+        },
+        trackEvent: function (event) {
+          console.log('Analytics Track Event: ' + event);
         }
       }
     }
@@ -26,6 +29,9 @@ angular.module('starter.services', ['ngCordova'])
       trackView: function (view) {
         this.init();
         $window.analytics.trackView(view)
+      },
+      trackEvent: function (category, action, label) {
+        $window.analytics.trackEvent(category, action, label);
       }
     };
   }])
