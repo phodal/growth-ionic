@@ -1359,3 +1359,7 @@ label.item.valid-lr {
 .roadmap-card.item {
   padding: 0;
 }
+
+.bar-stable .button.red-button {
+  background-color: #FF6161;
+}
