@@ -4,7 +4,7 @@
     <button class="button button-clear button-primary" ng-click="closeSkillsModal()">OK</button>
   </ion-header-bar>
   <ion-content>
-    <ion-item  collection-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}}
+    <ion-item  ng-repeat="skill in learnedSkills" class="skillRating"> {{skill.skill}}
       <rating ng-model="skill.rating" max="5"></rating>
     </ion-item>
   </ion-content>
