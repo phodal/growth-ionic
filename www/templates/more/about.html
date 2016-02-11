@@ -1,9 +1,5 @@
 <ion-view view-title="{{'about' | translate }}">
   <ion-content>
-    <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="update()" ng-show="isAndroid">
-      <h2>{{"update" | translate}}</h2>
-      <div style="font-size: 10px;">{{"current-version" | translate}} : {{version}}</div>
-    </ion-item>
     <ion-item class="item item-icon-right" type="item-text-wrap" onClick="window.open('https://github.com/phodal', '_system', 'location=yes')">
       {{"git-hub" | translate}}: @Phodal
       <i class="icon ion-social-github"></i>

@@ -1,6 +1,10 @@
 <ion-view view-title="{{'setting' | translate}}">
   <ion-content>
     <div class="list">
+      <ion-item class="item item-icon-right" type="item-text-wrap" ng-click="update()" ng-show="isAndroid">
+        <h2>{{"update" | translate}}</h2>
+        <div style="font-size: 10px;">{{"current-version" | translate}} : {{version}}</div>
+      </ion-item>
       <label class="item item-input item-select">
         <div class="input-label">
           Language
