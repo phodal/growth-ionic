@@ -90,7 +90,7 @@ Donate
 ![Alipay](./docs/alipay.png)![Wechat](./docs/wechat.png)
 
 
-没钱捧个人场:
+没钱捧个人场(关注我的微信公众号):
 
 ![QRCode](www/img/wechat.jpg)
 
