@@ -53,8 +53,7 @@ DAY_TITLE["zh-cn"] = {
 ABOUT_MENU["zh-cn"] ={
   "update" : "检查更新",
   "current-version" : "当前版本",
-  "git-hub" : "GitHub",
-  "qq-group" : "QQ交流群"
+  "git-hub" : "GitHub"
 };
 
 EXAM_MENU["zh-cn"] = {
