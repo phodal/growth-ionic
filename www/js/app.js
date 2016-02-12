@@ -77,7 +77,7 @@ angular.module('starter', [
     $ionicConfigProvider.navBar.alignTitle('left');
     $ionicConfigProvider.tabs.position('bottom');
 
-    if(isElectron) {
+    if (isElectron) {
       $ionicConfigProvider.tabs.position('top');
     }
 
@@ -159,401 +159,392 @@ angular.module('starter', [
     });
   }])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
+    var appState = {
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/tabs.html'
+    };
 
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/tabs.html'
-      })
-
-      .state('app.solution', {
-        url: "/solution",
-        views: {
-          'app-solution': {
-            templateUrl: "templates/more/solution.html",
-            controller: 'SolutionCtrl'
-          }
+    var SolutionState = {
+      url: "/solution",
+      views: {
+        'app-solution': {
+          templateUrl: "templates/more/solution.html",
+          controller: 'SolutionCtrl'
         }
-      })
+      }
+    };
 
-      /*
-
-       DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-
-       */
-
-      .state('app.day0', {
-        url: '/day/0',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day0.html',
-            controller: 'DayCtrl'
-          }
+    var day0 = {
+      url: '/day/0',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day0.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day1', {
-        url: '/day/1',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day1.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day1 = {
+      url: '/day/1',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day1.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day2', {
-        url: '/day/2',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day2.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day2 = {
+      url: '/day/2',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day2.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day3', {
-        url: '/day/3',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day3.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day3 = {
+      url: '/day/3',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day3.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day4', {
-        url: '/day/4',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day4.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day4 = {
+      url: '/day/4',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day4.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day5', {
-        url: '/day/5',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day5.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day5 = {
+      url: '/day/5',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day5.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day6', {
-        url: '/day/6',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day6.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day6 = {
+      url: '/day/6',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day6.html',
+          controller: 'DayCtrl'
         }
-      })
-      .state('app.day7', {
-        url: '/day/7',
-        views: {
-          'app-main': {
-            templateUrl: 'templates/days/day7.html',
-            controller: 'DayCtrl'
-          }
+      }
+    };
+    var day7 = {
+      url: '/day/7',
+      views: {
+        'app-main': {
+          templateUrl: 'templates/days/day7.html',
+          controller: 'DayCtrl'
         }
-      })
-
-
-      /*
-
-       MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-       ====================================================================================================
-
-       */
-      .state('app.main', {
-        url: '/main',
-        parent: "app",
-        views: {
-          'app-main': {
-            templateUrl: 'templates/main.html',
-            controller: 'MainCtrl'
-          }
+      }
+    };
+    var mainState = {
+      url: '/main',
+      parent: "app",
+      views: {
+        'app-main': {
+          templateUrl: 'templates/main.html',
+          controller: 'MainCtrl'
         }
-      })
-
-      .state('app.skilltree', {
-        url: '/skilltree',
-        views: {
-          'app-main@app': {
-            templateUrl: 'templates/skills/skilltree.html',
-            controller: 'skillTreeControl'
-          }
+      }
+    };
+    var skillTreeState = {
+      url: '/skilltree',
+      views: {
+        'app-main@app': {
+          templateUrl: 'templates/skills/skilltree.html',
+          controller: 'skillTreeControl'
         }
-      })
-
-      .state('app.ai', {
-        url: '/ai',
-        views: {
-          'app-main@app': {
-            templateUrl: 'templates/skills/ai.html',
-            controller: 'AIControl'
-          }
+      }
+    };
+    var aiState = {
+      url: '/ai',
+      views: {
+        'app-main@app': {
+          templateUrl: 'templates/skills/ai.html',
+          controller: 'AIControl'
         }
-      })
-
-      .state('app.achievement', {
-        url: '/achievement',
-        views: {
-          'app-main@app': {
-            templateUrl: 'templates/skills/achievement.html',
-            controller: 'AchievementCtrl'
-          }
+      }
+    };
+    var achieventmentState = {
+      url: '/achievement',
+      views: {
+        'app-main@app': {
+          templateUrl: 'templates/skills/achievement.html',
+          controller: 'AchievementCtrl'
         }
-      })
-
-      /*
-
-       CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-       */
-
-      .state('app.community', {
-        url: '/community',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/community.html',
-            controller: 'CommunityCtrl'
-          }
+      }
+    };
+    var communityState = {
+      url: '/community',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/community.html',
+          controller: 'CommunityCtrl'
         }
-      })
-
-      .state('app.login', {
-        url: '/login',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/login.html',
-            controller: 'LoginCtrl'
-          }
+      }
+    };
+    var loginState = {
+      url: '/login',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/login.html',
+          controller: 'LoginCtrl'
         }
-      })
-
-      .state('app.register', {
-        url: '/register',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/signin.html',
-            controller: 'SigninCtrl'
-          }
+      }
+    };
+    var registerState = {
+      url: '/register',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/signin.html',
+          controller: 'SigninCtrl'
         }
-      })
-
-      .state('app.topic-create', {
-        url: '/topic/create',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/create.html',
-            controller: 'CreateCtrl'
-          }
+      }
+    };
+    var createState = {
+      url: '/topic/create',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/create.html',
+          controller: 'CreateCtrl'
         }
-      })
-
-      .state('app.topic', {
-        url: '/topic/:id',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/topic.html',
-            controller: 'TopicCtrl',
-            resolve: {
-              discussion: function (Discussions, $stateParams) {
-                return Discussions.get({id: $stateParams.id});
-              }
+      }
+    };
+    var topicState = {
+      url: '/topic/:id',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/topic.html',
+          controller: 'TopicCtrl',
+          resolve: {
+            discussion: function (Discussions, $stateParams) {
+              return Discussions.get({id: $stateParams.id});
             }
           }
         }
-      })
-
-      .state('app.user', {
-        url: '/user/:id',
-        views: {
-          'app-community': {
-            templateUrl: 'templates/community/profile.html',
-            controller: 'ProfileCtrl'
-          }
+      }
+    };
+    var userState = {
+      url: '/user/:id',
+      views: {
+        'app-community': {
+          templateUrl: 'templates/community/profile.html',
+          controller: 'ProfileCtrl'
         }
-      })
-
-      .state('app.stack', {
-        url: "/stack/:stack",
-        views: {
-          'app-community': {
-            templateUrl: "templates/skills/stack.html",
-            controller: 'StackCtrl'
-          }
+      }
+    };
+    var statckState = {
+      url: "/stack/:stack",
+      views: {
+        'app-community': {
+          templateUrl: "templates/skills/stack.html",
+          controller: 'StackCtrl'
         }
-      })
-
-      /*
-
-       .............................................................
-
-       */
-
-      .state('app.more', {
-        url: '/more',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/more/more.html',
-            controller: 'MoreCtrl'
-          }
+      }
+    };
+    var moreState = {
+      url: '/more',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/more/more.html',
+          controller: 'MoreCtrl'
         }
-      })
+      }
+    };
+    var todoState = {
+      url: '/todo',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/more/todo.html',
+          controller: 'TodoViewCtrl'
+        }
+      }
+    };
+    var aboutState = {
+      url: '/about',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/more/about.html',
+          controller: 'AboutCtrl'
+        }
+      }
+    };
+    var settingState = {
+      url: '/setting',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/more/setting.html',
+          controller: 'SettingCtrl'
+        }
+      }
+    };
+    var articleState = {
+      url: '/article/:slug',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/read/article-detail.html',
+          controller: 'ArticleCtrl'
+        }
+      }
+    };
+    var articlesState = {
+      url: '/articles',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/read/article-list.html',
+          controller: 'ArticleListCtrl'
+        }
+      }
+    };
+    var reviewState = {
+      url: '/review/:slug',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/read/review-detail.html',
+          controller: 'ReviewCtrl'
+        }
+      }
+    };
+    var reviewsState = {
+      url: '/reviews',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/read/review-list.html',
+          controller: 'ReviewListCtrl'
+        }
+      }
+    };
+    var bookState = {
+      url: '/book',
+      views: {
+        'app-more': {
+          templateUrl: 'templates/read/book.html'
+        }
+      }
+    };
+    var progState = {
+      url: '/books/prog',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/books/prog.html'
+        }
+      }
+    };
+    var archState = {
+      url: '/books/arch',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/books/arch.html'
+        }
+      }
+    };
+    var methodState = {
+      url: '/books/method',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/books/method.html'
+        }
+      }
+    };
+    var thinkState = {
+      url: '/books/think',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/books/think.html'
+        }
+      }
+    };
+    var bookfeState = {
+      url: '/books/fe',
+      views: {
+        'app-more@app': {
+          templateUrl: 'templates/books/fe.html'
+        }
+      }
+    };
+    var examState = {
+      url: '/exam',
+      views: {
+        'app-exam': {
+          templateUrl: 'templates/exam.html',
+          'controller': 'ExamCtrl'
+        }
+      }
+    };
+    var quizState = {
+      url: '/quiz/:slug',
+      views: {
+        'app-exam@app': {
+          templateUrl: 'templates/game/quiz.html',
+          controller: 'AllQuizCtrl'
+        }
+      }
+    };
+    var advancedQuizState = {
+      url: '/advance-quiz/:slug',
+      views: {
+        'app-exam@app': {
+          templateUrl: 'templates/game/advance-quiz.html',
+          controller: 'AdvancedQuizCtrl'
+        }
+      }
+    };
 
-      .state('app.todo', {
-        url: '/todo',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/more/todo.html',
-            controller: 'TodoViewCtrl'
-          }
-        }
-      })
+    $stateProvider
+      .state('app', appState)
+      .state('app.solution', SolutionState)
 
-      .state('app.about', {
-        url: '/about',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/more/about.html',
-            controller: 'AboutCtrl'
-          }
-        }
-      })
+      .state('app.day0', day0)
+      .state('app.day1', day1)
+      .state('app.day2', day2)
+      .state('app.day3', day3)
+      .state('app.day4', day4)
+      .state('app.day5', day5)
+      .state('app.day6', day6)
+      .state('app.day7', day7)
 
-      .state('app.setting', {
-        url: '/setting',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/more/setting.html',
-            controller: 'SettingCtrl'
-          }
-        }
-      })
+      .state('app.main', mainState)
+      .state('app.skilltree', skillTreeState)
+      .state('app.ai', aiState)
+      .state('app.achievement', achieventmentState)
 
-      .state('app.article', {
-        url: '/article/:slug',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/read/article-detail.html',
-            controller: 'ArticleCtrl'
-          }
-        }
-      })
+      .state('app.community', communityState)
+      .state('app.login', loginState)
+      .state('app.register', registerState)
+      .state('app.topic-create', createState)
+      .state('app.topic', topicState)
+      .state('app.user', userState)
+      .state('app.stack', statckState)
 
-      .state('app.articles', {
-        url: '/articles',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/read/article-list.html',
-            controller: 'ArticleListCtrl'
-          }
-        }
-      })
+      .state('app.more', moreState)
+      .state('app.todo', todoState)
+      .state('app.about', aboutState)
+      .state('app.setting', settingState)
+      .state('app.article', articleState)
+      .state('app.articles', articlesState)
+      .state('app.review', reviewState)
+      .state('app.reviews', reviewsState)
 
-      .state('app.review', {
-        url: '/review/:slug',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/read/review-detail.html',
-            controller: 'ReviewCtrl'
-          }
-        }
-      })
+      .state('app.book', bookState)
+      .state('app.prog', progState)
+      .state('app.arch', archState)
+      .state('app.method', methodState)
+      .state('app.think', thinkState)
+      .state('app.bookfe', bookfeState)
 
-      .state('app.reviews', {
-        url: '/reviews',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/read/review-list.html',
-            controller: 'ReviewListCtrl'
-          }
-        }
-      })
-
-      .state('app.book', {
-        url: '/book',
-        views: {
-          'app-more': {
-            templateUrl: 'templates/read/book.html'
-          }
-        }
-      })
-
-      .state('app.prog', {
-        url: '/books/prog',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/books/prog.html'
-          }
-        }
-      })
-      .state('app.arch', {
-        url: '/books/arch',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/books/arch.html'
-          }
-        }
-      })
-      .state('app.method', {
-        url: '/books/method',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/books/method.html'
-          }
-        }
-      })
-      .state('app.think', {
-        url: '/books/think',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/books/think.html'
-          }
-        }
-      })
-      .state('app.bookfe', {
-        url: '/books/fe',
-        views: {
-          'app-more@app': {
-            templateUrl: 'templates/books/fe.html'
-          }
-        }
-      })
-
-      /*
-
-       EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
-       */
-      .state('app.exam', {
-        url: '/exam',
-        views: {
-          'app-exam': {
-            templateUrl: 'templates/exam.html',
-            'controller': 'ExamCtrl'
-          }
-        }
-      })
-
-      .state('app.quiz', {
-        url: '/quiz/:slug',
-        views: {
-          'app-exam@app': {
-            templateUrl: 'templates/game/quiz.html',
-            controller: 'AllQuizCtrl'
-          }
-        }
-      })
-      .state('app.advancedQuiz', {
-        url: '/advance-quiz/:slug',
-        views: {
-          'app-exam@app': {
-            templateUrl: 'templates/game/advance-quiz.html',
-            controller: 'AdvancedQuizCtrl'
-          }
-        }
-      })
+      .state('app.exam', examState)
+      .state('app.quiz', quizState)
+      .state('app.advancedQuiz', advancedQuizState)
     ;
 
     $urlRouterProvider.otherwise('/app/main');
