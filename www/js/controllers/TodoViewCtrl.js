@@ -1,5 +1,6 @@
 angular.module('starter.controllers')
   .controller('TodoViewCtrl', function ($scope, $ionicModal, $storageServices, $analytics, $updateServices, $translate) {
+    $analytics.trackView('TodoView Ctrl ');
     $scope.$on('$ionicView.beforeEnter', function () {
       $scope.badgePoints = 0;
       $storageServices.get('badgePoints', function (points) {

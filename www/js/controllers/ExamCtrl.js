@@ -1,5 +1,6 @@
 angular.module('starter.controllers')
-  .controller('ExamCtrl', function ($scope, $ionicModal, $ionicTabsDelegate) {
+  .controller('ExamCtrl', function ($scope, $ionicModal, $ionicTabsDelegate, $analytics) {
+    $analytics.trackView('Exam Detail');
     $scope.showHelp = function() {
       $ionicModal.fromTemplateUrl('templates/help/exam.html', {
         id: 'help',

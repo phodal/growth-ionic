@@ -20,6 +20,5 @@ angular.module('starter.controllers')
 
   .controller('ReviewListCtrl', function ($scope, $analytics) {
     $analytics.trackView('Review List');
-
     $scope.reviews = BOOK_REVIEWS;
   });
