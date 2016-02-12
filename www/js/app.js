@@ -544,8 +544,7 @@ angular.module('starter', [
 
       .state('app.exam', examState)
       .state('app.quiz', quizState)
-      .state('app.advancedQuiz', advancedQuizState)
-    ;
+      .state('app.advancedQuiz', advancedQuizState);
 
     $urlRouterProvider.otherwise('/app/main');
   });
