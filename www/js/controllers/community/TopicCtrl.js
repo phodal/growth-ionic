@@ -48,8 +48,8 @@ angular.module('starter.controllers')
     $scope.isLiked = function (relationships) {
       var isLike = false;
       var userId = relationships.user.data.id;
-      angular.forEach(relationships.likes.data, function(like){
-        if( userId === like.id) {
+      angular.forEach(relationships.likes.data, function (like) {
+        if (userId === like.id) {
           isLike = true;
         }
       });
