@@ -22,13 +22,7 @@ angular.module('starter.controllers')
       });
     });
 
-    var skills = {
-      server: 0,
-      front: 0,
-      devops: 0,
-      coding: 0,
-      analytics: 0
-    };
+    var skills = {server: 0, front: 0, devops: 0, coding: 0, analytics: 0};
 
     if ($scope.goodSkills.indexOf('front') !== -1) {
       skills.front = 5;
@@ -63,7 +57,7 @@ angular.module('starter.controllers')
       var SkillCal = flow.getDefined("skillcal");
 
       var originSuggestions = "你是一个";
-        $scope.finallyWords = originSuggestions;
+      $scope.finallyWords = originSuggestions;
 
       var session = flow.getSession(new SkillCal(skills))
         .on("modify", function (fact) {
@@ -74,7 +68,7 @@ angular.module('starter.controllers')
         });
 
       session.match(function (err) {
-        if($scope.finallyWords === originSuggestions) {
+        if ($scope.finallyWords === originSuggestions) {
           $scope.finallyWords = "你是一个有潜力的新星!";
         }
 
