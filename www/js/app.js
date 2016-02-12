@@ -504,7 +504,7 @@ angular.module('starter', [
       }
     };
 
-    if(isIPad) {
+    if(isIPad || (window.innerWidth > 1000)) {
       appState = {
         url: '/app',
         abstract: true,
