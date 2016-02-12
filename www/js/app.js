@@ -504,6 +504,348 @@ angular.module('starter', [
       }
     };
 
+    if(isIPad) {
+      appState = {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html'
+      };
+      mainState = {
+        url: '/main',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/main.html',
+            controller: 'MainCtrl'
+          }
+        }
+      };
+
+      SolutionState = {
+        url: "/solution",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/more/solution.html",
+            controller: 'SolutionCtrl'
+          }
+        }
+      };
+
+      day0 = {
+        url: '/day/0',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day0.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day1 = {
+        url: '/day/1',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day1.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day2 = {
+        url: '/day/2',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day2.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day3 = {
+        url: '/day/3',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day3.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day4 = {
+        url: '/day/4',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day4.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day5 = {
+        url: '/day/5',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day5.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day6 = {
+        url: '/day/6',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day6.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      day7 = {
+        url: '/day/7',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/days/day7.html',
+            controller: 'DayCtrl'
+          }
+        }
+      };
+      skillTreeState = {
+        url: '/skilltree',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/skills/skilltree.html',
+            controller: 'skillTreeControl'
+          }
+        }
+      };
+      aiState = {
+        url: '/ai',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/skills/ai.html',
+            controller: 'AIControl'
+          }
+        }
+      };
+      achieventmentState = {
+        url: '/achievement',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/skills/achievement.html',
+            controller: 'AchievementCtrl'
+          }
+        }
+      };
+      communityState = {
+        url: '/community',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/community.html',
+            controller: 'CommunityCtrl'
+          }
+        }
+      };
+      loginState = {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/login.html',
+            controller: 'LoginCtrl'
+          }
+        }
+      };
+      registerState = {
+        url: '/register',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/signin.html',
+            controller: 'SigninCtrl'
+          }
+        }
+      };
+      createState = {
+        url: '/topic/create',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/create.html',
+            controller: 'CreateCtrl'
+          }
+        }
+      };
+      topicState = {
+        url: '/topic/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/topic.html',
+            controller: 'TopicCtrl',
+            resolve: {
+              discussion: function (Discussions, $stateParams) {
+                return Discussions.get({id: $stateParams.id});
+              }
+            }
+          }
+        }
+      };
+      userState = {
+        url: '/user/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/community/profile.html',
+            controller: 'ProfileCtrl'
+          }
+        }
+      };
+      statckState = {
+        url: "/stack/:stack",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/skills/stack.html",
+            controller: 'StackCtrl'
+          }
+        }
+      };
+      moreState = {
+        url: '/more',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more/more.html',
+            controller: 'MoreCtrl'
+          }
+        }
+      };
+      todoState = {
+        url: '/todo',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more/todo.html',
+            controller: 'TodoViewCtrl'
+          }
+        }
+      };
+      aboutState = {
+        url: '/about',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/more/about.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      };
+      settingState = {
+        url: '/setting',
+        views: {
+          'app-more': {
+            templateUrl: 'templates/more/setting.html',
+            controller: 'SettingCtrl'
+          }
+        }
+      };
+      articleState = {
+        url: '/article/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/article-detail.html',
+            controller: 'ArticleCtrl'
+          }
+        }
+      };
+      articlesState = {
+        url: '/articles',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/article-list.html',
+            controller: 'ArticleListCtrl'
+          }
+        }
+      };
+      reviewState = {
+        url: '/review/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/review-detail.html',
+            controller: 'ReviewCtrl'
+          }
+        }
+      };
+      reviewsState = {
+        url: '/reviews',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/review-list.html',
+            controller: 'ReviewListCtrl'
+          }
+        }
+      };
+      bookState = {
+        url: '/book',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read/book.html'
+          }
+        }
+      };
+      progState = {
+        url: '/books/prog',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/prog.html'
+          }
+        }
+      };
+      archState = {
+        url: '/books/arch',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/arch.html'
+          }
+        }
+      };
+      methodState = {
+        url: '/books/method',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/method.html'
+          }
+        }
+      };
+      thinkState = {
+        url: '/books/think',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/think.html'
+          }
+        }
+      };
+      bookfeState = {
+        url: '/books/fe',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/books/fe.html'
+          }
+        }
+      };
+      examState = {
+        url: '/exam',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/exam.html',
+            'controller': 'ExamCtrl'
+          }
+        }
+      };
+      quizState = {
+        url: '/quiz/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/game/quiz.html',
+            controller: 'AllQuizCtrl'
+          }
+        }
+      };
+      advancedQuizState = {
+        url: '/advance-quiz/:slug',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/game/advance-quiz.html',
+            controller: 'AdvancedQuizCtrl'
+          }
+        }
+      };
+    }
+
     $stateProvider
       .state('app', appState)
       .state('app.solution', SolutionState)
