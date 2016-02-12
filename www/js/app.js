@@ -159,13 +159,17 @@ angular.module('starter', [
     });
   }])
   .config(function ($stateProvider, $urlRouterProvider) {
-    var appState = {
+    var appState, SolutionState, day0, day1, day2, day3, day4, day5, day6, day7, mainState, skillTreeState, aiState, achieventmentState,
+      communityState, loginState, registerState, createState, topicState, userState, statckState, moreState, todoState, aboutState, settingState,
+      articleState, articlesState, reviewState, reviewsState, bookState, progState, archState, methodState, thinkState, bookfeState, examState, quizState, advancedQuizState;
+
+    appState = {
       url: '/app',
       abstract: true,
       templateUrl: 'templates/tabs.html'
     };
 
-    var SolutionState = {
+    SolutionState = {
       url: "/solution",
       views: {
         'app-solution': {
@@ -175,7 +179,7 @@ angular.module('starter', [
       }
     };
 
-    var day0 = {
+    day0 = {
       url: '/day/0',
       views: {
         'app-main': {
@@ -184,7 +188,7 @@ angular.module('starter', [
         }
       }
     };
-    var day1 = {
+    day1 = {
       url: '/day/1',
       views: {
         'app-main': {
@@ -193,7 +197,7 @@ angular.module('starter', [
         }
       }
     };
-    var day2 = {
+    day2 = {
       url: '/day/2',
       views: {
         'app-main': {
@@ -202,7 +206,7 @@ angular.module('starter', [
         }
       }
     };
-    var day3 = {
+    day3 = {
       url: '/day/3',
       views: {
         'app-main': {
@@ -211,7 +215,7 @@ angular.module('starter', [
         }
       }
     };
-    var day4 = {
+    day4 = {
       url: '/day/4',
       views: {
         'app-main': {
@@ -220,7 +224,7 @@ angular.module('starter', [
         }
       }
     };
-    var day5 = {
+    day5 = {
       url: '/day/5',
       views: {
         'app-main': {
@@ -229,7 +233,7 @@ angular.module('starter', [
         }
       }
     };
-    var day6 = {
+    day6 = {
       url: '/day/6',
       views: {
         'app-main': {
@@ -238,7 +242,7 @@ angular.module('starter', [
         }
       }
     };
-    var day7 = {
+    day7 = {
       url: '/day/7',
       views: {
         'app-main': {
@@ -247,7 +251,7 @@ angular.module('starter', [
         }
       }
     };
-    var mainState = {
+    mainState = {
       url: '/main',
       parent: "app",
       views: {
@@ -257,7 +261,7 @@ angular.module('starter', [
         }
       }
     };
-    var skillTreeState = {
+    skillTreeState = {
       url: '/skilltree',
       views: {
         'app-main@app': {
@@ -266,7 +270,7 @@ angular.module('starter', [
         }
       }
     };
-    var aiState = {
+    aiState = {
       url: '/ai',
       views: {
         'app-main@app': {
@@ -275,7 +279,7 @@ angular.module('starter', [
         }
       }
     };
-    var achieventmentState = {
+    achieventmentState = {
       url: '/achievement',
       views: {
         'app-main@app': {
@@ -284,7 +288,7 @@ angular.module('starter', [
         }
       }
     };
-    var communityState = {
+    communityState = {
       url: '/community',
       views: {
         'app-community': {
@@ -293,7 +297,7 @@ angular.module('starter', [
         }
       }
     };
-    var loginState = {
+    loginState = {
       url: '/login',
       views: {
         'app-community': {
@@ -302,7 +306,7 @@ angular.module('starter', [
         }
       }
     };
-    var registerState = {
+    registerState = {
       url: '/register',
       views: {
         'app-community': {
@@ -311,7 +315,7 @@ angular.module('starter', [
         }
       }
     };
-    var createState = {
+    createState = {
       url: '/topic/create',
       views: {
         'app-community': {
@@ -320,7 +324,7 @@ angular.module('starter', [
         }
       }
     };
-    var topicState = {
+    topicState = {
       url: '/topic/:id',
       views: {
         'app-community': {
@@ -334,7 +338,7 @@ angular.module('starter', [
         }
       }
     };
-    var userState = {
+    userState = {
       url: '/user/:id',
       views: {
         'app-community': {
@@ -343,7 +347,7 @@ angular.module('starter', [
         }
       }
     };
-    var statckState = {
+    statckState = {
       url: "/stack/:stack",
       views: {
         'app-community': {
@@ -352,7 +356,7 @@ angular.module('starter', [
         }
       }
     };
-    var moreState = {
+    moreState = {
       url: '/more',
       views: {
         'app-more': {
@@ -361,7 +365,7 @@ angular.module('starter', [
         }
       }
     };
-    var todoState = {
+    todoState = {
       url: '/todo',
       views: {
         'app-more': {
@@ -370,7 +374,7 @@ angular.module('starter', [
         }
       }
     };
-    var aboutState = {
+    aboutState = {
       url: '/about',
       views: {
         'app-more': {
@@ -379,7 +383,7 @@ angular.module('starter', [
         }
       }
     };
-    var settingState = {
+    settingState = {
       url: '/setting',
       views: {
         'app-more': {
@@ -388,7 +392,7 @@ angular.module('starter', [
         }
       }
     };
-    var articleState = {
+    articleState = {
       url: '/article/:slug',
       views: {
         'app-more@app': {
@@ -397,7 +401,7 @@ angular.module('starter', [
         }
       }
     };
-    var articlesState = {
+    articlesState = {
       url: '/articles',
       views: {
         'app-more': {
@@ -406,7 +410,7 @@ angular.module('starter', [
         }
       }
     };
-    var reviewState = {
+    reviewState = {
       url: '/review/:slug',
       views: {
         'app-more@app': {
@@ -415,7 +419,7 @@ angular.module('starter', [
         }
       }
     };
-    var reviewsState = {
+    reviewsState = {
       url: '/reviews',
       views: {
         'app-more': {
@@ -424,7 +428,7 @@ angular.module('starter', [
         }
       }
     };
-    var bookState = {
+    bookState = {
       url: '/book',
       views: {
         'app-more': {
@@ -432,7 +436,7 @@ angular.module('starter', [
         }
       }
     };
-    var progState = {
+    progState = {
       url: '/books/prog',
       views: {
         'app-more@app': {
@@ -440,7 +444,7 @@ angular.module('starter', [
         }
       }
     };
-    var archState = {
+    archState = {
       url: '/books/arch',
       views: {
         'app-more@app': {
@@ -448,7 +452,7 @@ angular.module('starter', [
         }
       }
     };
-    var methodState = {
+    methodState = {
       url: '/books/method',
       views: {
         'app-more@app': {
@@ -456,7 +460,7 @@ angular.module('starter', [
         }
       }
     };
-    var thinkState = {
+    thinkState = {
       url: '/books/think',
       views: {
         'app-more@app': {
@@ -464,7 +468,7 @@ angular.module('starter', [
         }
       }
     };
-    var bookfeState = {
+    bookfeState = {
       url: '/books/fe',
       views: {
         'app-more@app': {
@@ -472,7 +476,7 @@ angular.module('starter', [
         }
       }
     };
-    var examState = {
+    examState = {
       url: '/exam',
       views: {
         'app-exam': {
@@ -481,7 +485,7 @@ angular.module('starter', [
         }
       }
     };
-    var quizState = {
+    quizState = {
       url: '/quiz/:slug',
       views: {
         'app-exam@app': {
@@ -490,7 +494,7 @@ angular.module('starter', [
         }
       }
     };
-    var advancedQuizState = {
+    advancedQuizState = {
       url: '/advance-quiz/:slug',
       views: {
         'app-exam@app': {
