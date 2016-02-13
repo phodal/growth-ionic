@@ -21,7 +21,13 @@ angular.module('starter.controllers')
         $ionicTabsDelegate.select(selected - 1);
       }
     };
-
+    $scope.getFirstChar = function (str) {
+      var result = "?";
+      if (str) {
+        result = str.charAt(0).toUpperCase();
+      }
+      return result;
+    };
     Discussions.all().$promise.then(function (response) {
       $scope.topics = response.data;
       $scope.included = response.included;

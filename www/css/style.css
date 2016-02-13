@@ -1352,6 +1352,24 @@ label.item.valid-lr {
   box-shadow: 0px 0 4px rgba(0,0,0,0.7);
 }
 
+.profile-avatar-small {
+  display: inline-block;
+  float: left;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  /*margin: 30px auto 0;*/
+  background: #7088a9;
+  color: #fff;
+  box-shadow: 0px 0 4px rgba(0,0,0,0.7);
+}
+
+.topic-detail {
+}
+
 .button-clear.button-clear.isLike {
   color: #3982DA;
 }

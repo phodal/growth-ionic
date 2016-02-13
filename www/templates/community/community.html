@@ -14,14 +14,19 @@
     <ion-list class="topics">
       <ion-item class="item-avatar" collection-repeat="topic in topics" collection-item-width="'100%'"collection-item-height="73"
                 href="#/app/topic/{{topic.id}}">
-        <img ng-src="{{ (included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl }}">
-        <h2>{{topic.attributes.title}}</h2>
-        <p class="summary">
-          <span ng-if="topic.attributes.isSticky" class="tab hl">{{ "top" | translate}}</span>
-          {{ (included | filter: topic.relationships.startUser.data)[0].attributes.username }}
-          <span class="item-note ago" am-time-ago="topic.attributes.lastTime"></span>
-          <span><i class="ion-ios-chatboxes-outline"></i>{{topic.attributes.commentsCount - 1}}</span>
-        </p>
+        <img ng-if="(included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl" ng-src="{{ (included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl }}">
+        <div ng-if="!(included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl" class="profile-avatar-small">
+          <span>{{getFirstChar((included | filter: topic.relationships.startUser.data)[0].attributes.username)}}</span>
+        </div>
+        <div class="topic-detail">
+          <h2>{{topic.attributes.title}}</h2>
+          <p class="summary">
+            <span ng-if="topic.attributes.isSticky" class="tab hl">{{ "top" | translate}}</span>
+            {{ (included | filter: topic.relationships.startUser.data)[0].attributes.username }}
+            <span class="item-note ago" am-time-ago="topic.attributes.lastTime"></span>
+            <span><i class="ion-ios-chatboxes-outline"></i>{{topic.attributes.commentsCount - 1}}</span>
+          </p>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>
