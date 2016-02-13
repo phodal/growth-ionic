@@ -1,8 +1,8 @@
 <ion-modal-view>
   <ion-header-bar class="bar bar-header bar-positive">
+    <button class="button button-clear button-icon ion-ios-close-empty" ng-click="closeBookModal()"></button>
     <h1 class="title" style="text-align: center">书评</h1>
     <a class="button button-icon ion-ios-cart-outline" ng-click="OpenInStore()" ng-show="store !== underfined"></a>
-    <button class="button button-clear button-primary" ng-click="closeBookModal()">OK</button>
   </ion-header-bar>
   <ion-content>
     <h1 class="sectionTitle">{{title}}</h1>
