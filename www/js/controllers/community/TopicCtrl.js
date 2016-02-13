@@ -129,7 +129,13 @@ angular.module('starter.controllers')
           'Authorization': 'Token ' + $window.localStorage.getItem('token')
         }
       }).success(function (response) {
-
+        if (window.cordova) {
+          $cordovaToast.showLongCenter('已赞').then(function (success) {
+            // success
+          }, function (error) {
+            // error
+          });
+        }
       }).error(function (data, status) {
         if (status === 401) {
           $scope.modal.show();
