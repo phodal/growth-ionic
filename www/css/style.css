@@ -1353,9 +1353,12 @@ label.item.valid-lr {
 }
 
 .profile-avatar-small {
+  position: absolute;
+  top: 16px;
+  left: 16px;
   display: inline-block;
   float: left;
-  border-radius: 20px;
+  border-radius: 50%;
   border: 1px solid #fff;
   width: 40px;
   height: 40px;
