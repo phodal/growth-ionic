@@ -120,7 +120,7 @@ HELPER_ARTICLES['zh-cn'] = {
     },
     {
       slug: 'selenium',
-      title: '自动化测试——Selenium'
+      title: 'Selenium与自动化测试'
     }
   ],
   coding: [
@@ -389,7 +389,7 @@ HELPER_ARTICLES['en'] = {
     },
     {
       slug: 'selenium',
-      title: '自动化测试——Selenium'
+      title: 'Selenium与自动化测试'
     }
   ],
   coding: [

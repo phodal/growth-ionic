@@ -161,7 +161,7 @@ var AllArticle = [
   },
   {
     "slug" : "selenium",
-    "title": "Selenium与自动化测试?"
+    "title": "Selenium与自动化测试"
   },
   {
     "slug" : "git",
