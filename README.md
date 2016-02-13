@@ -30,6 +30,10 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 ![QRCode](www/img/wechat.jpg)
 
+
+[开发文档](./docs)
+---
+
 下载
 ---
 
@@ -60,10 +64,8 @@ Powered by Electron，Support OS:
 ![1](screenshot/1.pic.jpg)
 ![2](screenshot/2.pic.jpg)
 
-[开发文档](./docs)
+内容贡献者
 ---
-
-**内容贡献者**
 
 前端问题来源于: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
 
