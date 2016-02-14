@@ -180,4 +180,12 @@ angular.module('starter.controllers')
         }
       })
     };
+    $scope.getFirstChar = function (str) {
+      var result = "?";
+      if (str) {
+        result = str.charAt(0).toUpperCase();
+      }
+      return result;
+    };
+
   });

@@ -13,7 +13,10 @@
       <div class="col col80">
         <h4 class="title">{{topic.attributes.title}}</h4>
         <div class="summary">
-          <img class="avatar" ng-src="{{ user.attributes.avatarUrl }}"/>
+          <img class="avatar" ng-if="user.attributes.avatarUrl" ng-src="{{ user.attributes.avatarUrl }}"/>
+          <div ng-if="!user.attributes.avatarUrl" class="profile-avatar-small topic-page">
+            <span>{{getFirstChar(user.attributes.username)}}</span>
+          </div>
           <a href="#/app/user/{{ user.id }}">{{ user.attributes.username }}</a>
           <span class="item-note" am-time-ago="topic.attributes.startTime"></span>
         </div>
