@@ -168,6 +168,6 @@ COMMUNITY["en"] = {
   "profile": "Profile",
   "top": "Top",
   "edit": "Edit",
-  "detailPage": "Detail",
+  "detailPage": "Discuss",
   "delete": "Delete"
 };
