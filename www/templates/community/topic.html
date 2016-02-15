@@ -29,7 +29,7 @@
       <div class="item item-text-wrap item-avatar" ng-repeat="comment in discussions"
            ng-if="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <img ng-src="{{getAvatar(comment.relationships.user)}}" ng-if="getAvatar(comment.relationships.user)">
-        <div ng-if="!getAvatar(comment.relationships.user)" class="profile-avatar-small topic-page">
+        <div ng-if="!getAvatar(comment.relationships.user)" class="profile-avatar-small">
           <span>{{getFirstChar(getUsername(comment.relationships.user))}}</span>
         </div>
 
