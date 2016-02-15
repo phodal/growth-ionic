@@ -18,7 +18,7 @@
 
       <ion-item ng-repeat="helper in HELPER.hello" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-paper-outline"></i>
+        <i class="icon ion-ios-book-outline"></i>
       </ion-item>
     </div>
 
@@ -32,11 +32,11 @@
         <a class="tab-item" href="#/app/day/0" ng-click="openToolModal('pm')"><i
           class="icon ion-ios-briefcase-outline"></i>{{"tool" | translate}}</a> |
         <a class="tab-item" href="#/app/day/0" ng-click="openTodoModal('env')"><i
-          class="icon ion-ios-paper-outline"></i>TODO</a>
+          class="icon ion-ios-book-outline"></i>TODO</a>
       </div>
       <ion-item ng-repeat="helper in HELPER.env" class="item item-icon-left" type="item-text-wrap" ng-click="openArticleModal('{{helper.slug}}')">
         <h2>{{helper.title}}</h2>
-        <i class="icon ion-ios-paper-outline"></i>
+        <i class="icon ion-ios-book-outline"></i>
       </ion-item>
     </div>
   </ion-content>
