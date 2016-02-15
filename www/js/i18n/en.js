@@ -53,7 +53,8 @@ DAY_TITLE["en"] = {
 ABOUT_MENU["en"] = {
   "update" : "Check for update",
   "current-version" : "Current version",
-  "git-hub" : "GitHub"
+  "git-hub" : "GitHub",
+  "qq-group" : "QQ Group"
 };
 
 EXAM_MENU["en"] = {
