@@ -12,8 +12,7 @@
     </ion-item>
 
     <ion-list class="topics">
-      <ion-item class="item-avatar" collection-repeat="topic in topics" collection-item-width="'100%'"collection-item-height="73"
-                href="#/app/topic/{{topic.id}}">
+      <ion-item class="item-avatar" ng-repeat="topic in topics" href="#/app/topic/{{topic.id}}">
         <img ng-if="(included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl" ng-src="{{ (included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl }}">
         <div ng-if="!(included | filter: topic.relationships.startUser.data)[0].attributes.avatarUrl" class="profile-avatar-small">
           <span>{{getFirstChar((included | filter: topic.relationships.startUser.data)[0].attributes.username)}}</span>
