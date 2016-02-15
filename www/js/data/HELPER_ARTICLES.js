@@ -8,15 +8,15 @@ HELPER_ARTICLES['zh-cn'] = {
     },
     {
       slug: 'html',
-      title: '无处不在的HTML'
+      title: 'HTML入门'
     },
     {
       slug: 'css',
-      title: '无处不在的CSS'
+      title: 'CSS入门'
     },
     {
       slug: 'javascript',
-      title: '无处不在的JavaScript'
+      title: 'JavaScript入门'
     }
   ],
   env: [
