@@ -1,7 +1,13 @@
+DOC
+===
 
-##Setup && Development 
+Architecture
+---
 
 ![Architecture](growth-arch.png)
+
+Setup && Development 
+---
 
 ###Tech Stack
 
