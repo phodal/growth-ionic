@@ -1394,3 +1394,7 @@ label.item.valid-lr {
 .bar-stable .button.red-button {
   background-color: #FF6161;
 }
+
+.tabs-striped .tabs {
+  border-bottom: 1px solid #ddd;
+}
