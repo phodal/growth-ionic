@@ -37,6 +37,8 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 下载
 ---
 
+便捷链接: [http://growth.ren/](http://growth.ren/)
+
 **Mobile**:
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
