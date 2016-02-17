@@ -31,5 +31,7 @@ angular.module('starter.controllers')
         }, function (err) {
           $analytics.trackView('More', 'Share Error', error);
         });
-    }
+    };
+
+    $scope.isWebView = isWebView;
   });
