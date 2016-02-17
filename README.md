@@ -74,13 +74,13 @@ Powered by Electron，Support OS:
 感谢以下的内容贡献者们，结果由git-summary生成
 
      project  : growth
-     repo age : 6 weeks
-     active   : 43 days
-     commits  : 1055
+     repo age : 8 weeks
+     active   : 56 days
+     commits  : 1136
      files    : 796
      authors  :
-      1047	Fengda HUANG  99.2%
-         8	Le Deng       0.8
+      1128	Fengda HUANG  99.3%
+         8	Le Deng       0.7
 
 英语版贡献者:  [Le Deng](https://github.com/raydeng83)
 
