@@ -10,8 +10,8 @@ module.exports = function (grunt) {
         accessKeyId: '<%= aws.AWSAccessKeyId %>', // Use the variables
         secretAccessKey: '<%= aws.AWSSecretKey %>', // You can also use env variables
         region: 'ap-southeast-2',
-        uploadConcurrency: 5, // 5 simultaneous uploads
-        downloadConcurrency: 5 // 5 simultaneous downloads
+        uploadConcurrency: 5,
+        downloadConcurrency: 5
       },
       production: {
         options: {
@@ -35,8 +35,6 @@ module.exports = function (grunt) {
             action: 'upload',
             params: {CacheControl: 'max-age=30', ContentType: 'text/html'}
           }
-          // CacheControl only applied to the assets folder
-          // LICENCE inside that folder will have ContentType equal to 'text/plain'
         ]
       },
       deploy_apk: {
@@ -70,8 +68,6 @@ module.exports = function (grunt) {
           {dest: 'lib/', src: ['**'],  action: 'delete'},
           {dest: 'templates/', src: ['**'],  action: 'delete'},
           {dest: './', src: ['index.html', 'growth.apk', 'version.json'], action: 'delete'}
-          //{dest: 'assets/', exclude: "**/*.tgz", action: 'delete'}, // will not delete the tgz
-          //{dest: 'assets/large/', exclude: "**/*copy*", flipExclude: true, action: 'delete'}, // will delete everything that has copy in the name
         ]
       }
     }
