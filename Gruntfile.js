@@ -27,16 +27,6 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'www/js/', src: ['**'], dest: 'js/', action: 'upload'},
           {expand: true, cwd: 'www/lib/', src: ['**'], dest: 'lib/', action: 'upload'},
           {expand: true, cwd: 'www/templates/', src: ['**'], dest: 'templates/', action: 'upload'},
-          {expand: true, cwd: 'www/', src: ['manifest.json'], dest: './', action: 'upload'},
-          {
-            expand: true,
-            cwd: 'www/',
-            src: ['version.json'],
-            dest: './',
-            action: 'upload',
-            params: {CacheControl: 'max-age=30'}
-          },
-          {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'},
           {
             expand: true,
             cwd: './www/',
@@ -47,6 +37,24 @@ module.exports = function (grunt) {
           }
           // CacheControl only applied to the assets folder
           // LICENCE inside that folder will have ContentType equal to 'text/plain'
+        ]
+      },
+      deploy_apk: {
+        options: {
+          bucket: 'www.growth.ren',
+          debug: true // Doesn't actually delete but shows log
+        },
+        files: [
+          {expand: true, cwd: 'www/', src: ['manifest.json'], dest: './', action: 'upload'},
+          {
+            expand: true,
+            cwd: 'www/',
+            src: ['version.json'],
+            dest: './',
+            action: 'upload',
+            params: {CacheControl: 'max-age=30'}
+          },
+          {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'}
         ]
       },
       clean_production: {
@@ -70,6 +78,6 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-aws-s3');
-  grunt.registerTask('deploy', ['aws_s3:clean_production', 'aws_s3:production']);
-
+  grunt.registerTask('release', ['aws_s3:clean_production', 'aws_s3:production', 'aws_s3:upload_apk']);
+  grunt.registerTask('update', ['aws_s3:clean_production', 'aws_s3:production']);
 };
