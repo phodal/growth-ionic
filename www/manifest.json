@@ -1,9 +1,10 @@
 {
   "files": {
     "articles": {
-      "filename": "assets/article/ajax.md"
+
     }
   },
   "load": [
+
   ]
 }
