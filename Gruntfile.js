@@ -75,6 +75,6 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-aws-s3');
-  grunt.registerTask('release', ['aws_s3:clean_production', 'aws_s3:production', 'aws_s3:upload_apk']);
+  grunt.registerTask('release', ['aws_s3:clean_production', 'aws_s3:production', 'aws_s3:deploy_apk']);
   grunt.registerTask('update', ['aws_s3:clean_production', 'aws_s3:production']);
 };
