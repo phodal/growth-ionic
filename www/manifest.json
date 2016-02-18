@@ -1,12 +1,11 @@
 {
   "files": {
-    "test": {
-      "filename": "js/test.js"
+    "articles": {
+      "filename": "assets/article/ajax.md"
     }
   },
   "load": [
     "js/update/cordova-app-loader-complete.js",
-    "js/update/autoupdate.js",
-    "js/test.js"
+    "js/update/autoupdate.js"
   ]
 }
