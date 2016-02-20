@@ -1368,6 +1368,7 @@ label.item.valid-lr {
   background: #7088a9;
   color: #fff;
   box-shadow: 0px 0 4px rgba(0,0,0,0.7);
+  text-align: center;
 }
 
 .topic-page.profile-avatar-small {
