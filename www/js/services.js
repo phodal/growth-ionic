@@ -85,12 +85,12 @@ angular.module('starter.services', ['ngCordova'])
             $cordovaFileOpener2.open(targetPath, 'application/vnd.android.package-archive').then(function () {
 
             }, function (err) {
-              alert(err);
+              alert(JSON.stringify(err));
             });
 
             $ionicLoading.hide();
           }, function (err) {
-            alert(err);
+            alert(JSON.stringify(err));
             $ionicLoading.hide();
           }, function (progress) {
             var downloadProgress;
