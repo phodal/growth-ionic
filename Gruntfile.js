@@ -41,7 +41,9 @@ module.exports = function (grunt) {
       deploy_apk: {
         options: {
           bucket: 'www.growth.ren',
-          debug: true // Doesn't actually delete but shows log
+          params: {
+            CacheControl: 'max-age=604800'
+          }
         },
         files: [
           {expand: true, cwd: 'www/', src: ['manifest.json'], dest: './', action: 'upload'},
@@ -51,7 +53,7 @@ module.exports = function (grunt) {
             src: ['version.json'],
             dest: './',
             action: 'upload',
-            params: {CacheControl: 'max-age=30'}
+            params: {CacheControl: 'max-age=300'}
           },
           {expand: true, cwd: 'platforms/android/build/outputs/apk', src: ['growth.apk'], dest: './', action: 'upload'}
         ]
