@@ -1,10 +1,8 @@
 {
   "files": {
-    "articles": {
-
-    }
+    "test": "js/test.js"
   },
   "load": [
-
+    "js/test.js"
   ]
 }
