@@ -1166,6 +1166,7 @@ a {
 }
 
 .reply-new input {
+  width: 100%;
   background: 0 0
 }
 
