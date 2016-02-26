@@ -155,6 +155,9 @@ angular.module('starter', [
       },
       image: function (href) {
         return "<img class='full-image' src=" + href + ">";
+      },
+      link: function(href, title, text) {
+        return "<a onClick=\"window.open(href, '_system', 'location=yes')\" href='" + href + "'" + (title ? " title='" + title + "'" : '') + " target='_blank'>" + text + "</a>";
       }
     });
   }])
