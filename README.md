@@ -1,4 +1,4 @@
-[Growth — Be Awesome Developer](http://growth.ren/) ![Growth | Awesome Developer](https://img.shields.io/badge/Growth-Awesome%20Developer-%235e6772.svg)
+[Growth — Be Awesome Developer](http://growth.ren/) 
 ===
 
 <a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
@@ -102,7 +102,7 @@ Donate
 
 ![QRCode](www/img/wechat.jpg)
 
-Thanks Donate
+Thanks to Donator
 ---
 
 Name | Donate
