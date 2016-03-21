@@ -102,6 +102,15 @@ Donate
 
 ![QRCode](www/img/wechat.jpg)
 
+Thanks Donate
+---
+
+Name | Donate
+-----|----
+筑浪 | 8.88
+水瓶B座罗小小 | 8.88
+前杨村 | 18.00
+
 License
 ---
 
