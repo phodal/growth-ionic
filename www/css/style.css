@@ -1184,7 +1184,7 @@ a {
 
 .PostMention:before {
   display: inline-block;
-  font-family: "Ionicons";
+  font-family: "Ionicons", serif;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -1365,7 +1365,6 @@ label.item.valid-lr {
   height: 40px;
   font-size: 40px;
   line-height: 40px;
-  /*margin: 30px auto 0;*/
   background: #7088a9;
   color: #fff;
   box-shadow: 0px 0 4px rgba(0,0,0,0.7);
