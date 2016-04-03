@@ -104,19 +104,6 @@ Donate
 
 ![QRCode](www/img/wechat.jpg)
 
-Thanks to Donator
----
-
-Name | Donate
------|----
-筑浪 | 8.88
-水瓶B座罗小小 | 8.88
-aikin | 8.66
-前杨村 | 18.00
-丽丽 | 6.66
-宋哲 | 100
-袋鱼 | 22
-
 License
 ---
 
