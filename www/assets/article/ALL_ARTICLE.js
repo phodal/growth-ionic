@@ -212,7 +212,7 @@ var AllArticle = [
     "title": "浮现式设计"
   },
   {
-    "slug" : "how-to-learn",
+    "slug" : "1.2-learn-language",
     "title": "如何学好一门技术、语言"
   },
   {

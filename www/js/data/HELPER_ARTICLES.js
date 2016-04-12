@@ -3,7 +3,7 @@ var HELPER_ARTICLES = {};
 HELPER_ARTICLES['zh-cn'] = {
   hello: [
     {
-      slug: 'how-to-learn',
+      slug: '1.2-learn-language',
       title: '如何学好一门技术、语言'
     },
     {
