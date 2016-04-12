@@ -1,1 +1,0 @@
-Linux + Nginx + MySQL + PHP
