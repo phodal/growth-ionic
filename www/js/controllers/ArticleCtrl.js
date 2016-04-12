@@ -8,14 +8,13 @@ angular.module('starter.controllers')
     });
     $http({
       method: 'GET',
-      url: 'assets/article/' + $stateParams.slug + '.md'
+      url: 'assets/article/' + $stateParams.slug + '.html'
     }).success(function (response) {
       $ionicLoading.hide();
       $scope.EditArticle = function () {
         window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + $stateParams.slug + '.md', '_system', 'location=yes');
       };
-      $scope.title = $filter('filter')(AllArticle, {"slug": $stateParams.slug})[0].title;
-      $scope.htmlContent = $sce.trustAsHtml(marked(response))
+      $scope.htmlContent = $sce.trustAsHtml(response)
     }).error(function (data, status) {
       alert(data + status);
     });

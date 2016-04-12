@@ -59,10 +59,6 @@ HELPER_ARTICLES['zh-cn'] = {
     {
       slug: '2.2.2-communication',
       title: '前台与后台交互'
-    },
-    {
-      slug: 'frontend-history',
-      title: '前端演进史'
     }
   ],
   backend: [

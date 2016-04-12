@@ -130,14 +130,12 @@ angular.module('starter.controllers')
 
     $scope.openArticleModal = function (article) {
       $analytics.trackView('article ' + article);
-      $http({method: 'GET', url: 'assets/article/' + article + '.md'}).success(function (response) {
-        var articleInfo = $filter('filter')(AllArticle, {"slug": article})[0];
+      $http({method: 'GET', url: 'assets/article/' + article + '.html'}).success(function (response) {
 
-        $scope.title = articleInfo.title;
         $scope.EditArticle = function () {
-          window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.md', '_system', 'location=yes');
+          window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.html', '_system', 'location=yes');
         };
-        $scope.htmlContent = $sce.trustAsHtml(marked(response));
+        $scope.htmlContent = $sce.trustAsHtml(response);
         $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
           id: article,
           scope: $scope,
