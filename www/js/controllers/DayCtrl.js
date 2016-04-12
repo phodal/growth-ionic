@@ -130,7 +130,7 @@ angular.module('starter.controllers')
 
     $scope.openArticleModal = function (article) {
       $analytics.trackView('article ' + article);
-      $http({method: 'GET', url: 'assets/article/' + article + '.html'}).success(function (response) {
+      $http({method: 'GET', url: 'assets/article/html/' + article + '.html'}).success(function (response) {
 
         $scope.EditArticle = function () {
           window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.html', '_system', 'location=yes');

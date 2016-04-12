@@ -96,6 +96,11 @@ Install Electron and Run
 
      electron .
 
+MD TO HTML
+----
+
+    find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}" -o "html/${0%.md}.html"' {} \;
+
 
 Community (Use Flarum)
 ---

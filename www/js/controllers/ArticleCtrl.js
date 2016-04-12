@@ -8,7 +8,7 @@ angular.module('starter.controllers')
     });
     $http({
       method: 'GET',
-      url: 'assets/article/' + $stateParams.slug + '.html'
+      url: 'assets/article/html/' + $stateParams.slug + '.html'
     }).success(function (response) {
       $ionicLoading.hide();
       $scope.EditArticle = function () {
