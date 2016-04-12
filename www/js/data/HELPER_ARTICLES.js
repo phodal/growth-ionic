@@ -191,8 +191,8 @@ HELPER_ARTICLES['zh-cn'] = {
       title: 'UX入门'
     },
     {
-      slug: 'learn-design',
-      title: '5.4.1-learn-design'
+      slug: '5.4.1-learn-design',
+      title: '认识设计'
     }
   ],
   ci: [
