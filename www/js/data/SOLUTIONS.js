@@ -43,4 +43,9 @@ var SOLUTIONS = [{
   "type": "generic",
   "stacks": ["Scala", "Play"],
   "description": "Play是Scala的Web框架。"
+}, {
+  "name": "WebGis",
+  "type": "generic",
+  "stacks": ["Leaflet", "ElasticSearch", "Bootstrap", "jQuery"],
+  "description": "基于ElasticSearch与Leaflet的先进WebGIS系统。"
 }];
