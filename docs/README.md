@@ -166,6 +166,10 @@ API Document: [http://flarum.org/docs/api/](http://flarum.org/docs/api/)
  - PATCH /api/tags/:id - update a tag
  - DELETE /api/tags/:id - delete a tag
 
+**relevant**
+
+    http://forum.growth.ren/api/discussions?include=startUser%2ClastUser%2CrelevantPosts%2CrelevantPosts.discussion%2CrelevantPosts.user%2CstartPost%2Ctags&filter%5Bq%5D=author%3Aphodal&
+
 其他
 ---
 
