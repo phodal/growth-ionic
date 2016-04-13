@@ -4,8 +4,8 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="has-header" on-swipe-right="goBack()" on-swipe-left="goForward()">
-    <ion-item ng-repeat="solution in solutions" >
-      <div class="item">
+    <div ng-repeat="solution in solutions" class="card">
+      <div class="item item-text-wrap">
         <h2>{{solution.name}}</h2>
       </div>
 
@@ -17,6 +17,6 @@
       <div class="item item-divider">
         <a class="subdued" ng-repeat="stack in solution.stacks">{{stack}}</a>
       </div>
-    </ion-item>
+    </div>
   </ion-content>
 </ion-view>
