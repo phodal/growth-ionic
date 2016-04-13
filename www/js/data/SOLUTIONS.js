@@ -48,4 +48,9 @@ var SOLUTIONS = [{
   "type": "generic",
   "stacks": ["Leaflet", "ElasticSearch", "Bootstrap", "jQuery"],
   "description": "基于ElasticSearch与Leaflet的先进WebGIS系统。"
+}, {
+  "name": "静态网站",
+  "type": "generic",
+  "stacks": ["Assemble", "Gulp"],
+  "description": "编辑-发布-开发分离的CMS。"
 }];
