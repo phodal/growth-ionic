@@ -53,4 +53,9 @@ var SOLUTIONS = [{
   "type": "generic",
   "stacks": ["Assemble", "Gulp"],
   "description": "编辑-发布-开发分离的CMS。"
+}, {
+  "name": "硬件应用",
+  "type": "hardware",
+  "stacks": ["cordova", "BLE", "Bluetooth"],
+  "description": "蓝牙低功耗手机应用。"
 }];
