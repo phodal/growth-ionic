@@ -172,11 +172,7 @@ var AllArticle = [
     title: '持续交付'
   },
   {
-    slug: '6.3.1-cdeploy',
-    title: '持续部署'
-  },
-  {
-    slug: '6.4.1-cl',
+    slug: '6.3.0-cl',
     title: '持续学习'
   },
   {
@@ -190,10 +186,6 @@ var AllArticle = [
   {
     slug: '7.2.1-refactor2',
     title: '重构进阶'
-  },
-  {
-    slug: '8.1.1-summary',
-    title: '总结——为了更快的成长'
   },
   {
     slug: '8.1.2-retro',

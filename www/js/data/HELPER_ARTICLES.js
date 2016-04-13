@@ -203,14 +203,9 @@ HELPER_ARTICLES['zh-cn'] = {
       title: '持续交付'
     },
     {
-      slug: '6.3.1-cdeploy',
-      title: '持续部署'
-    },
-    {
-      slug: '6.4.1-cl',
+      slug: '6.3.0-cl',
       title: '持续学习'
     }
-
   ],
   legacy: [
     {
@@ -229,10 +224,6 @@ HELPER_ARTICLES['zh-cn'] = {
     }
   ],
   retro: [
-    {
-      slug: '8.1.1-summary',
-      title: '总结——为了更快的成长'
-    },
     {
       slug: '8.1.2-retro',
       title: '回顾与改进'
