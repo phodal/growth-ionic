@@ -9,6 +9,11 @@ var SOLUTIONS = [{
   "stacks": ["Ionic", "Cordova", "ngCordova"],
   "description": "Ionic封装了Cordova和Angular，并辅助以ngCordova来封装一些Cordova插件。"
 }, {
+  "name": "Growth用户授权",
+  "type": "generic",
+  "stacks": ["Cordova", "Angular.js", "Ionic", "Flarum"],
+  "description": "Flarum提供JSON Web Tokens API，APP通过HTTP请求来登录和授权。"
+}, {
   "name": "Node.js React Web应用",
   "type": "generic",
   "stacks": ["React", "WebPack", "Babel", "Express"],
