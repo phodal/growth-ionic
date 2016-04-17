@@ -1415,3 +1415,7 @@ label.item.valid-lr {
 .tabs-striped .tabs {
   border-bottom: 1px solid #ddd;
 }
+
+.figure p.caption {
+  text-align: center;
+}
