@@ -133,7 +133,7 @@ angular.module('starter.controllers')
       $http({method: 'GET', url: 'assets/article/html/' + article + '.html'}).success(function (response) {
 
         $scope.EditArticle = function () {
-          window.open('https://github.com/phodal/growth/edit/master/www/assets/article/' + articleInfo.slug + '.html', '_system', 'location=yes');
+          window.open('https://github.com/phodal/growth-ebook/edit/master/chapters/' + article + '.md', '_system', 'location=yes');
         };
         $scope.htmlContent = $sce.trustAsHtml(response);
         $ionicModal.fromTemplateUrl('templates/read/article-detail.html', {
