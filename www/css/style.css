@@ -26,25 +26,25 @@ div.title {
   padding: 10px;
 }
 
-marked h1 {
+.markdown h1 {
   font-size: 1.6em;
 }
 
-.item marked h1,
-marked h1 {
+.item .markdown h1,
+.markdown h1 {
   font-size: 1.5em;
   padding: 10px;
 }
 
-.item marked h3,
-marked h3 {
+.item .markdown h3,
+.markdown h3 {
   font-size: 1.3em;
   padding: 10px;
   text-align: center;
 }
 
-.item marked h4,
-marked h4 {
+.item .markdown h4,
+.markdown h4 {
   font-size: 1.2em;
   padding: 5px;
   margin-left: 12px;
@@ -52,7 +52,7 @@ marked h4 {
 
 /* Github Markdown CSS */
 
-marked code {
+.markdown code {
   padding: 0.2em 0;
   margin: 0;
   font-size: 85%;
@@ -60,13 +60,13 @@ marked code {
   border-radius: 3px;
 }
 
-marked code:before,
-marked code:after {
+.markdown code:before,
+.markdown code:after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
 
-marked pre > code {
+.markdown pre > code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -76,12 +76,12 @@ marked pre > code {
   border: 0;
 }
 
-marked .highlight {
+.markdown .highlight {
   margin-bottom: 16px;
 }
 
-marked .highlight pre,
-marked pre {
+.markdown .highlight pre,
+.markdown pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -90,16 +90,16 @@ marked pre {
   border-radius: 3px;
 }
 
-marked .highlight pre {
+.markdown .highlight pre {
   margin-bottom: 0;
   word-break: normal;
 }
 
-marked pre {
+.markdown pre {
   word-wrap: normal;
 }
 
-marked pre code {
+.markdown pre code {
   display: inline;
   max-width: initial;
   padding: 0;
@@ -110,12 +110,12 @@ marked pre code {
   border: 0;
 }
 
-marked pre code:before,
-marked pre code:after {
+.markdown pre code:before,
+.markdown pre code:after {
   content: normal;
 }
 
-marked kbd {
+.markdown kbd {
   display: inline-block;
   padding: 3px 5px;
   font-size: 11px;
@@ -129,106 +129,106 @@ marked kbd {
   box-shadow: inset 0 -1px 0 #bbb;
 }
 
-marked .pl-c {
+.markdown .pl-c {
   color: #969896;
 }
 
-marked .pl-c1,
-marked .pl-s .pl-v {
+.markdown .pl-c1,
+.markdown .pl-s .pl-v {
   color: #0086b3;
 }
 
-marked .pl-e,
-marked .pl-en {
+.markdown .pl-e,
+.markdown .pl-en {
   color: #795da3;
 }
 
-marked .pl-s .pl-s1,
-marked .pl-smi {
+.markdown .pl-s .pl-s1,
+.markdown .pl-smi {
   color: #333;
 }
 
-marked .pl-ent {
+.markdown .pl-ent {
   color: #63a35c;
 }
 
-marked .pl-k {
+.markdown .pl-k {
   color: #a71d5d;
 }
 
-marked .pl-pds,
-marked .pl-s,
-marked .pl-s .pl-pse .pl-s1,
-marked .pl-sr,
-marked .pl-sr .pl-cce,
-marked .pl-sr .pl-sra,
-marked .pl-sr .pl-sre {
+.markdown .pl-pds,
+.markdown .pl-s,
+.markdown .pl-s .pl-pse .pl-s1,
+.markdown .pl-sr,
+.markdown .pl-sr .pl-cce,
+.markdown .pl-sr .pl-sra,
+.markdown .pl-sr .pl-sre {
   color: #183691;
 }
 
-marked .pl-v {
+.markdown .pl-v {
   color: #ed6a43;
 }
 
-marked .pl-id {
+.markdown .pl-id {
   color: #b52a1d;
 }
 
-marked .pl-ii {
+.markdown .pl-ii {
   background-color: #b52a1d;
   color: #f8f8f8;
 }
 
-marked .pl-sr .pl-cce {
+.markdown .pl-sr .pl-cce {
   color: #63a35c;
   font-weight: bold;
 }
 
-marked .pl-ml {
+.markdown .pl-ml {
   color: #693a17;
 }
 
-marked .pl-mh,
-marked .pl-mh .pl-en,
-marked .pl-ms {
+.markdown .pl-mh,
+.markdown .pl-mh .pl-en,
+.markdown .pl-ms {
   color: #1d3e81;
   font-weight: bold;
 }
 
-marked .pl-mq {
+.markdown .pl-mq {
   color: #008080;
 }
 
-marked .pl-mi {
+.markdown .pl-mi {
   color: #333;
   font-style: italic;
 }
 
-marked .pl-mb {
+.markdown .pl-mb {
   color: #333;
   font-weight: bold;
 }
 
-marked .pl-md {
+.markdown .pl-md {
   background-color: #ffecec;
   color: #bd2c00;
 }
 
-marked .pl-mi1 {
+.markdown .pl-mi1 {
   background-color: #eaffea;
   color: #55a532;
 }
 
-marked .pl-mdr {
+.markdown .pl-mdr {
   color: #795da3;
   font-weight: bold;
 }
 
-marked .pl-mo {
+.markdown .pl-mo {
   color: #1d3e81;
 }
 
-marked kbd {
+.markdown kbd {
   display: inline-block;
   padding: 3px 5px;
   font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -255,115 +255,116 @@ body {
   color: #444443;
 }
 
-marked h1,
-marked h2,
-marked h3,
-marked h4,
-marked h5,
-marked h6,
-marked h1,
-marked h2,
-marked h3,
-marked h4,
-marked h5,
-marked h6 {
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
   -webkit-user-select: auto;
 }
 
-marked h1 {
+.markdown h1 {
   font-size: 1.8em;
   margin: 0.67em 0;
 }
 
-marked h1,
-marked > h1 {
+.markdown h1,
+.markdown > h1 {
   margin-top: 0;
   font-size: 2em;
 }
 
-.item marked h2,
-marked h2,
-marked h2 {
+.item .markdown h2,
+.markdown h2,
+.markdown h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-marked h3,
-marked h3 {
+.markdown h3,
+.markdown h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-marked h4,
-marked h5,
-marked h6,
-marked h4,
-marked h5,
-marked h6 {
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
   font-size: 1em;
   margin: 1.6em 0 1em 0;
 }
 
-marked h6 {
+.markdown h6 {
   font-weight: 500;
 }
 
-.item marked p,
-marked.item  p {
+.item .markdown p,
+.markdown.item  p {
   font-size: 1em;
+  color: #000;
 }
 
-marked p {
+.markdown p {
   font-size: 1em;
   margin: 0 0.2em 1.46em;
   -webkit-user-select: auto;
 }
 
-marked a {
+.markdown a {
   color: #111;
   word-wrap: break-word;
   -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
   text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 
-marked a:hover {
+.markdown a:hover {
   color: #555;
   -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
   text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
-marked h1 a,
-marked h2 a,
-marked h3 a {
+.markdown h1 a,
+.markdown h2 a,
+.markdown h3 a {
   text-decoration: none;
 }
 
-marked strong,
-marked b {
+.markdown strong,
+.markdown b {
   font-weight: 700;
   color: #222223;
 }
 
-marked em,
-marked i {
+.markdown em,
+.markdown i {
   font-style: italic;
   color: #222223;
 }
 
-marked img {
+.markdown img {
   max-width: 100%;
   height: auto;
   margin: 0.2em 0;
 }
 
-marked a img {
+.markdown a img {
   /* Remove border on IE */
   border: none;
 }
 
-marked figure {
+.markdown figure {
   position: relative;
   clear: both;
   outline: 0;
@@ -372,14 +373,14 @@ marked figure {
   min-height: 100px;
 }
 
-marked figure img {
+.markdown figure img {
   display: block;
   max-width: 100%;
   margin: auto auto 4px;
   box-sizing: border-box;
 }
 
-marked figure figcaption {
+.markdown figure figcaption {
   position: relative;
   width: 100%;
   text-align: center;
@@ -390,12 +391,12 @@ marked figure figcaption {
   color: #666665;
 }
 
-marked figure figcaption a {
+.markdown figure figcaption a {
   text-decoration: none;
   color: #666665;
 }
 
-marked hr {
+.markdown hr {
   display: block;
   width: 14%;
   margin: 40px auto 34px;
@@ -403,63 +404,63 @@ marked hr {
   border-top: 3px solid #dededc;
 }
 
-marked blockquote {
+.markdown blockquote {
   margin: 0 0 1.64em 0;
   border-left: 3px solid #dadada;
   padding-left: 12px;
   color: #666664;
 }
 
-marked blockquote a {
+.markdown blockquote a {
   color: #666664;
 }
 
-marked ul,
-marked ol {
+.markdown ul,
+.markdown ol {
   margin: 0 0 24px 6px;
   padding-left: 16px;
 }
 
-marked ul {
+.markdown ul {
   list-style-type: square;
 }
 
-marked ol {
+.markdown ol {
   list-style-type: decimal;
 }
 
-marked li {
+.markdown li {
   line-height: 1.6em;
   margin-bottom: 0.2em;
 }
 
-marked li ul,
-marked li ol {
+.markdown li ul,
+.markdown li ol {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 14px;
 }
 
-marked li ul {
+.markdown li ul {
   list-style-type: disc;
 }
 
-marked li ul ul {
+.markdown li ul ul {
   list-style-type: circle;
 }
 
-marked li p {
+.markdown li p {
   margin: 0.4em 0 0.6em;
 }
 
-marked .unstyled {
+.markdown .unstyled {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-marked code,
-marked tt {
+.markdown code,
+.markdown tt {
   color: #808080;
   background-color: #f9f9f7;
   padding: 1px 2px;
@@ -469,7 +470,7 @@ marked tt {
   word-wrap: break-word;
 }
 
-marked pre {
+.markdown pre {
   margin: 1.64em 0;
   border: none;
   border-left: 3px solid #dadada;
@@ -481,15 +482,15 @@ marked pre {
   background-color: #f9f9f7;
 }
 
-marked pre code,
-marked pre tt {
+.markdown pre code,
+.markdown pre tt {
   color: #4c4c4c;
   border: none;
   background: none;
   padding: 0;
 }
 
-marked table {
+.markdown table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
@@ -499,37 +500,37 @@ marked table {
   box-sizing: border-box;
 }
 
-marked table th {
+.markdown table th {
   font-size: 1.1em;
   font-weight: bold;
 }
 
-marked th,
-marked td {
+.markdown th,
+.markdown td {
   text-align: left;
   padding: 4px 8px 4px 10px;
   border: 1px solid #dadada;
 }
 
-marked td {
+.markdown td {
   vertical-align: top;
 }
 
-marked tr:nth-child(even) {
+.markdown tr:nth-child(even) {
   background-color: #efefee;
 }
 
-marked iframe {
+.markdown iframe {
   display: block;
   max-width: 100%;
   margin-bottom: 30px;
 }
 
-marked figure iframe {
+.markdown figure iframe {
   margin: auto;
 }
 
-marked table pre {
+.markdown table pre {
   margin: 0;
   padding: 0;
   border: none;
@@ -537,18 +538,18 @@ marked table pre {
 }
 
 @media (min-width: 1100px) {
-  marked blockquote {
+  .markdown blockquote {
     margin-left: -24px;
     padding-left: 20px;
     border-width: 4px;
   }
 
-  marked blockquote blockquote {
+  .markdown blockquote blockquote {
     margin-left: 0;
   }
 }
 
-marked h2 {
+.markdown h2 {
   text-align: center;
 }
 
@@ -1226,13 +1227,13 @@ hr.topic {
     width: 80%;
   }
 
-  marked {
+  .markdown {
     width: 90%;
     margin: 0 auto;
   }
 
-  marked img.full-image,
-  marked img {
+  .markdown img.full-image,
+  .markdown img {
     width: auto;
     max-width: 400px;
     margin: 0 auto;
