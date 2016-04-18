@@ -252,268 +252,248 @@ HELPER_ARTICLES['zh-cn'] = {
 HELPER_ARTICLES['en'] = {
   hello: [
     {
-      slug: 'how-to-learn',
-      title: 'How To Study A Language'
+      slug: '1.2-learn-language',
+      title: '如何学好一门技术、语言'
     },
     {
-      slug: 'html',
-      title: 'HTML in Everywhere'
+      slug: '1.4.0-html',
+      title: 'HTML入门'
     },
     {
-      slug: 'css',
-      title: 'CSS in Everywhere'
+      slug: '1.4.1-css',
+      title: 'CSS入门'
     },
     {
-      slug: 'javascript',
-      title: 'JavaScript in Everywhere'
+      slug: '1.4.2-js',
+      title: 'JavaScript入门'
     }
   ],
   env: [
     {
-      slug: 'windows-unix',
-      title: 'Windows或者类Unix'
+      slug: '1.1.0-setup',
+      title: '工具只是辅助'
     },
     {
-      slug: 'pm',
-      title: '包管理'
+      slug: '1.1.0-tool',
+      title: '提高效率的工具'
     },
     {
-      slug: 'env-windows',
+      slug: '1.1.2-env-windows',
       title: '搭建开发环境(Windows)'
     },
     {
-      slug: 'env-osx',
+      slug: '1.1.3-env-linux',
+      title: '搭建开发环境(Linux)'
+    },
+    {
+      slug: '1.1.1-env-osx',
       title: '搭建开发环境(OSX)'
     }
   ],
   build: [
     {
-      slug: 'git',
+      slug: '3.0.2-git',
       title: 'Git与版本管理'
     },
     {
-      slug: 'builder',
+      slug: '3.0.1-builder',
       title: '一个构建系统的构建过程'
-    },
-    {
-      slug: 'browser-to-server',
-      title: '从浏览器到服务器发生了什么'
     }
   ],
   front: [
     {
-      slug: 'choice-frontend',
+      slug: '2.2.0-choice-frontend',
       title: '如何选择前端框架'
     },
     {
-      slug: 'ajax',
-      title: 'Ajax与JSON'
-    },
-    {
-      slug: 'frontend-history',
-      title: '前端演进史'
-    },
-    {
-      slug: 'mvvm',
-      title: 'MVVM'
+      slug: '2.2.2-communication',
+      title: '前台与后台交互'
     }
   ],
   backend: [
     {
-      slug: 'backend-language',
+      slug: '2.1.0-backend-language',
       title: '如何选择后台语言?'
     },
     {
-      slug: 'mvc',
+      slug: '2.1.2-mvc',
       title: 'MVC'
     },
     {
-      slug: 'persistence',
+      slug: '2.1.4-persistence',
       title: '数据持久化'
     },
     {
-      slug: 'serviceful',
+      slug: '2.1.3-serviceful',
       title: 'RESTful与服务化趋势'
-    },
-    {
-      slug: 'micro-services',
-      title: '微服务'
     }
   ],
   before: [
     {
-      slug: 'kickoff',
-      title: 'Kickoff'
-    },
-    {
-      slug: 'tasking',
+      slug: '3.0.3-tasking',
       title: 'Tasking'
     },
     {
-      slug: 'typing',
+      slug: '3.0.4-typing',
       title: '写代码只是在码字'
+    },
+    {
+      slug: '3.0.5-knowledge',
+      title: '内置索引与外置引擎'
     }
   ],
   test: [
     {
-      slug: 'how-to-test',
-      title: '如何写测试——测试金字塔'
+      slug: '3.1.0-how-to-test',
+      title: '如何编写测试'
     },
     {
-      slug: 'mock',
-      title: 'MOCK和STUB'
+      slug: '3.1.1-test-double',
+      title: '测试替身'
     },
     {
-      slug: 'tdd',
+      slug: '3.1.2-tdd',
       title: '测试如何驱动开发(TDD)'
-    },
-    {
-      slug: 'selenium',
-      title: 'Selenium与自动化测试'
     }
   ],
   coding: [
     {
-      slug: 'readable',
+      slug: '3.2.1-readable',
       title: '可读的代码'
     },
     {
-      slug: 'refactor',
-      title: '重构'
+      slug: '3.2.2-refactor',
+      title: '代码重构'
     },
     {
-      slug: 'intellij-refactor',
+      slug: '3.2.3-intellij-refactor',
       title: 'Intellij Idea重构'
+    },
+    {
+      slug: '3.3.0-refactor-to-pattern',
+      title: '重构到设计模式'
     }
   ],
   container: [
     {
-      slug: 'container',
-      title: 'Web容器'
-    },
-    {
-      slug: 'docker',
-      title: 'Docker'
+      slug: '4.1.0-runenv',
+      title: '隔离与运行环境'
     }
   ],
   server: [
     {
-      slug: 'lnmp',
+      slug: '4.2.0-lnmp',
       title: 'LNMP'
     },
     {
-      slug: 'cache',
+      slug: '4.2.1-cache',
       title: 'Web缓存'
-    },
-    {
-      slug: 'http-server',
-      title: 'HTTP服务器'
-    },
-    {
-      slug: 'proxy',
-      title: '代理服务器'
     }
   ],
   configurable: [
     {
-      slug: 'configurable',
+      slug: '4.3.1-configurable',
       title: '可配置管理'
     },
     {
-      slug: 'toggle',
-      title: 'Toggle'
+      slug: '4.4.0-auto-deploy',
+      title: '自动部署'
     }
   ],
   analytics: [
     {
-      slug: 'ga',
+      slug: '5.1.0-lean',
+      title: '精益'
+    },
+    {
+      slug: '5.1.1-da',
+      title: '数据分析'
+    },
+    {
+      slug: '5.1.2-ga',
       title: 'Google Analytics初入'
     },
     {
-      slug: 'seo',
+      slug: '5.3.0-seo',
       title: 'SEO(搜索引擎优化)'
     },
     {
-      slug: 'hadoop',
-      title: 'Hadoop'
+      slug: '5.2.1-monitoring',
+      title: '网站监测'
     },
     {
-      slug: 'spark',
-      title: 'Spark'
+      slug: '5.2.2-apdex',
+      title: '应用程序性能分析'
+    },
+    {
+      slug: '5.2.3-performance',
+      title: '网站性能优化'
     }
   ],
   ux: [
     {
-      slug: 'ux',
-      title: 'UI与UX'
-    },
-    {
-      slug: 'first-ux',
+      slug: '5.4.0-first-ux',
       title: 'UX入门'
     },
     {
-      slug: 'learn-design',
-      title: '认知设计'
+      slug: '5.4.1-learn-design',
+      title: '认识设计'
     }
   ],
   ci: [
     {
-      slug: 'auto',
-      title: '自动化构建'
-    },
-    {
-      slug: 'ci',
-      title: '搭建持续集成'
+      slug: '6.1.1-ci',
+      title: '持续集成'
     }
   ],
   cd: [
     {
-      slug: 'cd',
+      slug: '6.2.1-cd',
       title: '持续交付'
+    },
+    {
+      slug: '6.3.0-cl',
+      title: '持续学习'
     }
   ],
   legacy: [
     {
-      slug: 'legacy-code',
+      slug: '7.1.1-legacy-code',
       title: '遗留代码'
     },
     {
-      slug: 'change-code',
-      title: '如何修改代码'
+      slug: '7.1.2-change-code',
+      title: '修改代码的诀窍'
     }
   ],
   refactor: [
     {
-      slug: 'refactor2',
+      slug: '7.2.1-refactor2',
       title: '重构进阶'
-    },
-    {
-      slug: 'readable',
-      title: '可读的代码'
     }
   ],
   retro: [
     {
-      slug: 'summary',
-      title: '总结——为了更快的成长'
-    },
-    {
-      slug: 'retro',
+      slug: '8.1.2-retro',
       title: '回顾与改进'
     }
   ],
   arch: [
     {
-      slug: 'emergent-design',
+      slug: '8.2.1-emergent-design',
       title: '浮现式设计'
     },
     {
-      slug: 'arch-pattern',
+      slug: '8.2.0-arch-pattern',
       title: '架构模式'
     },
     {
-      slug: 'architecture',
+      slug: '8.3.0-architecture',
       title: '每个人都是架构师'
+    },
+    {
+      slug: '8.3.1-seperate',
+      title: '架构解耦'
     }
   ]
 };
