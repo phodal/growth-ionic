@@ -5,14 +5,14 @@ angular.module('starter.controllers')
     $scope.currentModal = null;
     $scope.currentModals = [];
 
-    $scope.allDoneItems = {};
-    angular.forEach(Object.keys(TODO_LISTS[$translate.use()]), function (key) {
-      $scope.allDoneItems[key] = [];
-    });
-
     $scope.HELPER = HELPER_ARTICLES[$translate.use()];
 
     $scope.openTodoModal = function (subtopic) {
+      $scope.allDoneItems = {};
+      angular.forEach(Object.keys(TODO_LISTS[$translate.use()]), function (key) {
+        $scope.allDoneItems[key] = [];
+      });
+
       $scope.subtopic = subtopic;
       $scope.todoLists = [];
       $analytics.trackView('todo ' + subtopic);
