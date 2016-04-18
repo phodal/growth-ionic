@@ -1122,7 +1122,7 @@ a {
 }
 
 .topic .summary {
-  margin: 16px 0
+  margin: 24px 0
 }
 
 .topic .avatar {
@@ -1396,6 +1396,12 @@ label.item.valid-lr {
   height: 32px;
   font-size: 32px;
   line-height: 32px;
+}
+
+.summary a.username {
+  position: relative;
+  top: 6px;
+  margin: 14px 12px;
 }
 
 .topic-detail {
