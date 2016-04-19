@@ -48,7 +48,16 @@ gulp.task('build', ['clean'], function(done){
   runSequence(
     ['sass', 'html', 'fonts', 'scripts'],
     function(){
-      buildBrowserify().on('end', done);
+      buildBrowserify({
+        babelifyOptions: {
+          plugins: [
+            'transform-decorators-legacy',
+            'transform-class-properties',
+            'transform-flow-strip-types'
+          ]
+        },
+        watch: true
+      }).on('end', done);
     }
   );
 });
