@@ -15,8 +15,12 @@ class Day1 {
   templateUrl: 'build/pages/main/main.html'
 })
 export class MainView {
-  constructor() {
+  static get parameters() {
+    return [[Platform], [NavController]];
+  }
 
+  constructor(platform, nav) {
+    this.nav = nav;
   }
   openNavDetailsPage() {
     console.log("=========")
