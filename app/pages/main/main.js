@@ -1,5 +1,15 @@
+import 'es6-shim';
+import {NavController, NavParams} from 'ionic-angular';
 import {Page} from 'ionic-angular';
 
+@Page({
+  templateUrl: 'build/pages/day/day1.html',
+})
+class Day1 {
+  constructor() {
+
+  }
+}
 
 @Page({
   templateUrl: 'build/pages/main/main.html'
@@ -7,5 +17,9 @@ import {Page} from 'ionic-angular';
 export class MainView {
   constructor() {
 
+  }
+  openNavDetailsPage() {
+    console.log("=========")
+    this.nav.push(Day1);
   }
 }
