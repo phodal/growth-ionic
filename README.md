@@ -43,7 +43,7 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 下载
 ---
 
-便捷链接: [http://growth.ren/](http://growth.ren/)
+链接: [http://growth.ren/](http://growth.ren/)
 
 **Mobile**:
 
