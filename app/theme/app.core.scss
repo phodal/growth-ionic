@@ -12,3 +12,14 @@
 @import "../pages/page2/page2";
 
 @import "../pages/page3/page3";
+
+tabbar,
+.toolbar-background {
+  background: #5e6772;
+}
+
+tabbar ion-icon,
+tabbar span,
+.toolbar-title {
+  color: #fff;
+}
