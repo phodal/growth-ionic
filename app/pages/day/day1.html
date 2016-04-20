@@ -4,7 +4,7 @@
   </ion-title>
   <ion-buttons end>
     <button>
-      <ion-icon name="more"></ion-icon>
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
     </button>
   </ion-buttons>
 </ion-navbar>
@@ -16,6 +16,9 @@
     </ion-segment-button>
     <ion-segment-button value="growthView">
       Growth
+    </ion-segment-button>
+    <ion-segment-button value="todoView">
+      TODO
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>
@@ -38,20 +41,35 @@
 
     </ion-slides>
   </div>
-  <p>
-    <button dark block outline>Get
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </button>
-  </p>
+
   <div [ngSwitch]="basicView">
 
-    <ion-list *ngSwitchWhen="'articleView'">
-      <ion-item *ngFor="#article of articles" (click)="presentArticleModal({slug: article.slug})">
-        <ion-icon name="planet" item-left></ion-icon>
-        {{article.title}}
-        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-      </ion-item>
-    </ion-list>
+    <div *ngSwitchWhen="'articleView'">
+      <ion-item-group>
+        <ion-item-divider light>构建系统</ion-item-divider>
+        <ion-item *ngFor="#article of articles.build" (click)="presentArticleModal({slug: article.slug})">
+          <ion-icon name="planet" item-left></ion-icon>
+          {{article.title}}
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider light>前端</ion-item-divider>
+        <ion-item *ngFor="#article of articles.front" (click)="presentArticleModal({slug: article.slug})">
+          <ion-icon name="planet" item-left></ion-icon>
+          {{article.title}}
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider light>后台</ion-item-divider>
+        <ion-item *ngFor="#article of articles.backend" (click)="presentArticleModal({slug: article.slug})">
+          <ion-icon name="planet" item-left></ion-icon>
+          {{article.title}}
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+      </ion-item-group>
+    </div>
     <ion-list *ngSwitchWhen="'growthView'">
       <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
         <ion-icon name="planet" item-left></ion-icon>
@@ -60,9 +78,22 @@
       </ion-item>
       <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
         <ion-icon name="planet" item-left></ion-icon>
-        工具
+        书单
         <ion-icon name="ios-arrow-forward" item-right></ion-icon>
       </ion-item>
+      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+        <ion-icon name="planet" item-left></ion-icon>
+        成长路线
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+        <ion-icon name="planet" item-left></ion-icon>
+        调试工具
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchWhen="'growthView'">
+      
     </ion-list>
   </div>
 </ion-content>

@@ -20,7 +20,7 @@ class Article {
 })
 export class Day1 {
   basicView:string = "articleView";
-  articles = HELPER_ARTICLES['zh-cn']['front'];
+  articles = HELPER_ARTICLES['zh-cn'];
 
   constructor(public nav:NavController) {
     this.nav = nav;
