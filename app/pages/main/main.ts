@@ -1,12 +1,34 @@
 import {Page} from 'ionic-angular';
 import {NavController, TranslatePipe} from 'ionic-angular';
-import {TranslateService} from 'ng2-translate/ng2-translate';
+import {Page, Modal, Platform, NavController, ViewController, NavParams} from 'ionic-angular';
+
+@Page({
+  templateUrl: 'build/articles/article.html'
+})
+class Article {
+  constructor(public platform:Platform,
+              public params:NavParams,
+              public viewCtrl:ViewController) {
+
+    console.log('article', params.get('article'));
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+}
 
 @Page({
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
-  constructor() {
+  constructor(nav:NavController) {
+    this.nav = nav;
+  }
+
+  presentArticleModal(slug) {
+    let articleModal = Modal.create(Article, {aritlce: slug});
+    this.nav.present(articleModal);
   }
 }
 
