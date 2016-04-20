@@ -1,20 +1,25 @@
 <ion-navbar *navbar>
-  <ion-toolbar>
-    <ion-segment>
-      <ion-segment-button value="Growth">
-        Tool
-      </ion-segment-button>
-      <ion-segment-button value="Article">
-        Article
-      </ion-segment-button>
-    </ion-segment>
-    <ion-buttons end>
-      <button>
-        <ion-icon name="more"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-title>
+    Frontend
+  </ion-title>
 </ion-navbar>
+
+<ion-toolbar>
+  <ion-segment [(ngModel)]="basicView">
+    <ion-segment-button value="articles">
+      Article
+    </ion-segment-button>
+    <ion-segment-button value="growth">
+      Tool
+    </ion-segment-button>
+  </ion-segment>
+  <ion-buttons end>
+    <button>
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
 
 <ion-content class="day1">
   <div class="title"><img class="title-image full-image" src="assets/imgs/frontend.png"/></div>
@@ -23,29 +28,32 @@
       <ion-icon name="checkmark-circle-outline"></ion-icon>
     </button>
   </p>
-  <ion-list>
-    <ion-list-header>
-      Articles
-    </ion-list-header>
-    <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
-      <ion-icon name="planet" item-left></ion-icon>
-      Article Title
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="planet" item-left></ion-icon>
-      Article Title
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="planet" item-left></ion-icon>
-      Article Title
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="planet" item-left></ion-icon>
-      Article Title
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-  </ion-list>
+  <div [ngSwitch]="basicView">
+
+    <ion-list *ngSwitchWhen="'articles'">
+      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+        <ion-icon name="planet" item-left></ion-icon>
+        Article Title
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="planet" item-left></ion-icon>
+        Article Title
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="planet" item-left></ion-icon>
+        Article Title
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="planet" item-left></ion-icon>
+        Article Title
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchWhen="'growth'">
+
+    </ion-list>
+  </div>
 </ion-content>

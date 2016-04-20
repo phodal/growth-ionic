@@ -22,6 +22,8 @@ class Article {
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
+  basicView: string = "articles";
+
   constructor(nav:NavController) {
     this.nav = nav;
   }
