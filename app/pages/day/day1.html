@@ -25,17 +25,17 @@
 
 
 <ion-content class="day1">
-  <div class="title">
+  <div class="day-slider">
     <ion-slides pager>
-      <ion-slide>
-        <img class="title-image full-image" src="assets/imgs/frontend.png" />
+      <ion-slide class="slider1">
+        <h2>前端</h2>
       </ion-slide>
 
-      <ion-slide>
+      <ion-slide class="slider2">
         <h2>构建系统</h2>
       </ion-slide>
 
-      <ion-slide>
+      <ion-slide class="slider3">
         <h2>后台</h2>
       </ion-slide>
 
@@ -93,7 +93,7 @@
       </ion-item>
     </ion-list>
     <ion-list *ngSwitchWhen="'growthView'">
-      
+
     </ion-list>
   </div>
 </ion-content>
