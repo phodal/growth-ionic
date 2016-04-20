@@ -1,4 +1,5 @@
 import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
+import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
 
 @Page({
   templateUrl: 'build/articles/article.html'
@@ -7,8 +8,6 @@ class Article {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-
-    console.log('slug', params.get('slug'));
   }
 
   dismiss() {
@@ -20,7 +19,8 @@ class Article {
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
-  basicView:string = "articles";
+  basicView:string = "articleView";
+  articles = HELPER_ARTICLES['zh-cn']['front'];
 
   constructor(public nav:NavController) {
     this.nav = nav;

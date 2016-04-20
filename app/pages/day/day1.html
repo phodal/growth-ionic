@@ -6,10 +6,10 @@
 
 <ion-toolbar>
   <ion-segment [(ngModel)]="basicView">
-    <ion-segment-button value="articles">
+    <ion-segment-button value="articleView">
       Article
     </ion-segment-button>
-    <ion-segment-button value="growth">
+    <ion-segment-button value="growthView">
       Tool
     </ion-segment-button>
   </ion-segment>
@@ -30,29 +30,14 @@
   </p>
   <div [ngSwitch]="basicView">
 
-    <ion-list *ngSwitchWhen="'articles'">
-      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+    <ion-list *ngSwitchWhen="'articleView'">
+      <ion-item *ngFor="#article of articles" (click)="presentArticleModal({slug: article.slug})">
         <ion-icon name="planet" item-left></ion-icon>
-        Article Title
-        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="planet" item-left></ion-icon>
-        Article Title
-        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="planet" item-left></ion-icon>
-        Article Title
-        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="planet" item-left></ion-icon>
-        Article Title
+        {{article.title}}
         <ion-icon name="ios-arrow-forward" item-right></ion-icon>
       </ion-item>
     </ion-list>
-    <ion-list *ngSwitchWhen="'growth'">
+    <ion-list *ngSwitchWhen="'growthView'">
       <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
         <ion-icon name="planet" item-left></ion-icon>
           工具
