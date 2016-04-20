@@ -7,7 +7,6 @@ import {TranslateService} from 'ng2-translate/ng2-translate';
 })
 class Day1 {
   constructor() {
-
   }
 }
 
@@ -16,11 +15,8 @@ class Day1 {
   pipes: [TranslatePipe]
 })
 export class MainView {
-  constructor(public nav:NavController, translate:TranslateService) {
-    this.translate = translate;
-    this.translate.get("day1").subscribe(res => {
-      this.day1 = res;
-    });
+  constructor(public nav:NavController) {
+    
   }
 
   openNavDetailsPage() {
