@@ -10,7 +10,7 @@ class Article {
               public params:NavParams,
               public viewCtrl:ViewController) {
 
-    console.log('article', params.get('article'));
+    console.log('slug', params.get('slug'));
   }
 
   dismiss() {
@@ -27,7 +27,7 @@ export class Day1 {
   }
 
   presentArticleModal(slug) {
-    let articleModal = Modal.create(Article, {aritlce: slug});
+    let articleModal = Modal.create(Article, {slug: slug});
     this.nav.present(articleModal);
   }
 }
