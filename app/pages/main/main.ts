@@ -1,6 +1,4 @@
-import {Page} from 'ionic-angular';
-import {NavController, TranslatePipe} from 'ionic-angular';
-import {Page, Modal, Platform, NavController, ViewController, NavParams} from 'ionic-angular';
+import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
 
 @Page({
   templateUrl: 'build/articles/article.html'
@@ -22,9 +20,9 @@ class Article {
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
-  basicView: string = "articles";
+  basicView:string = "articles";
 
-  constructor(nav:NavController) {
+  constructor(public nav:NavController) {
     this.nav = nav;
   }
 
