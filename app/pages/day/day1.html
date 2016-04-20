@@ -53,7 +53,16 @@
       </ion-item>
     </ion-list>
     <ion-list *ngSwitchWhen="'growth'">
-
+      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+        <ion-icon name="planet" item-left></ion-icon>
+          工具
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item (click)="presentArticleModal({slug: '1.0.html'})">
+        <ion-icon name="planet" item-left></ion-icon>
+          工具
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
     </ion-list>
   </div>
 </ion-content>
