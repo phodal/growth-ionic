@@ -1,5 +1,9 @@
-Ionic2 + Angular.js + Growth
-===
+Ionic2 + Angular 2 + Growth + TypeScript
+========================================
+
+> A new version with new UI
+
+Ionic 1 Version: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
 License
 ---
