@@ -36,7 +36,8 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
-    }
+    },
+    "android"
   ],
   "name": "growth2",
   "description": "growth2: An Ionic project"
