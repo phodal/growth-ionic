@@ -5,7 +5,7 @@ import {TranslateService} from 'ng2-translate/ng2-translate';
 @Page({
   templateUrl: 'build/pages/day/day1.html'
 })
-class Day1 {
+export class Day1 {
   constructor() {
   }
 }
@@ -16,7 +16,7 @@ class Day1 {
 })
 export class MainView {
   constructor(public nav:NavController) {
-    
+
   }
 
   openNavDetailsPage() {
