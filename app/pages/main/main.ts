@@ -30,7 +30,15 @@ class Todo {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-    this.todoLists = params.get('todoLists');
+    this.todoLists = params.get('todoLists').basic;
+  }
+
+  removeItem(item) {
+
+  }
+
+  addToTask(item) {
+
   }
 
   dismiss() {
