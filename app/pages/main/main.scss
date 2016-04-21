@@ -29,6 +29,19 @@
 .slider2{
   background-color: #2ecc71;
 }
-.slider2{
+.slider3{
   background-color: #009688;
+}
+
+.day-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button.day-info {
+  border: 0;
+}
+button.day-info.button-outline-dark.activated {
+  background-color: transparent;
 }
