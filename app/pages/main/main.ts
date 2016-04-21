@@ -11,7 +11,7 @@ class Article {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController,
-              http: Http) {
+              http:Http) {
     http.get(params.get('slug')).subscribe(res => this.html = res.text());
   }
 
@@ -34,11 +34,12 @@ export class Day1 {
   presentHTMLModal(params) {
     var articleSlug = 'assets/articles/' + params.slug + '.html';
     var descSlug = 'assets/desc/html/' + params.slug + '.html';
+    var articleModal;
 
-    if(params.type === 'desc') {
-      let articleModal = Modal.create(Article, {slug: descSlug});
+    if (params.type === 'desc') {
+      articleModal = Modal.create(Article, {slug: descSlug});
     } else {
-      let articleModal = Modal.create(Article, {slug: articleSlug});
+      articleModal = Modal.create(Article, {slug: articleSlug});
     }
 
     this.nav.present(articleModal);
