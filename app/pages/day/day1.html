@@ -30,17 +30,23 @@
       <ion-slide class="slider1">
         <h2>前端</h2>
         <p>前端Front-end和后端back-end是描述进程开始和结束的通用词汇</p>
-        <button class="day-info" dark outline>
+        <button class="day-info" dark outline (click)="presentArticleModal({slug: 'front', type: 'desc'})">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </ion-slide>
 
       <ion-slide class="slider2">
         <h2>构建系统</h2>
+        <button class="day-info" dark outline (click)="presentArticleModal({slug: 'build', type: 'desc'})">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
       </ion-slide>
 
       <ion-slide class="slider3">
         <h2>后台</h2>
+        <button class="day-info" dark outline (click)="presentArticleModal({slug: 'backend', type: 'desc'})">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
       </ion-slide>
 
     </ion-slides>

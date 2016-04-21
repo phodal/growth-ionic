@@ -12,9 +12,7 @@ class Article {
               public params:NavParams,
               public viewCtrl:ViewController,
               http: Http) {
-    console.log(params.get('slug').slug);
-    var slug = params.get('slug').slug;
-    http.get('assets/articles/' + slug + '.html').subscribe(res => this.html = res.text());
+    http.get(params.get('slug')).subscribe(res => this.html = res.text());
   }
 
   dismiss() {
@@ -33,8 +31,16 @@ export class Day1 {
     this.nav = nav;
   }
 
-  presentArticleModal(slug) {
-    let articleModal = Modal.create(Article, {slug: slug});
+  presentArticleModal(params) {
+    var articleSlug = 'assets/articles/' + params.slug + '.html';
+    var descSlug = 'assets/desc/html/' + params.slug + '.html';
+
+    if(params.type === 'desc') {
+      let articleModal = Modal.create(Article, {slug: descSlug});
+    } else {
+      let articleModal = Modal.create(Article, {slug: articleSlug});
+    }
+
     this.nav.present(articleModal);
   }
 }
