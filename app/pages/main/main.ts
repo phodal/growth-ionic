@@ -1,7 +1,7 @@
 import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
 import {TODO_LISTS} from "./TODO_LISTS"
-import {Http, Response} from "angular2/http";
+import {Http} from "angular2/http";
 
 @Page({
   templateUrl: 'build/articles/article.html'
@@ -29,8 +29,7 @@ class Todo {
 
   constructor(public platform:Platform,
               public params:NavParams,
-              public viewCtrl:ViewController,
-              http:Http) {
+              public viewCtrl:ViewController) {
     this.todoLists = params.get('todoLists');
   }
 
