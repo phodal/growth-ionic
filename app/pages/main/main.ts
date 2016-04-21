@@ -13,7 +13,8 @@ class Article {
               public viewCtrl:ViewController,
               http: Http) {
     console.log(params.get('slug').slug);
-    http.get(params.get('slug').slug + '.html').subscribe(res => this.html = res);
+    var slug = params.get('slug').slug;
+    http.get('assets/articles/' + slug + '.html').subscribe(res => this.html = res._body);
   }
 
   dismiss() {
