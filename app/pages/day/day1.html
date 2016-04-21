@@ -103,8 +103,12 @@
         </ion-item>
       </ion-item-group>
     </ion-list>
-    <ion-list *ngSwitchWhen="'growthView'">
-
+    <ion-list *ngSwitchWhen="'todoView'">
+      <ion-item (click)="presentTodoModal({domain: 'frontend'})">
+        <ion-icon name="planet" item-left></ion-icon>
+          前端
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+      </ion-item>
     </ion-list>
   </div>
 </ion-content>

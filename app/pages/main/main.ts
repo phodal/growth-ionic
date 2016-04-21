@@ -1,5 +1,6 @@
 import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
+import {TODO_LISTS} from "./TODO_LISTS"
 import {Http, Response} from "angular2/http";
 
 @Page({
@@ -21,6 +22,24 @@ class Article {
 }
 
 @Page({
+  templateUrl: 'build/articles/todo.html'
+})
+class Todo {
+  private todoLists;
+
+  constructor(public platform:Platform,
+              public params:NavParams,
+              public viewCtrl:ViewController,
+              http:Http) {
+    this.todoLists = params.get('todoLists');
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+}
+
+@Page({
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
@@ -29,6 +48,12 @@ export class Day1 {
 
   constructor(public nav:NavController) {
     this.nav = nav;
+  }
+
+  presentTodoModal(params) {
+    var todoLists = TODO_LISTS['zh-cn'][params.domain];
+    var todoModal = Modal.create(Todo, {todoLists: todoLists});
+    this.nav.present(todoModal);
   }
 
   presentHTMLModal(params) {

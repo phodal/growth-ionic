@@ -1,0 +1,19 @@
+<ion-toolbar>
+  <ion-title>
+    Article
+  </ion-title>
+  <ion-buttons start>
+    <button (click)="dismiss()">
+      <span primary showWhen="ios">Cancel</span>
+      <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="has-header" padding>
+  <ion-item *ngFor="#todo of todoLists.basic">
+    <ion-icon name="planet" item-left></ion-icon>
+    {{todo.title}}
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+</ion-content>
