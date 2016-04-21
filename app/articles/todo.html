@@ -13,9 +13,9 @@
 <ion-content class="outer-content">
   <ion-list>
     <ion-item-sliding *ngFor="#todo of todoLists">
-      <button ion-item>
+      <ion-item>
         {{todo.title}}
-      </button>
+      </ion-item>
       <ion-item-options>
         <button light (click)="addToTask(todo)">Add</button>
         <button light (click)="removeItem(todo)">Done</button>
