@@ -1,5 +1,6 @@
 import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
+import {Http, Response} from "angular2/http";
 
 @Page({
   templateUrl: 'build/articles/article.html'
@@ -9,8 +10,10 @@ class Article {
 
   constructor(public platform:Platform,
               public params:NavParams,
-              public viewCtrl:ViewController) {
-    this.html = params.get('html');
+              public viewCtrl:ViewController,
+              http: Http) {
+    console.log(params.get('slug').slug);
+    http.get(params.get('slug').slug + '.html').subscribe(res => this.html = res);
   }
 
   dismiss() {
@@ -30,8 +33,7 @@ export class Day1 {
   }
 
   presentArticleModal(slug) {
-    var html = "<h1>This is a HTML</h1>"
-    let articleModal = Modal.create(Article, {slug: slug, html: html});
+    let articleModal = Modal.create(Article, {slug: slug});
     this.nav.present(articleModal);
   }
 }
