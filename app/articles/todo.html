@@ -17,8 +17,8 @@
         {{todo.title}}
       </ion-item>
       <ion-item-options>
-        <button light (click)="addToTask(todo)">Add</button>
-        <button light (click)="removeItem(todo)">Done</button>
+        <button secondary (click)="addToTask(todo)"><ion-icon name="clipboard"></ion-icon></button>
+        <button danger (click)="removeItem(todo)"><ion-icon name="checkbox"></ion-icon></button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
