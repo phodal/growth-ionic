@@ -5,9 +5,12 @@ import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
   templateUrl: 'build/articles/article.html'
 })
 class Article {
+  private html;
+
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
+    this.html = params.get('html');
   }
 
   dismiss() {
@@ -27,7 +30,8 @@ export class Day1 {
   }
 
   presentArticleModal(slug) {
-    let articleModal = Modal.create(Article, {slug: slug});
+    var html = "<h1>This is a HTML</h1>"
+    let articleModal = Modal.create(Article, {slug: slug, html: html});
     this.nav.present(articleModal);
   }
 }
