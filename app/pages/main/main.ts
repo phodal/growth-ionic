@@ -31,7 +31,7 @@ export class Day1 {
     this.nav = nav;
   }
 
-  presentArticleModal(params) {
+  presentHTMLModal(params) {
     var articleSlug = 'assets/articles/' + params.slug + '.html';
     var descSlug = 'assets/desc/html/' + params.slug + '.html';
 
