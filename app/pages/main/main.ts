@@ -14,7 +14,7 @@ class Article {
               http: Http) {
     console.log(params.get('slug').slug);
     var slug = params.get('slug').slug;
-    http.get('assets/articles/' + slug + '.html').subscribe(res => this.html = res._body);
+    http.get('assets/articles/' + slug + '.html').subscribe(res => this.html = res.text());
   }
 
   dismiss() {
