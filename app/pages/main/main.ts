@@ -1,6 +1,7 @@
 import {NavController, TranslatePipe, Page, Modal, Platform, ViewController, NavParams} from "ionic-angular";
-import {HELPER_ARTICLES} from "./HELPER_ARTICLES"
-import {TODO_LISTS} from "./TODO_LISTS"
+import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
+import {TODO_LISTS} from "./TODO_LISTS";
+import {Todo} from "../components/todo";
 import {Http} from "angular2/http";
 
 @Page({
@@ -14,31 +15,6 @@ class Article {
               public viewCtrl:ViewController,
               http:Http) {
     http.get(params.get('slug')).subscribe(res => this.html = res.text());
-  }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
-  }
-}
-
-@Page({
-  templateUrl: 'build/articles/todo.html'
-})
-class Todo {
-  private todoLists;
-
-  constructor(public platform:Platform,
-              public params:NavParams,
-              public viewCtrl:ViewController) {
-    this.todoLists = params.get('todoLists').basic;
-  }
-
-  removeItem(item) {
-
-  }
-
-  addToTask(item) {
-
   }
 
   dismiss() {
