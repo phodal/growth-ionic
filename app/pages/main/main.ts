@@ -32,14 +32,17 @@ export class Day1 {
   }
 
   presentHTMLModal(params) {
-    var articleSlug = 'assets/articles/' + params.slug + '.html';
-    var descSlug = 'assets/desc/html/' + params.slug + '.html';
     var articleModal;
 
     if (params.type === 'desc') {
-      articleModal = Modal.create(Article, {slug: descSlug});
+      var slug = 'assets/desc/html/' + params.slug + '.html';
+      articleModal = Modal.create(Article, {slug: slug});
+    } else if (params.domain) {
+      var slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
+      articleModal = Modal.create(Article, {slug: slug});
     } else {
-      articleModal = Modal.create(Article, {slug: articleSlug});
+      var slug = 'assets/articles/' + params.slug + '.html';
+      articleModal = Modal.create(Article, {slug: slug});
     }
 
     this.nav.present(articleModal);

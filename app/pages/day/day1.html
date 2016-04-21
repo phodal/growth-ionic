@@ -81,28 +81,24 @@
       </ion-item-group>
     </div>
     <ion-list *ngSwitchWhen="'growthView'">
-
       <ion-item-group>
         <ion-item-divider light>前端</ion-item-divider>
-        <ion-item (click)="presentHTMLModal({slug: '1.0.html'})">
+        <ion-item (click)="presentHTMLModal({slug: 'debug', type: 'general', domain: 'frontend'})">
           <ion-icon name="planet" item-left></ion-icon>
-          书单
+          Debug
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
       <ion-item-group>
         <ion-item-divider light>后台</ion-item-divider>
-        <ion-item (click)="presentHTMLModal({slug: '1.0.html'})">
+        <ion-item (click)="presentHTMLModal({slug: 'framework', type: 'general', domain: 'backend'})">
           <ion-icon name="planet" item-left></ion-icon>
-          书单
+          服务框架
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
-      </ion-item-group>
-      <ion-item-group>
-        <ion-item-divider light>构建系统</ion-item-divider>
-        <ion-item (click)="presentHTMLModal({slug: '1.0.html'})">
+        <ion-item (click)="presentHTMLModal({slug: 'services', type: 'general', domain: 'backend'})">
           <ion-icon name="planet" item-left></ion-icon>
-          书单
+          应用框架
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
