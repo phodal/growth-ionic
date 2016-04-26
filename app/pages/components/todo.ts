@@ -5,6 +5,7 @@ import {NavParams, ViewController, Platform, Page} from "ionic-angular/index";
 })
 export class Todo {
   private todoLists;
+  private items;
 
   constructor(public platform:Platform,
               public params:NavParams,
