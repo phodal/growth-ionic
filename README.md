@@ -5,6 +5,11 @@ Ionic2 + Angular 2 + Growth + TypeScript
 
 Ionic 1 Version: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
+Setup for Android
+-----------------
+
+copy ``es6-shim.min.js`` to ``index.html``
+
 License
 ---
 
