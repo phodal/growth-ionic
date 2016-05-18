@@ -167,18 +167,6 @@ HELPER_ARTICLES['zh-cn'] = {
     {
       slug: '5.3.0-seo',
       title: 'SEO(搜索引擎优化)'
-    },
-    {
-      slug: '5.2.1-monitoring',
-      title: '网站监测'
-    },
-    {
-      slug: '5.2.2-apdex',
-      title: '应用程序性能分析'
-    },
-    {
-      slug: '5.2.3-performance',
-      title: '网站性能优化'
     }
   ],
   ux: [
@@ -416,18 +404,6 @@ HELPER_ARTICLES['en'] = {
     {
       slug: '5.3.0-seo',
       title: 'SEO(搜索引擎优化)'
-    },
-    {
-      slug: '5.2.1-monitoring',
-      title: '网站监测'
-    },
-    {
-      slug: '5.2.2-apdex',
-      title: '应用程序性能分析'
-    },
-    {
-      slug: '5.2.3-performance',
-      title: '网站性能优化'
     }
   ],
   ux: [
