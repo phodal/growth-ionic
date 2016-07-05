@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "angular2": "2.0.0-beta.15",
+    "angular2": "2.0.0-beta.17",
     "es6-promise": "3.0.2",
     "es6-shim": "^0.35.0",
-    "ionic-angular": "2.0.0-beta.6",
+    "ionic-angular": "2.0.0-beta.10",
     "ionic-native": "^1.1.0",
     "ionicons": "3.0.0-alpha.3",
     "ng2-translate": "^1.11.1",
