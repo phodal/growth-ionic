@@ -1,16 +1,9 @@
 import {App, Platform} from "ionic-angular";
 import {StatusBar} from "ionic-native";
 import {TabsPage} from "./pages/tabs/tabs";
-import {provide} from "angular2/core";
-import {RouteConfig} from "angular2/router";
+import {provide} from "@angular/core";
 import {TranslateService, TranslateLoader, TranslateStaticLoader} from "ng2-translate/ng2-translate";
-import {Http} from "angular2/http";
-import {Day1} from "./pages/main/main";
-
-const ROUTES = [
-  {path: '/app/domain/frontend', component: Day1}
-];
-
+import {Http} from "@angular/http";
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
@@ -28,12 +21,10 @@ const ROUTES = [
     TranslateService
   ]
 })
-@RouteConfig(ROUTES)
 export class MyApp {
   rootPage:any = TabsPage;
   private translate;
   nextPage:any;
-  routes = ROUTES;
 
   constructor(platform:Platform, translate:TranslateService) {
     this.translate = translate;

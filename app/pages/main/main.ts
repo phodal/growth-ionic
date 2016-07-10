@@ -1,4 +1,4 @@
-import {NavController, TranslatePipe, Page, Modal} from "ionic-angular";
+import {ModalController, NavController, TranslatePipe, Page, Modal} from "ionic-angular";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
 import {TODO_LISTS} from "./TODO_LISTS";
 import {Todo} from "../components/todo";
@@ -12,13 +12,14 @@ export class Day1 {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
 
-  constructor(public nav:NavController) {
+  constructor(public nav:NavController, private modalCtrl: ModalController) {
     this.nav = nav;
+    this.modalCtrl = modalCtrl;
   }
 
   presentTodoModal(params) {
     var todoLists = TODO_LISTS['zh-cn'][params.domain];
-    var todoModal = Modal.create(Todo, {todoLists: todoLists});
+    var todoModal = this.modalCtrl.create(Todo, {todoLists: todoLists});
     this.nav.present(todoModal);
   }
 

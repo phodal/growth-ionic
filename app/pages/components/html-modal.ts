@@ -1,5 +1,5 @@
 import {Page, Platform, NavParams, ViewController} from "ionic-angular/index";
-import {Http} from "angular2/http";
+import {Http} from "@angular/http";
 
 @Page({
   templateUrl: 'build/articles/article.html'
