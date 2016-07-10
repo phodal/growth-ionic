@@ -29,7 +29,7 @@ export class Day1 {
   presentTodoModal(params) {
     var todoLists = TODO_LISTS['zh-cn'][params.domain];
     var todoModal = this.modalCtrl.create(Todo, {todoLists: todoLists});
-    this.nav.push(todoModal);
+    todoModal.present();
   }
 
   presentHTMLModal(params) {
@@ -46,7 +46,7 @@ export class Day1 {
       articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
     }
 
-    this.nav.push(articleModal);
+    articleModal.present();
   }
 }
 
