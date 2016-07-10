@@ -2,8 +2,8 @@ import {NavController, ModalController} from "ionic-angular";
 import {Component} from "@angular/core";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
 import {TODO_LISTS} from "./TODO_LISTS";
-import {Todo} from "../components/todo";
-import {HTMLModal} from "../components/html-modal";
+import {Todo} from "../../components/todo/todo";
+import {ArticleModal} from "../../components/article/article";
 
 
 @Component({
@@ -32,18 +32,18 @@ export class Day1 {
     todoModal.present();
   }
 
-  presentHTMLModal(params) {
+  presentArticleModal(params) {
     var articleModal;
 
     if (params.type === 'desc') {
       var slug = 'assets/desc/html/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
     } else if (params.domain) {
       var slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
     } else {
       var slug = 'assets/articles/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
     }
 
     articleModal.present();

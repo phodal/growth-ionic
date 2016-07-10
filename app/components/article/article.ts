@@ -3,9 +3,9 @@ import {Component} from "@angular/core";
 import {Http} from "@angular/http";
 
 @Component({
-  templateUrl: 'build/articles/article.html'
+  templateUrl: 'build/components/article/article.html'
 })
-export class HTMLModal {
+export class ArticleModal {
   private html;
 
   constructor(public platform:Platform,
