@@ -1,7 +1,8 @@
-import {Page, Platform, NavParams, ViewController} from "ionic-angular/index";
+import {Platform, NavParams, ViewController} from "ionic-angular/index";
+import {Component} from "@angular/core";
 import {Http} from "@angular/http";
 
-@Page({
+@Component({
   templateUrl: 'build/articles/article.html'
 })
 export class HTMLModal {

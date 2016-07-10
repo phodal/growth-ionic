@@ -1,11 +1,12 @@
-import {ModalController, NavController, TranslatePipe, Page, Modal} from "ionic-angular";
+import { ModalController, NavController, Modal} from "ionic-angular";
+import {Component} from "@angular/core";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
 import {TODO_LISTS} from "./TODO_LISTS";
 import {Todo} from "../components/todo";
 import {HTMLModal} from "../components/html-modal";
 
 
-@Page({
+@Component({
   templateUrl: 'build/pages/day/day1.html'
 })
 export class Day1 {
@@ -41,9 +42,8 @@ export class Day1 {
   }
 }
 
-@Page({
-  templateUrl: 'build/pages/main/main.html',
-  pipes: [TranslatePipe]
+@Component({
+  templateUrl: 'build/pages/main/main.html'
 })
 export class MainView {
   constructor(public nav:NavController) {

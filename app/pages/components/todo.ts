@@ -1,6 +1,7 @@
-import {NavParams, ViewController, Platform, Page} from "ionic-angular/index";
+import {NavParams, ViewController, Platform} from "ionic-angular/index";
+import {Component} from "@angular/core";
 
-@Page({
+@Component({
   templateUrl: 'build/articles/todo.html'
 })
 export class Todo {
