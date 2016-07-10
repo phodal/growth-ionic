@@ -1,27 +1,29 @@
-<ion-navbar *navbar>
-  <ion-title>
-    Frontend
-  </ion-title>
-  <ion-buttons end>
-    <button>
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-navbar>
+<ion-header>
+  <ion-navbar *navbar>
+    <ion-title>
+      Frontend
+    </ion-title>
+    <ion-buttons end>
+      <button>
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 
-<ion-toolbar>
-  <ion-segment [(ngModel)]="basicView">
-    <ion-segment-button value="articleView">
-      Article
-    </ion-segment-button>
-    <ion-segment-button value="growthView">
-      Growth
-    </ion-segment-button>
-    <ion-segment-button value="todoView">
-      TODO
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="basicView">
+      <ion-segment-button value="articleView">
+        Article
+      </ion-segment-button>
+      <ion-segment-button value="growthView">
+        Growth
+      </ion-segment-button>
+      <ion-segment-button value="todoView">
+        TODO
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
 
 
 <ion-content class="day1">
@@ -106,7 +108,7 @@
     <ion-list *ngSwitchCase="'todoView'">
       <ion-item (click)="presentTodoModal({domain: 'frontend'})">
         <ion-icon name="planet" item-left></ion-icon>
-          前端
+        前端
         <ion-icon name="ios-arrow-forward" item-right></ion-icon>
       </ion-item>
     </ion-list>

@@ -17,13 +17,15 @@ export class Day1 {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
   }
+
   ionViewLoaded() {
     console.log("I'm alive!");
   }
+
   ionViewWillLeave() {
     console.log("Looks like I'm about to leave :(");
   }
-  
+
   presentTodoModal(params) {
     var todoLists = TODO_LISTS['zh-cn'][params.domain];
     var todoModal = this.modalCtrl.create(Todo, {todoLists: todoLists});
@@ -54,6 +56,12 @@ export class Day1 {
 export class MainView {
   constructor(public nav:NavController) {
 
+  }
+
+  setPages() {
+    this.nav.setPages([{page: Day1}], {
+      animate: true
+    });
   }
 
   openNavDetailsPage() {
