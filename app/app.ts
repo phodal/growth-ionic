@@ -7,10 +7,10 @@ import {Component} from "@angular/core";
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
-  nextPage:any;
+  private rootPage:any;
 
   constructor(platform:Platform) {
+    this.rootPage = TabsPage;
     this.initializeApp(platform);
   }
 
