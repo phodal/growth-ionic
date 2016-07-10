@@ -1,4 +1,4 @@
-import { ModalController, NavController, Modal} from "ionic-angular";
+import {NavController, ModalController} from "ionic-angular";
 import {Component} from "@angular/core";
 import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
 import {TODO_LISTS} from "./TODO_LISTS";
@@ -13,7 +13,7 @@ export class Day1 {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
 
-  constructor(public nav:NavController, private modalCtrl: ModalController) {
+  constructor(public nav:NavController, private modalCtrl:ModalController) {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
   }
@@ -21,7 +21,7 @@ export class Day1 {
   presentTodoModal(params) {
     var todoLists = TODO_LISTS['zh-cn'][params.domain];
     var todoModal = this.modalCtrl.create(Todo, {todoLists: todoLists});
-    this.nav.present(todoModal);
+    this.nav.push(todoModal);
   }
 
   presentHTMLModal(params) {
@@ -29,16 +29,16 @@ export class Day1 {
 
     if (params.type === 'desc') {
       var slug = 'assets/desc/html/' + params.slug + '.html';
-      articleModal = Modal.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
     } else if (params.domain) {
       var slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
-      articleModal = Modal.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
     } else {
       var slug = 'assets/articles/' + params.slug + '.html';
-      articleModal = Modal.create(HTMLModal, {slug: slug});
+      articleModal = this.modalCtrl.create(HTMLModal, {slug: slug});
     }
 
-    this.nav.present(articleModal);
+    this.nav.push(articleModal);
   }
 }
 

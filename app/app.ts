@@ -4,13 +4,7 @@ import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>',
-  config: {
-    modalEnter: 'modal-slide-in',
-    modalLeave: 'modal-slide-out',
-    tabbarPlacement: 'bottom',
-    pageTransition: 'ios'
-  }
+  template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
   rootPage:any = TabsPage;
