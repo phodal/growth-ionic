@@ -28,7 +28,7 @@
 </ion-header>
 
 
-<ion-content class="day1">
+<ion-content class="day">
   <div class="day-slider">
     <ion-slides pager>
       <ion-slide class="slider1">
@@ -62,7 +62,6 @@
       <ion-item-group>
         <ion-item-divider light>构建系统</ion-item-divider>
         <ion-item *ngFor="let article of articles.build" (click)="presentArticleModal({slug: article.slug})">
-          <ion-icon name="planet" item-left></ion-icon>
           {{article.title}}
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
@@ -70,7 +69,6 @@
       <ion-item-group>
         <ion-item-divider light>前端</ion-item-divider>
         <ion-item *ngFor="let article of articles.front" (click)="presentArticleModal({slug: article.slug})">
-          <ion-icon name="planet" item-left></ion-icon>
           {{article.title}}
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
@@ -78,7 +76,6 @@
       <ion-item-group>
         <ion-item-divider light>后台</ion-item-divider>
         <ion-item *ngFor="let article of articles.backend" (click)="presentArticleModal({slug: article.slug})">
-          <ion-icon name="planet" item-left></ion-icon>
           {{article.title}}
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
@@ -88,7 +85,6 @@
       <ion-item-group>
         <ion-item-divider light>前端</ion-item-divider>
         <ion-item (click)="presentArticleModal({slug: 'debug', type: 'general', domain: 'frontend'})">
-          <ion-icon name="planet" item-left></ion-icon>
           Debug
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
@@ -96,12 +92,10 @@
       <ion-item-group>
         <ion-item-divider light>后台</ion-item-divider>
         <ion-item (click)="presentArticleModal({slug: 'framework', type: 'general', domain: 'backend'})">
-          <ion-icon name="planet" item-left></ion-icon>
           服务框架
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
         <ion-item (click)="presentArticleModal({slug: 'services', type: 'general', domain: 'backend'})">
-          <ion-icon name="planet" item-left></ion-icon>
           应用框架
           <ion-icon name="ios-arrow-forward" item-right></ion-icon>
         </ion-item>
@@ -109,7 +103,6 @@
     </ion-list>
     <ion-list *ngSwitchCase="'todoView'">
       <ion-item (click)="presentTodoModal({domain: 'frontend'})">
-        <ion-icon name="planet" item-left></ion-icon>
         前端
         <ion-icon name="ios-arrow-forward" item-right></ion-icon>
       </ion-item>

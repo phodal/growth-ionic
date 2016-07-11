@@ -16,6 +16,12 @@ install deps:
 
 copy ``es6-shim.min.js`` to ``index.html``
 
+### Convert md to HTML
+
+```shell
+find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}" -o "html/${0%.md}.html"' {} \;
+```
+
 License
 ---
 
