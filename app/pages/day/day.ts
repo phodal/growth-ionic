@@ -31,7 +31,7 @@ export class Day1 {
     todoModal.present();
   }
 
-  presentArticleModal(params) {
+  presentHtmlModal(params) {
     var articleModal, slug, modalParams;
 
     if (params.type === 'desc') {
