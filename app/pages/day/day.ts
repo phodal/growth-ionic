@@ -8,7 +8,7 @@ import {HtmlModal} from "../../components/HtmlModal";
 @Component({
   templateUrl: 'build/pages/day/day1.html'
 })
-export class Day1 {
+export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
 

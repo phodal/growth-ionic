@@ -1,16 +1,18 @@
-<ion-navbar *navbar>
-  <ion-title>Growth</ion-title>
-  <ion-buttons end>
-    <button>
-      <ion-icon name="analytics"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-navbar>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Growth</ion-title>
+    <ion-buttons end>
+      <button>
+        <ion-icon name="analytics"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
 <ion-content class="main">
   <div class="title"><img class="title-image full-image" src="assets/imgs/earth.jpg"/></div>
   <ion-card class="days">
-    <ion-item href="#/app/domain/frontend"  (click)="openNavDetailsPage()"><span item-left>从零开始</span>
+    <ion-item href="#/app/domain/frontend" (click)="openNavDetailsPage()"><span item-left>从零开始</span>
       <ion-icon item-right name="arrow-forward"></ion-icon>
     </ion-item>
     <ion-item href="#/app/day/1"><span item-left>编码</span>

@@ -1,7 +1,9 @@
 import {Component} from "@angular/core";
-import {MainView} from '../main/main';
-import {Page2} from '../page2/page2';
-import {Page3} from '../page3/page3';
+import {MainView} from "../main/main";
+import {ExamPage} from "../exam";
+import {SolutionPage} from "../solution";
+import {CommunityPage} from "../community/index";
+import {MorePage} from "../more/index";
 
 
 @Component({
@@ -10,7 +12,9 @@ import {Page3} from '../page3/page3';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  mainView: any = MainView;
-  tab2Root: any = Page2;
-  tab3Root: any = Page3;
+  mainView:any = MainView;
+  examView:any = ExamPage;
+  solutionView:any = SolutionPage;
+  communityView:any = CommunityPage;
+  moreView:any = MorePage;
 }

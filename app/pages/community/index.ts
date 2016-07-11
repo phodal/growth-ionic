@@ -2,9 +2,9 @@ import {Component} from "@angular/core";
 
 
 @Component({
-  templateUrl: 'build/pages/page3/page3.html'
+  templateUrl: 'build/pages/community/index.html'
 })
-export class Page3 {
+export class CommunityPage {
   constructor() {
 
   }

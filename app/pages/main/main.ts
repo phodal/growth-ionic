@@ -1,6 +1,6 @@
 import {NavController} from "ionic-angular";
 import {Component} from "@angular/core";
-import {Day1} from "../day/day";
+import {Day} from "../day/day";
 
 
 @Component({
@@ -12,12 +12,12 @@ export class MainView {
   }
 
   setPages() {
-    this.nav.setPages([{page: Day1}], {
+    this.nav.setPages([{page: Day}], {
       animate: true
     });
   }
 
   openNavDetailsPage() {
-    this.nav.push(Day1);
+    this.nav.push(Day);
   }
 }
