@@ -25,5 +25,8 @@ export class MyApp {
 }
 
 ionicBootstrap(MyApp, null, {
-  tabbarPlacement: 'bottom'
-})
+  tabbarPlacement: 'bottom',
+  backButtonText: '',
+  modalEnter: 'modal-slide-in',
+  modalLeave: 'modal-slide-out'
+});
