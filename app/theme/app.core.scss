@@ -9,9 +9,12 @@
 
 @import "../pages/main/main";
 
-@import "../pages/page2/page2";
+@import "../components/HtmlModal/index";
 
-@import "../pages/page3/page3";
+@import "../pages/more/index";
+@import "../pages/solution/index";
+@import "../pages/exam/index";
+@import "../pages/community/index";
 
 tabbar,
 .toolbar-background {
