@@ -2,8 +2,8 @@ import {NavController, ModalController} from "ionic-angular";
 import {Component} from "@angular/core";
 import {HELPER_ARTICLES} from "../../data/HELPER_ARTICLES";
 import {TODO_LISTS} from "../../data/TODO_LISTS";
-import {Todo} from "../../components/todo/todo";
-import {ArticleModal} from "../../components/article/article";
+import {TodoModal} from "../../components/TodoModal";
+import {HtmlModal} from "../../components/HtmlModal";
 
 @Component({
   templateUrl: 'build/pages/day/day1.html'
@@ -27,24 +27,25 @@ export class Day1 {
 
   presentTodoModal(params) {
     var todoLists = TODO_LISTS['zh-cn'][params.domain];
-    var todoModal = this.modalCtrl.create(Todo, {todoLists: todoLists});
+    var todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
     todoModal.present();
   }
 
   presentArticleModal(params) {
-    var articleModal;
+    var articleModal, slug, modalParams;
 
     if (params.type === 'desc') {
-      var slug = 'assets/desc/html/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
+      slug = 'assets/desc/html/' + params.slug + '.html';
+      modalParams = {slug: slug, pageTitle: '简介'};
     } else if (params.domain) {
-      var slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
+      slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
+      modalParams = {slug: slug};
     } else {
-      var slug = 'assets/articles/' + params.slug + '.html';
-      articleModal = this.modalCtrl.create(ArticleModal, {slug: slug});
+      slug = 'assets/article/' + params.slug + '.html';
+      modalParams = {slug: slug, pageTitle: '文章'};
     }
 
+    articleModal = this.modalCtrl.create(HtmlModal, modalParams);
     articleModal.present();
   }
 }
