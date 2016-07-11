@@ -10,11 +10,7 @@ Setup for Android
 
 install deps:
 
-    npm install -g cordova ionic
-
-### Setup for Android
-
-copy ``es6-shim.min.js`` to ``index.html``
+    npm install -g cordova ionic@beta
 
 ### Convert md to HTML
 
