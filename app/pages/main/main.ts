@@ -17,7 +17,7 @@ export class MainView {
     });
   }
 
-  openNavDetailsPage() {
-    this.nav.push(Day);
+  openNavDetailsPage(day) {
+    this.nav.push(Day, {day: day});
   }
 }
