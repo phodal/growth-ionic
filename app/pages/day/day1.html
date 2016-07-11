@@ -63,21 +63,21 @@
         <ion-item-divider light>构建系统</ion-item-divider>
         <ion-item *ngFor="let article of articles.build" (click)="presentHtmlModal({slug: article.slug})">
           {{article.title}}
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
       <ion-item-group>
         <ion-item-divider light>前端</ion-item-divider>
         <ion-item *ngFor="let article of articles.front" (click)="presentHtmlModal({slug: article.slug})">
           {{article.title}}
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
       <ion-item-group>
         <ion-item-divider light>后台</ion-item-divider>
         <ion-item *ngFor="let article of articles.backend" (click)="presentHtmlModal({slug: article.slug})">
           {{article.title}}
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
     </div>
@@ -86,25 +86,25 @@
         <ion-item-divider light>前端</ion-item-divider>
         <ion-item (click)="presentHtmlModal({slug: 'debug', type: 'general', domain: 'frontend'})">
           Debug
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
       <ion-item-group>
         <ion-item-divider light>后台</ion-item-divider>
         <ion-item (click)="presentHtmlModal({slug: 'framework', type: 'general', domain: 'backend'})">
           服务框架
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
         <ion-item (click)="presentHtmlModal({slug: 'services', type: 'general', domain: 'backend'})">
           应用框架
-          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
     </ion-list>
     <ion-list *ngSwitchCase="'todoView'">
       <ion-item (click)="presentTodoModal({domain: 'frontend'})">
         前端
-        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        <ion-icon name="arrow-right" item-right></ion-icon>
       </ion-item>
     </ion-list>
   </div>
