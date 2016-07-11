@@ -1,0 +1,17 @@
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+button.scroll-top {
+  font-size: 1.6rem;
+  height: 2.8em;
+  border-radius: 2.8em;
+  border: 1px solid #387ef5;
+  background: none;
+
+  ion-icon {
+    color: #387ef5;
+  }
+}
