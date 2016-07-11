@@ -33,7 +33,7 @@ export class Day {
   }
 
   presentHtmlModal(params) {
-    var articleModal, slug, modalParams;
+    var htmlModal, slug, modalParams;
 
     if (params.type === 'desc') {
       slug = 'assets/desc/html/' + params.slug + '.html';
@@ -46,7 +46,7 @@ export class Day {
       modalParams = {slug: slug, pageTitle: '文章'};
     }
 
-    articleModal = this.modalCtrl.create(HtmlModal, modalParams);
-    articleModal.present();
+    htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+    htmlModal.present();
   }
 }

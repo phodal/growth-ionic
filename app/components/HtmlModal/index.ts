@@ -17,7 +17,6 @@ export class HtmlModal {
               http:Http) {
 
     this.pageTitle = params.get('pageTitle');
-    console.log(this.pageTitle);
     http.get(params.get('slug')).subscribe(res => this.html = res.text());
   }
 
