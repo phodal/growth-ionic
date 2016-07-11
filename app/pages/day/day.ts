@@ -1,4 +1,4 @@
-import {NavController, ModalController} from "ionic-angular";
+import {NavController, ModalController, NavParams} from "ionic-angular";
 import {Component} from "@angular/core";
 import {HELPER_ARTICLES} from "../../data/HELPER_ARTICLES";
 import {TODO_LISTS} from "../../data/TODO_LISTS";
@@ -12,17 +12,18 @@ export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
 
-  constructor(public nav:NavController, private modalCtrl:ModalController) {
+  constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
+    this.params = params;
   }
 
   ionViewLoaded() {
-    console.log("I'm alive!");
+
   }
 
   ionViewWillLeave() {
-    console.log("Looks like I'm about to leave :(");
+
   }
 
   presentTodoModal(params) {
