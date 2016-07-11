@@ -1,7 +1,7 @@
 import {NavController, ModalController} from "ionic-angular";
 import {Component} from "@angular/core";
-import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
-import {TODO_LISTS} from "./TODO_LISTS";
+import {HELPER_ARTICLES} from "../../data/HELPER_ARTICLES";
+import {TODO_LISTS} from "../../data/TODO_LISTS";
 import {Todo} from "../../components/todo/todo";
 import {ArticleModal} from "../../components/article/article";
 
