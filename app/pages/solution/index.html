@@ -7,5 +7,15 @@
 </ion-header>
 
 <ion-content class="solution">
-
+  <ion-item *ngFor="let solution of solutions">
+    <h2>{{solution.name}}</h2>
+    <p>
+      {{solution.description}}
+    </p>
+    <p>
+      <span class="stack" *ngFor="let stack of solution.stacks">
+        {{stack}}
+      </span>
+    </p>
+  </ion-item>
 </ion-content>
