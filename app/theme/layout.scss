@@ -1,0 +1,20 @@
+.bar-button-default {
+  color: #ffffff;
+}
+
+.segment-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+ion-tabbar {
+  background: #5e6772;
+
+  .tab-button {
+    color: #ccc;
+  }
+
+  .tab-button:hover:not(.disable-hover), .tab-button[aria-selected=true] {
+    color: #fff;
+  }
+}
