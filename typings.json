@@ -6,6 +6,7 @@
   },
   "globalDependencies": {
     "cordova": "registry:dt/cordova#0.0.0+20160607055823",
-    "cordova/plugins/inappbrowser": "registry:dt/cordova/plugins/inappbrowser#0.0.0+20160316155526"
+    "cordova/plugins/inappbrowser": "registry:dt/cordova/plugins/inappbrowser#0.0.0+20160316155526",
+    "cordova/plugins/splashscreen": "registry:dt/cordova/plugins/splashscreen#0.0.0+20160316155526"
   }
 }

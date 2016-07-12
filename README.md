@@ -35,6 +35,7 @@ Shell
 
 ```shell
 typings install dt~cordova/plugins/inappbrowser --save --global
+typings install dt~cordova/plugins/splashscreen --save --global
 ```
 
 ### Convert md to HTML
