@@ -10,7 +10,15 @@
 </ion-header>
 
 <ion-content class="main">
-  <div class="title"><img class="title-image full-image" src="assets/imgs/earth.jpg"/></div>
+  <div class="home-slide">
+    <ion-slides pager>
+      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}">
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.intro}}</p>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
   <ion-card class="days">
     <ion-item (click)="openNavDetailsPage(1)"><span item-left>从零开始</span>
       <ion-icon item-right name="arrow-forward"></ion-icon>

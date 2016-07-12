@@ -3,45 +3,29 @@
   height: auto;
 }
 
-.days {
-  margin-top: 1em;
-}
-
-.item {
-  border: 1px solid #F9F9F9;
-}
-
-.day-slider {
+.home-slide {
   color: #fff;
   height: 180px;
-}
 
-.day-slider p {
-  color: #fff;
-  padding: 0 2em;
-}
+  h2 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0 2em;
+  }
 
-.slider1,  .slider2,  .slider3 {
-  background-color: #33B375;
-  color: #ecf0f1;
-}
+  .slide0,  .slide1,  .slide2 {
+    background-color: #33B375;
+    color: #ecf0f1;
+  }
 
-.slider2{
-  background-color: #2ecc71;
-}
-.slider3{
-  background-color: #009688;
-}
+  .slide1{
+    background-color: #2ecc71;
+  }
+  .slide2{
+    background-color: #009688;
+  }
 
-.day-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-button.day-info {
-  border: 0;
-}
-button.day-info.button-outline-dark.activated {
-  background-color: transparent;
 }
