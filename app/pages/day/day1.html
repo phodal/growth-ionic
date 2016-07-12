@@ -29,36 +29,15 @@
 
 
 <ion-content class="day">
-  <div class="day-slider">
-    <ion-slides pager>
-      <ion-slide class="slider1">
-        <h2>前端</h2>
-        <p>前端Front-end和后端back-end是描述进程开始和结束的通用词汇</p>
+  <div [ngSwitch]="basicView" class="day-view-switch">
+    <div *ngSwitchCase="'articleView'">
+      <div class="intro">
+        <h4>文章</h4>
+        <p>这里有你所需要了解的一些基本信息。</p>
         <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'front', type: 'desc'})">
           <ion-icon name="information-circle"></ion-icon>
         </button>
-      </ion-slide>
-
-      <ion-slide class="slider2">
-        <h2>构建系统</h2>
-        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'build', type: 'desc'})">
-          <ion-icon name="information-circle"></ion-icon>
-        </button>
-      </ion-slide>
-
-      <ion-slide class="slider3">
-        <h2>后台</h2>
-        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'backend', type: 'desc'})">
-          <ion-icon name="information-circle"></ion-icon>
-        </button>
-      </ion-slide>
-
-    </ion-slides>
-  </div>
-
-  <div [ngSwitch]="basicView">
-
-    <div *ngSwitchCase="'articleView'">
+      </div>
       <ion-item-group>
         <ion-item-divider light>构建系统</ion-item-divider>
         <ion-item *ngFor="let article of articles.build" (click)="presentHtmlModal({slug: article.slug})">
@@ -82,6 +61,13 @@
       </ion-item-group>
     </div>
     <ion-list *ngSwitchCase="'growthView'">
+      <div class="intro">
+        <h4>Growth</h4>
+        <p>这里有你所需要掌握的一些技能。</p>
+        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'build', type: 'desc'})">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
+      </div>
       <ion-item-group>
         <ion-item-divider light>前端</ion-item-divider>
         <ion-item (click)="presentHtmlModal({slug: 'debug', type: 'general', domain: 'frontend'})">
@@ -102,6 +88,13 @@
       </ion-item-group>
     </ion-list>
     <ion-list *ngSwitchCase="'todoView'">
+      <div class="intro">
+        <h4>TODO</h4>
+        <p>这里有你所需要尝试的一些内容。</p>
+        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'backend', type: 'desc'})">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
+      </div>
       <ion-item (click)="presentTodoModal({domain: 'frontend'})">
         前端
         <ion-icon name="arrow-right" item-right></ion-icon>
