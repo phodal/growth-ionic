@@ -22,19 +22,45 @@ export const DAYS2 = {
   ],
   growthView: [
     {
-      title: '前端',
+      title: '编码之前',
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '书单',
+          info: {slug: 'before', type: 'general', domain: 'before'}
+        }
+      ]
+    },
+    {
+      title: '测试',
+      sections: [
+        {
+          title: '书单',
+          info: {slug: 'test', type: 'general', domain: 'test'}
+        }
+      ]
+    },
+    {
+      title: '编码',
+      sections: [
+        {
+          title: '书单',
+          info: {slug: 'coding', type: 'general', domain: 'domain'}
         }
       ]
     }
   ],
   todoView: [
     {
-      title: '前端',
-      info: {domain: 'frontend'}
+      title: '编码之前',
+      info: {domain: 'before'}
+    },
+    {
+      title: '测试',
+      info: {domain: 'test'}
+    },
+    {
+      title: '编码',
+      info: {domain: 'coding'}
     }
   ]
 };
