@@ -9,7 +9,7 @@
 
 .intro {
   height: 70px;
-  background: #03a9f4;
+  background: $growth-blue;
   margin-top: -16px;
   color: #fff;
 
@@ -24,12 +24,19 @@
     padding: 0 1em;
     text-align: center;
   }
-  button.day-info {
-    border: none;
-    position: absolute;
-    top: 0;
-    right: 0;
 
-    box-shadow: none;
-  }
+}
+
+ion-label span.title {
+  font-size: 1.3em;
+}
+
+
+button.day-info {
+  border: none;
+  position: relative;
+  float: right;
+  background: none;
+  color: $growth-blue;
+  box-shadow: none;
 }
