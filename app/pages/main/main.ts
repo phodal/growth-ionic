@@ -24,6 +24,11 @@ export class MainView {
       url: 'https://github.com/phodal/ideabook'
     }
   ];
+  private  slideOptions = {
+    initialSlide: 0,
+    autoplay: 1000,
+    loop: true
+  };
 
   constructor(public nav:NavController) {
 
