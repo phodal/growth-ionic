@@ -27,7 +27,7 @@ export class MyApp {
     if(navigator && navigator.splashscreen) {
       setTimeout(()=> {
         navigator.splashscreen.hide();
-      }, 100);
+      }, 1000);
     }
   }
 }
