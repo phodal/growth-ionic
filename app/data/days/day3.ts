@@ -3,30 +3,70 @@ export const DAYS3 = {
   title: '上线',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'container', type: 'desc'}
+    },
+    {
+      info: {slug: 'server', type: 'desc'}
+    },
+    {
+      info: {slug: 'configurable', type: 'desc'}
     }
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: '容器',
+      articles: HELPER_ARTICLES['zh-cn'].container
+    },
+    {
+      title: 'Server',
+      articles: HELPER_ARTICLES['zh-cn'].server
+    },
+    {
+      title: '可配置',
+      articles: HELPER_ARTICLES['zh-cn'].configurable
     }
   ],
   growthView: [
     {
-      title: '前端',
+      title: '容器',
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '工具',
+          info: {type: 'book', domain: 'container'}
+        }
+      ]
+    },
+    {
+      title: 'Server',
+      sections: [
+        {
+          title: '书单',
+          info: {type: 'book', domain: 'server'}
+        }
+      ]
+    },
+    {
+      title: '可配置',
+      sections: [
+        {
+          title: '书单',
+          info: {type: 'book', domain: 'configurable'}
         }
       ]
     }
   ],
   todoView: [
     {
-      title: '前端',
-      info: {domain: 'frontend'}
+      title: '容器',
+      info: {domain: 'container'}
+    },
+    {
+      title: 'Server',
+      info: {domain: 'server'}
+    },
+    {
+      title: '可配置',
+      info: {domain: 'configurable'}
     }
   ]
 };
