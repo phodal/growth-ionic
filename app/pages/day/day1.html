@@ -35,7 +35,7 @@
       <div class="intro">
         <h4>文章</h4>
         <p>这里有你所需要了解的一些基本信息。</p>
-        <button class="day-info" (click)="presentHtmlModal({slug: 'front', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal(dayView.intros[0].info)">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>
@@ -53,7 +53,7 @@
       <div class="intro">
         <h4>Growth</h4>
         <p>这里有你所需要掌握的一些技能。</p>
-        <button class="day-info" (click)="presentHtmlModal({slug: 'build', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal(dayView.intros[1].info)">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>
@@ -70,7 +70,7 @@
       <div class="intro">
         <h4>TODO</h4>
         <p>这里有你所需要尝试的一些内容。</p>
-        <button class="day-info" (click)="presentHtmlModal({slug: 'backend', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal(dayView.intros[2].info)">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>

@@ -12,6 +12,17 @@ export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
   private dayView = {
+    intros: [
+      {
+        info: {slug: 'front', type: 'desc'}
+      },
+      {
+        info: {slug: 'build', type: 'desc'}
+      },
+      {
+        info: {slug: 'backend', type: 'desc'}
+      }
+    ],
     articlesView: [
       {
         title: '构建系统',
