@@ -4,10 +4,10 @@ export const DAYS1 = {
   title: '从零开始',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'build', type: 'desc'}
     },
     {
-      info: {slug: 'build', type: 'desc'}
+      info: {slug: 'front', type: 'desc'}
     },
     {
       info: {slug: 'backend', type: 'desc'}
