@@ -43,9 +43,6 @@ export class Day {
     if (params.type === 'desc') {
       slug = 'assets/desc/html/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: '简介'};
-    } else if (params.domain) {
-      slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
-      modalParams = {slug: slug, pageTitle: 'Growth'};
     } else {
       slug = 'assets/article/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: '文章'};
