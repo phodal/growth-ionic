@@ -1,4 +1,4 @@
-import {NavController} from "ionic-angular";
+import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {Day} from "../day/day";
 
@@ -26,12 +26,12 @@ export class MainView {
   ];
   private  slideOptions = {
     initialSlide: 0,
-    autoplay: 1000,
+    autoplay: 5000,
     loop: true
   };
 
-  constructor(public nav:NavController) {
-
+  constructor(public nav:NavController, private platform:Platform) {
+    this.platform = platform;
   }
 
   setPages() {
@@ -42,5 +42,11 @@ export class MainView {
 
   openNavDetailsPage(day) {
     this.nav.push(Day, {day: day});
+  }
+
+  launch(url) {
+    this.platform.ready().then(() => {
+      window.open(url, "_system", "location=true");
+    });
   }
 }

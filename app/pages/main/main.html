@@ -12,7 +12,7 @@
 <ion-content class="main">
   <div class="home-slide">
     <ion-slides pager [options]="slideOptions">
-      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}">
+      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}" (click)="launch(slide.url)">
         <h2>{{slide.title}}</h2>
         <p>{{slide.intro}}</p>
       </ion-slide>
