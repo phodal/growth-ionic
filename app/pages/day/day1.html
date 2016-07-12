@@ -30,41 +30,32 @@
 
 <ion-content class="day">
   <div [ngSwitch]="basicView" class="day-view-switch">
-    <div *ngSwitchCase="'articleView'">
+    <ion-list *ngSwitchCase="'articleView'">
+
       <div class="intro">
         <h4>文章</h4>
         <p>这里有你所需要了解的一些基本信息。</p>
-        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'front', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal({slug: 'front', type: 'desc'})">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>
+
       <ion-item-group>
-        <ion-item-divider light>构建系统</ion-item-divider>
-        <ion-item *ngFor="let article of articles.build" (click)="presentHtmlModal({slug: article.slug})">
-          {{article.title}}
-          <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
+        <div *ngFor="let articleSection of dayView.articlesView">
+          <ion-item-divider light>{{articleSection.title}}</ion-item-divider>
+          <ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
+            {{article.title}}
+            <ion-icon name="arrow-right" item-right></ion-icon>
+          </ion-item>
+        </div>
       </ion-item-group>
-      <ion-item-group>
-        <ion-item-divider light>前端</ion-item-divider>
-        <ion-item *ngFor="let article of articles.front" (click)="presentHtmlModal({slug: article.slug})">
-          {{article.title}}
-          <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
-      </ion-item-group>
-      <ion-item-group>
-        <ion-item-divider light>后台</ion-item-divider>
-        <ion-item *ngFor="let article of articles.backend" (click)="presentHtmlModal({slug: article.slug})">
-          {{article.title}}
-          <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
-      </ion-item-group>
-    </div>
+    </ion-list>
+
     <ion-list *ngSwitchCase="'growthView'">
       <div class="intro">
         <h4>Growth</h4>
         <p>这里有你所需要掌握的一些技能。</p>
-        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'build', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal({slug: 'build', type: 'desc'})">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>
@@ -87,11 +78,12 @@
         </ion-item>
       </ion-item-group>
     </ion-list>
+
     <ion-list *ngSwitchCase="'todoView'">
       <div class="intro">
         <h4>TODO</h4>
         <p>这里有你所需要尝试的一些内容。</p>
-        <button class="day-info" dark outline (click)="presentHtmlModal({slug: 'backend', type: 'desc'})">
+        <button class="day-info" (click)="presentHtmlModal({slug: 'backend', type: 'desc'})">
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>

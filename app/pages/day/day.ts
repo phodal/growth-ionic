@@ -11,6 +11,22 @@ import {HtmlModal} from "../../components/HtmlModal";
 export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
+  private dayView = {
+    articlesView: [
+      {
+        title: '构建系统',
+        articles:  this.articles.build
+      },
+      {
+        title: '前端',
+        articles:  this.articles.front
+      },
+      {
+        title: '后台',
+        articles:  this.articles.backend
+      },
+    ]
+  };
 
   constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
     this.nav = nav;
