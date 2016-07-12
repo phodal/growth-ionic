@@ -15,15 +15,15 @@ export class Day {
     articlesView: [
       {
         title: '构建系统',
-        articles:  this.articles.build
+        articles: this.articles.build
       },
       {
         title: '前端',
-        articles:  this.articles.front
+        articles: this.articles.front
       },
       {
         title: '后台',
-        articles:  this.articles.backend
+        articles: this.articles.backend
       },
     ],
     growthView: [
@@ -48,6 +48,16 @@ export class Day {
             info: {slug: 'services', type: 'general', domain: 'backend'}
           }
         ]
+      }
+    ],
+    todoView: [
+      {
+        title: '前端',
+        info: {domain: 'frontend'}
+      },
+      {
+        title: '后台',
+        info: {domain: 'backend'}
       }
     ]
   };
@@ -80,7 +90,7 @@ export class Day {
       modalParams = {slug: slug, pageTitle: '简介'};
     } else if (params.domain) {
       slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
-      modalParams = {slug: slug};
+      modalParams = {slug: slug, pageTitle: 'Growth'};
     } else {
       slug = 'assets/article/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: '文章'};
