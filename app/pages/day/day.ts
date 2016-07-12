@@ -7,17 +7,20 @@ import {HtmlModal} from "../../components/HtmlModal";
 import {DAYS} from "../../data/DAYS";
 
 @Component({
-  templateUrl: 'build/pages/day/day1.html'
+  templateUrl: 'build/pages/day/day.html'
 })
 export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
-  private dayView = DAYS.day1;
+  private dayView = [];
 
   constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
     this.params = params;
+
+    var day = params.get('day');
+    this.dayView= DAYS["day" + day];
   }
 
   ionViewLoaded() {
