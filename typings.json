@@ -3,5 +3,9 @@
   "devDependencies": {},
   "ambientDependencies": {
     "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c"
+  },
+  "globalDependencies": {
+    "cordova": "registry:dt/cordova#0.0.0+20160607055823",
+    "cordova/plugins/inappbrowser": "registry:dt/cordova/plugins/inappbrowser#0.0.0+20160316155526"
   }
 }

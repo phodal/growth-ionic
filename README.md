@@ -12,6 +12,31 @@ install deps:
 
     npm install -g cordova ionic@beta
 
+
+Plugins: 
+
+    cordova plugin add cordova-plugin-inappbrowser
+
+
+
+Issue of Setup
+---
+
+
+
+Cannot find name ‘cordova’:
+
+```
+npm install -g typings
+typings install dt~cordova --save --global
+```
+
+Shell
+
+```shell
+typings install dt~cordova/plugins/inappbrowser --save --global
+```
+
 ### Convert md to HTML
 
 ```shell
