@@ -25,6 +25,30 @@ export class Day {
         title: '后台',
         articles:  this.articles.backend
       },
+    ],
+    growthView: [
+      {
+        title: '前端',
+        sections: [
+          {
+            title: 'Debug',
+            info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          }
+        ]
+      },
+      {
+        title: '后台',
+        sections: [
+          {
+            title: '服务框架',
+            info: {slug: 'framework', type: 'general', domain: 'backend'}
+          },
+          {
+            title: '应用框架',
+            info: {slug: 'services', type: 'general', domain: 'backend'}
+          }
+        ]
+      }
     ]
   };
 

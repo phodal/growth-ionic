@@ -40,14 +40,12 @@
         </button>
       </div>
 
-      <ion-item-group>
-        <div *ngFor="let articleSection of dayView.articlesView">
-          <ion-item-divider light>{{articleSection.title}}</ion-item-divider>
-          <ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
-            {{article.title}}
-            <ion-icon name="arrow-right" item-right></ion-icon>
-          </ion-item>
-        </div>
+      <ion-item-group *ngFor="let articleSection of dayView.articlesView">
+        <ion-item-divider light>{{articleSection.title}}</ion-item-divider>
+        <ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
+          {{article.title}}
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </ion-item>
       </ion-item-group>
     </ion-list>
 
@@ -59,21 +57,10 @@
           <ion-icon name="information-circle"></ion-icon>
         </button>
       </div>
-      <ion-item-group>
-        <ion-item-divider light>前端</ion-item-divider>
-        <ion-item (click)="presentHtmlModal({slug: 'debug', type: 'general', domain: 'frontend'})">
-          Debug
-          <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
-      </ion-item-group>
-      <ion-item-group>
-        <ion-item-divider light>后台</ion-item-divider>
-        <ion-item (click)="presentHtmlModal({slug: 'framework', type: 'general', domain: 'backend'})">
-          服务框架
-          <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
-        <ion-item (click)="presentHtmlModal({slug: 'services', type: 'general', domain: 'backend'})">
-          应用框架
+      <ion-item-group *ngFor="let growthSection of dayView.growthView">
+        <ion-item-divider light>{{growthSection.title}}</ion-item-divider>
+        <ion-item *ngFor="let growth of growthSection.sections" (click)="presentHtmlModal(growth.info)">
+          {{growth.title}}
           <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>
       </ion-item-group>
