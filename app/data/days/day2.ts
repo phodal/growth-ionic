@@ -8,8 +8,16 @@ export const DAYS2 = {
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: '编码之前',
+      articles: HELPER_ARTICLES['zh-cn'].before
+    },
+    {
+      title: '测试',
+      articles: HELPER_ARTICLES['zh-cn'].test
+    },
+    {
+      title: '编码',
+      articles: HELPER_ARTICLES['zh-cn'].coding
     }
   ],
   growthView: [
