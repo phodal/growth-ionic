@@ -59,7 +59,7 @@
       </div>
       <ion-item-group *ngFor="let growthSection of dayView.growthView">
         <ion-item-divider light>{{growthSection.title}}</ion-item-divider>
-        <ion-item *ngFor="let growth of growthSection.sections" (click)="presentHtmlModal(growth.info)">
+        <ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
           <span class="title">{{growth.title}}</span>
           <ion-icon name="arrow-right" item-right></ion-icon>
         </ion-item>

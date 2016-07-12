@@ -20,7 +20,7 @@ export class Day {
     this.params = params;
 
     var day = params.get('day');
-    this.dayView= DAYS["day" + day];
+    this.dayView = DAYS["day" + day];
   }
 
   ionViewLoaded() {
@@ -53,5 +53,19 @@ export class Day {
 
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
     htmlModal.present();
+  }
+
+  presentGrowthModal(params) {
+    var htmlModal, slug, modalParams;
+
+    if(params.type === 'book') {
+
+    } else if (params.domain) {
+      slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
+      modalParams = {slug: slug, pageTitle: 'Growth'};
+
+      htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+      htmlModal.present();
+    }
   }
 }
