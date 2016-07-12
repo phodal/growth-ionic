@@ -5,6 +5,7 @@ import {TODO_LISTS} from "../../data/TODO_LISTS";
 import {TodoModal} from "../../components/TodoModal";
 import {HtmlModal} from "../../components/HtmlModal";
 import {DAYS} from "../../data/DAYS";
+import {BookListModal} from "../../components/BookListModal/index";
 
 @Component({
   templateUrl: 'build/pages/day/day.html'
@@ -56,7 +57,8 @@ export class Day {
     var htmlModal, slug, modalParams;
 
     if(params.type === 'book') {
-
+      htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
+      htmlModal.present();
     } else if (params.domain) {
       slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: 'Growth'};

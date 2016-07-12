@@ -26,7 +26,7 @@ export const DAYS2 = {
       sections: [
         {
           title: '书单',
-          info: {slug: 'before', type: 'book', domain: 'before'}
+          info: {type: 'book', domain: 'before'}
         }
       ]
     },
@@ -35,7 +35,7 @@ export const DAYS2 = {
       sections: [
         {
           title: '书单',
-          info: {slug: 'test', type: 'book', domain: 'test'}
+          info: {type: 'book', domain: 'test'}
         }
       ]
     },
@@ -44,7 +44,7 @@ export const DAYS2 = {
       sections: [
         {
           title: '书单',
-          info: {slug: 'coding', type: 'book', domain: 'domain'}
+          info: {type: 'book', domain: 'coding'}
         }
       ]
     }
