@@ -4,6 +4,7 @@ import {HELPER_ARTICLES} from "../../data/HELPER_ARTICLES";
 import {TODO_LISTS} from "../../data/TODO_LISTS";
 import {TodoModal} from "../../components/TodoModal";
 import {HtmlModal} from "../../components/HtmlModal";
+import {DAYS} from "../../data/DAYS";
 
 @Component({
   templateUrl: 'build/pages/day/day1.html'
@@ -11,67 +12,7 @@ import {HtmlModal} from "../../components/HtmlModal";
 export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
-  private dayView = {
-    intros: [
-      {
-        info: {slug: 'front', type: 'desc'}
-      },
-      {
-        info: {slug: 'build', type: 'desc'}
-      },
-      {
-        info: {slug: 'backend', type: 'desc'}
-      }
-    ],
-    articlesView: [
-      {
-        title: '构建系统',
-        articles: this.articles.build
-      },
-      {
-        title: '前端',
-        articles: this.articles.front
-      },
-      {
-        title: '后台',
-        articles: this.articles.backend
-      },
-    ],
-    growthView: [
-      {
-        title: '前端',
-        sections: [
-          {
-            title: 'Debug',
-            info: {slug: 'debug', type: 'general', domain: 'frontend'}
-          }
-        ]
-      },
-      {
-        title: '后台',
-        sections: [
-          {
-            title: '服务框架',
-            info: {slug: 'framework', type: 'general', domain: 'backend'}
-          },
-          {
-            title: '应用框架',
-            info: {slug: 'services', type: 'general', domain: 'backend'}
-          }
-        ]
-      }
-    ],
-    todoView: [
-      {
-        title: '前端',
-        info: {domain: 'frontend'}
-      },
-      {
-        title: '后台',
-        info: {domain: 'backend'}
-      }
-    ]
-  };
+  private dayView = DAYS.day1;
 
   constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
     this.nav = nav;
