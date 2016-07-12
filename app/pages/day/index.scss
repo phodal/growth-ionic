@@ -27,16 +27,26 @@
 
 }
 
-ion-label span.title {
-  font-size: 1.3em;
-}
+ion-item-divider {
+  height: 47px;
+
+  .item-button {
+    height: 21px;
+  }
+
+  ion-label span.title {
+
+  }
 
 
-button.day-info {
-  border: none;
-  position: relative;
-  float: right;
-  background: none;
-  color: $growth-blue;
-  box-shadow: none;
+  button.day-info {
+    margin: 0;
+    border: none;
+    position: relative;
+    float: right;
+    background: none;
+    color: $growth-blue;
+    box-shadow: none;
+  }
+
 }
