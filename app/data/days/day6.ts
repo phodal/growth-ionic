@@ -8,25 +8,39 @@ export const DAYS6 = {
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: '遗留系统',
+      articles: HELPER_ARTICLES['zh-cn'].legacy
+    },
+    {
+      title: '重构',
+      articles: HELPER_ARTICLES['zh-cn'].refactor
     }
   ],
   growthView: [
     {
-      title: '前端',
+      title: 遗留系统,
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '书单',
+          info: {type: 'book', domain: 'legacy'}
+        }
+      ]
+    },
+    {
+      title: 重构,
+      sections: [
+        {
+          title: '书单',
+          info: {type: 'book', domain: 'refactor'}
+        },
+        {
+          title: 'Growth',
+          info: {type: 'growth', domain: 'refactor'}
         }
       ]
     }
-  ],
+  ]
   todoView: [
-    {
-      title: '前端',
-      info: {domain: 'frontend'}
-    }
+
   ]
 };
