@@ -21,7 +21,7 @@ export const DAYS6 = {
   ],
   growthView: [
     {
-      title: 遗留系统,
+      title: '遗留系统',
       sections: [
         {
           title: '书单',
@@ -30,7 +30,7 @@ export const DAYS6 = {
       ]
     },
     {
-      title: 重构,
+      title: '重构',
       sections: [
         {
           title: '书单',
@@ -42,7 +42,7 @@ export const DAYS6 = {
         }
       ]
     }
-  ]
+  ],
   todoView: [
 
   ]
