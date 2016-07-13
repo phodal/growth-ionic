@@ -74,7 +74,7 @@
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
 
-  <preference name="ShowSplashScreen" value="true"/>
+  <preference name="ShowSplashScreen" value="false"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="30000"/>
   <preference name="AutoHideSplashScreen" value="false"/>
