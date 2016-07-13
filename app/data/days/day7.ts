@@ -3,30 +3,50 @@ export const DAYS7 = {
   title: '回顾与新架构',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'retro', type: 'desc'}
+    },
+    {
+      info: {slug: 'arch', type: 'desc'}
     }
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: '回顾与总结',
+      articles: HELPER_ARTICLES['zh-cn'].retro
+    },
+    {
+      title: '架构设计',
+      articles: HELPER_ARTICLES['zh-cn'].arch
     }
   ],
   growthView: [
     {
-      title: '前端',
+      title: '回顾与总结',
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '工具',
+          info: {type: 'tool', domain: 'retro'}
+        }
+      ]
+    },
+    {
+      title: '架构设计',
+      sections: [
+        {
+          title: '书单',
+          info: {type: 'book', domain: 'arch'}
         }
       ]
     }
   ],
   todoView: [
     {
-      title: '前端',
-      info: {domain: 'frontend'}
+      title: '回顾与总结',
+      info: {domain: 'retro'}
+    },
+    {
+      title: '新架构',
+      info: {domain: 'arch'}
     }
   ]
 };
