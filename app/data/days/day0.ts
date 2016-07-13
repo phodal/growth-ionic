@@ -1,32 +1,52 @@
 import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const DAYS0 = {
-  title: '回顾与新架构',
+  title: '前期准备',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'hello', type: 'desc'}
+    },
+    {
+      info: {slug: 'env', type: 'desc'}
     }
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: 'hello, world',
+      articles: HELPER_ARTICLES['zh-cn'].hello
+    },
+    {
+      title: '开发环境',
+      articles: HELPER_ARTICLES['zh-cn'].env
     }
   ],
   growthView: [
     {
-      title: '前端',
+      title: 'hello, world',
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '书单',
+          info: {type: 'book', domain: 'hello'}
+        }
+      ]
+    },
+    {
+      title: '开发环境',
+      sections: [
+        {
+          title: '工具',
+          info: {type: 'tool', domain: 'pm'}
         }
       ]
     }
   ],
   todoView: [
     {
-      title: '前端',
-      info: {domain: 'frontend'}
+      title: 'hello, world',
+      info: {domain: 'hello'}
+    },
+    {
+      title: '开发环境',
+      info: {domain: 'env'}
     }
   ]
 };
