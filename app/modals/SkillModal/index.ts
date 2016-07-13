@@ -8,7 +8,7 @@ import {RatingComponent} from "../../components/ratings/index";
 })
 export class SkillModal {
   private skills;
-  public rate:number = 7;
+  public max:number = 5;
 
   constructor(public platform:Platform,
               public params:NavParams,
