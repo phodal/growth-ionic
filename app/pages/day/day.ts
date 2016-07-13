@@ -6,6 +6,8 @@ import {TodoModal} from "../../components/TodoModal";
 import {HtmlModal} from "../../components/HtmlModal";
 import {DAYS} from "../../data/DAYS";
 import {BookListModal} from "../../components/BookListModal/index";
+import {SkillModal} from "../../components/SkillModal/index";
+import {ALL_SKILLS} from "../../data/ALL_SKILLS";
 
 @Component({
   templateUrl: 'build/pages/day/day.html'
@@ -58,7 +60,9 @@ export class Day {
   }
 
   presentSkillModal(domain) {
-    console.log(domain);
+    var skills = ALL_SKILLS[domain];
+    var skillModal = this.modalCtrl.create(SkillModal, {skills: skills});
+    skillModal.present();
   }
 
   presentGrowthModal(params) {
