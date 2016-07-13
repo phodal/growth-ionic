@@ -22,3 +22,11 @@ ion-tabbar {
 h1[primary], h2[primary], h3[primary], h4[primary], h5[primary], h6[primary], p[primary], span[primary], a:not([button])[primary], small[primary], b[primary], i[primary], strong[primary], em[primary], sub[primary], sup[primary], ion-icon[primary] {
   color: #fff;
 }
+
+
+.button.activated {
+  background: none;
+}
+.segment-button.segment-activated {
+  background-color: $growth-blue;
+}
