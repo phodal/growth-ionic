@@ -9,6 +9,7 @@ export const DAYS4 = {
       info: {slug: 'ux', type: 'desc'}
     }
   ],
+  skills: ['analytics', 'ux'],
   articlesView: [
     {
       title: '数据分析',

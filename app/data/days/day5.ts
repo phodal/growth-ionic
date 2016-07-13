@@ -9,6 +9,7 @@ export const DAYS5 = {
       info: {slug: 'cd', type: 'desc'}
     }
   ],
+  skills: ['ci', 'cd'],
   articlesView: [
     {
       title: '持续集成',

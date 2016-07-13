@@ -12,6 +12,7 @@ export const DAYS3 = {
       info: {slug: 'configurable', type: 'desc'}
     }
   ],
+  skills: ['container', 'server', 'configurable'],
   articlesView: [
     {
       title: '容器',

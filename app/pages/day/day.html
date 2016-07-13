@@ -41,7 +41,7 @@
         <ion-item-divider light>
           <span class="title">{{articleSection.title}}</span>
 
-          <button class="day-info" *ngIf="dayView.intros[i].skill" (click)="presentSkillModal(dayView.intros[i].skill)">
+          <button class="day-info" *ngIf="dayView.skills[i]" (click)="presentSkillModal(dayView.skills[i])">
             <ion-icon name="checkmark-circle-outline"></ion-icon>
           </button>
           <button class="day-info" (click)="presentHtmlModal(dayView.intros[i].info)">

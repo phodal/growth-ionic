@@ -13,6 +13,7 @@ export const DAYS1 = {
       info: {slug: 'backend', type: 'desc'}
     }
   ],
+  skills: ['build', 'front', 'backend'],
   articlesView: [
     {
       title: '构建系统',

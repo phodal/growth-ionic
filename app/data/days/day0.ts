@@ -9,6 +9,7 @@ export const DAYS0 = {
       info: {slug: 'env', type: 'desc'}
     }
   ],
+  skills: ['hello', 'env'],
   articlesView: [
     {
       title: 'hello, world',

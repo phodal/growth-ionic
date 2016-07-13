@@ -3,9 +3,16 @@ export const DAYS2 = {
   title: '编码',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'before', type: 'desc'}
+    },
+    {
+      info: {slug: 'test', type: 'desc'}
+    },
+    {
+      info: {slug: 'coding', type: 'desc'}
     }
   ],
+  skills: ['before', 'test', 'coding'],
   articlesView: [
     {
       title: '编码之前',
