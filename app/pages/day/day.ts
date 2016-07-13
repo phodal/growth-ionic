@@ -14,14 +14,15 @@ export class Day {
   basicView:string = "articleView";
   articles = HELPER_ARTICLES['zh-cn'];
   private dayView = [];
+  private day;
 
   constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
     this.params = params;
 
-    var day = params.get('day');
-    this.dayView = DAYS["day" + day];
+    this.day = params.get('day');
+    this.dayView = DAYS["day" + this.day];
   }
 
   ionViewLoaded() {
@@ -44,6 +45,9 @@ export class Day {
     if (params.type === 'desc') {
       slug = 'assets/desc/html/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: '简介'};
+    } else if (params.type === 'intro') {
+      slug = 'assets/days/intro-day' + this.day + '.html';
+      modalParams = {slug: slug, pageTitle: '简介'};
     } else {
       slug = 'assets/article/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: '文章'};
@@ -56,7 +60,7 @@ export class Day {
   presentGrowthModal(params) {
     var htmlModal, slug, modalParams;
 
-    if(params.type === 'book') {
+    if (params.type === 'book') {
       htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
       htmlModal.present();
     } else if (params.type === 'tool') {
