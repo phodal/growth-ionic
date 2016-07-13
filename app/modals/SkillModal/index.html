@@ -17,6 +17,8 @@
     <ion-item-sliding *ngFor="let skill of skills">
       <ion-item>
         {{skill.text}}
+
+        <rating [(ngModel)]="rate" [max]="max"></rating>
       </ion-item>
     </ion-item-sliding>
   </ion-list>

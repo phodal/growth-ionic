@@ -1,11 +1,14 @@
 import {NavParams, ViewController, Platform} from "ionic-angular/index";
 import {Component} from "@angular/core";
+import {RatingComponent} from "../../components/ratings/index";
 
 @Component({
-  templateUrl: 'build/modals/SkillModal/index.html'
+  templateUrl: 'build/modals/SkillModal/index.html',
+  directives: [RatingComponent]
 })
 export class SkillModal {
   private skills;
+  public rate:number = 7;
 
   constructor(public platform:Platform,
               public params:NavParams,
