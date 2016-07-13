@@ -10,7 +10,7 @@ export class MainView {
   private slides = [
     {
       title: '《Growth：全栈增长工程师指南》',
-      intro: '这是一本指导性的书籍——不要指望从这本书中学到所有的知识点，但是它可以帮你构建你的知识体系。',
+      intro: '这本书中不会教你所有的知识点，它用于帮你构建你的知识体系。',
       url: 'https://github.com/phodal/growth-ebook'
     },
     {
@@ -19,7 +19,7 @@ export class MainView {
       url: 'https://github.com/phodal/growth-in-action'
     },
     {
-      title: '《Ideabook：一个全栈增长工程师的练手项目集》',
+      title: '《Ideabook：练手项目集》',
       intro: '这个电子书的目标就是为这些Idea提供实战指南，一步步搭建你的未来。',
       url: 'https://github.com/phodal/ideabook'
     }
