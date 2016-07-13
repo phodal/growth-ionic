@@ -4,6 +4,9 @@ export const DAYS5 = {
   intros: [
     {
       info: {slug: 'ci', type: 'desc'}
+    },
+    {
+      info: {slug: 'cd', type: 'desc'}
     }
   ],
   articlesView: [

@@ -3,7 +3,10 @@ export const DAYS6 = {
   title: '遗留系统',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'legacy', type: 'desc'}
+    },
+    {
+      info: {slug: 'refactor', type: 'desc'}
     }
   ],
   articlesView: [
