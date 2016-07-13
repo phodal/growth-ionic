@@ -9,6 +9,7 @@ export class HtmlModal {
   @ViewChild(Content) content: Content;
 
   private html;
+  private isArticle;
   private pageTitle;
 
   constructor(public platform:Platform,
@@ -17,6 +18,7 @@ export class HtmlModal {
               http:Http) {
 
     this.pageTitle = params.get('pageTitle');
+    this.isArticle = this.pageTitle === '文章';
     http.get(params.get('slug')).subscribe(res => this.html = res.text());
   }
 

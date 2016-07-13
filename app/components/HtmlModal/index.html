@@ -14,5 +14,5 @@
 
 <ion-content class="has-header" padding>
   <div class="markdown" [innerHTML]="html"></div>
-  <button outline class="scroll-top" (click)="scrollToTop()"><ion-icon name="arrow-round-up"></ion-icon></button>
+  <button ngShow="isArticle" outline class="scroll-top" (click)="scrollToTop()"><ion-icon name="arrow-round-up"></ion-icon></button>
 </ion-content>
