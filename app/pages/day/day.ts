@@ -57,6 +57,10 @@ export class Day {
     htmlModal.present();
   }
 
+  presentSkillModal(domain) {
+    console.log(domain);
+  }
+
   presentGrowthModal(params) {
     var htmlModal, slug, modalParams;
 
