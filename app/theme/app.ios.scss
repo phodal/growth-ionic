@@ -30,3 +30,7 @@
 // App iOS Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the iOS app
+
+.segment-button.segment-activated {
+  background-color: $growth-blue;
+}
