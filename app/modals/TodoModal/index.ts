@@ -2,7 +2,7 @@ import {NavParams, ViewController, Platform} from "ionic-angular/index";
 import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: 'build/components/TodoModal/index.html'
+  templateUrl: 'build/modals/TodoModal/index.html'
 })
 export class TodoModal {
   private todoLists;

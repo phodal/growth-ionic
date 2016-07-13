@@ -3,7 +3,7 @@ import {Component, ViewChild} from "@angular/core";
 import {Http} from "@angular/http";
 
 @Component({
-  templateUrl: 'build/components/HtmlModal/index.html'
+  templateUrl: 'build/modals/HtmlModal/index.html'
 })
 export class HtmlModal {
   @ViewChild(Content) content: Content;
