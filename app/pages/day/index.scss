@@ -39,13 +39,14 @@ ion-item-divider {
   }
 
 
+  button.skill-button,
   button.day-info {
     margin: 0;
     border: none;
     position: relative;
     float: right;
     background: none;
-    color: $growth-blue;
+    color: $growth-color;
     box-shadow: none;
   }
 
