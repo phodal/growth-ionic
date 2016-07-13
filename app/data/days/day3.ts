@@ -32,7 +32,7 @@ export const DAYS3 = {
       sections: [
         {
           title: '工具',
-          info: {type: 'book', domain: 'container'}
+          info: {type: 'tool', domain: 'container'}
         }
       ]
     },

@@ -59,6 +59,11 @@ export class Day {
     if(params.type === 'book') {
       htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
       htmlModal.present();
+    } else if (params.type === 'tool') {
+      slug = 'assets/tool/' + params.domain + '.html';
+      modalParams = {slug: slug, pageTitle: '工具'};
+      htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+      htmlModal.present();
     } else if (params.domain) {
       slug = 'assets/growth/' + params.domain + '/' + params.slug + '.html';
       modalParams = {slug: slug, pageTitle: 'Growth'};

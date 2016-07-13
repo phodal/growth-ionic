@@ -29,7 +29,7 @@ export const DAYS4 = {
         },
         {
           title: '工具',
-          info: {type: 'book', domain: 'analytics'}
+          info: {type: 'tool', domain: 'analytics'}
         }
       ]
     },

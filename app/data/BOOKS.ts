@@ -192,7 +192,7 @@ export const BOOKS = [
     "category": "legacy"
   },
   {
-    "slug": "refactor-to-pattern",
+    "slug": "refactorn-to-pattern",
     "title": "《重构与模式》",
     "store": "http://www.amazon.cn/%E9%87%8D%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F-Joshua-Kerievsky/dp/B00A9YD7A2/ref=sr_1_3?s=books&ie=UTF8&qid=1452996045&sr=1-3&keywords=%E3%80%8A%E9%87%8D%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F%E3%80%8B",
     "category": "refactory"

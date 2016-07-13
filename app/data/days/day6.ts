@@ -34,11 +34,11 @@ export const DAYS6 = {
       sections: [
         {
           title: '书单',
-          info: {type: 'book', domain: 'refactor'}
+          info: {type: 'book', domain: 'refactory'}
         },
         {
           title: 'Growth',
-          info: {type: 'growth', domain: 'refactor'}
+          info: {type: 'growth', domain: 'refactory'}
         }
       ]
     }
