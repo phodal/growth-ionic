@@ -3,30 +3,47 @@ export const DAYS5 = {
   title: '持续交付',
   intros: [
     {
-      info: {slug: 'front', type: 'desc'}
+      info: {slug: 'ci', type: 'desc'}
     }
   ],
   articlesView: [
     {
-      title: '构建系统',
-      articles: HELPER_ARTICLES['zh-cn'].build
+      title: '持续集成',
+      articles: HELPER_ARTICLES['zh-cn'].ci
+    },
+    {
+      title: '持续交付',
+      articles: HELPER_ARTICLES['zh-cn'].cd
     }
   ],
   growthView: [
     {
-      title: '前端',
+      title: '持续集成',
       sections: [
         {
-          title: 'Debug',
-          info: {slug: 'debug', type: 'general', domain: 'frontend'}
+          title: '工具',
+          info: {type: 'tool', domain: 'ci'}
+        }
+      ]
+    },
+    {
+      title: '持续交付',
+      sections: [
+        {
+          title: '书单',
+          info: {type: 'book', domain: 'cd'}
         }
       ]
     }
   ],
   todoView: [
     {
-      title: '前端',
-      info: {domain: 'frontend'}
+      title: '持续交付',
+      info: {domain: 'ci'}
+    },
+    {
+      title: '持续集成',
+      info: {domain: 'cd'}
     }
   ]
 };
