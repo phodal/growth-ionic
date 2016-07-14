@@ -5,18 +5,43 @@ Ionic2 + Angular 2 + Growth + TypeScript
 
 Ionic 1 Version: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
+Ionic 2 Tutorials: [http://ionicframework.com/docs/v2/getting-started/installation/](http://ionicframework.com/docs/v2/getting-started/installation/)
+
+Skills
+---
+
+App:
+
+ - JavaScript
+ - TypeScript
+ - Ionic 2
+ - Angluar 2
+ - SCSS / CSS
+ - ReactiveJS
+ - Cordova
+
+Server:
+
+Service 1:
+
+ - Flarum (API：[http://flarum.org/docs/api/](http://flarum.org/docs/api/))
+ - PHP
+
+Service 2(TBC):
+
+ - GitHub Page
+
 Setup for Android
------------------
+---
 
 install deps:
 
     npm install -g cordova ionic@beta
 
 
-Plugins: 
+Plugins:
 
     cordova plugin add cordova-plugin-inappbrowser
-
 
 
 Issue of Setup
