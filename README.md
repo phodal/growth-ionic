@@ -1,5 +1,7 @@
 Ionic2 + Angular 2 + Growth + TypeScript
-========================================
+===
+
+[![Build Status](https://travis-ci.org/phodal/growth2.svg?branch=master)](https://travis-ci.org/phodal/growth2) [![Code Climate](https://codeclimate.com/github/phodal/growth2/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth2) [![Test Coverage](https://codeclimate.com/github/phodal/growth2/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth2/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth2/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth2)
 
 > A new version with new UI
 
