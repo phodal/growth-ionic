@@ -1,0 +1,71 @@
+#
+# Configuration
+#
+
+sudo: required
+dist: trusty
+
+notifications:
+  email: true
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - lib32stdc++6
+      - lib32z1
+
+branches:
+  only:
+    - master
+
+#
+# Build Lifecycle:
+#
+
+before_install:
+  - nvm use 4.1.2
+  - npm install -g cordova ionic
+  - ionic state clear
+
+install: npm install
+
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+script:
+  - npm test                             # unit tests
+  - npm run build                        # ionic build
+  # Serve with python as ionic serve needs interaction
+  - cd www && python -m SimpleHTTPServer 8100 >> python_serve.log 2>&1 &
+  - npm run e2e                          # run e2e tests against ionic
+
+after_failure:
+  - cat /home/travis/build/lathonez/clicker/python_serve.log
+  - cat /home/travis/build/lathonez/clicker/ionic_serve.log
+
+after_success:
+  # Send coverage info off to cloud ppl
+  - cat coverage/lcov.info | ./node_modules/.bin/codecov
+
+before_deploy:
+  # start install android
+  - wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+  - tar -xzvf android-sdk_r24.2-linux.tgz
+  - echo "y" | ./android-sdk-linux/tools/android update sdk --no-ui --filter android-23,build-tools-23.0.1
+  - export ANDROID_HOME=${PWD}/android-sdk-linux
+  # end install android
+  - ionic state restore
+  - ionic platform add android
+  - ionic build android
+  # `ionic build android` wraps `cordova build android`, which gives a legit exit code if it fails. Ionic does not; test apk exists.
+  - ls ./platforms/android/build/outputs/apk/android*.apk
+
+deploy:
+  provider: script
+  script: .travis/deploy.sh
+  skip_cleanup: true
