@@ -8,7 +8,10 @@ engines:
   eslint:
     enabled: true
   fixme:
-    enabled: true
+    enabled: false
+    checks:
+      TODO:
+        enabled: false
 ratings:
   paths:
   - "app/**/*.js"
