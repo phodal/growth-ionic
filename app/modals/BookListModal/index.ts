@@ -3,7 +3,7 @@ import {Component} from "@angular/core";
 import {BOOKS} from "../../data/BOOKS";
 
 @Component({
-  templateUrl: 'build/modals/BookListModal/index.html'
+  templateUrl: "build/modals/BookListModal/index.html"
 })
 export class BookListModal {
   private books;
@@ -11,7 +11,7 @@ export class BookListModal {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-    var domain = params.get('domain');
+    var domain = params.get("domain");
     this.books = BOOKS.filter(function(el){
       return el.category === domain;
     });

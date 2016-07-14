@@ -10,11 +10,11 @@ import {SkillModal} from "../../modals/SkillModal/index";
 import {ALL_SKILLS} from "../../data/ALL_SKILLS";
 
 @Component({
-  templateUrl: 'build/pages/day/day.html'
+  templateUrl: "build/pages/day/day.html"
 })
 export class Day {
   basicView:string = "articleView";
-  articles = HELPER_ARTICLES['zh-cn'];
+  articles = HELPER_ARTICLES["zh-cn"];
   private dayView = [];
   private day;
 
@@ -23,7 +23,7 @@ export class Day {
     this.modalCtrl = modalCtrl;
     this.params = params;
 
-    this.day = params.get('day');
+    this.day = params.get("day");
     this.dayView = DAYS["day" + this.day];
   }
 
@@ -36,7 +36,7 @@ export class Day {
   }
 
   presentTodoModal(params) {
-    var todoLists = TODO_LISTS['zh-cn'][params.domain];
+    var todoLists = TODO_LISTS["zh-cn"][params.domain];
     var todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
     todoModal.present();
   }
@@ -44,15 +44,15 @@ export class Day {
   presentHtmlModal(params) {
     var htmlModal, slug, modalParams;
 
-    if (params.type === 'desc') {
-      slug = 'content/html/' + params.slug + '.html';
-      modalParams = {slug: slug, pageTitle: '简介'};
-    } else if (params.type === 'intro') {
-      slug = 'content/days/intro-day' + this.day + '.html';
-      modalParams = {slug: slug, pageTitle: '简介'};
+    if (params.type === "desc") {
+      slug = "content/html/" + params.slug + ".html";
+      modalParams = {slug: slug, pageTitle: "简介"};
+    } else if (params.type === "intro") {
+      slug = "content/days/intro-day" + this.day + ".html";
+      modalParams = {slug: slug, pageTitle: "简介"};
     } else {
-      slug = 'content/article/' + params.slug + '.html';
-      modalParams = {slug: slug, pageTitle: '文章'};
+      slug = "content/article/" + params.slug + ".html";
+      modalParams = {slug: slug, pageTitle: "文章"};
     }
 
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
@@ -68,17 +68,17 @@ export class Day {
   presentGrowthModal(params) {
     var htmlModal, slug, modalParams;
 
-    if (params.type === 'book') {
+    if (params.type === "book") {
       htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
       htmlModal.present();
-    } else if (params.type === 'tool') {
-      slug = 'content/tool/' + params.domain + '.html';
-      modalParams = {slug: slug, pageTitle: '工具'};
+    } else if (params.type === "tool") {
+      slug = "content/tool/" + params.domain + ".html";
+      modalParams = {slug: slug, pageTitle: "工具"};
       htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
       htmlModal.present();
     } else if (params.domain) {
-      slug = 'content/growth/' + params.domain + '/' + params.slug + '.html';
-      modalParams = {slug: slug, pageTitle: 'Growth'};
+      slug = "content/growth/" + params.domain + "/" + params.slug + ".html";
+      modalParams = {slug: slug, pageTitle: "Growth"};
 
       htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
       htmlModal.present();

@@ -26,11 +26,11 @@
 
 import {
   Component, OnInit, Input, Output, HostListener, Self, EventEmitter
-} from '@angular/core';
-import {NgFor} from '@angular/common';
-import {ControlValueAccessor, NgModel} from '@angular/forms';
+} from "@angular/core";
+import {NgFor} from "@angular/common";
+import {ControlValueAccessor, NgModel} from "@angular/forms";
 
-import {global} from '@angular/core/src/facade/lang';
+import {global} from "@angular/core/src/facade/lang";
 /* tslint:disable */
 const KeyboardEvent = (global as any).KeyboardEvent as KeyboardEvent;
 /* tslint:enable */
@@ -68,7 +68,7 @@ export class RatingComponent implements ControlValueAccessor, OnInit {
   private value:number;
   private preValue:number;
 
-  @HostListener('keydown', ['$event'])
+  @HostListener("keydown", ["$event"])
   protected onKeydown(event:KeyboardEvent):void {
     if ([37, 38, 39, 40].indexOf(event.which) === -1) {
       return;
@@ -86,17 +86,17 @@ export class RatingComponent implements ControlValueAccessor, OnInit {
   }
 
   public ngOnInit():void {
-    this.max = typeof this.max !== 'undefined' ? this.max : 5;
+    this.max = typeof this.max !== "undefined" ? this.max : 5;
     this.readonly = this.readonly === true;
-    this.stateOn = typeof this.stateOn !== 'undefined'
+    this.stateOn = typeof this.stateOn !== "undefined"
       ? this.stateOn
-      : 'glyphicon-star';
-    this.stateOff = typeof this.stateOff !== 'undefined'
+      : "glyphicon-star";
+    this.stateOff = typeof this.stateOff !== "undefined"
       ? this.stateOff
-      : 'glyphicon-star-empty';
-    this.titles = typeof this.titles !== 'undefined' && this.titles.length > 0
+      : "glyphicon-star-empty";
+    this.titles = typeof this.titles !== "undefined" && this.titles.length > 0
       ? this.titles
-      : ['one', 'two', 'three', 'four', 'five'];
+      : ["one", "two", "three", "four", "five"];
     this.range = this.buildTemplateObjects(this.ratingStates, this.max);
   }
 

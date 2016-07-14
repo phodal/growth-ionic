@@ -2,7 +2,7 @@ import {NavParams, ViewController, Platform} from "ionic-angular/index";
 import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: 'build/modals/TodoModal/index.html'
+  templateUrl: "build/modals/TodoModal/index.html"
 })
 export class TodoModal {
   private todoLists;
@@ -11,7 +11,7 @@ export class TodoModal {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-    this.todoLists = params.get('todoLists').basic;
+    this.todoLists = params.get("todoLists").basic;
   }
 
   removeItem(item) {

@@ -3,7 +3,7 @@ import {Component, ViewChild} from "@angular/core";
 import {Http} from "@angular/http";
 
 @Component({
-  templateUrl: 'build/modals/HtmlModal/index.html'
+  templateUrl: "build/modals/HtmlModal/index.html"
 })
 export class HtmlModal {
   @ViewChild(Content) content: Content;
@@ -17,9 +17,9 @@ export class HtmlModal {
               public viewCtrl:ViewController,
               http:Http) {
 
-    this.pageTitle = params.get('pageTitle');
-    this.isArticle = this.pageTitle === '文章';
-    http.get(params.get('slug')).subscribe(res => this.html = res.text());
+    this.pageTitle = params.get("pageTitle");
+    this.isArticle = this.pageTitle === "文章";
+    http.get(params.get("slug")).subscribe(res => this.html = res.text());
   }
 
   dismiss() {

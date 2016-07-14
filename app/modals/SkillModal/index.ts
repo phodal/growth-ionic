@@ -3,7 +3,7 @@ import {Component} from "@angular/core";
 import {RatingComponent} from "../../components/ratings/index";
 
 @Component({
-  templateUrl: 'build/modals/SkillModal/index.html',
+  templateUrl: "build/modals/SkillModal/index.html",
   directives: [RatingComponent]
 })
 export class SkillModal {
@@ -13,7 +13,7 @@ export class SkillModal {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-    this.skills = params.get('skills');
+    this.skills = params.get("skills");
   }
 
   dismiss() {

@@ -1,10 +1,10 @@
-import {Platform, ionicBootstrap} from 'ionic-angular';
+import {Platform, ionicBootstrap} from "ionic-angular";
 import {StatusBar} from "ionic-native";
 import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+  template: "<ion-nav [root]='rootPage'></ion-nav>"
 })
 export class MyApp {
   private rootPage:any;
@@ -33,8 +33,8 @@ export class MyApp {
 }
 
 ionicBootstrap(MyApp, null, {
-  tabbarPlacement: 'bottom',
-  backButtonText: '',
-  modalEnter: 'modal-slide-in',
-  modalLeave: 'modal-slide-out'
+  tabbarPlacement: "bottom",
+  backButtonText: "",
+  modalEnter: "modal-slide-in",
+  modalLeave: "modal-slide-out"
 });
