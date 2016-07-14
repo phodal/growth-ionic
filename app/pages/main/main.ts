@@ -23,20 +23,15 @@ export class MainView {
       url: "https://github.com/phodal/ideabook"
     }
   ];
-  private  slideOptions = {
+  private slideOptions = {
     initialSlide: 0,
     autoplay: 5000,
     loop: true
   };
 
   constructor(public nav:NavController, private platform:Platform) {
+    this.nav = nav;
     this.platform = platform;
-  }
-
-  setPages() {
-    this.nav.setPages([{page: Day}], {
-      animate: true
-    });
   }
 
   openNavDetailsPage(day) {
