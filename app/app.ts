@@ -23,7 +23,7 @@ export class MyApp {
       StatusBar.backgroundColorByHexString("#5e6772");
     });
   }
-  hideSplashScreen() {
+  private hideSplashScreen() {
     if(navigator && navigator.splashscreen) {
       setTimeout(()=> {
         navigator.splashscreen.hide();

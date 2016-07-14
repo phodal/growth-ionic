@@ -5,7 +5,6 @@ import {SolutionPage} from "../solution";
 import {CommunityPage} from "../community/index";
 import {MorePage} from "../more/index";
 
-
 @Component({
   templateUrl: "build/pages/tabs/tabs.html"
 })

@@ -27,14 +27,6 @@ export class Day {
     this.dayView = DAYS["day" + this.day];
   }
 
-  ionViewLoaded() {
-
-  }
-
-  ionViewWillLeave() {
-
-  }
-
   presentTodoModal(params) {
     let todoLists = TODO_LISTS["zh-cn"][params.domain];
     let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
@@ -42,7 +34,7 @@ export class Day {
   }
 
   presentHtmlModal(params) {
-    let htmlModal, slug, modalParams;
+    let htmlModal, slug = null, modalParams = null;
 
     if (params.type === "desc") {
       slug = "content/html/" + params.slug + ".html";

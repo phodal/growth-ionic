@@ -2,7 +2,6 @@ import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {Day} from "../day/day";
 
-
 @Component({
   templateUrl: "build/pages/main/main.html"
 })

@@ -102,8 +102,8 @@ gulp.task('lint', () => {
 gulp.task('unit-test', (done:Function) => {
   runSequence(
     ['clean'], // Ionic's clean task, nukes the whole of www/build
-    // ['lint', 'html'],
-    ['html'],
+    ['lint', 'html'],
+    // ['html'],
     'karma',
     (<any>done)
   );
