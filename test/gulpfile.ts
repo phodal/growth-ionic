@@ -93,14 +93,7 @@ gulp.task('lint', () => {
   return gulp.src(join(config.appDir, '**/*.ts'))
     .pipe(tslint(<PluginOptions>{
       formatter: "verbose",
-      whitespace: [
-        false,
-        "check-branch",
-        "check-decl",
-        "check-operator",
-        "check-separator",
-        "check-type"
-      ]
+      configuration: "tslint.json"
     }))
     .pipe(tslint.report());
 });

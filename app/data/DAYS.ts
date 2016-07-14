@@ -7,13 +7,13 @@ import {DAYS6} from "./days/day6";
 import {DAYS7} from "./days/day7";
 import {DAYS0} from "./days/day0";
 
-export const DAYS = {};
-
-DAYS["day0"] = DAYS0;
-DAYS["day1"] = DAYS1;
-DAYS["day2"] = DAYS2;
-DAYS["day3"] = DAYS3;
-DAYS["day4"] = DAYS4;
-DAYS["day5"] = DAYS5;
-DAYS["day6"] = DAYS6;
-DAYS["day7"] = DAYS7;
+export const DAYS = {
+  day0: DAYS0,
+  day1: DAYS1,
+  day2: DAYS2,
+  day3: DAYS3,
+  day4: DAYS4,
+  day5: DAYS5,
+  day6: DAYS6,
+  day7: DAYS7
+};
