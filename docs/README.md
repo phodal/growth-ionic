@@ -1,25 +1,42 @@
 环境搭建
 ---
 
-1. 安装Cordova和Ionic Beta
+1.安装Cordova和Ionic Beta
 
 ```
 npm install -g cordova ionic@beta
 ```
 
-2. 执行安装命令
+2.Clone工程
+
+```
+git clone git@github.com:phodal/growth2.git
+```
+
+初始化子模块 content
+
+```
+git submodule init
+```
+
+```
+git submodule update
+```
+
+
+3.执行安装命令
 
 ```
 npm install
 ```
 
-3. 运行Web
+4.运行Web界面
 
 ```
 ionic serve
 ```
 
-4. 构建、构建手机安装包
+5.构建、构建手机安装包
 
 构建:
 
