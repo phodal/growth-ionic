@@ -1,6 +1,7 @@
 import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {Day} from "../day/day";
+import {Analytics} from "../analytics/index";
 
 @Component({
   templateUrl: "build/pages/main/main.html"
@@ -42,5 +43,9 @@ export class MainView {
     this.platform.ready().then(() => {
       window.open(url, "_system", "location=true");
     });
+  }
+
+  openAnalyticsPage() {
+    this.nav.push(Analytics);
   }
 }
