@@ -21,6 +21,7 @@
     "del": "2.2.0",
     "gulp": "3.9.1",
     "gulp-tslint": "^6.0.1",
+    "gulp-typescript": "^2.13.6",
     "gulp-watch": "4.3.5",
     "ionic-gulp-browserify-typescript": "2.0.0",
     "ionic-gulp-fonts-copy": "^1.0.0",
