@@ -34,7 +34,15 @@ export class Day {
   }
 
   presentHtmlModal(params) {
-    let htmlModal, slug = null, modalParams = null;
+    let htmlModal, modalParams;
+    modalParams = this.generateHtmlModalParams(params);
+
+    htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+    htmlModal.present();
+  }
+
+  generateHtmlModalParams(params) {
+    let slug, modalParams;
 
     if (params.type === "desc") {
       slug = "content/html/" + params.slug + ".html";
@@ -47,8 +55,7 @@ export class Day {
       modalParams = {slug: slug, pageTitle: "文章"};
     }
 
-    htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
-    htmlModal.present();
+    return modalParams;
   }
 
   presentSkillModal(domain) {
