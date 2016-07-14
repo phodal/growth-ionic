@@ -41,6 +41,8 @@
     "phantomjs-prebuilt": "2.1.7",
     "protractor": "3.3.0",
     "run-sequence": "1.2.1",
+    "systemjs": "^0.19.31",
+    "traceur-runtime": "0.0.59",
     "ts-node": "0.9.3",
     "tsify": "0.16.0",
     "tslint": "3.12.1",
