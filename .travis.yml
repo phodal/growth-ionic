@@ -8,6 +8,9 @@ dist: trusty
 notifications:
   email: false
 
+node_js:
+    - "6.0"
+
 addons:
   apt:
     sources:
@@ -27,7 +30,6 @@ branches:
 #
 
 before_install:
-  - nvm use 6.2.0
   - npm install -g cordova ionic
   - ionic state clear
   - gem install fir-cli
