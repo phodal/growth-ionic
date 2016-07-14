@@ -30,12 +30,14 @@ before_install:
   - nvm use 4.1.2
   - npm install -g cordova ionic
   - ionic state clear
+  - gem install fir-cli
 
 install: npm install
 
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - npm install -g codeclimate-test-reporter
 
 script:
   - npm test                             # unit tests
@@ -50,7 +52,7 @@ after_failure:
 
 after_success:
   # Send coverage info off to cloud ppl
-  - cat coverage/lcov.info | ./node_modules/.bin/codecov
+  - codeclimate < coverage/lcov.info
 
 before_deploy:
   # start install android
@@ -67,5 +69,5 @@ before_deploy:
 
 deploy:
   provider: script
-  script: .travis/deploy.sh
+  script: ci/deploy.sh
   skip_cleanup: true
