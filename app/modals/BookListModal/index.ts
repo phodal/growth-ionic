@@ -11,7 +11,7 @@ export class BookListModal {
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
-    var domain = params.get("domain");
+    let domain = params.get("domain");
     this.books = BOOKS.filter(function(el){
       return el.category === domain;
     });

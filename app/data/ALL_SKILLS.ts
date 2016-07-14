@@ -86,7 +86,7 @@ export const ALL_SKILLS = {
   ]
 };
 
-var SkillMap = {
+export const SkillMap = {
   "basic": ["hello", "front"],
   "middle": ["framework", "test", "build"],
   "high": ["configurable", "coding"],

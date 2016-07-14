@@ -3,7 +3,7 @@ import {SOLUTIONS} from "../../data/SOLUTIONS";
 
 
 @Component({
-  templateUrl: 'build/pages/solution/index.html',
+  templateUrl: "build/pages/solution/index.html",
 })
 export class SolutionPage {
   private solutions;

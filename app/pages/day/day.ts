@@ -36,13 +36,13 @@ export class Day {
   }
 
   presentTodoModal(params) {
-    var todoLists = TODO_LISTS["zh-cn"][params.domain];
-    var todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
+    let todoLists = TODO_LISTS["zh-cn"][params.domain];
+    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
     todoModal.present();
   }
 
   presentHtmlModal(params) {
-    var htmlModal, slug, modalParams;
+    let htmlModal, slug, modalParams;
 
     if (params.type === "desc") {
       slug = "content/html/" + params.slug + ".html";
@@ -60,13 +60,13 @@ export class Day {
   }
 
   presentSkillModal(domain) {
-    var skills = ALL_SKILLS[domain];
-    var skillModal = this.modalCtrl.create(SkillModal, {skills: skills});
+    let skills = ALL_SKILLS[domain];
+    let skillModal = this.modalCtrl.create(SkillModal, {skills: skills});
     skillModal.present();
   }
 
   presentGrowthModal(params) {
-    var htmlModal, slug, modalParams;
+    let htmlModal, slug, modalParams;
 
     if (params.type === "book") {
       htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
