@@ -41,7 +41,7 @@ describe("dayView", () => {
 
   it("test for desc", () => {
     let modalParams = dayView.generateHtmlModalParams({type: "desc", slug: "test"});
-    expect(modalParams.slug).toBe("content/html/test.html");
+    expect(modalParams.slug).toBe("content/desc/test.html");
     expect(modalParams.pageTitle).toBe("简介");
   });
 

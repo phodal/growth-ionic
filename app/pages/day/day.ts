@@ -45,7 +45,7 @@ export class Day {
     let slug, modalParams;
 
     if (params.type === "desc") {
-      slug = "content/html/" + params.slug + ".html";
+      slug = "content/desc/" + params.slug + ".html";
       modalParams = {slug: slug, pageTitle: "简介"};
     } else if (params.type === "intro") {
       slug = "content/days/intro-day" + this.day + ".html";

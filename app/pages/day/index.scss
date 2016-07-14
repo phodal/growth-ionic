@@ -39,6 +39,12 @@ ion-item-divider {
   }
 
 
+  .button:hover:not(.disable-hover) {
+    background: none;
+  }
+  .button.activated {
+    box-shadow: none;
+  }
   button.skill-button,
   button.day-info {
     margin: 0;
