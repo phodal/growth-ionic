@@ -75,4 +75,4 @@ deploy:
   skip_cleanup: true
 
 after_deploy:
-  - fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth2' -T $API_TOKEN
+  - fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth-test' -T $API_TOKEN
