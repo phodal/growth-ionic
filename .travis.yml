@@ -41,6 +41,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  - gulp build
   - npm test                             # unit tests
   - npm run build                        # ionic build
   # Serve with python as ionic serve needs interaction
