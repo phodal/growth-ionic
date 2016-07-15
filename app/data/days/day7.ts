@@ -9,6 +9,7 @@ export const DAYS7 = {
       info: {slug: "arch", type: "desc"}
     }
   ],
+  skills: [],
   articlesView: [
     {
       title: "回顾与总结",

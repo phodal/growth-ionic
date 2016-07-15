@@ -9,6 +9,7 @@ export const DAYS6 = {
       info: {slug: "refactor", type: "desc"}
     }
   ],
+  skills: [],
   articlesView: [
     {
       title: "遗留系统",
