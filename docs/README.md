@@ -50,6 +50,45 @@ ionic build android
 ionic run android
 ```
 
+Workflow
+----
+
+1.Pull
+
+``` shell
+git pull --rebase
+```
+
+2.Do Something
+
+3.Commit
+
+``` shell
+git commit -m "[CARD-num] some words"
+```
+run test
+
+``` shell
+npm test
+```
+
+``` shell
+git pull --rebase
+npm test
+```
+
+CI Workflow
+---
+
+详细见: ``.travis.yml``文件
+
+1. Run Unit Tests
+2. Run E2E Tests
+3. Send Coverage
+4. Build Apk
+5. Publish to Fir.im
+
+
 流程规范
 ---
 
@@ -81,4 +120,3 @@ npm test
 ```
 npm run e2e
 ```
-
