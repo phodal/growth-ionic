@@ -9,7 +9,7 @@ notifications:
   email: false
 
 node_js:
-    - "6.0"
+  - "6.0"
 
 addons:
   apt:
