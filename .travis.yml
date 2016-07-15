@@ -42,7 +42,7 @@ before_script:
   - npm install -g codeclimate-test-reporter
 
 script:
-#  - npm test                             # unit tests
+  - npm test                             # unit tests
   - npm run build                        # ionic build
   # Serve with python as ionic serve needs interaction
   - cd www && python -m SimpleHTTPServer 8100 >> python_serve.log 2>&1 &
@@ -71,6 +71,3 @@ before_deploy:
 
 deploy:
   - fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth2' -T $API_TOKEN
-#  provider: script
-#  script: ci/deploy.sh
-#  skip_cleanup: true
