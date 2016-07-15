@@ -1,6 +1,8 @@
 环境搭建
 ---
 
+Node.js (V6.0.0)
+
 1.安装Cordova和Ionic Beta
 
 ```

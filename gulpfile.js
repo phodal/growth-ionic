@@ -60,10 +60,6 @@ gulp.task('build', ['clean'], function(done){
       }).on('end', done);
     }
   );
-  gulp.src([
-    'node_modules/es6-shim/es6-shim.js'
-  ])
-  .pipe(gulp.dest('www/build/'));
 });
 
 gulp.task('sass', buildSass);

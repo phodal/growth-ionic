@@ -49,8 +49,8 @@ script:
   - npm run e2e                          # run e2e tests against ionic
 
 after_failure:
-  - cat /home/travis/build/lathonez/clicker/python_serve.log
-  - cat /home/travis/build/lathonez/clicker/ionic_serve.log
+  - cat /home/travis/build/phodal/growth2/python_serve.log
+  - cat /home/travis/build/phodal/growth2/ionic_serve.log
 
 after_success:
   # Send coverage info off to cloud ppl
@@ -66,6 +66,8 @@ before_deploy:
   - ionic state restore
   - ionic platform add android
   - ionic build android
+  - rm -rf www/*.log
+  - rm -rf www/build/test
   # `ionic build android` wraps `cordova build android`, which gives a legit exit code if it fails. Ionic does not; test apk exists.
   - ls ./platforms/android/build/outputs/apk/android*.apk
 

@@ -41,19 +41,19 @@ describe("dayView", () => {
 
   it("test for desc", () => {
     let modalParams = dayView.generateHtmlModalParams({type: "desc", slug: "test"});
-    expect(modalParams.slug).toBe("content/desc/test.html");
+    expect(modalParams.slug).toBe("assets/desc/test.html");
     expect(modalParams.pageTitle).toBe("简介");
   });
 
   it("test for intro", () => {
     let modalParams = dayView.generateHtmlModalParams({type: "intro"});
-    expect(modalParams.slug).toBe("content/days/intro-day1.html");
+    expect(modalParams.slug).toBe("assets/days/intro-day1.html");
     expect(modalParams.pageTitle).toBe("简介");
   });
 
   it("test for article", () => {
     let modalParams = dayView.generateHtmlModalParams({type: "article", slug: "hello"});
-    expect(modalParams.slug).toBe("content/article/hello.html");
+    expect(modalParams.slug).toBe("assets/article/hello.html");
     expect(modalParams.pageTitle).toBe("文章");
   });
 });
