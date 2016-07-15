@@ -27,8 +27,8 @@ branches:
 #
 
 before_install:
-  - nvm install 6
-  - nvm use 6
+  - nvm install 6.0.0
+  - nvm use 6.0.0
   - npm install -g cordova ionic
   - npm install -g codeclimate-test-reporter
   - ionic state clear
