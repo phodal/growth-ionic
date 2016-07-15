@@ -27,6 +27,7 @@ branches:
 #
 
 before_install:
+  - nvm install 6
   - nvm use 6
   - npm install -g cordova ionic
   - ionic state clear
