@@ -70,6 +70,7 @@ before_deploy:
   - ls ./platforms/android/build/outputs/apk/android*.apk
 
 deploy:
-  provider: script
-  script: ci/deploy.sh
-  skip_cleanup: true
+  - fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth2' -T $API_TOKEN
+#  provider: script
+#  script: ci/deploy.sh
+#  skip_cleanup: true
