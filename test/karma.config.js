@@ -85,15 +85,26 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      'PhantomJS',
+      'Chrome',
     ],
 
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     // https://github.com/lathonez/clicker/issues/82
     // try increasing this value if you see the error "Disconnected (1 times), because no message in 30000 ms."
     browserNoActivityTimeout: 30000
   });
+  //
+  // if (process.env.TRAVIS || process.env.CIRCLECI) {
+  //   config.browsers = ['Chrome', 'PhantomJS'];
+  // }
 
   if (process.env.TRAVIS || process.env.CIRCLECI) {
-    config.browsers = ['Chrome', 'PhantomJS'];
+    config.browsers = ['Chrome_travis_ci'];
+    config.singleRun = true;
   }
 };
