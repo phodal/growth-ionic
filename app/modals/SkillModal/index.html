@@ -18,7 +18,7 @@
       <ion-item>
         <span class="skill-title">{{skill.text}}</span>
 
-        <rating [(ngModel)]="skill.rate" [max]="max"></rating>
+        <rating [(ngModel)]="skill.rate" [max]="max" (onHover)="setStar(skill, $event)"></rating>
       </ion-item>
     </ion-item-sliding>
   </ion-list>
