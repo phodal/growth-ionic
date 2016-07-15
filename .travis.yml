@@ -67,5 +67,5 @@ before_deploy:
   # `ionic build android` wraps `cordova build android`, which gives a legit exit code if it fails. Ionic does not; test apk exists.
   - ls ./platforms/android/build/outputs/apk/android*.apk
 
-deploy:
+after_deploy:
   - fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth2' -T $API_TOKEN
