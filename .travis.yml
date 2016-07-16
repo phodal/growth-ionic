@@ -30,7 +30,7 @@ before_install:
   - nvm install 6.0.0
   - nvm use 6.0.0
   - npm install -g cordova ionic
-  - npm install -g codeclimate-test-reporter
+  - npm install -g codeclimate
   - ionic state clear
   - gem install fir-cli
 
