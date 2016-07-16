@@ -9,6 +9,8 @@ Ionic 1 Version: [https://github.com/phodal/growth](https://github.com/phodal/gr
 
 Ionic 2 Tutorials: [http://ionicframework.com/docs/v2/getting-started/installation/](http://ionicframework.com/docs/v2/getting-started/installation/)
 
+项目开发进度见Teambition ([Growth 2.0](https://www.teambition.com/project/57872eea0cc72c3442eb3dbc))
+
 Skills
 ---
 
