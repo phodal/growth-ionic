@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Storage, LocalStorage} from "ionic-angular/index";
+
 @Injectable()
 export class SkillMapService {
   private localStorage;
@@ -9,23 +10,21 @@ export class SkillMapService {
   };
 
   getSkills() {
-    this.localStorage.get("skills").then(
-      function (skills) {
-        if (skills) {
-          return JSON.parse(skills);
-        } else {
-          return {};
-        }
-      }
-    );
+    return this.localStorage.get("skills");
   };
 
   addSkill(data) {
-    let skills = this.getSkills();
-    if (skills) {
-      this.localStorage.set("skills", JSON.stringify(data));
-    } else {
-      this.localStorage.set("skills", JSON.stringify(data));
-    }
+    let self = this;
+    this.getSkills().then(function (skills) {
+      skills = JSON.parse(skills);
+      if (skills) {
+        skills[data.skill] = data.ratings;
+        self.localStorage.set("skills", JSON.stringify(skills));
+      } else {
+        let skill = {};
+        skill[data.skill] = data.ratings;
+        self.localStorage.set("skills", JSON.stringify(skill));
+      }
+    });
   }
 }
