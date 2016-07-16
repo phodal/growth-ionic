@@ -8,14 +8,24 @@ export class SkillMapService {
     this.localStorage = new Storage(LocalStorage);
   };
 
-  getItem() {
-    let localStorage = this.localStorage;
-    if (localStorage) {
-      return JSON.parse(localStorage);
-    }
+  getSkills() {
+    this.localStorage.get("skills").then(
+      function (skills) {
+        if (skills) {
+          return JSON.parse(skills);
+        } else {
+          return {};
+        }
+      }
+    );
   };
 
-  addItem(data) {
-    this.localStorage.set("skills", JSON.stringify(data))
+  addSkill(data) {
+    let skills = this.getSkills();
+    if (skills) {
+      this.localStorage.set("skills", JSON.stringify(data));
+    } else {
+      this.localStorage.set("skills", JSON.stringify(data));
+    }
   }
 }

@@ -27,6 +27,6 @@ export class SkillModal {
 
   setStar(skill, $event) {
     let data = {skill: skill.text, ratings: $event};
-    this.skillMapService.addItem(data);
+    this.skillMapService.addSkill(data);
   }
 }
