@@ -3,75 +3,11 @@ Ionic2 + Angular 2 + Growth + TypeScript
 
 [![Build Status](https://travis-ci.org/phodal/growth2.svg?branch=master)](https://travis-ci.org/phodal/growth2) [![Code Climate](https://codeclimate.com/github/phodal/growth2/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth2) [![Test Coverage](https://codeclimate.com/github/phodal/growth2/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth2/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth2/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth2)
 
-> A new version with new UI
-
-Ionic 1 Version: [https://github.com/phodal/growth](https://github.com/phodal/growth)
-
-Ionic 2 Tutorials: [http://ionicframework.com/docs/v2/getting-started/installation/](http://ionicframework.com/docs/v2/getting-started/installation/)
+Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
 项目开发进度见Teambition ([Growth 2.0](https://www.teambition.com/project/57872eea0cc72c3442eb3dbc))
 
-Skills
----
-
-App:
-
- - JavaScript
- - TypeScript
- - Ionic 2
- - Angluar 2
- - SCSS / CSS
- - ReactiveJS
- - Cordova
-
-Server:
-
-Service 1:
-
- - Flarum (API：[http://flarum.org/docs/api/](http://flarum.org/docs/api/))
- - PHP
-
-Service 2(TBC):
-
- - GitHub Page
-
-Setup for Android
----
-
-install deps:
-
-    npm install -g cordova ionic@beta
-
-
-Plugins:
-
-    cordova plugin add cordova-plugin-inappbrowser
-
-
-Issue of Setup
----
-
-
-
-Cannot find name ‘cordova’:
-
-```
-npm install -g typings
-typings install dt~cordova --save --global
-```
-
-Shell
-
-```shell
-typings install dt~cordova/plugins/inappbrowser --save --global
-typings install dt~cordova/plugins/splashscreen --save --global
-```
-
-### Convert md to HTML
-
-```shell
-find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}" -o "html/${0%.md}.html"' {} \;
-```
+[帮助文档](./docs/README.md)
 
 License
 ---
