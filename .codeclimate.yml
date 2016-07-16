@@ -14,12 +14,12 @@ engines:
         enabled: false
 ratings:
   paths:
-  - "app/**/*.js"
+  - "app/**/*.ts"
 exclude_paths:
-- test/
-- ci/
-- resources/
-- www/
-- typings/
-- lib/*.js
-- dist/*.js
+  - test/
+  - ci/
+  - resources/
+  - www/
+  - typings/
+  - lib/*.js
+  - dist/*.js
