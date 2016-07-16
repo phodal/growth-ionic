@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Storage, LocalStorage} from "ionic-angular/index";
+import * as _ from "lodash";
 
 @Injectable()
 export class SkillMapService {
@@ -11,6 +12,19 @@ export class SkillMapService {
 
   getSkills() {
     return this.localStorage.get("skills");
+  };
+
+  getSkillTotalAmount(callback) {
+    let points = 0;
+    this.getSkills().then(function (skills) {
+      if (skills) {
+        skills = JSON.parse(skills);
+        _.each(skills, function (point) {
+          points = points + point;
+        });
+      }
+      callback(points);
+    });
   };
 
   addSkill(data) {
