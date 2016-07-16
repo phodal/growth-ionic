@@ -5,9 +5,15 @@ Ionic2 + Angular 2 + Growth + TypeScript
 
 Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
+
+加入开发
+---
+
+相关信息见: [GitHub Issue](https://github.com/phodal/growth2/issues/1)
+
 项目开发进度见Teambition ([Growth 2.0](https://www.teambition.com/project/57872eea0cc72c3442eb3dbc))
 
-[帮助文档](./docs/README.md)
+[开发文档](./docs/README.md)
 
 License
 ---
