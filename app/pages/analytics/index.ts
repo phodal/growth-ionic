@@ -12,7 +12,13 @@ import {CHART_DIRECTIVES} from "ng2-charts/ng2-charts";
 export class Analytics {
   public radarChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: false
+    responsive: false,
+    legend: {
+      display: false,
+      labels: {
+        fontColor: 'rgb(255, 99, 132)'
+      }
+    }
   };
   public radarChartType:string = "radar";
   public radarChartLabels:string[] = ["Coding", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
