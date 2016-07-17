@@ -10,5 +10,11 @@
 </ion-header>
 
 <ion-content class="analytics">
-
+  <base-chart class="chart"
+              [datasets]="radarChartData"
+              [labels]="radarChartLabels"
+              [options]="radarChartOptions"
+              [chartType]="radarChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></base-chart>
 </ion-content>
