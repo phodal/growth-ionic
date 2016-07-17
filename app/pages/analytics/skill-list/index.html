@@ -7,5 +7,13 @@
 </ion-header>
 
 <ion-content class="skill-list">
+  <div *ngFor="let skills of allSkills">
+    <ion-item-sliding *ngFor="let skill of skills">
+      <ion-item>
+        <span class="skill-title">{{skill.text}}</span>
 
+        <rating [(ngModel)]="skill.rate" [max]="max" (onHover)="setStar(skill, $event)"></rating>
+      </ion-item>
+    </ion-item-sliding>
+  </div>
 </ion-content>
