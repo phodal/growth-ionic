@@ -3,6 +3,8 @@ import {SkillMapService} from "../../services/skill.map.services";
 import {FORM_DIRECTIVES} from "@angular/forms";
 import {CORE_DIRECTIVES, NgClass} from "@angular/common";
 import {CHART_DIRECTIVES} from "ng2-charts/ng2-charts";
+import {NavController} from "ionic-angular/index";
+import {SkillListPage} from "./skill-list/index";
 
 @Component({
   templateUrl: "build/pages/analytics/index.html",
@@ -29,8 +31,9 @@ export class Analytics {
 
   private skillPointAmount;
 
-  constructor(public skillMapService:SkillMapService) {
+  constructor(public nav:NavController, public skillMapService:SkillMapService) {
     this.skillPointAmount = this.getSkillPointAmount();
+    this.nav = nav;
   }
 
   getSkillPointAmount() {
@@ -40,12 +43,7 @@ export class Analytics {
     });
   }
 
-  // // events
-  // public chartClicked(e:any):void {
-  //   console.log(e);
-  // }
-  //
-  // public chartHovered(e:any):void {
-  //   console.log(e);
-  // }
+  openAllSkillListPage() {
+    this.nav.push(SkillListPage)
+  }
 }

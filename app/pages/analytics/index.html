@@ -4,7 +4,9 @@
       我的技能图谱
     </ion-title>
     <ion-buttons end>
-      <ion-badge item-right>{{skillPointAmount}}</ion-badge>
+      <button (click)="openAllSkillListPage()">
+        <ion-badge item-right>{{skillPointAmount}}</ion-badge>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
