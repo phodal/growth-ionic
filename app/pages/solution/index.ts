@@ -9,6 +9,6 @@ export class SolutionPage {
   private solutions;
 
   constructor() {
-    this.solutions = _.orderBy(SOLUTIONS, ['type'], ['asc']);
+    this.solutions = _.orderBy(SOLUTIONS, ["type"], ["asc"]);
   }
 }

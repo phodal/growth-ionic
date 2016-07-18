@@ -18,7 +18,7 @@ export class Analytics {
     legend: {
       display: false,
       labels: {
-        fontColor: 'rgb(255, 99, 132)'
+        fontColor: "rgb(255, 99, 132)"
       }
     }
   };
@@ -44,6 +44,6 @@ export class Analytics {
   }
 
   openAllSkillListPage() {
-    this.nav.push(SkillListPage)
+    this.nav.push(SkillListPage);
   }
 }
