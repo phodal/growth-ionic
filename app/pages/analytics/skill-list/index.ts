@@ -1,5 +1,5 @@
 import {Component, Pipe, PipeTransform} from "@angular/core";
-import {ALL_SKILLS} from "../../../data/ALL_SKILLS";
+import {SkillMapService} from "../../../services/skill.map.services";
 
 @Pipe({name: "keysPipe"})
 export class KeysPipe implements PipeTransform {
@@ -16,13 +16,14 @@ export class KeysPipe implements PipeTransform {
 
 @Component({
   templateUrl: "build/pages/analytics/skill-list/index.html",
+  providers: [SkillMapService],
   pipes: [KeysPipe]
 })
 export class SkillListPage {
   private allSkills;
 
-  constructor() {
-    this.allSkills = ALL_SKILLS;
+  constructor(public skillMapService:SkillMapService) {
+    this.allSkills = this.skillMapService.getAllSKillsWithRate();
   }
 
   setStar(skill, $event) {

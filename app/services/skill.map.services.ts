@@ -15,6 +15,10 @@ export class SkillMapService {
     return this.localStorage.get("skills");
   };
 
+  getAllSKillsWithRate () {
+    return ALL_SKILLS;
+  }
+
   getSkillTotalAmount(callback) {
     let points = 0;
     this.getSkills().then(function (skills) {
