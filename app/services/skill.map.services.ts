@@ -43,7 +43,22 @@ export class SkillMapService {
     });
   }
 
-  getSkillByDomain(domain:any) {
-    return ALL_SKILLS[domain];
+  getSkillByDomain(domain:any, callback) {
+    let domainSkills = [];
+    this.getSkills().then(function (localSkills) {
+      domainSkills = ALL_SKILLS[domain];
+
+      if (localSkills) {
+        localSkills = JSON.parse(localSkills);
+        _.each(localSkills, function (loalSkillValue, localSkillKey) {
+          _.each(domainSkills, function (domainSkill, index) {
+            if (domainSkill.text === localSkillKey) {
+              domainSkills[index].rate = loalSkillValue;
+            }
+          });
+        })
+      }
+      callback(domainSkills);
+    });
   }
 }
