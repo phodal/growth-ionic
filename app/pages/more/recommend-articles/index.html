@@ -9,7 +9,7 @@
 <ion-content class="recommend-books">
   <ion-item-group *ngFor="let domainArticles of helpArticles">
     <ion-item-divider light>
-      <span class="title">{{domainArticles.domain}}</span>
+      <span class="title">{{getDomainName(domainArticles.domain)}}</span>
     </ion-item-divider>
     <ion-item *ngFor="let article of domainArticles.value">
       {{article.title}}
