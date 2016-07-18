@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      推荐文章列表
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item *ngFor="let aritlce of articles">
+    {{aritlce.title}}
+  </ion-item>
+</ion-content>
