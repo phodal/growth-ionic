@@ -56,7 +56,7 @@ export class SkillMapService {
               domainSkills[index].rate = loalSkillValue;
             }
           });
-        })
+        });
       }
       callback(domainSkills);
     });
