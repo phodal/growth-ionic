@@ -13,8 +13,6 @@ Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
 [开发文档](./docs/README.md)
 
-相关信息见: [GitHub Issue](https://github.com/phodal/growth2/issues/1)
-
 License
 ---
 

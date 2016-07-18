@@ -55,20 +55,20 @@ ionic run android
 Setup for Android
 ---
 
-install deps:
+Install Cordova,Ionic:
 
-    npm install -g cordova ionic@beta
-
+```
+npm install -g cordova ionic@beta
+```
 
 Plugins:
 
-    cordova plugin add cordova-plugin-inappbrowser
-
+```
+cordova plugin add cordova-plugin-inappbrowser
+```
 
 Issue of Setup
 ---
-
-
 
 Cannot find name ‘cordova’:
 
