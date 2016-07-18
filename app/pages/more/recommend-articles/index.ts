@@ -16,7 +16,7 @@ export class RecommendArticles {
     this.init();
   }
 
-  private init() {
+  init() {
     this.helpArticles = _.transform(HELPER_ARTICLES["zh-cn"], function (result, value, key) {
       result.push({domain: key, value: value});
       return true;
