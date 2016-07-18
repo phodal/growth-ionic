@@ -15,15 +15,14 @@ export class SkillMapService {
     return this.localStorage.get("skills");
   };
 
-  getAllSKillsWithRate (callback) {
+  getAllSKillsWithRate(callback) {
     this.getSkills().then(function (localSkills) {
       let skillsWithRate = [];
       if (localSkills) {
         localSkills = JSON.parse(localSkills);
         _.each(localSkills, function (localSkillValue, localSkillKey) {
-          skillsWithRate.push({skill: localSkillKey, rate: localSkillValue})
+          skillsWithRate.push({skill: localSkillKey, rate: localSkillValue});
         });
-        console.log(skillsWithRate);
       }
       callback(skillsWithRate);
     });
