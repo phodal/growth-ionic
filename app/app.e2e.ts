@@ -22,7 +22,7 @@ describe("MyAPP", () => {
   });
 
   it("should have correct day for Home", () => {
-    expect(element(by.css("ion-card.days ion-label h2")).getText()).toContain("从零开始");
+    expect(element(by.css("ion-card.days ion-label h2")).getText()).toContain("前期准备");
   });
 
   it("should have correct footer Home", () => {
