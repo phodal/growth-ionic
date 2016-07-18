@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {BOOKS} from "../../../data/BOOKS";
+import * as _ from "lodash";
 
 @Component({
   templateUrl: "build/pages/more/recommend-books/index.html"
@@ -7,6 +8,6 @@ import {BOOKS} from "../../../data/BOOKS";
 export class RecommendBook {
   private books;
   constructor() {
-    this.books = BOOKS;
+    this.books = _.orderBy(BOOKS, ["category"], ["asc"]);
   }
 }
