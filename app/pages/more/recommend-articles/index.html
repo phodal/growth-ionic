@@ -7,7 +7,12 @@
 </ion-header>
 
 <ion-content class="recommend-books">
-  <ion-item *ngFor="let aritlce of articles">
-    {{aritlce.title}}
-  </ion-item>
+  <ion-item-group *ngFor="let domainArticles of helpArticles">
+    <ion-item-divider light>
+      <span class="title">{{domainArticles.domain}}</span>
+    </ion-item-divider>
+    <ion-item *ngFor="let article of domainArticles.value">
+      {{article.title}}
+    </ion-item>
+  </ion-item-group>
 </ion-content>

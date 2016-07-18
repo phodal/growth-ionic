@@ -6,8 +6,11 @@ import {HELPER_ARTICLES} from "../../../data/HELPER_ARTICLES";
   templateUrl: "build/pages/more/recommend-articles/index.html"
 })
 export class RecommendArticles {
-  private articles;
+  private helpArticles;
   constructor() {
-    this.articles = _.values(HELPER_ARTICLES["zh-cn"]);
+    this.helpArticles = _.transform(HELPER_ARTICLES["zh-cn"], function(result, value, key) {
+      result.push({domain: key, value: value});
+      return true;
+    }, []);
   }
 }
