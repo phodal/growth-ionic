@@ -7,7 +7,6 @@ import {HtmlModal} from "../../modals/HtmlModal";
 import {DAYS} from "../../data/DAYS";
 import {BookListModal} from "../../modals/BookListModal/index";
 import {SkillModal} from "../../modals/SkillModal/index";
-import {ALL_SKILLS} from "../../data/ALL_SKILLS";
 
 @Component({
   templateUrl: "build/pages/day/day.html"
@@ -59,8 +58,7 @@ export class Day {
   }
 
   presentSkillModal(domain) {
-    let skills = ALL_SKILLS[domain];
-    let skillModal = this.modalCtrl.create(SkillModal, {skills: skills});
+    let skillModal = this.modalCtrl.create(SkillModal, {domain: domain});
     skillModal.present();
   }
 

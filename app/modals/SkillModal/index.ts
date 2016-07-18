@@ -17,7 +17,7 @@ export class SkillModal {
               public viewCtrl:ViewController,
               public skillMapService:SkillMapService) {
 
-    this.skills = params.get("skills");
+    this.skills = this.skillMapService.getSkillByDomain(params.get("domain"));
     this.localStorage = new Storage(LocalStorage);
   }
 

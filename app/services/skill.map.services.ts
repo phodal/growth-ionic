@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Storage, LocalStorage} from "ionic-angular/index";
 import * as _ from "lodash";
+import {ALL_SKILLS} from "../data/ALL_SKILLS";
 
 @Injectable()
 export class SkillMapService {
@@ -40,5 +41,9 @@ export class SkillMapService {
         self.localStorage.set("skills", JSON.stringify(skill));
       }
     });
+  }
+
+  getSkillByDomain(domain:any) {
+    return ALL_SKILLS[domain];
   }
 }
