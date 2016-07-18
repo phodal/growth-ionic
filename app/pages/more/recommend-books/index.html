@@ -7,5 +7,7 @@
 </ion-header>
 
 <ion-content class="recommend-books">
-
+  <ion-item *ngFor="let book of books">
+    {{book.title}}
+  </ion-item>
 </ion-content>
