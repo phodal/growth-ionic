@@ -7,12 +7,10 @@
 </ion-header>
 
 <ion-content class="skill-list">
-  <div *ngFor="let entry of allSkills | keysPipe">
-    <ion-item-sliding *ngFor="let skill of entry.value">
-      <ion-item>
-        <span class="skill-title">{{skill.text}}</span>
-        <rating (onHover)="setStar(skill, $event)"></rating>
-      </ion-item>
-    </ion-item-sliding>
-  </div>
+  <ion-item-sliding *ngFor="let skill of allSkills">
+    <ion-item>
+      <span class="skill-title">{{skill.skill}}</span>
+      <!--<rating [(ngModel)]="skill.rate" [readonly]="true"></rating>-->
+    </ion-item>
+  </ion-item-sliding>
 </ion-content>
