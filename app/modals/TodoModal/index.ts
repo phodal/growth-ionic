@@ -8,7 +8,7 @@ import {Component} from "@angular/core";
 export class TodoModal {
   private todoLists;
   private items;
-  private doneItems = [];
+  private doneItems;
   private localStorage;
   private domain;
 
@@ -18,6 +18,7 @@ export class TodoModal {
     this.todoLists = params.get("todoLists").basic;
     this.domain = params.get("domain");
     this.localStorage = new Storage(LocalStorage);
+    this.getDomainItemFromLocalStorage();
   }
 
   addItemToDone(item) {
@@ -32,10 +33,13 @@ export class TodoModal {
   }
 
   getDomainItemFromLocalStorage() {
-    this.localStorage.get(this.domain).then((data) => this.todoLists = JSON.parse(data));
+    this.localStorage.get(this.domain).then(function (data) {
+      this.todoLists = JSON.parse(data).todoLists;
+      this.doneItems = JSON.parse(data).doneItems;
+    });
   }
 
-  addDomainItemInLocalStorage(items:any, doneItems:Array) {
+  addDomainItemInLocalStorage(items, doneItems) {
     this.localStorage.set(this.domain, JSON.stringify({todoLists: items, doneItems: doneItems}));
   }
 
