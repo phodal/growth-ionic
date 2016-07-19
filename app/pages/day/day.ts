@@ -28,7 +28,7 @@ export class Day {
 
   presentTodoModal(params) {
     let todoLists = TODO_LISTS["zh-cn"][params.domain];
-    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
+    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
     todoModal.present();
   }
 

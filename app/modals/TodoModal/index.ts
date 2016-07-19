@@ -1,4 +1,5 @@
 import {NavParams, ViewController, Platform} from "ionic-angular/index";
+import {Storage, LocalStorage} from "ionic-angular/index";
 import {Component} from "@angular/core";
 
 @Component({
@@ -8,11 +9,15 @@ export class TodoModal {
   private todoLists;
   private items;
   private doneItems = [];
+  private localStorage;
+  private domain;
 
   constructor(public platform:Platform,
               public params:NavParams,
               public viewCtrl:ViewController) {
     this.todoLists = params.get("todoLists").basic;
+    this.domain = params.get("domain");
+    this.localStorage = new Storage(LocalStorage);
   }
 
   addItemToDone(item) {
@@ -21,8 +26,17 @@ export class TodoModal {
       if (this.items[i] === item) {
         this.doneItems.push(item);
         this.items.splice(i, 1);
+        this.addDomainItemInLocalStorage(this.items, this.doneItems);
       }
     }
+  }
+
+  getDomainItemFromLocalStorage() {
+    this.localStorage.get(this.domain).then((data) => this.todoLists = JSON.parse(data));
+  }
+
+  addDomainItemInLocalStorage(items:any, doneItems:Array) {
+    this.localStorage.set(this.domain, JSON.stringify({todoLists: items, doneItems: doneItems}));
   }
 
   dismiss() {
