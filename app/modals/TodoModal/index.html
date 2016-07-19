@@ -17,7 +17,7 @@
     <ion-item-sliding *ngFor="let todo of todoLists">
       <ion-item>
         <ion-label>{{todo.title}}</ion-label>
-        <ion-checkbox (click)="addItem(todo)" [(ngModel)]="todo.checked" dark></ion-checkbox>
+        <ion-checkbox (click)="addItemToDone(todo)" [(ngModel)]="todo.checked" dark></ion-checkbox>
       </ion-item>
     </ion-item-sliding>
 
@@ -39,7 +39,7 @@
         {{todo.title}}
       </ion-item>
       <ion-item-options>
-        <button danger (click)="removeItem(todo)">
+        <button danger (click)="addItemToDone(todo)">
           <ion-icon name="checkbox"></ion-icon>
           Done
         </button>

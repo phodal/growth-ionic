@@ -15,17 +15,7 @@ export class TodoModal {
     this.todoLists = params.get("todoLists").basic;
   }
 
-  removeItem(item) {
-    this.items = this.todoLists;
-    for (let i = 0; i < this.items.length; i++) {
-      if (this.items[i] === item) {
-        this.doneItems.push(item);
-        this.items.splice(i, 1);
-      }
-    }
-  }
-
-  addItem(item) {
+  addItemToDone(item) {
     this.items = this.todoLists;
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i] === item) {
