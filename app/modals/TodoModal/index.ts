@@ -7,6 +7,7 @@ import {Component} from "@angular/core";
 export class TodoModal {
   private todoLists;
   private items;
+  private doneItems = [];
 
   constructor(public platform:Platform,
               public params:NavParams,
@@ -18,6 +19,17 @@ export class TodoModal {
     this.items = this.todoLists;
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i] === item) {
+        this.doneItems.push(item);
+        this.items.splice(i, 1);
+      }
+    }
+  }
+
+  addItem(item) {
+    this.items = this.todoLists;
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i] === item) {
+        this.doneItems.push(item);
         this.items.splice(i, 1);
       }
     }

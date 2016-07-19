@@ -17,18 +17,42 @@
     <ion-item-sliding *ngFor="let todo of todoLists">
       <ion-item>
         <ion-label>{{todo.title}}</ion-label>
-        <ion-checkbox [(ngModel)]="todo.checked" dark checked="true"></ion-checkbox>
+        <ion-checkbox (click)="addItem(todo)" [(ngModel)]="todo.checked" dark></ion-checkbox>
       </ion-item>
     </ion-item-sliding>
+
+    <ion-item-group  *ngIf="doneItems.length > 0">
+      <ion-item-divider light>
+        <span class="title">已完成</span>
+      </ion-item-divider>
+      <ion-item *ngFor="let todo of doneItems">
+        <ion-label>{{todo.title}}</ion-label>
+        <ion-checkbox [(ngModel)]="todo.checked" dark checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-item-group>
   </ion-list>
+
+
   <ion-list showWhen="ios">
     <ion-item-sliding *ngFor="let todo of todoLists">
       <ion-item>
         {{todo.title}}
       </ion-item>
       <ion-item-options>
-        <button danger (click)="removeItem(todo)"><ion-icon name="checkbox"></ion-icon>Done</button>
+        <button danger (click)="removeItem(todo)">
+          <ion-icon name="checkbox"></ion-icon>
+          Done
+        </button>
       </ion-item-options>
     </ion-item-sliding>
+
+    <ion-item-group *ngIf="doneItems.length > 0">
+      <ion-item-divider light>
+        <span class="title">已完成</span>
+      </ion-item-divider>
+      <ion-item *ngFor="let todo of doneItems">
+        {{todo.title}}
+      </ion-item>
+    </ion-item-group>
   </ion-list>
 </ion-content>
