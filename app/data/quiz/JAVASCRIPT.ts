@@ -77,4 +77,4 @@ export const JAVASCRIPT = [
   "简述一下 Handlebars 的基本用法？",
   "简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？",
   "用js实现千位分隔符?"
-]
+];
