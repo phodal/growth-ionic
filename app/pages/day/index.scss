@@ -31,11 +31,16 @@ ion-item-divider {
   height: 47px;
 
   .item-button {
-    height: 21px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+
+  .skill-button.item-button.button-icon-only {
+    padding-left: 12px;
   }
 
   ion-label span.title {
-
+    line-height: 28px;
   }
 
 
