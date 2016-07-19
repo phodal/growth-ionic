@@ -36,3 +36,12 @@ tabbar span,
 .day .item .item-inner {
   border: none;
 }
+
+rating {
+  float: right;
+
+  ion-icon {
+    color: #ffc107;
+    font-size: 1.8em;
+  }
+}
