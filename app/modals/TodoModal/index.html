@@ -13,7 +13,15 @@
 </ion-header>
 
 <ion-content class="outer-content">
-  <ion-list>
+  <ion-list showWhen="android">
+    <ion-item-sliding *ngFor="let todo of todoLists">
+      <ion-item>
+        <ion-label>{{todo.title}}</ion-label>
+        <ion-checkbox [(ngModel)]="todo.checked" dark checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list showWhen="ios">
     <ion-item-sliding *ngFor="let todo of todoLists">
       <ion-item>
         {{todo.title}}
