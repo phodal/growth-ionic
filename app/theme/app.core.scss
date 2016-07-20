@@ -48,6 +48,14 @@ rating {
   }
 }
 
+.skill-modal ion-content,
+.todo-modal ion-content,
 ion-content {
   background-color: $growth-background;
+}
+
+ion-modal {
+  .html-modal ion-content {
+    background-color: #fff;
+  }
 }
