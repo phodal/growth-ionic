@@ -1,12 +1,17 @@
 import {Component} from "@angular/core";
-import {TWBOOKS} from "../../../data/TWBOOKS";
+import {DomainDetailPage} from "./domain-detail-page/index";
+import {NavController} from "ionic-angular/index";
 
 @Component({
   templateUrl: "build/pages/discover/thoughtworks-books/index.html"
 })
 export class TWBookPage {
-  private twbooks;
-  constructor() {
-    this.twbooks = TWBOOKS['zh-cn'];
+  constructor(public nav:NavController) {
+    this.nav = nav;
   }
+
+  openDomainDetailPage(domain) {
+    this.nav.push(DomainDetailPage, {domain: domain});
+  }
+
 }

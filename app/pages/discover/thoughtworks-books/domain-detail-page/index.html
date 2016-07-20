@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item-group>
+    <button ion-item *ngFor="let book of books.basic">
+      {{book}}
+    </button>
+  </ion-item-group>
+  <ion-item-group>
+    <button ion-item *ngFor="let book of books.intermediate">
+      {{book}}
+    </button>
+  </ion-item-group>
+  <ion-item-group>
+    <button ion-item *ngFor="let book of books.advanced">
+      {{book}}
+    </button>
+  </ion-item-group>
+</ion-content>

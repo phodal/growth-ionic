@@ -7,18 +7,18 @@
 </ion-header>
 
 <ion-content class="tw-books">
-  <ion-item-group>
-    <ion-item-divider light>
-      <span class="title">{{twbooks.practical.name}}</span>
-    </ion-item-divider>
-    <button ion-item *ngFor="let book of twbooks.practical.books.basic">
-      {{book}}
+  <ion-list>
+    <button ion-item (click)="openDomainDetailPage('practical')">
+      编程实践
     </button>
-    <button ion-item *ngFor="let book of twbooks.practical.books.intermediate">
-      {{book}}
+    <button ion-item (click)="openDomainDetailPage('architecture')">
+      架构与设计
     </button>
-    <button ion-item *ngFor="let book of twbooks.practical.books.advanced">
-      {{book}}
+    <button ion-item (click)="openDomainDetailPage('methodology')">
+      方法学
     </button>
-  </ion-item-group>
+    <button ion-item (click)="openDomainDetailPage('leadership')">
+      思想与领导力
+    </button>
+  </ion-list>
 </ion-content>
