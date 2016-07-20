@@ -33,16 +33,18 @@
 
   ion-row {
     flex-wrap: wrap;
-    padding: 1em 1em;
+    padding: 0 12px 12px 12px;
 
     ion-col {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
+      flex: 0 0 32%;
+      max-width: 32%;
       text-align: center;
-      padding: 5px 5px;
+      background: #fff;
     }
 
     ion-icon {
+      width: 32px;
+      height: 32px;
       font-size: 30px;
     }
 
@@ -63,19 +65,32 @@
     }
   }
 
+  ion-row.zones {
+    padding: 0 12px 12px 7px;
+
+    ion-icon {
+      padding: 12px 0 12px 0;
+    }
+    ion-col {
+      margin-left: 5px;
+      margin-top: 5px;
+      padding: 5px 5px;
+    }
+  }
   ion-row.second {
     text-align: center;
-    padding: 1em 2em;
+    padding: 12px 12px;
 
     ion-col {
       flex: 0 0 50%;
       max-width: 50%;
       text-align: center;
-      padding: 10px 5px 2px;
+      padding: 2px 5px;
     }
 
     ion-icon {
       font-size: 32px;
+      padding: 0 0 0 20px;
     }
 
     h3 {
