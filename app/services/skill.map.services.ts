@@ -47,11 +47,11 @@ export class SkillMapService {
       skills = JSON.parse(skills);
       if (skills) {
         skills[data.skill] = data.ratings;
-        self.localStorage.setItem("skills", JSON.stringify(skills));
+        self.localStorage.set("skills", JSON.stringify(skills));
       } else {
         let skill = {};
         skill[data.skill] = data.ratings;
-        self.localStorage.setItem("skills", JSON.stringify(skill));
+        self.localStorage.set("skills", JSON.stringify(skill));
       }
     });
   }
