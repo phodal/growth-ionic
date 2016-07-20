@@ -16,7 +16,6 @@ export class BookListModal {
     let domain = params.get("domain");
 
     this.modalCtrl = modalCtrl;
-    console.log(domain, BOOKS[domain]);
     this.books = BOOKS["zh-cn"][domain];
   }
   dismiss() {
