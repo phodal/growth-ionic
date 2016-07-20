@@ -2,6 +2,9 @@
   ion-label {
     margin: 0;
   }
+  .item[detail-push] .item-inner, button.item:not([detail-none]) .item-inner, a.item:not([detail-none]) .item-inner {
+    background-image: none;
+  }
   .discover-slide {
     color: #fff;
     height: 120px;
