@@ -1,8 +1,12 @@
 import {Component} from "@angular/core";
 import {SkillMapService} from "../../../services/skill.map.services";
+import {CORE_DIRECTIVES} from "@angular/common";
+import {FORM_DIRECTIVES} from "@angular/forms";
+import {RatingComponent} from "../../../components/ratings/index";
 
 @Component({
   templateUrl: "build/pages/analytics/skill-list/index.html",
+  directives: [RatingComponent, FORM_DIRECTIVES, CORE_DIRECTIVES],
   providers: [SkillMapService]
 })
 export class SkillListPage {

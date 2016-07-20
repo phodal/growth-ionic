@@ -1,7 +1,13 @@
 .analytics {
-  .chart {
+  base-chart {
     display: block;
     height: 100%;
+    padding: 1em;
   }
 
+  canvas {
+    width: 100%!important;
+    height: auto!important;;
+    margin: 0 auto;
+  }
 }

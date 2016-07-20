@@ -1,0 +1,75 @@
+.discover {
+  .discover-slide {
+    color: #fff;
+    height: 120px;
+
+    h2 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.8em;
+      color: #fff;
+      padding: 0 2em;
+      text-align: center;
+    }
+    .slide0, .slide1, .slide2 {
+      background-color: $growth-color;
+      color: #ecf0f1;
+    }
+
+    .slide1 {
+      background-color: $growth-blue;
+    }
+    .slide2 {
+      background-color: #009688;
+    }
+  }
+
+  ion-row {
+    flex-wrap: wrap;
+    padding: 0em 3em;
+
+    ion-col {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      text-align: center;
+      padding: 10px 5px;
+    }
+
+    ion-icon {
+      font-size: 30px;
+    }
+
+    .item .item-inner,
+    .item {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+
+      ion-label {
+        text-align: center;
+      }
+    }
+
+    h3 {
+      padding: 0.5em 0;
+      text-align: center;
+    }
+  }
+
+  ion-row.second {
+    text-align: center;
+    ion-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+      padding: 10px 5px;
+    }
+    ion-col.exam {
+
+    }
+    ion-col.community {
+
+    }
+  }
+}

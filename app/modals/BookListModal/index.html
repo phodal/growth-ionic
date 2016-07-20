@@ -14,7 +14,7 @@
 
 <ion-content class="outer-content">
   <ion-list>
-    <ion-item *ngFor="let book of books">
+    <ion-item *ngFor="let book of books" (click)="presentBookDetail(book.slug)">
       {{book.title}}
     </ion-item>
   </ion-list>

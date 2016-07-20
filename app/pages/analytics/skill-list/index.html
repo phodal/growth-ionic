@@ -10,7 +10,7 @@
   <ion-item-sliding *ngFor="let skill of allSkills">
     <ion-item>
       <span class="skill-title">{{skill.skill}}</span>
-      <!--<rating [(ngModel)]="skill.rate" [readonly]="true"></rating>-->
+      <rating [max]="max" [(ngModel)]="skill.rate" [readonly]="true"></rating>
     </ion-item>
   </ion-item-sliding>
 </ion-content>

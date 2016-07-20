@@ -23,10 +23,9 @@ export class Analytics {
     }
   };
   public radarChartType:string = "radar";
-  public radarChartLabels:string[] = ["Coding", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
+  public radarChartLabels:string[] = ["Env", "Build", "Test", "Coding", "DevOps", "Design", "CI"];
   public radarChartData:any = [
-    {data: [65, 59, 90, 81, 56, 55, 40], label: "Series A"},
-    {data: [28, 48, 40, 19, 96, 27, 100], label: "Series B"}
+    {data: [65, 59, 90, 81, 56, 55, 40], label: "Series A"}
   ];
 
   private skillPointAmount;

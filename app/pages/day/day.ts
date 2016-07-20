@@ -28,7 +28,7 @@ export class Day {
 
   presentTodoModal(params) {
     let todoLists = TODO_LISTS["zh-cn"][params.domain];
-    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists});
+    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
     todoModal.present();
   }
 
@@ -66,7 +66,8 @@ export class Day {
     let htmlModal, slug, modalParams;
 
     if (params.type === "book") {
-      htmlModal = this.modalCtrl.create(BookListModal, {domain: params.domain});
+      modalParams = {domain: params.domain};
+      htmlModal = this.modalCtrl.create(BookListModal, modalParams);
     } else if (params.type === "tool") {
       slug = "assets/tool/" + params.domain + ".html";
       modalParams = {slug: slug, pageTitle: "工具"};

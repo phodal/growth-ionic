@@ -18,8 +18,10 @@
 
 @import "../pages/more/index";
 @import "../pages/solution/index";
-@import "../pages/exam/index";
-@import "../pages/community/index";
+@import "../pages/discover/exam/index";
+@import "../pages/discover/community/index";
+@import "../pages/analytics/index";
+@import "../pages/discover/index";
 @import "../pages/day/index";
 
 tabbar,
@@ -35,4 +37,13 @@ tabbar span,
 
 .day .item .item-inner {
   border: none;
+}
+
+rating {
+  float: right;
+
+  ion-icon {
+    color: #ffc107;
+    font-size: 30px;
+  }
 }

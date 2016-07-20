@@ -26,6 +26,6 @@ describe("MyAPP", () => {
   });
 
   it("should have correct footer Home", () => {
-    expect(element(by.css("ion-tabbar a span")).getText()).toContain("GROWTH");
+    expect(element(by.css("ion-tabbar a span")).getText()).toContain("Growth");
   });
 });

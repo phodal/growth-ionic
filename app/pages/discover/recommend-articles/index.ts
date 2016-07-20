@@ -6,7 +6,7 @@ import {HtmlModal} from "../../../modals/HtmlModal/index";
 import {ModalController} from "ionic-angular/index";
 
 @Component({
-  templateUrl: "build/pages/more/recommend-articles/index.html"
+  templateUrl: "build/pages/discover/recommend-articles/index.html"
 })
 export class RecommendArticles {
   private helpArticles;
