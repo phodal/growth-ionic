@@ -27,7 +27,7 @@
 
   ion-row {
     flex-wrap: wrap;
-    padding: 1em 3em;
+    padding: 0em 3em;
 
     ion-col {
       flex: 0 0 33.33%;
@@ -45,9 +45,14 @@
       padding-left: 0;
       padding-right: 0;
       border: none;
+
+      ion-label {
+        text-align: center;
+      }
     }
 
     h3 {
+      padding: 0.5em 0;
       text-align: center;
     }
   }
