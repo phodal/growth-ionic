@@ -3,15 +3,27 @@ import {BOOKS} from "../../../data/BOOKS";
 import * as _ from "lodash";
 import {ModalController} from "ionic-angular/index";
 import {HtmlModal} from "../../../modals/HtmlModal/index";
+import {DOMAIN} from "../../../data/DOMAIN_NAME";
 
 @Component({
   templateUrl: "build/pages/more/recommend-books/index.html"
 })
 export class RecommendBook {
-  private books;
+  private helpBooks;
   constructor(private modalCtrl:ModalController) {
     this.modalCtrl = modalCtrl;
-    this.books = _.orderBy(BOOKS, ["category"], ["asc"]);
+    this.init();
+  }
+
+  init() {
+    this.helpBooks = _.transform(BOOKS["zh-cn"], function (result, value, key) {
+      result.push({domain: key, value: value});
+      return true;
+    }, []);
+  }
+
+  getDomainName(domain) {
+    return DOMAIN[domain];
   }
 
   presentBookDetail(slug) {

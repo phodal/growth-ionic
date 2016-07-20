@@ -16,9 +16,8 @@ export class BookListModal {
     let domain = params.get("domain");
 
     this.modalCtrl = modalCtrl;
-    this.books = BOOKS.filter(function(el){
-      return el.category === domain;
-    });
+    console.log(domain, BOOKS[domain]);
+    this.books = BOOKS["zh-cn"][domain];
   }
   dismiss() {
     this.viewCtrl.dismiss();
