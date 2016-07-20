@@ -11,8 +11,8 @@
     <ion-item-divider light>
       <span class="title">{{getDomainName(domainArticles.domain)}}</span>
     </ion-item-divider>
-    <ion-item *ngFor="let article of domainArticles.value" (click)="presentHtmlModal({slug: article.slug})">
+    <button ion-item *ngFor="let article of domainArticles.value" (click)="presentHtmlModal({slug: article.slug})">
       {{article.title}}
-    </ion-item>
+    </button>
   </ion-item-group>
 </ion-content>
