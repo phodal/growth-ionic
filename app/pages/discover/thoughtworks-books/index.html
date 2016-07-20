@@ -6,6 +6,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="recommend-books">
-  
+<ion-content class="tw-books">
+  <ion-item-group>
+    <ion-item-divider light>
+      <span class="title">{{twbooks.practical.name}}</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let book of twbooks.practical.books.basic">
+      {{book}}
+    </button>
+    <button ion-item *ngFor="let book of twbooks.practical.books.intermediate">
+      {{book}}
+    </button>
+    <button ion-item *ngFor="let book of twbooks.practical.books.advanced">
+      {{book}}
+    </button>
+  </ion-item-group>
 </ion-content>

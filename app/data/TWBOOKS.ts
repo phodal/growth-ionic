@@ -68,7 +68,7 @@ TWBOOKS["zh-cn"] = {
       ]
     }
   },
-  "methodology": {
+  "leadership": {
     name: "思想与领导力",
     books: {
       "basic": [
