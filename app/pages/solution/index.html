@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content class="solution">
-  <ion-card *ngFor="let solution of solutions">
+  <ion-card *ngFor="let solution of solutions" (click)="presentSolutionDetail(solution.slug)">
     <ion-item>
       <h2>{{solution.name}}</h2>
     </ion-item>
