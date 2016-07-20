@@ -1,0 +1,16 @@
+.discover {
+  ion-icon {
+    font-size: 50px;
+  }
+
+  ion-row {
+    flex-wrap: wrap;
+  }
+
+  ion-col {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: center;
+    padding: 10px 5px;
+  }
+}
