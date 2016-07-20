@@ -6,9 +6,9 @@ import {Component} from "@angular/core";
   templateUrl: "build/modals/TodoModal/index.html"
 })
 export class TodoModal {
-  private todoLists;
+  private todoLists = [];
   private items;
-  private doneItems;
+  private doneItems = [];
   private localStorage;
   private domain;
 
@@ -25,6 +25,7 @@ export class TodoModal {
     this.items = this.todoLists;
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i] === item) {
+        item.checked = true;
         this.doneItems.push(item);
         this.items.splice(i, 1);
         this.addDomainItemInLocalStorage(this.items, this.doneItems);
@@ -33,9 +34,16 @@ export class TodoModal {
   }
 
   getDomainItemFromLocalStorage() {
+    let self = this;
     this.localStorage.get(this.domain).then(function (data) {
-      this.todoLists = JSON.parse(data).todoLists;
-      this.doneItems = JSON.parse(data).doneItems;
+      if (data) {
+        let dataWithParsed = JSON.parse(data);
+
+        if (dataWithParsed.todoLists && dataWithParsed.doneItems) {
+          self.todoLists = dataWithParsed.todoLists;
+          self.doneItems = dataWithParsed.doneItems;
+        }
+      }
     });
   }
 
