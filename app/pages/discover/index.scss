@@ -33,7 +33,7 @@
       flex: 0 0 33.33%;
       max-width: 33.33%;
       text-align: center;
-      padding: 10px 5px;
+      padding: 5px 5px;
     }
 
     ion-icon {
@@ -63,11 +63,23 @@
       flex: 0 0 50%;
       max-width: 50%;
       text-align: center;
-      padding: 10px 5px;
+      padding: 10px 5px 2px;
+    }
+
+    ion-icon {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+    .item-inner {
+      margin-left: 0px;
     }
     ion-col.exam {
 
     }
+
     ion-col.community {
 
     }

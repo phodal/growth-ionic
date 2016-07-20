@@ -21,14 +21,24 @@
   </div>
 
   <ion-row class="second">
-    <ion-col class="exam" (click)="openExamPage()"><h3>技能测验</h3></ion-col>
-    <ion-col class="community" (click)="openCommunityPage()"><h3>社区交流</h3></ion-col>
+    <ion-col class="exam" (click)="openExamPage()">
+      <ion-item>
+        <ion-icon name="ios-stats-outline" item-left></ion-icon>
+        <h3>技能测验</h3>
+      </ion-item>
+    </ion-col>
+    <ion-col class="community" (click)="openCommunityPage()">
+      <ion-item>
+        <ion-icon name="ios-people-outline" item-left></ion-icon>
+        <h3>社区交流</h3>
+      </ion-item>
+    </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
       <ion-item>
-        <ion-icon name="git-network"></ion-icon>
+        <ion-icon name="ios-git-network-outline"></ion-icon>
         <h3>读书路线</h3>
       </ion-item>
     </ion-col>
