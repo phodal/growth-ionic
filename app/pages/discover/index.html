@@ -11,11 +11,11 @@
     <ion-slides pager>
       <ion-slide class="slide1">
         <p>读书路线</p>
-        <h2>TODO</h2>
+        <h3>TODO</h3>
       </ion-slide>
       <ion-slide class="slide2">
         <p>成长路线</p>
-        <h2>TODO</h2>
+        <h3>TODO</h3>
       </ion-slide>
     </ion-slides>
   </div>
@@ -26,15 +26,33 @@
   </ion-row>
 
   <ion-row>
-    <ion-col><ion-icon name="apps"></ion-icon></ion-col>
-    <ion-col><ion-icon name="lock"></ion-icon></ion-col>
-    <ion-col><ion-icon name="key"></ion-icon></ion-col>
-    <ion-col><ion-icon name="unlock"></ion-icon></ion-col>
+    <ion-col>
+      <ion-icon name="git-network"></ion-icon>
+      <ion-item>
+        <h3>读书路线</h3>
+      </ion-item>
+    </ion-col>
 
-    <ion-col><ion-icon name="map"></ion-icon></ion-col>
-    <ion-col><ion-icon name="navigate"></ion-icon></ion-col>
-    <ion-col><ion-icon name="pin"></ion-icon></ion-col>
-    <ion-col><ion-icon name="locate"></ion-icon></ion-col>
+    <ion-col (click)="openRecommendBookPage()">
+      <ion-icon ios="ios-folder-outline" md="ios-folder-outline"></ion-icon>
+      <ion-item>
+        <h3>推荐书籍</h3>
+      </ion-item>
+    </ion-col>
+
+    <ion-col (click)="openRecommendArticlePage()">
+      <ion-icon ios="ios-book-outline" md="ios-book-outline"></ion-icon>
+      <ion-item>
+        <h3>推荐文章</h3>
+      </ion-item>
+    </ion-col>
+
+    <ion-col (click)="launch('https://github.com/phodal/growth')">
+      <ion-icon ios="ios-cloud-outline" md="ios-cloud-outline"></ion-icon>
+      <ion-item>
+        <h3>电子书版本</h3>
+      </ion-item>
+    </ion-col>
   </ion-row>
 
 </ion-content>

@@ -1,5 +1,4 @@
 .discover {
-
   .discover-slide {
     color: #fff;
     height: 120px;
@@ -28,6 +27,7 @@
 
   ion-row {
     flex-wrap: wrap;
+    padding: 1em 3em;
 
     ion-col {
       flex: 0 0 33.33%;
@@ -37,9 +37,19 @@
     }
 
     ion-icon {
-      font-size: 50px;
+      font-size: 30px;
     }
 
+    .item .item-inner,
+    .item {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+    }
+
+    h3 {
+      text-align: center;
+    }
   }
 
   ion-row.second {

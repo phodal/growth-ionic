@@ -1,14 +1,17 @@
 import {Component} from "@angular/core";
 import {CommunityPage} from "./community/index";
 import {ExamPage} from "./exam/index";
-import {NavController} from "ionic-angular/index";
+import {NavController, Platform} from "ionic-angular/index";
+import {RecommendBook} from "./recommend-books/index";
+import {RecommendArticles} from "./recommend-articles/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
 })
 export class DiscoverPage {
-  constructor(public nav:NavController) {
+  constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
+    this.platform = platform;
   }
 
   openExamPage () {
@@ -17,5 +20,18 @@ export class DiscoverPage {
 
   openCommunityPage () {
     this.nav.push(CommunityPage);
+  }
+
+  openRecommendBookPage() {
+    this.nav.push(RecommendBook);
+  }
+  openRecommendArticlePage() {
+    this.nav.push(RecommendArticles);
+  }
+
+  launch(url) {
+    this.platform.ready().then(() => {
+      window.open(url, "_system", "location=true");
+    });
   }
 }

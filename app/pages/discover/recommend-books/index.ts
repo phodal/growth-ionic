@@ -6,7 +6,7 @@ import {HtmlModal} from "../../../modals/HtmlModal/index";
 import {DOMAIN} from "../../../data/DOMAIN_NAME";
 
 @Component({
-  templateUrl: "build/pages/more/recommend-books/index.html"
+  templateUrl: "build/pages/discover/recommend-books/index.html"
 })
 export class RecommendBook {
   private helpBooks;
