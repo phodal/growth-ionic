@@ -36,8 +36,8 @@
     padding: 0 12px 12px 12px;
 
     ion-col {
-      flex: 0 0 32%;
-      max-width: 32%;
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
       text-align: center;
       background: #fff;
     }
@@ -66,15 +66,14 @@
   }
 
   ion-row.zones {
-    padding: 0 12px 12px 7px;
-
     ion-icon {
       padding: 12px 0 12px 0;
     }
+
     ion-col {
-      margin-left: 5px;
-      margin-top: 5px;
       padding: 5px 5px;
+      border: 3px solid $growth-background;
+      border-radius: 6px;
     }
   }
   ion-row.second {
@@ -86,6 +85,7 @@
       max-width: 50%;
       text-align: center;
       padding: 2px 5px;
+      border: 3px solid $growth-background;
     }
 
     ion-icon {
