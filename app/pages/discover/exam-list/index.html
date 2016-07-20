@@ -8,19 +8,19 @@
 
 <ion-content class="exam">
   <ion-list>
-    <button ion-item>
+    <button ion-item (click)="openExamDetailPage('HTML')">
       HTML
     </button>
-    <button ion-item>
+    <button ion-item (click)="openExamDetailPage('CSS')">
       CSS
     </button>
-    <button ion-item>
+    <button ion-item (click)="openExamDetailPage('JAVASCRIPT')">
       JavaScript
     </button>
-    <button ion-item>
+    <button ion-item (click)="openExamDetailPage('FE')">
       前端
     </button>
-    <button ion-item>
+    <button ion-item (click)="openExamDetailPage('NODEJS')">
       Node.js
     </button>
   </ion-list>

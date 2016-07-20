@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {CommunityPage} from "./community/index";
-import {ExamPage} from "./exam/index";
+import {ExamListPage} from "./exam-list/index";
 import {NavController, Platform} from "ionic-angular/index";
 import {RecommendBook} from "./recommend-books/index";
 import {RecommendArticles} from "./recommend-articles/index";
@@ -15,7 +15,7 @@ export class DiscoverPage {
   }
 
   openExamPage () {
-    this.nav.push(ExamPage);
+    this.nav.push(ExamListPage);
   }
 
   openCommunityPage () {
