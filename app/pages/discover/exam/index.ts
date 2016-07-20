@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: "build/pages/exam/index.html",
+  templateUrl: "build/pages/discover/exam/index.html",
 })
 export class ExamPage {
   constructor() {

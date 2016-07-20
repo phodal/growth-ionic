@@ -7,6 +7,24 @@
 </ion-header>
 
 <ion-content class="discover">
+  <div class="discover-slide">
+    <ion-slides pager>
+      <ion-slide class="slide1">
+        <p>读书路线</p>
+        <h2>TODO</h2>
+      </ion-slide>
+      <ion-slide class="slide2">
+        <p>成长路线</p>
+        <h2>TODO</h2>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-row class="second">
+    <ion-col class="exam" (click)="openExamPage()"><h3>技能测验</h3></ion-col>
+    <ion-col class="community" (click)="openCommunityPage()"><h3>社区交流</h3></ion-col>
+  </ion-row>
+
   <ion-row>
     <ion-col><ion-icon name="apps"></ion-icon></ion-col>
     <ion-col><ion-icon name="lock"></ion-icon></ion-col>
