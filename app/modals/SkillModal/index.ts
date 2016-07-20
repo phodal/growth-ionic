@@ -28,8 +28,11 @@ export class SkillModal {
     this.viewCtrl.dismiss();
   }
 
-  setStar(skill, $event) {
-    let data = {skill: skill.text, ratings: $event};
-    this.skillMapService.addSkill(data);
+  setStar(skill) {
+    if (skill.rate) {
+      let data = {skill: skill.text, ratings: skill.rate};
+      this.skillMapService.addSkill(data);
+    }
+
   }
 }
