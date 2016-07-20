@@ -1,4 +1,7 @@
 .discover {
+  ion-label {
+    margin: 0;
+  }
   .discover-slide {
     color: #fff;
     height: 120px;
@@ -27,7 +30,7 @@
 
   ion-row {
     flex-wrap: wrap;
-    padding: 0em 3em;
+    padding: 1em 1em;
 
     ion-col {
       flex: 0 0 33.33%;
@@ -59,6 +62,8 @@
 
   ion-row.second {
     text-align: center;
+    padding: 1em 2em;
+
     ion-col {
       flex: 0 0 50%;
       max-width: 50%;
@@ -72,9 +77,11 @@
 
     h3 {
       font-size: 18px;
+      text-align: left;
+      padding-left: 12px;
     }
     .item-inner {
-      margin-left: 0px;
+      margin-left: 0;
     }
     ion-col.exam {
 
