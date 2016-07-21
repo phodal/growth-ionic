@@ -30,15 +30,15 @@ export class ExamDetailPage {
   ionViewWillEnter() {
     let tempPages:PageObject[] = [];
     tempPages.push({iconName: "ionic"});
-    tempPages.push({iconName: "cloud-outline"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "cloud-outline"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "cloud-outline"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "cloud-outline"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "cloud-outline"});
+    tempPages.push({iconName: "aperture"});
+    tempPages.push({iconName: "at"});
+    tempPages.push({iconName: "baseball"});
+    tempPages.push({iconName: "basket"});
+    tempPages.push({iconName: "beer"});
+    tempPages.push({iconName: "bicycle"});
+    tempPages.push({iconName: "boat"});
+    tempPages.push({iconName: "bonfire"});
+    tempPages.push({iconName: "bowtie"});
     this.pages = tempPages;
     this.pageChangeAnimationReady();
   }
