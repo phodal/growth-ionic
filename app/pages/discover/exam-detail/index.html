@@ -9,8 +9,20 @@
              [class.emerald]="activeIndex === 7"
              [class.carrot]="activeIndex === 8"
              [class.red]="activeIndex === 9"
-             (swipeleft)="swipeLeftToRight()" (swiperight)="swipeRightToLeft()">
+             (swipeleft)="swipeLeftToRight()"
+             (swiperight)="swipeRightToLeft()">
+
+  <ion-buttons end>
+    <button dark outline (click)="endExam()">
+      结束
+    </button>
+  </ion-buttons>
+
+
   <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
-  <paging-component [pages]="pages" [selectedIndex]="nextIndex"
-                    (animationReady)="pageChangeAnimationReady($event)"></paging-component>
+  <paging-component [pages]="pages"
+                    [selectedIndex]="nextIndex"
+                    (animationReady)="pageChangeAnimationReady($event)">
+  </paging-component>
+
 </ion-content>

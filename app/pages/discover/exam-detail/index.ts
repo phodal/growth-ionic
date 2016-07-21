@@ -1,7 +1,7 @@
 import {Component, ViewChild} from "@angular/core";
 import {PagingComponent, PageObject, AnimationReadyEvent} from "../../effect/paging-conponents";
 import {BodyContent} from "./body-content";
-import {NavParams} from "ionic-angular/index";
+import {NavParams, NavController} from "ionic-angular/index";
 import {QUIZS} from "../../../data/QUIZS";
 import * as _ from "lodash";
 
@@ -21,7 +21,7 @@ export class ExamDetailPage {
   private allQuestions;
   private questionsWithShuffle;
 
-  constructor(public params:NavParams) {
+  constructor(public params:NavParams, public nav:NavController) {
     this.domain = params.get("domain");
     this.allQuestions = QUIZS[this.domain];
     this.questionsWithShuffle = this.shuffleQuestion(this.allQuestions);
@@ -55,10 +55,14 @@ export class ExamDetailPage {
     }
   }
 
+  endExam() {
+    this.nav.pop();
+  }
+
   pageChangeAnimationReady(event:AnimationReadyEvent = {animation: null}) {
     let questions = this.questionsWithShuffle;
-    if (this.questionsWithShuffle.length > 10) {
-      questions = _.dropRight(questions, this.questionsWithShuffle.length - 10);
+    if (this.questionsWithShuffle.length > this.questionsNum) {
+      questions = _.dropRight(questions, this.questionsWithShuffle.length - this.questionsNum);
     }
     this.bodyContent.setQuestions(questions);
     this.bodyContent.processTransition(this.activeIndex, this.nextIndex, event.animation).then(() => {
