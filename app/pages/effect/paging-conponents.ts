@@ -19,9 +19,17 @@ import {ANIMATION_DURATION} from "../../utils/constants";
   selector: `paging-component`,
   template: `
     <div class="circle-animation-helper" #zoomCircleRef
-    [class.blue]="selectedIndex === 0"
-    [class.green]="selectedIndex === 1"
-    [class.purple]="selectedIndex === 2"></div>
+     [class.blue]="selectedIndex === 0"
+     [class.green]="selectedIndex === 1"
+     [class.purple]="selectedIndex === 2"
+     [class.turqoise]="selectedIndex === 3"
+     [class.river]="selectedIndex === 4"
+     [class.asphalt]="selectedIndex === 5"
+     [class.concrete]="selectedIndex === 6"
+     [class.emerald]="selectedIndex === 7"
+     [class.carrot]="selectedIndex === 8"
+     [class.red]="selectedIndex === 9"
+    ></div>
     <div class="paging-container" #container [style.opacity]="initialized ? 1.0 : 0.0">
       <div *ngFor="let pageObject of pages; let i = index" class="paging-circle-wrapper" #pagingCircleWrapperElements>
         <div class="paging-circle">
