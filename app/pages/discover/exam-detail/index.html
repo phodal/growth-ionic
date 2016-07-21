@@ -1,11 +1,9 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      技能测验
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content class="exam-detail">
-
+<ion-content #content class="content" text-center
+             [class.blue]="activeIndex === 0"
+             [class.green]="activeIndex === 1"
+             [class.purple]="activeIndex === 2"
+             (swipeleft)="swipeLeftToRight()" (swiperight)="swipeRightToLeft()">
+  <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
+  <paging-component [pages]="pages" [selectedIndex]="nextIndex"
+                    (animationReady)="pageChangeAnimationReady($event)"></paging-component>
 </ion-content>

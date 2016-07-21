@@ -10,3 +10,118 @@
     }
   }
 }
+
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+.white {
+  color: #FFF;
+}
+
+.blue {
+  background-color: #6691B5;
+}
+
+.blue-text {
+  color: #6691B5;
+}
+
+.green {
+  background-color: #64B2B5;
+}
+
+.green-text {
+  color: #64B2B5;
+}
+
+.purple {
+  background-color: #9B90BC;
+}
+
+.purple-text {
+  color: #9B90BC;
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
+
+paging-component {
+  display: block;
+  height: 100px;
+}
+
+.paging-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paging-circle-wrapper {
+  padding: 0px 5px 0px 5px;
+  display: inline-block;
+}
+
+.paging-circle {
+  transform-origin: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid #FFF;
+}
+
+.inner-circle {
+  border-radius: inherit;
+  height: 100%;
+  background-color: #FFF;
+  opacity: 0.0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paging-icon {
+  font-size: 30px;
+}
+
+body-content {
+  position: relative;
+  display: block;
+  height: 80%;
+  pointer-events: none;
+}
+
+.content-nav, .content-nav > ion-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-nav > .nav-decor {
+  display: none !important;
+}
+
+.content-container {
+  max-width: 355px;
+}
+
+.content-icon {
+  font-size: 200px;
+}
+
+.circle-animation-helper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.0;
+}

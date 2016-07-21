@@ -3,6 +3,7 @@ import {StatusBar} from "ionic-native";
 import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 import "../node_modules/chart.js/dist/Chart.bundle.min.js";
+import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "./pages/effect/content-transition";
 
 @Component({
   template: "<ion-nav [root]='rootPage'></ion-nav>"
@@ -34,6 +35,8 @@ export class MyApp {
 }
 
 ionicBootstrap(MyApp, null, {
+  bodyContentEnter: TRANSITION_IN_KEY,
+  bodyContentLeave: TRANSITION_OUT_KEY,
   tabbarPlacement: "bottom",
   backButtonText: "",
   modalEnter: "modal-slide-in",
