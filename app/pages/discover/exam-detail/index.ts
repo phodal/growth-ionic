@@ -7,7 +7,7 @@ import {BodyContent} from "./body-content";
   templateUrl: "build/pages/discover/exam-detail/index.html",
 })
 export class ExamDetailPage {
-  @ViewChild('bodyContent') bodyContent: BodyContent;
+  @ViewChild("bodyContent") bodyContent: BodyContent;
 
   private pages: PageObject[];
 
@@ -19,9 +19,9 @@ export class ExamDetailPage {
 
   ionViewWillEnter() {
     let tempPages: PageObject[] = [];
-    tempPages.push({iconName: 'ionic'});
-    tempPages.push({iconName: 'cloud-outline'});
-    tempPages.push({iconName: 'ionitron'});
+    tempPages.push({iconName: "ionic"});
+    tempPages.push({iconName: "cloud-outline"});
+    tempPages.push({iconName: "ionitron"});
     this.pages = tempPages;
     this.pageChangeAnimationReady();
   }

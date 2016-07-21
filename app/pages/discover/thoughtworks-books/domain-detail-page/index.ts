@@ -10,6 +10,6 @@ export class DomainDetailPage {
   private domain;
   constructor(public params:NavParams) {
     this.domain = params.get("domain");
-    this.books = TWBOOKS['zh-cn'][this.domain]['books'];
+    this.books = TWBOOKS["zh-cn"][this.domain]["books"];
   }
 }
