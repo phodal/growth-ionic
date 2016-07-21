@@ -27,10 +27,10 @@
 
 
 <ion-content class="day">
-  <div [ngSwitch]="basicView">
+  <div [ngSwitch]="basicView" class="day-segment">
     <div *ngSwitchCase="'articleView'">
       <div class="intro">
-        <p>这里有你所需要了解的一些基本信息。</p>
+        <p>了解关于工程流程的基本信息</p>
       </div>
       <ion-item-group *ngFor="let articleSection of dayView.articlesView; let i = index;">
         <ion-item-divider light>
@@ -53,7 +53,7 @@
 
     <div *ngSwitchCase="'growthView'">
       <div class="intro">
-        <p>这里有你所需要掌握的一些技能。</p>
+        <p>扩展自己的知识视野</p>
       </div>
       <ion-item-group *ngFor="let growthSection of dayView.growthView">
         <ion-item-divider light>{{growthSection.title}}</ion-item-divider>
@@ -66,7 +66,7 @@
 
     <div *ngSwitchCase="'todoView'">
       <div class="intro">
-        <p>这里有你所需要尝试的一些内容。</p>
+        <p>尝试那些过来人的尝试</p>
       </div>
       <button ion-item *ngFor="let todoSection of dayView.todoView" (click)="presentTodoModal(todoSection.info)">
         <span class="title">{{todoSection.title}}</span>
