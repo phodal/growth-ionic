@@ -15,8 +15,17 @@
     p {
       font-size: 0.8em;
       color: #fff;
-      padding: 0 2em;
-      text-align: center;
+      padding: 0 20px;
+      text-align: left;
+
+      span {
+        border-left: 2px solid #fff;
+        padding-left: 12px;
+      }
+    }
+    h3 {
+      padding: 0 20px;
+      text-align: left;
     }
     .slide0, .slide1, .slide2 {
       background-color: $growth-color;
