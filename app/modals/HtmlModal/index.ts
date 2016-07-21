@@ -29,4 +29,8 @@ export class HtmlModal {
   scrollToTop() {
     this.content.scrollToTop();
   }
+
+  createBookmark() {
+
+  }
 }

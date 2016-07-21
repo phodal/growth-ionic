@@ -9,6 +9,11 @@
         <ion-icon name="md-close" showWhen="android"></ion-icon>
       </button>
     </ion-buttons>
+    <ion-buttons end *ngIf="isArticle">
+      <button (click)="createBookmark()">
+        <ion-icon name="bookmark"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
