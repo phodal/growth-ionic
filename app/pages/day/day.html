@@ -27,14 +27,11 @@
 
 
 <ion-content class="day">
-  <div [ngSwitch]="basicView" class="day-view-switch">
-    <ion-list *ngSwitchCase="'articleView'">
-
+  <div [ngSwitch]="basicView">
+    <div *ngSwitchCase="'articleView'">
       <div class="intro">
-        <h4>文章</h4>
         <p>这里有你所需要了解的一些基本信息。</p>
       </div>
-
       <ion-item-group *ngFor="let articleSection of dayView.articlesView; let i = index;">
         <ion-item-divider light>
           <span class="title">{{articleSection.title}}</span>
@@ -46,16 +43,16 @@
             <ion-icon name="information-circle"></ion-icon>
           </button>
         </ion-item-divider>
-        <button ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
+        <button ion-item *ngFor="let article of articleSection.articles"
+                (click)="presentHtmlModal({slug: article.slug})">
           {{article.title}}
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
       </ion-item-group>
-    </ion-list>
+    </div>
 
-    <ion-list *ngSwitchCase="'growthView'">
+    <div *ngSwitchCase="'growthView'">
       <div class="intro">
-        <h4>Growth</h4>
         <p>这里有你所需要掌握的一些技能。</p>
       </div>
       <ion-item-group *ngFor="let growthSection of dayView.growthView">
@@ -65,17 +62,16 @@
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
       </ion-item-group>
-    </ion-list>
+    </div>
 
-    <ion-list *ngSwitchCase="'todoView'">
+    <div *ngSwitchCase="'todoView'">
       <div class="intro">
-        <h4>TODO</h4>
         <p>这里有你所需要尝试的一些内容。</p>
       </div>
       <button ion-item *ngFor="let todoSection of dayView.todoView" (click)="presentTodoModal(todoSection.info)">
         <span class="title">{{todoSection.title}}</span>
         <ion-icon name="arrow-right" item-right></ion-icon>
       </button>
-    </ion-list>
+    </div>
   </div>
 </ion-content>
