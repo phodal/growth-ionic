@@ -41,6 +41,19 @@ export class SkillMapService {
     });
   };
 
+  countSkillsByDomain(callback) {
+    let points = [];
+    this.getSkills().then(function (skills) {
+      if (skills) {
+        skills = JSON.parse(skills);
+        _.each(skills, function (point) {
+          points = points + point;
+        });
+      }
+      callback(points);
+    });
+  }
+
   addSkill(data) {
     let self = this;
     this.getSkills().then(function (skills) {

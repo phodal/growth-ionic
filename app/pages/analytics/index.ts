@@ -4,7 +4,7 @@ import {FORM_DIRECTIVES} from "@angular/forms";
 import {CORE_DIRECTIVES, NgClass} from "@angular/common";
 import {CHART_DIRECTIVES} from "ng2-charts/ng2-charts";
 import {NavController} from "ionic-angular/index";
-import {SkillListPage} from "./skill-list/index";
+import {SkillListPage} from "../main/skill-list/index";
 
 @Component({
   templateUrl: "build/pages/analytics/index.html",

@@ -2,6 +2,7 @@ import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {Day} from "../day/day";
 import {Analytics} from "../analytics/index";
+import {SkillListPage} from "./skill-list/index";
 
 @Component({
   templateUrl: "build/pages/main/main.html"
@@ -47,5 +48,9 @@ export class MainView {
 
   openAnalyticsPage() {
     this.nav.push(Analytics);
+  }
+
+  openAllSkillListPage() {
+    this.nav.push(SkillListPage);
   }
 }
