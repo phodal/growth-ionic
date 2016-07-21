@@ -32,59 +32,40 @@
       color: #ecf0f1;
     }
 
-    .slide1:after {
-      content: "\f187";
-      font-family: "Ionicons";
-      font-style: normal;
-      font-weight: 200;
-      text-decoration: inherit;
-      position: absolute;
-      font-size: 100px;
-      color: white;
-      top: 50%;
-      right: 20px;
-      margin: -50px 0 0 0;
-      z-index: 1;
-      opacity: 0.1;
-    }
-
-    .slide2:after {
-      content: "\f175";
-      font-family: "Ionicons";
-      font-style: normal;
-      font-weight: 200;
-      text-decoration: inherit;
-      position: absolute;
-      font-size: 100px;
-      color: white;
-      top: 50%;
-      right: 20px;
-      margin: -50px 0 0 0;
-      z-index: 1;
-      opacity: 0.1;
-    }
-
-    .slide0:after {
-      content: "\f12c";
-      font-family: "Ionicons";
-      font-style: normal;
-      font-weight: 200;
-      text-decoration: inherit;
-      position: absolute;
-      font-size: 100px;
-      color: white;
-      top: 50%;
-      right: 20px;
-      margin: -50px 0 0 0;
-      z-index: 1;
-      opacity: 0.1;
-    }
-
     .slide1 {
       background-color: $growth-blue;
     }
     .slide2 {
-      background-color: #009688;
+      background-color: $growth-yellow;
+    }
+
+    .slide0:after,
+    .slide1:after,
+    .slide2:after {
+      font-family: "Ionicons";
+      font-style: normal;
+      font-weight: 200;
+      text-decoration: inherit;
+      position: absolute;
+      font-size: 100px;
+      color: white;
+      top: 50%;
+      right: 20px;
+      margin: -50px 0 0 0;
+      z-index: 1;
+      opacity: 0.1;
+    }
+
+    .slide1:after {
+      content: "\f187";
+    }
+
+    .slide2:after {
+      content: "\f175";
+    }
+
+    .slide0:after {
+      content: "\f12c";
     }
   }
 
