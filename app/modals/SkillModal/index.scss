@@ -1,5 +1,15 @@
 .skill-modal {
-  .skill-title {
-    line-height: 1.8em;
+  ion-label {
+    margin: 3px 8px 3px 0;
+    line-height: 36px;
+  }
+
+  rating {
+    float: right;
+
+    ion-icon {
+      color: #ffc107;
+      font-size: 36px;
+    }
   }
 }
