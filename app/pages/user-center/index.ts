@@ -4,7 +4,7 @@ import {NavController} from "ionic-angular/index";
 @Component({
   templateUrl: "build/pages/more/index.html"
 })
-export class MorePage {
+export class UserCenterPage {
   constructor(public nav:NavController) {
     this.nav = nav;
   }
