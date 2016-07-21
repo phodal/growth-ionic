@@ -32,13 +32,13 @@ export class ExamDetailPage {
     tempPages.push({iconName: "ionic"});
     tempPages.push({iconName: "cloud-outline"});
     tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "cloud-outline"});
     tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "cloud-outline"});
     tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "cloud-outline"});
     tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "ionitron"});
-    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "cloud-outline"});
     this.pages = tempPages;
     this.pageChangeAnimationReady();
   }
@@ -56,7 +56,11 @@ export class ExamDetailPage {
   }
 
   pageChangeAnimationReady(event:AnimationReadyEvent = {animation: null}) {
-    this.bodyContent.setQuestions(this.questionsWithShuffle);
+    let questions = this.questionsWithShuffle;
+    if (this.questionsWithShuffle.length > 10) {
+      questions = _.dropRight(questions, this.questionsWithShuffle.length - 10);
+    }
+    this.bodyContent.setQuestions(questions);
     this.bodyContent.processTransition(this.activeIndex, this.nextIndex, event.animation).then(() => {
       this.activeIndex = this.nextIndex;
     });
