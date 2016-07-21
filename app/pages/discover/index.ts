@@ -10,6 +10,12 @@ import {TWBookPage} from "./thoughtworks-books/index";
   templateUrl: "build/pages/discover/index.html"
 })
 export class DiscoverPage {
+  private slideOptions = {
+    initialSlide: 0,
+    autoplay: 3000,
+    loop: true
+  };
+
   constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
     this.platform = platform;

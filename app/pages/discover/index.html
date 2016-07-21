@@ -8,7 +8,7 @@
 
 <ion-content class="discover">
   <div class="discover-slide">
-    <ion-slides pager>
+    <ion-slides pager [options]="slideOptions">
       <ion-slide class="slide1" (click)="openThoughtWorksBookPage()">
         <p><span>读书路线</span></p>
         <p>不止于读书，还要有合适的路线</p>
