@@ -3,7 +3,7 @@ import {CLEAN_CODE} from "./quiz/CLEAN_CODE";
 import {HTML} from "./quiz/HTML";
 import {CSS} from "./quiz/CSS";
 import {JAVASCRIPT} from "./quiz/JAVASCRIPT";
-import {NODE} from "./quiz/NODE";
+import {NODEJS} from "./quiz/NODEJS";
 
 export const QUIZS = {
   fe: FE,
@@ -11,5 +11,5 @@ export const QUIZS = {
   css: CSS,
   html: HTML,
   javascript: JAVASCRIPT,
-  node: NODE
+  nodejs: NODEJS
 };

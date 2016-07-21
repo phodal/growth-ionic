@@ -10,7 +10,7 @@ export class ExamListPage {
     this.nav = nav;
   }
 
-  openExamDetailPage() {
-    this.nav.push(ExamDetailPage);
+  openExamDetailPage(domain) {
+    this.nav.push(ExamDetailPage, {domain: domain});
   }
 }
