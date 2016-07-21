@@ -36,6 +36,14 @@ tabbar span,
   color: #fff;
 }
 
+rating {
+  float: right;
+
+  ion-icon {
+    color: #ffc107;
+  }
+}
+
 .day .item .item-inner {
   border: none;
 }
