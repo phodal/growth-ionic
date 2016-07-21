@@ -32,6 +32,13 @@ export class ExamDetailPage {
     tempPages.push({iconName: "ionic"});
     tempPages.push({iconName: "cloud-outline"});
     tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
+    tempPages.push({iconName: "ionitron"});
     this.pages = tempPages;
     this.pageChangeAnimationReady();
   }
@@ -49,6 +56,7 @@ export class ExamDetailPage {
   }
 
   pageChangeAnimationReady(event:AnimationReadyEvent = {animation: null}) {
+    this.bodyContent.setQuestions(this.questionsWithShuffle);
     this.bodyContent.processTransition(this.activeIndex, this.nextIndex, event.animation).then(() => {
       this.activeIndex = this.nextIndex;
     });
@@ -60,9 +68,8 @@ export class ExamDetailPage {
       questions.push({
         id: index,
         question: question
-      })
+      });
     });
-    console.log(questions);
     return questions;
   }
 

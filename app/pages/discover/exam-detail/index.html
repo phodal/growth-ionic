@@ -1,7 +1,7 @@
 <ion-content #content class="content" text-center
-             [class.blue]="activeIndex === 0"
-             [class.green]="activeIndex === 1"
-             [class.purple]="activeIndex === 2"
+             [class.blue]="activeIndex <= 3"
+             [class.green]="activeIndex >= 3 && activeIndex < 8"
+             [class.purple]="activeIndex >= 8"
              (swipeleft)="swipeLeftToRight()" (swiperight)="swipeRightToLeft()">
   <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
   <paging-component [pages]="pages" [selectedIndex]="nextIndex"

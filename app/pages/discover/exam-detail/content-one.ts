@@ -1,15 +1,18 @@
 import {Component} from "@angular/core";
+import {NavParams} from "ionic-angular/index";
 
 @Component({
   template: `
   <div text-center padding class="transparent-bg white content-container">
     <ion-icon ios="md-ionic" md="md-ionic" class="content-icon"></ion-icon>
-    <h1>Framework</h1>
-    <span class="white text-div">Hands down the best way to build high performance, cross-platform apps that can run on any screen! 100% free and open-source forever. Available under the MIT license.</span>
+    <h2 class="white text-div">{{question.question}}</h2>
   </div>
   `
 })
 export class PageOne {
-  constructor() {
+  private question;
+
+  constructor(public params:NavParams) {
+    this.question = params.get("question");
   }
 }
