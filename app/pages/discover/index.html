@@ -9,7 +9,7 @@
 <ion-content class="discover">
   <div class="discover-slide">
     <ion-slides pager>
-      <ion-slide class="slide1">
+      <ion-slide class="slide1" (click)="openThoughtWorksBookPage()">
         <p><span>读书路线</span></p>
         <p>不止于读书，还要有合适的路线</p>
       </ion-slide>
@@ -99,7 +99,7 @@
     <ion-col (click)="openThoughtWorksBookPage()">
       <button ion-item>
         <ion-item>
-          <ion-icon name="ios-git-network-outline"></ion-icon>
+          <ion-icon name="ios-bulb-outline"></ion-icon>
           <h3>读书路线</h3>
         </ion-item>
       </button>
