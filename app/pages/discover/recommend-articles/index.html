@@ -8,7 +8,7 @@
 
 <ion-content class="recommend-books">
   <ion-item-group *ngFor="let domainArticles of helpArticles">
-    <ion-item-divider light>
+    <ion-item-divider light sticky>
       <span class="title">{{getDomainName(domainArticles.domain)}}</span>
     </ion-item-divider>
     <button ion-item *ngFor="let article of domainArticles.value" (click)="presentHtmlModal({slug: article.slug})">
