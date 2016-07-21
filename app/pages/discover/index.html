@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      发现
+      探索
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -21,45 +21,68 @@
   </div>
 
   <ion-row class="second">
-    <ion-col class="exam" (click)="openExamPage()"><h3>技能测验</h3></ion-col>
-    <ion-col class="community" (click)="openCommunityPage()"><h3>社区交流</h3></ion-col>
+    <ion-col class="exam" (click)="openExamPage()">
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-stats-outline" item-left></ion-icon>
+          <h3>技能测验</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+    <ion-col class="community" (click)="openCommunityPage()">
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-people-outline" item-left></ion-icon>
+          <h3>社区交流</h3>
+        </ion-item>
+      </button>
+    </ion-col>
   </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <ion-item>
-        <ion-icon name="git-network"></ion-icon>
-        <h3>读书路线</h3>
-      </ion-item>
-    </ion-col>
-
+  <ion-row class="zones">
     <ion-col (click)="openRecommendBookPage()">
-      <ion-item>
-        <ion-icon ios="ios-folder-outline" md="ios-folder-outline"></ion-icon>
-        <h3>推荐书籍</h3>
-      </ion-item>
+      <button ion-item>
+        <ion-item>
+          <ion-icon ios="ios-folder-outline" md="ios-folder-outline"></ion-icon>
+          <h3>推荐书籍</h3>
+        </ion-item>
+      </button>
     </ion-col>
 
     <ion-col (click)="openRecommendArticlePage()">
-      <ion-item>
-        <ion-icon ios="ios-book-outline" md="ios-book-outline"></ion-icon>
-        <h3>推荐文章</h3>
-      </ion-item>
-    </ion-col>
-
-    <ion-col (click)="launch('https://github.com/phodal/growth')">
-      <ion-item>
-        <ion-icon ios="ios-cloud-outline" md="ios-cloud-outline"></ion-icon>
-        <h3>电子书版本</h3>
-      </ion-item>
+      <button ion-item>
+        <ion-item>
+          <ion-icon ios="ios-book-outline" md="ios-book-outline"></ion-icon>
+          <h3>推荐文章</h3>
+        </ion-item>
+      </button>
     </ion-col>
 
     <ion-col>
-      <ion-item>
-        <ion-icon  ios="ios-paper-outline" md="ios-paper-outline"></ion-icon>
-        <h3>TODO Lists</h3>
-      </ion-item>
+      <button ion-item>
+        <ion-item>
+          <ion-icon ios="ios-paper-outline" md="ios-paper-outline"></ion-icon>
+          <h3>TODO Lists</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col (click)="launch('https://github.com/phodal/growth')">
+      <button ion-item>
+        <ion-item>
+          <ion-icon ios="ios-cloud-outline" md="ios-cloud-outline"></ion-icon>
+          <h3>在线阅读</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col (click)="openThoughtWorksBookPage()">
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-git-network-outline"></ion-icon>
+          <h3>读书路线</h3>
+        </ion-item>
+      </button>
     </ion-col>
   </ion-row>
-
 </ion-content>

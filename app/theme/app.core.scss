@@ -18,9 +18,9 @@
 
 @import "../pages/more/index";
 @import "../pages/solution/index";
-@import "../pages/discover/exam/index";
+@import "../pages/discover/exam-list/index";
+@import "../pages/discover/exam-detail/index";
 @import "../pages/discover/community/index";
-@import "../pages/analytics/index";
 @import "../pages/discover/index";
 @import "../pages/day/index";
 
@@ -35,15 +35,27 @@ tabbar span,
   color: #fff;
 }
 
-.day .item .item-inner {
-  border: none;
-}
-
 rating {
   float: right;
 
   ion-icon {
     color: #ffc107;
-    font-size: 30px;
+    font-size: 24px;
+  }
+}
+
+.day .item .item-inner {
+  border: none;
+}
+
+.skill-modal ion-content,
+.todo-modal ion-content,
+ion-content {
+  background-color: $growth-background;
+}
+
+ion-modal {
+  .html-modal ion-content {
+    background-color: #fff;
   }
 }

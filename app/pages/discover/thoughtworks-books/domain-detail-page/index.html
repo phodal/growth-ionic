@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item-group>
+    <ion-item-divider light>
+      <span class="title">基础篇</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let book of books.basic">
+      {{book}}
+    </button>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider light>
+      <span class="title">进阶篇</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let book of books.intermediate">
+      {{book}}
+    </button>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider light>
+      <span class="title">高级篇</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let book of books.advanced">
+      {{book}}
+    </button>
+  </ion-item-group>
+</ion-content>

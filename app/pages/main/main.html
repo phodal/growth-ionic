@@ -2,7 +2,7 @@
   <ion-navbar>
     <ion-title>Growth</ion-title>
     <ion-buttons end>
-      <button (click)="openAnalyticsPage()">
+      <button (click)="openAllSkillListPage()">
         <ion-icon name="analytics"></ion-icon>
       </button>
     </ion-buttons>
@@ -20,45 +20,38 @@
   </div>
 
   <ion-card class="days">
-     <ion-item (click)="openNavDetailsPage(0)">
+    <button ion-item (click)="openNavDetailsPage(0)">
       <h2>前期准备</h2>
       <p>从这里准备你的技能图谱</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(1)">
+
+    </button>
+    <button ion-item (click)="openNavDetailsPage(1)">
       <h2>从零开始</h2>
       <p>开始的时候，我们就需要搭建构建系统</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(2)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(2)">
       <h2>编码</h2>
       <p>写代码之前，你需要知道哪些事?</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(3)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(3)">
       <h2>上线</h2>
       <p>如何快乐地上线？</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(4)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(4)">
       <h2>数据分析</h2>
       <p>怎样才能开发出用户喜爱的产品?</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(5)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(5)">
       <h2>持续交付</h2>
       <p>有一件事很重要，就是与你一起写代码到老</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(6)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(6)">
       <h2>遗留系统</h2>
       <p>糟糕，我们又玩过火了</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
-    <ion-item (click)="openNavDetailsPage(7)">
+    </button>
+    <button ion-item (click)="openNavDetailsPage(7)">
       <h2>回顾与新架构</h2>
       <p>哈哈，世界又迎来了新的曙光</p>
-      <ion-icon item-right name="arrow-forward"></ion-icon>
-    </ion-item>
+    </button>
   </ion-card>
 </ion-content>

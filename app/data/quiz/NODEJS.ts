@@ -1,4 +1,4 @@
-export const NODE = [
+export const NODEJS = [
   "什么是错误优先的回调函数？",
   "你如何避免回调地狱？",
   "你如何用Node来监听80端口？",

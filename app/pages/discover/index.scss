@@ -1,4 +1,10 @@
 .discover {
+  ion-label {
+    margin: 0;
+  }
+  .item[detail-push] .item-inner, button.item:not([detail-none]) .item-inner, a.item:not([detail-none]) .item-inner {
+    background-image: none;
+  }
   .discover-slide {
     color: #fff;
     height: 120px;
@@ -27,16 +33,18 @@
 
   ion-row {
     flex-wrap: wrap;
-    padding: 0em 3em;
+    padding: 0 12px 12px 12px;
 
     ion-col {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
       text-align: center;
-      padding: 10px 5px;
+      background: #fff;
     }
 
     ion-icon {
+      width: 32px;
+      height: 32px;
       font-size: 30px;
     }
 
@@ -57,17 +65,46 @@
     }
   }
 
+  ion-row.zones {
+    ion-icon {
+      padding: 12px 0 12px 0;
+    }
+
+    ion-col {
+      padding: 5px 5px;
+      border: 3px solid $growth-background;
+      border-radius: 6px;
+    }
+  }
   ion-row.second {
     text-align: center;
+    padding: 12px 12px;
+
     ion-col {
       flex: 0 0 50%;
       max-width: 50%;
       text-align: center;
-      padding: 10px 5px;
+      padding: 2px 5px;
+      border: 3px solid $growth-background;
+    }
+
+    ion-icon {
+      font-size: 32px;
+      padding: 0 0 0 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      text-align: left;
+      padding-left: 12px;
+    }
+    .item-inner {
+      margin-left: 0;
     }
     ion-col.exam {
 
     }
+
     ion-col.community {
 
     }

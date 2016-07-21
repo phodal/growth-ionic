@@ -46,10 +46,10 @@
             <ion-icon name="information-circle"></ion-icon>
           </button>
         </ion-item-divider>
-        <ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
+        <button ion-item *ngFor="let article of articleSection.articles" (click)="presentHtmlModal({slug: article.slug})">
           {{article.title}}
           <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
+        </button>
       </ion-item-group>
     </ion-list>
 
@@ -60,10 +60,10 @@
       </div>
       <ion-item-group *ngFor="let growthSection of dayView.growthView">
         <ion-item-divider light>{{growthSection.title}}</ion-item-divider>
-        <ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
+        <button ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
           <span class="title">{{growth.title}}</span>
           <ion-icon name="arrow-right" item-right></ion-icon>
-        </ion-item>
+        </button>
       </ion-item-group>
     </ion-list>
 
@@ -72,10 +72,10 @@
         <h4>TODO</h4>
         <p>这里有你所需要尝试的一些内容。</p>
       </div>
-      <ion-item *ngFor="let todoSection of dayView.todoView" (click)="presentTodoModal(todoSection.info)">
+      <button ion-item *ngFor="let todoSection of dayView.todoView" (click)="presentTodoModal(todoSection.info)">
         <span class="title">{{todoSection.title}}</span>
         <ion-icon name="arrow-right" item-right></ion-icon>
-      </ion-item>
+      </button>
     </ion-list>
   </div>
 </ion-content>

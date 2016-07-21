@@ -64,10 +64,6 @@ export const DAYS2 = {
     {
       title: "测试",
       info: {domain: "test"}
-    },
-    {
-      title: "编码",
-      info: {domain: "coding"}
     }
   ]
 };

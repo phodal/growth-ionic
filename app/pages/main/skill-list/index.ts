@@ -5,7 +5,7 @@ import {FORM_DIRECTIVES} from "@angular/forms";
 import {RatingComponent} from "../../../components/ratings/index";
 
 @Component({
-  templateUrl: "build/pages/analytics/skill-list/index.html",
+  templateUrl: "build/pages/main/skill-list/index.html",
   directives: [RatingComponent, FORM_DIRECTIVES, CORE_DIRECTIVES],
   providers: [SkillMapService]
 })

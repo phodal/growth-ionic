@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      ThoughtWorks读书路线
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tw-books">
+  <ion-list>
+    <button ion-item (click)="openDomainDetailPage('practical')">
+      编程实践
+    </button>
+    <button ion-item (click)="openDomainDetailPage('architecture')">
+      架构与设计
+    </button>
+    <button ion-item (click)="openDomainDetailPage('methodology')">
+      方法学
+    </button>
+    <button ion-item (click)="openDomainDetailPage('leadership')">
+      思想与领导力
+    </button>
+  </ion-list>
+</ion-content>
