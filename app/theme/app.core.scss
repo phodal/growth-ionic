@@ -14,7 +14,6 @@
 
 @import "./third-partys/markdown";
 @import "./third-partys/highlight";
-@import "layout";
 
 @import "../pages/more/index";
 @import "../pages/solution/index";
@@ -35,13 +34,25 @@ tabbar span,
   color: #fff;
 }
 
-rating {
-  float: right;
+ion-tabbar {
+  background: $growth-color;
 
-  ion-icon {
-    color: #ffc107;
-    font-size: 24px;
+  .tab-button {
+    color: #ccc;
   }
+
+  .tab-button:hover:not(.disable-hover), .tab-button[aria-selected=true] {
+    color: #fff;
+  }
+}
+
+h1[primary], h2[primary], h3[primary], h4[primary], h5[primary], h6[primary], p[primary], span[primary], a:not([button])[primary], small[primary], b[primary], i[primary], strong[primary], em[primary], sub[primary], sup[primary], ion-icon[primary] {
+  color: #fff;
+}
+
+
+.button.activated {
+  background: none;
 }
 
 .day .item .item-inner {
@@ -58,4 +69,22 @@ ion-modal {
   .html-modal ion-content {
     background-color: #fff;
   }
+}
+
+rating {
+  float: right;
+
+  ion-icon {
+    color: #ffc107;
+    font-size: 24px;
+  }
+}
+
+.bar-button-default {
+  color: #ffffff;
+}
+
+.segment-button {
+  color: #fff;
+  border-color: #fff;
 }
