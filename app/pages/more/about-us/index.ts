@@ -1,11 +1,12 @@
 import {Component} from "@angular/core";
+import {CONTRIBUTORS} from "../../../data/CONTRIBUTORS";
 
 @Component({
   templateUrl: "build/pages/more/about-us/index.html"
 })
 export class AboutUs {
-  private books;
+  private contributors;
   constructor() {
-    this.books = "1";
+    this.contributors = CONTRIBUTORS;
   }
 }
