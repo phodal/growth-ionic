@@ -8,18 +8,18 @@
 
 <ion-content class="more">
   <ion-list>
-    <ion-item>
-      <ion-icon ios="ios-bookmark-outline" md="ios-bookmark-outline" item-left></ion-icon>
+    <button ion-item>
       <h2>我的书签</h2>
-    </ion-item>
-    <ion-item>
-      <ion-icon ios="ios-egg-outline" md="ios-egg-outline" item-left></ion-icon>
+      <ion-icon ios="ios-bookmark-outline" md="ios-bookmark-outline" item-left></ion-icon>
+    </button>
+    <button ion-item>
       <h2>我的学习路线</h2>
-    </ion-item>
-    <ion-item (click)="openAllSkillListPage()">
-      <ion-icon name="ios-analytics-outline" item-left></ion-icon>
+      <ion-icon ios="ios-egg-outline" md="ios-egg-outline" item-left></ion-icon>
+    </button>
+    <button ion-item (click)="openAllSkillListPage()">
       <h2>我的技能分布</h2>
-    </ion-item>
+      <ion-icon name="ios-analytics-outline" item-left></ion-icon>
+    </button>
   </ion-list>
 
   <ion-list>
