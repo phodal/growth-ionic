@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController, LoadingController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import 'rxjs/add/operator/map';
+import {ToolboxDetailPage} from "../toolbox-detail/index";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-list/index.html",
@@ -37,5 +38,10 @@ export class ToolboxListPage {
           console.log(err);
         }
       );
+  }
+
+  openToolboxDetailPage(title, url) {
+    let baseUrl = "http://toolbox.phodal.com/";
+    this.nav.push(ToolboxDetailPage, {title: title, url: baseUrl + url})
   }
 }

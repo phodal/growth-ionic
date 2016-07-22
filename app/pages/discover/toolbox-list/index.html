@@ -8,7 +8,7 @@
 
 <ion-content class="toolbox-list">
   <ion-list>
-    <button ion-item *ngFor="let toolbox of toolboxs" (click)="openExamDetailPage(toolbox.path)">
+    <button ion-item *ngFor="let toolbox of toolboxs" (click)="openToolboxDetailPage(toolbox.title, toolbox.path)">
       {{toolbox.title}}
     </button>
   </ion-list>
