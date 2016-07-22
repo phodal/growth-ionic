@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
-import {NavController, LoadingController, NavParams} from "ionic-angular/index";
+import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
-import 'rxjs/add/operator/map';
+import "rxjs/add/operator/map";
 import * as showdown from "showdown";
 
 @Component({
@@ -25,7 +25,7 @@ export class ToolboxDetailPage {
     let self = this;
     let converter = new showdown.Converter();
     let loading = this.loadingCtrl.create({
-      spinner: 'circles',
+      spinner: "circles",
       content: `<ion-spinner [name]="d.spinner"></ion-spinner>`,
       duration: 3000
     });
@@ -37,9 +37,6 @@ export class ToolboxDetailPage {
         data => {
           self.content = converter.makeHtml(data);
           loading.dismiss();
-        },
-        err => {
-          console.log(err);
         }
       );
   }
