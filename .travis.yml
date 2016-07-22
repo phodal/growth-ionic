@@ -30,7 +30,7 @@ before_install:
   - nvm install 6.0.0
   - nvm use 6.0.0
   - npm install -g cordova ionic
-  - npm install -g codeclimate
+  - npm install -g codeclimate-test-reporter
   - ionic state clear
   - gem install fir-cli
 
@@ -54,7 +54,7 @@ after_failure:
 
 after_success:
   # Send coverage info off to cloud ppl
-  - codeclimate < coverage/lcov.info
+  - codeclimate-test-reporter < coverage/lcov.info
 
 before_deploy:
   # start install android
