@@ -23,10 +23,6 @@
         padding-left: 12px;
       }
     }
-    h3 {
-      padding: 0 20px;
-      text-align: left;
-    }
     .slide0, .slide1, .slide2 {
       background-color: $growth-color;
       color: #ecf0f1;
@@ -96,11 +92,6 @@
         text-align: center;
       }
     }
-
-    h3 {
-      padding: 0.5em 0;
-      text-align: center;
-    }
   }
 
   ion-row.zones {
@@ -128,23 +119,16 @@
 
     ion-icon {
       font-size: 32px;
-      padding: 0 0 0 20px;
+      padding: 0 0 0 12px;
     }
 
     h3 {
       font-size: 18px;
       text-align: left;
-      padding-left: 20px;
+      padding-left: 12px;
     }
     .item-inner {
       margin-left: 0;
-    }
-    ion-col.exam {
-
-    }
-
-    ion-col.community {
-
     }
   }
 }
