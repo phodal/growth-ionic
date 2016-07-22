@@ -3,6 +3,7 @@ import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 import * as showdown from "showdown";
+import {SPINNER_CONFIG} from "../../../utils/constants";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-detail/index.html",
@@ -24,11 +25,7 @@ export class ToolboxDetailPage {
   private init(url:string) {
     let self = this;
     let converter = new showdown.Converter();
-    let loading = this.loadingCtrl.create({
-      spinner: "circles",
-      content: `<ion-spinner [name]="d.spinner"></ion-spinner>`,
-      duration: 3000
-    });
+    let loading = this.loadingCtrl.create(SPINNER_CONFIG);
     loading.present();
 
     this.http.get(url)

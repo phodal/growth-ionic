@@ -3,6 +3,7 @@ import {NavController, LoadingController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 import {ToolboxDetailPage} from "../toolbox-detail/index";
+import {SPINNER_CONFIG, SERVER_BASE_URL} from "../../../utils/constants";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-list/index.html",
@@ -18,14 +19,10 @@ export class ToolboxListPage {
   }
 
   init() {
-    let loading = this.loadingCtrl.create({
-      spinner: "circles",
-      content: `<ion-spinner [name]="d.spinner"></ion-spinner>`,
-      duration: 3000
-    });
+    let loading = this.loadingCtrl.create(SPINNER_CONFIG);
     loading.present();
 
-    let url = "http://toolbox.phodal.com/api/all.json";
+    let url = SERVER_BASE_URL.toolbox + "api/all.json";
     let self = this;
     this.http.get(url)
       .map(res => res.json())
@@ -38,7 +35,6 @@ export class ToolboxListPage {
   }
 
   openToolboxDetailPage(title, url) {
-    let baseUrl = "http://toolbox.phodal.com/";
-    this.nav.push(ToolboxDetailPage, {title: title, url: baseUrl + url});
+    this.nav.push(ToolboxDetailPage, {title: title, url: SERVER_BASE_URL.toolbox + url});
   }
 }
