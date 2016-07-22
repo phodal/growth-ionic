@@ -9,17 +9,17 @@
 <ion-content class="discover">
   <div class="discover-slide">
     <ion-slides pager [options]="slideOptions">
-      <ion-slide class="slide1" (click)="openThoughtWorksBookPage()">
-        <p><span>读书路线</span></p>
-        <p>不止于读书，还要有合适的路线</p>
-      </ion-slide>
-      <ion-slide class="slide2">
+      <ion-slide class="slide1">
         <p><span>学习路线</span></p>
-        <p>选择一条合适的路，选择一个好的前程</p>
+        <p>合适的路，合适的线</p>
+      </ion-slide>
+      <ion-slide class="slide2" (click)="openThoughtWorksBookPage()">
+        <p><span>读书路线</span></p>
+        <p>学习要有路线，读书也要有路线</p>
       </ion-slide>
       <ion-slide class="slide0">
-        <p><span>技术趋势</span></p>
-        <p>关注技术趋势，关注未来</p>
+        <p><span>工具箱</span></p>
+        <p>好的工具事半功倍，好的工具箱一步千里</p>
       </ion-slide>
     </ion-slides>
   </div>
@@ -52,8 +52,8 @@
     <ion-col class="hot">
       <button ion-item>
         <ion-item>
-          <ion-icon name="ios-bonfire-outline" item-left></ion-icon>
-          <h3>技术趋势</h3>
+          <ion-icon name="ios-brush-outline" item-left></ion-icon>
+          <h3>工具箱</h3>
         </ion-item>
       </button>
     </ion-col>
