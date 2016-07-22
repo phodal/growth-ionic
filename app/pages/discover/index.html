@@ -13,10 +13,12 @@
         <p><span>学习路线</span></p>
         <p>合适的路，合适的线</p>
       </ion-slide>
+
       <ion-slide class="slide2" (click)="openThoughtWorksBookPage()">
         <p><span>读书路线</span></p>
         <p>学习要有路线，读书也要有路线</p>
       </ion-slide>
+
       <ion-slide class="slide0">
         <p><span>工具箱</span></p>
         <p>好的工具事半功倍，好的工具箱一步千里</p>
@@ -52,46 +54,19 @@
     <ion-col class="hot">
       <button ion-item>
         <ion-item>
-          <ion-icon name="ios-brush-outline" item-left></ion-icon>
-          <h3>工具箱</h3>
+          <ion-icon name="ios-bonfire-outline" item-left></ion-icon>
+          <h3>练手项目</h3>
         </ion-item>
       </button>
     </ion-col>
   </ion-row>
 
   <ion-row class="zones">
-    <ion-col (click)="openRecommendBookPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon ios="ios-folder-outline" md="ios-folder-outline"></ion-icon>
-          <h3>推荐书籍</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-
-    <ion-col (click)="openRecommendArticlePage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon ios="ios-book-outline" md="ios-book-outline"></ion-icon>
-          <h3>推荐文章</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-
     <ion-col>
       <button ion-item>
         <ion-item>
-          <ion-icon ios="ios-paper-outline" md="ios-paper-outline"></ion-icon>
-          <h3>TODO Lists</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-
-    <ion-col (click)="launch('https://github.com/phodal/growth')">
-      <button ion-item>
-        <ion-item>
-          <ion-icon ios="ios-cloud-outline" md="ios-cloud-outline"></ion-icon>
-          <h3>在线阅读</h3>
+          <ion-icon name="ios-brush-outline"></ion-icon>
+          <h3>工具箱</h3>
         </ion-item>
       </button>
     </ion-col>
@@ -101,6 +76,42 @@
         <ion-item>
           <ion-icon name="ios-bulb-outline"></ion-icon>
           <h3>读书路线</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+          <h3>文章推荐</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col (click)="openRecommendBookPage()">
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-folder-outline"></ion-icon>
+          <h3>书籍列表</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col (click)="openRecommendArticlePage()">
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-book-outline"></ion-icon>
+          <h3>文章列表</h3>
+        </ion-item>
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-item>
+        <ion-item>
+          <ion-icon name="ios-paper-outline"></ion-icon>
+          <h3>待办列表</h3>
         </ion-item>
       </button>
     </ion-col>
