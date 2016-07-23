@@ -16,7 +16,7 @@ export class MainView {
     {
       title: "《Ideabook：练手项目集》",
       intro: "这个电子书的目标就是为这些Idea提供实战指南，一步步搭建你的未来。",
-      url: "https://github.com/phodal/ideabook"
+      action: "ideabook"
     }
   ];
   private slideOptions = {
@@ -35,12 +35,6 @@ export class MainView {
   }
 
   launch(slide) {
-    if (slide.url) {
-      this.platform.ready().then(() => {
-        window.open(slide.url, "_system", "location=true");
-      });
-    } else if (slide.action) {
-      this.nav.push(SlideBookTocPage, {title: slide.title, action: slide.action})
-    }
+    this.nav.push(SlideBookTocPage, {title: slide.title, action: slide.action});
   }
 }
