@@ -12,7 +12,8 @@
     "cordova/plugins/inappbrowser": "registry:dt/cordova/plugins/inappbrowser#0.0.0+20160316155526",
     "cordova/plugins/splashscreen": "registry:dt/cordova/plugins/splashscreen#0.0.0+20160316155526",
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
-    "node": "registry:dt/node#6.0.0+20160709114037",
+    "lodash": "registry:dt/lodash#3.10.0+20160720001309",
+    "node": "registry:dt/node#6.0.0+20160720070758",
     "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
     "showdown": "registry:dt/showdown#1.4.1+20160608102004"
   }
