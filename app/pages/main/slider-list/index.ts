@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {NavController, LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
-import {SPINNER_CONFIG, SERVER_BASE_URL} from "../../../utils/constants";
+import {SERVER_BASE_URL, getSpinnerConfig} from "../../../utils/constants";
 import {SlideBookDetailPage} from "../slider-detail/index";
 
 @Component({
@@ -23,7 +23,7 @@ export class SlideBookTocPage {
   }
 
   init() {
-    let loading = this.loadingCtrl.create(SPINNER_CONFIG);
+    let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 
     let url = SERVER_BASE_URL[this.action] + "api/all.json";

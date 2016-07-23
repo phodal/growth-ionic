@@ -1,9 +1,10 @@
+///<reference path="../../../utils/constants.ts"/>
 import {Component} from "@angular/core";
 import {NavController, LoadingController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 import {ToolboxDetailPage} from "../toolbox-detail/index";
-import {SPINNER_CONFIG, SERVER_BASE_URL} from "../../../utils/constants";
+import {SERVER_BASE_URL, getSpinnerConfig} from "../../../utils/constants";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-list/index.html",
@@ -19,7 +20,7 @@ export class ToolboxListPage {
   }
 
   init() {
-    let loading = this.loadingCtrl.create(SPINNER_CONFIG);
+    let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 
     let url = SERVER_BASE_URL.toolbox + "api/all.json";
