@@ -11,7 +11,7 @@ export class SolutionPage {
   private solutions;
 
   constructor(private modalCtrl:ModalController) {
-    this.solutions = _.orderBy(SOLUTIONS, ["type"], ["asc"]);
+    this.solutions = _.orderBy(SOLUTIONS, ["slug"], ["asc"]);
     this.modalCtrl = modalCtrl;
   }
 

@@ -15,8 +15,13 @@
     p {
       font-size: 0.8em;
       color: #fff;
-      padding: 0 2em;
-      text-align: center;
+      padding: 0 20px;
+      text-align: left;
+
+      span {
+        border-left: 2px solid #fff;
+        padding-left: 12px;
+      }
     }
     .slide0, .slide1, .slide2 {
       background-color: $growth-color;
@@ -27,7 +32,36 @@
       background-color: $growth-blue;
     }
     .slide2 {
-      background-color: #009688;
+      background-color: $growth-yellow;
+    }
+
+    .slide0:after,
+    .slide1:after,
+    .slide2:after {
+      font-family: "Ionicons";
+      font-style: normal;
+      font-weight: 200;
+      text-decoration: inherit;
+      position: absolute;
+      font-size: 100px;
+      color: white;
+      top: 50%;
+      right: 20px;
+      margin: -56px 0 0 0;
+      z-index: 1;
+      opacity: 0.2;
+    }
+
+    .slide1:after {
+      content: "\f138";
+    }
+
+    .slide2:after {
+      content: "\f175";
+    }
+
+    .slide0:after {
+      content: "\f12c";
     }
   }
 
@@ -58,11 +92,6 @@
         text-align: center;
       }
     }
-
-    h3 {
-      padding: 0.5em 0;
-      text-align: center;
-    }
   }
 
   ion-row.zones {
@@ -90,7 +119,7 @@
 
     ion-icon {
       font-size: 32px;
-      padding: 0 0 0 20px;
+      padding: 0 0 0 12px;
     }
 
     h3 {
@@ -100,13 +129,6 @@
     }
     .item-inner {
       margin-left: 0;
-    }
-    ion-col.exam {
-
-    }
-
-    ion-col.community {
-
     }
   }
 }

@@ -1,64 +1,56 @@
-
-.days {
-  margin-top: 1em;
-}
-
-.item {
-  border: 1px solid #F9F9F9;
-}
-
-.intro {
-  height: 70px;
-  background: $growth-blue;
-  margin-top: -16px;
-  color: #fff;
-
-  h4 {
-    font-size: 1.2em;
-    text-align: center;
-    top: 8px;
-    position: relative;
+.day {
+  .item {
+    border: 1px solid #F9F9F9;
   }
-  p {
+
+  .intro {
+    height: 44px;
+    background: $growth-blue;
     color: #fff;
-    padding: 0 1em;
-    text-align: center;
+
+    p {
+      color: #fff;
+      text-align: center;
+      line-height: 44px;
+    }
   }
 
-}
-
-ion-item-divider {
-  height: 47px;
-
-  .item-button {
-    line-height: 28px;
-    font-size: 14px;
+  .day-segment {
+    padding: 0;
+    margin: -14px 0 0;
   }
 
-  .skill-button.item-button.button-icon-only {
-    padding-left: 12px;
-  }
+  ion-item-divider {
+    height: 47px;
 
-  ion-label span.title {
-    line-height: 28px;
-  }
+    .item-button {
+      line-height: 28px;
+      font-size: 14px;
+    }
 
+    .skill-button.item-button.button-icon-only {
+      padding-left: 12px;
+    }
 
-  .button:hover:not(.disable-hover) {
-    background: none;
-  }
-  .button.activated {
-    box-shadow: none;
-  }
-  button.skill-button,
-  button.day-info {
-    margin: 0;
-    border: none;
-    position: relative;
-    float: right;
-    background: none;
-    color: $growth-color;
-    box-shadow: none;
-  }
+    ion-label span.title {
+      line-height: 28px;
+    }
 
+    .button:hover:not(.disable-hover) {
+      background: none;
+    }
+    .button.activated {
+      box-shadow: none;
+    }
+    button.skill-button,
+    button.day-info {
+      margin: 0;
+      border: none;
+      position: relative;
+      float: right;
+      background: none;
+      color: $growth-color;
+      box-shadow: none;
+    }
+  }
 }

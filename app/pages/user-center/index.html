@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      个人中心
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="more">
+  <ion-list>
+    <button ion-item>
+      <h2>我的书签</h2>
+      <ion-icon ios="ios-bookmark-outline" md="ios-bookmark-outline" item-left></ion-icon>
+    </button>
+    <button ion-item>
+      <h2>我的学习路线</h2>
+      <ion-icon ios="ios-egg-outline" md="ios-egg-outline" item-left></ion-icon>
+    </button>
+    <button ion-item (click)="openAllSkillListPage()">
+      <h2>我的技能分布</h2>
+      <ion-icon name="ios-analytics-outline" item-left></ion-icon>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon ios="ios-information-circle-outline" md="ios-information-circle-outline" item-left></ion-icon>
+      <h2>关于</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon ios="ios-share-outline" md="ios-share-outline" item-left></ion-icon>
+      <h2>分享给好友</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon ios="ios-rose-outline" md="ios-rose-outline" item-left></ion-icon>
+      <h2>觉得有帮助，给个好评吧！</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

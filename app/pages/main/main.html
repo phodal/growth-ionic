@@ -1,18 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Growth</ion-title>
-    <ion-buttons end>
-      <button (click)="openAllSkillListPage()">
-        <ion-icon name="analytics"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="main">
   <div class="home-slide">
     <ion-slides pager [options]="slideOptions">
-      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}" (click)="launch(slide.url)">
+      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}" (click)="launch(slide)">
         <h2>{{slide.title}}</h2>
         <p>{{slide.intro}}</p>
       </ion-slide>
@@ -23,7 +18,6 @@
     <button ion-item (click)="openNavDetailsPage(0)">
       <h2>前期准备</h2>
       <p>从这里准备你的技能图谱</p>
-
     </button>
     <button ion-item (click)="openNavDetailsPage(1)">
       <h2>从零开始</h2>

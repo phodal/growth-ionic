@@ -1,28 +1,3 @@
-
-.markdown h1 {
-  font-size: 1.6em;
-}
-
-.item .markdown h1,
-.markdown h1 {
-  font-size: 1.5em;
-  padding: 10px;
-}
-
-.item .markdown h3,
-.markdown h3 {
-  font-size: 1.3em;
-  padding: 10px;
-  text-align: center;
-}
-
-.item .markdown h4,
-.markdown h4 {
-  font-size: 1.2em;
-  padding: 5px;
-  margin-left: 12px;
-}
-
 /* Github Markdown CSS */
 
 .markdown code {
@@ -253,7 +228,8 @@ body {
 .markdown h1,
 .markdown > h1 {
   margin-top: 0;
-  font-size: 2em;
+  font-size: 1.8em;
+  text-align: center;
 }
 
 .item .markdown h2,

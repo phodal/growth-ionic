@@ -5,11 +5,18 @@ import {NavController, Platform} from "ionic-angular/index";
 import {RecommendBook} from "./recommend-books/index";
 import {RecommendArticles} from "./recommend-articles/index";
 import {TWBookPage} from "./thoughtworks-books/index";
+import {ToolboxListPage} from "./toolbox-list/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
 })
 export class DiscoverPage {
+  private slideOptions = {
+    initialSlide: 0,
+    autoplay: 3000,
+    loop: true
+  };
+
   constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
     this.platform = platform;
@@ -33,6 +40,10 @@ export class DiscoverPage {
 
   openThoughtWorksBookPage() {
     this.nav.push(TWBookPage);
+  }
+
+  openToolboxListPage() {
+    this.nav.push(ToolboxListPage);
   }
 
   launch(url) {

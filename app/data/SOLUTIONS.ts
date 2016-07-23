@@ -15,7 +15,7 @@ export const SOLUTIONS = [
   },
   {
     "slug": "flarum-based-hybrid-application",
-    "name": "Growth用户授权",
+    "name": "Flarum与Ionic的论坛应用",
     "type": "generic",
     "stacks": ["Cordova", "Angular.js", "Ionic", "Flarum"],
     "description": "Flarum提供JSON Web Tokens API，APP通过HTTP请求来登录和授权。"

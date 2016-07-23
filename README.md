@@ -5,13 +5,39 @@ Ionic2 + Angular 2 + Growth + TypeScript
 
 Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
-
 加入开发
 ---
 
 开发进度见Teambition ([Growth 2.0](https://www.teambition.com/project/57872eea0cc72c3442eb3dbc))
 
 [开发文档](./docs/README.md)
+
+内容来源
+---
+
+### By Phodal
+
+Ebooks:
+
+ - [全栈增长工程师指南](https://github.com/phodal/growth)
+ - [全栈增长工程师的练手项目集](https://github.com/phodal/ideabook)
+ - [全栈增长工程师的工具箱](https://github.com/phodal/toolbox)
+ - [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
+ 
+Others:
+ 
+ - [Web Developer Roadmap](https://github.com/phodal/developer)
+ - [Awesome Growth](https://github.com/phodal/awesome-growth)
+ - [Awesome Solutions](https://github.com/phodal/awesome-solutions)
+ - [Growth APP Content](https://github.com/phodal/growth-content)
+ - [Phodal's Articles](https://github.com/phodal/articles)
+
+Thanks 
+---
+
+ - [Ionic](https://github.com/driftyco/ionic)
+ - 前端面试题: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
+ - Ionic 2模板：[https://github.com/lathonez/clicker](https://github.com/lathonez/clicker)
 
 License
 ---
