@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: "build/pages/discover/community/index.html"
+  templateUrl: "build/pages/community/index.html"
 })
 export class CommunityPage {
   constructor() {

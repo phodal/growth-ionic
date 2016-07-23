@@ -8,6 +8,9 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import "../pages/main/main";
+@import "../pages/community/index";
+@import "../pages/discover/index";
+@import "../pages/day/index";
 
 @import "../modals/HtmlModal/index";
 @import "../modals/SkillModal/index";
@@ -15,13 +18,11 @@
 @import "./third-partys/markdown";
 @import "./third-partys/highlight";
 
-@import "../pages/solution/index";
+@import "../pages/discover/solution/index";
 @import "../pages/discover/exam-list/index";
 @import "../pages/discover/exam-detail/index";
-@import "../pages/discover/community/index";
-@import "../pages/discover/index";
 @import "../pages/discover/toolbox-detail/index";
-@import "../pages/day/index";
+
 
 tabbar,
 .toolbar-background {

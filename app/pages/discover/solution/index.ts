@@ -1,11 +1,11 @@
 import {Component} from "@angular/core";
-import {SOLUTIONS} from "../../data/SOLUTIONS";
 import * as _ from "lodash";
-import {HtmlModal} from "../../modals/HtmlModal/index";
 import {ModalController} from "ionic-angular/index";
+import {SOLUTIONS} from "../../../data/SOLUTIONS";
+import {HtmlModal} from "../../../modals/HtmlModal/index";
 
 @Component({
-  templateUrl: "build/pages/solution/index.html",
+  templateUrl: "build/pages/discover/solution/index.html",
 })
 export class SolutionPage {
   private solutions;
