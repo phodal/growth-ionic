@@ -1,19 +1,12 @@
 import * as _ from "lodash";
+import {TIPS} from "../data/TIPS";
 
 export const ANIMATION_DURATION = 500;
-export const TIPS = [
-  '编码之前，要想一想',
-  '写干净的代码',
-  '抽时间对代码进行重构',
-  '没有人喜欢用那些超级长的方法',
-  '不要复制粘贴代码',
-  '命令時，使用有意义的名称'
-];
 
 export function getSpinnerConfig() {
   return {
     spinner: "circles",
-    content: `<ion-spinner [name]="d.spinner"></ion-spinner><p><strong>Tips</strong>:` + TIPS[_.random(5)] + '</p>',
+    content: `<ion-spinner [name]="d.spinner"></ion-spinner><p><strong>Tips</strong>:` + TIPS[_.random(5)] + "</p>",
     duration: 20000
   };
 }

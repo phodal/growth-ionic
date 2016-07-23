@@ -1,4 +1,3 @@
-///<reference path="../../../utils/constants.ts"/>
 import {Component} from "@angular/core";
 import {NavController, LoadingController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
