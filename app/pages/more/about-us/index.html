@@ -8,7 +8,7 @@
 
 <ion-content class="about-us">
   <ion-list>
-    <ion-item *ngFor="let contributor of contributors">
+    <ion-item *ngFor="let contributor of contributors; let i = index" (click)="openProfilePage(i)">
       <ion-avatar item-left>
         <img src="https://avatars.githubusercontent.com/{{contributor.github}}?v=3&s=40">
       </ion-avatar>
