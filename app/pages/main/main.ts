@@ -1,6 +1,7 @@
 import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {Day} from "../day/day";
+import {SlideBookTocPage} from "./slider-list/index";
 
 @Component({
   templateUrl: "build/pages/main/main.html"
@@ -15,7 +16,7 @@ export class MainView {
     {
       title: "《Growth：全栈增长工程师实战》",
       intro: "在Growth中我们介绍的只是一系列的实践，而Growth实战则会带领读者去履行这些实践。",
-      url: "https://github.com/phodal/growth-in-action"
+      action: "growthAction"
     },
     {
       title: "《Ideabook：练手项目集》",
@@ -38,9 +39,13 @@ export class MainView {
     this.nav.push(Day, {day: day});
   }
 
-  launch(url) {
-    this.platform.ready().then(() => {
-      window.open(url, "_system", "location=true");
-    });
+  launch(slide) {
+    if (slide.url) {
+      this.platform.ready().then(() => {
+        window.open(slide.url, "_system", "location=true");
+      });
+    } else if (slide.action) {
+      this.nav.push(SlideBookTocPage, {title: slide.title, action: slide.action})
+    }
   }
 }
