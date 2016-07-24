@@ -1,12 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      关于{{person.name}}
+      {{person.nickname}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="about-us">
-  <ion-list>
-  </ion-list>
+
+  <ion-item class="item-divider" *ngIf="person.duty">
+    {{person.duty}}
+  </ion-item>
+
+  <ion-item class="item" type="item-text-wrap" *ngIf="person.github" (click)="openGithubUrl(person.github)">
+    Github: @{{person.nickname}}
+    <ion-icon name="logo-github" item-right></ion-icon>
+  </ion-item>
+
+  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.weibo">
+    微博: @{{person.weibo}}
+    <ion-icon name="logo-twitter" item-right></ion-icon>
+  </ion-item>
+
+  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.zhihu">
+    知乎: @{{person.zhihu}}
+  </ion-item>
+
+  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.blog" (click)="openBlogUrl(person.blog)">
+    博客: {{person.blog}}
+    <ion-icon name="logo-wordpress" item-right></ion-icon>
+  </ion-item>
+
 </ion-content>

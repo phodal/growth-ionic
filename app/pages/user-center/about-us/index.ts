@@ -4,10 +4,10 @@ import {NavController} from "ionic-angular/index";
 import {Profile} from "./profile/index";
 
 @Component({
-  templateUrl: "build/pages/more/about-us/index.html"
+  templateUrl: "build/pages/user-center/about-us/index.html"
 })
 
-export class AboutUs {
+export class AboutUsPage {
   private contributors;
   constructor(public nav:NavController) {
     this.nav = nav;

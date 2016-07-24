@@ -1,23 +1,23 @@
 export const CONTRIBUTORS = [
   {
-    "name": "Phodal",
+    "nickname": "Phodal",
     "duty": "作者",
     "github": "phodal",
     "bio": "待我代码编成，娶你为妻可好 @hug8217",
-    "微博": "@Phodal",
-    "知乎": "@Phodal",
-    "Blog": "https://www.phodal.com/"
+    "weibo": "Phodal",
+    "zhihu": "Phodal",
+    "blog": "https://www.phodal.com/"
   },
   {
-    "name": "haoflynet",
-    "duty": "开发者",
+    "nickname": "haoflynet",
+    "duty": "dev",
     "github": "haoflynet",
     "bio": "Change My World by Program",
-    "微博": "@豪翔天下",
-    "Blog": "https://haofly.net"
+    "weibo": "豪翔天下",
+    "blog": "https://haofly.net"
   },
   {
-    "name": "Song",
+    "nickname": "Song",
     "duty": "UX",
     "github": "song-what"
   }
