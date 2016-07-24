@@ -5,6 +5,7 @@ import {ModalController} from "ionic-angular/index";
 import {HtmlModal} from "../../../modals/HtmlModal/index";
 import {DOMAIN} from "../../../data/DOMAIN_NAME";
 import {TODO_LISTS} from "../../../data/TODO_LISTS";
+import {TodoModal} from "../../../modals/TodoModal/index";
 
 @Component({
   templateUrl: "build/pages/discover/todo-lists/index.html"
@@ -23,7 +24,9 @@ export class TodoListsPage {
     }, []);
   }
 
-  getDomainName(domain) {
-    return DOMAIN[domain];
+  presentTodoModal(params) {
+    let todoLists = TODO_LISTS["zh-cn"][params.domain];
+    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
+    todoModal.present();
   }
 }

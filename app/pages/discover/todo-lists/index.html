@@ -7,12 +7,9 @@
 </ion-header>
 
 <ion-content class="recommend-books">
-  <ion-item-group *ngFor="let domainTodoList of todoLists">
-    <ion-item-divider light sticky>
-      <span class="title">{{getDomainName(domainTodoList.domain)}}</span>
-    </ion-item-divider>
-    <button ion-item *ngFor="let todo of domainTodoList.value.basic">
-      {{todo.title}}
+  <ion-list>
+    <button ion-item *ngFor="let domainTodoList of todoLists" (click)="presentTodoModal({domain: domainTodoList.domain})">
+      <span class="title">{{domainTodoList.value.name}}</span>
     </button>
-  </ion-item-group>
+  </ion-list>
 </ion-content>
