@@ -2,8 +2,8 @@ import {Component} from "@angular/core";
 import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
-import * as showdown from "showdown";
 import {getSpinnerConfig} from "../../../utils/constants";
+import {convertToMarkdown} from "../../../utils/helper";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-detail/index.html",
@@ -24,7 +24,6 @@ export class ToolboxDetailPage {
 
   private init(url:string) {
     let self = this;
-    let converter = new showdown.Converter();
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 
@@ -32,7 +31,7 @@ export class ToolboxDetailPage {
       .map(res => res.text())
       .subscribe(
         data => {
-          self.content = converter.makeHtml(data);
+          self.content = convertToMarkdown(data);
           loading.dismiss();
         }
       );
