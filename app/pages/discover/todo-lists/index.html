@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      待办事项
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item-group *ngFor="let domainTodoList of todoLists">
+    <ion-item-divider light sticky>
+      <span class="title">{{getDomainName(domainTodoList.domain)}}</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let todo of domainTodoList.value.basic">
+      {{todo.title}}
+    </button>
+  </ion-item-group>
+</ion-content>
