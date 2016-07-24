@@ -2,8 +2,7 @@ import {Component} from "@angular/core";
 import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
-import {getSpinnerConfig} from "../../../utils/constants";
-import {convertToMarkdown} from "../../../utils/helper";
+import {getSpinnerConfig, convertToMarkdown} from "../../../utils/helper";
 
 @Component({
   templateUrl: "build/pages/main/slider-detail/index.html",
