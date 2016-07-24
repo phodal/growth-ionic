@@ -1,28 +1,21 @@
 // http://ionicframework.com/docs/v2/theming/
-
-
 // App Shared Imports
 // --------------------------------------------------
 // These are the imports which make up the design of this app.
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
-
 @import "../pages/main/main";
 @import "../pages/community/index";
 @import "../pages/discover/index";
 @import "../pages/day/index";
-
 @import "../modals/HtmlModal/index";
 @import "../modals/SkillModal/index";
-
 @import "./third-partys/markdown";
 @import "./third-partys/highlight";
-
 @import "../pages/discover/solution/index";
 @import "../pages/discover/exam-list/index";
 @import "../pages/discover/exam-detail/index";
 @import "../pages/discover/toolbox-detail/index";
-
 
 tabbar,
 .toolbar-background {
@@ -50,16 +43,6 @@ ion-tabbar {
 .loading-wrapper {
   padding: 8px 16px;
 }
-
-//ion-title {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  padding: 0 90px 1px;
-//  width: 100%;
-//  height: 100%;
-//  text-align: center;
-//}
 
 h1[primary], h2[primary], h3[primary], h4[primary], h5[primary], h6[primary], p[primary], span[primary], a:not([button])[primary], small[primary], b[primary], i[primary], strong[primary], em[primary], sub[primary], sup[primary], ion-icon[primary] {
   color: #fff;
