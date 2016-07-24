@@ -1,7 +1,6 @@
 import {NavParams} from "ionic-angular";
 import {Component} from "@angular/core";
 import {CONTRIBUTORS} from "../../../../data/CONTRIBUTORS";
-import {NavController} from "ionic-angular/index";
 
 @Component({
   templateUrl: "build/pages/user-center/about-us/profile/index.html"
@@ -13,7 +12,7 @@ export class Profile {
     this.person = CONTRIBUTORS[params.get("num")];
   }
 
-  openGithubUrl(name) {
+  openGitHubUrl(name) {
     window.open("https://github.com/" + name,  "_system", "location=yes");
   }
 

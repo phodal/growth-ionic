@@ -8,27 +8,27 @@
 
 <ion-content class="about-us">
 
-  <ion-item class="item-divider" *ngIf="person.duty">
+  <ion-item-divider *ngIf="person.duty">
     {{person.duty}}
-  </ion-item>
+  </ion-item-divider>
 
-  <ion-item class="item" type="item-text-wrap" *ngIf="person.github" (click)="openGithubUrl(person.github)">
+  <button ion-item *ngIf="person.github" (click)="openGitHubUrl(person.github)">
     Github: @{{person.nickname}}
     <ion-icon name="logo-github" item-right></ion-icon>
-  </ion-item>
+  </button>
 
-  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.weibo">
+  <button ion-item *ngIf="person.weibo">
     微博: @{{person.weibo}}
     <ion-icon name="logo-twitter" item-right></ion-icon>
-  </ion-item>
+  </button>
 
-  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.zhihu">
+  <button ion-item *ngIf="person.zhihu">
     知乎: @{{person.zhihu}}
-  </ion-item>
+  </button>
 
-  <ion-item class="item item-icon-right" type="item-text-wrap" *ngIf="person.blog" (click)="openBlogUrl(person.blog)">
+  <button ion-item *ngIf="person.blog" (click)="openBlogUrl(person.blog)">
     博客: {{person.blog}}
     <ion-icon name="logo-wordpress" item-right></ion-icon>
-  </ion-item>
+  </button>
 
 </ion-content>
