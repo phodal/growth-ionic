@@ -7,6 +7,7 @@ import {TWBookPage} from "./thoughtworks-books/index";
 import {ToolboxListPage} from "./toolbox-list/index";
 import {SolutionPage} from "./solution/index";
 import {TodoListsPage} from "./todo-lists/index";
+import {ArticleListPage} from "./article-list/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
@@ -45,6 +46,10 @@ export class DiscoverPage {
 
   openToolboxListPage() {
     this.nav.push(ToolboxListPage);
+  }
+
+  openArticlesListPage() {
+    this.nav.push(ArticleListPage);
   }
 
   openTodoListsPage() {
