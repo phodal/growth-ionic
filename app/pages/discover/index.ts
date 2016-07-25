@@ -8,6 +8,7 @@ import {ToolboxListPage} from "./toolbox-list/index";
 import {SolutionPage} from "./solution/index";
 import {TodoListsPage} from "./todo-lists/index";
 import {ArticleListPage} from "./article-list/index";
+import {RoadMapPage} from "./roadmap-list/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
@@ -54,6 +55,10 @@ export class DiscoverPage {
 
   openTodoListsPage() {
     this.nav.push(TodoListsPage);
+  }
+
+  openRoadMapPage() {
+    this.nav.push(RoadMapPage);
   }
 
   launch(url) {
