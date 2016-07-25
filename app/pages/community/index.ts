@@ -5,7 +5,7 @@ import {getSpinnerConfig} from "../../utils/helper";
 import {SERVER_BASE_URL} from "../../utils/constants";
 import {TimeAgoPipe} from "angular2-moment";
 import "moment/locale/zh-cn";
-import {mergeWith} from "lodash";
+import {concat, filter} from "lodash";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
@@ -47,6 +47,16 @@ export class CommunityPage {
       );
   }
 
+  getAuthorName(data, userId) {
+    let username = "User";
+    let userInfo = filter(data, userId);
+    //noinspection TypeScriptUnresolvedVariable
+    if(userInfo[0] && userInfo[0]["attributes"]) {
+      username = userInfo[0]["attributes"]["username"];
+    }
+    return username;
+  }
+
   doInfinite(infiniteScroll, url) {
     console.log('Begin async operation');
     let self = this;
@@ -54,9 +64,8 @@ export class CommunityPage {
       .map(res => res.json())
       .subscribe(
         data => {
-          console.log(data.data);
-          self.topics = mergeWith(self.topics, data.data);
-          self.included = mergeWith(self.topics, data.included);
+          self.topics = concat(self.topics, data.data);
+          self.included = concat(self.topics, data.included);
           //noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
             //noinspection TypeScriptUnresolvedVariable

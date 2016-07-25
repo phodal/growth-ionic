@@ -11,11 +11,19 @@
       background-color: #aeaeae;
       color: #fff
     }
+    .topic-detail h2 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
     .ago, .topics .summary {
       font-size: 12px;
     }
     .ago {
       float: right;
+    }
+    .summary ion-icon {
+      font-size: 18px;
+      padding: 2px 8px;
     }
     .tab {
       background-color: #E5E5E5;
