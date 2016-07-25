@@ -1,10 +1,20 @@
-import * as showdown from "showdown";
+import * as marked from "marked";
 import * as _ from "lodash";
 import {TIPS} from "../data/TIPS";
 
 export function convertToMarkdown(data) {
-  let converter = new showdown.Converter({tables: true, smoothLivePreview: true, ghCodeBlocks: true});
-  return converter.makeHtml(data);
+  marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    smartypants: false
+  });
+
+  return marked(data);
 }
 
 export function getSpinnerConfig() {

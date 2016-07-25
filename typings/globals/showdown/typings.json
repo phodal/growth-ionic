@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/5cd8a64540047e53ad19cb45c9f51945561ce95a/showdown/showdown.d.ts",
-    "raw": "registry:dt/showdown#1.4.1+20160608102004",
-    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/5cd8a64540047e53ad19cb45c9f51945561ce95a/showdown/showdown.d.ts"
-  }
-}
