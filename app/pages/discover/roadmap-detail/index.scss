@@ -14,9 +14,6 @@
   }
 }
 
-// Timeline
-$timeline-color: #ee4d4d;
-
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -62,12 +59,14 @@ $timeline-color: #ee4d4d;
       left: 50%;
       overflow: hidden;
       margin-left: -23px;
+      color: #fff;
       @include prefix(border-radius, 50%);
 
-      img {
+      ion-icon {
+        font-size: 30px;
         position: relative;
-        top: 14px;
-        left: 14px;
+        top: 10px;
+        left: 13px;
       }
     }
 
