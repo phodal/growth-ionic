@@ -6,6 +6,7 @@ import {SERVER_BASE_URL} from "../../utils/constants";
 import {TimeAgoPipe} from "angular2-moment";
 import "moment/locale/zh-cn";
 import {concat, filter} from "lodash";
+import {CommunityDetailPage} from "./detail/index";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
@@ -34,9 +35,9 @@ export class CommunityPage {
         data => {
           self.topics = data.data;
           self.included = data.included;
-          //noinspection TypeScriptUnresolvedVariable
+          // noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
-            //noinspection TypeScriptUnresolvedVariable
+            // noinspection TypeScriptUnresolvedVariable
             self.nextPageUrl = data.links.next;
           } else {
             self.nextPageUrl = null;
@@ -50,15 +51,18 @@ export class CommunityPage {
   getAuthorName(data, userId) {
     let username = "User";
     let userInfo = filter(data, userId);
-    //noinspection TypeScriptUnresolvedVariable
-    if(userInfo[0] && userInfo[0]["attributes"]) {
+    if (userInfo[0] && userInfo[0]["attributes"]) {
       username = userInfo[0]["attributes"]["username"];
     }
     return username;
   }
 
+  openDetailPage(topic) {
+    let self = this;
+    this.nav.push(CommunityDetailPage, {topic: topic, topics: self.topics, included: self.included});
+  }
+
   doInfinite(infiniteScroll, url) {
-    console.log('Begin async operation');
     let self = this;
     this.http.get(url)
       .map(res => res.json())
@@ -66,9 +70,9 @@ export class CommunityPage {
         data => {
           self.topics = concat(self.topics, data.data);
           self.included = concat(self.topics, data.included);
-          //noinspection TypeScriptUnresolvedVariable
+          // noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
-            //noinspection TypeScriptUnresolvedVariable
+            // noinspection TypeScriptUnresolvedVariable
             self.nextPageUrl = data.links.next;
           } else {
             self.nextPageUrl = null;
