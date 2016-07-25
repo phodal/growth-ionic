@@ -3,9 +3,13 @@ import {LoadingController, NavController} from "ionic-angular/index";
 import {Http} from "@angular/http";
 import {getSpinnerConfig} from "../../utils/helper";
 import {SERVER_BASE_URL} from "../../utils/constants";
+import {TimeAgoPipe} from "angular2-moment";
+import "moment/locale/zh-cn";
 
 @Component({
-  templateUrl: "build/pages/community/index.html"
+  templateUrl: "build/pages/community/index.html",
+  pipes: [TimeAgoPipe]
+
 })
 export class CommunityPage {
   private topics;

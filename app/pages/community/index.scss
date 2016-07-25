@@ -1,3 +1,36 @@
-.page3 {
+.community {
+  .topics .item-content {
+    padding: 14px 16px 18px 72px
+  }
+
+  .topics .item-content>img:not(:first-child) {
+    -webkit-transform: translate3d(-2000px,-2000px,0);
+    position: absolute
+  }
+
+  .topics .activated .tab:not(.hl) {
+    background-color: #aeaeae;
+    color: #fff
+  }
+
+  .topics .ago,.topics .summary {
+    font-size: 12px;
+  }
+
+  .topics .ago {
+    float: right
+  }
+
+  .topics .tab {
+    background-color: #E5E5E5;
+    color: #999;
+    border-radius: 2px;
+    padding: 2px 4px
+  }
+
+  .topics .hl {
+    background-color: #4B4C49;
+    color: #fff
+  }
 
 }

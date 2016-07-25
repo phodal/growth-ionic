@@ -13,6 +13,8 @@
         <h2>{{topic.attributes.title}}</h2>
         <p class="summary">
           <span *ngIf="topic.attributes.isSticky" class="tab hl">置顶</span>
+          <span><ion-icon name="ios-chatboxes-outline"></ion-icon>{{topic.attributes.commentsCount - 1}}</span>
+          <span class="item-note ago"><time>{{topic.attributes.lastTime | amTimeAgo}}</time></span>
         </p>
       </div>
     </ion-item>
