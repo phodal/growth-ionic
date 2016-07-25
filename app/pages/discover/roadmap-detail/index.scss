@@ -1,0 +1,144 @@
+// Mixins and Placeholders
+%clearfix {
+  &:after, &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+}
+
+@mixin prefix($prop, $val) {
+  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+    #{$prefix}#{$prop}: $val;
+  }
+}
+
+// Timeline
+$timeline-color: #ee4d4d;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+#timeline {
+  line-height: 1.5em;
+  font-size: 14px;
+  width: 90%;
+  margin: 30px auto;
+  position: relative;
+  @include prefix(transition, all .4s ease);
+
+  &:before {
+    content:"";
+    width: 3px;
+    height: 100%;
+    background: $timeline-color;
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+  }
+
+  .timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    @extend %clearfix;
+
+    .timeline-icon {
+      background: $timeline-color;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      overflow: hidden;
+      margin-left: -23px;
+      @include prefix(border-radius, 50%);
+
+      img {
+        position: relative;
+        top: 14px;
+        left: 14px;
+      }
+    }
+
+    .timeline-content {
+      width: 45%;
+      background: #fff;
+      padding: 20px;
+      @include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
+      @include prefix(border-radius, 5px);
+      @include prefix(transition, all .3s ease);
+
+      h2 {
+        padding: 15px;
+        background: $timeline-color;
+        color: #fff;
+        margin: -20px -20px 0 -20px;
+        font-weight: 500;
+        @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: 20px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left:7px solid $timeline-color;
+      }
+
+      &.right {
+        float: right;
+
+        &:before {
+          content: '';
+          right: 45%;
+          left: inherit;
+          border-left: 0;
+          border-right: 7px solid $timeline-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #timeline {
+    margin: 30px;
+    padding: 0;
+    &:before {
+      left: 0;
+    }
+
+    .timeline-item {
+      .timeline-content {
+        width: 90%;
+        float: right;
+
+        &:before, &.right:before {
+          left: 10%;
+          margin-left: -6px;
+          border-left: 0;
+          border-right: 7px solid $timeline-color;
+        }
+      }
+
+      .timeline-icon {
+        left: 0;
+      }
+    }
+  }
+}
