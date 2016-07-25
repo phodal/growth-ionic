@@ -18,5 +18,12 @@
         </p>
       </div>
     </ion-item>
+
+    <ion-infinite-scroll *ngIf="!!nextPageUrl" (ionInfinite)="doInfinite($event, nextPageUrl)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
   </ion-list>
 </ion-content>
