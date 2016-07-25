@@ -34,7 +34,9 @@ export class CommunityPage {
         data => {
           self.topics = data.data;
           self.included = data.included;
+          //noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
+            //noinspection TypeScriptUnresolvedVariable
             self.nextPageUrl = data.links.next;
           } else {
             self.nextPageUrl = null;
@@ -55,7 +57,9 @@ export class CommunityPage {
           console.log(data.data);
           self.topics = mergeWith(self.topics, data.data);
           self.included = mergeWith(self.topics, data.included);
+          //noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
+            //noinspection TypeScriptUnresolvedVariable
             self.nextPageUrl = data.links.next;
           } else {
             self.nextPageUrl = null;
