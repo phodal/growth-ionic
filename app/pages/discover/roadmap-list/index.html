@@ -8,8 +8,8 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item (click)="openToolboxDetailPage()">
-      前端
+    <button ion-item *ngFor="let roadmap of roadmaps" (click)="openRoadmapDetailPage(roadmap)">
+      {{roadmap.name}}
     </button>
   </ion-list>
 </ion-content>

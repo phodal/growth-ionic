@@ -37,7 +37,7 @@ export class RoadMapPage {
       );
   }
 
-  openToolboxDetailPage(title, url) {
-    this.nav.push(RoadMapDetailPage, {title: title, url: SERVER_BASE_URL.roadmap + url});
+  openRoadmapDetailPage(roadmap) {
+    this.nav.push(RoadMapDetailPage, {roadmap: roadmap});
   }
 }

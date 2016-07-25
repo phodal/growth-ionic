@@ -1,49 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      前端
+      {{roadmap.name}}学习路线
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="has-header">
-  <!-- Timeline begin here -->
   <div id="timeline">
-    <div class="timeline-item">
+
+    <div *ngFor="let item of roadmap.timeline" class="timeline-item">
       <div class="timeline-icon">
         <ion-icon name="ios-globe-outline"></ion-icon>
       </div>
       <div class="timeline-content">
-        <h4>LOREM IPSUM DOLOR</h4>
+        <h4>{{item.section}}</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+          {{item.description}}
+        </p>
+        <p class="stacks">
+          <span *ngFor="let stack of item.skills"> {{stack}}</span>
         </p>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <ion-icon name="ios-globe-outline"></ion-icon>
-      </div>
-      <div class="timeline-content right">
-        <h4>LOREM IPSUM DOLOR</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <ion-icon name="ios-globe-outline"></ion-icon>
-      </div>
-      <div class="timeline-content">
-        <h4>LOREM IPSUM DOLOR</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.
-        </p>
-      </div>
-    </div>
   </div>
 </ion-content>
