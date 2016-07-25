@@ -15,4 +15,7 @@ export class ProjectDetailPage {
     this.subdomain = params.get("subdomain");
   }
 
+  openProject(url) {
+    window.open(url,  "_system", "location=yes");
+  }
 }

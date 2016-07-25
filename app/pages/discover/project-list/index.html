@@ -11,11 +11,9 @@
     <ion-item-divider light>
       <span class="title">{{domainProject.name}}</span>
     </ion-item-divider>
-    <ion-list>
-      <button ion-item *ngFor="let subdomain of domainProject.subdomains" (click)="openProjectDetailPage(subdomain)">
-        {{subdomain.name}}
-        <ion-icon name="arrow-right" item-right></ion-icon>
-      </button>
-    </ion-list>
+    <button ion-item *ngFor="let subdomain of domainProject.subdomains" (click)="openProjectDetailPage(subdomain)">
+      {{subdomain.name}}
+      <ion-icon name="arrow-right" item-right></ion-icon>
+    </button>
   </ion-item-group>
 </ion-content>
