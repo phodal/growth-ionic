@@ -4,15 +4,15 @@ import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 
 @Component({
-  templateUrl: "build/pages/discover/roadmap-detail/index.html",
+  templateUrl: "build/pages/discover/project-detail/index.html",
   providers: [Http, HTTP_PROVIDERS]
 })
 
-export class RoadMapDetailPage {
-  private roadmap;
+export class ProjectDetailPage {
+  private subdomain;
 
   constructor(public params:NavParams) {
-    this.roadmap = params.get("roadmap");
+    this.subdomain = params.get("subdomain");
   }
 
 }

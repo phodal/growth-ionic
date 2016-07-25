@@ -9,6 +9,7 @@ import {SolutionPage} from "./solution/index";
 import {TodoListsPage} from "./todo-lists/index";
 import {ArticleListPage} from "./article-list/index";
 import {RoadMapPage} from "./roadmap-list/index";
+import {ProjectListPage} from "./project-list/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
@@ -59,6 +60,10 @@ export class DiscoverPage {
 
   openRoadMapPage() {
     this.nav.push(RoadMapPage);
+  }
+
+  openProjectListPage() {
+    this.nav.push(ProjectListPage);
   }
 
   launch(url) {
