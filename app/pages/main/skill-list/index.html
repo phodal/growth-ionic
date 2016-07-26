@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      我的技能分布
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="skill-list">
+  <ion-item-sliding *ngFor="let skill of allSkills">
+    <ion-item>
+      <span class="skill-title">{{skill.skill}}</span>
+      <rating [max]="max" [(ngModel)]="skill.rate" [readonly]="true"></rating>
+    </ion-item>
+  </ion-item-sliding>
+</ion-content>
