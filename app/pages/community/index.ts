@@ -9,6 +9,7 @@ import {concat, filter} from "lodash";
 import {CommunityDetailPage} from "./detail/index";
 import {LoginPage} from "./profile/index";
 import {UserData} from "../../providers/user-data";
+import {CreateTopicPage} from "./create/index";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
@@ -71,6 +72,10 @@ export class CommunityPage {
 
   openLoginPage() {
     this.nav.push(LoginPage);
+  }
+
+  openCreatePage() {
+    this.nav.push(CreateTopicPage);
   }
 
   private eventHandle() {

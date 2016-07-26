@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      撰写
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="community-detail has-header">
+  <form name="postsForm" novalidate ng-submit="create(postsForm)">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Title</span>
+        <input type="text" name="title" placeholder="Write here" required>
+      </label>
+
+      <label class="item item-divider">内容</label>
+      <label class="item item-input">
+        <textarea name="content" rows="10" placeholder="Write here" required></textarea>
+      </label>
+    </div>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <button type="submit" padding block>
+    创建
+  </button>
+</ion-footer>
