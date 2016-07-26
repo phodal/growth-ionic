@@ -4,20 +4,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="toolbox-list has-header" padding>
-  <div class="topic row topicCard" *ngIf="topic">
+<ion-content class="community-detail has-header">
+  <div class="topic row topicCard" *ngIf="topic" padding>
     <div class="col col80">
       <h4 class="title">{{topic.attributes.title}}</h4>
       <div class="markdown" [innerHTML]="post.attributes.contentHtml"></div>
     </div>
   </div>
-  <div class="topicItem">
+  <div class="commentList">
     <div *ngFor="let comment of discussions">
-      <div class="item item-text-wrap item-avatar"
-           *ngIf="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
+      <ion-item *ngIf="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <h2>{{getUsername(comment.relationships.user)}}</h2>
-        <div [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></div>
-      </div>
+        <p class="markdown" [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
+      </ion-item>
     </div>
   </div>
 </ion-content>

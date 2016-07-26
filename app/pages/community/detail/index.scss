@@ -1,3 +1,47 @@
-.toolbox-list {
+.community-detail {
   background-color: #fff;
+
+  .commentList {
+    ion-label {
+      white-space: normal;
+    }
+
+
+    .PostMention,
+    .UserMention {
+      background: #e8ecf3;
+      color: #7088a9;
+      border-radius: 4px;
+      padding: 2px 5px;
+      border: 0!important
+    }
+
+    blockquote .PostMention,blockquote .UserMention {
+      background: #fff
+    }
+
+    .PostMention:hover,.UserMention:hover,.PostMention:active,.UserMention:active {
+      color: #426799
+    }
+
+    .PostMention {
+      margin: 0 3px
+    }
+
+    .PostMention:first-child {
+      margin-left: 0
+    }
+
+    .PostMention:before {
+      color: #03a9f4;
+      display: inline-block;
+      font: 14px Ionicons;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f4c7";
+      margin-right: 5px;
+    }
+  }
 }
