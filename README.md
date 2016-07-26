@@ -1,4 +1,4 @@
-Ionic2 + Angular 2 + Growth + TypeScript
+Growth 2.0 - 陪你成为顶尖开发者
 ===
 
 [![Build Status](https://travis-ci.org/phodal/growth2.svg?branch=master)](https://travis-ci.org/phodal/growth2) [![Code Climate](https://codeclimate.com/github/phodal/growth2/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth2) [![Test Coverage](https://codeclimate.com/github/phodal/growth2/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth2/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth2/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth2)
@@ -12,7 +12,7 @@ Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
 [开发文档](./docs/README.md)
 
-内容来源
+内容及资料来源
 ---
 
 ### By Phodal
@@ -36,7 +36,7 @@ Others:
 Thanks 
 ---
 
- - [Ionic](https://github.com/driftyco/ionic)
+ - 混合框架: [Ionic](https://github.com/driftyco/ionic)
  - 前端面试题: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
  - Ionic 2模板：[https://github.com/lathonez/clicker](https://github.com/lathonez/clicker)
  - Timeline [https://github.com/itbruno/responsive-timeline](https://github.com/itbruno/responsive-timeline)
@@ -44,6 +44,6 @@ Thanks
 License
 ---
 
-© 2016 A [Phodal Huang](https://www.phodal.com)'s [Idea](http://github.com/phodal/ideas).  This code is distributed under the MIT license. See `LICENSE` in this directory.
+[![Phodal's Idea](http://brand.phodal.com/shields/idea-small.svg)](http://ideas.phodal.com/)
 
-[待我代码编成，娶你为妻可好](http://www.xuntayizhan.com/blog/ji-ke-ai-qing-zhi-er-shi-dai-wo-dai-ma-bian-cheng-qu-ni-wei-qi-ke-hao-wan/)
+© 2016 A [Phodal Huang](https://www.phodal.com)'s [Idea](http://github.com/phodal/ideas).  This code is distributed under the MIT license. See `LICENSE` in this directory.
