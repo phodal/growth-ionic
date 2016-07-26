@@ -1,11 +1,22 @@
 .community-detail {
-  background-color: #fff;
+  background-color: #f0f0f0;
 
+  .topic {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+
+    h4.title {
+      text-align: center;
+    }
+  }
   .commentList {
+    margin-bottom: 10px;
+
     ion-label {
       white-space: normal;
     }
-
 
     .PostMention,
     .UserMention {
@@ -13,14 +24,14 @@
       color: #7088a9;
       border-radius: 4px;
       padding: 2px 5px;
-      border: 0!important
+      border: 0 !important
     }
 
-    blockquote .PostMention,blockquote .UserMention {
+    blockquote .PostMention, blockquote .UserMention {
       background: #fff
     }
 
-    .PostMention:hover,.UserMention:hover,.PostMention:active,.UserMention:active {
+    .PostMention:hover, .UserMention:hover, .PostMention:active, .UserMention:active {
       color: #426799
     }
 
@@ -35,7 +46,7 @@
     .PostMention:before {
       color: #03a9f4;
       display: inline-block;
-      font: 14px Ionicons;
+      font: 1em Ionicons;
       font-size: inherit;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;

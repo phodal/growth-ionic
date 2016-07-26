@@ -1,6 +1,13 @@
 <ion-header>
   <ion-navbar>
-
+    <ion-buttons end>
+      <button>
+        <ion-icon name="ios-person-outline"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="ios-chatboxes-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -11,12 +18,12 @@
       <div class="markdown" [innerHTML]="post.attributes.contentHtml"></div>
     </div>
   </div>
-  <div class="commentList">
+  <ion-list class="commentList">
     <div *ngFor="let comment of discussions">
       <ion-item *ngIf="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
-        <h2>{{getUsername(comment.relationships.user)}}</h2>
+        <span class="username">{{getUsername(comment.relationships.user)}}</span>
         <p class="markdown" [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
       </ion-item>
     </div>
-  </div>
+  </ion-list>
 </ion-content>
