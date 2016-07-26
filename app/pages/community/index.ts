@@ -19,10 +19,11 @@ export class CommunityPage {
   private topics;
   private included;
   private nextPageUrl;
-  private isLoggedin = this.userData.isLogin();
+  private isLoggedin = false;
 
   constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http, private userData: UserData) {
     this.http = http;
+    this.isLoggedin = this.userData.isLogin();
     this.init();
   }
 

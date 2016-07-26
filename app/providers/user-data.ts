@@ -13,7 +13,7 @@ export class UserData {
     this.http = http;
   }
 
-  login(user) {
+  login(user, loading) {
     let payload = {
       identification: user.username,
       password: user.password
@@ -24,13 +24,15 @@ export class UserData {
       .map(response => response.json())
       .subscribe(
         data => {
+          loading.dismiss();
           self.setUsername(user.username);
           self.setToken(data.token);
           self.isLoggedin = true;
           self.storage.set(this.HAS_LOGGED_IN, true);
-          self.events.publish("user:login");
+          self.events.publish("user:login", user.username);
         },
         error => {
+          loading.dismiss();
           alert(error);
         }
       );
