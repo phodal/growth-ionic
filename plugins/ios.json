@@ -24,7 +24,17 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.growth2238802"
+        },
+        "cordova-plugin-apprate": {
+            "PACKAGE_NAME": "com.phodal.growth2"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        }
+    }
 }
