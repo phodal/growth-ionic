@@ -54,6 +54,12 @@ export class UserData {
     this.storage.set("token", token);
   }
 
+  getToken() {
+    return this.storage.get("token").then((value) => {
+      return value;
+    });
+  }
+
   setUsername(username) {
     this.storage.set("username", username);
   }
@@ -65,7 +71,6 @@ export class UserData {
   }
 
   isLogin() {
-    console.log(this.hasLogin);
     return this.hasLogin;
   };
 

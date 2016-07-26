@@ -59,7 +59,7 @@ export class CommunityPage {
       );
   }
 
-  getAuthorName(data, userId) {
+  private getAuthorName(data, userId) {
     let username = "User";
     let userInfo = filter(data, userId);
     if (userInfo[0] && userInfo[0]["attributes"]) {
@@ -68,15 +68,15 @@ export class CommunityPage {
     return username;
   }
 
-  openDetailPage(topicId) {
+  private openDetailPage(topicId) {
     this.nav.push(CommunityDetailPage, {topicId: topicId});
   }
 
-  openLoginPage() {
+  private openLoginPage() {
     this.nav.push(LoginPage);
   }
 
-  openCreatePage() {
+  private openCreatePage() {
     this.nav.push(CreateTopicPage);
   }
 
@@ -87,7 +87,7 @@ export class CommunityPage {
     });
   }
 
-  doInfinite(infiniteScroll, url) {
+  private doInfinite(infiniteScroll, url) {
     let self = this;
     this.http.get(url)
       .map(res => res.json())

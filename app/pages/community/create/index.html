@@ -7,23 +7,27 @@
 </ion-header>
 
 <ion-content class="community-detail has-header">
-  <form name="postsForm" novalidate ng-submit="create(postsForm)">
-    <div class="list">
-      <label class="item item-input">
-        <span class="input-label">Title</span>
-        <input type="text" name="title" placeholder="Write here" required>
-      </label>
+  <form postForm="ngForm" novalidate>
+    <ion-item>
+      <ion-label>标题</ion-label>
+      <ion-input [(ngModel)]="postForm.title" name="title" #title="ngModel" type="text" placeholder="Write here"
+                 required></ion-input>
+    </ion-item>
+    <p [hidden]="title.valid || submitted == false" danger padding-left>
+      必填
+    </p>
 
-      <label class="item item-divider">内容</label>
-      <label class="item item-input">
-        <textarea name="content" rows="10" placeholder="Write here" required></textarea>
-      </label>
+    <ion-item>
+      <ion-label>内容</ion-label>
+      <ion-input [(ngModel)]="postForm.content" name="content" #content="ngModel"
+                 rows="10" placeholder="Write here" required></ion-input>
+    </ion-item>
+    <p [hidden]="content.valid || submitted == false" danger padding-left>
+      必填
+    </p>
+
+    <div padding>
+      <button (click)="create(postForm)" type="submit" primary block>Create</button>
     </div>
   </form>
 </ion-content>
-
-<ion-footer>
-  <button type="submit" padding block>
-    创建
-  </button>
-</ion-footer>
