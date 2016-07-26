@@ -7,7 +7,7 @@ import "rxjs/add/operator/map";
 export class UserData {
   HAS_LOGGED_IN = "hasLoggedIn";
   storage = new Storage(LocalStorage);
-  private isLoggedin = false;
+  private hasLogin = false;
 
   constructor(private events:Events, private http:Http) {
     this.http = http;
@@ -27,7 +27,7 @@ export class UserData {
           loading.dismiss();
           self.setUsername(user.username);
           self.setToken(data.token);
-          self.isLoggedin = true;
+          self.hasLogin = true;
           self.storage.set(this.HAS_LOGGED_IN, true);
           self.events.publish("user:login", user.username);
         },
@@ -65,13 +65,16 @@ export class UserData {
   }
 
   isLogin() {
-    return this.isLoggedin;
+    console.log(this.hasLogin);
+    return this.hasLogin;
   };
 
   // return a promise
   hasLoggedIn() {
+    let self = this;
     return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
-      return value === 'true';
+      self.hasLogin = value === "true";
+      return self.hasLogin;
     });
   }
 }

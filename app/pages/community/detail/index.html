@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons end>
-      <button>
+      <button [hidden]="!isLogin">
         <ion-icon name="ios-chatboxes-outline"></ion-icon>
       </button>
     </ion-buttons>

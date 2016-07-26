@@ -7,7 +7,7 @@
       <button [hidden]="hasLogin" (click)="openLoginPage()">
         <ion-icon name="ios-person-outline"></ion-icon>
       </button>
-      <button (click)="openCreatePage()">
+      <button [hidden]="!hasLogin" (click)="openCreatePage()">
         <ion-icon name="ios-create-outline"></ion-icon>
       </button>
     </ion-buttons>

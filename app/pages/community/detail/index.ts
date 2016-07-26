@@ -7,6 +7,7 @@ import {SERVER_BASE_URL} from "../../../utils/constants";
 import {filter} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 import {TimeAgoPipe} from "angular2-moment/index";
+import {UserData} from "../../../providers/user-data";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
@@ -22,11 +23,14 @@ export class CommunityDetailPage {
   private discussions;
   private nextPageUrl;
   private post;
+  private isLogin = false;
 
-  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams) {
+  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
     let topicId = params.get("topicId");
     this.init(topicId);
+    this.userData = userData;
+    this.isLogin = this.userData.isLogin();
   }
 
   getUsername = function (user) {
