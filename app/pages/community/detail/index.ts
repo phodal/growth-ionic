@@ -2,7 +2,9 @@ import {Component} from "@angular/core";
 import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
-import {getSpinnerConfig, convertToMarkdown} from "../../../utils/helper";
+import {getSpinnerConfig} from "../../../utils/helper";
+import {SERVER_BASE_URL} from "../../../utils/constants";
+import {filter} from "lodash";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
@@ -10,10 +12,43 @@ import {getSpinnerConfig, convertToMarkdown} from "../../../utils/helper";
 })
 
 export class CommunityDetailPage {
-  private content;
+  private topic;
+  private discussions;
+  private nextPageUrl;
+  private post;
 
-  constructor(public http:Http, public params:NavParams) {
+  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams) {
     this.http = http;
-    this.content = "";
+    let topicId = params.get("topicId");
+    this.init(topicId);
   }
+
+  init(topicId) {
+    let url = SERVER_BASE_URL.forum + "/" + topicId;
+    let self = this;
+    let loading = this.loadingCtrl.create(getSpinnerConfig());
+    loading.present();
+
+    this.http.get(url)
+      .map(res => res.json())
+      .subscribe(
+        response => {
+          self.topic = response.data;
+          self.discussions = response.included;
+
+          let postId = response.data.relationships.posts.data[0].id;
+          self.post = filter(response.included, {type: "posts", id: postId})[0];
+          // noinspection TypeScriptUnresolvedVariable
+          if (response.links && response.links.next) {
+            // noinspection TypeScriptUnresolvedVariable
+            self.nextPageUrl = response.links.next;
+          } else {
+            self.nextPageUrl = null;
+          }
+
+          loading.dismiss();
+        }
+      );
+  }
+
 }

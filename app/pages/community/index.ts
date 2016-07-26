@@ -57,9 +57,8 @@ export class CommunityPage {
     return username;
   }
 
-  openDetailPage(topic) {
-    let self = this;
-    this.nav.push(CommunityDetailPage, {topic: topic, topics: self.topics, included: self.included});
+  openDetailPage(topicId) {
+    this.nav.push(CommunityDetailPage, {topicId: topicId});
   }
 
   doInfinite(infiniteScroll, url) {

@@ -8,7 +8,7 @@
 
 <ion-content class="community">
   <ion-list class="topics">
-    <ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic)">
+    <ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic.id)">
       <div class="topic-detail">
         <h2>{{topic.attributes.title}}</h2>
         <p class="summary">
