@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {LoadingController, NavParams} from "ionic-angular/index";
+import {LoadingController, NavParams, ToastController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
 import {getSpinnerConfig} from "../../../utils/helper";
@@ -29,7 +29,7 @@ export class CommunityDetailPage {
   private isReplying = false;
   private token;
 
-  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams, private userData:UserData) {
+  constructor(private loadingCtrl:LoadingController, private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
     this.topicId = params.get("topicId");
     this.init(this.topicId);
@@ -67,7 +67,14 @@ export class CommunityDetailPage {
         data => {
           self.isReplying = false;
           self.replyContent = '';
-          self.discussions.push(data);
+          self.discussions.push(data.data);
+
+          let toast = self.toastCtrl.create({
+            message: "回复成功",
+            duration: 1000,
+            position: "top"
+          });
+          toast.present();
         },
         error => {
           alert(error);

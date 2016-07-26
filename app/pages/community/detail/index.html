@@ -22,7 +22,7 @@
   </ion-list>
 </ion-content>
 
-<ion-footer [hidden]="!isLogin">
+<ion-footer [hidden]="!isLogin || isReplying">
   <ion-toolbar>
     <label class="item-input-wrapper">
       <input type="text" placeholder="回复" [(ngModel)]="replyContent">
