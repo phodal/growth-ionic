@@ -26,8 +26,10 @@ export class CommunityDetailPage {
   private isLogin = false;
   private replyContent = "";
   private topicId;
-  private isReplying = false;
+  private isShowCommentBox = false;
   private token;
+  private replyToUser;
+  private replyToId;
 
   constructor(private loadingCtrl:LoadingController, private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
@@ -47,25 +49,46 @@ export class CommunityDetailPage {
     return "User";
   };
 
+  showCommentBox() {
+    if(this.isShowCommentBox) {
+      this.isShowCommentBox = false
+    } else {
+      this.isShowCommentBox = true
+    }
+  }
+
+  replyTo(user, id) {
+    this.isShowCommentBox = true;
+    this.replyToUser = user;
+    this.replyToId = id;
+  };
+
+
   saveReply() {
     let self = this;
     let headers = new Headers();
+    let replyContent = self.replyContent;
+
+    if (self.replyToUser !== '' && self.replyToUser !== '') {
+      replyContent = '@' + self.replyToUser + '#' + self.replyToId + self.replyContent;
+    }
+
     let reply = {
       "data": {
         "type": "posts",
-        "attributes": {"content": this.replyContent},
+        "attributes": {"content": replyContent},
         "relationships": {"discussion": {"data": {"type": "discussions", "id": this.topicId}}}
       }
     };
 
-    self.isReplying = true;
+    self.isShowCommentBox = true;
     headers.append("Authorization", "Token " + self.token);
 
     this.http.post('http://forum.growth.ren/api/posts', reply, {headers: headers})
       .map(res => res.json())
       .subscribe(
         data => {
-          self.isReplying = false;
+          self.isShowCommentBox = false;
           self.replyContent = '';
           self.discussions.push(data.data);
 

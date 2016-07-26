@@ -1,6 +1,10 @@
 <ion-header>
   <ion-navbar>
-
+    <ion-buttons end>
+      <button [hidden]="!isLogin" (click)="showCommentBox()">
+        <ion-icon name="ios-chatboxes-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -17,12 +21,16 @@
         <span class="username">{{getUsername(comment.relationships.user)}}</span>
         <span class="item-note ago"><time>{{comment.attributes.time | amTimeAgo}}</time></span>
         <p class="markdown" [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
+
+        <div [hidden]="!isLogin">
+          <button class="button button-clear" (click)="replyTo(getUsername(comment.relationships.user), comment.id)">回复</button>
+        </div>
       </ion-item>
     </div>
   </ion-list>
 </ion-content>
 
-<ion-footer [hidden]="!isLogin || isReplying">
+<ion-footer [hidden]="!isLogin || !isShowCommentBox">
   <ion-toolbar>
     <label class="item-input-wrapper">
       <input type="text" placeholder="回复" [(ngModel)]="replyContent">
