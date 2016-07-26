@@ -50,10 +50,10 @@ export class CommunityDetailPage {
   };
 
   showCommentBox() {
-    if(this.isShowCommentBox) {
-      this.isShowCommentBox = false
+    if (this.isShowCommentBox) {
+      this.isShowCommentBox = false;
     } else {
-      this.isShowCommentBox = true
+      this.isShowCommentBox = true;
     }
   }
 
@@ -63,14 +63,13 @@ export class CommunityDetailPage {
     this.replyToId = id;
   };
 
-
   saveReply() {
     let self = this;
     let headers = new Headers();
     let replyContent = self.replyContent;
 
-    if (self.replyToUser !== '' && self.replyToUser !== '') {
-      replyContent = '@' + self.replyToUser + '#' + self.replyToId + self.replyContent;
+    if (self.replyToUser !== "" && self.replyToUser !== "") {
+      replyContent = "@" + self.replyToUser + "#" + self.replyToId + self.replyContent;
     }
 
     let reply = {
@@ -84,12 +83,12 @@ export class CommunityDetailPage {
     self.isShowCommentBox = true;
     headers.append("Authorization", "Token " + self.token);
 
-    this.http.post('http://forum.growth.ren/api/posts', reply, {headers: headers})
+    this.http.post("http://forum.growth.ren/api/posts", reply, {headers: headers})
       .map(res => res.json())
       .subscribe(
         data => {
           self.isShowCommentBox = false;
-          self.replyContent = '';
+          self.replyContent = "";
           self.discussions.push(data.data);
 
           let toast = self.toastCtrl.create({
@@ -102,7 +101,7 @@ export class CommunityDetailPage {
         error => {
           alert(error);
         }
-      )
+      );
   }
 
   init(topicId) {

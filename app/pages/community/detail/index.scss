@@ -75,6 +75,9 @@
 
 ion-footer {
   ion-toolbar {
+    tabbar, .toolbar-background {
+      background-color: #f0f0f0;
+    }
     input {
       height: 2em;
       margin: 5px;
