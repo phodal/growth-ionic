@@ -23,6 +23,16 @@ export class CommunityDetailPage {
     this.init(topicId);
   }
 
+  getUsername = function (user) {
+    let included = this.discussions;
+    for (let i = 0; i < included.length; ++i) {
+      if (included[i].type === 'users' && included[i].id === user.data.id) {
+        return included[i].attributes.username;
+      }
+    }
+    return 'User';
+  };
+
   init(topicId) {
     let url = SERVER_BASE_URL.forum + "/" + topicId;
     let self = this;
