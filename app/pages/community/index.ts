@@ -8,6 +8,7 @@ import "moment/locale/zh-cn";
 import {concat, filter} from "lodash";
 import {CommunityDetailPage} from "./detail/index";
 import {LoginPage} from "./profile/index";
+import {UserData} from "../../providers/user-data";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
@@ -18,8 +19,9 @@ export class CommunityPage {
   private topics;
   private included;
   private nextPageUrl;
+  private isLoggedin = this.userData.isLogin();
 
-  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http) {
+  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http, private userData: UserData) {
     this.http = http;
     this.init();
   }
