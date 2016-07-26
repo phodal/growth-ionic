@@ -30,11 +30,11 @@ export class CommunityDetailPage {
   getUsername = function (user) {
     let included = this.discussions;
     for (let i = 0; i < included.length; ++i) {
-      if (included[i].type === 'users' && included[i].id === user.data.id) {
+      if (included[i].type === "users" && included[i].id === user.data.id) {
         return included[i].attributes.username;
       }
     }
-    return 'User';
+    return "User";
   };
 
   init(topicId) {

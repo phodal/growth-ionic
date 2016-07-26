@@ -8,7 +8,7 @@ import {filter} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 
 @Component({
-  templateUrl: "build/pages/community/login/index.html",
+  templateUrl: "build/pages/community/profile/index.html",
   providers: [Http, HTTP_PROVIDERS],
 })
 
