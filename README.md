@@ -17,7 +17,7 @@ Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
 
 ### By Phodal
 
-Ebooks:
+EBooks:
 
  - [全栈增长工程师指南](https://github.com/phodal/growth)
  - [全栈增长工程师的练手项目集](https://github.com/phodal/ideabook)
@@ -27,10 +27,11 @@ Ebooks:
 Others:
  
  - [Web Developer Roadmap](https://github.com/phodal/developer)
- - [Awesome Growth](https://github.com/phodal/awesome-growth)
- - [Awesome Solutions](https://github.com/phodal/awesome-solutions)
- - [Growth APP Content](https://github.com/phodal/growth-content)
- - [Phodal's Articles](https://github.com/phodal/articles)
+ - 学习路线: [https://github.com/phodal/awesome-growth](https://github.com/phodal/awesome-growth)
+ - 解决方案: [https://github.com/phodal/awesome-solutions](https://github.com/phodal/awesome-solutions)
+ - Growth相关内容: [https://github.com/phodal/growth-content](https://github.com/phodal/growth-content)
+ - 文章推荐: [https://github.com/phodal/articles](https://github.com/phodal/articles)
+ - 练手项目: [https://github.com/phodal/awesome-practise-project](https://github.com/phodal/awesome-practise-project)
 
 Thanks 
 ---
