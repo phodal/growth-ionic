@@ -19,13 +19,12 @@ export class CommunityPage {
   private topics;
   private included;
   private nextPageUrl;
-  private isLoggedin = false;
+  private hasLogin = false;
   private loading = false;
 
   constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData) {
     this.http = http;
     this.events = events;
-    this.isLoggedin = this.userData.isLogin();
     this.eventHandle();
     this.init();
   }
@@ -34,6 +33,12 @@ export class CommunityPage {
     let url = SERVER_BASE_URL.forum;
     let self = this;
     self.loading = true;
+
+    this.userData.hasLoggedIn().then(
+      result => {
+        self.hasLogin = result;
+      }
+    );
 
     this.http.get(url)
       .map(res => res.json())
@@ -78,7 +83,7 @@ export class CommunityPage {
   private eventHandle() {
     let self = this;
     this.events.subscribe("user:login", (userEventData) => {
-      self.isLoggedin = true;
+      self.hasLogin = true;
     });
   }
 
