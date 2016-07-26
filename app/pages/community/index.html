@@ -15,7 +15,11 @@
 </ion-header>
 
 <ion-content class="community">
-  <div class="loading" [hidden]="!loading">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="loading" [hidden]="!loading && !isRefresh">
     <ion-spinner [name]="circles"></ion-spinner>
   </div>
   <ion-list class="topics">

@@ -21,6 +21,7 @@ export class CommunityPage {
   private nextPageUrl;
   private hasLogin = false;
   private loading = false;
+  private isRefresh = false;
 
   constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData) {
     this.http = http;
@@ -55,6 +56,36 @@ export class CommunityPage {
           }
 
           self.loading = false;
+        }
+      );
+  }
+
+  doRefresh(refresher) {
+    let url = SERVER_BASE_URL.forum;
+    let self = this;
+
+    self.isRefresh =  true;
+    this.userData.hasLoggedIn().then(
+      result => {
+        self.hasLogin = result;
+      }
+    );
+
+    this.http.get(url)
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          refresher.complete();
+          self.topics = data.data;
+          self.included = data.included;
+          self.isRefresh = false;
+          // noinspection TypeScriptUnresolvedVariable
+          if (data.links && data.links.next) {
+            // noinspection TypeScriptUnresolvedVariable
+            self.nextPageUrl = data.links.next;
+          } else {
+            self.nextPageUrl = null;
+          }
         }
       );
   }
