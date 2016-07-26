@@ -94,7 +94,7 @@ export class CommunityPage {
       .subscribe(
         data => {
           self.topics = concat(self.topics, data.data);
-          self.included = concat(self.topics, data.included);
+          self.included = concat(self.included, data.included);
           // noinspection TypeScriptUnresolvedVariable
           if (data.links && data.links.next) {
             // noinspection TypeScriptUnresolvedVariable
