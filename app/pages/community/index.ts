@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {LoadingController, NavController} from "ionic-angular/index";
+import {Events, LoadingController, NavController} from "ionic-angular/index";
 import {Http} from "@angular/http";
 import {getSpinnerConfig} from "../../utils/helper";
 import {SERVER_BASE_URL} from "../../utils/constants";
@@ -21,9 +21,13 @@ export class CommunityPage {
   private nextPageUrl;
   private isLoggedin = false;
 
-  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http, private userData: UserData) {
+  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http,
+              private events:Events,
+              private userData:UserData) {
     this.http = http;
+    this.events = events;
     this.isLoggedin = this.userData.isLogin();
+    this.eventHandle();
     this.init();
   }
 
@@ -67,6 +71,13 @@ export class CommunityPage {
 
   openLoginPage() {
     this.nav.push(LoginPage);
+  }
+
+  private eventHandle() {
+    let self = this;
+    this.events.subscribe("user:login", (userEventData) => {
+      self.isLoggedin = true;
+    });
   }
 
   doInfinite(infiniteScroll, url) {
