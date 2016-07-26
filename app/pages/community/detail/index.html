@@ -22,6 +22,7 @@
     <div *ngFor="let comment of discussions">
       <ion-item *ngIf="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
         <span class="username">{{getUsername(comment.relationships.user)}}</span>
+        <span class="item-note ago"><time>{{comment.attributes.time | amTimeAgo}}</time></span>
         <p class="markdown" [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
       </ion-item>
     </div>

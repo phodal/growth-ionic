@@ -6,12 +6,14 @@ import {getSpinnerConfig} from "../../../utils/helper";
 import {SERVER_BASE_URL} from "../../../utils/constants";
 import {filter} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
+import {TimeAgoPipe} from "angular2-moment/index";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
   providers: [Http, HTTP_PROVIDERS],
   pipes: [
-    SanitizeHtml
+    SanitizeHtml,
+    TimeAgoPipe
   ]
 })
 
