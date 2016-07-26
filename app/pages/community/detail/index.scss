@@ -20,7 +20,7 @@
     .ago {
       float: right;
     }
-    
+
     ion-label {
       white-space: normal;
 
@@ -64,6 +64,21 @@
       -moz-osx-font-smoothing: grayscale;
       content: "\f4c7";
       margin-right: 5px;
+    }
+  }
+}
+
+
+ion-footer {
+  ion-toolbar {
+    input {
+      height: 2em;
+      margin: 5px;
+      width: calc(100% - 6em);
+    }
+    button.button {
+      float: right;
+      height: 2em;
     }
   }
 }
