@@ -41,20 +41,19 @@ export class CreateTopicPage {
     self.http.post("http://forum.growth.ren/api/discussions", data, {headers: headers})
       .map(response => response.json())
       .subscribe(
-        // data => {
-        //   let postData = data;
-        //   this.isInCreating = false;
-        //   let toast = self.toastCtrl.create({
-        //     message: "欢迎回来," + postData,
-        //     duration: 2000,
-        //     position: "top"
-        //   });
-        //   toast.present();
-        //   self.nav.pop();
-        // },
-        // error => {
-        //   alert(error);
-        // }
+        postData => {
+          this.isInCreating = false;
+          let toast = self.toastCtrl.create({
+            message: "欢迎回来," + postData,
+            duration: 2000,
+            position: "top"
+          });
+          toast.present();
+          self.nav.pop();
+        },
+        error => {
+          alert(error);
+        }
       );
   }
 
