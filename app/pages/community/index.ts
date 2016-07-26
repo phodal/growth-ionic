@@ -1,7 +1,6 @@
 import {Component} from "@angular/core";
-import {Events, LoadingController, NavController} from "ionic-angular/index";
+import {Events, NavController} from "ionic-angular/index";
 import {Http} from "@angular/http";
-import {getSpinnerConfig} from "../../utils/helper";
 import {SERVER_BASE_URL} from "../../utils/constants";
 import {TimeAgoPipe} from "angular2-moment";
 import "moment/locale/zh-cn";
@@ -21,10 +20,9 @@ export class CommunityPage {
   private included;
   private nextPageUrl;
   private isLoggedin = false;
+  private loading = false;
 
-  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http,
-              private events:Events,
-              private userData:UserData) {
+  constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData) {
     this.http = http;
     this.events = events;
     this.isLoggedin = this.userData.isLogin();
@@ -35,8 +33,7 @@ export class CommunityPage {
   init() {
     let url = SERVER_BASE_URL.forum;
     let self = this;
-    let loading = this.loadingCtrl.create(getSpinnerConfig());
-    loading.present();
+    self.loading = true;
 
     this.http.get(url)
       .map(res => res.json())
@@ -52,7 +49,7 @@ export class CommunityPage {
             self.nextPageUrl = null;
           }
 
-          loading.dismiss();
+          self.loading = false;
         }
       );
   }
