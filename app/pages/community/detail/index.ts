@@ -5,10 +5,14 @@ import "rxjs/add/operator/map";
 import {getSpinnerConfig} from "../../../utils/helper";
 import {SERVER_BASE_URL} from "../../../utils/constants";
 import {filter} from "lodash";
+import { SanitizeHtml } from "../../../pipes/SanitizeHtml.pipe";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
-  providers: [Http, HTTP_PROVIDERS]
+  providers: [Http, HTTP_PROVIDERS],
+  pipes: [
+    SanitizeHtml
+  ]
 })
 
 export class CommunityDetailPage {
