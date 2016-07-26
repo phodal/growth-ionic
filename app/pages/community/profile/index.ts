@@ -1,26 +1,24 @@
 import {Component} from "@angular/core";
-import {LoadingController, NavParams} from "ionic-angular/index";
-import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
-import {getSpinnerConfig} from "../../../utils/helper";
-import {SERVER_BASE_URL} from "../../../utils/constants";
-import {filter} from "lodash";
-import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
+import {UserData} from "../../../providers/user-data";
 
 @Component({
   templateUrl: "build/pages/community/profile/index.html",
-  providers: [Http, HTTP_PROVIDERS],
 })
 
 export class LoginPage {
-  private authType:string = "login";
+  private loginInfo: {username?: string, password?: string} = {};
+  private submitted = false;
 
-  constructor(public http:Http) {
-    this.http = http;
+  constructor(private userData: UserData) {
   }
 
-  login(loginCreds) {
+  doLogin(form) {
+    this.submitted = true;
 
+    if (form.valid) {
+      this.userData.login(this.loginInfo);
+    }
   }
 
   signup(signupCreds) {

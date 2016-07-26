@@ -3,6 +3,8 @@ import {StatusBar} from "ionic-native";
 import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "./pages/effect/content-transition";
+import {UserData} from "./providers/user-data";
+import {disableDeprecatedForms, provideForms} from "@angular/forms";
 
 @Component({
   template: "<ion-nav [root]='rootPage'></ion-nav>"
@@ -33,7 +35,7 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp, null, {
+ionicBootstrap(MyApp, [UserData, disableDeprecatedForms(), provideForms()], {
   bodyContentEnter: TRANSITION_IN_KEY,
   bodyContentLeave: TRANSITION_OUT_KEY,
   tabbarPlacement: "bottom",

@@ -7,59 +7,26 @@
 </ion-header>
 
 <ion-content class="login has-header">
-  <div padding>
-    <ion-segment [(ngModel)]="authType">
-      <ion-segment-button value="login">
-        Login
-      </ion-segment-button>
-      <ion-segment-button value="signup">
-        Signup
-      </ion-segment-button>
-    </ion-segment>
-  </div>
 
-  <div [ngSwitch]="authType">
-    <form *ngSwitchWhen="'login'" #loginCreds="ngForm" (ngSubmit)="login(loginCreds.value)">
-      <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input type="text" ngControl="username"></ion-input>
-      </ion-item>
+  <form #loginForm="ngForm" novalidate>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input [(ngModel)]="loginInfo.username" name="username" #username="ngModel" type="text" required></ion-input>
+    </ion-item>
+    <p [hidden]="username.valid || submitted == false" danger padding-left>
+      Username is required
+    </p>
 
-      <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input type="password" ngControl="password"></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="loginInfo.password" name="password" #password="ngModel" type="password" required></ion-input>
+    </ion-item>
+    <p [hidden]="password.valid || submitted == false" danger padding-left>
+      Password is required
+    </p>
 
-      <div padding>
-        <button block type="submit">Login</button>
-      </div>
-    </form>
-
-    <form *ngSwitchWhen="'signup'" #signupCreds="ngForm" (ngSubmit)="signup(signupCreds.value)">
-      <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input type="text" ngControl="username"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input type="password" ngControl="password"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Email</ion-label>
-        <ion-input type="email" ngControl="email"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button block type="submit">Signup</button>
-      </div>
-
-    </form>
-  </div>
-
-  <div padding>
-    <p *ngIf="error" class="error">{{ error._body }}</p>
-  </div>
-
+    <div padding>
+      <button (click)="doLogin(loginForm)" type="submit" primary block>Login</button>
+    </div>
+  </form>
 </ion-content>
