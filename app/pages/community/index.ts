@@ -7,6 +7,7 @@ import {TimeAgoPipe} from "angular2-moment";
 import "moment/locale/zh-cn";
 import {concat, filter} from "lodash";
 import {CommunityDetailPage} from "./detail/index";
+import {LoginPage} from "./profile/index";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
@@ -59,6 +60,10 @@ export class CommunityPage {
 
   openDetailPage(topicId) {
     this.nav.push(CommunityDetailPage, {topicId: topicId});
+  }
+
+  openLoginPage() {
+    this.nav.push(LoginPage);
   }
 
   doInfinite(infiniteScroll, url) {

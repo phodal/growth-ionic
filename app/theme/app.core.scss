@@ -7,6 +7,7 @@
 @import "../pages/main/main";
 @import "../pages/community/index";
 @import "../pages/community/detail/index";
+@import "../pages/community/profile/index";
 @import "../pages/discover/index";
 @import "../pages/day/index";
 @import "../modals/HtmlModal/index";
@@ -84,7 +85,3 @@ rating {
   color: #ffffff;
 }
 
-.segment-button {
-  color: #fff;
-  border-color: #fff;
-}

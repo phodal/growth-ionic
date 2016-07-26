@@ -3,12 +3,20 @@
     <ion-title>
       社区交流
     </ion-title>
+    <ion-buttons end>
+      <button (click)="openLoginPage()">
+        <ion-icon name="ios-person-outline"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="ios-create-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="community">
   <ion-list class="topics">
-    <ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic.id)">
+    <button ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic.id)">
       <div class="topic-detail">
         <h2>{{topic.attributes.title}}</h2>
         <p class="summary">
@@ -18,7 +26,7 @@
           <span class="item-note ago"><time>{{topic.attributes.lastTime | amTimeAgo}}</time></span>
         </p>
       </div>
-    </ion-item>
+    </button>
 
     <ion-infinite-scroll *ngIf="!!nextPageUrl" (ionInfinite)="doInfinite($event, nextPageUrl)">
       <ion-infinite-scroll-content
