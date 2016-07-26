@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {LoadingController, NavParams} from "ionic-angular/index";
-import {Http, HTTP_PROVIDERS} from "@angular/http";
+import {Http, HTTP_PROVIDERS, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
 import {getSpinnerConfig} from "../../../utils/helper";
 import {SERVER_BASE_URL} from "../../../utils/constants";
@@ -24,11 +24,15 @@ export class CommunityDetailPage {
   private nextPageUrl;
   private post;
   private isLogin = false;
+  private replyContent = "";
+  private topicId;
+  private isReplying = false;
+  private token;
 
   constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
-    let topicId = params.get("topicId");
-    this.init(topicId);
+    this.topicId = params.get("topicId");
+    this.init(this.topicId);
     this.userData = userData;
     this.isLogin = this.userData.isLogin();
   }
@@ -43,11 +47,41 @@ export class CommunityDetailPage {
     return "User";
   };
 
+  saveReply() {
+    let self = this;
+    let headers = new Headers();
+    let reply = {
+      "data": {
+        "type": "posts",
+        "attributes": {"content": this.replyContent},
+        "relationships": {"discussion": {"data": {"type": "discussions", "id": this.topicId}}}
+      }
+    };
+
+    self.isReplying = true;
+    headers.append("Authorization", "Token " + self.token);
+
+    this.http.post('http://forum.growth.ren/api/posts', reply, {headers: headers})
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          self.isReplying = false;
+          self.replyContent = '';
+          self.discussions.push(data);
+        },
+        error => {
+          alert(error);
+        }
+      )
+  }
+
   init(topicId) {
     let url = SERVER_BASE_URL.forum + "/" + topicId;
     let self = this;
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
+
+    this.userData.getToken().then(token => self.token = token);
 
     this.http.get(url)
       .map(res => res.json())

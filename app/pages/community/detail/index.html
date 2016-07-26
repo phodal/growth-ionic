@@ -25,9 +25,9 @@
 <ion-footer [hidden]="!isLogin">
   <ion-toolbar>
     <label class="item-input-wrapper">
-      <input type="text" placeholder="回复">
+      <input type="text" placeholder="回复" [(ngModel)]="replyContent">
     </label>
-    <button>
+    <button (click)="saveReply()">
       提交
     </button>
   </ion-toolbar>
