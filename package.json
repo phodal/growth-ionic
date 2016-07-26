@@ -1,3 +1,4 @@
+
 {
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
@@ -60,6 +61,7 @@
     "karma": "gulp --gulpfile test/gulpfile.ts --cwd ./ karma-debug",
     "postinstall": "ionic state restore && typings install && webdriver-manager update && cp test/karma-static/*.html node_modules/karma/static",
     "start": "ionic serve",
+    "electron": "/Applications/Electron.app/Contents/MacOS/Electron .",
     "test": "gulp --gulpfile test/gulpfile.ts --cwd ./ unit-test"
   },
   "cordovaPlugins": [

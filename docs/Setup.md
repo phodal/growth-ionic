@@ -84,6 +84,12 @@ typings install dt~cordova/plugins/inappbrowser --save --global
 typings install dt~cordova/plugins/splashscreen --save --global
 ```
 
+Setup Electron Env
+---
+
+1. Download Electron from https://npm.taobao.org/mirrors/electron
+2. Run ``npm run electron``
+
 ### Convert md to HTML
 
 ```shell
