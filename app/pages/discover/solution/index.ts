@@ -65,14 +65,14 @@ export class SolutionPage {
     this.solutions = _.orderBy(SOLUTIONS, ["slug"], ["asc"]);
     let val = ev.target.value;
 
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
+    // if the value is an empty string don"t filter the items
+    if (val && val.trim() !== "") {
       this.solutions = this.solutions.filter((item) => {
         return (
           item.name.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
           item.description.toLowerCase().indexOf(val.toLowerCase()) > -1
         );
-      })
+      });
     }
   }
 }
