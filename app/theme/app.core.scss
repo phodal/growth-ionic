@@ -12,7 +12,6 @@
 @import "../pages/community/profile/index";
 
 @import "../pages/discover/index";
-@import "../modals/HtmlModal/index";
 @import "../modals/SkillModal/index";
 
 @import "./third-partys/markdown";
@@ -75,6 +74,16 @@ h1[primary], h2[primary], h3[primary], h4[primary], h5[primary], h6[primary], p[
 ion-content {
   background-color: $growth-background;
 }
+
+.html-modal,
+.book-list-modal,
+.todo-modal,
+.skill-modal {
+  button span {
+    color: $growth-new-color;
+  }
+}
+
 
 ion-modal {
   .html-modal ion-content {
