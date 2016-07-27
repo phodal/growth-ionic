@@ -9,6 +9,7 @@ import {HtmlModal} from "../../../modals/HtmlModal/index";
 })
 export class SolutionPage {
   private solutions;
+  private isWantSearch = false;
 
   constructor(private modalCtrl:ModalController) {
     this.solutions = _.orderBy(SOLUTIONS, ["slug"], ["asc"]);
@@ -20,5 +21,13 @@ export class SolutionPage {
     modalParams = {slug: "assets/solution/" + slug + ".html", pageTitle: "解决方案"};
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
     htmlModal.present();
+  }
+
+  toggleSearchBar() {
+    if (this.isWantSearch) {
+      this.isWantSearch = false;
+    } else {
+      this.isWantSearch = true;
+    }
   }
 }
