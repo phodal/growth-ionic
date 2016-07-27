@@ -13,8 +13,16 @@ export class BookmarkServices {
     return this.localStorage.get("bookmarks");
   };
 
-  getCurrentArticleBookmarkStatus() {
-
+  toggleArticleBookmark(slug, title) {
+    let self = this;
+    this.getAllBookmarks().then(function (bookmarks) {
+      bookmarks = JSON.parse(bookmarks);
+      if (bookmarks[slug]) {
+        self.remove(slug);
+      } else {
+        self.add(slug, title);
+      }
+    });
   }
 
   add(slug, title) {
@@ -28,6 +36,17 @@ export class BookmarkServices {
         let bookmark = {};
         bookmark[slug] = title;
         self.localStorage.set("bookmarks", JSON.stringify(bookmark));
+      }
+    });
+  }
+
+  remove(slug) {
+    let self = this;
+    this.getAllBookmarks().then(function (bookmarks) {
+      bookmarks = JSON.parse(bookmarks);
+      if (bookmarks) {
+        delete bookmarks[slug];
+        self.localStorage.set("bookmarks", JSON.stringify(bookmarks));
       }
     });
   }

@@ -42,6 +42,6 @@ export class HtmlModal {
 
   createBookmark() {
     this.isAlreadyInBookmarksList = true;
-    this.bookmarkServices.add(this.slug, this.articleTitle);
+    this.bookmarkServices.toggleArticleBookmark(this.slug, this.articleTitle);
   }
 }
