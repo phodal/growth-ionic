@@ -29,14 +29,14 @@
       <h2>开源许可</h2>
     </button>
 
-    <ion-item>
+    <ion-item ion-item (click)="shareIt()">
       <ion-icon name="ios-share-outline" item-left></ion-icon>
       <h2>分享给好友</h2>
     </ion-item>
 
-    <ion-item (click)="RateApp()">
+    <button ion-item (click)="RateApp()">
       <ion-icon name="ios-rose-outline" item-left></ion-icon>
       <h2>觉得有帮助，给个好评吧！</h2>
-    </ion-item>
+    </button>
   </ion-list>
 </ion-content>

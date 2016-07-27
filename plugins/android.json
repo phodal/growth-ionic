@@ -30,6 +30,9 @@
         },
         "cordova-plugin-app-version": {
             "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.phodal.growth2"
         }
     },
     "dependent_plugins": {
