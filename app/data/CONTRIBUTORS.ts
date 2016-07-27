@@ -3,7 +3,7 @@ export const CONTRIBUTORS = [
     "nickname": "Phodal",
     "duty": "作者",
     "github": "phodal",
-    "bio": "待我代码编成，娶你为妻可好 @hug8217",
+    "bio": "待我代码编成，娶你为妻可好 @花仲马",
     "weibo": "Phodal",
     "zhihu": "Phodal",
     "blog": "https://www.phodal.com/"
@@ -19,6 +19,7 @@ export const CONTRIBUTORS = [
   {
     "nickname": "Song",
     "duty": "UX",
+    "bio": "re-design Growth",
     "github": "song-what"
   }
 ];
