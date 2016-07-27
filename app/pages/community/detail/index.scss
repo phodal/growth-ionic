@@ -29,10 +29,17 @@
       float: right;
     }
 
+    .item {
+      padding-left: 0;
+    }
+
     ion-label {
       white-space: normal;
+      margin: 5px 8px 3px 0;
+      padding-left: 16px;
 
       p {
+        padding-top: 2px;
         display: block;
       }
     }
