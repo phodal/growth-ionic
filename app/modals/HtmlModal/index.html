@@ -11,7 +11,8 @@
     </ion-buttons>
     <ion-buttons end *ngIf="isArticle">
       <button (click)="createBookmark()">
-        <ion-icon name="bookmark"></ion-icon>
+        <ion-icon *ngIf="isAlreadyInBookmarksList" name="bookmark"></ion-icon>
+        <ion-icon [hidden]="isAlreadyInBookmarksList" name="bookmark-outline"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
