@@ -23,25 +23,34 @@ export class HtmlModal {
               public bookmarkServices:BookmarkServices,
               http:Http) {
 
-    this.pageTitle = params.get("pageTitle");
-    if(this.pageTitle === "文章") {
-      this.isArticle = true;
-      this.articleTitle = params.get("articleTitle");
-    }
     this.slug = params.get("slug");
+    this.pageTitle = params.get("pageTitle");
+    if (this.pageTitle === "文章") {
+      this.handleForArticleModal(params);
+    }
+
     http.get(this.slug).subscribe(res => this.html = res.text());
   }
 
-  dismiss() {
+  private handleForArticleModal(params:NavParams) {
+    let self = this;
+    this.isArticle = true;
+    this.articleTitle = params.get("articleTitle");
+    this.bookmarkServices.getArticleBookmarkStatus(this.slug, function (isAlreadySaveBookmark) {
+      self.isAlreadyInBookmarksList = isAlreadySaveBookmark;
+    });
+  }
+
+  private dismiss() {
     this.viewCtrl.dismiss();
   }
 
-  scrollToTop() {
-    this.content.scrollToTop();
-  }
-
-  createBookmark() {
-    this.isAlreadyInBookmarksList = true;
+  private toggleBookmark() {
+    if (this.isAlreadyInBookmarksList) {
+      this.isAlreadyInBookmarksList = false;
+    } else {
+      this.isAlreadyInBookmarksList = true;
+    }
     this.bookmarkServices.toggleArticleBookmark(this.slug, this.articleTitle);
   }
 }

@@ -13,6 +13,17 @@ export class BookmarkServices {
     return this.localStorage.get("bookmarks");
   };
 
+  getArticleBookmarkStatus(slug, callback) {
+    this.getAllBookmarks().then(function (bookmarks) {
+      bookmarks = JSON.parse(bookmarks);
+      if (bookmarks[slug]) {
+        callback(true);
+      } else {
+        callback(false);
+      }
+    });
+  }
+
   toggleArticleBookmark(slug, title) {
     let self = this;
     this.getAllBookmarks().then(function (bookmarks) {

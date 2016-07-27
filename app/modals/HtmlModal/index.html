@@ -10,7 +10,7 @@
       </button>
     </ion-buttons>
     <ion-buttons end *ngIf="isArticle">
-      <button (click)="createBookmark()">
+      <button (click)="toggleBookmark()">
         <ion-icon *ngIf="isAlreadyInBookmarksList" name="ios-bookmark"></ion-icon>
         <ion-icon [hidden]="isAlreadyInBookmarksList" name="ios-bookmark-outline"></ion-icon>
       </button>
