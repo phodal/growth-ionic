@@ -1,8 +1,7 @@
 import {Component} from "@angular/core";
-import {LoadingController, NavParams, ToastController} from "ionic-angular/index";
+import {NavParams, ToastController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
-import {getSpinnerConfig} from "../../../utils/helper";
 import {SERVER_BASE_URL} from "../../../utils/constants";
 import {filter} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
@@ -30,13 +29,14 @@ export class CommunityDetailPage {
   private token;
   private replyToUser;
   private replyToId;
+  private loading = false;
 
-  constructor(private loadingCtrl:LoadingController, private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
+  constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
     this.topicId = params.get("topicId");
-    this.init(this.topicId);
     this.userData = userData;
     this.isLogin = this.userData.isLogin();
+    this.init(this.topicId);
   }
 
   getUsername = function (user) {
@@ -107,8 +107,7 @@ export class CommunityDetailPage {
   init(topicId) {
     let url = SERVER_BASE_URL.forum + "/" + topicId;
     let self = this;
-    let loading = this.loadingCtrl.create(getSpinnerConfig());
-    loading.present();
+    self.loading = true;
 
     this.userData.getToken().then(token => self.token = token);
 
@@ -129,7 +128,7 @@ export class CommunityDetailPage {
             self.nextPageUrl = null;
           }
 
-          loading.dismiss();
+          self.loading = false;
         }
       );
   }

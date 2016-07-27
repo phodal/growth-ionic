@@ -9,6 +9,10 @@
 </ion-header>
 
 <ion-content class="community-detail has-header">
+  <div class="loading" [hidden]="!loading">
+    <ion-spinner [name]="circles"></ion-spinner>
+  </div>
+
   <div class="topic row topicCard" *ngIf="topic" padding>
     <div class="col col80">
       <h4 class="title">{{topic.attributes.title}}</h4>
