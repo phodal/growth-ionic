@@ -5,15 +5,19 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 @import "../pages/main/main";
+@import "../pages/main/day/index";
+
 @import "../pages/community/index";
 @import "../pages/community/detail/index";
 @import "../pages/community/profile/index";
+
 @import "../pages/discover/index";
-@import "../pages/day/index";
 @import "../modals/HtmlModal/index";
 @import "../modals/SkillModal/index";
+
 @import "./third-partys/markdown";
 @import "./third-partys/highlight";
+
 @import "../pages/discover/solution/index";
 @import "../pages/discover/exam-list/index";
 @import "../pages/discover/exam-detail/index";

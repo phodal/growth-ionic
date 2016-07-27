@@ -1,15 +1,15 @@
 import {NavController, ModalController, NavParams} from "ionic-angular";
 import {Component} from "@angular/core";
-import {HELPER_ARTICLES} from "../../data/HELPER_ARTICLES";
-import {TODO_LISTS} from "../../data/TODO_LISTS";
-import {TodoModal} from "../../modals/TodoModal";
-import {HtmlModal} from "../../modals/HtmlModal";
-import {DAYS} from "../../data/DAYS";
-import {BookListModal} from "../../modals/BookListModal/index";
-import {SkillModal} from "../../modals/SkillModal/index";
+import {HELPER_ARTICLES} from "../../../data/HELPER_ARTICLES";
+import {TODO_LISTS} from "../../../data/TODO_LISTS";
+import {TodoModal} from "../../../modals/TodoModal";
+import {HtmlModal} from "../../../modals/HtmlModal";
+import {DAYS} from "../../../data/DAYS";
+import {BookListModal} from "../../../modals/BookListModal/index";
+import {SkillModal} from "../../../modals/SkillModal/index";
 
 @Component({
-  templateUrl: "build/pages/day/day.html"
+  templateUrl: "build/pages/main/day/day.html"
 })
 export class Day {
   basicView:string = "articleView";
