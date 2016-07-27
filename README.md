@@ -26,10 +26,8 @@ EBooks:
  
 Others:
  
- - [Web Developer Roadmap](https://github.com/phodal/developer)
  - 学习路线: [https://github.com/phodal/awesome-growth](https://github.com/phodal/awesome-growth)
  - 解决方案: [https://github.com/phodal/awesome-solutions](https://github.com/phodal/awesome-solutions)
- - Growth相关内容: [https://github.com/phodal/growth-content](https://github.com/phodal/growth-content)
  - 文章推荐: [https://github.com/phodal/articles](https://github.com/phodal/articles)
  - 练手项目: [https://github.com/phodal/awesome-practise-project](https://github.com/phodal/awesome-practise-project)
 
