@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="recommend-books">
+<ion-content class="recommend-books list-page">
   <ion-list>
     <button ion-item *ngFor="let domainTodoList of todoLists" (click)="presentTodoModal({domain: domainTodoList.domain})">
       <span class="title">{{domainTodoList.value.name}}</span>

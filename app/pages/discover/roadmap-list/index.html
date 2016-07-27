@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="list-page">
   <ion-list>
     <button ion-item *ngFor="let roadmap of roadmaps" (click)="openRoadmapDetailPage(roadmap)">
       {{roadmap.name}}
