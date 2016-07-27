@@ -1,8 +1,32 @@
 import {Component} from "@angular/core";
 import * as _ from "lodash";
-import {ModalController} from "ionic-angular/index";
+import {ModalController, NavParams, Popover, NavController, PopoverController} from "ionic-angular/index";
 import {SOLUTIONS} from "../../../data/SOLUTIONS";
 import {HtmlModal} from "../../../modals/HtmlModal/index";
+
+@Component({
+  template: `
+    <ion-content>
+      <ion-list>
+        <ion-list-header>排序</ion-list-header>
+        <button ion-item>按类别</button>
+        <button ion-item>按时间</button>
+      </ion-list>
+    </ion-content>
+  `,
+})
+class PopoverPage {
+  constructor(private navParams:NavParams) {
+
+  }
+
+  ngOnInit() {
+    // if (this.navParams.data) {
+    //
+    // }
+  }
+
+}
 
 @Component({
   templateUrl: "build/pages/discover/solution/index.html",
@@ -11,7 +35,7 @@ export class SolutionPage {
   private solutions;
   private isWantSearch = false;
 
-  constructor(private modalCtrl:ModalController) {
+  constructor(private modalCtrl:ModalController, private nav:NavController, private popoverCtrl:PopoverController) {
     this.solutions = _.orderBy(SOLUTIONS, ["slug"], ["asc"]);
     this.modalCtrl = modalCtrl;
   }
@@ -29,6 +53,12 @@ export class SolutionPage {
     } else {
       this.isWantSearch = true;
     }
+  }
+
+  presentPopover(ev) {
+    let popover = this.popoverCtrl.create(PopoverPage, {});
+
+    popover.present({ev: ev});
   }
 
   getItems(ev) {
