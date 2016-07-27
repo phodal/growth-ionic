@@ -85,3 +85,17 @@ rating {
   color: #ffffff;
 }
 
+ion-spinner {
+  display: block;
+  margin: auto;
+
+  * {
+    stroke: $growth-color;
+  }
+
+  &.spinner-circles circle,
+  &.spinner-bubbles circle,
+  &.spinner-dots circle {
+    fill: $growth-color;
+  }
+}
