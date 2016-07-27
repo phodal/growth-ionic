@@ -64,7 +64,7 @@ export class CommunityPage {
     let url = SERVER_BASE_URL.forum;
     let self = this;
 
-    self.isRefresh =  true;
+    self.isRefresh = true;
     this.userData.hasLoggedIn().then(
       result => {
         self.hasLogin = result;

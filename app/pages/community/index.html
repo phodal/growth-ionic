@@ -19,7 +19,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <div class="loading" [hidden]="!loading && !isRefresh">
+  <div class="loading" *ngIf="loading && !isRefresh">
     <ion-spinner [name]="circles"></ion-spinner>
   </div>
   <ion-list class="topics">
