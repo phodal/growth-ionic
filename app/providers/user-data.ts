@@ -13,7 +13,7 @@ export class UserData {
     this.http = http;
   }
 
-  login(user, loading) {
+  login(user) {
     let payload = {
       identification: user.username,
       password: user.password
@@ -24,7 +24,6 @@ export class UserData {
       .map(response => response.json())
       .subscribe(
         data => {
-          loading.dismiss();
           self.setUsername(user.username);
           self.setToken(data.token);
           self.hasLogin = true;
@@ -32,7 +31,6 @@ export class UserData {
           self.events.publish("user:login", user.username);
         },
         error => {
-          loading.dismiss();
           alert(error);
         }
       );
@@ -46,6 +44,7 @@ export class UserData {
 
   logout() {
     this.storage.remove(this.HAS_LOGGED_IN);
+    this.storage.remove("token");
     this.storage.remove("username");
     this.events.publish("user:logout");
   }

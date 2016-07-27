@@ -1,8 +1,7 @@
 import {Component} from "@angular/core";
 import "rxjs/add/operator/map";
 import {UserData} from "../../../providers/user-data";
-import {Events, NavController, ToastController, LoadingController} from "ionic-angular/index";
-import {getSpinnerConfig} from "../../../utils/helper";
+import {Events, NavController, ToastController} from "ionic-angular/index";
 
 @Component({
   templateUrl: "build/pages/community/profile/index.html",
@@ -11,21 +10,22 @@ import {getSpinnerConfig} from "../../../utils/helper";
 export class LoginPage {
   private loginInfo:{username?:string, password?:string} = {};
   private submitted = false;
-  private loading;
+  private isLogining = false;
+  private hasLogin = false;
 
   constructor(public nav:NavController, private userData:UserData, private events:Events,
-              private toastCtrl:ToastController, private loadingCtrl:LoadingController) {
+              private toastCtrl:ToastController) {
     this.events = events;
+    this.init();
     this.eventHandle();
   }
 
   doLogin(form) {
     this.submitted = true;
-    this.loading = this.loadingCtrl.create(getSpinnerConfig());
-    this.loading.present();
+    this.isLogining = true;
 
     if (form.valid) {
-      this.userData.login(this.loginInfo, this.loading);
+      this.userData.login(this.loginInfo);
     }
   }
 
@@ -33,9 +33,15 @@ export class LoginPage {
 
   }
 
+  logout() {
+    this.userData.logout();
+    this.nav.pop();
+  }
+
   private eventHandle() {
     let self = this;
     this.events.subscribe("user:login", (userEventData) => {
+      self.isLogining = false;
       let toast = self.toastCtrl.create({
         message: "欢迎回来," + userEventData,
         duration: 2000,
@@ -45,5 +51,14 @@ export class LoginPage {
 
       self.nav.pop();
     });
+  }
+
+  private init() {
+    let self = this;
+    this.userData.hasLoggedIn().then(
+      result => {
+        self.hasLogin = result;
+      }
+    );
   }
 }

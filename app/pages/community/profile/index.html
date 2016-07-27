@@ -8,7 +8,7 @@
 
 <ion-content class="login has-header">
 
-  <form #loginForm="ngForm" novalidate>
+  <form #loginForm="ngForm" novalidate [hidden]="hasLogin">
     <ion-item>
       <ion-label>Username</ion-label>
       <ion-input [(ngModel)]="loginInfo.username" name="username" #username="ngModel" type="text" required></ion-input>
@@ -25,8 +25,15 @@
       Password is required
     </p>
 
-    <div padding>
+    <div padding [hidden]="isLogining">
       <button (click)="doLogin(loginForm)" type="submit" primary block>Login</button>
     </div>
+
+    <div padding [hidden]="!isLogining">
+      <ion-spinner [name]="circles"></ion-spinner>
+    </div>
   </form>
+  <div class="logout" [hidden]="!hasLogin" (click)="logout()">
+    <button>注销</button>
+  </div>
 </ion-content>
