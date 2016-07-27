@@ -35,6 +35,7 @@ export class CommunityDetailPage {
   private hasMoreComments = false;
   private postsList = [];
   private allComments;
+  private users = [];
 
   constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
@@ -46,10 +47,9 @@ export class CommunityDetailPage {
   }
 
   getUsername = function (user) {
-    let included = this.discussions;
-    for (let i = 0; i < included.length; ++i) {
-      if (included[i].type === "users" && included[i].id === user.data.id) {
-        return included[i].attributes.username;
+    for (let i = 0; i < this.users.length; ++i) {
+      if (this.users[i].id === user.data.id) {
+        return this.users[i].attributes.username;
       }
     }
     return "User";
@@ -123,7 +123,8 @@ export class CommunityDetailPage {
         response => {
           self.topic = response.data;
           self.discussions = response.included;
-          self.topicUser = filter(response.included, {type: "users"})[0];
+          self.users = filter(response.included, {type: "users"});
+          self.topicUser = self.users[0];
 
           let postId = response.data.relationships.posts.data[0].id;
           self.allComments = response.data.relationships.posts.data;
@@ -170,9 +171,8 @@ export class CommunityDetailPage {
       .subscribe(
         data => {
           self.discussions = merge(self.discussions, data.data);
-
-          let newTopicUsers = filter(data.included, {type: "users"});
-          self.topicUser = merge(self.topicUser, newTopicUsers);
+          let newUsers = filter(data.included, {type: "users"});
+          self.users = merge(self.users, newUsers);
 
           self.currentCommentPage = self.currentCommentPage + 1;
           self.isMoreComments();
