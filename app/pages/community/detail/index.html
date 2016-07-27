@@ -27,11 +27,21 @@
         <span class="item-note ago"><time>{{comment.attributes.time | amTimeAgo}}</time></span>
         <p [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
         <div [hidden]="!isLogin">
-          <button class="button button-clear" (click)="replyTo(getUsername(comment.relationships.user), comment.id)">回复</button>
+          <button class="button button-clear" (click)="replyTo(getUsername(comment.relationships.user), comment.id)">
+            回复
+          </button>
         </div>
       </ion-item>
     </div>
   </ion-list>
+
+  <ion-infinite-scroll *ngIf="hasMoreComments" (ionInfinite)="loadMoreComments($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多评论中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>
 
 <ion-footer [hidden]="!isLogin || !isShowCommentBox">

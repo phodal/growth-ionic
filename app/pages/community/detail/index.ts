@@ -3,7 +3,7 @@ import {NavParams, ToastController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
 import {SERVER_BASE_URL} from "../../../utils/constants";
-import {filter} from "lodash";
+import {filter, merge, forEach} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 import {TimeAgoPipe} from "angular2-moment/index";
 import {UserData} from "../../../providers/user-data";
@@ -31,6 +31,10 @@ export class CommunityDetailPage {
   private replyToId;
   private loading = false;
   private topicUser;
+  private currentCommentPage;
+  private hasMoreComments = false;
+  private postsList = [];
+  private allComments;
 
   constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
@@ -38,6 +42,7 @@ export class CommunityDetailPage {
     this.userData = userData;
     this.isLogin = this.userData.isLogin();
     this.init(this.topicId);
+    this.currentCommentPage = 1;
   }
 
   getUsername = function (user) {
@@ -121,6 +126,10 @@ export class CommunityDetailPage {
           self.topicUser = filter(response.included, {type: "users"})[0];
 
           let postId = response.data.relationships.posts.data[0].id;
+          self.allComments = response.data.relationships.posts.data;
+          self.isMoreComments();
+
+          self.postsList = response.data.relationships.posts;
           self.post = filter(response.included, {type: "posts", id: postId})[0];
           // noinspection TypeScriptUnresolvedVariable
           if (response.links && response.links.next) {
@@ -135,4 +144,40 @@ export class CommunityDetailPage {
       );
   }
 
+  isMoreComments() {
+    let onePageCommentsNumber = 20;
+    let firstCommentPost = 1;
+    if (this.allComments.length > onePageCommentsNumber * this.currentCommentPage + firstCommentPost) {
+      this.hasMoreComments = true;
+    } else {
+      this.hasMoreComments = false;
+    }
+  }
+
+  loadMoreComments(infiniteScroll) {
+    let self = this;
+    let commentsIdArray = [];
+    let commentsArray = this.allComments.slice(this.currentCommentPage * 20, (this.currentCommentPage + 1) * 20);
+    forEach(commentsArray, function (value) {
+      if (value.type === "posts") {
+        commentsIdArray.push(value.id);
+      }
+    });
+
+    let url = "http://forum.growth.ren/api/posts?filter[id]=" + commentsIdArray;
+    this.http.get(url)
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          self.discussions = merge(self.discussions, data.data);
+
+          let newTopicUsers = filter(data.included, {type: "users"});
+          self.topicUser = merge(self.topicUser, newTopicUsers);
+
+          self.currentCommentPage = self.currentCommentPage + 1;
+          self.isMoreComments();
+          infiniteScroll.complete();
+        }
+      );
+  }
 }
