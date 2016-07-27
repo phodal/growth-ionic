@@ -1,6 +1,6 @@
 import {addProviders} from "@angular/core/testing";
-import {providers} from "../../../test/diExports";
 import {Day} from "./day";
+import {providers} from "../../../../test/diExports";
 
 let dayView:Day = null;
 

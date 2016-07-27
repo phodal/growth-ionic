@@ -4,7 +4,7 @@ import {SkillListPage} from "./skill-list/index";
 import {AboutUsPage} from "./about-us/index";
 import {AppRate} from "ionic-native";
 import {LicensePage} from "./license/index";
-import {SocialSharing} from 'ionic-native';
+import {SocialSharing} from "ionic-native";
 
 @Component({
   templateUrl: "build/pages/user-center/index.html"
@@ -48,6 +48,6 @@ export class UserCenterPage {
   }
 
   shareIt() {
-    SocialSharing.share('我现在使用Growth，这是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。快来下载吧!', '', '', 'http://growth.ren/');
+    SocialSharing.share("我现在使用Growth，这是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。快来下载吧!", "", "", "http://growth.ren/");
   }
 }
