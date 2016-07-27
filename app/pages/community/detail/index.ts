@@ -30,6 +30,7 @@ export class CommunityDetailPage {
   private replyToUser;
   private replyToId;
   private loading = false;
+  private topicUser;
 
   constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
     this.http = http;
@@ -117,6 +118,7 @@ export class CommunityDetailPage {
         response => {
           self.topic = response.data;
           self.discussions = response.included;
+          self.topicUser = filter(response.included, {type: "users"})[0];
 
           let postId = response.data.relationships.posts.data[0].id;
           self.post = filter(response.included, {type: "posts", id: postId})[0];

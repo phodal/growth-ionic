@@ -16,6 +16,7 @@
   <div class="topic row topicCard" *ngIf="topic" padding>
     <div class="col col80">
       <h4 class="title">{{topic.attributes.title}}</h4>
+      <span class="author">{{topicUser.attributes.username}}</span>
       <div class="markdown" [innerHTML]="post.attributes.contentHtml"></div>
     </div>
   </div>

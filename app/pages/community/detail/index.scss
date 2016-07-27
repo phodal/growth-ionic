@@ -10,6 +10,14 @@
     h4.title {
       text-align: center;
     }
+
+    .author {
+      margin: 0 auto;
+      display: block;
+      padding: 5px 0 10px 5px;
+      text-align: left;
+      color: $growth-blue;
+    }
   }
   .commentList {
     margin-bottom: 10px;
