@@ -12,9 +12,10 @@ import {disableDeprecatedForms, provideForms} from "@angular/forms";
 export class MyApp {
   private rootPage:any;
 
-  constructor(platform:Platform) {
+  constructor(private platform:Platform, private userData:UserData) {
     this.rootPage = TabsPage;
     this.initializeApp(platform);
+    this.userData.logout();
   }
 
   private initializeApp(platform:Platform) {
