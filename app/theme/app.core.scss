@@ -23,24 +23,29 @@
 
 tabbar,
 .toolbar-background {
-  background: $growth-color;
+  background: $growth-default-background;
 }
 
 tabbar ion-icon,
 tabbar span,
 .toolbar-title {
-  color: #fff;
+  color: $growth-new-color;
 }
 
 ion-tabbar {
-  background: $growth-color;
+  color: $growth-new-color;
+  background: $growth-default-background;
 
   .tab-button {
     color: #ccc;
   }
 
   .tab-button:hover:not(.disable-hover), .tab-button[aria-selected=true] {
-    color: #fff;
+    color: $growth-new-color;
+  }
+
+  .tab-button:hover:not(.disable-hover), ion-tabbar .tab-button[aria-selected=true] {
+    color: $growth-new-color;
   }
 }
 
@@ -90,12 +95,16 @@ ion-spinner {
   margin: auto;
 
   * {
-    stroke: $growth-color;
+    stroke: $growth-new-color;
   }
 
   &.spinner-circles circle,
   &.spinner-bubbles circle,
   &.spinner-dots circle {
-    fill: $growth-color;
+    fill: $growth-new-color;
   }
+}
+
+.bar-button-default {
+  color: $growth-new-color;
 }
