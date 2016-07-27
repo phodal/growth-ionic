@@ -2,9 +2,9 @@ import {Component} from "@angular/core";
 import {NavController} from "ionic-angular/index";
 import {SkillListPage} from "./skill-list/index";
 import {AboutUsPage} from "./about-us/index";
-import {AppRate} from "ionic-native";
+import {AppRate, SocialSharing} from "ionic-native";
 import {LicensePage} from "./license/index";
-import {SocialSharing} from "ionic-native";
+import {BookmarksPage} from "./bookmarks/index";
 
 @Component({
   templateUrl: "build/pages/user-center/index.html"
@@ -25,6 +25,10 @@ export class UserCenterPage {
 
   openLicensePage() {
     this.nav.push(LicensePage);
+  }
+
+  openBookmarksPage() {
+    this.nav.push(BookmarksPage);
   }
 
   init() {

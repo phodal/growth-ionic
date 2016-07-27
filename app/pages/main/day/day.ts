@@ -51,7 +51,7 @@ export class Day {
       modalParams = {slug: slug, pageTitle: "简介"};
     } else {
       slug = "assets/article/" + params.slug + ".html";
-      modalParams = {slug: slug, pageTitle: "文章"};
+      modalParams = {slug: slug, pageTitle: "文章", articleTitle: params.title};
     }
 
     return modalParams;

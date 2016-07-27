@@ -11,10 +11,11 @@ export class HtmlModal {
   @ViewChild(Content) content:Content;
 
   private html;
-  private isArticle;
+  private isArticle = false;
   private pageTitle;
   private isAlreadyInBookmarksList = false;
   private slug;
+  private articleTitle;
 
   constructor(public platform:Platform,
               public params:NavParams,
@@ -23,7 +24,10 @@ export class HtmlModal {
               http:Http) {
 
     this.pageTitle = params.get("pageTitle");
-    this.isArticle = this.pageTitle === "文章";
+    if(this.pageTitle === "文章") {
+      this.isArticle = true;
+      this.articleTitle = params.get("articleTitle");
+    }
     this.slug = params.get("slug");
     http.get(this.slug).subscribe(res => this.html = res.text());
   }
@@ -38,6 +42,6 @@ export class HtmlModal {
 
   createBookmark() {
     this.isAlreadyInBookmarksList = true;
-    this.bookmarkServices.add(this.slug);
+    this.bookmarkServices.add(this.slug, this.articleTitle);
   }
 }

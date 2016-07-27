@@ -17,16 +17,16 @@ export class BookmarkServices {
 
   }
 
-  add(slug) {
+  add(slug, title) {
     let self = this;
     this.getAllBookmarks().then(function (bookmarks) {
       bookmarks = JSON.parse(bookmarks);
       if (bookmarks) {
-        bookmarks[slug] = true;
+        bookmarks[slug] = title;
         self.localStorage.set("bookmarks", JSON.stringify(bookmarks));
       } else {
         let bookmark = {};
-        bookmark[slug] = true;
+        bookmark[slug] = title;
         self.localStorage.set("bookmarks", JSON.stringify(bookmark));
       }
     });

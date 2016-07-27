@@ -44,7 +44,7 @@
           </button>
         </ion-item-divider>
         <button ion-item *ngFor="let article of articleSection.articles"
-                (click)="presentHtmlModal({slug: article.slug})">
+                (click)="presentHtmlModal({slug: article.slug, title: article.title})">
           {{article.title}}
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
