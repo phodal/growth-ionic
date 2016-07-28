@@ -15,13 +15,13 @@
         </button>
       </ion-card>
       <ion-list class="item-accordion" *ngIf="isGroupShown(0)">
-        <button ion-item>
-          标题
+        <button ion-item (click)="openSectionDetailsPage('hello')">
+          hello,world
           <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
-        <button ion-item>
-          标题
+        <button ion-item (click)="openSectionDetailsPage('env')">
+          开发环境
           <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
