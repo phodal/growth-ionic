@@ -42,7 +42,6 @@ export class CommunityDetailPage {
     this.topicId = params.get("topicId");
     this.userData = userData;
     this.isLogin = this.userData.isLogin();
-    this.init(this.topicId);
     this.currentCommentPage = 1;
   }
 
@@ -110,7 +109,8 @@ export class CommunityDetailPage {
       );
   }
 
-  init(topicId) {
+  ngOnInit() {
+    let topicId = this.topicId;
     let url = SERVER_BASE_URL.forum + "/" + topicId;
     let self = this;
     self.loading = true;

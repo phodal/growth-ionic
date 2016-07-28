@@ -18,10 +18,10 @@ export class ToolboxDetailPage {
     this.http = http;
     this.title = params.get("title");
     this.url = params.get("url");
-    this.init(this.url);
   }
 
-  private init(url:string) {
+  ngOnInit() {
+    let url = this.url;
     let self = this;
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();

@@ -18,15 +18,14 @@ export class SlideBookDetailPage {
     this.http = http;
     this.title = params.get("title");
     this.url = params.get("url");
-    this.init(this.url);
   }
 
-  private init(url:string) {
+  ngOnInit() {
     let self = this;
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 
-    this.http.get(url)
+    this.http.get(self.url)
       .map(res => res.text())
       .subscribe(
         data => {

@@ -17,10 +17,9 @@ export class ArticleListPage {
 
   constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http) {
     this.http = http;
-    this.init();
   }
 
-  init() {
+  ngOnInit() {
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 

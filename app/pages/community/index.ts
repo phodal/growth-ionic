@@ -27,10 +27,9 @@ export class CommunityPage {
     this.http = http;
     this.events = events;
     this.eventHandle();
-    this.init();
   }
 
-  init() {
+  ngOnInit() {
     let url = SERVER_BASE_URL.forum;
     let self = this;
     self.loading = true;

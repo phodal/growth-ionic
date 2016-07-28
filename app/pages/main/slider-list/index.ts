@@ -20,10 +20,9 @@ export class SlideBookTocPage {
     this.http = http;
     this.title = this.params.get("title");
     this.action = this.params.get("action");
-    this.init();
   }
 
-  init() {
+  ngOnInit() {
     let loading = this.loadingCtrl.create(getSpinnerConfig());
     loading.present();
 
