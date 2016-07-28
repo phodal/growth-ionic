@@ -3,6 +3,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION1 = {
   "build": {
     title: "构建系统",
+    intros: [
+      {
+        info: {slug: "build", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "构建系统",
@@ -17,6 +22,11 @@ export const SECTION1 = {
   },
   "front": {
     title: "前端",
+    intros: [
+      {
+        info: {slug: "front", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "前端",
@@ -42,6 +52,11 @@ export const SECTION1 = {
   },
   "backend": {
     title: "后台",
+    intros: [
+      {
+        info: {slug: "backend", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "后台",

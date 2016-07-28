@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION2 = {
   "before": {
     title: "编码之前",
+    intros: [
+      {
+        info: {slug: "before", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "编码之前",
@@ -27,6 +32,11 @@ export const SECTION2 = {
   },
   "test": {
     title: "测试",
+    intros: [
+      {
+        info: {slug: "test", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "测试",
@@ -52,6 +62,11 @@ export const SECTION2 = {
   },
   "coding": {
     title: "编码",
+    intros: [
+      {
+        info: {slug: "coding", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "编码",

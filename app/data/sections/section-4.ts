@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION4 = {
   "analytics": {
     title: "数据分析",
+    intros: [
+      {
+        info: {slug: "analytics", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "数据分析",
@@ -30,6 +35,11 @@ export const SECTION4 = {
   },
   "ux": {
     title: "用户体验",
+    intros: [
+      {
+        info: {slug: "ux", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "数据分析",

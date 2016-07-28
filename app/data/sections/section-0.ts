@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION0 ={
   "hello": {
     title: "hello, world",
+    intros: [
+      {
+        info: {slug: "hello", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "hello, world",
@@ -27,6 +32,11 @@ export const SECTION0 ={
   },
   "env": {
     title: "开发环境",
+    intros: [
+      {
+        info: {slug: "env", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "开发环境",

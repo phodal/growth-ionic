@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION6 = {
   "legacy": {
     title: "遗留系统",
+    intros: [
+      {
+        info: {slug: "legacy", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "遗留系统",
@@ -26,6 +31,11 @@ export const SECTION6 = {
   },
   "refactor": {
     title: "重构",
+    intros: [
+      {
+        info: {slug: "refactor", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "重构",

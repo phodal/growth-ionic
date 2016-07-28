@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION3 = {
   "container": {
     title: "容器",
+    intros: [
+      {
+        info: {slug: "container", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "容器",
@@ -27,6 +32,11 @@ export const SECTION3 = {
   },
   "server": {
     title: "Server",
+    intros: [
+      {
+        info: {slug: "server", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "Server",
@@ -52,6 +62,11 @@ export const SECTION3 = {
   },
   "configurable": {
     title: "可配置",
+    intros: [
+      {
+        info: {slug: "configurable", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "可配置",

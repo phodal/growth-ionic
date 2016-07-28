@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION5 = {
   "ci": {
     title: "持续交付",
+    intros: [
+      {
+        info: {slug: "ci", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "持续交付",
@@ -27,6 +32,11 @@ export const SECTION5 = {
   },
   "cd": {
     title: "持续交付",
+    intros: [
+      {
+        info: {slug: "cd", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "持续交付",

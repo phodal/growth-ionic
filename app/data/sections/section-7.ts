@@ -2,6 +2,11 @@ import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 export const SECTION7 = {
   "retro": {
     title: "回顾与总结",
+    intros: [
+      {
+        info: {slug: "retro", type: "desc"}
+      }
+    ],
     articlesView: [
       {
         title: "回顾与总结",
@@ -49,7 +54,7 @@ export const SECTION7 = {
           }
         ]
       }
-      ],
+    ],
     todoView: [{
       title: "架构设计",
       info: {domain: "arch"}
