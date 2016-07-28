@@ -4,7 +4,10 @@
       {{sectionInfo.title}}
     </ion-title>
     <ion-buttons end>
-      <button (click)="presentHtmlModal({type: 'intro'})">
+      <button *ngIf="sectionInfo.skills[0]" (click)="presentSkillModal(sectionInfo.skills[0])">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </button>
+      <button (click)="presentHtmlModal(sectionInfo.intros[0].info)">
         <ion-icon name="information-circle"></ion-icon>
       </button>
     </ion-buttons>
@@ -33,16 +36,6 @@
         <p>了解关于工程流程的基本信息</p>
       </div>
       <ion-item-group *ngFor="let articleSection of sectionInfo.articlesView; let i = index;">
-        <ion-item-divider light>
-          <span class="title">{{articleSection.title}}</span>
-
-          <button class="skill-button" *ngIf="sectionInfo.skills[i]" (click)="presentSkillModal(sectionInfo.skills[i])">
-            <ion-icon name="checkmark-circle-outline"></ion-icon>
-          </button>
-          <button class="day-info" (click)="presentHtmlModal(sectionInfo.intros[i].info)">
-            <ion-icon name="information-circle"></ion-icon>
-          </button>
-        </ion-item-divider>
         <button ion-item *ngFor="let article of articleSection.articles"
                 (click)="presentHtmlModal({slug: article.slug, title: article.title})">
           {{article.title}}
@@ -56,7 +49,6 @@
         <p>扩展自己的知识视野</p>
       </div>
       <ion-item-group *ngFor="let growthSection of sectionInfo.growthView">
-        <ion-item-divider light>{{growthSection.title}}</ion-item-divider>
         <button ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
           <span class="title">{{growth.title}}</span>
           <ion-icon name="arrow-right" item-right></ion-icon>
