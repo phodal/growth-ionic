@@ -25,6 +25,8 @@
     "browserify-istanbul": "^2.0.0",
     "del": "2.2.0",
     "gulp": "3.9.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
     "gulp-tslint": "^6.0.1",
     "gulp-typescript": "^2.13.6",
     "gulp-watch": "4.3.5",

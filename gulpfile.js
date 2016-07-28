@@ -4,6 +4,10 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   argv = process.argv;
 
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+
 /**
  * Ionic hooks
  * Add ':before' or ':after' to any Ionic project command name to run the specified
@@ -60,6 +64,25 @@ gulp.task('build', ['clean'], function(done){
       }).on('end', done);
     }
   );
+});
+
+gulp.task('svgstore', function () {
+  return gulp
+    .src('growth-ui/*.svg')
+    .pipe(svgmin(function (file) {
+      console.log(file);
+      var prefix = path.basename(file.relative, path.extname(file.relative));
+      return {
+        plugins: [{
+          cleanupIDs: {
+            prefix: prefix + '-',
+            minify: true
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore())
+    .pipe(gulp.dest('www/fonts'));
 });
 
 gulp.task('sass', buildSass);
