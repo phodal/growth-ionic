@@ -10,7 +10,7 @@
       <ion-card class="day day-0" (click)="toggleGroup(0)">
         <button ion-item>
           <div class="card-title">
-            <h2>从零开始</h2>
+            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(0), '': !isGroupShown(0)}">从零开始</h2>
           </div>
         </button>
       </ion-card>
