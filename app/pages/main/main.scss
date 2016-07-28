@@ -1,6 +1,85 @@
-.main .title {
-  width: 100%;
-  height: auto;
+.main {
+  .title {
+    width: 100%;
+    height: auto;
+  }
+  ion-row {
+    margin-top: 10px;
+    background: none;
+    flex-wrap: wrap;
+
+    ion-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+
+    .day .item {
+      height: 5em;
+      border: none;
+    }
+
+    .day-0 .item {
+      background: url("../../images/home-1.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-1 .item {
+      background: url("../../images/home-2.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-2 .item {
+      background: url("../../images/home-3.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-3 .item {
+      background: url("../../images/home-4.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-4 .item {
+      background: url("../../images/home-5.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-5 .item {
+      background: url("../../images/home-6.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-6 .item {
+      background: url("../../images/home-7.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+    .day-7 .item {
+      background: url("../../images/home-8.thumbnail.jpg") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    ion-card {
+      margin-top: 0;
+    }
+
+    .card-title {
+      height: 5em;
+      width: 100%;
+      top: 0;
+      right: 0;
+      position: absolute;
+      float: right;
+      background: rgba(0, 0, 0, 0); /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #fff); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, rgba(0, 0, 0, 0), #fff); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, rgba(0, 0, 0, 0), #fff); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), #fff); /* Standard syntax */
+
+      h2 {
+        color: #4D4F50;
+        float: right;
+        right: 1em;
+        font-size: 1.25em;
+        position: relative;
+        line-height: 4em;
+      }
+    }
+  }
 }
 
 .home-slide {
@@ -17,15 +96,15 @@
     text-align: center;
   }
 
-  .slide0,  .slide1,  .slide2 {
+  .slide0, .slide1, .slide2 {
     background-color: $growth-new-color;
     color: #ecf0f1;
   }
 
-  .slide1{
+  .slide1 {
     background-color: $growth-blue;
   }
-  .slide2{
+  .slide2 {
     background-color: $growth-yellow;
   }
 

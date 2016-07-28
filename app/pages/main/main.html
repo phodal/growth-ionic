@@ -5,47 +5,85 @@
 </ion-header>
 
 <ion-content class="main">
-  <div class="home-slide">
-    <ion-slides pager [options]="slideOptions">
-      <ion-slide *ngFor="let slide of slides; let i = index" ngClass="slide{{i}}" (click)="launch(slide)">
-        <h2>{{slide.title}}</h2>
-        <p>{{slide.intro}}</p>
-      </ion-slide>
-    </ion-slides>
-  </div>
+  <ion-row>
+    <ion-col>
+      <ion-card class="day day-0" (click)="openNavDetailsPage(0)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>前期准备</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
 
-  <ion-card class="days">
-    <button ion-item (click)="openNavDetailsPage(0)">
-      <h2>前期准备</h2>
-      <p>从这里准备你的技能图谱</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(1)">
-      <h2>从零开始</h2>
-      <p>开始的时候，我们就需要搭建构建系统</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(2)">
-      <h2>编码</h2>
-      <p>写代码之前，你需要知道哪些事?</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(3)">
-      <h2>上线</h2>
-      <p>如何快乐地上线？</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(4)">
-      <h2>数据分析</h2>
-      <p>怎样才能开发出用户喜爱的产品?</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(5)">
-      <h2>持续交付</h2>
-      <p>有一件事很重要，就是与你一起写代码到老</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(6)">
-      <h2>遗留系统</h2>
-      <p>糟糕，我们又玩过火了</p>
-    </button>
-    <button ion-item (click)="openNavDetailsPage(7)">
-      <h2>回顾与新架构</h2>
-      <p>哈哈，世界又迎来了新的曙光</p>
-    </button>
-  </ion-card>
+    <ion-col>
+      <ion-card class="day day-1" (click)="openNavDetailsPage(1)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>从零开始</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-2" (click)="openNavDetailsPage(2)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>编码</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-3" (click)="openNavDetailsPage(3)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>上线</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-4" (click)="openNavDetailsPage(4)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>数据分析</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-5" (click)="openNavDetailsPage(5)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>持续交付</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-6" (click)="openNavDetailsPage(6)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>遗留系统</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="day day-7" (click)="openNavDetailsPage(7)">
+        <button ion-item>
+          <div class="card-title">
+            <h2>回顾与新架构</h2>
+          </div>
+        </button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
