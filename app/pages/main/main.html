@@ -154,13 +154,25 @@
     </ion-col>
 
     <ion-col>
-      <ion-card class="day day-6" (click)="openNavDetailsPage(6)">
+      <ion-card class="day day-6" (click)="toggleGroup(6)">
         <button ion-item>
           <div class="card-title">
-            <h2>遗留系统</h2>
+            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(6), '': !isGroupShown(6)}">遗留系统</h2>
           </div>
         </button>
       </ion-card>
+      <ion-list class="item-accordion" *ngIf="isGroupShown(6)">
+        <button ion-item (click)="openSectionDetailsPage('legacy')">
+          遗留系统
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+        <button ion-item (click)="openSectionDetailsPage('refactor')">
+          重构
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+      </ion-list>
     </ion-col>
 
     <ion-col>

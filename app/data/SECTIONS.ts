@@ -4,6 +4,7 @@ import {SECTION2} from "./sections/section-2";
 import {SECTION3} from "./sections/section-3";
 import {SECTION4} from "./sections/section-4";
 import {SECTION5} from "./sections/section-5";
+import {SECTION6} from "./sections/section-6";
 export const SECTIONS = {};
 
 SECTIONS["hello"] = SECTION0.hello;
@@ -26,3 +27,6 @@ SECTIONS["ux"] = SECTION4.ux;
 
 SECTIONS["ci"] = SECTION5.ci;
 SECTIONS["cd"] = SECTION5.cd;
+
+SECTIONS["legacy"] = SECTION6.legacy;
+SECTIONS["refactor"] = SECTION6.refactor;
