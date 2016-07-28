@@ -58,7 +58,7 @@ export const SECTION3 = {
         articles: HELPER_ARTICLES["zh-cn"].configurable
       }
     ],
-    skills: ["server"],
+    skills: ["configurable"],
     growthView: [
       {
         title: "可配置",
