@@ -7,113 +7,75 @@
 </ion-header>
 
 <ion-content class="discover">
-  <div class="discover-slide">
-    <ion-slides pager [options]="slideOptions">
-      <ion-slide class="slide1">
-        <p><span>学习路线</span></p>
-        <p>合适的路，合适的线</p>
-      </ion-slide>
-
-      <ion-slide class="slide2" (click)="openThoughtWorksBookPage()">
-        <p><span>读书路线</span></p>
-        <p>学习要有路线，读书也要有路线</p>
-      </ion-slide>
-
-      <ion-slide class="slide0" (click)="openToolboxListPage()">
-        <p><span>工具箱</span></p>
-        <p>好的工具事半功倍，好的工具箱一步千里</p>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-  <ion-row class="second">
-    <ion-col class="exam" (click)="openExamPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-stats-outline" item-left></ion-icon>
-          <h3>技能测验</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-    <ion-col class="community" (click)="openSolutionPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-globe-outline" item-left></ion-icon>
-          <h3>解决方案</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-    <ion-col class="road-map" (click)="openRoadMapPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-egg-outline" item-left></ion-icon>
-          <h3>学习路线</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-    <ion-col class="hot" (click)="openProjectListPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-bonfire-outline" item-left></ion-icon>
-          <h3>练手项目</h3>
-        </ion-item>
-      </button>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="zones">
-    <ion-col (click)="openToolboxListPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-brush-outline"></ion-icon>
-          <h3>工具箱</h3>
-        </ion-item>
-      </button>
+  <ion-row class="image-row">
+    <ion-col>
+      <ion-card (click)="openExamPage()">
+        <img src="images/expore-1.thumbnail.jpg"/>
+        <div class="card-title">技能测验</div>
+      </ion-card>
     </ion-col>
 
-    <ion-col (click)="openThoughtWorksBookPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-bulb-outline"></ion-icon>
-          <h3>读书路线</h3>
-        </ion-item>
-      </button>
+    <ion-col>
+      <ion-card (click)="openSolutionPage()">
+        <img src="images/expore-2.thumbnail.jpg"/>
+        <div class="card-title">解决方案</div>
+      </ion-card>
     </ion-col>
 
-    <ion-col (click)="openArticlesListPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-thumbs-up-outline"></ion-icon>
-          <h3>文章推荐</h3>
-        </ion-item>
-      </button>
+    <ion-col>
+      <ion-card (click)="openRoadMapPage()">
+        <img src="images/expore-7.thumbnail.jpg"/>
+        <div class="card-title">学习路线</div>
+      </ion-card>
     </ion-col>
 
-    <ion-col (click)="openRecommendBookPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-folder-outline"></ion-icon>
-          <h3>书籍列表</h3>
-        </ion-item>
-      </button>
+    <ion-col>
+      <ion-card (click)="openProjectListPage()">
+        <img src="images/expore-4.thumbnail.jpg"/>
+        <div class="card-title">练手项目</div>
+      </ion-card>
     </ion-col>
 
-    <ion-col (click)="openRecommendArticlePage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-book-outline"></ion-icon>
-          <h3>文章列表</h3>
-        </ion-item>
-      </button>
+    <ion-col>
+      <ion-card (click)="openToolboxListPage()">
+        <img src="images/expore-2.thumbnail.jpg"/>
+        <div class="card-title">工具箱</div>
+      </ion-card>
     </ion-col>
 
-    <ion-col (click)="openTodoListsPage()">
-      <button ion-item>
-        <ion-item>
-          <ion-icon name="ios-paper-outline"></ion-icon>
-          <h3>待办列表</h3>
-        </ion-item>
-      </button>
+    <ion-col>
+      <ion-card (click)="openThoughtWorksBookPage()">
+        <img src="images/expore-8.thumbnail.jpg"/>
+        <div class="card-title">读书路线</div>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="openArticlesListPage()">
+        <img src="images/expore-6.thumbnail.jpg"/>
+        <div class="card-title">在线文章</div>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="openRecommendBookPage()">
+        <img src="images/expore-3.thumbnail.jpg"/>
+        <div class="card-title">书籍列表</div>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="openRecommendArticlePage()">
+        <img src="images/expore-3.thumbnail.jpg"/>
+        <div class="card-title">文章列表</div>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="openTodoListsPage()">
+        <img src="images/expore-5.thumbnail.jpg"/>
+        <div class="card-title">待办列表</div>
+      </ion-card>
     </ion-col>
   </ion-row>
 </ion-content>
