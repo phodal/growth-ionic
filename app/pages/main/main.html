@@ -132,13 +132,25 @@
     </ion-col>
 
     <ion-col>
-      <ion-card class="day day-5" (click)="openNavDetailsPage(5)">
+      <ion-card class="day day-5" (click)="toggleGroup(5)">
         <button ion-item>
           <div class="card-title">
-            <h2>持续交付</h2>
+            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(5), '': !isGroupShown(5)}">持续交付</h2>
           </div>
         </button>
       </ion-card>
+      <ion-list class="item-accordion" *ngIf="isGroupShown(5)">
+        <button ion-item (click)="openSectionDetailsPage('ci')">
+          持续集成
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+        <button ion-item (click)="openSectionDetailsPage('cd')">
+          持续交付
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+      </ion-list>
     </ion-col>
 
     <ion-col>

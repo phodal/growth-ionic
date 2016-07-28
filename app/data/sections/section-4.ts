@@ -36,7 +36,7 @@ export const SECTION4 = {
         articles: HELPER_ARTICLES["zh-cn"].ux
       }
     ],
-    skills: ["analytics"],
+    skills: ["ux"],
     growthView: [
       {
         title: "用户体验",

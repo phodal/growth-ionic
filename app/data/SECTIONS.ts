@@ -3,9 +3,8 @@ import {SECTION1} from "./sections/section-1";
 import {SECTION2} from "./sections/section-2";
 import {SECTION3} from "./sections/section-3";
 import {SECTION4} from "./sections/section-4";
-export const SECTIONS = {
-
-};
+import {SECTION5} from "./sections/section-5";
+export const SECTIONS = {};
 
 SECTIONS["hello"] = SECTION0.hello;
 SECTIONS["env"] = SECTION0.env;
@@ -24,3 +23,6 @@ SECTIONS["configurable"] = SECTION3.configurable;
 
 SECTIONS["analytics"] = SECTION4.analytics;
 SECTIONS["ux"] = SECTION4.ux;
+
+SECTIONS["ci"] = SECTION5.ci;
+SECTIONS["cd"] = SECTION5.cd;
