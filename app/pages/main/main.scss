@@ -53,8 +53,17 @@
       background-size: 100% 100%;
     }
 
+    ion-list {
+      padding: 0 12px;
+      .item.item-accordion {
+        padding: 0 0px;
+        transition: 0.09s all linear;
+      }
+    }
+
+
     ion-card {
-      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .card-title {

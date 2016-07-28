@@ -24,6 +24,7 @@ export class MainView {
     autoplay: 5000,
     loop: true
   };
+  private shownGroup = false;
 
   constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
@@ -37,4 +38,16 @@ export class MainView {
   launch(slide) {
     this.nav.push(SlideBookTocPage, {title: slide.title, action: slide.action});
   }
+
+  toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+      this.shownGroup = null;
+    } else {
+      this.shownGroup = group;
+    }
+  }
+
+  isGroupShown(group) {
+    return this.shownGroup === group;
+  };
 }
