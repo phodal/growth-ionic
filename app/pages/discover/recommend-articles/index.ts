@@ -30,7 +30,7 @@ export class RecommendArticles {
   presentHtmlModal(params) {
     let htmlModal, modalParams;
     let slug = "assets/article/" + params.slug + ".html";
-    modalParams = {slug: slug, pageTitle: "文章"};
+    modalParams = {slug: slug, pageTitle: "文章", articleTitle: params.title};
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
     htmlModal.present();
   }

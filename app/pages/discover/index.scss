@@ -11,8 +11,7 @@
     background: none;
 
     img {
-      opacity: 0.8;
-      filter: alpha(opacity=80); /* For IE8 and earlier */
+      opacity: 1;
     }
 
     ion-col {
@@ -31,14 +30,13 @@
     }
 
     .card-title {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.95);
       line-height: 3em;
       position: absolute;
       bottom: 0;
       font-size: 1.2em;
       width: 100%;
-      font-weight: bold;
-      color: #5e6772;
+      color: #179ed6;
     }
   }
 
