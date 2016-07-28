@@ -5,6 +5,7 @@ import {SECTION3} from "./sections/section-3";
 import {SECTION4} from "./sections/section-4";
 import {SECTION5} from "./sections/section-5";
 import {SECTION6} from "./sections/section-6";
+import {SECTION7} from "./sections/section-7";
 export const SECTIONS = {};
 
 SECTIONS["hello"] = SECTION0.hello;
@@ -30,3 +31,6 @@ SECTIONS["cd"] = SECTION5.cd;
 
 SECTIONS["legacy"] = SECTION6.legacy;
 SECTIONS["refactor"] = SECTION6.refactor;
+
+SECTIONS["retro"] = SECTION7.retro;
+SECTIONS["arch"] = SECTION7.arch;
