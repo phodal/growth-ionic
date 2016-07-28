@@ -3,6 +3,11 @@
     <ion-title>
       {{sectionInfo.title}}
     </ion-title>
+    <ion-buttons end>
+      <button (click)="presentHtmlModal({type: 'intro'})">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
   <ion-toolbar>

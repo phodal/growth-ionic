@@ -1,7 +1,6 @@
 import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
 import {SlideBookTocPage} from "./slider-list/index";
-import {Day} from "./day/day";
 import {Section} from "./section/index";
 
 @Component({
@@ -13,10 +12,6 @@ export class MainView {
   constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
     this.platform = platform;
-  }
-
-  openNavDetailsPage(day) {
-    this.nav.push(Day, {day: day});
   }
 
   openSectionDetailsPage(section) {
