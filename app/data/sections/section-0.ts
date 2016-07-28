@@ -1,5 +1,5 @@
 import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
-export const SECTION0 ={
+export const SECTION0 = {
   "hello": {
     title: "hello, world",
     intros: [

@@ -37,7 +37,7 @@ describe("MainView", () => {
 
   xit("page test", () => {
     spyOn(mainView.nav, "push").and.stub();
-    mainView.openNavDetailsPage(1);
+    mainView.openSectionDetailsPage(1);
     expect(mainView.nav.push).toHaveBeenCalledWith(1);
   });
 });
