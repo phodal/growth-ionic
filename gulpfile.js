@@ -39,21 +39,25 @@ var copyScripts = require('ionic-gulp-scripts-copy');
 
 var isRelease = argv.indexOf('--release') > -1;
 
-gulp.task('watch', ['clean'], function(done){
+gulp.task('watch', ['clean'], function (done) {
   runSequence(
     ['sass', 'html', 'fonts', 'svg-font', 'scripts'],
-    function(){
-      gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
-      gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
-      buildBrowserify({ watch: true }).on('end', done);
+    function () {
+      gulpWatch('app/**/*.scss', function () {
+        gulp.start('sass');
+      });
+      gulpWatch('app/**/*.html', function () {
+        gulp.start('html');
+      });
+      buildBrowserify({watch: true}).on('end', done);
     }
   );
 });
 
-gulp.task('build', ['clean'], function(done){
+gulp.task('build', ['clean'], function (done) {
   runSequence(
     ['sass', 'html', 'fonts', 'svg-font', 'scripts'],
-    function(){
+    function () {
       buildBrowserify({
         minify: isRelease,
         browserifyOptions: {
@@ -69,13 +73,15 @@ gulp.task('build', ['clean'], function(done){
 
 gulp.task('svg-font', function () {
   // Basic configuration example
-  config                  = {
-    mode                : {
-      css             : {     // Activate the «css» mode
-        render      : {
-          css     : true  // Activate CSS output (with default options)
+  config = {
+    mode: {
+      css: {     // Activate the «css» mode
+        bust: false,
+        render: {
+          css: true  // Activate CSS output (with default options)
         }
-      }
+      },
+      symbol: true      // Activate the «symbol» mode
     }
   };
 
@@ -88,6 +94,6 @@ gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
 gulp.task('scripts', copyScripts);
-gulp.task('clean', function(){
+gulp.task('clean', function () {
   return del('www/build');
 });
