@@ -59,7 +59,7 @@
       <ion-card class="day day-2" (click)="toggleGroup(2)">
         <button ion-item>
           <div class="card-title">
-            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(2), '': !isGroupShown(1)}">编码</h2>
+            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(2), '': !isGroupShown(2)}">编码</h2>
           </div>
         </button>
       </ion-card>
@@ -83,13 +83,30 @@
     </ion-col>
 
     <ion-col>
-      <ion-card class="day day-3" (click)="openNavDetailsPage(3)">
+      <ion-card class="day day-3" (click)="toggleGroup(3)">
         <button ion-item>
           <div class="card-title">
-            <h2>上线</h2>
+            <h2 [ngClass]="{'animated slideOutLeft': isGroupShown(3), '': !isGroupShown(3)}">上线</h2>
           </div>
         </button>
       </ion-card>
+      <ion-list class="item-accordion" *ngIf="isGroupShown(3)">
+        <button ion-item (click)="openSectionDetailsPage('container')">
+          容器
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+        <button ion-item (click)="openSectionDetailsPage('server')">
+          Server
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+        <button ion-item (click)="openSectionDetailsPage('configurable')">
+          可配置
+          <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+      </ion-list>
     </ion-col>
 
     <ion-col>

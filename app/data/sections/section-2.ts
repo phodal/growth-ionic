@@ -11,7 +11,7 @@ export const SECTION2 = {
     skills: ["front"],
     growthView: [
       {
-        title: "编码之前",
+        title: "before",
         sections: [
           {
             title: "书单",
@@ -33,7 +33,7 @@ export const SECTION2 = {
         articles: HELPER_ARTICLES["zh-cn"].test
       }
     ],
-    skills: ["front"],
+    skills: ["test"],
     growthView: [
       {
         title: "编码之前",
@@ -58,7 +58,7 @@ export const SECTION2 = {
         articles: HELPER_ARTICLES["zh-cn"].coding
       }
     ],
-    skills: ["front"],
+    skills: ["coding"],
     growthView: [
       {
         title: "编码",
