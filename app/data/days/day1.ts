@@ -1,7 +1,7 @@
 import {HELPER_ARTICLES} from "../HELPER_ARTICLES";
 
 export const DAYS1 = {
-  title: "从零开始",
+  title: "前期准备",
   intros: [
     {
       info: {slug: "build", type: "desc"}

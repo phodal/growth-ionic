@@ -36,7 +36,7 @@ describe("dayView", () => {
 
   it("initialises", () => {
     expect(dayView["day"]).toBe(1);
-    expect(dayView["dayView"]["title"]).toBe("从零开始");
+    expect(dayView["dayView"]["title"]).toBe("前期准备");
   });
 
   it("test for desc", () => {

@@ -17,15 +17,11 @@ describe("MyAPP", () => {
     expect(element(by.css("ion-navbar:first-child")).getText()).toContain("Growth");
   });
 
-  xit("should have correct slide bar for Home", () => {
-    expect(element(by.css("ion-slide h2")).getText()).toContain("《Growth：全栈增长工程师指南》");
-  });
-
   it("should have correct day for Home", () => {
-    expect(element(by.css("ion-card.days ion-label h2")).getText()).toContain("前期准备");
+    expect(element(by.css("ion-card.day-0 ion-label h2")).getText()).toContain("从零开始");
   });
 
   it("should have correct footer Home", () => {
-    expect(element(by.css("ion-tabbar a span")).getText()).toContain("Growth");
+    expect(element(by.css("ion-tabbar a span")).getText()).toContain("首页");
   });
 });
