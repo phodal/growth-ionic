@@ -19,10 +19,7 @@
         文章
       </ion-segment-button>
       <ion-segment-button value="growthView">
-        Growth
-      </ion-segment-button>
-      <ion-segment-button value="todoView">
-        TODO
+        杂项
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -48,18 +45,16 @@
       <div class="intro">
         <p>扩展自己的知识视野</p>
       </div>
+
       <ion-item-group *ngFor="let growthSection of sectionInfo.growthView">
         <button ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
           <span class="title">{{growth.title}}</span>
           <ion-icon name="arrow-right" item-right></ion-icon>
         </button>
       </ion-item-group>
-    </div>
 
-    <div *ngSwitchCase="'todoView'">
-      <div class="intro">
-        <p>尝试那些过来人的尝试</p>
-      </div>
+      <ion-item-divider light>TODO</ion-item-divider>
+
       <button ion-item *ngFor="let todoSection of sectionInfo.todoView" (click)="presentTodoModal(todoSection.info)">
         <span class="title">{{todoSection.title}}</span>
         <ion-icon name="arrow-right" item-right></ion-icon>
