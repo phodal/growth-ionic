@@ -1,53 +1,12 @@
-import {HELPER_ARTICLES} from "./HELPER_ARTICLES";
+import {SECTION0} from "./sections/section-0";
+import {SECTION1} from "./sections/section-1";
 export const SECTIONS = {
-  "hello": {
-    title: "hello, world",
-    articlesView: [
-      {
-        title: "hello, world",
-        articles: HELPER_ARTICLES["zh-cn"].hello
-      }
-    ],
-    skills: ["hello"],
-    growthView: [
-      {
-        title: "hello, world",
-        sections: [
-          {
-            title: "书单",
-            info: {type: "book", domain: "hello"}
-          }
-        ]
-      }
-    ],
-    todoView: [{
-      title: "hello, world",
-      info: {domain: "hello"}
-    }]
-  },
-  "env": {
-    title: "开发环境",
-    articlesView: [
-      {
-        title: "开发环境",
-        articles: HELPER_ARTICLES["zh-cn"].env
-      }
-    ],
-    skills: ["env"],
-    growthView: [
-      {
-        title: "开发环境",
-        sections: [
-          {
-            title: "工具",
-            info: {type: "tool", domain: "pm"}
-          }
-        ]
-      }
-    ],
-    todoView: [{
-      title: "开发环境",
-      info: {domain: "env"}
-    }]
-  }
+
 };
+
+SECTIONS["hello"] = SECTION0.hello;
+SECTIONS["env"] = SECTION0.env;
+
+SECTIONS["build"] = SECTION1.build;
+SECTIONS["front"] = SECTION1.front;
+SECTIONS["backend"] = SECTION1.backend;
