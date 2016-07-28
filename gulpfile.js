@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var path = require('path');
+var svgSprite = require('gulp-svg-sprite');
 
 /**
  * Ionic hooks
@@ -66,23 +67,21 @@ gulp.task('build', ['clean'], function(done){
   );
 });
 
-gulp.task('svgstore', function () {
-  return gulp
-    .src('growth-ui/*.svg')
-    .pipe(svgmin(function (file) {
-      console.log(file);
-      var prefix = path.basename(file.relative, path.extname(file.relative));
-      return {
-        plugins: [{
-          cleanupIDs: {
-            prefix: prefix + '-',
-            minify: true
-          }
-        }]
+gulp.task('svg-font', function () {
+  // Basic configuration example
+  config                  = {
+    mode                : {
+      css             : {     // Activate the «css» mode
+        render      : {
+          css     : true  // Activate CSS output (with default options)
+        }
       }
-    }))
-    .pipe(svgstore())
-    .pipe(gulp.dest('www/fonts'));
+    }
+  };
+
+  return gulp.src('growth-ui/*.svg', {cwd: './'})
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('www/build'));
 });
 
 gulp.task('sass', buildSass);
