@@ -31,7 +31,7 @@ export class BookmarkServices {
     let self = this;
     this.getAllBookmarks().then(function (bookmarks) {
       bookmarks = JSON.parse(bookmarks);
-      if (bookmarks[slug]) {
+      if (bookmarks !== null && bookmarks[slug]) {
         self.remove(slug);
       } else {
         self.add(slug, title);
