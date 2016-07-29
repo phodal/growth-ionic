@@ -50,7 +50,7 @@
     "cordova-plugin-apprate": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-apprate"
+            "id": "cordova-plugin-apprate@~1.2.0"
         },
         "is_top_level": true,
         "variables": {}
@@ -74,7 +74,7 @@
     "cordova-plugin-app-version": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-app-version"
+            "id": "cordova-plugin-app-version@~0.1.8"
         },
         "is_top_level": true,
         "variables": {}
@@ -82,7 +82,7 @@
     "cordova-plugin-x-socialsharing": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-x-socialsharing"
+            "id": "cordova-plugin-x-socialsharing@~5.1.1"
         },
         "is_top_level": true,
         "variables": {}
@@ -90,7 +90,7 @@
     "cordova-plugin-email-composer": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-email-composer"
+            "id": "cordova-plugin-email-composer@~0.8.3"
         },
         "is_top_level": true,
         "variables": {}
@@ -98,7 +98,7 @@
     "cordova-plugin-google-analytics": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-google-analytics"
+            "id": "cordova-plugin-google-analytics@~1.0.0"
         },
         "is_top_level": true,
         "variables": {}

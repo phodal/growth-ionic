@@ -7,37 +7,37 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.growth2238802"
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.phodal.growth2"
         },
         "cordova-plugin-apprate": {
             "PACKAGE_NAME": "com.phodal.growth2"
         },
-        "cordova-plugin-app-version": {
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phodal.growth2"
         },
-        "cordova-plugin-x-socialsharing": {
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phodal.growth2"
         },
         "cordova-plugin-email-composer": {
             "PACKAGE_NAME": "com.phodal.growth2"
         },
         "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.phodal.growth2"
         }
     },
