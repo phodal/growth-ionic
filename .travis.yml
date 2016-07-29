@@ -18,6 +18,17 @@ addons:
       - lib32stdc++6
       - lib32z1
 
+android:
+  components:
+    - extra-android-support
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - build-tools-22.0.1
+    - android-22
+  licenses:
+    - '.+'
+
 branches:
   only:
     - master
