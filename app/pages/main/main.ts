@@ -17,7 +17,7 @@ export class MainView {
   }
 
   openSectionDetailsPage(section) {
-    this.analytics.trackEvent('Section', 'section:' + section);
+    this.analytics.trackEvent("Section", "section:" + section);
     this.nav.push(Section, {section: section});
   }
 

@@ -25,14 +25,7 @@ describe("MainView", () => {
   beforeEach(() => {
     addProviders(providers);
     let mockClass:any = (<any>new MockClass());
-    mainView = new MainView(mockClass, mockClass);
-  });
-
-  // beforeEach(injectAsyncWrapper(asyncCallbackFactory(MainView, this, true)));
-
-  it("initialises", () => {
-    expect(mainView["slides"]).not.toBeNull();
-    expect(mainView["slideOptions"]).not.toBeNull();
+    mainView = new MainView(mockClass, mockClass, mockClass);
   });
 
   xit("page test", () => {

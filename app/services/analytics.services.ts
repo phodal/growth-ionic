@@ -10,24 +10,24 @@ export class AnalyticsServices {
   };
 
   initID() {
-    this.analytics.startTrackerWithId('UA-71907748-1');
+    this.analytics.startTrackerWithId("UA-71907748-1");
   }
 
   trackView(view) {
     if (window.cordova) {
       this.initID();
-      this.analytics.trackView(view)
+      this.analytics.trackView(view);
     } else {
-      console.log('Analytics Track: ' + view);
+      // console.log("Analytics Track: " + view);
     }
   }
 
   trackEvent(category, action) {
     if (window.cordova) {
       this.initID();
-      this.analytics.trackEvent(category, action)
+      this.analytics.trackEvent(category, action);
     } else {
-      console.log('Analytics Event: ' + category + ' Action: ' + action);
+      // console.log("Analytics Event: " + category + " Action: " + action);
     }
   }
 
