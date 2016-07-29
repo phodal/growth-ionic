@@ -39,7 +39,7 @@ export const SECTION6 = {
     articlesView: [
       {
         title: "重构",
-        articles: HELPER_ARTICLES["zh-cn"].refactory
+        articles: HELPER_ARTICLES["zh-cn"].refactor
       }
     ],
     skills: [],
@@ -50,10 +50,6 @@ export const SECTION6 = {
           {
             title: "书单",
             info: {type: "book", domain: "refactory"}
-          },
-          {
-            title: "Growth",
-            info: {type: "growth", domain: "refactory"}
           }
         ]
       }],
