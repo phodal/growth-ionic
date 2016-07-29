@@ -60,7 +60,9 @@
       text-align: center;
 
       .card-title {
-        line-height: 5em;
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 100%;
+        line-height: 6em;
       }
     }
   }
@@ -74,12 +76,6 @@
       max-width: 50%;
       text-align: center;
       background: #fff;
-    }
-
-    ion-icon {
-      width: 32px;
-      height: 32px;
-      font-size: 30px;
     }
 
     .item .item-inner,

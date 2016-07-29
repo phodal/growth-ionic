@@ -11,17 +11,12 @@ import {ArticleListPage} from "./article-list/index";
 import {RoadMapPage} from "./roadmap-list/index";
 import {ProjectListPage} from "./project-list/index";
 import {BookTocPage} from "./chapter-list/index";
+import {EmailComposer} from 'ionic-native';
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
 })
 export class DiscoverPage {
-  private slideOptions = {
-    initialSlide: 0,
-    autoplay: 3000,
-    loop: true
-  };
-
   constructor(public nav:NavController, private platform:Platform) {
     this.nav = nav;
     this.platform = platform;
@@ -69,6 +64,22 @@ export class DiscoverPage {
 
   openEbook(slide) {
     this.nav.push(BookTocPage, {title: slide.title, action: slide.action});
+  }
+
+  sendEmail() {
+    EmailComposer.isAvailable().then((available:boolean) => {
+      if (available) {
+        let email = {
+          to: 'h@phodal.com',
+          cc: 'gmszone@qq.com',
+          subject: 'Growth反馈',
+          body: '我希望可以有:',
+          isHtml: true
+        };
+
+        EmailComposer.open(email);
+      }
+    });
   }
 
   launch(url) {
