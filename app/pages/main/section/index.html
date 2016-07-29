@@ -53,7 +53,7 @@
         </button>
       </ion-item-group>
 
-      <ion-item-divider light>TODO</ion-item-divider>
+      <ion-item-divider light *ngIf="sectionInfo.todoView && sectionInfo.todoView.length > 0">TODO</ion-item-divider>
 
       <button ion-item *ngFor="let todoSection of sectionInfo.todoView" (click)="presentTodoModal(todoSection.info)">
         <span class="title">{{todoSection.title}}</span>
