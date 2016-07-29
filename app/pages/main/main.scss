@@ -13,51 +13,103 @@
       max-width: 100%;
       text-align: center;
       padding: 0;
+
+      ion-label {
+        margin: 0;
+      }
+
+      .item-inner {
+        padding-right: 0;
+      }
+
+      button.item:not([detail-none]) .item-inner {
+        padding-right: 0;
+        background-image: none;
+      }
     }
 
     .day .item {
-      height: 5em;
+      height: 100px;
       border: none;
     }
 
-    .day-0 .item {
-      background: url("../../images/home-1.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+    .home-1 {
+      background: url("svg/sprite.css.svg") 46.6436170212766% 0 no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-1 .item {
-      background: url("../../images/home-2.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-2 {
+      background: url("svg/sprite.css.svg") 53.191489361702125% 67.65806451612903% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-2 .item {
-      background: url("../../images/home-3.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-3 {
+      background: url("svg/sprite.css.svg") 99.83510638297872% 64.51612903225806% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-3 .item {
-      background: url("../../images/home-4.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-4 {
+      background: url("svg/sprite.css.svg") 0 35.4% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-4 .item {
-      background: url("../../images/home-5.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-5 {
+      background: url("svg/sprite.css.svg") 26.595744680851062% 35.4% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-5 .item {
-      background: url("../../images/home-6.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-6 {
+      background: url("svg/sprite.css.svg") 73.23936170212765% 0 no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-6 .item {
-      background: url("../../images/home-7.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-7 {
+      background: url("svg/sprite.css.svg") 73.23936170212765% 32.25806451612903% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
-    .day-7 .item {
-      background: url("../../images/home-8.thumbnail.jpg") no-repeat;
-      background-size: 100% 100%;
+
+    .home-8 {
+      background: url("svg/sprite.css.svg") 0 67.65806451612903% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
     }
 
     ion-list {
-      padding: 0 12px;
+      padding: 0 10px;
       margin: -1px 0 0 0;
       .item.item-accordion {
-        padding: 0 0px;
+        padding: 0 0;
         transition: 0.09s all linear;
       }
     }
@@ -67,25 +119,15 @@
     }
 
     .card-title {
-      height: 5em;
+      height: 100px;
       width: 100%;
-      top: 0;
-      right: 0;
-      position: absolute;
-      float: right;
-      background: rgba(0, 0, 0, 0); /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #fff); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(right, rgba(0, 0, 0, 0), #fff); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(right, rgba(0, 0, 0, 0), #fff); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(to right, rgba(0, 0, 0, 0), #fff); /* Standard syntax */
 
       h2 {
         color: #4D4F50;
-        float: right;
-        right: 1em;
+        float: left;
         font-size: 1.25em;
         position: relative;
-        line-height: 4em;
+        top: 1em;
       }
     }
   }
@@ -158,4 +200,65 @@
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+
+@-webkit-keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
 }
