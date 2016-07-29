@@ -127,7 +127,14 @@
         float: left;
         font-size: 1.25em;
         position: relative;
-        top: 1em;
+        top: 1.2em;
+        display: block;
+      }
+      p {
+        clear: left;
+        display: block;
+        top: 2em;
+        position: relative;
       }
     }
   }
