@@ -46,7 +46,7 @@
     .card-title {
       background-color: rgba(255, 255, 255, 0.95);
       line-height: 2.5em;
-      font-size: 1.2em;
+      font-size: 1.1em;
       width: 100%;
       color: #4D4F50;
     }
@@ -134,8 +134,9 @@
   }
 
   .explore-1, .explore-2, .explore-3, .explore-4, .explore-5, .explore-6, .explore-7, .explore-8, .explore-9, .explore-10 {
-    width: 99px;
-    height: 99px;
+    background-size: auto 520%;
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
   }
 }
