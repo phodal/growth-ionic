@@ -36,6 +36,9 @@
         },
         "cordova-plugin-email-composer": {
             "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.phodal.growth2"
         }
     },
     "dependent_plugins": {
