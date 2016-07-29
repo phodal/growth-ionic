@@ -19,7 +19,7 @@
         文章
       </ion-segment-button>
       <ion-segment-button value="growthView">
-        杂项
+        Insight
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -30,7 +30,7 @@
   <div [ngSwitch]="basicView" class="day-segment">
     <div *ngSwitchCase="'articleView'">
       <div class="intro">
-        <p>了解关于工程流程的基本信息</p>
+        <p>了解优秀软件工程实践所需的信息</p>
       </div>
       <ion-item-group *ngFor="let articleSection of sectionInfo.articlesView; let i = index;">
         <button ion-item *ngFor="let article of articleSection.articles"
