@@ -4,8 +4,6 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   argv = process.argv;
 
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
 var path = require('path');
 var svgSprite = require('gulp-svg-sprite');
 
