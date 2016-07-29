@@ -3,9 +3,11 @@ import {Http, Headers} from "@angular/http";
 import {UserData} from "../../../providers/user-data";
 import "rxjs/add/operator/map";
 import {NavController, ToastController} from "ionic-angular/index";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
-  templateUrl: "build/pages/community/create/index.html"
+  templateUrl: "build/pages/community/create/index.html",
+  providers: [AnalyticsServices]
 })
 
 export class CreateTopicPage {
@@ -14,10 +16,11 @@ export class CreateTopicPage {
   private token;
 
   constructor(private http:Http, private toastCtrl:ToastController,
-              private userData:UserData, private nav:NavController) {
+              private userData:UserData, private nav:NavController, private analytics:AnalyticsServices) {
     this.http = http;
     this.init();
     this.nav = nav;
+    this.analytics.trackView("Create Topic");
   }
 
   create(post) {

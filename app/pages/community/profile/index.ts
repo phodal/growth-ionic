@@ -2,9 +2,11 @@ import {Component} from "@angular/core";
 import "rxjs/add/operator/map";
 import {UserData} from "../../../providers/user-data";
 import {Events, NavController, ToastController} from "ionic-angular/index";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
   templateUrl: "build/pages/community/profile/index.html",
+  providers: [AnalyticsServices]
 })
 
 export class LoginPage {
@@ -14,7 +16,7 @@ export class LoginPage {
   private hasLogin = false;
 
   constructor(public nav:NavController, private userData:UserData, private events:Events,
-              private toastCtrl:ToastController) {
+              private toastCtrl:ToastController, private analytics:AnalyticsServices) {
     this.events = events;
     this.init();
     this.eventHandle();
@@ -48,6 +50,7 @@ export class LoginPage {
         position: "top"
       });
       toast.present();
+      self.analytics.trackEvent("Login", "Successful");
 
       self.nav.pop();
     });

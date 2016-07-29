@@ -7,10 +7,11 @@ import {filter, merge, forEach} from "lodash";
 import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 import {TimeAgoPipe} from "angular2-moment/index";
 import {UserData} from "../../../providers/user-data";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
-  providers: [Http, HTTP_PROVIDERS],
+  providers: [Http, HTTP_PROVIDERS, AnalyticsServices],
   pipes: [
     SanitizeHtml,
     TimeAgoPipe
@@ -37,12 +38,14 @@ export class CommunityDetailPage {
   private allComments;
   private users = [];
 
-  constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData) {
+  constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData,
+              private analytics:AnalyticsServices) {
     this.http = http;
     this.topicId = params.get("topicId");
     this.userData = userData;
     this.isLogin = this.userData.isLogin();
     this.currentCommentPage = 1;
+    this.analytics.trackView("Topic Detail");
   }
 
   getUsername = function (user) {
