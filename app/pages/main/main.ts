@@ -4,18 +4,20 @@ import {Section} from "./section/index";
 import {AnalyticsServices} from "../../services/analytics.services";
 
 @Component({
-  templateUrl: "build/pages/main/main.html"
+  templateUrl: "build/pages/main/main.html",
+  providers: [AnalyticsServices]
 })
 export class MainView {
   private shownGroup = false;
 
-  constructor(public nav:NavController, private platform:Platform, private analytics: AnalyticsServices) {
+  constructor(public nav:NavController, private platform:Platform, private analytics:AnalyticsServices) {
     this.nav = nav;
     this.platform = platform;
-    analytics.trackView("Growth 2.0");
+    this.analytics.trackView("Growth 2.0");
   }
 
   openSectionDetailsPage(section) {
+    this.analytics.trackEvent('Section', 'section:' + section);
     this.nav.push(Section, {section: section});
   }
 

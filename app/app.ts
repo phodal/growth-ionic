@@ -1,5 +1,4 @@
 import {Platform, ionicBootstrap} from "ionic-angular";
-import {StatusBar} from "ionic-native";
 import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "./pages/effect/content-transition";
