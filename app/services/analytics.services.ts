@@ -16,7 +16,9 @@ export class AnalyticsServices {
       this.initID();
       GoogleAnalytics.trackView(view);
     } else {
+      /* tslint:disable */
       console.log("Analytics Track: " + view);
+      /* tslint:enable */
     }
   }
 
@@ -25,7 +27,9 @@ export class AnalyticsServices {
       this.initID();
       GoogleAnalytics.trackEvent(category, action);
     } else {
+      /* tslint:disable */
       console.log("Analytics Event: " + category + " Action: " + action);
+      /* tslint:enable */
     }
   }
 
