@@ -34,3 +34,11 @@
 .segment-button.segment-activated {
   background-color: $growth-new-color;
 }
+
+.main {
+  ion-row {
+    ion-list {
+      padding:0 12px;
+    }
+  }
+}
