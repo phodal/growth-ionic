@@ -80,6 +80,10 @@ export class DiscoverPage {
     this.nav.push(BookTocPage, {title: slide.title, action: slide.action});
   }
 
+  openGrowthGitHub() {
+    window.open("https://github.com/phodal/growth2",  "_system", "location=yes");
+  }
+
   sendEmail() {
     if (window.cordova) {
       EmailComposer.isAvailable().then((available:boolean) => {
