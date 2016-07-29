@@ -101,5 +101,36 @@
         </button>
       </ion-card>
     </ion-col>
+
+    <ion-item-divider light class="sub-title">在线阅读</ion-item-divider>
+
+    <ion-col class="online-read">
+      <ion-card (click)="openEbook({title: 'Growth：全栈增长工程师实战', action: 'growthAction'})">
+        <button ion-item>
+          <img src="images/home-1.thumbnail.jpg"/>
+          <div class="card-title">《Growth：全栈增长工程师实战》</div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-col class="online-read">
+      <ion-card (click)="openEbook({title: 'Ideabook：练手项目集', action: 'ideabook'})">
+        <button ion-item>
+          <img src="images/home-2.thumbnail.jpg"/>
+          <div class="card-title">《Ideabook：练手项目集》</div>
+        </button>
+      </ion-card>
+    </ion-col>
+
+    <ion-item-divider light class="sub-title">更多</ion-item-divider>
+
+    <ion-col class="more">
+      <ion-card>
+        <button ion-item>
+          <img src="images/home-3.thumbnail.jpg"/>
+          <div class="card-title">其他栏目正在开发中</div>
+        </button>
+      </ion-card>
+    </ion-col>
   </ion-row>
 </ion-content>

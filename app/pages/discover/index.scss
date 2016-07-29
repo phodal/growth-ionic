@@ -28,6 +28,13 @@
       text-align: center;
     }
 
+    ion-col.online-read {
+      background: none;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
     ion-card {
       margin: 0;
       background: none;
@@ -44,6 +51,17 @@
       font-size: 1.2em;
       width: 100%;
       color: #179ed6;
+    }
+
+    .more {
+      background: none;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+
+      .card-title {
+        line-height: 5em;
+      }
     }
   }
 

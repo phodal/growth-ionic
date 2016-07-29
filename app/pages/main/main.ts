@@ -1,6 +1,5 @@
 import {NavController, Platform} from "ionic-angular";
 import {Component} from "@angular/core";
-import {SlideBookTocPage} from "./slider-list/index";
 import {Section} from "./section/index";
 
 @Component({
@@ -16,10 +15,6 @@ export class MainView {
 
   openSectionDetailsPage(section) {
     this.nav.push(Section, {section: section});
-  }
-
-  launch(slide) {
-    this.nav.push(SlideBookTocPage, {title: slide.title, action: slide.action});
   }
 
   toggleGroup(group) {

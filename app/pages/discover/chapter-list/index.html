@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="toolbox-list">
+<ion-content class="chapter-list">
   <ion-list>
     <button ion-item *ngFor="let chapter of chapters" (click)="openToolboxDetailPage(chapter.title, chapter.path)">
       {{chapter.title}}

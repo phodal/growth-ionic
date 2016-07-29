@@ -10,6 +10,7 @@ import {TodoListsPage} from "./todo-lists/index";
 import {ArticleListPage} from "./article-list/index";
 import {RoadMapPage} from "./roadmap-list/index";
 import {ProjectListPage} from "./project-list/index";
+import {BookTocPage} from "./chapter-list/index";
 
 @Component({
   templateUrl: "build/pages/discover/index.html"
@@ -64,6 +65,10 @@ export class DiscoverPage {
 
   openProjectListPage() {
     this.nav.push(ProjectListPage);
+  }
+
+  openEbook(slide) {
+    this.nav.push(BookTocPage, {title: slide.title, action: slide.action});
   }
 
   launch(url) {

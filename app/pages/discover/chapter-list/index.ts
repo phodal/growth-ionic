@@ -3,15 +3,15 @@ import {NavController, LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 import {SERVER_BASE_URL} from "../../../utils/constants";
-import {SlideBookDetailPage} from "../slider-detail/index";
 import {getSpinnerConfig} from "../../../utils/helper";
+import {BookDetailPage} from "../chapter-detail/index";
 
 @Component({
-  templateUrl: "build/pages/main/slider-list/index.html",
+  templateUrl: "build/pages/discover/chapter-list/index.html",
   providers: [Http, HTTP_PROVIDERS]
 })
 
-export class SlideBookTocPage {
+export class BookTocPage {
   private chapters;
   private title;
   private action;
@@ -39,6 +39,6 @@ export class SlideBookTocPage {
   }
 
   openToolboxDetailPage(title, url) {
-    this.nav.push(SlideBookDetailPage, {title: title, url: SERVER_BASE_URL[this.action] + url});
+    this.nav.push(BookDetailPage, {title: title, url: SERVER_BASE_URL[this.action] + url});
   }
 }
