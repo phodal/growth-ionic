@@ -15,8 +15,8 @@ export class AnalyticsServices {
 
   trackView(view) {
     if (window.cordova) {
-      this.initID();
-      this.analytics.trackView(view);
+      // this.initID();
+      // this.analytics.trackView(view);
     } else {
       // console.log("Analytics Track: " + view);
     }
@@ -24,8 +24,8 @@ export class AnalyticsServices {
 
   trackEvent(category, action) {
     if (window.cordova) {
-      this.initID();
-      this.analytics.trackEvent(category, action);
+      // this.initID();
+      // this.analytics.trackEvent(category, action);
     } else {
       // console.log("Analytics Event: " + category + " Action: " + action);
     }

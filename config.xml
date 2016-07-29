@@ -97,6 +97,5 @@
   <plugin name="cordova-plugin-app-version" spec="~0.1.8"/>
   <plugin name="cordova-plugin-x-socialsharing" spec="~5.1.1"/>
   <plugin name="cordova-plugin-email-composer" spec="~0.8.3"/>
-  <plugin name="cordova-plugin-google-analytics" spec="~1.0.0"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
