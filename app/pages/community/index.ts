@@ -9,11 +9,12 @@ import {CommunityDetailPage} from "./detail/index";
 import {LoginPage} from "./profile/index";
 import {UserData} from "../../providers/user-data";
 import {CreateTopicPage} from "./create/index";
+import {AnalyticsServices} from "../../services/analytics.services";
 
 @Component({
   templateUrl: "build/pages/community/index.html",
-  pipes: [TimeAgoPipe]
-
+  pipes: [TimeAgoPipe],
+  providers: [AnalyticsServices]
 })
 export class CommunityPage {
   private topics;
@@ -23,10 +24,12 @@ export class CommunityPage {
   private loading = false;
   private isRefresh = false;
 
-  constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData) {
+  constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData,
+              private analytics:AnalyticsServices) {
     this.http = http;
     this.events = events;
     this.eventHandle();
+    this.analytics.trackView("Community");
   }
 
   ngOnInit() {
@@ -60,6 +63,7 @@ export class CommunityPage {
   }
 
   doRefresh(refresher) {
+    this.analytics.trackEvent("Community", "DoRefresh");
     let url = SERVER_BASE_URL.forum;
     let self = this;
 
@@ -99,14 +103,17 @@ export class CommunityPage {
   }
 
   private openDetailPage(topicId) {
+    this.analytics.trackEvent("Community", "open topic");
     this.nav.push(CommunityDetailPage, {topicId: topicId});
   }
 
   private openLoginPage() {
+    this.analytics.trackEvent("Community", "Login");
     this.nav.push(LoginPage);
   }
 
   private openCreatePage() {
+    this.analytics.trackEvent("Community", "create topic");
     this.nav.push(CreateTopicPage);
   }
 
@@ -118,6 +125,7 @@ export class CommunityPage {
   }
 
   private doInfinite(infiniteScroll, url) {
+    this.analytics.trackEvent("Community", "Load More");
     let self = this;
     this.http.get(url)
       .map(res => res.json())

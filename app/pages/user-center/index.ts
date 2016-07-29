@@ -5,29 +5,36 @@ import {AboutUsPage} from "./about-us/index";
 import {AppRate, SocialSharing} from "ionic-native";
 import {LicensePage} from "./license/index";
 import {BookmarksPage} from "./bookmarks/index";
+import {AnalyticsServices} from "../../services/analytics.services";
 
 @Component({
-  templateUrl: "build/pages/user-center/index.html"
+  templateUrl: "build/pages/user-center/index.html",
+  providers: [AnalyticsServices]
 })
 export class UserCenterPage {
-  constructor(public nav:NavController) {
+  constructor(public nav:NavController, private analytics:AnalyticsServices) {
     this.nav = nav;
     this.init();
+    this.analytics.trackView("User Center");
   }
 
   openAllSkillListPage() {
+    this.analytics.trackEvent("User Center", "skill list");
     this.nav.push(SkillListPage);
   }
 
   openAboutUsPage() {
+    this.analytics.trackEvent("User Center", "about us");
     this.nav.push(AboutUsPage);
   }
 
   openLicensePage() {
+    this.analytics.trackEvent("User Center", "license");
     this.nav.push(LicensePage);
   }
 
   openBookmarksPage() {
+    this.analytics.trackEvent("User Center", "bookmarks");
     this.nav.push(BookmarksPage);
   }
 
