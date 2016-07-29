@@ -6,16 +6,17 @@ import {BookmarkServices} from "../../../services/bookmark.services";
 import {HtmlModal} from "../../../modals/HtmlModal/index";
 import {ModalController} from "ionic-angular/index";
 import {forEach} from "lodash";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
   templateUrl: "build/pages/user-center/bookmarks/index.html",
   directives: [RatingComponent, FORM_DIRECTIVES, CORE_DIRECTIVES],
-  providers: [BookmarkServices]
+  providers: [BookmarkServices, AnalyticsServices]
 })
 export class BookmarksPage {
   public bookmarks = [];
 
-  constructor(private modalCtrl:ModalController, public bookmarkServices:BookmarkServices) {
+  constructor(private modalCtrl:ModalController, public bookmarkServices:BookmarkServices, private analytics:AnalyticsServices) {
     let self = this;
     this.bookmarkServices.getAllBookmarks()
       .then(result => {
@@ -28,6 +29,7 @@ export class BookmarksPage {
           });
         }
       );
+    this.analytics.trackView("User Center: Bookmark");
   }
 
   presentHtmlModal(params) {

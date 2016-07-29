@@ -97,10 +97,4 @@ export class DiscoverPage {
       });
     }
   }
-
-  launch(url) {
-    this.platform.ready().then(() => {
-      window.open(url, "_system", "location=true");
-    });
-  }
 }

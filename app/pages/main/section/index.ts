@@ -7,9 +7,11 @@ import {HtmlModal} from "../../../modals/HtmlModal";
 import {BookListModal} from "../../../modals/BookListModal/index";
 import {SkillModal} from "../../../modals/SkillModal/index";
 import {SECTIONS} from "../../../data/SECTIONS";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
-  templateUrl: "build/pages/main/section/index.html"
+  templateUrl: "build/pages/main/section/index.html",
+  providers: [AnalyticsServices]
 })
 export class Section {
   basicView:string = "articleView";
@@ -17,22 +19,26 @@ export class Section {
   private sectionInfo;
   private section;
 
-  constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams) {
+  constructor(public nav:NavController, private modalCtrl:ModalController, public params:NavParams,
+              private analytics:AnalyticsServices) {
     this.nav = nav;
     this.modalCtrl = modalCtrl;
     this.params = params;
 
     this.section = params.get("section");
     this.sectionInfo = SECTIONS[this.section];
+    this.analytics.trackView("Section" + this.section);
   }
 
   presentTodoModal(params) {
+    this.analytics.trackView("Todo Modal" + params.domain);
     let todoLists = TODO_LISTS["zh-cn"][params.domain];
     let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
     todoModal.present();
   }
 
   presentHtmlModal(params) {
+    this.analytics.trackView("Html Modal" + params.domain);
     let htmlModal, modalParams;
     modalParams = this.generateHtmlModalParams(params);
 
@@ -55,11 +61,13 @@ export class Section {
   }
 
   presentSkillModal(domain) {
+    this.analytics.trackView("Skill Modal" + domain);
     let skillModal = this.modalCtrl.create(SkillModal, {domain: domain});
     skillModal.present();
   }
 
   presentGrowthModal(params) {
+    this.analytics.trackView("Growth Modal" + params.domain);
     let htmlModal, slug, modalParams;
 
     if (params.type === "book") {
