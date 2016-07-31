@@ -61,13 +61,18 @@ Others:
  - 文章推荐: [https://github.com/phodal/articles](https://github.com/phodal/articles)
  - 练手项目: [https://github.com/phodal/awesome-practise-project](https://github.com/phodal/awesome-practise-project)
 
-Thanks 
----
+### Thanks 
 
  - 混合框架: [Ionic](https://github.com/driftyco/ionic)
  - 前端面试题: [http://markyun.github.io/2015/Front-end-Developer-Questions/](http://markyun.github.io/2015/Front-end-Developer-Questions/)
  - Ionic 2模板：[https://github.com/lathonez/clicker](https://github.com/lathonez/clicker)
  - Timeline [https://github.com/itbruno/responsive-timeline](https://github.com/itbruno/responsive-timeline)
+
+### Contributors
+
+ - [song-what](https://github.com/song-what) Re-Design Growth UI
+ - [haoflynet](https://github.com/haoflynet) create About Us Page
+ - [zhangmx](https://github.com/zhangmx)
 
 License
 ---
