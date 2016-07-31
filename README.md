@@ -3,7 +3,23 @@ Growth 2.0 - 陪你成为顶尖开发者
 
 [![Build Status](https://travis-ci.org/phodal/growth2.svg?branch=master)](https://travis-ci.org/phodal/growth2) [![Code Climate](https://codeclimate.com/github/phodal/growth2/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth2) [![Test Coverage](https://codeclimate.com/github/phodal/growth2/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth2/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth2/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth2)
 
-Growth 1.0: [https://github.com/phodal/growth](https://github.com/phodal/growth)
+Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。在这里，你将通过不断检验自己的学习成效，形成属于你自己的独一无二的个性技能图谱。
+
+在这里你可以了解到：
+
+ - 完整的Web开发，运维，部署，维护
+ - 如何写好代码——重构、测试、模式
+ - 遗留代码、遗留系统的形成
+
+在这里你可以get到：
+
+ - 不同阶段所需的不同技能
+ - 相关书单推荐
+ - 获取不同的学习路线
+ - 寻找合适的练手项目
+ - 在工具箱里找到合适的工具
+ - Web应用解决方案
+ - 阅读在线文章和电子书
 
 加入开发
 ---
