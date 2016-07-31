@@ -21,6 +21,20 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
  - Web应用解决方案
  - 阅读在线文章和电子书
 
+###反馈
+
+反馈收集：[https://jinshuju.net/f/j1tdLQ](https://jinshuju.net/f/j1tdLQ)
+
+**QQ交流群: 529600394，我的微信公众号: phodal**
+
+![QRCode](marketing/wechat.jpg)
+
+
+**ScreenShot**:
+ 
+![1](marketing/1.pic.jpg)
+![2](marketing/2.pic.jpg)
+
 加入开发
 ---
 
