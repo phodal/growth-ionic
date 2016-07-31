@@ -8,48 +8,48 @@
     },
     "installed_plugins": {
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-apprate": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-app-version": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-email-composer": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-google-analytics": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "com.verso.cordova.clipboard": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.phodal.growth2"
+            "PACKAGE_NAME": "ren.growth"
         }
     }
 }
