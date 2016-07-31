@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
-import {NavParams} from "ionic-angular/index";
+import {NavParams, ToastController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
+import {Clipboard} from 'ionic-native';
 import "rxjs/add/operator/map";
 
 @Component({
@@ -11,11 +12,21 @@ import "rxjs/add/operator/map";
 export class ProjectDetailPage {
   private subdomain;
 
-  constructor(public params:NavParams) {
+  constructor(public params:NavParams, private toastCtrl: ToastController) {
     this.subdomain = params.get("subdomain");
   }
 
+  copyItems(url) {
+    Clipboard.copy(url);
+    let toast = this.toastCtrl.create({
+      message: "链接已复制",
+      duration: 1000,
+      position: "middle"
+    });
+    toast.present();
+  }
+
   openProject(url) {
-    window.open(url,  "_system", "location=yes");
+    window.open(url, "_system", "location=yes");
   }
 }

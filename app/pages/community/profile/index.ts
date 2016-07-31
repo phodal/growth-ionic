@@ -31,10 +31,6 @@ export class LoginPage {
     }
   }
 
-  signup(signupCreds) {
-
-  }
-
   logout() {
     this.userData.logout();
     this.nav.pop();

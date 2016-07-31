@@ -39,6 +39,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.phodal.growth2"
+        },
+        "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "growth.ren"
         }
     },
     "dependent_plugins": {

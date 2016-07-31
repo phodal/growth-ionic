@@ -8,7 +8,7 @@
 
 <ion-content class="has-header project-detail">
   <ion-list>
-    <ion-card *ngFor="let project of subdomain.projects">
+    <ion-card *ngFor="let project of subdomain.projects" (click)="copyItems(project.link)">
       <ion-card-header>
         {{project.name}}
       </ion-card-header>
