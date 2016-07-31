@@ -16,7 +16,7 @@ export class BookmarkServices {
   getArticleBookmarkStatus(slug, callback) {
     this.getAllBookmarks().then(function (bookmarks) {
       if (!bookmarks || bookmarks === null) {
-        callback(false);
+        return callback(false);
       }
       bookmarks = JSON.parse(bookmarks);
       if (bookmarks[slug]) {

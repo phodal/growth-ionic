@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavParams, ToastController} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
-import {Clipboard} from 'ionic-native';
+import {Clipboard} from "ionic-native";
 import "rxjs/add/operator/map";
 
 @Component({

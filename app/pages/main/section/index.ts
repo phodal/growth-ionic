@@ -38,7 +38,7 @@ export class Section {
   }
 
   presentHtmlModal(params) {
-    this.analytics.trackView("Html Modal" + params.domain);
+    this.analytics.trackView("Html Modal " + params.slug);
     let htmlModal, modalParams;
     modalParams = this.generateHtmlModalParams(params);
 
