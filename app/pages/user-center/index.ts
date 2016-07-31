@@ -3,7 +3,6 @@ import {NavController} from "ionic-angular/index";
 import {SkillListPage} from "./skill-list/index";
 import {AboutUsPage} from "./about-us/index";
 import {AppRate, SocialSharing} from "ionic-native";
-import {LicensePage} from "./license/index";
 import {BookmarksPage} from "./bookmarks/index";
 import {AnalyticsServices} from "../../services/analytics.services";
 
@@ -26,11 +25,6 @@ export class UserCenterPage {
   openAboutUsPage() {
     this.analytics.trackEvent("User Center", "about us");
     this.nav.push(AboutUsPage);
-  }
-
-  openLicensePage() {
-    this.analytics.trackEvent("User Center", "license");
-    this.nav.push(LicensePage);
   }
 
   openBookmarksPage() {
