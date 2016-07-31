@@ -15,11 +15,7 @@
       </div>
       <div class="timeline-content">
         <h4>{{item.section}}</h4>
-        <p>
-          {{item.description}}
-        </p>
-        <p class="stacks">
-          <span *ngFor="let stack of item.skills"> {{stack}}</span>
+        <p [innerHTML]="item.description">
         </p>
       </div>
     </div>

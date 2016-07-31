@@ -15,7 +15,6 @@
 }
 
 #timeline {
-  line-height: 1.2em;
   width: 90%;
   margin: 15px auto;
   position: relative;
@@ -79,6 +78,11 @@
         margin: -15px -10px 0 -10px;
         font-weight: 500;
         @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      p {
+        font-size: 1em;
+        -webkit-user-select: auto;
       }
 
       &:before {
