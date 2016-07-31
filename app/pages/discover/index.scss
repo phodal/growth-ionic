@@ -67,10 +67,15 @@
       max-width: 100%;
       text-align: center;
 
+      .item {
+        height: 120px;
+        width: auto;
+      }
       .card-title {
-        background-color: rgba(255, 255, 255, 0.8);
-        height: 100%;
-        line-height: 6em;
+        background-color: rgba(255, 255, 255, 0.6);
+        height: 120px;
+        line-height: 120px;
+        color: $growth-new-color;
       }
     }
   }
@@ -140,8 +145,8 @@
 
   .explore-1, .explore-2, .explore-3, .explore-4, .explore-5, .explore-6, .explore-7, .explore-8, .explore-9, .explore-10 {
     background-size: auto 520%;
-    width: 50px;
-    height: 50px;
-    margin: 10px auto 0px;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto 10px;
   }
 }
