@@ -31,3 +31,10 @@ Service 1:
 Service 2:
 
  - GitHub Page
+
+Plugins
+---
+
+```
+ionic plugin add https://github.com/VersoSolutions/CordovaClipboard.git
+```
