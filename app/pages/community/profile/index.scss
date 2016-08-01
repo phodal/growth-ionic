@@ -1,6 +1,10 @@
 .login {
   background-color: #fff;
-
+  .error {
+    p {
+      text-align: center;
+    }
+  }
   .logout {
     button {
       margin: 0 auto;
