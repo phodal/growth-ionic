@@ -14,6 +14,7 @@ export class LoginPage {
   private submitted = false;
   private isLogining = false;
   private hasLogin = false;
+  private isLoginError = false;
 
   constructor(public nav:NavController, private userData:UserData, private events:Events,
               private toastCtrl:ToastController, private analytics:AnalyticsServices) {
@@ -49,6 +50,11 @@ export class LoginPage {
       self.analytics.trackEvent("Login", "Successful");
 
       self.nav.pop();
+    });
+
+    this.events.subscribe("user:login:error", () => {
+      self.isLoginError = true;
+      self.isLogining = false;
     });
   }
 

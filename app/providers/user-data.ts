@@ -31,7 +31,7 @@ export class UserData {
           self.events.publish("user:login", user.username);
         },
         error => {
-          alert(error);
+          self.events.publish("user:login:error");
         }
       );
   }

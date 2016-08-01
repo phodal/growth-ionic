@@ -8,7 +8,7 @@
 
 <ion-content class="login has-header">
 
-  <form #loginForm="ngForm" novalidate [hidden]="hasLogin">
+  <form #loginForm="ngForm" [hidden]="hasLogin">
     <ion-item>
       <ion-label floating>Username</ion-label>
       <ion-input [(ngModel)]="loginInfo.username" name="username" #username="ngModel" type="text" required></ion-input>
@@ -26,11 +26,15 @@
     </p>
 
     <div padding [hidden]="isLogining">
-      <button (click)="doLogin(loginForm)" type="submit" primary block>Login</button>
+      <button [disabled]="!loginForm.form.valid"  (click)="doLogin(loginForm)" type="submit" primary block>Login</button>
     </div>
 
-    <div padding [hidden]="!isLogining">
+    <div padding [hidden]="!isLogining || isLoginError">
       <ion-spinner [name]="circles"></ion-spinner>
+    </div>
+
+    <div padding *ngIf="isLoginError">
+      <p>登录失败，请检查你的用户名和密码是否正确</p>
     </div>
   </form>
   <div class="logout" [hidden]="!hasLogin" (click)="logout()">
