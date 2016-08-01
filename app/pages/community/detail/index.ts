@@ -76,7 +76,7 @@ export class CommunityDetailPage {
     let headers = new Headers();
     let replyContent = self.replyContent;
 
-    if (self.replyToUser !== "" && self.replyToUser !== "") {
+    if (self.replyToUser !== undefined && self.replyToUser !== "") {
       replyContent = "@" + self.replyToUser + "#" + self.replyToId + self.replyContent;
     }
 
