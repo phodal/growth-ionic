@@ -122,6 +122,10 @@ export class CommunityPage {
     this.events.subscribe("user:login", (userEventData) => {
       self.hasLogin = true;
     });
+
+    this.events.subscribe("user:logout", () => {
+      self.hasLogin = false;
+    });
   }
 
   private doInfinite(infiniteScroll, url) {
