@@ -1,0 +1,3 @@
+[submodule "assets"]
+	path = www/assets
+	url = https://github.com/phodal/growth-content.git

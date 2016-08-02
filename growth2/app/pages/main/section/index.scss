@@ -1,0 +1,56 @@
+.day {
+  .item {
+    border: 1px solid #F9F9F9;
+  }
+
+  .intro {
+    height: 44px;
+    background: $growth-new-color;
+    color: #fff;
+
+    p {
+      color: #fff;
+      text-align: center;
+      line-height: 44px;
+    }
+  }
+
+  .day-segment {
+    padding: 0;
+    margin: -14px 0 0;
+  }
+
+  ion-item-divider {
+    height: 47px;
+
+    .item-button {
+      line-height: 28px;
+      font-size: 14px;
+    }
+
+    .skill-button.item-button.button-icon-only {
+      padding-left: 12px;
+    }
+
+    ion-label span.title {
+      line-height: 28px;
+    }
+
+    .button:hover:not(.disable-hover) {
+      background: none;
+    }
+    .button.activated {
+      box-shadow: none;
+    }
+    button.skill-button,
+    button.day-info {
+      margin: 0;
+      border: none;
+      position: relative;
+      float: right;
+      background: none;
+      color: $growth-new-color;
+      box-shadow: none;
+    }
+  }
+}

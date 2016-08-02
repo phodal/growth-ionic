@@ -1,0 +1,18 @@
+.project-detail {
+  ion-card {
+    border-radius: 6px;
+  }
+  ion-card-header {
+    padding: 14px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  ion-card-content {
+    padding: 16px;
+  }
+  ion-row {
+    ion-col {
+      border-top: 1px solid #f0f0f0;
+      padding: 4px 16px;
+    }
+  }
+}

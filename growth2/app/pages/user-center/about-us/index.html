@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      关于
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="about-us">
+  <ion-item-group>
+    <ion-item-divider light>贡献者</ion-item-divider>
+    <ion-item *ngFor="let contributor of contributors; let i = index" (click)="openProfilePage(i)">
+      <ion-avatar item-left>
+        <img src="https://avatars.githubusercontent.com/{{contributor.github}}?v=3&s=40">
+      </ion-avatar>
+      <h2>{{contributor.nickname}}</h2>
+      <p>{{contributor.bio}}</p>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider light>Growth应用</ion-item-divider>
+    <ion-item>
+      当前版本
+      <span item-right>{{version}}</span>
+    </ion-item>
+    <ion-item>
+      开源
+      <ion-icon name="logo-github" item-right></ion-icon>
+    </ion-item>
+    <ion-item>QQ交流群: 529600495</ion-item>
+    <ion-item onclick="window.open('http://forum.growth.ren/',  '_system', 'location=yes');">
+      论坛: http://forum.growth.ren/
+      <ion-icon name="people-outline" item-right></ion-icon>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

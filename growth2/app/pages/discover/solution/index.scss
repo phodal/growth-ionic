@@ -1,0 +1,32 @@
+.solution {
+  .stack {
+    padding: 2px 12px 2px 0;
+  }
+
+  ion-card {
+    border-radius: 6px;
+
+    ion-label {
+      text-align: center;
+      margin: 8px 8px 8px 0;
+    }
+
+    ion-card-content {
+      padding: 13px 16px;
+      p {
+        color: #000;
+      }
+    }
+
+    ion-row {
+      border-top: 1px solid #F9F9F9;
+      padding: 8px;
+
+      ion-col {
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+}

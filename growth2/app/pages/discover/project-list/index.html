@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      练手项目
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="toolbox-list list-page">
+  <ion-item-group *ngFor="let domainProject of domainProjects">
+    <ion-item-divider light>
+      <span class="title">{{domainProject.name}}</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let subdomain of domainProject.subdomains" (click)="openProjectDetailPage(subdomain)">
+      {{subdomain.name}}
+      <ion-icon name="arrow-right" item-right></ion-icon>
+    </button>
+  </ion-item-group>
+</ion-content>

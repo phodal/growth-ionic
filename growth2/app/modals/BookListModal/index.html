@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      书单
+    </ion-title>
+    <ion-buttons start>
+      <button (click)="dismiss()">
+        <span primary hideWhen="android">关闭</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-item *ngFor="let book of books" (click)="presentBookDetail(book.slug)">
+      {{book.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>

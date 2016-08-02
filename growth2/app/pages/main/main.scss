@@ -1,0 +1,151 @@
+.main {
+  .title {
+    width: 100%;
+    height: auto;
+  }
+  ion-row {
+    margin-bottom: 10px;
+    background: none;
+    flex-wrap: wrap;
+
+    ion-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+
+      ion-label {
+        margin: 0;
+      }
+
+      .item-inner {
+        padding-right: 0;
+      }
+
+      button.item:not([detail-none]) .item-inner {
+        padding-right: 0;
+        background-image: none;
+      }
+    }
+
+    .growth-icon {
+      background: url("svg/sprite.css.svg") 21.008403361344538% 99.93658536585366% no-repeat;
+      background-size: auto 520%;
+      width: 24px;
+      height: 24px;
+      color: #222;
+    }
+    .day .item {
+      height: 100px;
+      border: none;
+    }
+    .day .item.activated {
+      background: none;
+    }
+
+    .home-1 {
+      background: url("svg/sprite.css.svg") 78.86134453781513% 0 no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-2 {
+      background: url("svg/sprite.css.svg") 78.86134453781513% 24.390243902439025% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-3 {
+      background: url("svg/sprite.css.svg") 78.86134453781513% 48.78048780487805% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-4 {
+      background: url("svg/sprite.css.svg") 0 75.54634146341463% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-5 {
+      background: url("svg/sprite.css.svg") 36.84453781512605% 0 no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-6 {
+      background: url("svg/sprite.css.svg") 42.016806722689076% 75.54634146341463% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-7 {
+      background: url("svg/sprite.css.svg") 63.02521008403362% 75.54634146341463% no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    .home-8 {
+      background: url("svg/sprite.css.svg") 99.86974789915966% 0 no-repeat;
+      width: 98px;
+      height: 98px;
+      bottom: -2px;
+      position: relative;
+      float: right;
+    }
+
+    ion-list {
+      padding: 0 10px;
+      margin: -1px 0 0 0;
+      .item.item-accordion {
+        padding: 0 0;
+        transition: 0.09s all linear;
+      }
+    }
+
+    ion-card {
+      margin-bottom: 0;
+    }
+
+    .card-title {
+      height: 100px;
+      width: 100%;
+
+      h2 {
+        color: #4D4F50;
+        float: left;
+        font-size: 1.25em;
+        position: relative;
+        top: 1.2em;
+        display: block;
+      }
+      p {
+        clear: left;
+        display: block;
+        top: 2em;
+        position: relative;
+      }
+    }
+  }
+}

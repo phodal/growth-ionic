@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      撰写
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="community-detail has-header">
+  <form postForm="ngForm" novalidate>
+    <ion-item>
+      <ion-label floating>标题</ion-label>
+      <ion-input [(ngModel)]="postForm.title" name="title" #title="ngModel" type="text" required></ion-input>
+    </ion-item>
+    <p [hidden]="title.valid || submitted == false" danger padding-left>
+      必填
+    </p>
+
+    <ion-item>
+      <ion-label floating>内容</ion-label>
+      <ion-textarea [(ngModel)]="postForm.content" name="content" #content="ngModel" rows="10" required></ion-textarea>
+    </ion-item>
+    <p [hidden]="content.valid || submitted == false" danger padding-left>
+      必填
+    </p>
+
+    <div padding>
+      <button (click)="create(postForm)" type="submit" primary block>Create</button>
+    </div>
+  </form>
+</ion-content>

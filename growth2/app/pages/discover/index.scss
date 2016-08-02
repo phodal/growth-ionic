@@ -1,0 +1,152 @@
+.discover {
+  ion-label {
+    margin: 0;
+  }
+  .item[detail-push] .item-inner, button.item:not([detail-none]) .item-inner, a.item:not([detail-none]) .item-inner {
+    background-image: none;
+  }
+
+  ion-row.image-row {
+    padding-top: 10px;
+    background: none;
+
+    ion-item-divider.sub-title {
+      color: $growth-new-color;
+      padding: 8px 0 8px 4px;
+      background: none;
+      border: none;
+    }
+
+    img {
+      opacity: 1;
+    }
+
+    ion-col {
+      background: none;
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+    }
+
+    ion-col.online-read {
+      background: none;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    ion-card {
+      margin: 0;
+      background: none;
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+
+    .card-title {
+      line-height: 2.5em;
+      font-size: 1.1em;
+      width: 100%;
+      color: #4D4F50;
+    }
+
+    .online-read {
+      .card-title {
+        background: #fff;
+      }
+    }
+
+    .card-title-above {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .more {
+      background: none;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+
+      .item {
+        height: 120px;
+        width: auto;
+      }
+      .card-title {
+        background-color: rgba(255, 255, 255, 0.6);
+        height: 120px;
+        line-height: 120px;
+        color: $growth-new-color;
+      }
+    }
+  }
+
+  ion-row {
+    flex-wrap: wrap;
+    padding: 0 12px 12px 12px;
+
+    ion-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+      background: #fff;
+    }
+
+    .item .item-inner,
+    .item {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+
+      ion-label {
+        text-align: center;
+      }
+    }
+  }
+
+  .explore-1 {
+    background: url("svg/sprite.css.svg") 99.86974789915966% 48.78048780487805% no-repeat;
+  }
+
+  .explore-2 {
+    background: url("svg/sprite.css.svg") 21.008403361344538% 75.54634146341463% no-repeat;
+  }
+
+  .explore-3 {
+    background: url("svg/sprite.css.svg") 99.86974789915966% 73.17073170731707% no-repeat;
+  }
+
+  .explore-4 {
+    background: url("svg/sprite.css.svg") 0 26.765853658536585% no-repeat;
+  }
+
+  .explore-5 {
+    background: url("svg/sprite.css.svg") 21.008403361344538% 26.765853658536585% no-repeat;
+  }
+
+  .explore-6 {
+    background: url("svg/sprite.css.svg") 57.85294117647059% 0 no-repeat;
+  }
+
+  .explore-7 {
+    background: url("svg/sprite.css.svg") 57.85294117647059% 24.390243902439025% no-repeat;
+  }
+
+  .explore-8 {
+    background: url("svg/sprite.css.svg") 0 51.15609756097561% no-repeat;
+  }
+
+  .explore-9 {
+    background: url("svg/sprite.css.svg") 21.008403361344538% 51.15609756097561% no-repeat;
+  }
+
+  .explore-10 {
+    background: url("svg/sprite.css.svg") 42.016806722689076% 51.15609756097561% no-repeat;
+  }
+
+  .explore-1, .explore-2, .explore-3, .explore-4, .explore-5, .explore-6, .explore-7, .explore-8, .explore-9, .explore-10 {
+    background-size: auto 520%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto 10px;
+  }
+}

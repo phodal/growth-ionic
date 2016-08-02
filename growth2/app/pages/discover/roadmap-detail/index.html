@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{roadmap.name}}学习路线
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header">
+  <div id="timeline">
+
+    <div *ngFor="let item of roadmap.timeline" class="timeline-item">
+      <div class="timeline-icon">
+        <ion-icon name="ios-globe-outline"></ion-icon>
+      </div>
+      <div class="timeline-content">
+        <h4>{{item.section}}</h4>
+        <p [innerHTML]="item.description">
+        </p>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

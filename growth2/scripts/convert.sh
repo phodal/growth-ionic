@@ -1,0 +1,1 @@
+find . -regex .*jpg | xargs python convert.py

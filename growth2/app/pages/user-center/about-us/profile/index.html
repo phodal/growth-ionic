@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{person.nickname}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="about-us">
+
+  <ion-item-divider *ngIf="person.duty">
+    {{person.duty}}
+  </ion-item-divider>
+
+  <button ion-item *ngIf="person.github" (click)="openGitHubUrl(person.github)">
+    Github: @{{person.nickname}}
+    <ion-icon name="logo-github" item-right></ion-icon>
+  </button>
+
+  <button ion-item *ngIf="person.weibo">
+    微博: @{{person.weibo}}
+    <ion-icon name="logo-twitter" item-right></ion-icon>
+  </button>
+
+  <button ion-item *ngIf="person.zhihu">
+    知乎: @{{person.zhihu}}
+  </button>
+
+  <button ion-item *ngIf="person.blog" (click)="openBlogUrl(person.blog)">
+    博客: {{person.blog}}
+    <ion-icon name="logo-wordpress" item-right></ion-icon>
+  </button>
+
+</ion-content>

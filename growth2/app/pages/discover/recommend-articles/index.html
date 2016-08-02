@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      推荐文章
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item-group *ngFor="let domainArticles of helpArticles">
+    <ion-item-divider light sticky>
+      <span class="title">{{getDomainName(domainArticles.domain)}}</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let article of domainArticles.value"
+            (click)="presentHtmlModal({slug: article.slug, title: article.title})">
+      {{article.title}}
+    </button>
+  </ion-item-group>
+</ion-content>

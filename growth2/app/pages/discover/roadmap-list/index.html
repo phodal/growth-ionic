@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      学习路线
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-page">
+  <ion-list>
+    <button ion-item *ngFor="let roadmap of roadmaps" (click)="openRoadmapDetailPage(roadmap)">
+      {{roadmap.name}}
+    </button>
+  </ion-list>
+</ion-content>

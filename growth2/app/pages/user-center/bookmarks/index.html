@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      我的书签
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bookmarks">
+  <div *ngFor="let bookmark of bookmarks">
+    <button ion-item (click)="presentHtmlModal({slug: bookmark.slug, title: bookmark.title})">
+      {{bookmark.title}}
+    </button>
+  </div>
+</ion-content>

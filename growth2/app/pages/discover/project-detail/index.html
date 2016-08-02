@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{subdomain.name}}练手项目
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header project-detail">
+  <ion-list>
+    <ion-card *ngFor="let project of subdomain.projects" (click)="copyItems(project.link)">
+      <ion-card-header>
+        {{project.name}}
+      </ion-card-header>
+
+      <ion-card-content>
+        {{project.desc}}
+      </ion-card-content>
+
+      <ion-row (click)="openProject(project.url)">
+        <ion-col>
+          {{project.link}}
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+</ion-content>

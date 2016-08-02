@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      文章推荐
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="toolbox-list">
+  <ion-list>
+    <button ion-item *ngFor="let article of articles" (click)="openToolboxDetailPage(article.title, article.path)">
+      {{article.title}}
+    </button>
+  </ion-list>
+</ion-content>

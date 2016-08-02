@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      工具箱
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="toolbox-list list-page">
+  <ion-list>
+    <button ion-item *ngFor="let toolbox of toolboxs" (click)="openToolboxDetailPage(toolbox.title, toolbox.path)">
+      {{toolbox.title}}
+    </button>
+  </ion-list>
+</ion-content>

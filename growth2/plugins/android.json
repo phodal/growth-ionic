@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-apprate": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "growth.ren"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "ren.growth"
+        }
+    }
+}

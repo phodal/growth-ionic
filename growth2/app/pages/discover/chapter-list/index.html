@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="chapter-list">
+  <ion-list>
+    <button ion-item *ngFor="let chapter of chapters" (click)="openToolboxDetailPage(chapter.title, chapter.path)">
+      {{chapter.title}}
+    </button>
+  </ion-list>
+</ion-content>

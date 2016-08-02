@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      自我评级
+    </ion-title>
+    <ion-buttons start>
+      <button (click)="dismiss()">
+        <span primary hideWhen="android">关闭</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-item-sliding *ngFor="let skill of skills">
+      <ion-item>
+        <span class="skill-title">{{skill.text}}</span>
+        <rating [(ngModel)]="skill.rate" [max]="max" (click)="setStar(skill)"></rating>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

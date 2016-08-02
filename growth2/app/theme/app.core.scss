@@ -1,0 +1,127 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+@import "../pages/main/main";
+@import "../pages/main/section/index";
+
+@import "../pages/community/index";
+@import "../pages/community/detail/index";
+@import "../pages/community/profile/index";
+
+@import "../pages/discover/index";
+@import "../modals/SkillModal/index";
+
+@import "./third-partys/markdown";
+@import "./third-partys/highlight";
+
+@import "../pages/discover/solution/index";
+@import "../pages/discover/exam-list/index";
+@import "../pages/discover/exam-detail/index";
+@import "../pages/discover/toolbox-detail/index";
+@import "../pages/discover/roadmap-detail/index";
+@import "../pages/discover/project-detail/index";
+
+tabbar,
+.toolbar-background {
+  background: $growth-default-background;
+}
+
+tabbar ion-icon,
+tabbar span,
+.toolbar-title {
+  color: $growth-new-color;
+}
+
+ion-tabbar {
+  color: $growth-new-color;
+  background: $growth-default-background;
+
+  .tab-button {
+    color: #ccc;
+  }
+
+  .tab-button:hover:not(.disable-hover), .tab-button[aria-selected=true] {
+    color: $growth-new-color;
+  }
+
+  .tab-button:hover:not(.disable-hover), ion-tabbar .tab-button[aria-selected=true] {
+    color: $growth-new-color;
+  }
+}
+
+.loading-wrapper {
+  padding: 8px 16px;
+}
+
+h1[primary], h2[primary], h3[primary], h4[primary], h5[primary], h6[primary], p[primary], span[primary], a:not([button])[primary], small[primary], b[primary], i[primary], strong[primary], em[primary], sub[primary], sup[primary], ion-icon[primary] {
+  color: #fff;
+}
+
+.button.activated {
+  background: none;
+}
+
+.day .item .item-inner {
+  border: none;
+}
+
+.skill-modal ion-content,
+.todo-modal ion-content,
+ion-content {
+  background-color: $growth-background;
+}
+
+.html-modal,
+.book-list-modal,
+.todo-modal,
+.skill-modal {
+  button span {
+    color: $growth-new-color;
+  }
+}
+
+
+ion-modal {
+  .html-modal ion-content {
+    background-color: #fff;
+  }
+}
+
+rating {
+  float: right;
+
+  ion-icon {
+    color: $rating-color;
+    font-size: 24px;
+  }
+}
+
+.bar-button-default {
+  color: #ffffff;
+}
+
+ion-spinner {
+  display: block;
+  margin: 5px auto;
+
+  * {
+    stroke: $growth-new-color;
+  }
+
+  &.spinner-circles circle,
+  &.spinner-bubbles circle,
+  &.spinner-dots circle {
+    fill: $growth-new-color;
+  }
+}
+
+.bar-button-default {
+  color: $growth-new-color;
+}
+
+.list-page {
+  background: #f0f0f0;
+}

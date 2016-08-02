@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      推荐书籍
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="recommend-books">
+  <ion-item-group *ngFor="let domainBooks of helpBooks">
+    <ion-item-divider light sticky>
+      <span class="title">{{getDomainName(domainBooks.domain)}}</span>
+    </ion-item-divider>
+    <button ion-item *ngFor="let book of domainBooks.value" (click)="presentBookDetail(book.slug)">
+      {{book.title}}
+    </button>
+  </ion-item-group>
+</ion-content>

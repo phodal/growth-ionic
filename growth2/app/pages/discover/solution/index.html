@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      解决方案
+    </ion-title>
+
+    <ion-buttons end>
+      <button (click)="presentPopover()">
+        <ion-icon name="reorder"></ion-icon>
+      </button>
+      <button (click)="toggleSearchBar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="solution">
+  <ion-searchbar *ngIf="isWantSearch" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-card *ngFor="let solution of solutions" (click)="presentSolutionDetail(solution.slug)">
+    <ion-item>
+      <h2>{{solution.name}}</h2>
+    </ion-item>
+    <ion-card-content>
+      <p>
+        {{solution.description}}
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col class="stack" *ngFor="let stack of solution.stacks">
+        {{stack}}
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
