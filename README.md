@@ -3,6 +3,10 @@ Growth 2.0 - 陪你成为顶尖开发者
 
 [![Build Status](https://travis-ci.org/phodal/growth2.svg?branch=master)](https://travis-ci.org/phodal/growth2) [![Code Climate](https://codeclimate.com/github/phodal/growth2/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth2) [![Test Coverage](https://codeclimate.com/github/phodal/growth2/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth2/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth2/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth2)
 
+<a href="https://play.google.com/store/apps/details?id=ren.growth&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
+<a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/0100c7e5-1455-40bc-a351-b77d2801ad5a/English_get-it-from-MS_InvariantCulture_Default.png 2x"  alt="Get it from Microsoft" /></a>
+<a href="https://itunes.apple.com/cn/app/growth/id1078807522?l=zh&ls=1&mt=8"><img src="./docs/apple.png" width="180" alt="Get it from Apple Store" /></a>
+
 Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。
 
 在这里你可以了解到：
@@ -21,14 +25,9 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
  - Web应用解决方案
  - 阅读在线文章和电子书
 
-###反馈
-
-反馈收集：[https://jinshuju.net/f/j1tdLQ](https://jinshuju.net/f/j1tdLQ)
-
 **QQ交流群: 529600394，我的微信公众号: phodal**
 
 ![QRCode](marketing/wechat.jpg)
-
 
 **ScreenShot**:
  
