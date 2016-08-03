@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ren.growth" version="1.4.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ren.growth" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Growth</name>
   <description>
     Be Awesome Developer
   </description>
   <author email="h@phodal.com" href="http://www.growth.ren/">
-      Fengda Huang
-    </author>
+    Growth Studio
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
-  <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="3000"/>
-  <feature name="StatusBar">
-    <param name="ios-package" onload="true" value="CDVStatusBar"/>
-  </feature>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
   <platform name="android">
+    <allow-intent href="market:*"/>
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
     <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
@@ -40,10 +37,13 @@
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
   <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
     <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
     <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
     <icon src="resources/ios/icon/icon-40.png" width="40" height="40"/>
     <icon src="resources/ios/icon/icon-40@2x.png" width="80" height="80"/>
+    <icon src="resources/ios/icon/icon-40@3x.png" width="120" height="120"/>
     <icon src="resources/ios/icon/icon-50.png" width="50" height="50"/>
     <icon src="resources/ios/icon/icon-50@2x.png" width="100" height="100"/>
     <icon src="resources/ios/icon/icon-60.png" width="60" height="60"/>
@@ -53,6 +53,7 @@
     <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144"/>
     <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
     <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152"/>
+    <icon src="resources/ios/icon/icon-83.5@2x.png" width="167" height="167"/>
     <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
     <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
     <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
@@ -67,10 +68,35 @@
     <splash src="resources/ios/splash/Default@2x~iphone.png" width="640" height="960"/>
     <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
   </platform>
-  <platform name="wp8">
-    <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
-    <icon src="resources\wp8\icon\Background.png" width="159" height="159"/>
-    <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
-  </platform>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="ShowSplashScreen" value="false"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="30000"/>
+  <preference name="AutoHideSplashScreen" value="false"/>
+  <preference name="SplashShowOnlyFirstTime" value="false"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="FadeSplashScreenDuration" value="2500"/>
+  <feature name="SplashScreen">
+    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+  </feature>
+  <feature name="StatusBar">
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  <plugin name="cordova-plugin-device" spec="~1.1.1"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.2"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~3.2.1"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.1.2"/>
+  <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
+  <plugin name="cordova-plugin-apprate" spec="~1.2.0"/>
+  <plugin name="cordova-plugin-app-version" spec="~0.1.8"/>
+  <plugin name="cordova-plugin-x-socialsharing" spec="~5.1.1"/>
+  <plugin name="cordova-plugin-email-composer" spec="~0.8.3"/>
+  <plugin name="cordova-plugin-google-analytics" spec="~1.0.0"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

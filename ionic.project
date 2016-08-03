@@ -1,12 +1,4 @@
 {
-  "name": "growth",
-  "app_id": "94beeed6",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "name": "growth2",
+  "app_id": ""
 }

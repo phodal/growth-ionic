@@ -1,121 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta charset="UTF-8">
   <title>Growth</title>
-  <meta name="keywords" content="growth,growth hacker,growth hack, growth engineer,growth.ren">
-  <meta name="description" content="Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。通过Growth，你将通过不断检验自己的学习成效，形成属于你自己的独一无二的个性技能图谱。快来使用Growth，带你快速成长。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
 
-  <!-- compiled css output -->
-  <link href="css/ionic.app.css" rel="stylesheet">
-  <link href="lib/highlightjs/styles/mono-blue.css" rel="stylesheet">
-  <link href="lib/ionic-filter-bar/ionic.filter.bar.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-  <script src="js/win-jscompat.js"></script>
-
-  <!-- ionic/angularjs js -->
-  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-
-  <script src="lib/d3/d3.min.js"></script>
-
-  <!-- cordova script (this will be a 404 during development) -->
-  <script src="cordova.js"></script>
-
-  <script>
-    //remove module for electron
-    if(typeof module !== 'undefined' && module && module.exports){
-      var isElectron = true;
-      delete module;
-    }
-  </script>
-  <script src="lib/highlightjs/highlight.pack.min.js"></script>
-  <script src="lib/angular-highlightjs/angular-highlightjs.min.js"></script>
-  <script src="lib/marked/marked.min.js"></script>
-  <script src="lib/angular-marked/dist/angular-marked.min.js"></script>
-  <script src="lib/angular-resource/angular-resource.min.js"></script>
-  <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="lib/nools.min.js"></script>
-  <script src="lib/angular-translate.min.js"></script>
-  <script src="lib/moment/min/moment-with-locales.min.js"></script>
-  <script src="lib/angular-moment/angular-moment.min.js"></script>
-  <script src="lib/satellizer/satellizer.min.js"></script>
-  <script src="lib/angular-messages/angular-messages.js"></script>
-
-  <script src="lib/collide/collide.js"></script>
-  <script src="lib/ionic-rating/ionic-rating.min.js"></script>
-  <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
-  <script src="lib/ionic.swipecards.js"></script>
-  <script src="lib/ionic-filter-bar/ionic.filter.bar.min.js"></script>
-  <script src="lib/tabSlideBox.js"></script>
-  <script src="lib/ion-affix/ion-affix.js"></script>
-
-  <!-- i18n Support's js -->
-  <script src="js/i18n/main.js"></script>
-  <script src="js/i18n/en.js"></script>
-  <script src="js/i18n/zh-cn.js"></script>
-
-  <!-- assets Support Support's js -->
-  <script src="js/data/ALL_ARTICLE.js"></script>
-  <script src="js/data/BOOK_REVIEWS.js"></script>
-
-  <!-- js data Support Support's js -->
-  <script src="js/data/ALL_SKILLS.js"></script>
-  <script src="js/data/TODO_LISTS.js"></script>
-  <script src="js/data/SOLUTIONS.js"></script>
-  <script src="js/data/QUIZ_TITLE.js"></script>
-  <script src="js/data/HELPER_ARTICLES.js"></script>
-
-  <!-- your app's js -->
-
-  <script src="js/app.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/factory.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/services/topics.js"></script>
-  <script src="js/services/tokenHandler.js"></script>
-  <script src="js/skill/skillmap.js"></script>
-  <script src="js/skill/skillBubble.js"></script>
-
-  <script src="js/controllers/MainCtrl.js"></script>
-  <script src="js/controllers/community/CommunityCtrl.js"></script>
-  <script src="js/controllers/community/TopicCtrl.js"></script>
-  <script src="js/controllers/community/CreateCtrl.js"></script>
-  <script src="js/controllers/community/LoginCtrl.js"></script>
-  <script src="js/controllers/community/SigninCtrl.js"></script>
-  <script src="js/controllers/community/ProfileCtrl.js"></script>
-  <script src="js/controllers/SettingControl.js"></script>
-  <script src="js/controllers/StackCtrl.js"></script>
-  <script src="js/controllers/AboutControl.js"></script>
-  <script src="js/controllers/MoreCtrl.js"></script>
-  <script src="js/controllers/ExamCtrl.js"></script>
-  <script src="js/controllers/SolutionCtrl.js"></script>
-  <script src="js/controllers/ArticleCtrl.js"></script>
-  <script src="js/controllers/TodoViewCtrl.js"></script>
-  <script src="js/controllers/DayCtrl.js"></script>
-  <script src="js/controllers/AppCtrl.js"></script>
-  <script src="js/controllers/AIControl.js"></script>
-  <script src="js/controllers/ReviewCtrl.js"></script>
-  <script src="js/controllers/Quiz.js"></script>
-  <script src="js/controllers/SkillTree.js"></script>
-  <script src="js/controllers/AchievementCtrl.js"></script>
-  <script type="text/javascript" timeout="5100" server="http://www.growth.ren/" manifest="manifest.json" src="js/update/bootstrap.js"></script>
-  <script src="js/update/cordova-app-loader-complete.js"></script>
-  <script src="js/update/autoupdate.js"></script>
-  <script>window.BOOTSTRAP_OK = true</script>
+  <link ios-href="build/css/app.ios.css" rel="stylesheet">
+  <link md-href="build/css/app.md.css" rel="stylesheet">
+  <link wp-href="build/css/app.wp.css" rel="stylesheet">
 </head>
-<body ng-app="starter">
-  <ion-nav-bar class="bar-positive">
-    <ion-nav-back-button>
-    </ion-nav-back-button>
-  </ion-nav-bar>
-  <!--
-        The views will be rendered in the <ion-nav-view> directive below
-        Templates are in the /templates folder (but you could also
-        have templates inline in this html file if you'd like).
-      -->
-  <ion-nav-view></ion-nav-view>
+<body>
+
+  <!-- this Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- cordova.js required for cordova apps -->
+  <script src="cordova.js"></script>
+  <!-- Polyfill needed for platforms without Promise and Collection support -->
+  <script src="build/js/es6-shim.min.js"></script>
+  <!-- Zone.js and Reflect-metadata  -->
+  <script src="build/js/Reflect.js"></script>
+  <script src="build/js/zone.js"></script>
+  <!-- the bundle which is built from the app's source code -->
+  <script src="build/js/app.bundle.js"></script>
 </body>
 </html>

@@ -1,4 +1,0 @@
-- Google Analytics
-- WebMaster
-- Omniture
-- New Relic

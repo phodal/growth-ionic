@@ -1,29 +1,68 @@
 {
-  "name": "growth",
-  "productName": "Growth",
-  "version": "1.2.2",
-  "main": "desktop.js",
-  "scripts": {
-    "start": "electron desktop.js",
-    "build": "electron-packager . $npm_package_productName --out=desktop-dist --platform=all --arch=x64 --ignore='(desktop-dist|node_modules|platforms|plugins|resources|scss|wp8|hooks|aws-credentials.json|.io-config.json)' --prune --asar --version=0.36.5 --app-version=$npm_package_version --icon='resources/osx/growth.icns'"
-  },
-  "description": "growth: An Ionic project",
   "dependencies": {
-    "gulp": "^3.5.6",
-    "gulp-sass": "^2.0.4",
-    "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0",
-    "grunt": "0.4.5",
-    "grunt-aws-s3": ""
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/forms": "^0.2.0",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "angular2-moment": "^0.8.1",
+    "es6-shim": "^0.35.1",
+    "hammerjs": "^2.0.8",
+    "ionic-angular": "nightly",
+    "ionic-native": "1.3.2",
+    "ionicons": "3.0.0",
+    "lodash": "^4.13.1",
+    "marked": "^0.3.5",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.6"
   },
   "devDependencies": {
-    "bower": "^1.3.3",
-    "cordova-app-loader": "^0.18.0",
-    "crypto": "0.0.3",
-    "electron-prebuilt": "^0.36.5",
-    "gulp-util": "^2.2.14",
-    "shelljs": "^0.3.0"
+    "babel-preset-es2015": "^6.9.0",
+    "browserify-istanbul": "^2.0.0",
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-svg-sprite": "^1.3.3",
+    "gulp-tslint": "^6.0.1",
+    "gulp-typescript": "^2.13.6",
+    "gulp-watch": "4.3.5",
+    "ionic-gulp-browserify-typescript": "2.0.0",
+    "ionic-gulp-fonts-copy": "^1.0.0",
+    "ionic-gulp-html-copy": "^1.0.0",
+    "ionic-gulp-sass-build": "^1.0.0",
+    "ionic-gulp-scripts-copy": "^2.0.0",
+    "isparta": "4.0.0",
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.1.0",
+    "karma-browserify": "5.0.5",
+    "karma-chrome-launcher": "1.0.1",
+    "karma-coverage": "1.0.0",
+    "karma-jasmine": "1.0.2",
+    "karma-mocha-reporter": "2.0.4",
+    "karma-phantomjs-launcher": "1.0.1",
+    "phantomjs-prebuilt": "2.1.7",
+    "protractor": "3.3.0",
+    "run-sequence": "1.2.1",
+    "systemjs": "^0.19.31",
+    "traceur": "0.0.111",
+    "traceur-runtime": "0.0.59",
+    "ts-node": "0.9.3",
+    "tsify": "0.16.0",
+    "tslint": "3.12.1",
+    "tslint-eslint-rules": "1.3.0",
+    "typings": "1.3.1"
+  },
+  "scripts": {
+    "build": "gulp --gulpfile test/gulpfile.ts --cwd ./ build-app",
+    "e2e": "gulp --gulpfile test/gulpfile.ts --cwd ./ build-e2e && protractor test/protractor.conf.js",
+    "karma": "gulp --gulpfile test/gulpfile.ts --cwd ./ karma-debug",
+    "postinstall": "ionic state restore && typings install && webdriver-manager update && cp test/karma-static/*.html node_modules/karma/static",
+    "start": "ionic serve",
+    "electron": "/Applications/Electron.app/Contents/MacOS/Electron .",
+    "test": "gulp --gulpfile test/gulpfile.ts --cwd ./ unit-test"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
@@ -36,8 +75,12 @@
   "cordovaPlatforms": [
     "ios",
     {
-      "platform": "android",
-      "locator": "windows"
-    }
-  ]
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    },
+    "android"
+  ],
+  "name": "growth2",
+  "description": "growth2: An Ionic project"
 }

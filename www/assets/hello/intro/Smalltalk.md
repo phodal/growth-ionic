@@ -1,3 +1,0 @@
-Smalltalk被公认为历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境 (IDE)。由Alan Kay，Dan Ingalls，Ted Kaehler，Adele Goldberg等于70年代初在Xerox PARC开发。Smalltalk对其它众多的程序设计语言的产生起到了极大的推动作用，主要有：Objective-C，Actor， Java 和Ruby等。90年代的许多软件开发思想得利于Smalltalk，例如Design Patterns， Extreme Programming(XP)和Refactoring等。
-
-20世纪70年代到80年代前期，美国施乐公司的帕洛阿尔托研究中心（PARC）开发了Smalltalk编程语言。从Smalltalk-72、Smalltalk-78到Smalltalk-80，他们开发完成了整个Smalltalk系列，Smalltalk编程语言对近代面向对象编程语言影响很大，所以称之为“面向对象编程之母”。（此段摘自《松本行宏的程序世界》）

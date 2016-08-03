@@ -1,1 +1,0 @@
-系统介绍Javascript的OOP开发和设计模式的书籍。 

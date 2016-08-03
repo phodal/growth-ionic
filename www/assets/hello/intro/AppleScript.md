@@ -1,9 +1,0 @@
-AppleScript是苹果公司开发的一种脚本语言，可以用来控制运行于Mac OS上的程序，也可以写成独立运行的Applet。最早版本在1993年十月推出，在System 7（System 7.1.1）运行。
-
-AppleScript的前身是Hypercard所使用的脚本语言Hypertalk。苹果发现Hypertalk类似英语的语法，可用于操控其他软件，于是开发出AppleScript，成为System 7的一部份。
-
-AppleScript在1993年十月随system 7.1.1推出。桌面排版软件QuarkXpress是为首支援AppleScript的软件。而以AppleScript编程自动化QuarkXpress排版作业，是当时流行的做法。就算后期QuarkXpress移殖到Windows，但AppleScript易于编程简化QuarkXpress复杂的排版作业，这就是麦金塔至今仍稳夺排版作业机器标准的主要原因。
-
-AppleScript亦从苹果经典操作系统过渡到Mac OS X及Cocoa架构。苹果更随Mac OS X 10.2推出AppleScript Studio，可完全使用AppleScript制作具有图像界面的Cocoa软件。
-
-苹果在2005年推出Mac OS X 10.4 Tiger时，连同新功能Automator，是继AppleScript后另一款自动化作业流程的工具。
