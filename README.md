@@ -29,6 +29,10 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 ![QRCode](marketing/wechat.jpg)
 
+有钱捧个钱场:
+
+![Alipay](./docs/alipay.png)![Wechat](./docs/wechat.png)
+
 **ScreenShot**:
  
 ![1](marketing/1.pic.jpg)
