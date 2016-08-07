@@ -8,7 +8,7 @@ import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 import {TimeAgoPipe} from "angular2-moment/index";
 import {UserData} from "../../../providers/user-data";
 import {AnalyticsServices} from "../../../services/analytics.services";
-import { AlertController } from 'ionic-angular';
+import { AlertController } from "ionic-angular";
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
