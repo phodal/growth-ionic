@@ -1,7 +1,7 @@
 import {Component, ViewChild} from "@angular/core";
 import {PagingComponent, PageObject, AnimationReadyEvent} from "../../effect/paging-conponents";
 import {BodyContent} from "./body-content";
-import {NavParams, NavController} from "ionic-angular/index";
+import {NavParams, NavController, GestureController} from "ionic-angular/index";
 import {QUIZS} from "../../../data/QUIZS";
 import * as _ from "lodash";
 
@@ -21,13 +21,15 @@ export class ExamDetailPage {
   private allQuestions;
   private questionsWithShuffle;
 
-  constructor(public params:NavParams, public nav:NavController) {
+  constructor(public params:NavParams, public nav:NavController, public gestureController:GestureController) {
     this.domain = params.get("domain");
     this.allQuestions = QUIZS[this.domain];
     this.questionsWithShuffle = this.shuffleQuestion(this.allQuestions);
+    this.gestureController = gestureController;
   }
 
   ionViewWillEnter() {
+    this.gestureController.disableScroll(1);
     let tempPages:PageObject[] = [];
     tempPages.push({iconName: "ionic"});
     tempPages.push({iconName: "aperture"});
