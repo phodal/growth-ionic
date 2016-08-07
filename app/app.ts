@@ -37,6 +37,8 @@ ionicBootstrap(MyApp, [UserData, disableDeprecatedForms(), provideForms()], {
   bodyContentEnter: TRANSITION_IN_KEY,
   bodyContentLeave: TRANSITION_OUT_KEY,
   tabbarPlacement: "bottom",
+  tabsHideOnSubPages: true,
+  tabsHighlight: true,
   backButtonText: "",
   modalEnter: "modal-slide-in",
   modalLeave: "modal-slide-out"
