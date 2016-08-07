@@ -8,6 +8,7 @@ import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 import {TimeAgoPipe} from "angular2-moment/index";
 import {UserData} from "../../../providers/user-data";
 import {AnalyticsServices} from "../../../services/analytics.services";
+import { AlertController } from 'ionic-angular';
 
 @Component({
   templateUrl: "build/pages/community/detail/index.html",
@@ -39,7 +40,7 @@ export class CommunityDetailPage {
   private users = [];
 
   constructor(private toastCtrl:ToastController, public http:Http, public params:NavParams, private userData:UserData,
-              private analytics:AnalyticsServices) {
+              private analytics:AnalyticsServices, public alertCtrl: AlertController) {
     this.http = http;
     this.topicId = params.get("topicId");
     this.userData = userData;
@@ -107,9 +108,16 @@ export class CommunityDetailPage {
           toast.present();
         },
         error => {
-          alert(error);
+          self.doAlert(error);
         }
       );
+  }
+
+  doAlert(error) {
+    let alert = this.alertCtrl.create({
+      title: error
+    });
+    alert.present();
   }
 
   ngOnInit() {
