@@ -24,7 +24,7 @@ export class TutorialPage {
       },
       {
         title: "Growth",
-        description: "<b>Growth</b>可以帮助你构建你的知识体系——建议你学习什么，阅读什么相关书籍",
+        description: "<b>Growth</b>视图可以帮助你构建你的知识体系——建议你学习什么，阅读什么相关书籍",
         image: "images/slide.png",
       },
       {
