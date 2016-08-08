@@ -1,9 +1,9 @@
 import {Platform, ionicBootstrap} from "ionic-angular";
-import {TabsPage} from "./pages/tabs/tabs";
 import {Component} from "@angular/core";
 import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "./pages/effect/content-transition";
 import {UserData} from "./providers/user-data";
 import {disableDeprecatedForms, provideForms} from "@angular/forms";
+import {TutorialPage} from "./pages/tutorial/tutorial";
 
 @Component({
   template: "<ion-nav [root]='rootPage'></ion-nav>"
@@ -12,7 +12,7 @@ export class MyApp {
   private rootPage:any;
 
   constructor(private platform:Platform, private userData:UserData) {
-    this.rootPage = TabsPage;
+    this.rootPage = TutorialPage;
     this.initializeApp(platform);
     this.userData.logout();
   }
