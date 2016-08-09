@@ -4,6 +4,7 @@ import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "./pages/effect/content-tran
 import {UserData} from "./providers/user-data";
 import {disableDeprecatedForms, provideForms} from "@angular/forms";
 import {TutorialPage} from "./pages/tutorial/tutorial";
+import {StatusBar, Splashscreen} from "ionic-native";
 
 @Component({
   template: "<ion-nav [root]='rootPage'></ion-nav>"
@@ -19,17 +20,9 @@ export class MyApp {
 
   private initializeApp(platform:Platform) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.hideSplashScreen();
+      StatusBar.styleDefault();
+      Splashscreen.hide();
     });
-  }
-  private hideSplashScreen() {
-    if(navigator && navigator.splashscreen) {
-      setTimeout(()=> {
-        navigator.splashscreen.hide();
-      }, 1000);
-    }
   }
 }
 
