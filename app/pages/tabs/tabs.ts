@@ -3,6 +3,7 @@ import {MainView} from "../main/main";
 import {DiscoverPage} from "../discover/index";
 import {UserCenterPage} from "../user-center/index";
 import {CommunityPage} from "../community/index";
+import {NavParams} from "ionic-angular";
 
 @Component({
   templateUrl: "build/pages/tabs/tabs.html"
@@ -12,4 +13,9 @@ export class TabsPage {
   discoverView:any = DiscoverPage;
   communityView:any = CommunityPage;
   userCenterView:any = UserCenterPage;
+  mySelectedIndex: number;
+
+  constructor(navParams: NavParams) {
+    this.mySelectedIndex = navParams.data.tabIndex || 0;
+  }
 }

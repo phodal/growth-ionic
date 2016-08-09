@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {MenuController, NavController} from "ionic-angular";
+import {NavController} from "ionic-angular";
 import {TabsPage} from "../tabs/tabs";
 
 interface Slide {
@@ -16,7 +16,7 @@ export class TutorialPage {
   slides: Slide[];
   showSkip = true;
 
-  constructor(private nav: NavController, private menu: MenuController) {
+  constructor(private nav: NavController) {
     this.slides = [
       {
         title: "欢迎使用 <b>Growth 2</b>",
