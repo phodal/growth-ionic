@@ -27,7 +27,7 @@ export class Section {
 
     this.section = params.get("section");
     this.sectionInfo = SECTIONS[this.section];
-    this.analytics.trackView("Section" + this.section);
+    this.analytics.trackView("Section:" + this.section);
   }
 
   presentTodoModal(params) {
