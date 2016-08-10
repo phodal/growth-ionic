@@ -3,10 +3,14 @@ import {LoadingController, NavParams} from "ionic-angular/index";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/add/operator/map";
 import {getSpinnerConfig, convertToMarkdown} from "../../../utils/helper";
+import {SanitizeHtml} from "../../../pipes/SanitizeHtml.pipe";
 
 @Component({
   templateUrl: "build/pages/discover/toolbox-detail/index.html",
-  providers: [Http, HTTP_PROVIDERS]
+  providers: [Http, HTTP_PROVIDERS],
+  pipes: [
+    SanitizeHtml
+  ]
 })
 
 export class ToolboxDetailPage {
