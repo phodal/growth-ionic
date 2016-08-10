@@ -30,6 +30,7 @@ ionicBootstrap(MyApp, [UserData, disableDeprecatedForms(), provideForms()], {
   bodyContentEnter: TRANSITION_IN_KEY,
   bodyContentLeave: TRANSITION_OUT_KEY,
   tabbarPlacement: "bottom",
+  backButtonText: "后退",
   tabsHideOnSubPages: true,
   tabsHighlight: true
 });
