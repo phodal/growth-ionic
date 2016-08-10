@@ -15,10 +15,9 @@ export const SECTION1 = {
       }
     ],
     skills: ["build"],
-    todoView: [{
-      title: "构建系统",
-      info: {domain: "build"}
-    }]
+    todoView: [
+      
+    ]
   },
   "front": {
     title: "前端",
