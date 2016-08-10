@@ -15,7 +15,7 @@
       </div>
       <div class="timeline-content">
         <h4>{{item.section}}</h4>
-        <p [innerHTML]="item.description">
+        <p [innerHTML]="item.description | sanitizeHtml">
         </p>
       </div>
     </div>
