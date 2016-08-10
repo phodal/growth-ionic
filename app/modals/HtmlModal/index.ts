@@ -2,10 +2,14 @@ import {Platform, NavParams, ViewController, Content} from "ionic-angular/index"
 import {Component, ViewChild} from "@angular/core";
 import {Http} from "@angular/http";
 import {BookmarkServices} from "../../services/bookmark.services";
+import {SanitizeHtml} from "../../pipes/SanitizeHtml.pipe";
 
 @Component({
   templateUrl: "build/modals/HtmlModal/index.html",
-  providers: [BookmarkServices]
+  providers: [BookmarkServices],
+  pipes: [
+    SanitizeHtml
+  ]
 })
 export class HtmlModal {
   @ViewChild(Content) content:Content;

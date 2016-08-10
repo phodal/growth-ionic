@@ -19,5 +19,5 @@
 </ion-header>
 
 <ion-content class="has-header" padding>
-  <div class="markdown" [innerHTML]="html"></div>
+  <div class="markdown" [innerHTML]="html | sanitizeHtml"></div>
 </ion-content>
