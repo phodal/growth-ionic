@@ -16,7 +16,6 @@ export const SECTION1 = {
     ],
     skills: ["build"],
     todoView: [
-      
     ]
   },
   "front": {
