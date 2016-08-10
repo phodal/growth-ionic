@@ -12,8 +12,8 @@
       <img *ngIf="!!slide.image" [src]="slide.image" class="slide-image animated bounceInDown"/>
       <ion-icon class="tutorial" *ngIf="!!slide.icon" [name]="slide.icon"></ion-icon>
 
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+      <h2 class="slide-title" [innerHTML]="slide.title | sanitizeHtml"></h2>
+      <p [innerHTML]="slide.description | sanitizeHtml"></p>
     </ion-slide>
     <ion-slide>
       <img src="images/slide.png" class="slide-image"/>

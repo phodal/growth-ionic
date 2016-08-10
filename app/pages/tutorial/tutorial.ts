@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {TabsPage} from "../tabs/tabs";
+import {SanitizeHtml} from "../../pipes/SanitizeHtml.pipe";
 
 interface Slide {
   title: string;
@@ -10,7 +11,10 @@ interface Slide {
 }
 
 @Component({
-  templateUrl: "build/pages/tutorial/tutorial.html"
+  templateUrl: "build/pages/tutorial/tutorial.html",
+  pipes: [
+    SanitizeHtml
+  ]
 })
 export class TutorialPage {
   slides: Slide[];
