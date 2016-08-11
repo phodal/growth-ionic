@@ -1,10 +1,5 @@
 describe("MyAPP", () => {
   browser.get("");
-  //
-  // beforeEach(() => {
-  //
-  // });
-
   it("should have a title", () => {
     expect(browser.getTitle()).toEqual("Growth");
   });
@@ -13,8 +8,16 @@ describe("MyAPP", () => {
     expect(element(by.css("ion-navbar")).isPresent()).toEqual(true);
   });
 
+  it("should show tutorial first", () => {
+    expect(element(by.css("ion-navbar:first-child")).getText()).toContain("SKIP");
+  });
+
   it("should have correct nav text for Home", () => {
-    expect(element(by.css("ion-navbar:first-child")).getText()).toContain("Growth");
+    element(by.css("ion-navbar ion-buttons .bar-button")).click()
+      .then(function () {
+        browser.driver.sleep(1000);
+        expect(element(by.css(".main-view ion-navbar:first-child")).getText()).toContain("Growth");
+      });
   });
 
   it("should have correct day for Home", () => {
