@@ -47,7 +47,7 @@ export class CreateTopicPage {
         postData => {
           this.isInCreating = false;
           let toast = self.toastCtrl.create({
-            message: "欢迎回来," + postData,
+            message: "创建成功",
             duration: 2000,
             position: "top"
           });
