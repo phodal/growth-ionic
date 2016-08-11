@@ -81,7 +81,7 @@ export class DiscoverPage {
   }
 
   openGrowthGitHub() {
-    window.open("https://github.com/phodal/growth2/issues",  "_system", "location=yes");
+    window.open("https://github.com/phodal/growth/issues",  "_system", "location=yes");
   }
 
   sendEmail() {
