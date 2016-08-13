@@ -13,6 +13,7 @@ import {ProjectListPage} from "./project-list/index";
 import {BookTocPage} from "./chapter-list/index";
 import {EmailComposer} from "ionic-native";
 import {AnalyticsServices} from "../../services/analytics.services";
+import {openLink} from "../../utils/helper";
 
 @Component({
   templateUrl: "build/pages/discover/index.html",
@@ -80,8 +81,8 @@ export class DiscoverPage {
     this.nav.push(BookTocPage, {title: slide.title, action: slide.action});
   }
 
-  openGrowthGitHub() {
-    window.open("https://github.com/phodal/growth/issues",  "_system", "location=yes");
+  openGitHub(links) {
+    openLink(links);
   }
 
   sendEmail() {

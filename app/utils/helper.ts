@@ -24,3 +24,7 @@ export function getSpinnerConfig() {
     duration: 20000
   };
 }
+
+export function openLink(link) {
+  window.open(link, "_system", "location=yes");
+}
