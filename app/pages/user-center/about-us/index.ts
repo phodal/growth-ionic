@@ -4,6 +4,7 @@ import {NavController} from "ionic-angular/index";
 import {Profile} from "./profile/index";
 import {AppVersion} from "ionic-native/dist/index";
 import {AnalyticsServices} from "../../../services/analytics.services";
+import {openLink} from "../../../utils/helper";
 
 @Component({
   templateUrl: "build/pages/user-center/about-us/index.html",
@@ -23,6 +24,10 @@ export class AboutUsPage {
 
   openProfilePage(num) {
     this.nav.push(Profile, {num: num});
+  }
+
+  openUrl(url) {
+    openLink(url);
   }
 
   private init() {
