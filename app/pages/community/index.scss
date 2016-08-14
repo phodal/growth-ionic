@@ -15,10 +15,13 @@
       text-overflow: ellipsis;
       overflow: hidden;
     }
+    .author {
+      padding: 0 6px;
+    }
     .ago, .topics .summary {
       font-size: 12px;
     }
-    .ago {
+    .comment-count {
       float: right;
     }
     .summary ion-icon {
@@ -38,7 +41,7 @@
   }
 
   .loading {
-    margin:10px auto;
+    margin: 10px auto;
     text-align: center;
   }
 

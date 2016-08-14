@@ -29,8 +29,8 @@
         <p class="summary">
           <span *ngIf="topic.attributes.isSticky" class="tab hl">置顶</span>
           <span class="author">{{getAuthorName(included, topic.relationships.startUser.data)}}</span>
-          <span><ion-icon name="ios-chatboxes-outline"></ion-icon>{{topic.attributes.commentsCount - 1}}</span>
-          <span class="item-note ago"><time>{{topic.attributes.lastTime | amTimeAgo}}</time></span>
+          <span class="item-note ago">回复于<time>{{topic.attributes.lastTime | amTimeAgo}}</time></span>
+          <span class="comment-count"><ion-icon name="ios-chatboxes-outline"></ion-icon>{{topic.attributes.commentsCount - 1}}</span>
         </p>
       </div>
     </button>
