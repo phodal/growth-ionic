@@ -13,12 +13,10 @@ import {openLink} from "../../../utils/helper";
 
 export class AboutUsPage {
   private contributors;
-  private version;
 
   constructor(public nav:NavController, private analytics:AnalyticsServices) {
     this.nav = nav;
     this.contributors = CONTRIBUTORS;
-    this.init();
     this.analytics.trackView("User Center: About Us");
   }
 
@@ -28,14 +26,5 @@ export class AboutUsPage {
 
   openUrl(url) {
     openLink(url);
-  }
-
-  private init() {
-    if (window.cordova) {
-      let self = this;
-      AppVersion.getVersionNumber().then(
-        version => self.version = version
-      );
-    }
   }
 }

@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {NavController} from "ionic-angular/index";
 import {SkillListPage} from "./skill-list/index";
 import {AboutUsPage} from "./about-us/index";
-import {AppRate, SocialSharing} from "ionic-native";
+import {AppRate, SocialSharing, AppVersion} from "ionic-native";
 import {BookmarksPage} from "./bookmarks/index";
 import {AnalyticsServices} from "../../services/analytics.services";
 
@@ -11,7 +11,9 @@ import {AnalyticsServices} from "../../services/analytics.services";
   providers: [AnalyticsServices]
 })
 export class UserCenterPage {
-  constructor(public nav:NavController, private analytics:AnalyticsServices) {
+  private version;
+
+  constructor(public nav: NavController, private analytics: AnalyticsServices) {
     this.nav = nav;
     this.init();
     this.analytics.trackView("User Center");
@@ -45,6 +47,11 @@ export class UserCenterPage {
         laterButtonLabel: "容我考虑考虑",
         rateButtonLabel: "马上就去"
       };
+
+      let self = this;
+      AppVersion.getVersionNumber().then(
+        version => self.version = version
+      );
     }
   }
 
