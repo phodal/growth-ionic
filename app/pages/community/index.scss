@@ -8,7 +8,7 @@
       position: absolute
     }
     .activated .tab:not(.hl) {
-      background-color: #aeaeae;
+      background-color: $growth-new-color;
       color: #fff
     }
     .topic-detail h2 {
@@ -17,6 +17,8 @@
     }
     .author {
       padding: 0 6px;
+      color: #7088a9;
+      font-weight: bold;
     }
     .ago, .topics .summary {
       font-size: 12px;
@@ -35,7 +37,7 @@
       padding: 2px 4px
     }
     .hl {
-      background-color: #4B4C49;
+      background-color: $growth-new-color;
       color: #fff
     }
   }
