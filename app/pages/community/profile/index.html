@@ -10,19 +10,19 @@
 
   <form #loginForm="ngForm" [hidden]="hasLogin">
     <ion-item>
-      <ion-label floating>Username</ion-label>
+      <ion-label floating>用户名</ion-label>
       <ion-input [(ngModel)]="loginInfo.username" name="username" #username="ngModel" type="text" required></ion-input>
     </ion-item>
     <p [hidden]="username.valid || submitted == false" danger padding-left>
-      Username is required
+      必填
     </p>
 
     <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label floating>密码</ion-label>
       <ion-input [(ngModel)]="loginInfo.password" name="password" #password="ngModel" type="password" required></ion-input>
     </ion-item>
     <p [hidden]="password.valid || submitted == false" danger padding-left>
-      Password is required
+      必填
     </p>
 
     <div *ngIf="isLoginError" class="error">
