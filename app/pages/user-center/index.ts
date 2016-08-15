@@ -56,7 +56,6 @@ export class UserCenterPage {
     }
   }
 
-
   openUrl(url) {
     openLink(url);
   }
