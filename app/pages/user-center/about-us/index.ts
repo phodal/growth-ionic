@@ -2,7 +2,6 @@ import {Component} from "@angular/core";
 import {CONTRIBUTORS} from "../../../data/CONTRIBUTORS";
 import {NavController} from "ionic-angular/index";
 import {Profile} from "./profile/index";
-import {AppVersion} from "ionic-native/dist/index";
 import {AnalyticsServices} from "../../../services/analytics.services";
 import {openLink} from "../../../utils/helper";
 

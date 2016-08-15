@@ -5,6 +5,7 @@ import {AboutUsPage} from "./about-us/index";
 import {AppRate, SocialSharing, AppVersion} from "ionic-native";
 import {BookmarksPage} from "./bookmarks/index";
 import {AnalyticsServices} from "../../services/analytics.services";
+import {openLink} from "../../utils/helper";
 
 @Component({
   templateUrl: "build/pages/user-center/index.html",
@@ -53,6 +54,11 @@ export class UserCenterPage {
         version => self.version = version
       );
     }
+  }
+
+
+  openUrl(url) {
+    openLink(url);
   }
 
   RateApp() {
