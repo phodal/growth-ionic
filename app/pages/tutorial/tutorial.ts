@@ -30,19 +30,19 @@ export class TutorialPage {
       },
       {
         title: "Growth",
-        description: "<b>Growth</b>视图可以帮助你构建你的知识体系——建议你学习什么，阅读什么相关书籍",
+        description: "<b>Growth</b>视图可以帮助你构建你的知识体系、建议学习内容、推荐相关书籍",
         image: "",
         icon: "ios-home-outline"
       },
       {
         title: "探索",
-        description: "Discover视图下包含学习路线、练手项目、工具箱、在线文章，结合Growth可以帮你巩固你的技能。",
+        description: "Discover视图下包含学习路线、练手项目、工具箱、在线文章等等内容，帮你巩固你的技能。",
         image: "",
         icon: "ios-compass-outline"
       },
       {
         title: "社区",
-        description: "除了使用APP来访问社区的功能，你还可以在线使用：http://forum.growth.ren/",
+        description: "除了使用APP来访问社区的功能，你还可以在线使用社区：http://forum.growth.ren/",
         image: "",
         icon: "ios-people-outline"
       }
