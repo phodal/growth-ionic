@@ -22,7 +22,7 @@
   <div class="loading" *ngIf="loading && !isRefresh">
     <ion-spinner [name]="circles"></ion-spinner>
   </div>
-  <ion-list class="topics">
+  <ion-list class="topics" *ngIf="!!topics">
     <button ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic.id)">
       <div class="topic-detail">
         <h2>{{topic.attributes.title}}</h2>
@@ -42,4 +42,7 @@
       </ion-infinite-scroll-content>
     </ion-infinite-scroll>
   </ion-list>
+  <div class="loading-error" *ngIf="!topics && loadingError">
+    网络异常，请下拉刷新
+  </div>
 </ion-content>

@@ -23,6 +23,7 @@ export class CommunityPage {
   private hasLogin = false;
   private loading = false;
   private isRefresh = false;
+  private loadingError = false;
 
   constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData,
               private analytics:AnalyticsServices) {
@@ -58,6 +59,10 @@ export class CommunityPage {
           }
 
           self.loading = false;
+        },
+        error => {
+          self.loading = false;
+          self.loadingError = true;
         }
       );
   }
