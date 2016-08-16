@@ -15,7 +15,7 @@ export class TabsPage {
   userCenterView:any = UserCenterPage;
   mySelectedIndex: number;
 
-  constructor(navParams: NavParams) {
-    this.mySelectedIndex = navParams.data.tabIndex || 0;
+  constructor() {
+
   }
 }
