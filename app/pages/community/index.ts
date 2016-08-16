@@ -25,8 +25,8 @@ export class CommunityPage {
   private isRefresh = false;
   private loadingError = false;
 
-  constructor(public nav:NavController, public http:Http, private events:Events, private userData:UserData,
-              private analytics:AnalyticsServices) {
+  constructor(public nav: NavController, public http: Http, private events: Events, private userData: UserData,
+              private analytics: AnalyticsServices) {
     this.http = http;
     this.events = events;
     this.eventHandle();
@@ -61,10 +61,16 @@ export class CommunityPage {
           self.loading = false;
         },
         error => {
-          self.loading = false;
-          self.loadingError = true;
+          self.errorHandle();
         }
       );
+  }
+
+  errorHandle() {
+    this.loading = false;
+    this.isRefresh = false;
+
+    this.loadingError = true;
   }
 
   doRefresh(refresher) {
@@ -94,6 +100,9 @@ export class CommunityPage {
           } else {
             self.nextPageUrl = null;
           }
+        },
+        error => {
+          self.errorHandle();
         }
       );
   }
@@ -151,6 +160,9 @@ export class CommunityPage {
           }
           infiniteScroll.complete();
         }
-      );
+      ),
+      error => {
+        self.errorHandle();
+      }
   }
 }
