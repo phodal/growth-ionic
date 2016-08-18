@@ -10,8 +10,6 @@ rev=$(git rev-parse --short HEAD)
 
 cd ../
 
-ls -alh
-
 git init
 git config user.name "Robot"
 git config user.email "robot@phodal.com"
@@ -20,15 +18,14 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal/growth-web.git"
 git fetch upstream
 git reset upstream/gh-pages
 
-ls -alh
-
 cp -a growth/www growth-web
 
 ls -alh
 
 cd growth-web
 
-ls -alh
+git submodule init
+git submodule update
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
