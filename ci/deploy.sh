@@ -15,8 +15,6 @@ git init
 git config user.name "Robot"
 git config user.email "robot@phodal.com"
 
-rm -rf .git
-
 git remote add upstream "https://$GH_TOKEN@github.com/phodal/growth-web.git"
 git fetch upstream
 git reset upstream/gh-pages
