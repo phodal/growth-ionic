@@ -21,14 +21,13 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal/growth-web.git"
 git fetch upstream
 git reset upstream/gh-pages
 
+rm -rf growth/www/assets/.git
+
 cp -a growth/www growth-web
 
 cd growth-web
 
 ls -alh
-
-git submodule init
-git submodule update
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
