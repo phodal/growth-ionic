@@ -32,4 +32,4 @@ ls -alh
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:gh-pages
+git push
