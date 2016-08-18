@@ -13,10 +13,11 @@
     <ion-spinner [name]="circles"></ion-spinner>
   </div>
 
-  <div class="topic row topicCard" *ngIf="topic" padding>
+  <div class="topic row" *ngIf="topic" padding>
     <div class="col col80">
       <h4 class="title">{{topic.attributes.title}}</h4>
       <span class="author">{{topicUser.attributes.username}}</span>
+      <span class="start-time"><time>{{topic.attributes.startTime | amTimeAgo}}</time></span>
       <div class="markdown" [innerHTML]="post.attributes.contentHtml | sanitizeHtml"></div>
     </div>
   </div>
