@@ -4,6 +4,8 @@ set -o errexit -o nounset
 
 rev=$(git rev-parse --short HEAD)
 
+cd stage/
+
 git init
 
 git config user.name "Robot"
@@ -15,11 +17,11 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal/growth-web.git"
 git fetch upstream
 git reset upstream/gh-pages
 
-rm -rf growth/www/assets/.git
+rm -rf ../www/assets/.git
 
 pwd
 
-cp -R growth/www/ growth-web/
+cp -R ../www/ growth-web/
 
 cd growth-web
 
