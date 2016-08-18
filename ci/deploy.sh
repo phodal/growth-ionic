@@ -23,6 +23,8 @@ pwd
 
 cp -r ../www/* ./
 
+echo 'web.growth.ren' >> CNAME
+
 pwd
 
 ls -alh
