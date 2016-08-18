@@ -10,7 +10,6 @@ rev=$(git rev-parse --short HEAD)
 
 cd ../
 
-git init
 git config user.name "Robot"
 git config user.email "robot@phodal.com"
 
@@ -20,9 +19,9 @@ git reset upstream/gh-pages
 
 cp -a growth/www growth-web
 
-ls -alh
-
 cd growth-web
+
+ls -alh
 
 git submodule init
 git submodule update
