@@ -21,9 +21,13 @@ git reset upstream/gh-pages
 
 rm -rf growth/www/assets/.git
 
-cp -a growth/www/ growth-web/
+pwd
+
+rsync -avh --dry-run growth/www/ growth-web/
 
 cd growth-web
+
+pwd
 
 ls -alh
 
