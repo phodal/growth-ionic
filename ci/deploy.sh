@@ -1,14 +1,8 @@
 #! /usr/bin/env sh
-#
-#fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth2' -T $API_TOKEN
-#
-#!/bin/bash
 
 set -o errexit -o nounset
 
 rev=$(git rev-parse --short HEAD)
-
-cd ../
 
 git init
 
@@ -25,7 +19,9 @@ rm -rf growth/www/assets/.git
 
 pwd
 
-rsync -avh --dry-run growth/www/ growth-web/
+cp -R growth/www/ growth-web/
+
+cd growth-web
 
 pwd
 
