@@ -159,10 +159,10 @@ export class CommunityPage {
             self.nextPageUrl = null;
           }
           infiniteScroll.complete();
+        },
+        error => {
+          self.errorHandle();
         }
-      ),
-      error => {
-        self.errorHandle();
-      }
+      );
   }
 }
