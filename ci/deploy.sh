@@ -21,9 +21,7 @@ rm -rf ../www/assets/.git
 
 pwd
 
-cp -R ../www/ growth-web/
-
-cd growth-web
+cp -R ../www/ ./
 
 pwd
 
