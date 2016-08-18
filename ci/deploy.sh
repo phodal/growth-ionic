@@ -21,7 +21,7 @@ rm -rf ../www/assets/.git
 
 pwd
 
-cp -R ../www/ ./
+cp -r ../www/* ./
 
 pwd
 
