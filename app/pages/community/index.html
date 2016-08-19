@@ -4,10 +4,10 @@
       社区交流
     </ion-title>
     <ion-buttons end>
-      <button (click)="openLoginPage()">
+      <button ion-button (click)="openLoginPage()">
         <ion-icon name="ios-person-outline"></ion-icon>
       </button>
-      <button [hidden]="!hasLogin" (click)="openCreatePage()">
+      <button ion-button [hidden]="!hasLogin" (click)="openCreatePage()">
         <ion-icon name="ios-create-outline"></ion-icon>
       </button>
     </ion-buttons>
