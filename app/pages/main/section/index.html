@@ -4,10 +4,10 @@
       {{sectionInfo.title}}
     </ion-title>
     <ion-buttons end>
-      <button *ngIf="sectionInfo.skills[0]" (click)="presentSkillModal(sectionInfo.skills[0])">
+      <button ion-button *ngIf="sectionInfo.skills[0]" (click)="presentSkillModal(sectionInfo.skills[0])">
         <ion-icon name="checkmark-circle-outline"></ion-icon>
       </button>
-      <button (click)="presentHtmlModal(sectionInfo.intros[0].info)">
+      <button ion-button (click)="presentHtmlModal(sectionInfo.intros[0].info)">
         <ion-icon name="information-circle"></ion-icon>
       </button>
     </ion-buttons>
