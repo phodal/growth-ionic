@@ -15,7 +15,7 @@ module.exports = function(config) {
       'node_modules/es6-shim/es6-shim.js',        // TypeError: undefined is not a constructor (evaluating 'new exports.Map()')
       'node_modules/reflect-metadata/Reflect.js', // 'Uncaught reflect-metadata shim is required when using class decorators'
       'node_modules/zone.js/dist/zone.js',        // Zone.js dependencies (Zone undefined)
-      'node_modules/zone.js/dist/proxy-zone.js',
+      'node_modules/zone.js/dist/proxy.js',
       'node_modules/zone.js/dist/sync-test.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/jasmine-patch.js',
