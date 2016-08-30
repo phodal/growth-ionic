@@ -82,7 +82,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: ci/deploy.sh
+  script: ci/deploy_temp.sh
   skip_cleanup: true
 
 after_deploy:
