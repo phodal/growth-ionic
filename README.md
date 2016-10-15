@@ -64,7 +64,7 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 EBooks:
 
- - [全栈增长工程师指南](https://github.com/phodal/growth)
+ - [全栈增长工程师指南](https://github.com/phodal/growth-ebook)
  - [全栈增长工程师的练手项目集](https://github.com/phodal/ideabook)
  - [全栈增长工程师的工具箱](https://github.com/phodal/toolbox)
  - [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
