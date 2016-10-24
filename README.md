@@ -1,6 +1,8 @@
 Growth - 陪你成为顶尖开发者
 ===
 
+<p align="center"><img src="./resources/android/icon/drawable-xxxhdpi-icon.png"></p>
+
 [![Build Status](https://travis-ci.org/phodal/growth.svg?branch=master)](https://travis-ci.org/phodal/growth) [![Code Climate](https://codeclimate.com/github/phodal/growth/badges/gpa.svg)](https://codeclimate.com/github/phodal/growth) [![Test Coverage](https://codeclimate.com/github/phodal/growth/badges/coverage.svg)](https://codeclimate.com/github/phodal/growth/coverage) [![Issue Count](https://codeclimate.com/github/phodal/growth/badges/issue_count.svg)](https://codeclimate.com/github/phodal/growth)
 
 预览：[http://web.growth.ren/](http://web.growth.ren/)
