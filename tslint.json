@@ -1,38 +1,11 @@
 {
-  "extends": "tslint:latest",
   "rules": {
-    "interface-name": false,
-    "max-line-length": false,
-    "member-ordering": [true,
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
-    ],
-    "object-literal-sort-keys": false,
-    "whitespace": false,
-    "member-access": false,
-    "no-empty": false,
-    "no-unused-variable": false,
-    "one-variable-per-declaration": false,
-    "typedef-whitespace":
-    [
-      false,
-      {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
-      },
-      {
-        "call-signature": "onespace",
-        "index-signature": "onespace",
-        "parameter": "onespace",
-        "property-declaration": "onespace",
-        "variable-declaration": "onespace"
-      }
-    ],
-    "no-string-literal": false,
-    "trailing-comma": [false, {"multiline": "always", "singleline": "never"}]
-  }
+    "no-duplicate-variable": true,
+    "no-unused-variable": [
+      true
+    ]
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ]
 }

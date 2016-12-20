@@ -1,5 +1,6 @@
 {
-  "name": "growth2",
+  "name": "growth-3",
   "app_id": "",
-  "v2": true
+  "v2": true,
+  "typescript": true
 }
