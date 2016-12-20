@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -12,4 +12,15 @@ export class HomePage {
 
   }
 
+  openSectionDetailsPage(section) {
+
+  }
+
+  toggleGroup(group) {
+
+  }
+
+  isGroupShown(group) {
+
+  };
 }
