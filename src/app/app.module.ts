@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -9,6 +10,7 @@ import {Section} from "../pages/home/section/section";
 import {HtmlModal} from "../components/HtmlModal/HtmlModal";
 import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
 import {BookListModal} from "../components/BookListModal/BookListModal";
+import {TodoModal} from "../components/TodoModal/TodoModal";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {BookListModal} from "../components/BookListModal/BookListModal";
     HomePage,
     Section,
     HtmlModal,
+    TodoModal,
     BookListModal,
     SanitizeHtml,
     TabsPage
@@ -34,8 +37,15 @@ import {BookListModal} from "../components/BookListModal/BookListModal";
     Section,
     BookListModal,
     HtmlModal,
+    TodoModal,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    Storage,
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    }
+  ]
 })
 export class AppModule {}

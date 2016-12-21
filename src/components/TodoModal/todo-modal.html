@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Todo
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span primary hideWhen="android">关闭</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list hideWhen="ios">
+    <div *ngIf="todoLists && todoLists.length > 0">
+      <ion-item-sliding *ngFor="let todo of todoLists">
+        <ion-item>
+          <ion-label>{{todo.title}}</ion-label>
+          <ion-checkbox (click)="addItemToDone(todo)" [(ngModel)]="todo.checked" dark></ion-checkbox>
+        </ion-item>
+      </ion-item-sliding>
+    </div>
+
+    <ion-item-group  *ngIf="doneItems && doneItems.length > 0">
+      <ion-item-divider light>
+        <span class="title">已完成</span>
+      </ion-item-divider>
+      <ion-item *ngFor="let todo of doneItems">
+        <ion-label>{{todo.title}}</ion-label>
+        <ion-checkbox [(ngModel)]="todo.checked" dark checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+
+  <ion-list showWhen="ios">
+    <div *ngIf="todoLists && todoLists.length > 0">
+      <ion-item-sliding *ngFor="let todo of todoLists">
+        <ion-item>
+          {{todo.title}}
+        </ion-item>
+        <ion-item-options>
+          <button ion-button danger (click)="addItemToDone(todo)">
+            <ion-icon name="checkbox"></ion-icon>
+            Done
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </div>
+    <ion-item-group *ngIf="doneItems && doneItems.length > 0">
+      <ion-item-divider light>
+        <span class="title">已完成</span>
+      </ion-item-divider>
+      <ion-item *ngFor="let todo of doneItems">
+        {{todo.title}}
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

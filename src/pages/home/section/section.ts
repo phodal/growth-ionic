@@ -3,6 +3,8 @@ import {Component} from "@angular/core";
 import {SECTIONS} from "../../../data/SECTIONS";
 import {HtmlModal} from "../../../components/HtmlModal/HtmlModal";
 import {BookListModal} from "../../../components/BookListModal/BookListModal";
+import {TodoModal} from "../../../components/TodoModal/TodoModal";
+import {TODO_LISTS} from "../../../data/TODO_LISTS";
 
 @Component({
   selector: 'section-page',
@@ -22,7 +24,9 @@ export class Section {
   }
 
   presentTodoModal(params) {
-
+    let todoLists = TODO_LISTS["zh-cn"][params.domain];
+    let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
+    todoModal.present();
   }
 
   presentHtmlModal(params) {
