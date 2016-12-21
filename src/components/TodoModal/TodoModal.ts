@@ -3,6 +3,7 @@ import {Component} from "@angular/core";
 import { Storage } from '@ionic/storage';
 
 @Component({
+  selector: 'growth-modal',
   templateUrl: "todo-modal.html"
 })
 export class TodoModal {

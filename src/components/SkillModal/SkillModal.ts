@@ -1,6 +1,5 @@
 import {NavParams, ViewController, Platform } from "ionic-angular";
 import {Component} from "@angular/core";
-import {RatingComponent} from "../../components/ratings/index";
 import {SkillMapService} from "../../services/skill.map.services";
 
 @Component({

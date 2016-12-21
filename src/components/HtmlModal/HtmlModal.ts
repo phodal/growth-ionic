@@ -3,6 +3,7 @@ import {Component, ViewChild} from "@angular/core";
 import {Http} from "@angular/http";
 
 @Component({
+  selector: 'growth-modal',
   templateUrl: "html-modal.html"
 })
 

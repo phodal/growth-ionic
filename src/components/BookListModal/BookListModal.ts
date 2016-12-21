@@ -4,6 +4,7 @@ import {BOOKS} from "../../data/BOOKS";
 import {HtmlModal} from "../HtmlModal/HtmlModal";
 
 @Component({
+  selector: 'growth-modal',
   templateUrl: "book-list-modal.html"
 })
 export class BookListModal {
