@@ -2,6 +2,7 @@ import {NavController, NavParams, ModalController} from "ionic-angular";
 import {Component} from "@angular/core";
 import {SECTIONS} from "../../../data/SECTIONS";
 import {HtmlModal} from "../../../components/HtmlModal/HtmlModal";
+import {BookListModal} from "../../../components/BookListModal/BookListModal";
 
 @Component({
   selector: 'section-page',
@@ -51,6 +52,21 @@ export class Section {
   }
 
   presentGrowthModal(params) {
+    let htmlModal, slug, modalParams;
 
+    if (params.type === "book") {
+      modalParams = {domain: params.domain};
+      htmlModal = this.modalCtrl.create(BookListModal, modalParams);
+    } else if (params.type === "tool") {
+      slug = "assets/tool/" + params.domain + ".html";
+      modalParams = {slug: slug, pageTitle: "工具"};
+      htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+    } else if (params.domain) {
+      slug = "assets/growth/" + params.domain + "/" + params.slug + ".html";
+      modalParams = {slug: slug, pageTitle: "Growth"};
+      htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
+    }
+
+    htmlModal.present();
   }
 }

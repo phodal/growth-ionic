@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {Section} from "../pages/home/section/section";
 import {HtmlModal} from "../components/HtmlModal/HtmlModal";
 import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
+import {BookListModal} from "../components/BookListModal/BookListModal";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
     HomePage,
     Section,
     HtmlModal,
+    BookListModal,
     SanitizeHtml,
     TabsPage
   ],
@@ -30,6 +32,7 @@ import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
     ContactPage,
     HomePage,
     Section,
+    BookListModal,
     HtmlModal,
     TabsPage
   ],
