@@ -6,6 +6,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import {Section} from "../pages/home/section/section";
+import {HtmlModal} from "../components/HtmlModal/HtmlModal";
+import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import {Section} from "../pages/home/section/section";
     ContactPage,
     HomePage,
     Section,
+    HtmlModal,
+    SanitizeHtml,
     TabsPage
   ],
   imports: [
@@ -26,6 +30,7 @@ import {Section} from "../pages/home/section/section";
     ContactPage,
     HomePage,
     Section,
+    HtmlModal,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
