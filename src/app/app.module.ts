@@ -28,6 +28,7 @@ import {TWBookPage} from "../pages/discover/thoughtworks-books/thoughtworks-book
 import {TodoListsPage} from "../pages/discover/todo-lists/todo-lists";
 import {ToolboxDetailPage} from "../pages/discover/toolbox-detail/toolbox-detail";
 import {ToolboxListPage} from "../pages/discover/toolbox-list/toolbox-list";
+import {Helper} from "../utils/helper";
 
 @NgModule({
   declarations: [

@@ -3,11 +3,12 @@ import {NavController, LoadingController, NavParams} from "ionic-angular";
 import "rxjs/add/operator/map";
 import {SERVER_BASE_URL} from "../../../utils/constants";
 import {Http} from "@angular/http";
-import {getSpinnerConfig} from "../../../utils/helper";
 import {ChapterDetailPage} from "../chapter-detail/chapter-detail";
+import {Helper} from "../../../utils/helper";
 
 @Component({
-  templateUrl: "chapter-list.html"
+  templateUrl: "chapter-list.html",
+  providers: [Helper]
 })
 
 export class ChapterListPage {
@@ -15,14 +16,16 @@ export class ChapterListPage {
   private title;
   private action;
 
-  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http, private params:NavParams) {
+  constructor(private loadingCtrl:LoadingController, public nav:NavController, public http:Http, private params:NavParams,
+              public helper: Helper
+  ) {
     this.http = http;
     this.title = this.params.get("title");
     this.action = this.params.get("action");
   }
 
   ngOnInit() {
-    let loading = this.loadingCtrl.create(getSpinnerConfig());
+    let loading = this.loadingCtrl.create(this.helper.getSpinnerConfig());
     loading.present();
 
     let url = SERVER_BASE_URL[this.action] + "api/all.json";

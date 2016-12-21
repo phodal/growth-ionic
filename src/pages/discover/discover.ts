@@ -1,7 +1,6 @@
 import {Component} from "@angular/core";
 import {NavController, Platform} from "ionic-angular";
 import {AnalyticsServices} from "../../services/analytics.services";
-import {openLink} from "../../../utils/helper";
 import {SolutionPage} from "./solution/solution";
 import {RecommendBook} from "./recommend-books/recommend-books";
 import {RecommendArticles} from "./recommend-articles/recommend-articles";
@@ -13,14 +12,15 @@ import {RoadMapPage} from "./roadmap-list/roadmap-list";
 import {ProjectListPage} from "./project-list/project-list";
 import {EmailComposer} from "ionic-native";
 import {ChapterListPage} from "./chapter-list/chapter-list";
+import {Helper} from "../../utils/helper";
 
 @Component({
   selector: 'discover-page',
   templateUrl: "discover.html",
-  providers: [AnalyticsServices]
+  providers: [AnalyticsServices, Helper]
 })
 export class DiscoverPage {
-  constructor(public nav: NavController, private platform: Platform, public analytics: AnalyticsServices) {
+  constructor(public nav: NavController, private platform: Platform, public analytics: AnalyticsServices, public helper: Helper) {
     this.nav = nav;
     this.platform = platform;
     this.analytics.trackView("Discover");
@@ -81,7 +81,7 @@ export class DiscoverPage {
   }
 
   openGitHub(links) {
-    openLink(links);
+    this.helper.openLink(links);
   }
 
   sendEmail() {

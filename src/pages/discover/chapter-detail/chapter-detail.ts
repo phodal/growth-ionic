@@ -2,10 +2,11 @@ import {Component} from "@angular/core";
 import {LoadingController, NavParams} from "ionic-angular";
 import "rxjs/add/operator/map";
 import {Http} from "@angular/http";
-import {getSpinnerConfig, convertToMarkdown} from "../../../utils/helper";
+import {Helper} from "../../../utils/helper";
 
 @Component({
-  templateUrl: "chapter-detail.html"
+  templateUrl: "chapter-detail.html",
+  providers: [Helper]
 })
 
 export class ChapterDetailPage {
@@ -13,7 +14,7 @@ export class ChapterDetailPage {
   private url:string;
   private title:string;
 
-  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams) {
+  constructor(private loadingCtrl:LoadingController, public http:Http, public params:NavParams, public helper: Helper) {
     this.http = http;
     this.title = params.get("title");
     this.url = params.get("url");
@@ -21,14 +22,14 @@ export class ChapterDetailPage {
 
   ngOnInit() {
     let self = this;
-    let loading = this.loadingCtrl.create(getSpinnerConfig());
+    let loading = this.loadingCtrl.create(this.helper.getSpinnerConfig());
     loading.present();
 
     this.http.get(self.url)
       .map(res => res.text())
       .subscribe(
         data => {
-          self.content = convertToMarkdown(data);
+          self.content = this.helper.convertToMarkdown(data);
           loading.dismiss();
         }
       );
