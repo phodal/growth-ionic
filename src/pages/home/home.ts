@@ -7,6 +7,7 @@ import {NavController} from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  private shownGroup = false;
 
   constructor(public navCtrl: NavController) {
 
@@ -17,10 +18,14 @@ export class HomePage {
   }
 
   toggleGroup(group) {
-
+    if (this.isGroupShown(group)) {
+      this.shownGroup = null;
+    } else {
+      this.shownGroup = group;
+    }
   }
 
   isGroupShown(group) {
-
+    return this.shownGroup === group;
   };
 }

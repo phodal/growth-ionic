@@ -76,3 +76,24 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$colors: (
+  primary:    #03a9f4,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B
+);
+
+// Timeline
+$timeline-color: #179ed6;
+$growth-color: #4D4F50;
+$growth-default-background: #fff;
+$growth-new-color: #179ed6;
+$growth-blue: #2d89ef;
+$growth-green: #1e7145;
+$growth-yellow: #cb5b27;
+$growth-background: #f0f0f0;
+
+$rating-color: #ffc107;
