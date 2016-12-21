@@ -3,6 +3,11 @@ page-home {
     width: 100%;
     height: auto;
   }
+
+  .day .item.activated {
+    background: none;
+  }
+
   ion-row {
     margin-bottom: 10px;
     background: none;
@@ -28,104 +33,19 @@ page-home {
       }
     }
 
-    .growth-icon {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 21.008403361344538% 99.93658536585366% no-repeat;
-      background-size: auto 520%;
-      width: 24px;
-      height: 24px;
-      color: #222;
+    .label-ios {
+      margin: 0;
     }
 
-    .day .item {
-      height: 100px;
-      border: none;
-    }
-    .day .item.activated {
-      background: none;
-    }
-
-    .home-1 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 0 no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-2 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 24.390243902439025% no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-3 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 48.78048780487805% no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-4 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 0 75.54634146341463% no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-5 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 36.84453781512605% 0 no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-6 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 42.016806722689076% 75.54634146341463% no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-7 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 63.02521008403362% 75.54634146341463% no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    .home-8 {
-      background: url("../assets/svg-font/css/svg/sprite.css.svg") 99.86974789915966% 0 no-repeat;
-      width: 98px;
-      height: 98px;
-      bottom: -2px;
-      position: relative;
-      float: right;
-    }
-
-    ion-list {
+    ion-list.list-ios {
       padding: 0 10px;
-      margin: -1px 0 0 0;
-      .item.item-accordion {
-        padding: 0 0;
-        transition: 0.09s all linear;
+      margin: 0 1px 0 2px;
+      &:before {
+        transition: transform 0.3s ease-in-out;
       }
     }
 
-    ion-card {
+    ion-card.card-ios {
       margin-bottom: 0;
     }
 
@@ -141,6 +61,7 @@ page-home {
         top: 1.2em;
         display: block;
       }
+
       p {
         clear: left;
         display: block;
@@ -149,4 +70,85 @@ page-home {
       }
     }
   }
+}
+
+
+.growth-icon {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 21.008403361344538% 99.93658536585366% no-repeat;
+  background-size: auto 520%;
+  width: 24px;
+  height: 24px;
+  color: #222;
+}
+
+.home-1 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 0 no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-2 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 24.390243902439025% no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-3 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 78.86134453781513% 48.78048780487805% no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-4 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 0 75.54634146341463% no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-5 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 36.84453781512605% 0 no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-6 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 42.016806722689076% 75.54634146341463% no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-7 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 63.02521008403362% 75.54634146341463% no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
+}
+
+.home-8 {
+  background: url("../assets/svg-font/css/svg/sprite.css.svg") 99.86974789915966% 0 no-repeat;
+  width: 98px;
+  height: 98px;
+  bottom: -2px;
+  position: relative;
+  float: right;
 }

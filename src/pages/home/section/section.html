@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{sectionInfo.title}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button *ngIf="sectionInfo.skills[0]" (click)="presentSkillModal(sectionInfo.skills[0])">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </button>
+      <button ion-button (click)="presentHtmlModal(sectionInfo.intros[0].info)">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="basicView">
+      <ion-segment-button value="articleView">
+        文章
+      </ion-segment-button>
+      <ion-segment-button value="growthView">
+        Insight
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="day">
+  <div [ngSwitch]="basicView" class="day-segment">
+    <div *ngSwitchCase="'articleView'">
+      <div class="intro">
+        <p>了解优秀软件工程实践所需的信息</p>
+      </div>
+      <ion-item-group *ngFor="let articleSection of sectionInfo.articlesView; let i = index;">
+        <button ion-item *ngFor="let article of articleSection.articles"
+                (click)="presentHtmlModal({slug: article.slug, title: article.title})">
+          {{article.title}}
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+      </ion-item-group>
+    </div>
+
+    <div *ngSwitchCase="'growthView'">
+      <div class="intro">
+        <p>扩展自己的知识视野</p>
+      </div>
+
+      <ion-item-group *ngFor="let growthSection of sectionInfo.growthView">
+        <button ion-item *ngFor="let growth of growthSection.sections" (click)="presentGrowthModal(growth.info)">
+          <span class="title">{{growth.title}}</span>
+          <ion-icon name="arrow-right" item-right></ion-icon>
+        </button>
+      </ion-item-group>
+
+      <ion-item-divider light *ngIf="sectionInfo.todoView && sectionInfo.todoView.length > 0">TODO</ion-item-divider>
+
+      <button ion-item *ngFor="let todoSection of sectionInfo.todoView" (click)="presentTodoModal(todoSection.info)">
+        <span class="title">{{todoSection.title}}</span>
+        <ion-icon name="arrow-right" item-right></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-content>

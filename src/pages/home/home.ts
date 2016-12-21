@@ -1,11 +1,13 @@
+import {NavController} from 'ionic-angular';
 import {Component} from '@angular/core';
 
-import {NavController} from 'ionic-angular';
+import {Section} from "./section/section";
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   private shownGroup = false;
 
@@ -14,7 +16,7 @@ export class HomePage {
   }
 
   openSectionDetailsPage(section) {
-
+    this.navCtrl.push(Section, {section: section});
   }
 
   toggleGroup(group) {
