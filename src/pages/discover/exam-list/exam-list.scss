@@ -1,0 +1,12 @@
+.exam {
+  ion-list {
+    ion-item {
+      border: none;
+      padding-left: 0;
+
+      .item-inner {
+        padding-left: 16px;
+      }
+    }
+  }
+}

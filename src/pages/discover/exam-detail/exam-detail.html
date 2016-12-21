@@ -1,0 +1,27 @@
+<ion-content #content class="content" text-center
+             [class.blue]="activeIndex === 0"
+             [class.green]="activeIndex === 1"
+             [class.purple]="activeIndex === 2"
+             [class.turqoise]="activeIndex === 3"
+             [class.river]="activeIndex === 4"
+             [class.asphalt]="activeIndex === 5"
+             [class.concrete]="activeIndex === 6"
+             [class.emerald]="activeIndex === 7"
+             [class.carrot]="activeIndex === 8"
+             [class.red]="activeIndex === 9"
+             (swipeleft)="swipeLeftToRight()"
+             (swiperight)="swipeRightToLeft()">
+
+  <ion-buttons end>
+    <button light outline (click)="endExam()">
+      结束
+    </button>
+  </ion-buttons>
+
+  <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
+  <paging-component [pages]="pages"
+                    [selectedIndex]="nextIndex"
+                    (animationReady)="pageChangeAnimationReady($event)">
+  </paging-component>
+
+</ion-content>

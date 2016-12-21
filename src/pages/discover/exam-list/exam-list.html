@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      技能测验
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="exam list-page">
+  <ion-list>
+    <button ion-item (click)="openExamDetailPage('html')">
+      HTML
+    </button>
+    <button ion-item (click)="openExamDetailPage('css')">
+      CSS
+    </button>
+    <button ion-item (click)="openExamDetailPage('javascript')">
+      JavaScript
+    </button>
+    <button ion-item (click)="openExamDetailPage('fe')">
+      前端
+    </button>
+    <button ion-item (click)="openExamDetailPage('nodejs')">
+      Node.js
+    </button>
+  </ion-list>
+</ion-content>

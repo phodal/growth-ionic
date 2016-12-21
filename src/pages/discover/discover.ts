@@ -13,6 +13,7 @@ import {ProjectListPage} from "./project-list/project-list";
 import {EmailComposer} from "ionic-native";
 import {ChapterListPage} from "./chapter-list/chapter-list";
 import {Helper} from "../../utils/helper";
+import {ExamListPage} from "./exam-list/exam-list";
 
 @Component({
   selector: 'discover-page',
@@ -27,7 +28,8 @@ export class DiscoverPage {
   }
 
   openExamPage() {
-
+    this.analytics.trackEvent("Discover Page", "exam");
+    this.nav.push(ExamListPage);
   }
 
   openSolutionPage() {

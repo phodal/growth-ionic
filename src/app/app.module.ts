@@ -28,7 +28,8 @@ import {TWBookPage} from "../pages/discover/thoughtworks-books/thoughtworks-book
 import {TodoListsPage} from "../pages/discover/todo-lists/todo-lists";
 import {ToolboxDetailPage} from "../pages/discover/toolbox-detail/toolbox-detail";
 import {ToolboxListPage} from "../pages/discover/toolbox-list/toolbox-list";
-import {Helper} from "../utils/helper";
+import {ExamListPage} from "../pages/discover/exam-list/exam-list";
+import {ExamDetailPage} from "../pages/discover/exam-detail/exam-detail";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,8 @@ import {Helper} from "../utils/helper";
     TWBookPage,
     TodoListsPage,
     ToolboxDetailPage,
+    ExamListPage,
+    ExamDetailPage,
     ToolboxListPage,
     TabsPage
   ],
@@ -89,6 +92,8 @@ import {Helper} from "../utils/helper";
     TodoListsPage,
     ToolboxDetailPage,
     ToolboxListPage,
+    ExamListPage,
+    ExamDetailPage,
     TabsPage
   ],
   providers: [
