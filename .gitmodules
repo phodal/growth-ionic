@@ -1,3 +1,3 @@
-[submodule "content"]
+[submodule "src/assets/content"]
 	path = src/assets/content
 	url = https://github.com/phodal/growth-content.git

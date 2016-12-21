@@ -20,7 +20,6 @@ export class HtmlModal {
               public viewCtrl:ViewController,
               http:Http) {
 
-    console.log(params);
     this.slug = params.get("slug");
     this.pageTitle = params.get("pageTitle");
     if (this.pageTitle === "文章") {
@@ -30,12 +29,12 @@ export class HtmlModal {
     http.get(this.slug).subscribe(res => this.html = res.text());
   }
 
-  private handleForArticleModal(params:NavParams) {
+  handleForArticleModal(params:NavParams) {
     this.isArticle = true;
     this.articleTitle = params.get("articleTitle");
   }
 
-  private dismiss() {
+  dismiss() {
     this.viewCtrl.dismiss();
   }
 }

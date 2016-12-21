@@ -36,10 +36,10 @@ export class Section {
     let slug, modalParams;
 
     if (params.type === "desc") {
-      slug = "assets/desc/" + params.slug + ".html";
+      slug = "assets/content/desc/" + params.slug + ".html";
       modalParams = {slug: slug, pageTitle: "简介"};
     } else {
-      slug = "assets/article/" + params.slug + ".html";
+      slug = "assets/content/article/" + params.slug + ".html";
       modalParams = {slug: slug, pageTitle: "文章", articleTitle: params.title};
     }
 
