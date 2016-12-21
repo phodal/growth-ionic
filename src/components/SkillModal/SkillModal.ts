@@ -9,7 +9,6 @@ import {SkillMapService} from "../../services/skill.map.services";
 })
 export class SkillModal {
   private skills;
-  private max = 5;
 
   constructor(public platform:Platform,
               public params:NavParams,
