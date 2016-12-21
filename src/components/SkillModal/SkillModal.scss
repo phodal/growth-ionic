@@ -1,0 +1,15 @@
+skill-modal {
+  ul {
+    padding: 0px;
+
+    &.rating li {
+      padding: 5px 10px;
+      background: none;
+      color: #ffb400;
+
+      ion-icon {
+        font-size: 30px;
+      }
+    }
+  }
+}

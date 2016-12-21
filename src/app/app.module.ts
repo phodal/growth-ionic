@@ -11,6 +11,8 @@ import {HtmlModal} from "../components/HtmlModal/HtmlModal";
 import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
 import {BookListModal} from "../components/BookListModal/BookListModal";
 import {TodoModal} from "../components/TodoModal/TodoModal";
+import {SkillModal} from "../components/SkillModal/SkillModal";
+import {Ionic2RatingModule} from "ionic2-rating";
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import {TodoModal} from "../components/TodoModal/TodoModal";
     Section,
     HtmlModal,
     TodoModal,
+    SkillModal,
     BookListModal,
     SanitizeHtml,
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,6 +42,7 @@ import {TodoModal} from "../components/TodoModal/TodoModal";
     BookListModal,
     HtmlModal,
     TodoModal,
+    SkillModal,
     TabsPage
   ],
   providers: [

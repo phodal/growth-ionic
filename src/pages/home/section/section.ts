@@ -5,6 +5,7 @@ import {HtmlModal} from "../../../components/HtmlModal/HtmlModal";
 import {BookListModal} from "../../../components/BookListModal/BookListModal";
 import {TodoModal} from "../../../components/TodoModal/TodoModal";
 import {TODO_LISTS} from "../../../data/TODO_LISTS";
+import {SkillModal} from "../../../components/SkillModal/SkillModal";
 
 @Component({
   selector: 'section-page',
@@ -52,7 +53,8 @@ export class Section {
   }
 
   presentSkillModal(domain) {
-
+    let skillModal = this.modalCtrl.create(SkillModal, {domain: domain});
+    skillModal.present();
   }
 
   presentGrowthModal(params) {
