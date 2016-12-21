@@ -1,14 +1,31 @@
 skill-modal {
-  ul {
-    padding: 0px;
+  rating {
+    display: inline-block;
+  }
 
-    &.rating li {
-      padding: 5px 10px;
-      background: none;
-      color: #ffb400;
+  ion-label {
+    line-height: 35px;
+  }
 
-      ion-icon {
-        font-size: 30px;
+  rating {
+    text-align: right;
+    float: right;
+    right: 0;
+    position: relative;
+
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      &.rating li {
+        padding: 0 !important;
+        background: none;
+        color: #ffb400;
+
+        ion-icon {
+          font-size: 30px;
+        }
       }
     }
   }

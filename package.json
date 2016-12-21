@@ -26,6 +26,7 @@
     "ionic-native": "2.2.11",
     "ionic2-rating": "0.0.10",
     "ionicons": "3.0.0",
+    "lodash": "^4.17.2",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.26"
   },

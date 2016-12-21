@@ -14,11 +14,9 @@
 
 <ion-content class="outer-content">
   <ion-list>
-    <ion-item-sliding *ngFor="let skill of skills">
-      <ion-item>
-        <span class="skill-title">{{skill.text}}</span>
-        <rating [(ngModel)]="skill.rate" [max]="max" (click)="setStar(skill)"></rating>
-      </ion-item>
-    </ion-item-sliding>
+    <ion-item *ngFor="let skill of skills">
+      <span class="skill-title">{{skill.text}}</span>
+      <rating [(ngModel)]="skill.rate" max="5" (click)="setStar(skill)"></rating>
+    </ion-item>
   </ion-list>
 </ion-content>
