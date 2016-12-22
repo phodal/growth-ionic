@@ -38,9 +38,9 @@ export class UserCenterPage {
   init() {
     if (window['cordova']) {
       AppRate.preferences.useLanguage = "zh-Hans";
-      AppRate.preferences.storeAppURL.ios = "1078807522";
-      AppRate.preferences.storeAppURL.android = "market://details?id=ren.growth";
-      AppRate.preferences.storeAppURL.windows8 = "ms-windows-store:Review?name=51077Phodal.GrowthRen_d4jwzt1r37cxj";
+      AppRate.preferences.storeAppUrl.ios = "1078807522";
+      AppRate.preferences.storeAppUrl.android = "market://details?id=ren.growth";
+      AppRate.preferences.storeAppUrl.windows8 = "ms-windows-store:Review?name=51077Phodal.GrowthRen_d4jwzt1r37cxj";
       AppRate.preferences.customLocale = {
         title: "动动手指，为我们打分",
         message: "无论是来自亲的赞美诗，还是让亲唾沫横飞的槽点，我们只愿——让评价来得更猛烈些吧！",
