@@ -1,16 +1,17 @@
 import {Animation, NavController} from "ionic-angular";
 
 import {PageOne} from "./content-one";
-import {Component, ViewChild} from "@angular/core";
+import {Component, ViewChild, Input,} from "@angular/core";
 import {TRANSITION_OUT_KEY, TRANSITION_IN_KEY} from "../../effect/content-transition";
 
 @Component({
   selector: `body-content`,
-  template: `
-    <ion-nav [root]="rootPage" #nav class="content-nav"></ion-nav>
-  `
+  template: `<ion-nav [root]="rootPage" #nav class="content-nav"></ion-nav>`
 })
+
 export class BodyContent {
+  @Input() selectedIndex:number;
+
   @ViewChild("nav") nav:NavController;
   private questions;
 

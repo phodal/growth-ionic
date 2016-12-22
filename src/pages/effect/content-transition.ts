@@ -1,12 +1,13 @@
-import {Animation, Transition, ViewController} from "ionic-angular";
 import {ANIMATION_DURATION} from "../../utils/constants";
 import {TransitionOptions} from "ionic-native";
+import {Transition, ViewController, Animation} from "ionic-angular";
 
 export const TRANSITION_IN_KEY:string = "bodyContentEnter";
 export const TRANSITION_OUT_KEY:string = "bodyContentExit";
 
 export class BodyContentInTransition extends Transition {
-  constructor(enteringView:ViewController, leavingView:ViewController, opts:TransitionOptions) {
+  constructor(parameters: {enteringView: ViewController, leavingView: ViewController, opts: TransitionOptions}) {
+    let {enteringView, leavingView, opts} = parameters;
     super(enteringView, leavingView, opts);
 
     // DOM READS

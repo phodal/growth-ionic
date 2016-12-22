@@ -1,10 +1,10 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
-import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import {NgModule, ErrorHandler} from "@angular/core";
+import {IonicApp, IonicModule, IonicErrorHandler} from "ionic-angular";
+import {Storage} from "@ionic/storage";
+import {MyApp} from "./app.component";
+import {AboutPage} from "../pages/about/about";
+import {HomePage} from "../pages/home/home";
+import {TabsPage} from "../pages/tabs/tabs";
 import {Section} from "../pages/home/section/section";
 import {HtmlModal} from "../components/HtmlModal/HtmlModal";
 import {SanitizeHtml} from "../pipes/SanitizeHtml.pipe";
@@ -30,6 +30,10 @@ import {ToolboxDetailPage} from "../pages/discover/toolbox-detail/toolbox-detail
 import {ToolboxListPage} from "../pages/discover/toolbox-list/toolbox-list";
 import {ExamListPage} from "../pages/discover/exam-list/exam-list";
 import {ExamDetailPage} from "../pages/discover/exam-detail/exam-detail";
+import {PagingComponent} from "../pages/effect/paging-conponents";
+import {PopoverPage} from "../pages/discover/solution/popover-page";
+import {BodyContent} from "../pages/discover/exam-detail/body-content";
+import {PageOne} from "../pages/discover/exam-detail/content-one";
 
 @NgModule({
   declarations: [
@@ -60,6 +64,10 @@ import {ExamDetailPage} from "../pages/discover/exam-detail/exam-detail";
     ExamListPage,
     ExamDetailPage,
     ToolboxListPage,
+    PagingComponent,
+    PopoverPage,
+    BodyContent,
+    PageOne,
     TabsPage
   ],
   imports: [
@@ -94,6 +102,9 @@ import {ExamDetailPage} from "../pages/discover/exam-detail/exam-detail";
     ToolboxListPage,
     ExamListPage,
     ExamDetailPage,
+    PopoverPage,
+    BodyContent,
+    PageOne,
     TabsPage
   ],
   providers: [

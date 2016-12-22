@@ -8,6 +8,7 @@ import {NavParams} from "ionic-angular";
   </div>
   `
 })
+
 export class PageOne {
   private question;
 
