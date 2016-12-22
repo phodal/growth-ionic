@@ -6,6 +6,7 @@ import {BookListModal} from "../../../components/BookListModal/BookListModal";
 import {TodoModal} from "../../../components/TodoModal/TodoModal";
 import {TODO_LISTS} from "../../../data/TODO_LISTS";
 import {SkillModal} from "../../../components/SkillModal/SkillModal";
+import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
   selector: 'section-page',
@@ -17,20 +18,26 @@ export class Section {
   private sectionInfo;
   private section;
 
-  constructor(public navCtrl: NavController, public params:NavParams, private modalCtrl:ModalController) {
+  constructor(public navCtrl: NavController, public params:NavParams, private modalCtrl:ModalController,
+              public analytics:AnalyticsServices) {
     this.params = params;
 
     this.section = params.get("section");
     this.sectionInfo = SECTIONS[this.section];
+    this.analytics.trackView("Section:" + this.section);
   }
 
   presentTodoModal(params) {
+    this.analytics.trackView("Todo Modal" + params.domain);
+
     let todoLists = TODO_LISTS["zh-cn"][params.domain];
     let todoModal = this.modalCtrl.create(TodoModal, {todoLists: todoLists, domain: params.domain});
     todoModal.present();
   }
 
   presentHtmlModal(params) {
+    this.analytics.trackView("Html Modal " + params.slug);
+
     let htmlModal, modalParams;
     modalParams = this.generateHtmlModalParams(params);
 
@@ -53,11 +60,15 @@ export class Section {
   }
 
   presentSkillModal(domain) {
+    this.analytics.trackView("Skill Modal" + domain);
+
     let skillModal = this.modalCtrl.create(SkillModal, {domain: domain});
     skillModal.present();
   }
 
   presentGrowthModal(params) {
+    this.analytics.trackView("Growth Modal" + params.domain);
+
     let htmlModal, slug, modalParams;
 
     if (params.type === "book") {
