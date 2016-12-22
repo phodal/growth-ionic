@@ -39,6 +39,7 @@ import {AboutUsPage} from "../pages/user-center/about-us/about-us";
 import {BookmarksPage} from "../pages/user-center/bookmarks/bookmarks";
 import {SkillListPage} from "../pages/user-center/skill-list/skill-list";
 import {Profile} from "../pages/user-center/about-us/profile/profile";
+import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-transition";
 
 @NgModule({
   declarations: [
@@ -81,7 +82,14 @@ import {Profile} from "../pages/user-center/about-us/profile/profile";
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      bodyContentEnter: TRANSITION_IN_KEY,
+      bodyContentLeave: TRANSITION_OUT_KEY,
+      tabbarPlacement: "bottom",
+      backButtonText: "后退",
+      tabsHideOnSubPages: true,
+      tabsHighlight: true
+    }),
     Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
