@@ -6,27 +6,4 @@ skill-modal {
   ion-label {
     line-height: 35px;
   }
-
-  rating {
-    text-align: right;
-    float: right;
-    right: 0;
-    position: relative;
-
-
-    ul {
-      padding: 0;
-      margin: 0;
-
-      &.rating li {
-        padding: 0 !important;
-        background: none;
-        color: #ffb400;
-
-        ion-icon {
-          font-size: 30px;
-        }
-      }
-    }
-  }
 }
