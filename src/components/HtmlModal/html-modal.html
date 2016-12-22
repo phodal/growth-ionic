@@ -9,6 +9,12 @@
         <ion-icon name="md-close" showWhen="android"></ion-icon>
       </button>
     </ion-buttons>
+    <ion-buttons end *ngIf="isArticle">
+      <button ion-button (click)="toggleBookmark()">
+        <ion-icon *ngIf="isAlreadyInBookmarksList" name="ios-bookmark"></ion-icon>
+        <ion-icon [hidden]="isAlreadyInBookmarksList" name="ios-bookmark-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

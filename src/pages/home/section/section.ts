@@ -10,7 +10,8 @@ import {AnalyticsServices} from "../../../services/analytics.services";
 
 @Component({
   selector: 'section-page',
-  templateUrl: 'section.html'
+  templateUrl: 'section.html',
+  providers: [AnalyticsServices]
 })
 
 export class Section {
