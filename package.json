@@ -9,7 +9,8 @@
     "svg": "gulp svg-font",
     "ionic:build": "ionic-app-scripts build",
     "serve:before": "svg",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "electron": "/Applications/Electron.app/Contents/MacOS/Electron ."
   },
   "dependencies": {
     "@angular/common": "2.2.1",
