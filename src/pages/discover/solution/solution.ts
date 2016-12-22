@@ -1,32 +1,9 @@
 import {Component} from "@angular/core";
 import * as _ from "lodash";
-import {ModalController, NavParams, NavController, PopoverController} from "ionic-angular";
+import {ModalController, PopoverController} from "ionic-angular";
 import {SOLUTIONS} from "../../../data/SOLUTIONS";
 import {HtmlModal} from "../../../components/HtmlModal/HtmlModal";
-
-@Component({
-  template: `
-    <ion-content>
-      <ion-list>
-        <ion-list-header>排序</ion-list-header>
-        <button ion-item>按类别</button>
-        <button ion-item>按时间</button>
-      </ion-list>
-    </ion-content>
-  `,
-})
-class PopoverPage {
-  constructor(private navParams:NavParams) {
-
-  }
-
-  ngOnInit() {
-    // if (this.navParams.data) {
-    //
-    // }
-  }
-
-}
+import {PopoverPage} from "./popover-page";
 
 @Component({
   templateUrl: "solution.html",
@@ -35,14 +12,14 @@ export class SolutionPage {
   private solutions;
   private isWantSearch = false;
 
-  constructor(private modalCtrl:ModalController, private nav:NavController, private popoverCtrl:PopoverController) {
+  constructor(private modalCtrl:ModalController, private popoverCtrl:PopoverController) {
     this.solutions = _.orderBy(SOLUTIONS, ["slug"], ["asc"]);
     this.modalCtrl = modalCtrl;
   }
 
   presentSolutionDetail(slug) {
     let modalParams, htmlModal;
-    modalParams = {slug: "assets/solution/" + slug + ".html", pageTitle: "解决方案"};
+    modalParams = {slug: "assets/content/solution/" + slug + ".html", pageTitle: "解决方案"};
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
     htmlModal.present();
   }
