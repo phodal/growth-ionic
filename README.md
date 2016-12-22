@@ -88,9 +88,9 @@ Others:
 HTTPS Support
 ---
 
-https://github.com/xdtianyu/scripts/tree/master/lets-encrypt
+1. Growth Forum：HTTPS 证书源自  Let's Encrypt，自动化脚本 https://github.com/xdtianyu/scripts/tree/master/lets-encrypt
 
-Coding.me
+2. 相关在线内容托管在 [Coding.me](https://coding.net/u/phodal/p/growth) 
 
 ### Contributors
 
