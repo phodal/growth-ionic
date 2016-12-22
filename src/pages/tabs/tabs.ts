@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {HomePage} from "../home/home";
 import {DiscoverPage} from "../discover/discover";
 import {UserCenterPage} from "../user-center/user-center";
+import {CommunityPage} from "../community/community";
 
 @Component({
   templateUrl: 'tabs.html'
@@ -11,7 +12,7 @@ export class TabsPage {
   // should be each tab's root Page
   mainView:any = HomePage;
   discoverView:any = DiscoverPage;
-  tab3Root: any = DiscoverPage;
+  communityView:any = CommunityPage;
   userCenterView: any = UserCenterPage;
 
   constructor() {

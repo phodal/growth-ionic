@@ -1,0 +1,67 @@
+.community {
+  .topics {
+    .item-content {
+      padding: 14px 16px 18px 72px
+    }
+    .item-content > img:not(:first-child) {
+      -webkit-transform: translate3d(-2000px, -2000px, 0);
+      position: absolute
+    }
+    ion-label {
+      margin: 10px 8px 11px 0;
+    }
+    .activated .tab:not(.hl) {
+      background-color: $growth-new-color;
+      color: #fff
+    }
+    .topic-detail h2 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .author {
+      padding: 0 6px;
+      color: #7088a9;
+      font-weight: bold;
+    }
+    .ago, .topics .summary {
+      font-size: 12px;
+    }
+    .comment-count {
+      float: right;
+    }
+    .summary {
+      padding: 6px 0 2px;
+
+      ion-icon {
+        font-size: 18px;
+        padding: 0px 8px;
+        color: #ccc;
+      }
+    }
+    .tab {
+      background-color: #E5E5E5;
+      color: #999;
+      border-radius: 2px;
+      padding: 2px 4px
+    }
+    .hl {
+      background-color: $growth-new-color;
+      color: #fff
+    }
+  }
+
+  .loading {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .loading-error {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1em;
+  }
+
+  ion-infinite-scroll {
+    padding: 5px;
+  }
+}

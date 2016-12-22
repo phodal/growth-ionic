@@ -1,6 +1,8 @@
 import {NgModule, ErrorHandler} from "@angular/core";
 import {IonicApp, IonicModule, IonicErrorHandler} from "ionic-angular";
 import {Storage} from "@ionic/storage";
+import {MomentModule} from 'angular2-moment';
+
 import {MyApp} from "./app.component";
 import {AboutPage} from "../pages/about/about";
 import {HomePage} from "../pages/home/home";
@@ -40,6 +42,11 @@ import {BookmarksPage} from "../pages/user-center/bookmarks/bookmarks";
 import {SkillListPage} from "../pages/user-center/skill-list/skill-list";
 import {Profile} from "../pages/user-center/about-us/profile/profile";
 import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-transition";
+import {UserData} from "../services/user-data";
+import {CommunityDetailPage} from "../pages/community/detail/community-detail";
+import {CommunityPage} from "../pages/community/community";
+import {UserProfilePage} from "../pages/community/profile/user-profile";
+import {CreateTopicPage} from "../pages/community/create/create-topic";
 
 @NgModule({
   declarations: [
@@ -79,6 +86,10 @@ import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-tra
     BookmarksPage,
     SkillListPage,
     Profile,
+    CommunityPage,
+    UserProfilePage,
+    CreateTopicPage,
+    CommunityDetailPage,
     TabsPage
   ],
   imports: [
@@ -90,6 +101,7 @@ import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-tra
       tabsHideOnSubPages: true,
       tabsHighlight: true
     }),
+    MomentModule,
     Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
@@ -128,9 +140,14 @@ import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-tra
     BookmarksPage,
     SkillListPage,
     Profile,
+    CommunityPage,
+    UserProfilePage,
+    CreateTopicPage,
+    CommunityDetailPage,
     TabsPage
   ],
   providers: [
+    UserData,
     Storage,
     {
       provide: ErrorHandler,

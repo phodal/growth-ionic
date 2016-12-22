@@ -1,0 +1,16 @@
+.login {
+  background-color: #fff;
+  .error {
+    p {
+      text-align: center;
+    }
+  }
+  .logout {
+    text-align: center;
+    padding: 12px;
+
+    button {
+      margin: 0 auto;
+    }
+  }
+}

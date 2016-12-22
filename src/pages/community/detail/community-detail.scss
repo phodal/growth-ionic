@@ -1,0 +1,107 @@
+.community-detail {
+  background-color: #f0f0f0;
+
+  .topic {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+
+    h4.title {
+      text-align: center;
+    }
+
+    .author {
+      margin: 0 auto;
+      display: inline-block;
+      padding: 5px 20px 15px 0px;
+      text-align: left;
+      color: $growth-blue;
+    }
+  }
+  .commentList {
+    padding-bottom: 6px;
+    padding-top: 12px;
+
+    .ago, .topics .summary {
+      font-size: 12px;
+    }
+    .ago {
+      float: right;
+    }
+
+    .item {
+      padding-left: 0;
+    }
+
+    ion-label {
+      white-space: normal;
+      margin: 5px 8px 3px 0;
+      padding-left: 16px;
+
+      p {
+        padding-top: 2px;
+        display: block;
+      }
+    }
+
+    span.username {
+      font-size: 0.9em;
+    }
+
+    .PostMention,
+    .UserMention {
+      background: #e8ecf3;
+      color: #7088a9;
+      border-radius: 4px;
+      padding: 2px 5px;
+      border: 0 !important
+    }
+
+    blockquote .PostMention, blockquote .UserMention {
+      background: #fff
+    }
+
+    .PostMention:hover, .UserMention:hover, .PostMention:active, .UserMention:active {
+      color: #426799
+    }
+
+    .PostMention {
+      margin: 0 3px
+    }
+
+    .PostMention:first-child {
+      margin-left: 0
+    }
+
+    .PostMention:before {
+      color: #03a9f4;
+      display: inline-block;
+      font: 1em Ionicons;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f4c7";
+      margin-right: 5px;
+    }
+  }
+}
+
+
+ion-footer {
+  ion-toolbar {
+    tabbar, .toolbar-background {
+      background-color: #f0f0f0;
+    }
+    input {
+      height: 2em;
+      margin: 5px;
+      width: calc(100% - 6em);
+    }
+    button.button {
+      float: right;
+      height: 2em;
+    }
+  }
+}

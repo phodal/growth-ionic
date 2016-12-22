@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button [hidden]="!isLogin" (click)="showCommentBox()">
+        <ion-icon name="ios-chatboxes-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="community-detail has-header">
+  <div class="loading" [hidden]="!loading">
+    <ion-spinner [name]="circles"></ion-spinner>
+  </div>
+
+  <div class="topic row" *ngIf="topic" padding>
+    <div class="col col80">
+      <h4 class="title">{{topic.attributes.title}}</h4>
+      <span class="author">{{topicUser.attributes.username}}</span>
+      <span class="start-time"><time>{{topic.attributes.startTime | amTimeAgo}}</time></span>
+      <div class="markdown" [innerHTML]="post.attributes.contentHtml | sanitizeHtml"></div>
+    </div>
+  </div>
+  <ion-list class="commentList">
+    <div *ngFor="let comment of discussions">
+      <ion-item *ngIf="comment.type==='posts' && comment.attributes.contentHtml && comment.attributes.number!== 1">
+        <span class="username">{{getUsername(comment.relationships.user)}}</span>
+        <span class="item-note ago"><time>{{comment.attributes.time | amTimeAgo}}</time></span>
+        <p [innerHTML]="comment.attributes.contentHtml | sanitizeHtml"></p>
+        <div [hidden]="!isLogin">
+          <button  ion-button class="button button-clear" (click)="replyTo(getUsername(comment.relationships.user), comment.id)">
+            回复
+          </button>
+        </div>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <ion-infinite-scroll *ngIf="hasMoreComments" (ionInfinite)="loadMoreComments($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多评论中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+
+<ion-footer [hidden]="!isLogin || !isShowCommentBox">
+  <ion-toolbar>
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="回复" [(ngModel)]="replyContent">
+    </label>
+    <button ion-button (click)="saveReply()">
+      回复
+    </button>
+  </ion-toolbar>
+</ion-footer>

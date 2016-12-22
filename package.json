@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/platform-server": "2.2.1",
     "@ionic/storage": "1.1.6",
+    "angular2-moment": "^1.0.0",
     "ionic-angular": "2.0.0-rc.4",
     "ionic-native": "^2.2.11",
     "ionic2-rating": "0.0.10",

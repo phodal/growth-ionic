@@ -12,7 +12,7 @@ export const ANIMATION_DURATION = 500;
 
 export const SERVER_BASE_URL = {
   toolbox: "https://phodal.coding.me/growth/toolbox/",
-  forum: "http://forum.growth.ren/api/discussions",
+  forum: "https://forum.growth.ren/api/discussions",
   project: "https://phodal.coding.me/growth/project/",
   articles: "https://phodal.coding.me/growth/articles/",
   growthAction: "https://phodal.coding.me/growth/growth-in-action/",

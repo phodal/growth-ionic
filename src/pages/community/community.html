@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      社区交流
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openLoginPage()">
+        <ion-icon name="ios-person-outline"></ion-icon>
+      </button>
+      <button ion-button [hidden]="!hasLogin" (click)="openCreatePage()">
+        <ion-icon name="ios-create-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="community">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="loading" *ngIf="loading && !isRefresh">
+    <ion-spinner [name]="circles"></ion-spinner>
+  </div>
+  <ion-list class="topics" *ngIf="!!topics">
+    <button ion-item class="item-avatar" *ngFor="let topic of topics" (click)="openDetailPage(topic.id)">
+      <div class="topic-detail">
+        <h2>{{topic.attributes.title}}</h2>
+        <p class="summary">
+          <span *ngIf="topic.attributes.isSticky" class="tab hl">置顶</span>
+          <span class="author">{{getAuthorName(included, topic.relationships.startUser.data)}}</span>
+          <span class="item-note ago">回复于<time>{{topic.attributes.lastTime | amTimeAgo}}</time></span>
+          <span class="comment-count"><ion-icon name="ios-chatboxes-outline"></ion-icon>{{topic.attributes.commentsCount - 1}}</span>
+        </p>
+      </div>
+    </button>
+
+    <ion-infinite-scroll *ngIf="!!nextPageUrl" (ionInfinite)="doInfinite($event, nextPageUrl)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多帖子中...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-list>
+  <div class="loading-error" *ngIf="!topics && loadingError">
+    网络异常，请下拉刷新
+  </div>
+</ion-content>
