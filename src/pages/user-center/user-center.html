@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      个人中心
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="more">
+  <ion-list>
+    <button ion-item (click)="openBookmarksPage()">
+      <h2>我的书签</h2>
+      <ion-icon name="ios-bookmark-outline" item-left></ion-icon>
+    </button>
+    <button ion-item (click)="openAllSkillListPage()">
+      <h2>我的技能分布</h2>
+      <ion-icon name="ios-analytics-outline" item-left></ion-icon>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="openAboutUsPage()">
+      <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
+      <h2>关于</h2>
+    </button>
+
+    <button ion-item (click)="shareIt()">
+      <ion-icon name="ios-share-outline" item-left></ion-icon>
+      <h2>分享给好友</h2>
+    </button>
+
+    <button ion-item (click)="RateApp()">
+      <ion-icon name="ios-rose-outline" item-left></ion-icon>
+      <h2>觉得有帮助，给个好评吧！</h2>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="openUrl('https://github.com/phodal/growth/issues')">
+      发现Bug
+      <ion-icon name="ios-bug-outline" item-left></ion-icon>
+    </button>
+    <ion-item>
+      当前版本
+      <span item-right>{{version}}</span>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

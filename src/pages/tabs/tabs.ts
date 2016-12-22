@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {HomePage} from "../home/home";
 import {DiscoverPage} from "../discover/discover";
+import {UserCenterPage} from "../user-center/user-center";
 
 @Component({
   templateUrl: 'tabs.html'
@@ -11,6 +12,7 @@ export class TabsPage {
   mainView:any = HomePage;
   discoverView:any = DiscoverPage;
   tab3Root: any = DiscoverPage;
+  userCenterView: any = UserCenterPage;
 
   constructor() {
 

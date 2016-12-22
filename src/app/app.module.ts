@@ -34,6 +34,11 @@ import {PagingComponent} from "../pages/effect/paging-conponents";
 import {PopoverPage} from "../pages/discover/solution/popover-page";
 import {BodyContent} from "../pages/discover/exam-detail/body-content";
 import {PageOne} from "../pages/discover/exam-detail/content-one";
+import {UserCenterPage} from "../pages/user-center/user-center";
+import {AboutUsPage} from "../pages/user-center/about-us/about-us";
+import {BookmarksPage} from "../pages/user-center/bookmarks/bookmarks";
+import {SkillListPage} from "../pages/user-center/skill-list/skill-list";
+import {Profile} from "../pages/user-center/about-us/profile/profile";
 
 @NgModule({
   declarations: [
@@ -68,6 +73,11 @@ import {PageOne} from "../pages/discover/exam-detail/content-one";
     PopoverPage,
     BodyContent,
     PageOne,
+    UserCenterPage,
+    AboutUsPage,
+    BookmarksPage,
+    SkillListPage,
+    Profile,
     TabsPage
   ],
   imports: [
@@ -105,6 +115,11 @@ import {PageOne} from "../pages/discover/exam-detail/content-one";
     PopoverPage,
     BodyContent,
     PageOne,
+    UserCenterPage,
+    AboutUsPage,
+    BookmarksPage,
+    SkillListPage,
+    Profile,
     TabsPage
   ],
   providers: [

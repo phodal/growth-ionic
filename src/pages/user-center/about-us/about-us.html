@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      关于
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="about-us">
+  <ion-item-group>
+    <ion-item-divider light>Growth</ion-item-divider>
+    <button ion-item (click)="openUrl('https://github.com/phodal/growth')">
+      开源-GitHub
+      <ion-icon name="logo-github" item-right></ion-icon>
+    </button>
+    <ion-item>QQ交流群: 529600495</ion-item>
+    <button ion-item (click)="openUrl('http://forum.growth.ren/')">
+      论坛: http://forum.growth.ren/
+      <ion-icon name="people-outline" item-right></ion-icon>
+    </button>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider light>贡献者</ion-item-divider>
+    <button ion-item *ngFor="let contributor of contributors; let i = index" (click)="openProfilePage(i)">
+      <ion-avatar item-left>
+        <img src="https://avatars.githubusercontent.com/{{contributor.github}}?v=3&s=40">
+      </ion-avatar>
+      <h2>{{contributor.nickname}}</h2>
+      <p>{{contributor.bio}}</p>
+    </button>
+  </ion-item-group>
+</ion-content>
