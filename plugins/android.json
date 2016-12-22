@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "ren.growth"
+        }
+    },
+    "dependent_plugins": {}
+}

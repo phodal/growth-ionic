@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-google-analytics"
+    version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>Google Universal Analytics Plugin</name>
+  <description>Simple tracking (screens/events) for Google Analytics SDK 3.14 (iOS), SDK 4.0 (Android), and WP8</description>
+  <author>Daniel C. Wilson</author>
+  <license>MIT License</license>
+  <js-module src="www/analytics.js" name="UniversalAnalytics">
+    <!-- 'analytics' is deprecated, but supported to ease the transition -->
+    <clobbers target="analytics" />
+    <clobbers target="ga" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+      </feature>
+    </config-file>
+
+    <header-file src="ios/UniversalAnalyticsPlugin.h" />
+    <source-file src="ios/UniversalAnalyticsPlugin.m" />
+    <source-file src="ios/libGoogleAnalyticsServices.a" framework="true" />
+    <header-file src="ios/GAIDictionaryBuilder.h" />
+    <header-file src="ios/GAIFields.h" />
+    <header-file src="ios/GAILogger.h" />
+    <header-file src="ios/GAITrackedViewController.h" />
+    <header-file src="ios/GAI.h" />
+    <header-file src="ios/GAITracker.h" />
+    <header-file src="ios/GAIEcommerceFields.h" />
+    <header-file src="ios/GAIEcommerceProduct.h" />
+    <header-file src="ios/GAIEcommerceProductAction.h" />
+    <header-file src="ios/GAIEcommercePromotion.h" />
+
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreData.framework" />
+    <framework src="libz.dylib" />
+    <framework src="libsqlite3.dylib" />
+  </platform>
+
+  <platform name="android">
+    <framework src="com.google.android.gms:play-services-analytics:+" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="UniversalAnalytics">
+        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+    <!-- Add support for devices without Google Play Services installed. -->
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true">
+        <intent-filter>
+          <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+        </intent-filter>
+      </receiver>
+      <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+      <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver" android:exported="true">
+        <intent-filter>
+          <action android:name="com.android.vending.INSTALL_REFERRER" />
+        </intent-filter>
+      </receiver>
+      <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+    </config-file>
+    <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
+  </platform>
+
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/*">
+      <feature name="UniversalAnalytics">
+        <param name="wp-package" value="UniversalAnalyticsPlugin" />
+      </feature>
+    </config-file>
+
+    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+        <Capability Name="ID_CAP_NETWORKING" />
+    </config-file>
+
+    <source-file src="wp8/UniversalAnalytics.cs" />
+    <source-file src="wp8/PhoneHelpers.cs" />
+    <source-file src="wp8/PhoneNameResolver.cs" />
+    <source-file src="wp8/PlatformInfoProvider.WP.cs" />
+  </platform>
+</plugin>

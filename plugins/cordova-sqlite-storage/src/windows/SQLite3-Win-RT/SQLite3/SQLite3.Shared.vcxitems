@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{db84ae51-4b93-44f5-be22-1eae1833ecec}</ItemsProjectGuid>
+    <ItemsRootNamespace>SQLite3</ItemsRootNamespace>
+    <ItemsProjectName>SQLite3.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(MSBuildThisFileDirectory)..\..\..\..\node_modules\cordova-sqlite-storage-dependencies</AdditionalIncludeDirectories>
+      <AdditionalOptions>/DSQLITE_TEMP_STORE=2 /DSQLITE_THREADSAFE=2 /DSQLITE_ENABLE_FTS3 /DSQLITE_ENABLE_FTS3_PARENTHESIS /DSQLITE_ENABLE_FTS4 /DSQLITE_ENABLE_COLUMN_METADATA /DSQLITE_ENABLE_RTREE /DSQLITE_OS_WINRT /DSQLITE_DEFAULT_PAGE_SIZE=1024 /DSQLITE_DEFAULT_CACHE_SIZE=2000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\node_modules\cordova-sqlite-storage-dependencies\sqlite3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Constants.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Database.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Statement.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Constants.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Database.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Statement.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\..\node_modules\cordova-sqlite-storage-dependencies\sqlite3.c">
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-x-socialsharing"
+        version="5.1.1">
+
+  <name>SocialSharing</name>
+
+  <description>
+    Share text, images (and other files), or a link via the native sharing widget of your device.
+    Android is fully supported, as well as iOS 6 and up. WP8 has somewhat limited support.
+  </description>
+
+  <author>Eddy Verbruggen</author>
+
+  <license>MIT</license>
+
+  <keywords>Social, Share, Twitter, Facebook, Email, SMS, WhatsApp, Tumblr, Pocket, LinkedIn</keywords>
+
+  <repo>https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git</repo>
+
+  <issue>https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/SocialSharing.js" name="SocialSharing">
+    <clobbers target="window.plugins.socialsharing" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/NSString+URLEncoding.h"/>
+    <source-file src="src/ios/NSString+URLEncoding.m"/>
+    <header-file src="src/ios/SocialSharing.h"/>
+    <source-file src="src/ios/SocialSharing.m"/>
+
+    <framework src="Social.framework" weak="true" />
+    <framework src="MessageUI.framework" weak="true" />
+  </platform>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </config-file>
+
+    <source-file src="src/android/nl/xservices/plugins/SocialSharing.java" target-dir="src/nl/xservices/plugins"/>
+  </platform>
+
+  <!-- wp8 -->
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SocialSharing">
+        <param name="wp-package" value="SocialSharing"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/wp8/SocialSharing.cs" />
+    <framework src="src/wp8/Newtonsoft.Json.dll" custom="true"/>
+  </platform>
+  
+  <!-- windows -->
+  <platform name="windows">
+    <js-module src="src/windows/SocialSharingProxy.js" name="SocialSharingProxy">
+      <merges target="" />
+    </js-module>
+    <source-file src="" />
+  </platform>
+
+</plugin>

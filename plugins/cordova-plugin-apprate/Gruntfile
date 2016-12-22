@@ -1,0 +1,54 @@
+module.exports = function(grunt) {
+  var config = {
+    app: {
+      name: 'AppRateDemoProject',
+      path: '../'
+    }
+  };
+
+  grunt.initConfig({
+    config: config,
+    pkg: grunt.file.readJSON('package.json'),
+    cordovacli: {
+      options: {
+        path: '<%= config.app.path %><%= config.app.name %>/'
+      },
+      create: {
+        options: {
+          command: ['create', 'platform'],
+          platforms: ['ios', 'android'],
+          id: 'org.pushandplay.cordova.<%= config.app.name %>',
+          name: '<%= config.app.name %>',
+          args: ['--link-to', 'www_app']
+        }
+      },
+      plugin: {
+        options: {
+          command: 'plugin',
+          action: 'add',
+          plugins: ['../cordova-plugin-apprate']
+        }
+      },
+      prepare: {
+        options: {
+          command: ['prepare'],
+          platforms: ['ios', 'android']
+        }
+      },
+      run_ios: {
+        options: {
+          command: 'run',
+          platforms: ['ios'],
+          args: ['--debug']
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-cordovacli');
+  grunt.registerTask('default', ['']);
+  grunt.registerTask('release', ['default']);
+  grunt.registerTask('app:create', ['cordovacli:create', 'cordovacli:plugin', 'cordovacli:prepare']);
+  grunt.registerTask('app:prepare', ['cordovacli:prepare']);
+  return grunt.registerTask('app:run_ios', ['default', 'cordovacli:run_ios']);
+};

@@ -23,9 +23,6 @@ tmp/
 temp/
 hooks/
 platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
 www/
 www/index.html
 $RECYCLE.BIN/
