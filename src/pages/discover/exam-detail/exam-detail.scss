@@ -13,17 +13,16 @@
 
 // http://ionicframework.com/docs/v2/theming/
 
-
 // App Shared Imports
 // --------------------------------------------------
 // These are the imports which make up the design of this app.
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
-.white {
+.ion-page > ion-content.white {
   color: #FFF;
 }
 
-.blue {
+.ion-page > ion-content.blue {
   background-color: #6691B5;
 }
 
@@ -31,7 +30,7 @@
   color: #6691B5;
 }
 
-.green {
+.ion-page > ion-content.green {
   background-color: #64B2B5;
 }
 
@@ -39,7 +38,7 @@
   color: #64B2B5;
 }
 
-.purple {
+.ion-page > ion-content.purple {
   background-color: #9B90BC;
 }
 
@@ -47,7 +46,7 @@
   color: #9B90BC;
 }
 
-.turqoise {
+.ion-page > ion-content.turqoise {
   background-color: #1abc9c;
 }
 
@@ -55,7 +54,7 @@
   color: #ecf0f1;
 }
 
-.river {
+.ion-page > ion-content.river {
   background-color: #3498db;
 }
 
@@ -63,7 +62,7 @@
   color: #ecf0f1;
 }
 
-.yellow {
+.ion-page > ion-content.yellow {
   background-color: #ffeb3b;
 }
 
@@ -71,7 +70,7 @@
   color: #ecf0f1;
 }
 
-.concrete {
+.ion-page > ion-content.concrete {
   background-color: #95a5a6;
 }
 
@@ -79,7 +78,7 @@
   color: #ecf0f1;
 }
 
-.emerald {
+.ion-page > ion-content.emerald {
   background-color: #2ecc71;
 }
 
@@ -87,7 +86,7 @@
   color: #ecf0f1;
 }
 
-.carrot {
+.ion-page > ion-content.carrot {
   background-color: #e67e22;
 }
 
@@ -95,16 +94,16 @@
   color: #ecf0f1;
 }
 
-.red {
-  background-color:#f44336;
+.ion-page > ion-content.red {
+  background-color: #f44336;
 }
 
 .red-text {
   color: #ecf0f1;
 }
 
-.asphalt {
-  background-color:#34495e;
+.ion-page > ion-content.asphalt {
+  background-color: #34495e;
 }
 
 .asphalt-text {
@@ -161,7 +160,7 @@ body-content {
   pointer-events: none;
 }
 
-.content-nav, .content-nav > ion-page{
+.content-nav, .content-nav > ion-page {
   display: flex;
   align-items: center;
   justify-content: center;

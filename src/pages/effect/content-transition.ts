@@ -1,9 +1,57 @@
 import {ANIMATION_DURATION} from "../../utils/constants";
 import {TransitionOptions} from "ionic-native";
-import {Transition, ViewController, Animation} from "ionic-angular";
+import {Transition, ViewController, Animation, PageTransition} from "ionic-angular";
+import { isPresent } from 'ionic-angular/util/util';
 
 export const TRANSITION_IN_KEY:string = "bodyContentEnter";
 export const TRANSITION_OUT_KEY:string = "bodyContentExit";
+
+const DURATION = 500;
+const OPACITY = 'opacity';
+const TRANSPARENT = 0;
+const OPAQUE = 1;
+
+export class FadeTransition extends PageTransition {
+  init() {
+    super.init();
+
+    const enteringView = this.enteringView;
+    const leavingView = this.leavingView;
+    const opts = this.opts;
+
+    this.duration(isPresent(opts.duration) ? opts.duration : DURATION);
+    const backDirection = (opts.direction === 'back');
+
+    if (enteringView) {
+      const enteringPageEle: Element = enteringView.pageRef().nativeElement;
+      const enteringContent = new Animation(enteringView.pageRef());
+      this.add(enteringContent);
+
+      if (backDirection) {
+        enteringContent
+          .fromTo(OPACITY, OPAQUE, OPAQUE, true);
+      } else {
+        enteringContent
+          .fromTo(OPACITY, TRANSPARENT, OPAQUE, true);
+      }
+    }
+
+    if (leavingView && leavingView.pageRef()) {
+      const leavingPageEle: Element = leavingView.pageRef().nativeElement;
+
+      const leavingContent = new Animation(leavingView.pageRef());
+      this.add(leavingContent);
+
+      if (backDirection) {
+        leavingContent
+          .fromTo(OPACITY, OPAQUE, TRANSPARENT, false);
+      } else {
+        leavingContent
+          .fromTo(OPACITY, OPAQUE, OPAQUE, false);
+      }
+    }
+  }
+}
 
 export class BodyContentInTransition extends Transition {
   constructor(parameters: {enteringView: ViewController, leavingView: ViewController, opts: TransitionOptions}) {
@@ -70,6 +118,3 @@ export class BodyContentOutTransition extends Transition {
     }
   }
 }
-
-// Transition.register(TRANSITION_IN_KEY, BodyContentInTransition);
-// Transition.register(TRANSITION_OUT_KEY, BodyContentOutTransition);

@@ -1,5 +1,5 @@
 import {NgModule, ErrorHandler} from "@angular/core";
-import {IonicApp, IonicModule, IonicErrorHandler} from "ionic-angular";
+import {IonicApp, IonicModule, IonicErrorHandler, Config} from "ionic-angular";
 import {Storage} from "@ionic/storage";
 import {MomentModule} from 'angular2-moment';
 
@@ -41,7 +41,10 @@ import {AboutUsPage} from "../pages/user-center/about-us/about-us";
 import {BookmarksPage} from "../pages/user-center/bookmarks/bookmarks";
 import {SkillListPage} from "../pages/user-center/skill-list/skill-list";
 import {Profile} from "../pages/user-center/about-us/profile/profile";
-import {TRANSITION_IN_KEY, TRANSITION_OUT_KEY} from "../pages/effect/content-transition";
+import {
+  TRANSITION_IN_KEY, TRANSITION_OUT_KEY, BodyContentInTransition,
+  BodyContentOutTransition, FadeTransition
+} from "../pages/effect/content-transition";
 import {UserData} from "../services/user-data";
 import {CommunityDetailPage} from "../pages/community/detail/community-detail";
 import {CommunityPage} from "../pages/community/community";
@@ -158,4 +161,10 @@ import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-deta
     }
   ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private config: Config) {
+    // this.config.setTransition(TRANSITION_IN_KEY, BodyContentInTransition);
+    // this.config.setTransition(TRANSITION_OUT_KEY, BodyContentOutTransition);
+    this.config.setTransition('fade-transition', FadeTransition);
+  }
+}

@@ -6,6 +6,7 @@ import {QUIZS} from "../../../data/QUIZS";
 import * as _ from "lodash";
 
 @Component({
+  selector: "exam-detail",
   templateUrl: "exam-detail.html",
 })
 export class ExamDetailPage {
