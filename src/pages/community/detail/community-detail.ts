@@ -9,6 +9,7 @@ import {AlertController} from "ionic-angular";
 import {UserData} from "../../../services/user-data";
 
 @Component({
+  selector: 'community-detail',
   templateUrl: "community-detail.html",
   providers: [AnalyticsServices]
 })

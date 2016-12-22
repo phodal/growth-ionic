@@ -5,6 +5,7 @@ import {AnalyticsServices} from "../../../services/analytics.services";
 import {UserData} from "../../../services/user-data";
 
 @Component({
+  selector: 'user-profile',
   templateUrl: "user-profile.html",
   providers: [AnalyticsServices]
 })

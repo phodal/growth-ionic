@@ -6,6 +6,7 @@ import {HtmlModal} from "../../../components/HtmlModal/HtmlModal";
 import {PopoverPage} from "./popover-page";
 
 @Component({
+  selector: 'solution',
   templateUrl: "solution.html",
 })
 export class SolutionPage {

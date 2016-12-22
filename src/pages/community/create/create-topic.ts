@@ -6,6 +6,7 @@ import {AnalyticsServices} from "../../../services/analytics.services";
 import {UserData} from "../../../services/user-data";
 
 @Component({
+  selector: 'create-topic',
   templateUrl: "create-topic.html",
   providers: [AnalyticsServices]
 })

@@ -12,6 +12,7 @@ import {CommunityDetailPage} from "./detail/community-detail";
 import {CreateTopicPage} from "./create/create-topic";
 
 @Component({
+  selector: 'community',
   templateUrl: "community.html",
   providers: [AnalyticsServices]
 })
