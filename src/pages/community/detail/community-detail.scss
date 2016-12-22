@@ -1,6 +1,11 @@
 community-detail {
   background-color: #f0f0f0;
 
+  .loading {
+    margin: 10px auto;
+    text-align: center;
+  }
+
   .topic {
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
