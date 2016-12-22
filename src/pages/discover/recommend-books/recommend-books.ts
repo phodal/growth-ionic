@@ -28,7 +28,7 @@ export class RecommendBook {
 
   presentBookDetail(slug) {
     let modalParams, htmlModal;
-    modalParams = {slug: "assets/review/" + slug + ".html", pageTitle: "书评"};
+    modalParams = {slug: "assets/content/review/" + slug + ".html", pageTitle: "书评"};
     htmlModal = this.modalCtrl.create(HtmlModal, modalParams);
     htmlModal.present();
   }

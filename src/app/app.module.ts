@@ -47,6 +47,7 @@ import {CommunityDetailPage} from "../pages/community/detail/community-detail";
 import {CommunityPage} from "../pages/community/community";
 import {UserProfilePage} from "../pages/community/profile/user-profile";
 import {CreateTopicPage} from "../pages/community/create/create-topic";
+import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-detail-page/domain-detail-page";
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import {CreateTopicPage} from "../pages/community/create/create-topic";
     UserProfilePage,
     CreateTopicPage,
     CommunityDetailPage,
+    DomainDetailPage,
     TabsPage
   ],
   imports: [
@@ -144,6 +146,7 @@ import {CreateTopicPage} from "../pages/community/create/create-topic";
     UserProfilePage,
     CreateTopicPage,
     CommunityDetailPage,
+    DomainDetailPage,
     TabsPage
   ],
   providers: [
