@@ -551,10 +551,10 @@
         </g>
         <g class="nodes">
           <g class="node" id="1" transform="translate(250,30)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-15.71875,-7)">
                 <text>
@@ -564,10 +564,10 @@
             </g>
           </g>
           <g class="node" id="2" transform="translate(30,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints, 'has-points': hasPoints, 'has-max-points': hasMaxPoints }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-11.78125,-7)">
                 <text>
@@ -577,10 +577,10 @@
             </g>
           </g>
           <g class="node" id="3" transform="translate(30,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-25.4453125,-7)">
                 <text>
@@ -590,10 +590,10 @@
             </g>
           </g>
           <g class="node" id="4" transform="translate(140,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-35.890625,-7)">
                 <text>
@@ -603,10 +603,10 @@
             </g>
           </g>
           <g class="node" id="5" transform="translate(195,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-28.7265625,-7)">
                 <text>
@@ -616,10 +616,10 @@
             </g>
           </g>
           <g class="node" id="6" transform="translate(250,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-36,-7)">
                 <text>
@@ -629,10 +629,10 @@
             </g>
           </g>
           <g class="node" id="7" transform="translate(250,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-51.1484375,-7)">
                 <text>
@@ -642,10 +642,10 @@
             </g>
           </g>
           <g class="node" id="8" transform="translate(360,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-26.21875,-7)">
                 <text>
@@ -655,10 +655,10 @@
             </g>
           </g>
           <g class="node" id="9" transform="translate(360,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-30.7734375,-7)">
                 <text>
@@ -668,10 +668,10 @@
             </g>
           </g>
           <g class="node" id="10" transform="translate(360,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-36,-7)">
                 <text>
@@ -681,10 +681,10 @@
             </g>
           </g>
           <g class="node" id="11" transform="translate(635,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-30,-7)">
                 <text>
@@ -694,10 +694,10 @@
             </g>
           </g>
           <g class="node" id="12" transform="translate(635,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-30,-7)">
                 <text>
@@ -707,10 +707,10 @@
             </g>
           </g>
           <g class="node" id="13" transform="translate(855,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-51.2265625,-7)">
                 <text>
@@ -720,10 +720,10 @@
             </g>
           </g>
           <g class="node" id="14" transform="translate(920,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-42,-7)">
                 <text>
@@ -733,10 +733,10 @@
             </g>
           </g>
           <g class="node" id="15" transform="translate(755,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-42,-7)">
                 <text>
@@ -746,10 +746,10 @@
             </g>
           </g>
           <g class="node" id="16" transform="translate(810,470)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-42,-7)">
                 <text>
@@ -759,10 +759,10 @@
             </g>
           </g>
           <g class="node" id="17" transform="translate(700,470)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-32.8125,-7)">
                 <text>
@@ -772,10 +772,10 @@
             </g>
           </g>
           <g class="node" id="18" transform="translate(1020,140)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-24,-7)">
                 <text>
@@ -785,10 +785,10 @@
             </g>
           </g>
           <g class="node" id="19" transform="translate(800,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-24,-7)">
                 <text>
@@ -798,10 +798,10 @@
             </g>
           </g>
           <g class="node" id="20" transform="translate(525,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-36,-7)">
                 <text>
@@ -811,10 +811,10 @@
             </g>
           </g>
           <g class="node" id="21" transform="translate(1030,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-12,-7)">
                 <text>
@@ -824,10 +824,10 @@
             </g>
           </g>
           <g class="node" id="22" transform="translate(1020,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-48,-7)">
                 <text>
@@ -837,10 +837,10 @@
             </g>
           </g>
           <g class="node" id="23" transform="translate(1020,470)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-24,-7)">
                 <text>
@@ -850,10 +850,10 @@
             </g>
           </g>
           <g class="node" id="24" transform="translate(525,250)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-30,-7)">
                 <text>
@@ -863,10 +863,10 @@
             </g>
           </g>
           <g class="node" id="25" transform="translate(635,360)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-12,-7)">
                 <text>
@@ -876,10 +876,10 @@
             </g>
           </g>
           <g class="node" id="26" transform="translate(270,470)"
-             data-bind="css: { &quot;can-add-points&quot;: canAddPoints, &quot;has-points&quot;: hasPoints, &quot;has-max-points&quot;: hasMaxPoints }"
+             [ngClass]="{ 'can-add-points': canAddPoints(), 'has-points': hasPoints(), 'has-max-points': hasMaxPoints() }"
              style="opacity: 1;">
             <rect rx="10" ry="10" x="-30" y="-30" width="60" height="60" class="inner"
-                  data-bind="click: addPoint, rightClick: removePoint" style="fill: rgb(236, 240, 241);"></rect>
+                  (click)='addPoint($event)' style="fill: rgb(236, 240, 241);"></rect>
             <g class="label" transform="translate(0,0)">
               <g transform="translate(-35.890625,-7)">
                 <text>
