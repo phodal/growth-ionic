@@ -1,0 +1,64 @@
+page-skill-tree {
+  svg {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .node rect {
+    stroke: #333;
+    fill: #fff;
+  }
+
+  g.node rect {
+    stroke: #bdc3c7;
+    stroke-width: 2.5px;
+    cursor: pointer;
+  }
+
+  g.node rect.inner {
+    fill: white;
+  }
+
+  g.node rect.outer {
+    position: absolute;
+    display: none;
+    stroke-dasharray: 4px;
+    stroke-opacity: 0.5;
+    fill: transparent;
+  }
+
+  g.selected rect.outer {
+    display: inline;
+  }
+
+  rect.selection {
+    stroke: gray;
+    stroke-dasharray: 4px;
+    stroke-opacity: 0.5;
+    fill: transparent;
+  }
+
+  .edgePath path {
+    stroke: gray;
+    fill: gray;
+    stroke-width: 1.5px;
+  }
+
+  .node text {
+    pointer-events: none;
+  }
+
+  /* disable text selection */
+  svg *::selection {
+    background: transparent;
+  }
+
+  svg *::-moz-selection {
+    background: transparent;
+  }
+
+  svg *::-webkit-selection {
+    background: transparent;
+  }
+}
