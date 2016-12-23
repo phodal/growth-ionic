@@ -36,3 +36,8 @@ ion-header ion-navbar {
     font-size: 2.4rem;
   }
 }
+
+ion-item-divider.item-divider-md,
+ion-item-divider.item-divider-ios {
+  background-color: #f7f7f7;
+}
