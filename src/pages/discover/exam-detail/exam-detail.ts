@@ -1,7 +1,7 @@
-import {Component, ViewChild} from "@angular/core";
+import {Component, ViewChild, ElementRef} from "@angular/core";
 import {PageObject, AnimationReadyEvent} from "../../effect/paging-conponents";
 import {BodyContent} from "./body-content";
-import {NavParams, NavController, GestureController} from "ionic-angular";
+import {NavParams, NavController, GestureController, Animation} from "ionic-angular";
 import {QUIZS} from "../../../data/QUIZS";
 import * as _ from "lodash";
 
@@ -11,6 +11,7 @@ import * as _ from "lodash";
 })
 export class ExamDetailPage {
   @ViewChild("bodyContent") bodyContent:BodyContent;
+  @ViewChild("bodyContent", {read: ElementRef}) content:ElementRef;
 
   private pages:PageObject[];
 
@@ -67,6 +68,15 @@ export class ExamDetailPage {
       questions = _.dropRight(questions, this.questionsWithShuffle.length - this.questionsNum);
     }
     this.bodyContent.setQuestions(questions);
+    let component = this.content.nativeElement.querySelectorAll('body-content > ion-nav ng-component');
+    let currentComponent = component[this.activeIndex];
+    let componentAnimation = new Animation(currentComponent);
+    componentAnimation
+      .fromTo('opacity', 0.5, 0)
+      .easing('ease-in-out')
+      .duration(500);
+    componentAnimation.play();
+
     this.bodyContent.processTransition(this.activeIndex, this.nextIndex, event.animation).then(() => {
       this.activeIndex = this.nextIndex;
     });

@@ -1,6 +1,6 @@
 import {Animation, NavController} from "ionic-angular";
 import {PageOne} from "./content-one";
-import {Component, ViewChild, Input} from "@angular/core";
+import {Component, ViewChild, Input, ElementRef} from "@angular/core";
 
 @Component({
   selector: `body-content`,
@@ -15,11 +15,11 @@ export class BodyContent {
 
   processTransition(previousIndex:number, selectedIndex:number, animation:Animation) {
     if (previousIndex > selectedIndex) {
-      return this.nav.pop({animation: 'fade-transition', ev: {animation: animation}});
+      return this.nav.pop({animation: 'ios-transition', ev: {animation: animation}});
     } else {
       let question = this.questions[selectedIndex];
       return this.nav.push(PageOne, {question: question}, {
-        animation: 'fade-transition',
+        animation: 'ios-transition',
         ev: {animation: animation}
       });
     }
