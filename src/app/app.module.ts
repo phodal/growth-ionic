@@ -1,8 +1,7 @@
 import {NgModule, ErrorHandler} from "@angular/core";
 import {IonicApp, IonicModule, IonicErrorHandler, Config} from "ionic-angular";
 import {Storage} from "@ionic/storage";
-import {MomentModule} from 'angular2-moment';
-
+import {MomentModule} from "angular2-moment";
 import {MyApp} from "./app.component";
 import {AboutPage} from "../pages/about/about";
 import {HomePage} from "../pages/home/home";
@@ -47,7 +46,6 @@ import {CommunityPage} from "../pages/community/community";
 import {UserProfilePage} from "../pages/community/profile/user-profile";
 import {CreateTopicPage} from "../pages/community/create/create-topic";
 import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-detail-page/domain-detail-page";
-import {FadeTransition} from "../pages/effect/content-transition";
 
 @NgModule({
   declarations: [
@@ -158,6 +156,6 @@ import {FadeTransition} from "../pages/effect/content-transition";
 })
 export class AppModule {
   constructor(private config: Config) {
-    this.config.setTransition('fade-transition', FadeTransition);
+
   }
 }
