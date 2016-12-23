@@ -6,19 +6,28 @@ import {Helper} from "../../utils/helper";
 import {SkillListPage} from "./skill-list/skill-list";
 import {BookmarksPage} from "./bookmarks/bookmarks";
 import {AboutUsPage} from "./about-us/about-us";
+import {SkillMapService} from "../../services/skill.map.services";
 
 @Component({
   selector: "user-center",
   templateUrl: "user-center.html",
-  providers: [AnalyticsServices, Helper]
+  providers: [AnalyticsServices, SkillMapService, Helper]
 })
 export class UserCenterPage {
   private version;
+  public skillCount;
 
-  constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper) {
+  constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper, public skillMapService:SkillMapService) {
     this.nav = nav;
     this.init();
     this.analytics.trackView("User Center");
+  }
+
+  ionViewWillEnter(){
+    var self = this;
+    this.skillMapService.getSkillTotalAmount(function(data){
+      self.skillCount = data;
+    })
   }
 
   openAllSkillListPage() {
