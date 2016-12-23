@@ -16,7 +16,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(0)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(0), 'animated fadeInLeft': isGroupShown(0)}">
         <button ion-item (click)="openSectionDetailsPage('hello')">
           hello,world
           <span class="growth-icon" item-left></span>
@@ -40,7 +40,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(1)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(1), 'animated fadeInLeft': isGroupShown(1)}">
         <button ion-item (click)="openSectionDetailsPage('build')">
           构建系统
           <span class="growth-icon" item-left></span>
@@ -69,7 +69,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(2)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(2), 'animated fadeInLeft': isGroupShown(2)}">
         <button ion-item (click)="openSectionDetailsPage('before')">
           编码之前
           <span class="growth-icon" item-left></span>
@@ -98,7 +98,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(3)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(3), 'animated fadeInLeft': isGroupShown(3)}">
         <button ion-item (click)="openSectionDetailsPage('container')">
           容器
           <span class="growth-icon" item-left></span>
@@ -127,7 +127,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(4)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(4), 'animated fadeInLeft': isGroupShown(4)}">
         <button ion-item (click)="openSectionDetailsPage('analytics')">
           数据分析
           <span class="growth-icon" item-left></span>
@@ -151,7 +151,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(5)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(5), 'animated fadeInLeft': isGroupShown(5)}">
         <button ion-item (click)="openSectionDetailsPage('ci')">
           持续集成
           <span class="growth-icon" item-left></span>
@@ -175,7 +175,7 @@
           </div>
         </button>
       </ion-card>
-      <ion-list class="item-accordion" *ngIf="isGroupShown(6)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(6), 'animated fadeInLeft': isGroupShown(6)}">
         <button ion-item (click)="openSectionDetailsPage('legacy')">
           遗留系统
           <span class="growth-icon" item-left></span>
@@ -195,12 +195,12 @@
           <div class="home-8"></div>
           <div class="card-title">
             <h2>回顾与新架构</h2>
-            <p>哈哈，世界又迎来了新的曙光</p>
+            <p>啊哈，世界又迎来了新的曙光</p>
           </div>
         </button>
       </ion-card>
 
-      <ion-list class="item-accordion" *ngIf="isGroupShown(7)">
+      <ion-list class="item-accordion" [ngClass]="{'hidden': !isGroupShown(7), 'animated fadeInLeft': isGroupShown(7)}">
         <button ion-item (click)="openSectionDetailsPage('retro')">
           回顾与总结
           <span class="growth-icon" item-left></span>
