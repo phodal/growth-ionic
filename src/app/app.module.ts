@@ -41,16 +41,13 @@ import {AboutUsPage} from "../pages/user-center/about-us/about-us";
 import {BookmarksPage} from "../pages/user-center/bookmarks/bookmarks";
 import {SkillListPage} from "../pages/user-center/skill-list/skill-list";
 import {Profile} from "../pages/user-center/about-us/profile/profile";
-import {
-  TRANSITION_IN_KEY, TRANSITION_OUT_KEY, BodyContentInTransition,
-  BodyContentOutTransition, FadeTransition
-} from "../pages/effect/content-transition";
 import {UserData} from "../services/user-data";
 import {CommunityDetailPage} from "../pages/community/detail/community-detail";
 import {CommunityPage} from "../pages/community/community";
 import {UserProfilePage} from "../pages/community/profile/user-profile";
 import {CreateTopicPage} from "../pages/community/create/create-topic";
 import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-detail-page/domain-detail-page";
+import {FadeTransition} from "../pages/effect/content-transition";
 
 @NgModule({
   declarations: [
@@ -99,8 +96,6 @@ import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-deta
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
-      bodyContentEnter: TRANSITION_IN_KEY,
-      bodyContentLeave: TRANSITION_OUT_KEY,
       tabbarPlacement: "bottom",
       backButtonText: "后退",
       tabsHideOnSubPages: true,
@@ -163,8 +158,6 @@ import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-deta
 })
 export class AppModule {
   constructor(private config: Config) {
-    // this.config.setTransition(TRANSITION_IN_KEY, BodyContentInTransition);
-    // this.config.setTransition(TRANSITION_OUT_KEY, BodyContentOutTransition);
     this.config.setTransition('fade-transition', FadeTransition);
   }
 }

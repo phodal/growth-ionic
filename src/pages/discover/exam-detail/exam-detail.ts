@@ -72,7 +72,7 @@ export class ExamDetailPage {
     });
   }
 
-  private shuffleQuestion(originQuestions) {
+  shuffleQuestion(originQuestions) {
     let questions = [];
     _.each(this.shuffle(originQuestions), function (question, index) {
       questions.push({
@@ -83,7 +83,7 @@ export class ExamDetailPage {
     return questions;
   }
 
-  private shuffle(array) {
+  shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
