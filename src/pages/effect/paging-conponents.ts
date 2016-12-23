@@ -145,6 +145,7 @@ export class PagingComponent {
 
     if (this.initialized) {
       this.animationReady.emit({animation: animation});
+      animation.play();
     } else {
       animation.play();
     }
