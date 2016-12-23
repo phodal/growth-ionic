@@ -18,6 +18,36 @@
       {{skill.description}}
     </ion-card-content>
   </ion-card>
+
+  <ion-item-divider light *ngIf="skill.rankDescriptions && skill.rankDescriptions.length > 0">点亮技能</ion-item-divider>
+  <ion-list hideWhen="ios">
+    <div *ngIf="skill.rankDescriptions && skill.rankDescriptions.length > 0">
+      <ion-item-sliding *ngFor="let todo of skill.rankDescriptions">
+        <ion-item>
+          <ion-label>{{todo}}</ion-label>
+          <ion-checkbox (click)="addItemToDone(todo)" [(ngModel)]="todo.checked" dark></ion-checkbox>
+        </ion-item>
+      </ion-item-sliding>
+    </div>
+  </ion-list>
+
+
+  <ion-list showWhen="ios">
+    <div *ngIf="skill.rankDescriptions && skill.rankDescriptions.length > 0">
+      <ion-item-sliding *ngFor="let todo of skill.rankDescriptions">
+        <ion-item>
+          {{todo.title}}
+        </ion-item>
+        <ion-item-options>
+          <button ion-button danger (click)="addItemToDone(todo)">
+            <ion-icon name="checkbox"></ion-icon>
+            Done
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </div>
+  </ion-list>
+
   <ion-item-group *ngIf="skill.links">
     <ion-item-divider light *ngIf="skill.links">扩展资料</ion-item-divider>
     <button ion-item *ngFor="let link of skill.links; let i = index;">

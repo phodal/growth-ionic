@@ -19,4 +19,8 @@ export class SkillTreeModal {
   dismiss() {
     this.viewCtrl.dismiss();
   }
+
+  addItemToDone(item) {
+
+  }
 }
