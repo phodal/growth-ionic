@@ -13,6 +13,9 @@ export class BookmarkServices {
 
   getBookmarkCount(cb){
     this.getAllBookmarks().then(function (bookmarks) {
+      if(!bookmarks){
+        return;
+      }
       bookmarks = JSON.parse(bookmarks);
       let bookmarkCount = Object.keys(bookmarks).length;
       cb(bookmarkCount);
