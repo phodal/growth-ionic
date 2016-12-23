@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Renderer} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 
 @Component({
@@ -27,10 +27,10 @@ export class SkillTreePage {
   }
 
   addPoint(event){
-    console.log(event);
+    event.srcElement.style.fill = '#2d89ef';
   }
 
   removePoint(event){
-    console.log(event);
+    event.srcEvent.srcElement.style.fill = '#ecf0f1';
   }
 }
