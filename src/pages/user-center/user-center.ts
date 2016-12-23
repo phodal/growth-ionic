@@ -7,27 +7,33 @@ import {SkillListPage} from "./skill-list/skill-list";
 import {BookmarksPage} from "./bookmarks/bookmarks";
 import {AboutUsPage} from "./about-us/about-us";
 import {SkillMapService} from "../../services/skill.map.services";
+import {BookmarkServices} from "../../services/bookmark.services";
 
 @Component({
   selector: "user-center",
   templateUrl: "user-center.html",
-  providers: [AnalyticsServices, SkillMapService, Helper]
+  providers: [AnalyticsServices, SkillMapService, BookmarkServices, Helper]
 })
 export class UserCenterPage {
   private version;
   public skillCount;
+  public bookmarkCount;
 
-  constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper, public skillMapService:SkillMapService) {
+  constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper,
+              public skillMapService:SkillMapService, public bookmarkServices:BookmarkServices) {
     this.nav = nav;
     this.init();
     this.analytics.trackView("User Center");
   }
 
   ionViewWillEnter(){
-    var self = this;
+    let self = this;
     this.skillMapService.getSkillTotalAmount(function(data){
       self.skillCount = data;
-    })
+    });
+    this.bookmarkServices.getBookmarkCount(function(data){
+      self.bookmarkCount = data;
+    });
   }
 
   openAllSkillListPage() {

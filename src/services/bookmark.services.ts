@@ -11,6 +11,14 @@ export class BookmarkServices {
     return this.storage.get("bookmarks");
   };
 
+  getBookmarkCount(cb){
+    this.getAllBookmarks().then(function (bookmarks) {
+      bookmarks = JSON.parse(bookmarks);
+      let bookmarkCount = Object.keys(bookmarks).length;
+      cb(bookmarkCount);
+    });
+  }
+
   getArticleBookmarkStatus(slug, callback) {
     this.getAllBookmarks().then(function (bookmarks) {
       if (!bookmarks || bookmarks === null) {
