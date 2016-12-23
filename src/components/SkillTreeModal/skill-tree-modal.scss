@@ -1,0 +1,11 @@
+skill-tree-modal {
+  ion-card {
+    background-color: #fff;
+  }
+
+  ion-card.card-md,
+  ion-card.card-ios {
+    margin: 0;
+    width: 100%;
+  }
+}

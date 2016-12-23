@@ -47,6 +47,7 @@ import {UserProfilePage} from "../pages/community/profile/user-profile";
 import {CreateTopicPage} from "../pages/community/create/create-topic";
 import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-detail-page/domain-detail-page";
 import {SkillTreePage} from "../pages/skill-tree/skill-tree";
+import {SkillTreeModal} from "../components/SkillTreeModal/SkillTreeModal";
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import {SkillTreePage} from "../pages/skill-tree/skill-tree";
     CommunityDetailPage,
     DomainDetailPage,
     SkillTreePage,
+    SkillTreeModal,
     TabsPage
   ],
   imports: [
@@ -146,6 +148,7 @@ import {SkillTreePage} from "../pages/skill-tree/skill-tree";
     CommunityDetailPage,
     DomainDetailPage,
     SkillTreePage,
+    SkillTreeModal,
     TabsPage
   ],
   providers: [

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{pageTitle}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span primary hideWhen="android">关闭</span>
+        <ion-icon name="md-close" showWhen="android"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="has-header">
+  <ion-card>
+    <ion-card-content>
+      {{skill.description}}
+    </ion-card-content>
+  </ion-card>
+  <ion-item-group *ngIf="skill.links">
+    <ion-item-divider light *ngIf="skill.links">扩展资料</ion-item-divider>
+    <button ion-item *ngFor="let link of skill.links; let i = index;">
+      {{link.label}}
+    </button>
+  </ion-item-group>
+  <ion-item-group *ngIf="skill.books">
+    <ion-item-divider light *ngIf="skill.books">推荐书籍</ion-item-divider>
+    <button ion-item *ngFor="let book of skill.books; let i = index;">
+      {{book.label}}
+    </button>
+  </ion-item-group>
+</ion-content>
