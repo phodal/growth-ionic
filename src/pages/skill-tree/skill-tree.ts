@@ -29,4 +29,8 @@ export class SkillTreePage {
   addPoint(event){
     console.log(event);
   }
+
+  removePoint(event){
+    console.log(event);
+  }
 }
