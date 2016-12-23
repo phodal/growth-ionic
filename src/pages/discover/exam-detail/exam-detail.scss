@@ -1,21 +1,3 @@
-.exam {
-  ion-list {
-    ion-item {
-      border: none;
-      padding-left: 0;
-
-      .item-inner {
-        padding-left: 16px;
-      }
-    }
-  }
-  .end-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
 // http://ionicframework.com/docs/v2/theming/
 
 // App Shared Imports
@@ -164,6 +146,7 @@ body-content {
   left: 10%;
   display: block;
   height: 80%;
+  width: 80%;
   pointer-events: none;
 }
 
@@ -194,4 +177,10 @@ body-content {
   border-radius: 50%;
   z-index: -1;
   opacity: 0.0;
+}
+
+.end-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
