@@ -10,19 +10,19 @@ import * as _ from "lodash";
   templateUrl: "exam-detail.html",
 })
 export class ExamDetailPage {
-  @ViewChild("bodyContent") bodyContent:BodyContent;
-  @ViewChild("bodyContent", {read: ElementRef}) content:ElementRef;
+  @ViewChild("bodyContent") bodyContent: BodyContent;
+  @ViewChild("bodyContent", {read: ElementRef}) content: ElementRef;
 
-  private pages:PageObject[];
+  private pages: PageObject[];
 
-  private activeIndex:number = 0;
-  private nextIndex:number = 0;
-  private questionsNum:number = 10;
-  private domain:string;
+  private activeIndex: number = 0;
+  private nextIndex: number = 0;
+  private questionsNum: number = 10;
+  private domain: string;
   private allQuestions;
   private questionsWithShuffle;
 
-  constructor(public params:NavParams, public nav:NavController, public gestureController:GestureController) {
+  constructor(public params: NavParams, public nav: NavController, public gestureController: GestureController) {
     this.domain = params.get("domain");
     this.allQuestions = QUIZS[this.domain];
     this.questionsWithShuffle = this.shuffleQuestion(this.allQuestions);
@@ -31,7 +31,7 @@ export class ExamDetailPage {
 
   ionViewWillEnter() {
     this.gestureController.disableScroll(1);
-    let tempPages:PageObject[] = [];
+    let tempPages: PageObject[] = [];
     tempPages.push({iconName: "ionic"});
     tempPages.push({iconName: "aperture"});
     tempPages.push({iconName: "at"});
@@ -62,24 +62,40 @@ export class ExamDetailPage {
     this.nav.pop();
   }
 
-  pageChangeAnimationReady(event:AnimationReadyEvent = {animation: null}) {
+  pageChangeAnimationReady(event: AnimationReadyEvent = {animation: null}) {
     let questions = this.questionsWithShuffle;
     if (this.questionsWithShuffle.length > this.questionsNum) {
       questions = _.dropRight(questions, this.questionsWithShuffle.length - this.questionsNum);
     }
     this.bodyContent.setQuestions(questions);
-    let component = this.content.nativeElement.querySelectorAll('body-content > ion-nav ng-component');
-    let currentComponent = component[this.activeIndex];
-    let componentAnimation = new Animation(currentComponent);
-    componentAnimation
-      .fromTo('opacity', 0.5, 0)
-      .easing('ease-in-out')
-      .duration(500);
-    componentAnimation.play();
+    this.exchangeAnimation(this.activeIndex, this.nextIndex);
 
     this.bodyContent.processTransition(this.activeIndex, this.nextIndex, event.animation).then(() => {
       this.activeIndex = this.nextIndex;
     });
+  }
+
+  private exchangeAnimation(previousIndex, selectedIndex) {
+    let component = this.content.nativeElement.querySelectorAll('body-content > ion-nav ng-component');
+    let currentComponent = component[this.activeIndex];
+    let componentAnimation = new Animation(currentComponent);
+
+    if (previousIndex >= selectedIndex) {
+      componentAnimation
+        .fromTo('opacity', 0, 1)
+        .easing('ease-in')
+        .duration(500);
+
+      if (currentComponent) {
+        currentComponent.style.opacity = 1;
+      }
+    } else {
+      componentAnimation
+        .fromTo('opacity', 0.5, 0)
+        .easing('ease-out')
+        .duration(500);
+    }
+    componentAnimation.play();
   }
 
   shuffleQuestion(originQuestions) {
