@@ -72,14 +72,10 @@ export class PagingComponent {
   }
 
   ngOnChanges(changes:{[propertyName:string]:SimpleChange}) {
-    let self = this;
     let change = changes["selectedIndex"];
     if (change) {
       this.previousIndex = typeof change.previousValue === "number" ? change.previousValue : -1;
       if (this.initialized) {
-        let callback = () => {
-          self.animationReady.emit(null);
-        };
         this.selectedIndexChanged(change.currentValue, null, true);
       }
     }

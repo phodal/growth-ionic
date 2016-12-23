@@ -12,7 +12,7 @@ import {UserData} from "../../../services/user-data";
 })
 
 export class CreateTopicPage {
-  private postForm:{title?:string, content?:string} = {};
+  public postForm:{title?:string, content?:string} = {};
   private isInCreating = false;
   private token;
 
