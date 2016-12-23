@@ -20,6 +20,15 @@ section-page {
     margin: -14px 0 0;
   }
 
+  .segment-ios ion-segment-button.segment-button.segment-activated {
+    background-color: $growth-new-color;
+  }
+
+  .segment-ios ion-segment-button.segment-button {
+    color: $growth-new-color;
+    border-color: $growth-new-color;
+  }
+
   ion-item-divider {
     height: 47px;
 

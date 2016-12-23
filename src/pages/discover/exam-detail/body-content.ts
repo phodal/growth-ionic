@@ -1,6 +1,6 @@
 import {Animation, NavController} from "ionic-angular";
 import {PageOne} from "./content-one";
-import {Component, ViewChild, Input, ElementRef} from "@angular/core";
+import {Component, ViewChild, Input} from "@angular/core";
 
 @Component({
   selector: `body-content`,

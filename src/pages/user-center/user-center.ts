@@ -8,6 +8,7 @@ import {BookmarksPage} from "./bookmarks/bookmarks";
 import {AboutUsPage} from "./about-us/about-us";
 
 @Component({
+  selector: "user-center",
   templateUrl: "user-center.html",
   providers: [AnalyticsServices, Helper]
 })
