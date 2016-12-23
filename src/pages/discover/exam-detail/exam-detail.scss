@@ -170,8 +170,8 @@ body-content {
 
 .circle-animation-helper {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -179,8 +179,32 @@ body-content {
   opacity: 0.0;
 }
 
-.end-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+exam-detail {
+  .end-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    button {
+      border-width: 2px;
+      padding: 0 40px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  ion-card.card-md,
+  ion-card.card-ios {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
 }

@@ -13,16 +13,19 @@
              (swiperight)="swipeRightToLeft()"
              fullscreen ion-fixed>
 
-  <ion-buttons end class="end-button">
-    <button ion-button light outline (click)="endExam()">
-      结束
-    </button>
-  </ion-buttons>
+  <ion-card ion-fixed>
 
-  <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
-  <paging-component [pages]="pages"
-                    [selectedIndex]="nextIndex"
-                    (animationReady)="pageChangeAnimationReady($event)">
-  </paging-component>
+    <ion-buttons end class="end-button">
+      <button ion-button light outline (click)="endExam()">
+        结束
+      </button>
+    </ion-buttons>
 
+    <body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
+    <paging-component [pages]="pages"
+                      [selectedIndex]="nextIndex"
+                      (animationReady)="pageChangeAnimationReady($event)">
+    </paging-component>
+
+  </ion-card>
 </ion-content>
