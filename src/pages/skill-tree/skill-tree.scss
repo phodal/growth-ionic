@@ -1,8 +1,14 @@
 page-skill-tree {
+  ion-scroll {
+    width: 100%;
+    height: 100%;
+  }
+
   svg {
     width: 1200px;
-    overflow: hidden;
+    overflow: visible;
     margin: 0 auto;
+    padding: 10px;
   }
 
   .node rect {
