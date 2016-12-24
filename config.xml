@@ -99,4 +99,5 @@
     <plugin name="cordova-plugin-google-analytics" spec="~1.0.0" />
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <plugin name="cordova-sqlite-storage" spec="~2.0.0" />
+    <engine name="android" spec="~6.0.0" />
 </widget>
