@@ -36,7 +36,7 @@
     <div *ngIf="skill.rankDescriptions && skill.rankDescriptions.length > 0">
       <ion-item-sliding *ngFor="let todo of skill.rankDescriptions">
         <ion-item>
-          {{todo.title}}
+          {{todo}}
         </ion-item>
         <ion-item-options>
           <button ion-button danger (click)="addItemToDone(todo)">
