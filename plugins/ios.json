@@ -7,16 +7,21 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.verso.cordova.clipboard": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ren.growth"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "ren.growth"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-app-version": {
-            "PACKAGE_NAME": "ren.growth"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "ren.growth"
-        }
-    }
+    "dependent_plugins": {}
 }

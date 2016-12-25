@@ -7,27 +7,34 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-compat": {
+    "cordova-plugin-console": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-compat"
+            "id": "cordova-plugin-console@~1.0.2"
         },
-        "is_top_level": false,
+        "is_top_level": true,
         "variables": {}
     },
-    "es6-promise-plugin": {
+    "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "es6-promise-plugin"
+            "id": "cordova-plugin-whitelist@~1.2.1"
         },
-        "is_top_level": false,
+        "is_top_level": true,
         "variables": {}
     },
-    "com.verso.cordova.clipboard": {
+    "cordova-plugin-splashscreen": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/VersoSolutions/CordovaClipboard.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@~3.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@~2.1.2"
         },
         "is_top_level": true,
         "variables": {}

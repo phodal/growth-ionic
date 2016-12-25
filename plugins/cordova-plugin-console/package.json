@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-console",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Cordova Console Plugin",
   "cordova": {
     "id": "cordova-plugin-console",
@@ -34,6 +34,13 @@
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
   "devDependencies": {
     "jshint": "^2.6.0"
   }

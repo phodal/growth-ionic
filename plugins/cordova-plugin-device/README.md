@@ -1,3 +1,7 @@
+---
+title: Device
+description: Get device information.
+---
 <!--
 # license: Licensed to the Apache Software Foundation (ASF) under one
 #         or more contributor license agreements.  See the NOTICE file
@@ -17,17 +21,21 @@
 #         under the License.
 -->
 
-[![Build Status](https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device)
+|Android|iOS| Windows 8.1 Store | Windows 8.1 Phone | Windows 10 Store | Travis CI |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device/)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device)|
 
 # cordova-plugin-device
 
 This plugin defines a global `device` object, which describes the device's hardware and software.
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        console.log(device.cordova);
-    }
+```js
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(device.cordova);
+}
+```
 
 Report issues with this plugin on the [Apache Cordova issue tracker](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Device%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC)
 
@@ -83,15 +91,17 @@ different across versions of the same product.
 
 ### Quick Example
 
-    // Android:    Nexus One       returns "Passion" (Nexus One code name)
-    //             Motorola Droid  returns "voles"
-    // BlackBerry: Torch 9800      returns "9800"
-    // Browser:    Google Chrome   returns "Chrome"
-    //             Safari          returns "Safari"
-    // iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
-    // OSX:                        returns "x86_64"
-    // 
-    var model = device.model;
+```js
+// Android:    Nexus One       returns "Passion" (Nexus One code name)
+//             Motorola Droid  returns "voles"
+// BlackBerry: Torch 9800      returns "9800"
+// Browser:    Google Chrome   returns "Chrome"
+//             Safari          returns "Safari"
+// iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
+// OSX:                        returns "x86_64"
+//
+var model = device.model;
+```
 
 ### Android Quirks
 
@@ -109,8 +119,9 @@ different across versions of the same product.
 
 Get the device's operating system name.
 
-    var string = device.platform;
-
+```js
+var string = device.platform;
+```
 ### Supported Platforms
 
 - Android
@@ -125,15 +136,17 @@ Get the device's operating system name.
 
 ### Quick Example
 
-    // Depending on the device, a few examples are:
-    //   - "Android"
-    //   - "BlackBerry 10"
-    //   - "browser"
-    //   - "iOS"
-    //   - "WinCE"
-    //   - "Tizen"
-    //   - "Mac OS X"
-    var devicePlatform = device.platform;
+```js
+// Depending on the device, a few examples are:
+//   - "Android"
+//   - "BlackBerry 10"
+//   - "browser"
+//   - "iOS"
+//   - "WinCE"
+//   - "Tizen"
+//   - "Mac OS X"
+var devicePlatform = device.platform;
+```
 
 ### Windows Phone 7 Quirks
 
@@ -147,7 +160,9 @@ Windows Phone 8 devices report the platform as `Win32NT`.
 
 Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
-    var string = device.uuid;
+```js
+var string = device.uuid;
+```
 
 ### Description
 
@@ -165,19 +180,21 @@ The details of how a UUID is generated are determined by the device manufacturer
 
 ### Quick Example
 
-    // Android: Returns a random 64-bit integer (as a string, again!)
-    //          The integer is generated on the device's first boot
-    //
-    // BlackBerry: Returns the PIN number of the device
-    //             This is a nine-digit unique integer (as a string, though!)
-    //
-    // iPhone: (Paraphrased from the UIDevice Class documentation)
-    //         Returns the [UIDevice identifierForVendor] UUID which is unique and the same for all apps installed by the same vendor. However the UUID can be different if the user deletes all apps from the vendor and then reinstalls it.
-    // Windows Phone 7 : Returns a hash of device+current user,
-    // if the user is not defined, a guid is generated and will persist until the app is uninstalled
-    // Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
-    // unique to every GSM and UMTS mobile phone.
-    var deviceID = device.uuid;
+```js
+// Android: Returns a random 64-bit integer (as a string, again!)
+//          The integer is generated on the device's first boot
+//
+// BlackBerry: Returns the PIN number of the device
+//             This is a nine-digit unique integer (as a string, though!)
+//
+// iPhone: (Paraphrased from the UIDevice Class documentation)
+//         Returns the [UIDevice identifierForVendor] UUID which is unique and the same for all apps installed by the same vendor. However the UUID can be different if the user deletes all apps from the vendor and then reinstalls it.
+// Windows Phone 7 : Returns a hash of device+current user,
+// if the user is not defined, a guid is generated and will persist until the app is uninstalled
+// Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
+// unique to every GSM and UMTS mobile phone.
+var deviceID = device.uuid;
+```
 
 ### iOS Quirk
 
@@ -187,7 +204,7 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
 
 ### OSX Quirk
 
-The `uuid` on OSX is generated automatically if it does not exist yet and is stored in the `standardUserDefaults` in the `CDVUUID` property. 
+The `uuid` on OSX is generated automatically if it does not exist yet and is stored in the `standardUserDefaults` in the `CDVUUID` property.
 
 ### Windows Phone 7 and 8 Quirks
 
@@ -216,22 +233,24 @@ Get the operating system version.
 
 ### Quick Example
 
-    // Android:    Froyo OS would return "2.2"
-    //             Eclair OS would return "2.1", "2.0.1", or "2.0"
-    //             Version can also return update level "2.1-update1"
-    //
-    // BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
-    //
-    // Browser:    Returns version number for the browser
-    //
-    // iPhone:     iOS 3.2 returns "3.2"
-    //
-    // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
-    // Windows 8: return the current OS version, ex on Windows 8.1 returns 6.3.9600.16384
-    // Tizen: returns "TIZEN_20120425_2"
-    // OSX:        El Capitan would return "10.11.2"
-    //
-    var deviceVersion = device.version;
+```js
+// Android:    Froyo OS would return "2.2"
+//             Eclair OS would return "2.1", "2.0.1", or "2.0"
+//             Version can also return update level "2.1-update1"
+//
+// BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
+//
+// Browser:    Returns version number for the browser
+//
+// iPhone:     iOS 3.2 returns "3.2"
+//
+// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+// Windows 8: return the current OS version, ex on Windows 8.1 returns 6.3.9600.16384
+// Tizen: returns "TIZEN_20120425_2"
+// OSX:        El Capitan would return "10.11.2"
+//
+var deviceVersion = device.version;
+```
 
 ## device.manufacturer
 
@@ -241,7 +260,7 @@ Get the device's manufacturer.
 
 ### Supported Platforms
 
-- Android 
+- Android
 - BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
@@ -249,17 +268,21 @@ Get the device's manufacturer.
 
 ### Quick Example
 
-    // Android:    Motorola XT1032 would return "motorola"
-    // BlackBerry: returns "BlackBerry"
-    // iPhone:     returns "Apple"
-    //
-    var deviceManufacturer = device.manufacturer;
+```js
+// Android:    Motorola XT1032 would return "motorola"
+// BlackBerry: returns "BlackBerry"
+// iPhone:     returns "Apple"
+//
+var deviceManufacturer = device.manufacturer;
+```
 
 ## device.isVirtual
 
 whether the device is running on a simulator.
 
-    var isSim = device.isVirtual;
+```js
+var isSim = device.isVirtual;
+```
 
 ### Supported Platforms
 
@@ -267,7 +290,7 @@ whether the device is running on a simulator.
 - iOS
 - Windows Phone 8
 - Windows
-- OSX 
+- OSX
 
 ### OSX Quirk
 
@@ -277,7 +300,9 @@ The `isVirtual` property on OS X always returns false.
 
 Get the device hardware serial number ([SERIAL](http://developer.android.com/reference/android/os/Build.html#SERIAL)).
 
-    var string = device.serial;
+```js
+var string = device.serial;
+```
 
 ### Supported Platforms
 
