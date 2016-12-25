@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "growth",
+  "author": "Fengda Huang",
+  "homepage": "http://grwoth.ren",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
