@@ -9,9 +9,6 @@
     "installed_plugins": {
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "ren.growth"
-        },
-        "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "ren.growth"
         }
     },
     "dependent_plugins": {}
