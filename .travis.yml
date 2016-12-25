@@ -1,0 +1,89 @@
+#
+# Configuration
+#
+
+sudo: required
+dist: trusty
+
+notifications:
+email: false
+
+addons:
+apt:
+sources:
+- ubuntu-toolchain-r-test
+- google-chrome
+packages:
+- google-chrome-stable
+- lib32stdc++6
+- lib32z1
+
+env:
+global:
+- GH_REF: github.com/phodal/growth-web.git
+- secure: "e5L6GA0aw9KswMDkqYFFx6k/88kc54XuC25sKrMm6DthZP7g0uzI9+Rp/CdrN/074aZ+mGw8iCiC2fj72WuFlC7yq/j7jgl/QQGJS1yu2aTQiJSPxkNV/aeBbqxgWAW9hWqls8EDJjjyxMfJiVxITL++KNX3tkykFMV8rSOU3yu3jhsjr8EBVYZXiDP8wJsL1q2bb0b8uC89lIaQKb6fiU48NWQrjnObWJDsRVYPUv87upzRay0VKvk0HAiwA5PD9oCVShkgURg+TrpCpxa3Ptzu2f4hc/NyhQ73yzxPNiA4nI9f7XlbwhzjiQUODBNfw+kjoMH30uF+fPcjW6tI7d33gUIVRtSGYqWxHRvhevroKIg4YLOE+VHT7P+uSp+ZeUmgwYLG/Kc5o9+Iu6aAUanWaGNfzKmun+XIG12cEn22VX5u6aZ7LVGGpGc9YR/rpOUzIKoMPF1pOqd9A7K+Ncea/Ru/PXU6PCseETWQ9bknHGT9As5fUSVbl9HF8Bbj0Q/asaEhh3YqqIdGN2Z/CHO1VGjRcv90Bdi9sEgdQXYp+UAxEiP2sZTJkq22VU34nP9ewSohf0CyJK2x+VnG/twob3FUhTZqVWrL/z9K2JdGbPV4meSHPr4RJb9IxgN+QDD1OZdDwEfiUbaDS1yCRxUUm7hjchtt9LDkcTtZjFQ="
+
+branches:
+only:
+- master
+
+#
+# Build Lifecycle:
+#
+
+before_install:
+- nvm install 6.0.0
+- nvm use 6.0.0
+- npm install -g cordova ionic
+- npm install -g codeclimate-test-reporter
+- ionic state clear
+- gem install fir-cli
+
+install: npm install
+
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+
+script:
+- gulp build
+- npm test                             # unit tests
+- npm run build                        # ionic build
+# Serve with python as ionic serve needs interaction
+- cd www && python -m SimpleHTTPServer 8100 >> python_serve.log 2>&1 &
+- npm run e2e                          # run e2e tests against ionic
+
+after_failure:
+- cat /home/travis/build/phodal/growth2/python_serve.log
+- cat /home/travis/build/phodal/growth2/ionic_serve.log
+
+after_success:
+# Send coverage info off to cloud ppl
+- codeclimate-test-reporter < coverage/lcov.info
+
+before_deploy:
+# start install android
+- wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+- tar -xzvf android-sdk_r24.2-linux.tgz
+- echo "y" | ./android-sdk-linux/tools/android update sdk --no-ui --filter android-23,build-tools-23.0.1
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-support
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-m2repository
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-google-m2repository
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-google-google_play_services
+- export ANDROID_HOME=${PWD}/android-sdk-linux
+# end install android
+- ionic state restore
+- ionic platform add android
+- ionic build android
+- rm -rf www/*.log
+- rm -rf www/build/test
+# `ionic build android` wraps `cordova build android`, which gives a legit exit code if it fails. Ionic does not; test apk exists.
+- ls ./platforms/android/build/outputs/apk/android*.apk
+
+deploy:
+provider: script
+script: ci/deploy_temp.sh
+skip_cleanup: true
+
+after_deploy:
+- fir publish ./platforms/android/build/outputs/apk/android-debug.apk -s 'growth-test' -T $API_TOKEN
