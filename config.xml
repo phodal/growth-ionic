@@ -98,4 +98,5 @@
     <plugin name="cordova-plugin-google-analytics" spec="~1.0.0" />
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <engine name="android" spec="~6.0.0" />
+    <plugin name="cordova-plugin-wkwebview-engine" spec="https://github.com/driftyco/cordova-plugin-wkwebview-engine.git" />
 </widget>
