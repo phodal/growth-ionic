@@ -151,8 +151,8 @@ export class PagingComponent {
     let animation = new Animation(pagingCircleWrapperRef.nativeElement);
     let circleElement = <HTMLElement> pagingCircleWrapperRef.nativeElement.children[0];
     let innerCircleElement = circleElement.children[0];
-    let circleAnimation = new Animation(circleElement);
-    let innerCircleAnimation = new Animation(innerCircleElement);
+    let circleAnimation = new Animation(null, circleElement);
+    let innerCircleAnimation = new Animation(null, innerCircleElement);
     if (currentIndex === selectedIndex) {
       innerCircleAnimation.fromTo("opacity", "0.0", "1.0");
       circleAnimation.fromTo("scale", `0.5`, `1.0`);
