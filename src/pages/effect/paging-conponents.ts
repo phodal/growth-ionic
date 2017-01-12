@@ -11,7 +11,7 @@ import {
   ViewChild,
   ViewChildren
 } from "@angular/core";
-import {Animation, Content, ViewController} from "ionic-angular";
+import {Animation, Content, ViewController, Platform} from "ionic-angular";
 
 import {ANIMATION_DURATION} from "../../utils/constants";
 
@@ -57,7 +57,7 @@ export class PagingComponent {
   private initialized:boolean = false;
   private ignoreFirst:boolean = true;
 
-  constructor(@Host() host:Content, private ngZone:NgZone, private viewController:ViewController) {
+  constructor(public plt: Platform, @Host() host:Content, private ngZone:NgZone, private viewController:ViewController) {
     this.parentElement = host.getElementRef();
 
     viewController.didEnter.subscribe(() => {
@@ -151,8 +151,8 @@ export class PagingComponent {
     let animation = new Animation(pagingCircleWrapperRef.nativeElement);
     let circleElement = <HTMLElement> pagingCircleWrapperRef.nativeElement.children[0];
     let innerCircleElement = circleElement.children[0];
-    let circleAnimation = new Animation(null, circleElement);
-    let innerCircleAnimation = new Animation(null, innerCircleElement);
+    let circleAnimation = new Animation(this.plt, circleElement);
+    let innerCircleAnimation = new Animation(this.plt, innerCircleElement);
     if (currentIndex === selectedIndex) {
       innerCircleAnimation.fromTo("opacity", "0.0", "1.0");
       circleAnimation.fromTo("scale", `0.5`, `1.0`);
