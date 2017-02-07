@@ -18,6 +18,14 @@
       论坛: http://forum.growth.ren/
       <ion-icon name="people-outline" item-right></ion-icon>
     </button>
+    <ion-item>
+      当前版本
+      <span item-right>{{version}}</span>
+    </ion-item>
+
+    <button ion-item (click)="openUrl('http://growth.ren/privacy')">
+      隐私声明
+    </button>
   </ion-item-group>
 
   <ion-item-group>
