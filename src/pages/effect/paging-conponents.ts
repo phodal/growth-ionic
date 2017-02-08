@@ -99,7 +99,7 @@ export class PagingComponent {
     let previousDistanceNeededToMove = this.currentAmountShiftedInPx;
     this.currentAmountShiftedInPx = centerPoint - selectedItemCenterPoint;
 
-    let animation = new Animation(this.container.nativeElement);
+    let animation = new Animation(this.plt, this.container.nativeElement);
     animation.fromTo("translateX", `${previousDistanceNeededToMove}px`, `${this.currentAmountShiftedInPx}px`);
 
     for (let i = 0; i < pagingCircleWrapperElements.length; i++) {
@@ -111,7 +111,7 @@ export class PagingComponent {
         if (this.ignoreFirst) {
           this.ignoreFirst = false;
         } else {
-          let circleAnimation = new Animation(this.zoomCircleRef.nativeElement);
+          let circleAnimation = new Animation(this.plt, this.zoomCircleRef.nativeElement);
           let animationOriginY = pagingCircleWrapperElements[newIndex].nativeElement.offsetTop + SMALL_CIRCLE_DIAMETER / 2;
 
           let circleXOrigin = selectedItemCenterPoint - SMALL_CIRCLE_DIAMETER / 2;
@@ -148,7 +148,7 @@ export class PagingComponent {
   }
 
   buildChildAnimation(selectedIndex:number, currentIndex:number, pagingCircleWrapperRef:ElementRef, originalOffset:number, newOffset:number) {
-    let animation = new Animation(pagingCircleWrapperRef.nativeElement);
+    let animation = new Animation(this.plt, pagingCircleWrapperRef.nativeElement);
     let circleElement = <HTMLElement> pagingCircleWrapperRef.nativeElement.children[0];
     let innerCircleElement = circleElement.children[0];
     let circleAnimation = new Animation(this.plt, circleElement);

@@ -1,7 +1,7 @@
 import {Component, ViewChild, ElementRef} from "@angular/core";
 import {PageObject, AnimationReadyEvent} from "../../effect/paging-conponents";
 import {BodyContent} from "./body-content";
-import {NavParams, NavController, GestureController, Animation} from "ionic-angular";
+import {NavParams, NavController, GestureController, Animation, Platform} from "ionic-angular";
 import {QUIZS} from "../../../data/QUIZS";
 import * as _ from "lodash";
 
@@ -22,7 +22,7 @@ export class ExamDetailPage {
   private allQuestions;
   private questionsWithShuffle;
 
-  constructor(public params: NavParams, public nav: NavController, public gestureController: GestureController) {
+  constructor(public params: NavParams, public nav: NavController, public gestureController: GestureController, public plt: Platform) {
     this.domain = params.get("domain");
     this.allQuestions = QUIZS[this.domain];
     this.questionsWithShuffle = this.shuffleQuestion(this.allQuestions);
@@ -78,7 +78,7 @@ export class ExamDetailPage {
   private exchangeAnimation(previousIndex, selectedIndex) {
     let component = this.content.nativeElement.querySelectorAll('body-content > ion-nav ng-component');
     let currentComponent = component[this.activeIndex];
-    let componentAnimation = new Animation(currentComponent);
+    let componentAnimation = new Animation(this.plt, currentComponent);
 
     if (previousIndex >= selectedIndex) {
       componentAnimation
