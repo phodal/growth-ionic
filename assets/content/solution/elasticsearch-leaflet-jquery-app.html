@@ -1,0 +1,59 @@
+<h2>WebGis</h2>
+
+<h3>GIS架构说明 —— 服务端</h3>
+<p>简单说明:</p>
+<ul>
+<li>用户在前台或者后台创建数据。</li>
+<li>在model保存数据的时候，会调用Google的API解析GPS</li>
+<li>在haystack的配置中设置实时更新，当数据创建的时候自动更新索引</li>
+<li>数据被ElasticSearch索引</li>
+</ul>
+<p>下面是框架的一些简单的介绍</p>
+<h4>Django</h4>
+<blockquota><a href="http://www.phodal.com/blog/tag/django/">Django</a> 是一个开放源代码的Web应用框架，由Python写成。采用了MVC的软件设计模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的。并于2005年7月在BSD许可证下发布。这套框架是以比利时的吉普赛爵士吉他手Django Reinhardt来命名的。</blockquota>
+<blockquota> <a href="http://www.phodal.com/blog/tag/django/">Django</a> 的主要目标是使得开发复杂的、数据库驱动的网站变得简单。Django注重组件的重用性和“可插拔性”，敏捷开发和DRY法则（Don't Repeat Yourself）。在Django中Python被普遍使用，甚至包括配置文件和数据模型。</p>
+<p>首先考虑Django，而不是其他Node或者Ruby框架的原因是：</blockquota>
+<ul>
+<li>内置认证系统</li>
+<li>内置CSRF</li>
+</ul>
+<p>当然这是其他框架也所拥有的，主要特性还有:</p>
+<ul>
+<li>一个表单序列化及验证系统，用于HTML表单和适于数据库存储的数据之间的转换。</li>
+<li>一套协助创建地理信息系统（GIS）的基础框架</li>
+</ul>
+<p>最后一个才是亮点，内置GIS，虽然没怎么用到，但是至少在部署上还是比较方便的。</p>
+<h3>Haystack</h3>
+<blockquota> Haystack provides modular search for Django. It features a unified, familiar API that allows you to plug in different search backends (such as Solr, Elasticsearch, Whoosh, Xapian, etc.) without having to modify your code.</blockquota>
+<p>Haystack是为Django提供一个搜索模块blabla..，他的主要特性是可以</p>
+<p>&gt; write your search code once and choose the search engine you want it to run on</p>
+<p>也就是说你只需要写你的代码选择你的搜索引擎就可以工作了。</p>
+<h3>ElasticSearch</h3>
+<p>在上面的Haystack提供了这些一堆的搜索引擎，当然支持地点搜索的只有<code>Solr</code>和<code>ElasticSearch</code>，他们支持的空间搜索有:</p>
+<ul>
+<li>within </li>
+<li>dwithin </li>
+<li>distance </li>
+<li>order_by(‘distance’) </li>
+<li>polygon </li>
+</ul>
+<p>在文档上没有写Solr的polygon搜索，但是实际上也是支持的(详细见这篇文章: <a href="http://www.phodal.com/blog/google-map-width-solr-use-polygon-search/，用的地图是谷歌，所以需要先学会访问谷歌">google map solr polygon 搜索</a>。</p>
+<p>至于为什么用的是ElasticSearch，是因为之前用Solr做过。。。</p>
+<h3>GIS架构说明 —— 客户端</h3>
+<h4>简单说明 —— GET</h4>
+<ol>
+<li>当我们访问Map View的时候，会调用HTML5获取用户的位置</li>
+<li>根据用户的位置定位，设置缩放</li>
+<li>根据用户的位置发出ElasticSearch请求，返回结果中带上距离</li>
+<li>显示</li>
+</ol>
+<h4>简单说明 —— POST</h4>
+<ol>
+<li>用户填写数据会发给Django API，并验证</li>
+<li>成功时，存入数据库，更新索引。</li>
+</ol>
+<h3>Ionic</h3>
+<blockquota>Ionic提供了一个免费且开源的移动优化HTML，CSS和JS组件库，来构建高交互性应用。基于Sass构建和AngularJS 优化。</blockquota>
+<p>用到的主要是AngularJS，之前用他写过三个APP。</p>
+<h3>Django REST Framework</h3>
+<p>与Django Tastypie相比，DRF的主要优势在于Web界面的调试。</p>

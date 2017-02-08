@@ -1,0 +1,134 @@
+<h2 id="mvc">MVC</h2>
+<p>人们在不断地反思这其中复杂的过程，整理了一些好的架构模式，其中不得不提到的是我司 Martin Fowler 的《企业应用架构模式》。该书中文译版出版的时候是2004年，那时对于系统的分层是</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">层次</th>
+<th align="left">职责</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">表现层</td>
+<td align="left">提供服务、显示信息、用户请求、HTTP请求和命令行调用。</td>
+</tr>
+<tr class="even">
+<td align="left">领域层</td>
+<td align="left">逻辑处理，系统中真正的核心。</td>
+</tr>
+<tr class="odd">
+<td align="left">数据层</td>
+<td align="left">与数据库、消息系统、事物管理器和其他软件包通讯。</td>
+</tr>
+</tbody>
+</table>
+<p>化身于当时最流行的 Spring，就是 MVC。人们有了 iBatis 这样的数据持久层框架，即 ORM，对象关系映射。于是，你的 package 就会有这样的几个文件夹：</p>
+<pre><code>|____mappers
+|____model
+|____service
+|____utils
+|____controller</code></pre>
+<p>在 mappers 这一层，我们所做的莫过于如下所示的数据库相关查询：</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@Insert</span>(
+        <span class="st">&quot;INSERT INTO users(username, password, enabled) &quot;</span> +
+                <span class="st">&quot;VALUES (#{userName}, #{passwordHash}, #{enabled})&quot;</span>
+)
+<span class="fu">@Options</span>(keyProperty = <span class="st">&quot;id&quot;</span>, keyColumn = <span class="st">&quot;id&quot;</span>, useGeneratedKeys = <span class="kw">true</span>)
+<span class="dt">void</span> <span class="fu">insert</span>(User user);</code></pre></div>
+<p>model 文件夹和 mappers 文件夹都是数据层的一部分，只是两者间的职责不同，如：</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">getUserName</span>() {
+    <span class="kw">return</span> userName;
+}
+
+<span class="kw">public</span> <span class="dt">void</span> <span class="fu">setUserName</span>(String userName) {
+    <span class="kw">this</span>.<span class="fu">userName</span> = userName;
+}</code></pre></div>
+<p>而他们最后都需要在 Controller，又或者称为 ModelAndView 中处理：</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@RequestMapping</span>(value = {<span class="st">&quot;/disableUser&quot;</span>}, method = RequestMethod.<span class="fu">POST</span>)
+<span class="kw">public</span> ModelAndView <span class="fu">processUserDisable</span>(HttpServletRequest request, ModelMap model) {
+    String userName = request.<span class="fu">getParameter</span>(<span class="st">&quot;userName&quot;</span>);
+    User user = userService.<span class="fu">getByUsername</span>(userName);
+    userService.<span class="fu">disable</span>(user);
+    Map&lt;String,User&gt; map = <span class="kw">new</span> HashMap&lt;String,User&gt;();
+    Map &lt;User,String&gt; usersWithRoles= userService.<span class="fu">getAllUsersWithRole</span>();
+    model.<span class="fu">put</span>(<span class="st">&quot;usersWithRoles&quot;</span>,usersWithRoles);
+    <span class="kw">return</span> <span class="kw">new</span> <span class="fu">ModelAndView</span>(<span class="st">&quot;redirect:users&quot;</span>,map);
+}</code></pre></div>
+<p>在多数时候，Controller 不应该直接与数据层的一部分，而将业务逻辑放在 Controller 层又是一种错误，这时就有了 Service 层，如下图：</p>
+<div class="figure">
+<img src="assets/content/article/chapter2/service-mvc.png" alt="Service MVC" />
+<p class="caption">Service MVC</p>
+</div>
+<p>Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的 Controller 只应该做自己应该做的事，它不应该处理业务相关的代码：</p>
+<p>我们在 Controller 层应该做的事是：</p>
+<ol style="list-style-type: decimal">
+<li>处理请求的参数</li>
+<li>渲染和重定向</li>
+<li>选择 Model 和 Service</li>
+<li>处理 Session 和 Cookies</li>
+</ol>
+<p>业务是善变的，昨天我们可能还在和对手竞争谁先推出新功能，但是今天可能已经合并了。我们很难预见业务变化，但是我们应该能预见 Controller 是不容易变化的。在一些设计里面，这种模式就是 Command 模式。</p>
+<h3 id="model">Model</h3>
+<blockquote>
+<p>模型用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。</p>
+</blockquote>
+<p>它是介于数据与控制器之间的层级，拥有对数据直接访问的权力——增删改查(CRUD)。Web 应用中，数据通常是由数据库来存储，有时也会用搜索引擎来存储</p>
+<p>因此在实现这个层级与数据库交付时，可以使用 SQL 语句，也可以使用 ORM 框架。</p>
+<p>SQL(Structured Query Language，即结构化查询语言)， 语句是数据库的查询语言</p>
+<p>ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库中的关系数据映射称为程序中的对象。</p>
+<h3 id="view">View</h3>
+<p>View 层在 Web 应用中，一般是使用模板引擎装载对应 HTML。如下所示的是一段 JSP 代码：</p>
+<div class="sourceCode"><pre class="sourceCode jsp"><code class="sourceCode jsp">&lt;html&gt;
+&lt;head&gt;&lt;title&gt;First JSP&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;%
+    <span class="dt">double</span> num = Math.random();
+    <span class="kw">if</span> (num &gt; <span class="fl">0.95</span>) {
+  %&gt;
+      &lt;h2&gt;You&#39;ll have a luck day!&lt;/h2&gt;&lt;p&gt;(&lt;%= num %&gt;)&lt;/p&gt;
+  &lt;%
+    } <span class="kw">else</span> {
+  %&gt;
+      &lt;h2&gt;Well, life goes on ... &lt;/h2&gt;&lt;p&gt;(&lt;%= num %&gt;)&lt;/p&gt;
+  &lt;%
+    }
+  %&gt;
+  &lt;a<span class="ot"> href</span>=<span class="dt">&quot;</span>&lt;%= request.getRequestURI() %&gt;<span class="dt">&quot;</span>&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>上面的 JSP 代码在经过程序解析、处理后，会变成相对应的 HTML。而我们可以发现在这里的 View 层不仅仅只有模板的作用，我们会发现这里的 View 层还计划了部分的逻辑。我们可以在后面细细看这些问题，对于前端的 View 层来说，他可能是这样的：</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;information pure-g&quot;</span><span class="kw">&gt;</span>
+    {{#.}}
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;pure-u-1 &quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;l-box&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;h3</span><span class="ot"> class=</span><span class="st">&quot;information-head&quot;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#/blog/{{slug}}&quot;</span><span class="ot"> alt=</span><span class="st">&quot;{{title}}&quot;</span><span class="kw">&gt;</span>{{title}}<span class="kw">&lt;/a&gt;&lt;/h3&gt;</span>
+            <span class="kw">&lt;p&gt;</span>
+                发布时间:<span class="kw">&lt;span&gt;</span>{{created}}<span class="kw">&lt;/span&gt;</span>
+            <span class="kw">&lt;p&gt;</span>
+                {{{content}}}
+            <span class="kw">&lt;/p&gt;</span>
+
+            <span class="kw">&lt;/p&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    {{/.}}
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>在这里的 View 层只是单纯的一个显示作用，这也是我们推荐的做法。业务逻辑应该尽可能的放置于业务层。</p>
+<h3 id="controller">Controller</h3>
+<blockquote>
+<p>控制器层起到不同层面间的组织作用，用于控制应用程序的流程。</p>
+</blockquote>
+<h3 id="更多">更多</h3>
+<p>在前后端解耦合的系统中，通常系统的架构模式就变成了 MVP，又或者是 MVVM。</p>
+<div class="figure">
+<img src="assets/content/article/chapter2/mvc-mvvm-mvp.png" alt="MVC、MVVM、MVP 对比" />
+<p class="caption">MVC、MVVM、MVP 对比</p>
+</div>
+<p>三者间很大的不同在于层级间的通讯模型、使用场景。</p>
+<h4 id="mvp">MVP</h4>
+<blockquote>
+<p>MVP 是从经典的模式 MVC 演变而来，它们的基本思想有相通的地方：Controller/Presenter 负责逻辑的处理，Model 提供数据，View 负责显示。</p>
+</blockquote>
+<h4 id="mvvm">MVVM</h4>
+<p>MVVM 是 Model-View-ViewModel 的简写。相比于MVC悠久的历史来说，MVVM 是一个相当新的架构，它最早于2005年被由的 WPF 和Silverlight 的架构师 John Gossman 提出，并且应用在微软的软件开发中。而 MVC 已经被提出了二十多年了，可见两者出现的年代差别有多大。</p>
+<p>MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变化时，ViewModel 会自动更新，而 ViewModel 变化时，View 也会自动变化。所以，MVVM 模式有些时候又被称作：model-view-binder 模式。</p>

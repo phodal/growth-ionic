@@ -1,0 +1,197 @@
+<h2 id="intellij-idea-重构">Intellij Idea 重构</h2>
+<p>下面简单地介绍一下，一些可以直接使用 IDE 就能完成的重构。这种重构可以用在日常的工作中，只需要使用 IDE 上的快捷键就可以完成了。</p>
+<h3 id="提炼函数">提炼函数</h3>
+<p>Intellij IDEA 带了一些有意思的快捷键，或者说自己之前不在意这些快捷键的存在。重构作为单独的一个菜单，显然也突显了其功能的重要性，说说<strong>提炼函数</strong>，或者说提出方法。</p>
+<p>快捷键</p>
+<p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
+<p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>M</code></p>
+<p>鼠标: Refactor | Extract | Method</p>
+<p><strong>重构之前</strong></p>
+<p>以重构一书代码为例，重构之前的代码</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
+    <span class="kw">private</span> String _name;
+
+    <span class="dt">void</span> <span class="fu">printOwing</span>(<span class="dt">double</span> amount){
+        <span class="fu">printBanner</span>();
+
+        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
+    }
+
+    <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
+    }
+}</code></pre></div>
+<p><strong>重构</strong></p>
+<p>选中</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
+<p>按下上述的快捷键，会弹出下面的对话框</p>
+<div class="figure">
+<img src="assets/content/article/chapter3/extract-method.png" alt="Extrct Method" />
+<p class="caption">Extrct Method</p>
+</div>
+<p>输入</p>
+<pre><code> printDetails</code></pre>
+<p>那么重构就完成了。</p>
+<p><strong>重构之后</strong></p>
+<p>IDE 就可以将方法提出来</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
+    <span class="kw">private</span> String _name;
+
+    <span class="dt">void</span> <span class="fu">printOwing</span>(<span class="dt">double</span> amount){
+        <span class="fu">printBanner</span>();
+        <span class="fu">printDetails</span>(amount);
+    }
+
+    <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printDetails</span>(<span class="dt">double</span> amount) {
+        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
+    }
+
+    <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
+    }
+}</code></pre></div>
+<p><strong>重构</strong></p>
+<p>还有一种就以 Intellij IDEA 的示例为例，这像是在说其的智能。</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
+        <span class="dt">int</span> one = <span class="dv">1</span>;
+        <span class="dt">int</span> two = <span class="dv">2</span>;
+        <span class="dt">int</span> three = one + two;
+        <span class="dt">int</span> four = one + three;
+    }
+}</code></pre></div>
+<p>只是这次要选中的只有一行，</p>
+<pre><code>int three = one + two;</code></pre>
+<p>以便于其的智能，它便很愉快地告诉你它又找到了一个重复</p>
+<pre><code> IDE has detected 1 code fragments in this file that can be replaced with a call to extracted method...</code></pre>
+<p>便返回了这样一个结果</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
+
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
+        <span class="dt">int</span> one = <span class="dv">1</span>;
+        <span class="dt">int</span> two = <span class="dv">2</span>;
+        <span class="dt">int</span> three = <span class="fu">add</span>(one, two);
+        <span class="dt">int</span> four = <span class="fu">add</span>(one, three);
+    }
+
+    <span class="kw">private</span> <span class="dt">int</span> <span class="fu">add</span>(<span class="dt">int</span> one, <span class="dt">int</span> two) {
+        <span class="kw">return</span> one + two;
+    }
+
+}</code></pre></div>
+<p>然而我们就可以很愉快地继续和它玩耍了。当然这其中还会有一些更复杂的情形，当学会了这一个剩下的也不难了。</p>
+<h3 id="内联函数">内联函数</h3>
+<p>继续走这重构一书的复习之路，接着便是内联，除了内联变量，当然还有内联函数。</p>
+<p>快捷键</p>
+<p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
+<p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>M</code></p>
+<p>鼠标: Refactor | Inline</p>
+<p><strong>重构之前</strong></p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
+
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
+        <span class="dt">int</span> one = <span class="dv">1</span>;
+        <span class="dt">int</span> two = <span class="dv">2</span>;
+        <span class="dt">int</span> three = <span class="fu">add</span>(one, two);
+        <span class="dt">int</span> four = <span class="fu">add</span>(one, three);
+    }
+
+    <span class="kw">private</span> <span class="dt">int</span> <span class="fu">add</span>(<span class="dt">int</span> one, <span class="dt">int</span> two) {
+        <span class="kw">return</span> one + two;
+    }
+
+}</code></pre></div>
+<p>在<code>add(one,two)</code>很愉快地按上个快捷键吧，就会弹出</p>
+<div class="figure">
+<img src="assets/content/article/chapter3/inline.jpg" alt="Inline Method" />
+<p class="caption">Inline Method</p>
+</div>
+<p>再轻轻地回车，Refactor 就这么结束了。。</p>
+<p><strong>Intellij Idea 内联临时变量</strong></p>
+<p>以书中的代码为例</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">double</span> basePrice = anOrder.<span class="fu">basePrice</span>();
+<span class="kw">return</span> (basePrice &gt; <span class="dv">1000</span>);</code></pre></div>
+<p>同样的，按下<code>Command</code>+<code>alt</code>+<code>N</code></p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">return</span> (anOrder.<span class="fu">basePrice</span>() &gt; <span class="dv">1000</span>);</code></pre></div>
+<p>对于 python 之类的语言也是如此</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> inline_method():
+    baseprice <span class="op">=</span> anOrder.basePrice()
+    <span class="cf">return</span> baseprice <span class="op">&gt;</span> <span class="dv">1000</span></code></pre></div>
+<h3 id="查询取代临时变量">查询取代临时变量</h3>
+<p>快捷键</p>
+<p>Mac: 木有</p>
+<p>Windows/Linux: 木有</p>
+<p>或者: <code>Shift</code>+<code>alt</code>+<code>command</code>+<code>T</code> 再选择 <code>Replace Temp with Query</code></p>
+<p>鼠标: <strong>Refactor</strong> | <code>Replace Temp with Query</code></p>
+<p><strong>重构之前</strong></p>
+<p>过多的临时变量会让我们写出更长的函数，函数不应该太多，以便使功能单一。这也是重构的另外的目的所在，只有函数专注于其功能，才会更容易读懂。</p>
+<p>以书中的代码为例</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
+
+<span class="kw">public</span> <span class="kw">class</span> replaceTemp {
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">count</span>() {
+        <span class="dt">double</span> basePrice = _quantity * _itemPrice;
+        <span class="kw">if</span> (basePrice &gt; <span class="dv">1000</span>) {
+            <span class="kw">return</span> basePrice * <span class="fl">0.95</span>;
+        } <span class="kw">else</span> {
+            <span class="kw">return</span> basePrice * <span class="fl">0.98</span>;
+        }
+    }
+}</code></pre></div>
+<p><strong>重构</strong></p>
+<p>选中<code>basePrice</code>很愉快地拿鼠标点上面的重构</p>
+<div class="figure">
+<img src="assets/content/article/chapter3/replace.jpg" alt="Replace Temp With Query" />
+<p class="caption">Replace Temp With Query</p>
+</div>
+<p>便会返回</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
+
+<span class="kw">public</span> <span class="kw">class</span> replaceTemp {
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">count</span>() {
+        <span class="kw">if</span> (<span class="fu">basePrice</span>() &gt; <span class="dv">1000</span>) {
+            <span class="kw">return</span> <span class="fu">basePrice</span>() * <span class="fl">0.95</span>;
+        } <span class="kw">else</span> {
+            <span class="kw">return</span> <span class="fu">basePrice</span>() * <span class="fl">0.98</span>;
+        }
+    }
+
+    <span class="kw">private</span> <span class="dt">double</span> <span class="fu">basePrice</span>() {
+        <span class="kw">return</span> _quantity * _itemPrice;
+    }
+}</code></pre></div>
+<p>而实际上我们也可以</p>
+<ol style="list-style-type: decimal">
+<li><p>选中</p>
+<pre><code>_quantity * _itemPrice</code></pre></li>
+<li><p>对其进行<code>Extrace Method</code></p></li>
+<li><p>选择<code>basePrice</code>再<code>Inline Method</code></p></li>
+</ol>
+<p>在 Intellij IDEA 的文档中对此是这样的例子</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> replaceTemp {
+
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
+        String str = <span class="st">&quot;str&quot;</span>;
+        String aString = <span class="fu">returnString</span>().<span class="fu">concat</span>(str);
+        System.<span class="fu">out</span>.<span class="fu">println</span>(aString);
+    }
+
+}</code></pre></div>
+<p>接着我们选中<code>aString</code>，再打开重构菜单，或者</p>
+<p><code>Command</code>+<code>Alt</code>+<code>Shift</code>+<code>T</code> 再选中 Replace Temp with Query</p>
+<p>便会有下面的结果:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.String;</span>
+
+<span class="kw">public</span> <span class="kw">class</span> replaceTemp {
+
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
+        String str = <span class="st">&quot;str&quot;</span>;
+        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="fu">aString</span>(str));
+    }
+
+    <span class="kw">private</span> String <span class="fu">aString</span>(String str) {
+        <span class="kw">return</span> <span class="fu">returnString</span>().<span class="fu">concat</span>(str);
+    }
+
+}</code></pre></div>

@@ -1,135 +1,43 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Growth by phodal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Growth</h1>
-      <h2 class="project-tagline">一个帮你成为顶尖开发者的APP</h2>
-      <a href="https://github.com/phodal/growth" class="btn">View on GitHub</a>
-      <a href="https://github.com/phodal/growth/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/phodal/growth/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src *;img-src * data: ; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' localhost:* 127.0.0.1:*">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
 
-    <section class="main-content">
-      <h2>
-<a id="growth--be-awesome-developer" class="anchor" href="#growth--be-awesome-developer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Growth —— Be Awesome Developer</h2>
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
 
-<p><img src="https://img.shields.io/badge/Growth-Awesome%20Developer-%235e6772.svg" alt="Growth | Awesome Developer"></p>
+  <!-- cordova.js required for cordova apps -->
+  <script src="cordova.js"></script>
 
-<p><strong>下载</strong>:</p>
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
 
-<p><a href="https://play.google.com/store/apps/details?id=ren.growth&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"></a>
-<a href="http://windowsphone.com/s?appid=a6022e5d-b101-4d8f-a836-d3bfb6fd73ef"><img src="https://assets.windowsphone.com/8d997df3-5b6e-496c-88b3-e3f40117c8fd/English-get-it-from-MS_InvariantCulture_Default.png" alt="Get it from Microsoft"></a>
-<a href="https://itunes.apple.com/us/app/growth/id1078807522?l=zh&amp;ls=1&amp;mt=8" width="180"><img src="https://github.com/phodal/growth/raw/master/docs/apple.png" alt="Get it from Apple Store"></a></p>
+  <link href="build/main.css" rel="stylesheet">
+  <link href="assets/css/animate.css" rel="stylesheet">
 
-<p>(PS: Android: 已在其他各大应用商店发布，最新下载：<a href="http://fir.im/phodal">http://fir.im/phodal</a> )</p>
+</head>
+<body>
 
-<p><strong>Desktop</strong></p>
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
 
-<p>Powered by Electron，Support OS:</p>
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
 
-<ol>
-<li>Mac OS X</li>
-<li>GNU/Linux</li>
-<li>Windows</li>
-</ol>
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
 
-<p><a href="https://github.com/phodal/growth/releases">Download</a></p>
-
-<p><strong>Web</strong>:</p>
-
-<p>Online: <a href="http://www.growth.ren/">http://www.growth.ren/</a></p>
-
-<p><strong>Other</strong></p>
-
-<p>QQ群: 529600394，我的微信公众号: phodal</p>
-
-<p><img src="www/img/wechat.jpg" alt="QRCode"></p>
-
-<h2>
-<a id="简介" class="anchor" href="#%E7%AE%80%E4%BB%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>简介</h2>
-
-<p>Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程及技术栈，Web开发的学习路线、成长衡量等各方面。在这里，你将通过不断检验自己的学习成效，形成属于你自己的独一无二的个性技能图谱。</p>
-
-<p>在这里你可以了解到：</p>
-
-<ul>
-<li>完整的Web开发，运维，部署，维护</li>
-<li>如何写好代码——重构、测试、模式</li>
-<li>遗留代码、遗留系统的形成</li>
-</ul>
-
-<p>在这里你可以get到：</p>
-
-<ul>
-<li>不同阶段所需的不同技能</li>
-<li>相关书单推荐</li>
-<li>相关技术栈推荐</li>
-<li>Web应用解决方案</li>
-</ul>
-
-<p>在这里你还可以：</p>
-
-<ul>
-<li>玩玩小游戏了解技能掌握状况</li>
-<li>一键解锁新技能，形成技能图谱 </li>
-<li>一步步成为Web顶尖开发者 </li>
-</ul>
-
-<p><img src="screenshot/1.pic.jpg" alt="1">
-<img src="screenshot/2.pic.jpg" alt="2">
-<img src="screenshot/3.pic.jpg" alt="3">
-<img src="screenshot/4.pic.jpg" alt="4">
-<img src="screenshot/5.pic.jpg" alt="5">
-<img src="screenshot/6.pic.jpg" alt="6"></p>
-
-<h2>
-<a id="开发文档" class="anchor" href="#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>开发文档</h2>
-
-<p><a href="./docs">Docs</a></p>
-
-<h3>
-<a id="内容贡献者" class="anchor" href="#%E5%86%85%E5%AE%B9%E8%B4%A1%E7%8C%AE%E8%80%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>内容贡献者</h3>
-
-<p>前端问题来源于: <a href="http://markyun.github.io/2015/Front-end-Developer-Questions/">http://markyun.github.io/2015/Front-end-Developer-Questions/</a></p>
-
-<p>感谢以下的内容贡献者们，结果由git-summary生成</p>
-
-<pre><code> project  : growth
- repo age : 5 weeks
- active   : 35 days
- commits  : 901
- files    : 755
- authors  :
-   893  Fengda HUANG  99.1%
-     8  Le Deng       0.9
-</code></pre>
-
-<p>英语版:  <a href="https://github.com/raydeng83">Le Deng</a></p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
-
-<p>© 2015~2016 <a href="https://www.phodal.com">Phodal Huang</a>. This code is distributed under the CC0 1.0 Universal license. See <code>LICENSE</code> in this directory.</p>
-
-<p><a href="http://www.xuntayizhan.com/person/ji-ke-ai-qing-zhi-er-shi-dai-wo-dai-ma-bian-cheng-qu-ni-wei-qi-ke-hao-wan/">待我代码编成，娶你为妻可好</a></p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/phodal/growth">Growth</a> is maintained by <a href="https://github.com/phodal">phodal</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+</body>
 </html>

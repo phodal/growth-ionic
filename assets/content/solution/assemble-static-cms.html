@@ -1,0 +1,66 @@
+<h2>静态网站</h2>
+
+<h3>系统架构</h3>
+
+<p>或许你也用过Hexo / Jekyll / Octopress这样的静态博客，他们的原理都是类似的。我们有一个代码库用于生成静态页面，然后这些静态页面会被PUSH到Github Pages上。</p>
+<p>从我们设计系统的角度来说，我们会在Github上有三个代码库：</p>
+<ol>
+<li>Content。用于存放编辑器生成的JSON文件，这样我们就可以GET这些资源，并用Backbone / Angular / React 这些前端框架来搭建SPA。</li>
+<li>Code。开发者在这里存放他们的代码，如主题、静态文件生成器、资源文件等等。</li>
+<li>Builder。在这里它是运行于Travis CI上的一些脚本文件，用于Clone代码，并执行Code中的脚本。</li>
+</ol>
+<p>以及一些额外的服务，当且仅当你有一些额外的功能需求的时候。</p>
+<ol>
+<li>Extend Service。当我们需要搜索服务时，我们就需要这样的一些服务。如我正考虑使用Python的whoosh来完成这个功能，这时候我计划用Flask框架，但是只是计划中——因为没有合适的中间件。</li>
+<li>Editor。相比于前面的那些知识这一步适合更重要，也就是为什么生成的格式是JSON而不是Markdown的原理。对于非程序员来说，要熟练掌握Markdown不是一件容易的事。于是，一个考虑中的方案就是使用 Electron + Node.js来生成API，最后通过GitHub API V3来实现上传。</li>
+</ol>
+<p>So，这一个过程是如何进行的。</p>
+
+<h3>用户场景</h3>
+<p>整个过程的Pipeline如下所示：</p>
+<ol>
+<li>编辑使用他们的编辑器来编辑的内容并点击发布，然后这个内容就可以通过GitHub API上传到Content这个Repo里。</li>
+<li>这时候需要有一个WebHooks监测到了Content代码库的变化，便运行Builder这个代码库的Travis CI。</li>
+<li>这个Builder脚本首先，会设置一些基本的git配置。然后clone Content和Code的代码，接着运行构建命令，生成新的内容。</li>
+<li>然后Builder Commit内容，并PUSH内容。</li>
+</ol>
+<p>这里还依赖于WebHook这个东西——还没想到一个合适的解决方案。下面，我们对里面的内容进行一些拆解，Content里面由于是JSON就不多解释了。</p>
+<h2>Builder: 构建工具</h2>
+<p>Github与Travis之间，可以做一个自动部署的工具。相信已经有很多人在Github上玩过这样的东西——先在Github上生成Token，然后用travis加密：</p>
+<pre><code class="bash hljs">travis encrypt-file ssh_key --add
+</code></pre>
+<p>加密后的Key就会保存到<code>.travis.yml</code>文件里，然后就可以在Travis CI上push你的代码到Github上了。</p>
+<p>接着，你需要创建个deploy脚本，并且在<code>after_success</code>执行它：</p>
+<pre><code class="yml hljs bash">after_success:
+  - <span class="hljs-built_in">test</span> <span class="hljs-variable">$TRAVIS_PULL_REQUEST</span> == <span class="hljs-string">"false"</span> &amp;amp;&amp;amp; <span class="hljs-built_in">test</span> <span class="hljs-variable">$TRAVIS_BRANCH</span> == <span class="hljs-string">"master"</span> &amp;amp;&amp;amp; bash deploy.sh
+</code></pre>
+<p>在这个脚本里，你所需要做的就是clone content和code中的代码，并执行code中的生成脚本，生成新的内容后，提交代码。</p>
+
+<p>这就是这个builder做的事情——其中最主要的一个任务是<code>grunt</code>，它所做的就是:</p>
+<pre><code class="javascript hljs">grunt.registerTask(<span class="hljs-string">'default'</span>, [<span class="hljs-string">'clean'</span>, <span class="hljs-string">'assemble'</span>, <span class="hljs-string">'copy'</span>]);
+</code></pre>
+
+<h3>Code: 静态页面生成</h3>
+<p>Assemble是一个使用Node.js，Grunt.js，Gulp，Yeoman 等来实现的静态网页生成系统。这样的生成器有很多，Zurb Foundation, Zurb Ink, Less.js / lesscss.org, Topcoat, Web Experience Toolkit等组织都使用这个工具来生成。这个工具似乎上个Release在一年多以前，现在正在开始0.6。虽然，这并不重要，但是还是顺便一说。</p>
+<p>我们所要做的就是在我们的<code>Gruntfile.js</code>中写相应的生成代码。</p>
+
+<p>配置中的site用于生成页面相关的内容，blogs则可以根据json文件的文件名生成对就的html文件存储到blog目录中。</p>
+<p>生成后的目录结果如下图所示：</p>
+
+<p>这里的静态文件内容就是最后我们要发布的内容。</p>
+<p>还需要做的一件事情就是：</p>
+<pre><code class="javascript hljs">grunt.registerTask(<span class="hljs-string">'dev'</span>, [<span class="hljs-string">'default'</span>, <span class="hljs-string">'connect:server'</span>, <span class="hljs-string">'watch:site'</span>]);
+</code></pre>
+<p>用于开发阶段这样的代码就够了，这个和你使用WebPack + React 似乎相差不了多少。</p>
+<h2>编辑-发布-开发分离</h2>
+<p>在这种情形中，编辑能否完成工作就不依赖于网站——脱稿又少了 个借口。这时候网站出错的概率太小了——你不需要一个缓存服务器、HTTP服务器，由于没有动态生成的内容，你也不需要守护进程。这些内容都是静态文件，你可以将他们放在任何可以提供静态文件托管的地方——CloudFront、S3等等。或者你再相信自己的服务器，Nginx可是全球第二好（第一还没出现）的静态文件服务器。</p>
+<p>开发人员只在需要的时候去修改网站的一些内容。</p>
+<p>So，你可能会担心如果这时候修改的东西有问题了怎么办。</p>
+<ol>
+<li>使用这种模式就意味着你需要有测试来覆盖这些构建工具、生成工具。</li>
+<li>相比于自己的代码，别人的CMS更可靠？</li>
+</ol>
+<p>需要注意的是如果你上一次构建成功，你生成的文件都是正常的，那么你只需要回滚开发相关的代码即可。旧的代码仍然可以工作得很好。</p>
+<p>其次，由于生成的是静态文件，查错的成本就比较低。</p>
+<p>最后，重新放上之前的静态文件。</p>
+</div>

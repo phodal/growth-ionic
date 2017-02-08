@@ -1,0 +1,137 @@
+<h2 id="用户数据分析google-analytics">用户数据分析：Google Analytics</h2>
+<p>Google Analytics 是一个非常赞的分析工具，而且它不仅仅可以用于 Web 应用，也可以用于移动应用。</p>
+<h3 id="受众群体">受众群体</h3>
+<p>如下图是 Growth 应用最近两星期的数据：</p>
+<div class="figure">
+<img src="assets/content/article/chapter5/growth-ga.png" alt="Growth GA" />
+<p class="caption">Growth GA</p>
+</div>
+<p>这是 Google Analytics 中的“受众群体”的概览，在这个视图中：</p>
+<ol style="list-style-type: decimal">
+<li>折线图就是每天的用户数。</li>
+<li>下面会有用户数、会话、屏幕浏览量等等的一些信息。</li>
+<li>右角的饼图则是回访问用户和新用户的对比。</li>
+<li>最下方便是受众的信息——国家、版本等等。</li>
+</ol>
+<p>从图中，我们可以读取一些重要的信息，如用户的停留时间、主要面向的用户等等。在浏览器版本会有：</p>
+<ol style="list-style-type: decimal">
+<li>浏览器与操作系统</li>
+<li>移动设备</li>
+</ol>
+<p>这样的重要数据，如下表是我网站 20160104-20160120 的访问数据：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">浏览器</th>
+<th align="left">会话</th>
+<th align="left">新会话百分比</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Chrome</td>
+<td align="left">5048</td>
+<td align="left">75.99%</td>
+</tr>
+<tr class="even">
+<td align="left">Firefox</td>
+<td align="left">694</td>
+<td align="left">78.39%</td>
+</tr>
+<tr class="odd">
+<td align="left">Safari</td>
+<td align="left">666</td>
+<td align="left">78.68%</td>
+</tr>
+<tr class="even">
+<td align="left">Internet Explorer</td>
+<td align="left">284</td>
+<td align="left">87.68%</td>
+</tr>
+<tr class="odd">
+<td align="left">Safari (in-app)</td>
+<td align="left">92</td>
+<td align="left">86.96%</td>
+</tr>
+<tr class="even">
+<td align="left">Android Browser</td>
+<td align="left">72</td>
+<td align="left">87.50%</td>
+</tr>
+<tr class="odd">
+<td align="left">Edge</td>
+<td align="left">63</td>
+<td align="left">79.37%</td>
+</tr>
+<tr class="even">
+<td align="left">Maxthon</td>
+<td align="left">51</td>
+<td align="left">68.63%</td>
+</tr>
+<tr class="odd">
+<td align="left">UC Browser</td>
+<td align="left">41</td>
+<td align="left">80.49%</td>
+</tr>
+<tr class="even">
+<td align="left">Opera</td>
+<td align="left">34</td>
+<td align="left">64.71%</td>
+</tr>
+</tbody>
+</table>
+<p>可以从上表中看到访问我网站的用户中，IE 只占很小的一部分——大概4%，而 Chrome + Safari + Firefox 加起来则近90%。这也意味着，我可以完全不考虑 IE 用户的感受。</p>
+<p>类似于这样的数据在我们决定我们对某个浏览器的支持情况时会非常有帮助的。也会加快我们的开发，我们可以工作于主要的浏览器上。</p>
+<h3 id="流量获取">流量获取</h3>
+<p>除此，不得不说的一点就是流量获取，如下图所示是我博客的热门渠道：</p>
+<div class="figure">
+<img src="assets/content/article/chapter5/phodal-traffic.png" alt="Phodal.com Traffic" />
+<p class="caption">Phodal.com Traffic</p>
+</div>
+<p>可以直接得到一个不错的结论是我的博客的主要流量来源是搜索引擎，再细细一看数据：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">来源/媒介</th>
+<th align="left">会话</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">baidu / organic</td>
+<td align="left">2031</td>
+</tr>
+<tr class="even">
+<td align="left">google / organic</td>
+<td align="left">1314</td>
+</tr>
+<tr class="odd">
+<td align="left">(direct) / (none)</td>
+<td align="left">1311</td>
+</tr>
+<tr class="even">
+<td align="left">bing / organic</td>
+<td align="left">349</td>
+</tr>
+<tr class="odd">
+<td align="left">github.com / referral</td>
+<td align="left">281</td>
+</tr>
+</tbody>
+</table>
+<p>主要流量来源就是 Baidu 和 Google，看来国人还是用百度比较多。那我们就可以针对 SEO 进行更多的优化：</p>
+<ol style="list-style-type: decimal">
+<li>加快访问速度</li>
+<li>更表意的 URL</li>
+<li>更好的标题</li>
+<li>更好的内容</li>
+</ol>
+<p>等等等。</p>
+<p>除此，我们可以分析用户的行为，如他们访问的主要网站、URL 等等。</p>
+<h3 id="移动应用">移动应用</h3>
+<p>除此，我们还可以使用它来分析移动应用，不过这受限于 Google 在国内的访问程度。如下图是 GA 收到的应用的使用数据：</p>
+<div class="figure">
+<img src="assets/content/article/chapter5/ga-app.jpg" alt="Growth 应用数据" />
+<p class="caption">Growth 应用数据</p>
+</div>
+<p>我们也可以从上面看到 APP 的安装来源等等。</p>
