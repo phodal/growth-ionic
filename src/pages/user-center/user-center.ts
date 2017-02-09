@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
-import {AppRate, SocialSharing, AppVersion} from "ionic-native";
+import {AppRate, SocialSharing} from "ionic-native";
 import {AnalyticsServices} from "../../services/analytics.services";
 import {Helper} from "../../utils/helper";
 import {SkillListPage} from "./skill-list/skill-list";
@@ -15,7 +15,6 @@ import {BookmarkServices} from "../../services/bookmark.services";
   providers: [AnalyticsServices, SkillMapService, BookmarkServices, Helper]
 })
 export class UserCenterPage {
-  private version;
   public skillCount;
   public bookmarkCount;
 
@@ -66,11 +65,6 @@ export class UserCenterPage {
         laterButtonLabel: "容我考虑考虑",
         rateButtonLabel: "马上就去"
       };
-
-      let self = this;
-      AppVersion.getVersionNumber().then(
-        version => self.version = version
-      );
     }
   }
 
