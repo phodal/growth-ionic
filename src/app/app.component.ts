@@ -29,8 +29,7 @@ export class MyApp {
 
     this.platform.registerBackButtonAction(() => {
       //如果想点击返回按钮隐藏toast或loading或Overlay就把下面加上
-      this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive();
-      let activePortal = this.ionicApp._modalPortal.getActive();
+      let activePortal = this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive();
       if (activePortal) {
         ready = false;
         activePortal.dismiss();
@@ -54,8 +53,8 @@ export class MyApp {
       } else if (this.nav.canGoBack() || view && view.isOverlay) {
         ready = false;
         this.nav.pop().then(() => { ready = true; });
-      } else {
-        return;
+      } else if(!activePortal) {
+        this.nav.setRoot(TabsPage);
       }
     }, 1);
   }
