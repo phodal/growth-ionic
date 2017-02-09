@@ -7,9 +7,12 @@
 </ion-header>
 
 <ion-content class="toolbox-list">
-  <ion-list>
+  <ion-list *ngIf="articles">
     <button ion-item *ngFor="let article of articles" (click)="openToolboxDetailPage(article.title, article.path)">
       {{article.title}}
     </button>
   </ion-list>
+  <div *ngIf="networkError">
+    网络异常，请稍后重试
+  </div>
 </ion-content>

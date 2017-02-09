@@ -30,6 +30,9 @@ export class ToolboxListPage {
         data => {
           self.toolboxs = data["content"];
           loading.dismiss();
+        },
+        error => {
+          loading.dismiss();
         }
       );
   }

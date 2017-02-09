@@ -14,6 +14,7 @@ import {Helper} from "../../../utils/helper";
 
 export class ArticleListPage {
   private articles;
+  private networkError: boolean;
 
   constructor(private loadingCtrl: LoadingController, public nav: NavController, public http: Http, public helper: Helper) {
 
@@ -31,6 +32,10 @@ export class ArticleListPage {
         data => {
           self.articles = reverse(data["content"]);
           loading.dismiss();
+        },
+        err => {
+          loading.dismiss();
+          self.networkError = true;
         }
       );
   }

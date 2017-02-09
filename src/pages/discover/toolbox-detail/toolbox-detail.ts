@@ -32,6 +32,9 @@ export class ToolboxDetailPage {
         data => {
           self.content = this.helper.convertToMarkdown(data);
           loading.dismiss();
+        },
+        error => {
+          loading.dismiss();
         }
       );
   }

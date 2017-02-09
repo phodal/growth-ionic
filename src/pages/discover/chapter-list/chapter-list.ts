@@ -36,6 +36,9 @@ export class ChapterListPage {
         data => {
           self.chapters = data["content"];
           loading.dismiss();
+        },
+        error => {
+          loading.dismiss();
         }
       );
   }

@@ -33,6 +33,9 @@ export class ArticleDetailPage {
         data => {
           self.content = this.helper.convertToMarkdown(data);
           loading.dismiss();
+        },
+        error => {
+          loading.dismiss();
         }
       );
   }

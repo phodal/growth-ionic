@@ -30,6 +30,9 @@ export class ProjectListPage {
         data => {
           self.domainProjects = data["content"];
           loading.dismiss();
+        },
+        error => {
+          loading.dismiss();
         }
       );
   }
