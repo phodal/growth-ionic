@@ -1,8 +1,8 @@
-import {Component, ViewChild} from '@angular/core';
-import {Platform, ToastController, IonicApp, Nav} from 'ionic-angular';
-import {StatusBar, Splashscreen} from 'ionic-native';
-
-import {TabsPage} from '../pages/tabs/tabs';
+import {Component, ViewChild} from "@angular/core";
+import {Platform, ToastController, IonicApp, Nav, Keyboard} from "ionic-angular";
+import {StatusBar, Splashscreen} from "ionic-native";
+import {TabsPage} from "../pages/tabs/tabs";
+import {HomePage} from "../pages/home/home";
 
 
 @Component({
@@ -11,9 +11,10 @@ import {TabsPage} from '../pages/tabs/tabs';
 export class MyApp {
   rootPage = TabsPage;
   public backButtonPressed: boolean;
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild('rootNavController') nav: Nav;
 
-  constructor(public platform: Platform, public toastCtrl: ToastController, public ionicApp: IonicApp) {
+  constructor(public platform: Platform, public toastCtrl: ToastController, public ionicApp: IonicApp,
+              private Keyboard: Keyboard) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -24,26 +25,40 @@ export class MyApp {
   }
 
   registerBackButtonAction() {
+    let ready = true;
+
     this.platform.registerBackButtonAction(() => {
       //如果想点击返回按钮隐藏toast或loading或Overlay就把下面加上
       this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive();
       let activePortal = this.ionicApp._modalPortal.getActive();
       if (activePortal) {
-        activePortal.dismiss().catch(() => {
-
-        });
+        ready = false;
+        activePortal.dismiss();
         activePortal.onDidDismiss(() => {
-
+          ready = true;
         });
         return;
       }
-      let activeVC = this.nav.getActive();
-      let tabs = activeVC.instance.tabs;
-      let activeNav = tabs.getSelected();
-      return activeNav.canGoBack() ? activeNav.pop() : this.showExit()
+
+      if (this.Keyboard.isOpen()) {
+        this.Keyboard.close();
+        return;
+      }
+
+      let view = this.nav.getActive();
+      //noinspection TypeScriptUnresolvedVariable
+      let page = view ? this.nav.getActive().instance : null;
+
+      if (page && page instanceof HomePage) {
+        this.showExit();
+      } else if (this.nav.canGoBack() || view && view.isOverlay) {
+        ready = false;
+        this.nav.pop().then(() => { ready = true; });
+      } else {
+        return;
+      }
     }, 1);
   }
-
 
   showExit() {
     if (this.backButtonPressed) {
