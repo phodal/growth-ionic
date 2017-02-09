@@ -8,6 +8,7 @@ import {BookmarksPage} from "./bookmarks/bookmarks";
 import {AboutUsPage} from "./about-us/about-us";
 import {SkillMapService} from "../../services/skill.map.services";
 import {BookmarkServices} from "../../services/bookmark.services";
+import {DonatePage} from "./donate/donate";
 
 @Component({
   selector: "user-center",
@@ -48,6 +49,11 @@ export class UserCenterPage {
   openBookmarksPage() {
     this.analytics.trackEvent("User Center", "bookmarks");
     this.nav.push(BookmarksPage);
+  }
+
+  openDonatePage() {
+    this.analytics.trackEvent("User Center", "donate");
+    this.nav.push(DonatePage);
   }
 
   init() {

@@ -48,6 +48,7 @@ import {CreateTopicPage} from "../pages/community/create/create-topic";
 import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-detail-page/domain-detail-page";
 import {SkillTreePage} from "../pages/skill-tree/skill-tree";
 import {SkillTreeModal} from "../components/SkillTreeModal/SkillTreeModal";
+import {DonatePage} from "../pages/user-center/donate/donate";
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import {SkillTreeModal} from "../components/SkillTreeModal/SkillTreeModal";
     DomainDetailPage,
     SkillTreePage,
     SkillTreeModal,
+    DonatePage,
     TabsPage
   ],
   imports: [
@@ -149,6 +151,7 @@ import {SkillTreeModal} from "../components/SkillTreeModal/SkillTreeModal";
     DomainDetailPage,
     SkillTreePage,
     SkillTreeModal,
+    DonatePage,
     TabsPage
   ],
   providers: [
