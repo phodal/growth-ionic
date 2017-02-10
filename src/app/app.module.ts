@@ -3,7 +3,6 @@ import {IonicApp, IonicModule, IonicErrorHandler, Config} from "ionic-angular";
 import {Storage} from "@ionic/storage";
 import {MomentModule} from "angular2-moment";
 import {MyApp} from "./app.component";
-import {AboutPage} from "../pages/about/about";
 import {HomePage} from "../pages/home/home";
 import {TabsPage} from "../pages/tabs/tabs";
 import {Section} from "../pages/home/section/section";
@@ -53,7 +52,6 @@ import {DonatePage} from "../pages/user-center/donate/donate";
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     DiscoverPage,
     HomePage,
     Section,
@@ -111,7 +109,6 @@ import {DonatePage} from "../pages/user-center/donate/donate";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     DiscoverPage,
     HomePage,
     Section,
