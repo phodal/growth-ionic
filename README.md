@@ -37,13 +37,17 @@ Growth是一款专注于Web开发者成长的应用，涵盖Web开发的流程�
 
 **ScreenShot**:
  
-![1](marketing/1.pic.jpg)
-![2](marketing/2.pic.jpg)
+![index](./marketing/growth-index.png)
+![roadmap](./marketing/growth-roadmap.png)
+![book](./marketing/growth-book.png)
+![discover](./marketing/growth-discover.png)
+![skilltree](./marketing/growth-skilltree.jpg)
+![solution](./marketing/growth-solution.png)
+![test](./marketing/growth-test.png)
+![toolbox](./marketing/growth-toolbox.png)
 
 加入开发
 ---
-
-开发进度见Teambition ([Growth 2.0](https://www.teambition.com/project/57872eea0cc72c3442eb3dbc))
 
 [开发文档](./docs/README.md)
 
