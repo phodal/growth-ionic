@@ -2,53 +2,53 @@
 # yarn lockfile v1
 
 
-"@angular/common@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.2.1.tgz#ad7996a865b7b11fc315363827f2414a48c6589c"
+"@angular/common@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.4.8.tgz#e45a77a9d852c8e7135053ff38cf805435458c48"
 
-"@angular/compiler-cli@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.2.1.tgz#166469b881d63946cc3e45c47a87d2b6cd902386"
+"@angular/compiler-cli@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.4.8.tgz#6dad3b467243166bf2515d21993d2d1a4700a161"
   dependencies:
-    "@angular/tsc-wrapped" "^0.3.0"
+    "@angular/tsc-wrapped" "0.5.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
-"@angular/compiler@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.2.1.tgz#16e7faf588cf9121a0f6c16d0bae2830f4cafdc1"
+"@angular/compiler@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.4.8.tgz#fa788fc8bed9f322b040af2b9a06a70991390e23"
 
-"@angular/core@2.2.1", "@angular/core@^2.0.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.2.1.tgz#86fdc34a370a4fcfe84ed9de4b3c43548612919c"
+"@angular/core@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.4.8.tgz#bf1a4fc324827516e6c3222047a9b2cbdaee6976"
 
-"@angular/forms@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-2.2.1.tgz#0e7154acc5127c583b4b52c59eac45d672c29da4"
+"@angular/forms@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-2.4.8.tgz#51512a801aaf3a1eba7bce2b22694537b93f047f"
 
-"@angular/http@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.2.1.tgz#1626884a6c5f0cc602ce9d81e7420fcc02db3353"
+"@angular/http@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.4.8.tgz#e81ac8e4db836ed813edc4ffa137596cd5836baf"
 
-"@angular/platform-browser-dynamic@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.2.1.tgz#561d32982fee4b68b474ba474c7f3c4d94bfeb6c"
+"@angular/platform-browser-dynamic@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.4.8.tgz#86059fe930489d1ca0056a5aba0b4420414759f5"
 
-"@angular/platform-browser@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.2.1.tgz#d51b36260089f3054e745efad05993523d5a5293"
+"@angular/platform-browser@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.4.8.tgz#686bc82d9188e354181699640777237ed79122ed"
 
-"@angular/platform-server@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-2.2.1.tgz#fda7acc7113bfc58ec9d72a0a2fcc6a6e5c5226b"
+"@angular/platform-server@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-2.4.8.tgz#6ccf9550f11137286007c7ff01d4b449c421acbe"
   dependencies:
     parse5 "^2.2.1"
 
-"@angular/tsc-wrapped@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-0.3.0.tgz#98cdeb5c38d145b187c0ad0397a8d98b217f33f2"
+"@angular/tsc-wrapped@0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-0.5.2.tgz#2eddf472c467fcb334ea94deddaaa71990c5a482"
   dependencies:
-    tsickle "^0.1.7"
+    tsickle "^0.2"
 
 "@ionic/app-scripts@1.1.3":
   version "1.1.3"
@@ -83,15 +83,13 @@
     ws "1.1.1"
     xml2js "^0.4.17"
 
-"@ionic/storage@1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@ionic/storage/-/storage-1.1.7.tgz#332b39dbffbb25f9d3505e215cde17ab6ea3ad62"
+"@ionic/storage@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ionic/storage/-/storage-2.0.0.tgz#28b7fb4deda642bcbdd037f9c95946828552103d"
   dependencies:
-    "@angular/core" "^2.0.0"
     "@types/localforage" "0.0.30"
-    localforage "^1.4.2"
-    localforage-cordovasqlitedriver "^1.5.0"
-    rxjs "5.0.0-beta.12"
+    localforage "~1.4.2"
+    localforage-cordovasqlitedriver "~1.5.0"
 
 "@types/localforage@0.0.30":
   version "0.0.30"
@@ -145,7 +143,7 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular2-moment@^1.0.0:
+angular2-moment@1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/angular2-moment/-/angular2-moment-1.3.3.tgz#569c433bbfa2448d5424f0e10dce6f8c8c9533eb"
   dependencies:
@@ -2023,9 +2021,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ionic-angular@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ionic-angular/-/ionic-angular-2.1.0.tgz#189d9a66120a6bc1927eb399ba14d7cbec392500"
+ionic-angular@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/ionic-angular/-/ionic-angular-2.2.0.tgz#5c48212d4c491626863ddce9292af0d3e6e2adca"
 
 ionic-native@2.4.1:
   version "2.4.1"
@@ -2366,15 +2364,16 @@ loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-localforage-cordovasqlitedriver@^1.5.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/localforage-cordovasqlitedriver/-/localforage-cordovasqlitedriver-1.6.0.tgz#90270caa95eeb10a0397831fe106118885307d71"
-  dependencies:
-    localforage ">=1.5.0"
-
-localforage@>=1.5.0, localforage@^1.4.2:
+localforage-cordovasqlitedriver@~1.5.0:
   version "1.5.0"
-  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.5.0.tgz#6b994e19b56611fa85df3992df397ac4ab66e815"
+  resolved "https://registry.yarnpkg.com/localforage-cordovasqlitedriver/-/localforage-cordovasqlitedriver-1.5.0.tgz#f934789e6ad9a39bac05fdd1168812f438535762"
+  dependencies:
+    "@types/localforage" "0.0.30"
+    localforage ">=1.4.0"
+
+localforage@>=1.4.0, localforage@~1.4.2:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.4.3.tgz#a212543c39c7c76424edd12bf474c489aaca494c"
   dependencies:
     lie "3.0.2"
 
@@ -3277,17 +3276,17 @@ q@^1.1.2:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
-qs@6.2.0, qs@^6.2.0:
+qs@6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.0.tgz#3b7848c03c2dece69a9522b0fae8c4126d745f3b"
+
+qs@^6.2.0, qs@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 qs@~6.3.0:
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
-
-qs@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 querystring-es3@^0.2.0:
   version "0.2.1"
@@ -3454,32 +3453,7 @@ request-progress@~2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@2, request@^2.61.0, request@~2.79.0:
-  version "2.79.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
-  dependencies:
-    aws-sign2 "~0.6.0"
-    aws4 "^1.2.1"
-    caseless "~0.11.0"
-    combined-stream "~1.0.5"
-    extend "~3.0.0"
-    forever-agent "~0.6.1"
-    form-data "~2.1.1"
-    har-validator "~2.0.6"
-    hawk "~3.1.3"
-    http-signature "~1.1.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.7"
-    oauth-sign "~0.8.1"
-    qs "~6.3.0"
-    stringstream "~0.0.4"
-    tough-cookie "~2.3.0"
-    tunnel-agent "~0.4.1"
-    uuid "^3.0.0"
-
-request@^2.79.0, request@^2.81.0:
+request@2, request@^2.61.0, request@^2.79.0, request@^2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -3504,6 +3478,31 @@ request@^2.79.0, request@^2.81.0:
     stringstream "~0.0.4"
     tough-cookie "~2.3.0"
     tunnel-agent "^0.6.0"
+    uuid "^3.0.0"
+
+request@~2.79.0:
+  version "2.79.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
+  dependencies:
+    aws-sign2 "~0.6.0"
+    aws4 "^1.2.1"
+    caseless "~0.11.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.0"
+    forever-agent "~0.6.1"
+    form-data "~2.1.1"
+    har-validator "~2.0.6"
+    hawk "~3.1.3"
+    http-signature "~1.1.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.7"
+    oauth-sign "~0.8.1"
+    qs "~6.3.0"
+    stringstream "~0.0.4"
+    tough-cookie "~2.3.0"
+    tunnel-agent "~0.4.1"
     uuid "^3.0.0"
 
 require-directory@^2.1.1:
@@ -3613,6 +3612,12 @@ rollup@0.41.4:
 rxjs@5.0.0-beta.12:
   version "5.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.0.0-beta.12.tgz#cdfde2d8c4639d20ae7794bff8fddf32da7ad337"
+  dependencies:
+    symbol-observable "^1.0.1"
+
+rxjs@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.0.1.tgz#3a69bdf9f0ca0a986303370d4708f72bdfac8356"
   dependencies:
     symbol-observable "^1.0.1"
 
@@ -3733,12 +3738,6 @@ source-list-map@~0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
 
-source-map-support@^0.3.1:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.3.3.tgz#34900977d5ba3f07c7757ee72e73bb1a9b53754f"
-  dependencies:
-    source-map "0.1.32"
-
 source-map-support@^0.4.0, source-map-support@^0.4.2:
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
@@ -3751,13 +3750,7 @@ source-map@0.1.31:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@0.1.32:
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.32.tgz#c8b6c167797ba4740a8ea33252162ff08591b266"
-  dependencies:
-    amdefine ">=0.0.4"
-
-source-map@0.4.x, source-map@^0.4.2:
+source-map@0.4.x:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
@@ -4040,14 +4033,14 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-tsickle@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.1.7.tgz#bfe8f4cdcdaf9a40b84a729a38480c2f824f18ab"
+tsickle@^0.2:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.2.6.tgz#ad4abf92e74ebdf3fb5aa187ca85b02066fe1a1b"
   dependencies:
     minimist "^1.2.0"
     mkdirp "^0.5.1"
-    source-map "^0.4.2"
-    source-map-support "^0.3.1"
+    source-map "^0.5.6"
+    source-map-support "^0.4.2"
 
 tslint-eslint-rules@1.5.0:
   version "1.5.0"
@@ -4492,6 +4485,6 @@ yauzl@2.4.1:
   dependencies:
     fd-slicer "~1.0.1"
 
-zone.js@0.6.26:
-  version "0.6.26"
-  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.6.26.tgz#067c13b8b80223a89b62e9dc82680f09762c4636"
+zone.js@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.7.2.tgz#1a62b6be4b24d1b935e4566b0b4386b66966d1a7"
