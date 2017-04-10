@@ -35,7 +35,7 @@ export class HomePage {
             version => {
               self.version = version;
               if (self.version && self.helper.versionCompare(data.version, self.version, null) > 0) {
-                self.presentConfirm(data.feature, data.version)
+                self.presentConfirm(data['feature'], data.version)
               }
             }
           );

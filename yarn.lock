@@ -50,9 +50,41 @@
   dependencies:
     tsickle "^0.2"
 
-"@ionic/app-scripts@1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-1.1.3.tgz#ef510d64b8e4d9e8219717b98e00624c072c2221"
+"@ionic-native/app-version@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@ionic-native/app-version/-/app-version-3.4.4.tgz#984763841e63ac0e74c96136caeb1bcc096ca534"
+
+"@ionic-native/clipboard@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/clipboard/-/clipboard-3.1.1.tgz#01373553411746813fa5ffff42de10abd8aaa498"
+
+"@ionic-native/core@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-3.1.1.tgz#46c76a39acb50211e3a0bc423eb7883679648672"
+
+"@ionic-native/email-composer@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@ionic-native/email-composer/-/email-composer-3.4.4.tgz#cda76252b877449aa89fb5e0093de62cc518f786"
+
+"@ionic-native/google-analytics@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@ionic-native/google-analytics/-/google-analytics-3.4.4.tgz#b2cfbf85039c64f78cb9b45d2aa3b3b56bfad7a2"
+
+"@ionic-native/in-app-browser@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/in-app-browser/-/in-app-browser-3.1.1.tgz#1b1702cc1ea94d7a8f29c92a90f9138a59a52258"
+
+"@ionic-native/splash-screen@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/splash-screen/-/splash-screen-3.1.1.tgz#4db2dc7077e8c45304f03b8a39cd8b865c98caff"
+
+"@ionic-native/status-bar@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/status-bar/-/status-bar-3.1.1.tgz#3d1ffa427ff6d2d8a4edd8d62af4f504671e5c10"
+
+"@ionic/app-scripts@1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-1.1.4.tgz#470ba1ff66d40c32681c04747c8147f3b0628e74"
   dependencies:
     autoprefixer "6.7.2"
     babili "0.0.10"
@@ -2021,15 +2053,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ionic-angular@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/ionic-angular/-/ionic-angular-2.2.0.tgz#5c48212d4c491626863ddce9292af0d3e6e2adca"
-
-ionic-native@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/ionic-native/-/ionic-native-2.4.1.tgz#79ecb9ae8db33d6f208bd5d08b181960020212c5"
-  dependencies:
-    rxjs "5.0.0-beta.12"
+ionic-angular@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ionic-angular/-/ionic-angular-2.3.0.tgz#28adadbe8c54dd5eda8e113cdd18819474e42c71"
 
 ionic2-rating@1.0.0:
   version "1.0.0"
@@ -3608,12 +3634,6 @@ rollup@0.41.4:
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.41.4.tgz#a970580176329f9ead86854d7fd4c46de752aef8"
   dependencies:
     source-map-support "^0.4.0"
-
-rxjs@5.0.0-beta.12:
-  version "5.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.0.0-beta.12.tgz#cdfde2d8c4639d20ae7794bff8fddf32da7ad337"
-  dependencies:
-    symbol-observable "^1.0.1"
 
 rxjs@5.0.1:
   version "5.0.1"

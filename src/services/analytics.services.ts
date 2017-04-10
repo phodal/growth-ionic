@@ -1,20 +1,21 @@
 import {Injectable} from "@angular/core";
-import {GoogleAnalytics} from "ionic-native";
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @Injectable()
 export class AnalyticsServices {
+  private ga: GoogleAnalytics;
 
   constructor() {
   };
 
   initID() {
-    GoogleAnalytics.startTrackerWithId("UA-71907748-1");
+    this.ga.startTrackerWithId("UA-71907748-1");
   }
 
   trackView(view) {
     if (window['cordova']) {
       this.initID();
-      GoogleAnalytics.trackView(view);
+      this.ga.trackView(view);
     } else {
       /* tslint:disable */
       console.log("Analytics Track: " + view);
@@ -25,7 +26,7 @@ export class AnalyticsServices {
   trackEvent(category, action) {
     if (window['cordova']) {
       this.initID();
-      GoogleAnalytics.trackEvent(category, action);
+      this.ga.trackEvent(category, action);
     } else {
       /* tslint:disable */
       console.log("Analytics Event: " + category + " Action: " + action);

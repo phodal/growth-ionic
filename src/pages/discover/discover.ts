@@ -10,7 +10,7 @@ import {TodoListsPage} from "./todo-lists/todo-lists";
 import {ArticleListPage} from "./article-list/article-list";
 import {RoadMapPage} from "./roadmap-list/roadmap-list";
 import {ProjectListPage} from "./project-list/project-list";
-import {EmailComposer} from "ionic-native";
+import { EmailComposer } from '@ionic-native/email-composer';
 import {ChapterListPage} from "./chapter-list/chapter-list";
 import {Helper} from "../../utils/helper";
 import {ExamListPage} from "./exam-list/exam-list";
@@ -21,6 +21,8 @@ import {ExamListPage} from "./exam-list/exam-list";
   providers: [AnalyticsServices, Helper]
 })
 export class DiscoverPage {
+  private emailComposer: EmailComposer;
+
   constructor(public nav: NavController, private platform: Platform, public analytics: AnalyticsServices, public helper: Helper) {
     this.nav = nav;
     this.platform = platform;
@@ -88,7 +90,7 @@ export class DiscoverPage {
 
   sendEmail() {
     if (window['cordova']) {
-      EmailComposer.isAvailable().then((available: boolean) => {
+      this.emailComposer.isAvailable().then((available: boolean) => {
         if (available) {
           let email = {
             to: "h@phodal.com",
@@ -98,7 +100,7 @@ export class DiscoverPage {
             isHtml: true
           };
 
-          EmailComposer.open(email);
+          this.emailComposer.open(email);
         }
       });
     }

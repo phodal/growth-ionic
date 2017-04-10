@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {NavParams, ToastController} from "ionic-angular";
-import {Clipboard} from "ionic-native";
+import { Clipboard } from '@ionic-native/clipboard';
 import "rxjs/add/operator/map";
 
 @Component({
@@ -9,13 +9,14 @@ import "rxjs/add/operator/map";
 
 export class ProjectDetailPage {
   private subdomain;
+  private clipboard: Clipboard;
 
   constructor(public params:NavParams, private toastCtrl: ToastController) {
     this.subdomain = params.get("subdomain");
   }
 
   copyItems(url) {
-    Clipboard.copy(url);
+    this.clipboard.copy(url);
     let toast = this.toastCtrl.create({
       message: "链接已复制",
       duration: 1000,
