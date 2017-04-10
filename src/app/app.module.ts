@@ -1,6 +1,6 @@
 import {NgModule, ErrorHandler} from "@angular/core";
 import {IonicApp, IonicModule, IonicErrorHandler, Config} from "ionic-angular";
-import {Storage} from "@ionic/storage";
+import {IonicStorageModule} from "@ionic/storage";
 import {MomentModule} from "angular2-moment";
 import {MyApp} from "./app.component";
 import {HomePage} from "../pages/home/home";
@@ -104,6 +104,7 @@ import {DonatePage} from "../pages/user-center/donate/donate";
       tabsHighlight: true
     }),
     MomentModule,
+    IonicStorageModule.forRoot(),
     Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
@@ -153,7 +154,6 @@ import {DonatePage} from "../pages/user-center/donate/donate";
   ],
   providers: [
     UserData,
-    Storage,
     {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
