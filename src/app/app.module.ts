@@ -55,6 +55,8 @@ import {SocialSharing} from "@ionic-native/social-sharing";
 import {StatusBar} from "@ionic-native/status-bar";
 import {EmailComposer} from "@ionic-native/email-composer";
 import {AppVersion} from "@ionic-native/app-version";
+import {BrowserModule} from "@angular/platform-browser";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -104,6 +106,8 @@ import {AppVersion} from "@ionic-native/app-version";
     TabsPage
   ],
   imports: [
+    BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp, {
       tabbarPlacement: "bottom",
       backButtonText: "后退",
