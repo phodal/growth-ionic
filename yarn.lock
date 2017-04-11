@@ -50,6 +50,10 @@
   dependencies:
     tsickle "^0.2"
 
+"@ionic-native/app-rate@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@ionic-native/app-rate/-/app-rate-3.4.4.tgz#dfc31477e581f2c568642b94faf26d583827ec97"
+
 "@ionic-native/app-version@^3.4.4":
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/@ionic-native/app-version/-/app-version-3.4.4.tgz#984763841e63ac0e74c96136caeb1bcc096ca534"
@@ -73,6 +77,10 @@
 "@ionic-native/in-app-browser@3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@ionic-native/in-app-browser/-/in-app-browser-3.1.1.tgz#1b1702cc1ea94d7a8f29c92a90f9138a59a52258"
+
+"@ionic-native/social-sharing@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@ionic-native/social-sharing/-/social-sharing-3.4.4.tgz#86148e780b53dc52f82b2637a677b34a25d7ccdb"
 
 "@ionic-native/splash-screen@3.1.1":
   version "3.1.1"

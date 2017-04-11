@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 
 import {Section} from "./section/section";
 import {AnalyticsServices} from "../../services/analytics.services";
-import {AppVersion} from "ionic-native";
+import { AppVersion } from '@ionic-native/app-version';
 import {Http} from "@angular/http";
 import {Helper} from "../../utils/helper";
 
@@ -16,6 +16,7 @@ import {Helper} from "../../utils/helper";
 export class HomePage {
   private shownGroup = false;
   private version: any;
+  private appVersion: AppVersion;
 
   constructor(public navCtrl: NavController,  public analytics:AnalyticsServices, public http: Http,
               public helper: Helper, private alertCtrl: AlertController, public platform: Platform) {
@@ -31,7 +32,7 @@ export class HomePage {
       .map(res => res.json())
       .subscribe(
         data => {
-          AppVersion.getVersionNumber().then(
+          this.appVersion.getVersionNumber().then(
             version => {
               self.version = version;
               if (self.version && self.helper.versionCompare(data.version, self.version, null) > 0) {
