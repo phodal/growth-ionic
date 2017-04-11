@@ -48,6 +48,13 @@ import {DomainDetailPage} from "../pages/discover/thoughtworks-books/domain-deta
 import {SkillTreePage} from "../pages/skill-tree/skill-tree";
 import {SkillTreeModal} from "../components/SkillTreeModal/SkillTreeModal";
 import {DonatePage} from "../pages/user-center/donate/donate";
+import {SplashScreen} from "@ionic-native/splash-screen";
+import {InAppBrowser} from "@ionic-native/in-app-browser";
+import {Clipboard} from "@ionic-native/clipboard";
+import {SocialSharing} from "@ionic-native/social-sharing";
+import {StatusBar} from "@ionic-native/status-bar";
+import {EmailComposer} from "@ionic-native/email-composer";
+import {AppVersion} from "@ionic-native/app-version";
 
 @NgModule({
   declarations: [
@@ -154,6 +161,13 @@ import {DonatePage} from "../pages/user-center/donate/donate";
   ],
   providers: [
     UserData,
+    SplashScreen,
+    InAppBrowser,
+    Clipboard,
+    SocialSharing,
+    StatusBar,
+    EmailComposer,
+    AppVersion,
     {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
