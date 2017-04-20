@@ -22,6 +22,7 @@
     "@angular/platform-browser": "4.0.0",
     "@angular/platform-browser-dynamic": "4.0.0",
     "@angular/platform-server": "4.0.0",
+    "@angular/animations": "4.0.0",
     "@ionic-native/app-rate": "^3.4.4",
     "@ionic-native/app-version": "^3.4.4",
     "@ionic-native/clipboard": "^3.4.4",
