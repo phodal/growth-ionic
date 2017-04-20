@@ -4,6 +4,7 @@ import {DiscoverPage} from "../discover/discover";
 import {UserCenterPage} from "../user-center/user-center";
 import {CommunityPage} from "../community/community";
 import {SkillTreePage} from "../skill-tree/skill-tree";
+import {NavParams} from "ionic-angular";
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,8 +17,9 @@ export class TabsPage {
   communityView:any = CommunityPage;
   userCenterView: any = UserCenterPage;
   skillTreeView: any = SkillTreePage;
+  mySelectedIndex: number;
 
-  constructor() {
-
+  constructor(navParams: NavParams) {
+    this.mySelectedIndex = navParams.data.tabIndex || 0;
   }
 }
