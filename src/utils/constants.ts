@@ -17,5 +17,6 @@ export const SERVER_BASE_URL = {
   articles: "https://phodal.coding.me/growth/articles/",
   growthAction: "https://phodal.coding.me/growth/growth-in-action/",
   roadmap: "https://phodal.coding.me/growth/awesome/",
-  ideabook: "https://phodal.coding.me/growth/ideabook/"
+  ideabook: "https://phodal.coding.me/growth/ideabook/",
+  fe: "https://phodal.coding.me/growth/fe/"
 };
