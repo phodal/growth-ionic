@@ -6,6 +6,7 @@ import {AnalyticsServices} from "../../services/analytics.services";
 import { AppVersion } from '@ionic-native/app-version';
 import {Http} from "@angular/http";
 import {Helper} from "../../utils/helper";
+import {PaperPage} from "./paper/paper";
 
 @Component({
   selector: 'page-home',
@@ -79,6 +80,11 @@ export class HomePage {
     } else {
       this.shownGroup = group;
     }
+  }
+
+  showGrowthPaper(){
+    this.analytics.trackEvent("Section", "section: paper");
+    this.navCtrl.push(PaperPage);
   }
 
   isGroupShown(group) {

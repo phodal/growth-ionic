@@ -57,6 +57,7 @@ import {EmailComposer} from "@ionic-native/email-composer";
 import {AppVersion} from "@ionic-native/app-version";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
+import {PaperPage} from "../pages/home/paper/paper";
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import {HttpModule} from "@angular/http";
     SkillTreePage,
     SkillTreeModal,
     DonatePage,
+    PaperPage,
     TabsPage
   ],
   imports: [
@@ -161,6 +163,7 @@ import {HttpModule} from "@angular/http";
     SkillTreePage,
     SkillTreeModal,
     DonatePage,
+    PaperPage,
     TabsPage
   ],
   providers: [
