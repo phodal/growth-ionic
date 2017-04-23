@@ -8,10 +8,11 @@ page-home {
     background: none;
   }
 
-  ion-row {
+  ion-row.row {
     margin-bottom: 10px;
     background: none;
     flex-wrap: wrap;
+    display: grid;
 
     ion-col {
       flex: 0 0 100%;
