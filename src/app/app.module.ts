@@ -58,6 +58,7 @@ import {AppVersion} from "@ionic-native/app-version";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 import {PaperPage} from "../pages/home/paper/paper";
+import {TutorialPage} from '../pages/tutorial/tutorial';
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import {PaperPage} from "../pages/home/paper/paper";
     SkillTreeModal,
     DonatePage,
     PaperPage,
+    TutorialPage,
     TabsPage
   ],
   imports: [
@@ -164,6 +166,7 @@ import {PaperPage} from "../pages/home/paper/paper";
     SkillTreeModal,
     DonatePage,
     PaperPage,
+    TutorialPage,
     TabsPage
   ],
   providers: [
