@@ -1,28 +1,21 @@
 <ion-header no-border>
   <ion-navbar>
     <ion-buttons end *ngIf="showSkip">
-      <button ion-button (click)="startApp()" color="primary">Skip</button>
+      <button ion-button (click)="startApp()" color="primary">跳过</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content no-bounce>
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
-
     <ion-slide>
       <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
       <h2 class="slide-title">
-        Welcome to <b>ICA</b>
+        Growth 纸质版已上架
       </h2>
       <p>
-        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.
+        可在各大网站购买《全栈应用开发：精益实践》。
       </p>
-    </ion-slide>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
-      <h2 class="slide-title" >What is Ionic?</h2>
-      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
     </ion-slide>
   </ion-slides>
 </ion-content>

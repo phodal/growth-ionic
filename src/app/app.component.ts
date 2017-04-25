@@ -3,6 +3,7 @@ import {Platform} from 'ionic-angular';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {TabsPage} from '../pages/tabs/tabs';
 import {TutorialPage} from '../pages/tutorial/tutorial';
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
