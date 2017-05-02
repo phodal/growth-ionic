@@ -1,5 +1,5 @@
 import {NgModule, ErrorHandler} from "@angular/core";
-import {IonicApp, IonicModule, IonicErrorHandler, Config} from "ionic-angular";
+import {IonicApp, IonicModule, IonicErrorHandler, Config, DeepLinkConfig} from "ionic-angular";
 import {IonicStorageModule} from "@ionic/storage";
 import {MomentModule} from "angular2-moment";
 import {MyApp} from "./app.component";
@@ -117,7 +117,17 @@ import {TutorialPage} from '../pages/tutorial/tutorial';
       backButtonText: "后退",
       tabsHideOnSubPages: true,
       tabsHighlight: true
-    }),
+    },
+      <DeepLinkConfig>{
+        links: [
+          {component: TabsPage, name: 'TabsPage', segment: 'tabs'},
+          {component: HomePage, name: 'HomePage', segment: 'home'},
+          {component: TutorialPage, name: 'Tutorial', segment: 'tutorial'},
+          {component: DiscoverPage, name: 'DiscoverPage', segment: 'discover'},
+          {component: SkillTreePage, name: 'SkillTreePage', segment: 'skilltree'},
+          {component: UserCenterPage, name: 'UserCenterPage', segment: 'skilltree'}
+        ]
+      }),
     MomentModule,
     IonicStorageModule.forRoot(),
     Ionic2RatingModule
