@@ -1,12 +1,11 @@
 import {Injectable} from "@angular/core";
-import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import {GoogleAnalytics} from '@ionic-native/google-analytics';
 import {Platform} from "ionic-angular";
 
 @Injectable()
 export class AnalyticsServices {
-  private ga: GoogleAnalytics;
+  constructor(public platform: Platform, private ga: GoogleAnalytics) {
 
-  constructor(public platform: Platform) {
   };
 
   initID() {
@@ -14,25 +13,19 @@ export class AnalyticsServices {
   }
 
   trackView(view) {
-    if (this.platform.is('cordova')) {
-      this.initID();
-      this.ga.trackView(view);
-    } else {
-      /* tslint:disable */
-      console.log("Analytics Track: " + view);
-      /* tslint:enable */
-    }
+    this.initID();
+    this.ga.trackView(view);
+    /* tslint:disable */
+    console.log("Analytics Track: " + view);
+    /* tslint:enable */
   }
 
   trackEvent(category, action) {
-    if (this.platform.is('cordova')) {
-      this.initID();
-      this.ga.trackEvent(category, action);
-    } else {
-      /* tslint:disable */
-      console.log("Analytics Event: " + category + " Action: " + action);
-      /* tslint:enable */
-    }
+    this.initID();
+    this.ga.trackEvent(category, action);
+    /* tslint:disable */
+    console.log("Analytics Event: " + category + " Action: " + action);
+    /* tslint:enable */
   }
 
 }
