@@ -21,9 +21,9 @@ import {ExamListPage} from "./exam-list/exam-list";
   providers: [AnalyticsServices, Helper]
 })
 export class DiscoverPage {
-  private emailComposer: EmailComposer;
 
-  constructor(public nav: NavController, private platform: Platform, public analytics: AnalyticsServices, public helper: Helper) {
+  constructor(public nav: NavController, private platform: Platform, public analytics: AnalyticsServices,
+              public helper: Helper, private emailComposer: EmailComposer) {
     this.nav = nav;
     this.platform = platform;
     this.analytics.trackView("Discover");

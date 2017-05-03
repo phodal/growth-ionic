@@ -19,10 +19,9 @@ import {DonatePage} from "./donate/donate";
 export class UserCenterPage {
   public skillCount;
   public bookmarkCount;
-  private appRate: AppRate;
-  private socialSharing: SocialSharing
 
   constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper,
+              private socialSharing: SocialSharing, private appRate: AppRate,
               public skillMapService:SkillMapService, public bookmarkServices:BookmarkServices, public platform: Platform) {
     this.nav = nav;
     this.init();

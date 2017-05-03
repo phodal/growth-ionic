@@ -14,9 +14,8 @@ import { AppVersion } from '@ionic-native/app-version';
 export class AboutUsPage {
   private version;
   private contributors;
-  private appVersion: AppVersion;
 
-  constructor(public nav:NavController, private analytics:AnalyticsServices, public helper: Helper) {
+  constructor(public nav:NavController, private analytics:AnalyticsServices, public helper: Helper, private appVersion: AppVersion) {
     this.nav = nav;
     this.contributors = CONTRIBUTORS;
     this.analytics.trackView("User Center: About Us");

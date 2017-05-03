@@ -9,9 +9,8 @@ import "rxjs/add/operator/map";
 
 export class ProjectDetailPage {
   private subdomain;
-  private clipboard: Clipboard;
 
-  constructor(public params:NavParams, private toastCtrl: ToastController) {
+  constructor(public params:NavParams, private toastCtrl: ToastController, private clipboard: Clipboard) {
     this.subdomain = params.get("subdomain");
   }
 

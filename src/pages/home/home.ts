@@ -17,10 +17,9 @@ import {PaperPage} from "./paper/paper";
 export class HomePage {
   private shownGroup = false;
   private version: any;
-  private appVersion: AppVersion;
 
   constructor(public navCtrl: NavController, public analytics: AnalyticsServices, public http: Http,
-              public helper: Helper, private alertCtrl: AlertController, public platform: Platform) {
+              public helper: Helper, private alertCtrl: AlertController, public platform: Platform, private appVersion: AppVersion) {
     this.analytics.trackView("Growth 2.0");
     if (this.platform.is('cordova') && this.platform.is('android')) {
       this.updateVersion();
