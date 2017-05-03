@@ -59,6 +59,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 import {PaperPage} from "../pages/home/paper/paper";
 import {TutorialPage} from '../pages/tutorial/tutorial';
+import {GoogleAnalytics} from "@ionic-native/google-analytics";
 
 @NgModule({
   declarations: [
@@ -186,6 +187,7 @@ import {TutorialPage} from '../pages/tutorial/tutorial';
     Clipboard,
     SocialSharing,
     StatusBar,
+    GoogleAnalytics,
     EmailComposer,
     AppVersion,
     {
