@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {NavController, Platform} from "ionic-angular";
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { AppRate } from '@ionic-native/app-rate';
 import {AnalyticsServices} from "../../services/analytics.services";
@@ -23,7 +23,7 @@ export class UserCenterPage {
   private socialSharing: SocialSharing
 
   constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper,
-              public skillMapService:SkillMapService, public bookmarkServices:BookmarkServices) {
+              public skillMapService:SkillMapService, public bookmarkServices:BookmarkServices, public platform: Platform) {
     this.nav = nav;
     this.init();
     this.analytics.trackView("User Center");
@@ -60,7 +60,7 @@ export class UserCenterPage {
   }
 
   init() {
-    if (window['cordova']) {
+    if (this.platform.is('cordova')) {
       this.appRate.preferences.useLanguage = "zh-Hans";
       this.appRate.preferences.storeAppURL = {
         ios: "1078807522",

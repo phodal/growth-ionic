@@ -22,7 +22,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public analytics: AnalyticsServices, public http: Http,
               public helper: Helper, private alertCtrl: AlertController, public platform: Platform) {
     this.analytics.trackView("Growth 2.0");
-    if (window['cordova'] && this.platform.is('android')) {
+    if (this.platform.is('cordova') && this.platform.is('android')) {
       this.updateVersion();
     }
   }

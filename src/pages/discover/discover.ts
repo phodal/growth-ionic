@@ -89,7 +89,7 @@ export class DiscoverPage {
   }
 
   sendEmail() {
-    if (window['cordova']) {
+    if (this.platform.is('cordova')) {
       this.emailComposer.isAvailable().then((available: boolean) => {
         if (available) {
           let email = {

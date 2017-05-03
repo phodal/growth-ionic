@@ -1,11 +1,12 @@
 import {Injectable} from "@angular/core";
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import {Platform} from "ionic-angular";
 
 @Injectable()
 export class AnalyticsServices {
   private ga: GoogleAnalytics;
 
-  constructor() {
+  constructor(public platform: Platform) {
   };
 
   initID() {
@@ -13,7 +14,7 @@ export class AnalyticsServices {
   }
 
   trackView(view) {
-    if (window['cordova']) {
+    if (this.platform.is('cordova')) {
       this.initID();
       this.ga.trackView(view);
     } else {
@@ -24,7 +25,7 @@ export class AnalyticsServices {
   }
 
   trackEvent(category, action) {
-    if (window['cordova']) {
+    if (this.platform.is('cordova')) {
       this.initID();
       this.ga.trackEvent(category, action);
     } else {
