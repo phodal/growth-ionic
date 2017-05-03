@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 
 import {Section} from "./section/section";
 import {AnalyticsServices} from "../../services/analytics.services";
-import { AppVersion } from '@ionic-native/app-version';
+import {AppVersion} from '@ionic-native/app-version';
 import {Http} from "@angular/http";
 import {Helper} from "../../utils/helper";
 import {PaperPage} from "./paper/paper";
@@ -19,10 +19,10 @@ export class HomePage {
   private version: any;
   private appVersion: AppVersion;
 
-  constructor(public navCtrl: NavController,  public analytics:AnalyticsServices, public http: Http,
+  constructor(public navCtrl: NavController, public analytics: AnalyticsServices, public http: Http,
               public helper: Helper, private alertCtrl: AlertController, public platform: Platform) {
     this.analytics.trackView("Growth 2.0");
-    if(window['cordova'] && this.platform.is('android')){
+    if (window['cordova'] && this.platform.is('android')) {
       this.updateVersion();
     }
   }
@@ -82,7 +82,7 @@ export class HomePage {
     }
   }
 
-  showGrowthPaper(){
+  showGrowthPaper() {
     this.analytics.trackEvent("Section", "section: paper");
     this.navCtrl.push(PaperPage);
   }
