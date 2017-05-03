@@ -1,7 +1,6 @@
 import {Component} from "@angular/core";
 import {NavController, Platform} from "ionic-angular";
-import { SocialSharing } from '@ionic-native/social-sharing';
-import { AppRate } from '@ionic-native/app-rate';
+import {SocialSharing} from "@ionic-native/social-sharing";
 import {AnalyticsServices} from "../../services/analytics.services";
 import {Helper} from "../../utils/helper";
 import {SkillListPage} from "./skill-list/skill-list";
@@ -10,6 +9,7 @@ import {AboutUsPage} from "./about-us/about-us";
 import {SkillMapService} from "../../services/skill.map.services";
 import {BookmarkServices} from "../../services/bookmark.services";
 import {DonatePage} from "./donate/donate";
+import {AppRate} from "@ionic-native/app-rate";
 
 @Component({
   selector: "user-center",

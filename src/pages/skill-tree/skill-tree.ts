@@ -32,7 +32,7 @@ export class SkillTreePage {
   }
 
   getProfessional() {
-    var url = 'http://phodal.github.io/motree';
+    let url = 'http://phodal.github.io/motree';
     if(this.platform.is('android')) {
       url = 'market://details?id=ren.growth.skilltree'
     } else if(this.platform.is('ios')) {

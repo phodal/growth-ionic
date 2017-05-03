@@ -60,6 +60,7 @@ import {HttpModule} from "@angular/http";
 import {PaperPage} from "../pages/home/paper/paper";
 import {TutorialPage} from '../pages/tutorial/tutorial';
 import {GoogleAnalytics} from "@ionic-native/google-analytics";
+import {AppRate} from "@ionic-native/app-rate";
 
 @NgModule({
   declarations: [
@@ -182,6 +183,7 @@ import {GoogleAnalytics} from "@ionic-native/google-analytics";
   ],
   providers: [
     UserData,
+    AppRate,
     SplashScreen,
     InAppBrowser,
     Clipboard,
