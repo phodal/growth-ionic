@@ -127,7 +127,13 @@ import {AppRate} from "@ionic-native/app-rate";
           {component: TutorialPage, name: 'Tutorial', segment: 'tutorial'},
           {component: DiscoverPage, name: 'DiscoverPage', segment: 'discover'},
           {component: SkillTreePage, name: 'SkillTreePage', segment: 'skilltree'},
-          {component: UserCenterPage, name: 'UserCenterPage', segment: 'skilltree'}
+          {component: AboutUsPage, name: 'AboutUsPage', segment: 'about-us'},
+          {component: BookmarksPage, name: 'BookmarksPage', segment: 'bookmarks'},
+          {component: DonatePage, name: 'DonatePage', segment: 'donate'},
+          {component: DonatePage, name: 'DonatePage', segment: 'donate'},
+          {component: SkillListPage, name: 'SkillListPage', segment: 'skill-list'},
+          {component: Profile, name: 'Profile', segment: 'profile'},
+          {component: UserCenterPage, name: 'UserCenterPage', segment: 'user-center'}
         ]
       }),
     MomentModule,

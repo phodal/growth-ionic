@@ -4,7 +4,7 @@ import {NavController} from "ionic-angular";
 import {AnalyticsServices} from "../../../services/analytics.services";
 import {Helper} from "../../../utils/helper";
 import {Profile} from "./profile/profile";
-import { AppVersion } from '@ionic-native/app-version';
+import {AppVersion} from '@ionic-native/app-version';
 
 @Component({
   templateUrl: "about-us.html",
@@ -15,16 +15,16 @@ export class AboutUsPage {
   private version;
   private contributors;
 
-  constructor(public nav:NavController, private analytics:AnalyticsServices, public helper: Helper, private appVersion: AppVersion) {
+  constructor(public nav: NavController, private analytics: AnalyticsServices, public helper: Helper, private appVersion: AppVersion) {
     this.nav = nav;
     this.contributors = CONTRIBUTORS;
     this.analytics.trackView("User Center: About Us");
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     let self = this;
     this.appVersion.getVersionNumber().then(
-        version => self.version = version
+      version => self.version = version
     );
   }
 
