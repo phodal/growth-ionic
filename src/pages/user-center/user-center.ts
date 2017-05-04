@@ -59,6 +59,9 @@ export class UserCenterPage {
   }
 
   init() {
+    if(!this.appRate.preferences) {
+      return ;
+    }
     this.appRate.preferences.useLanguage = "zh-Hans";
     this.appRate.preferences.storeAppURL = {
       ios: "1078807522",
