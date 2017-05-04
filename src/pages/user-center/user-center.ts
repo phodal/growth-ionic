@@ -59,21 +59,19 @@ export class UserCenterPage {
   }
 
   init() {
-    if (this.platform.is('cordova')) {
-      this.appRate.preferences.useLanguage = "zh-Hans";
-      this.appRate.preferences.storeAppURL = {
-        ios: "1078807522",
-        android: "market://details?id=ren.growth",
-        windows8: "ms-windows-store:Review?name=51077Phodal.GrowthRen_d4jwzt1r37cxj"
-      };
-      this.appRate.preferences.customLocale = {
-        title: "动动手指，为我们打分",
-        message: "无论是来自亲的赞美诗，还是让亲唾沫横飞的槽点，我们只愿——让评价来得更猛烈些吧！",
-        cancelButtonLabel: "残忍地拒绝",
-        laterButtonLabel: "容我考虑考虑",
-        rateButtonLabel: "马上就去"
-      };
-    }
+    this.appRate.preferences.useLanguage = "zh-Hans";
+    this.appRate.preferences.storeAppURL = {
+      ios: "1078807522",
+      android: "market://details?id=ren.growth",
+      windows8: "ms-windows-store:Review?name=51077Phodal.GrowthRen_d4jwzt1r37cxj"
+    };
+    this.appRate.preferences.customLocale = {
+      title: "动动手指，为我们打分",
+      message: "无论是来自亲的赞美诗，还是让亲唾沫横飞的槽点，我们只愿——让评价来得更猛烈些吧！",
+      cancelButtonLabel: "残忍地拒绝",
+      laterButtonLabel: "容我考虑考虑",
+      rateButtonLabel: "马上就去"
+    };
   }
 
   openUrl(url) {
