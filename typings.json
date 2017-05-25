@@ -1,5 +1,8 @@
 {
   "globalDependencies": {
     "cordova": "registry:dt/cordova#0.0.0+20160819210047"
+  },
+  "dependencies": {
+    "lodash": "registry:dt/lodash#4.14.0+20170324155812"
   }
 }

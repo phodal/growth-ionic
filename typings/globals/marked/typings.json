@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/49b1ac6a384fab428e0bad052b47f47ff8306193/marked/index.d.ts",
+    "raw": "registry:dt/marked#0.0.0+20160510002910",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/49b1ac6a384fab428e0bad052b47f47ff8306193/marked/index.d.ts"
+  }
+}
