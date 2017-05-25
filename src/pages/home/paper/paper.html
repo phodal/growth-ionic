@@ -11,9 +11,9 @@
   <ion-item-divider> 购买</ion-item-divider>
 
   <ion-item-group>
-    <button ion-item>亚马逊</button>
-    <button ion-item>京东</button>
-    <button ion-item>当当</button>
+    <button ion-item (click)="openUrl('https://www.amazon.cn/dp/B0722YJR89')">亚马逊</button>
+    <button ion-item (click)="openUrl('http://item.jd.com/12195442.html')">京东</button>
+    <button ion-item (click)="openUrl('http://product.dangdang.com/25077858.html')">当当</button>
   </ion-item-group>
 
   <ion-item-divider> 简介</ion-item-divider>
