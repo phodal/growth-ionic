@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ren.growth" version="2.7.0"
-        android-versionCode="270000"
-        xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="270000" id="ren.growth" version="2.7.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Growth</name>
     <description>
     App to help you Be Awesome Developer &amp; Awesome Hacker
@@ -90,7 +88,6 @@
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
-    <engine name="android" spec="~6.0.0" />
     <plugin name="cordova-plugin-device" spec="~1.1.1" />
     <plugin name="cordova-plugin-console" spec="~1.0.2" />
     <plugin name="cordova-plugin-statusbar" spec="~2.1.2" />
@@ -102,4 +99,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
     <plugin name="cordova-plugin-wkwebview-engine" spec="https://github.com/driftyco/cordova-plugin-wkwebview-engine.git" />
     <plugin name="cordova-plugin-whitelist" spec="~1.3.1" />
+    <engine name="android" spec="~6.2.3" />
+    <engine name="ios" spec="~4.4.0" />
 </widget>
