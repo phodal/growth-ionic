@@ -9,13 +9,27 @@
 <ion-content no-bounce>
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <img src="assets/images/growth-ebook.jpeg" class="slide-image"/>
       <h2 class="slide-title">
         Growth 纸质版已上架
       </h2>
       <p>
         可在各大网站购买《全栈应用开发：精益实践》。
       </p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/graphic.png" class="slide-image slide-image-2">
+      <h2 class="slide-title">
+        下一代 Growth 进入开发
+      </h2>
+      <p>
+        GitHub 地址：<a href="http://github.com/phodal/growth-ng" (click)="openUrl('http://github.com/phodal/growth-ng')">http://github.com/phodal/growth-ng</a>
+      </p>
+
+      <button ion-button icon-right large clear (click)="startApp()">
+        开启我的成长之路
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
     </ion-slide>
   </ion-slides>
 </ion-content>
