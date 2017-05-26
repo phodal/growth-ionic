@@ -6,9 +6,9 @@
 1. 优化性能
 2. 增加新功能介绍页面
 3. 添加 Growth 纸质版《全栈应用开发：精益实践》介绍页面
-3. 修复 bugs
-4. 升级基础框架为 Angular 4、Ionic 3 正式版
-5. 正在往 React Native 迁移，8月底见。 
+4. 修复 bugs
+5. 升级基础框架为 Angular 4、Ionic 3 正式版
+6. 正在往 React Native 迁移，8月底见。 
 
 ### 2.5.0
 
