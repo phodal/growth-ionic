@@ -71,6 +71,7 @@ Others:
  - 解决方案: [https://github.com/phodal/awesome-solutions](https://github.com/phodal/awesome-solutions)
  - 文章推荐: [https://github.com/phodal/articles](https://github.com/phodal/articles)
  - 练手项目: [https://github.com/phodal/awesome-practise-project](https://github.com/phodal/awesome-practise-project)
+- [submission-site-discovery](https://github.com/SeeleAI/submission-site-discovery) - Automated discovery of product submission sites, launch directories, and distribution channels for indie hackers.
 
 ### Thanks 
 
